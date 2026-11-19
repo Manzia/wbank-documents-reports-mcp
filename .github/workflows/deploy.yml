@@ -1,0 +1,165 @@
+name: Deploy Pipeline
+
+# Single-stack, single-env CD. Triggered when CI Pipeline succeeds on a
+# push to `main` (i.e. a merged PR), or manually via workflow_dispatch.
+#
+# Deploy step pattern (same as manzia-agent-comparison):
+#   rm -rf .aws-sam/ → sam build --no-cached → sam deploy with explicit
+#   --stack-name, --capabilities, --force-upload, --no-confirm-changeset,
+#   --no-fail-on-empty-changeset.
+
+on:
+  workflow_run:
+    workflows: [CI Pipeline]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Never run two deploys at once: a second `sam deploy` against a stack in
+# UPDATE_IN_PROGRESS fails. Queue instead of cancelling a half-done update.
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
+
+env:
+  NODE_VERSION: '24.x'
+  AWS_REGION: us-east-1
+  STACK_NAME: wbank-docs-reports-mcp-prod
+  ARTIFACTS_BUCKET: wbank-docs-reports-mcp-artifacts-365677123675
+
+jobs:
+  # ====================================================================
+  # Decide whether this run deploys. workflow_dispatch always does; a
+  # workflow_run does only if the triggering commit touched the stack.
+  # ====================================================================
+  setup:
+    name: Resolve changes
+    # `event == 'push'` matters because this repo is public: a fork's PR
+    # from a branch it named `main` produces a CI run whose head_branch is
+    # also 'main'. Only a push to this repo's main may trigger a deploy.
+    if: |
+      (github.event_name == 'workflow_run' &&
+        github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.event == 'push' &&
+        github.event.workflow_run.head_branch == 'main') ||
+      github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    outputs:
+      mcp-server: ${{ steps.diff.outputs.mcp-server }}
+    steps:
+      # `main` is a literal, not `workflow_run.head_branch`: interpolating a
+      # branch name into `ref:` is a ref-injection foothold.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          ref: main
+
+      - id: diff
+        name: Detect changes in triggering commit
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          if [[ "${EVENT_NAME}" == "workflow_dispatch" ]]; then
+            echo "mcp-server=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          CHANGED=$(git diff --name-only HEAD~1 HEAD || true)
+          echo "Changed:"
+          echo "${CHANGED}"
+
+          # deploy.yml counts as a stack change: it carries the deploy
+          # flags (and any future --parameter-overrides), so editing it
+          # changes what a deploy produces without touching mcp-server/.
+          # Redeploying is cheap — an unchanged stack is an empty changeset.
+          if echo "${CHANGED}" | grep -qE '^(mcp-server/|\.github/workflows/deploy\.yml$)'; then
+            echo "mcp-server=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "mcp-server=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy:
+    name: Deploy MCP server (prod)
+    needs: setup
+    if: needs.setup.outputs.mcp-server == 'true'
+    runs-on: ubuntu-latest
+    # `production` requires a manual approval and only admits `main`.
+    # It also shapes the OIDC token: the role's trust policy accepts only
+    # sub `...:environment:production` AND ref `refs/heads/main`.
+    environment:
+      name: production
+    permissions:
+      contents: read
+      id-token: write   # mint the GitHub OIDC token for AssumeRoleWithWebIdentity
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: mcp-server/hello-world/package-lock.json
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: aws-actions/setup-sam@f84ec7d548307efafe33230528756de3c5841a17 # v2
+        with:
+          use-installer: true
+
+      - uses: aws-actions/configure-aws-credentials@7474bc4690e29a8392af63c5b98e7449536d5c3a # v4.3.1
+        # OIDC — no long-lived AWS keys exist in GitHub. The role ARN is a
+        # `production` environment variable (not secret).
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          role-session-name: github-deploy-${{ github.run_id }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Validate template
+        run: |
+          cd mcp-server
+          sam validate
+
+      - name: Clean build artifacts
+        run: |
+          cd mcp-server
+          rm -rf .aws-sam/
+
+      - name: Build application
+        run: |
+          cd mcp-server
+          sam build --no-cached
+
+      - name: Deploy
+        run: |
+          set -euo pipefail
+          cd mcp-server
+          # No --parameter-overrides: the template declares no Parameters,
+          # and passing one it does not declare fails the deploy.
+          #
+          # Dedicated artifacts bucket (created out-of-band, us-east-1), not
+          # --resolve-s3: that would make the pipeline create and own a
+          # second stack + bucket. It MUST stay in the deploy region — a
+          # bucket elsewhere fails at Lambda create with "S3 Error Code:
+          # TemporaryRedirect".
+          sam deploy \
+            --stack-name ${{ env.STACK_NAME }} \
+            --s3-bucket ${{ env.ARTIFACTS_BUCKET }} \
+            --s3-prefix ${{ env.STACK_NAME }} \
+            --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND \
+            --no-confirm-changeset \
+            --no-fail-on-empty-changeset \
+            --force-upload
+
+      - name: Stack outputs
+        run: |
+          aws cloudformation describe-stacks \
+            --stack-name ${{ env.STACK_NAME }} \
+            --query 'Stacks[0].Outputs[].{Key:OutputKey,Value:OutputValue}' \
+            --output table
