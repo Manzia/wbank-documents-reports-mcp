@@ -75,3 +75,25 @@ jobs:
       project-name: mcp-server
       node-version: '24.x'
       coverage-threshold: 80
+
+  # The ONE check `main`'s branch protection requires. It always reports,
+  # so a path-gated skip (docs-only change) still yields a green check;
+  # requiring the nested `MCP server (SAM) / *` checks instead would block
+  # such PRs forever, because a skipped reusable workflow never reports them.
+  ci-result:
+    name: CI result
+    needs: [detect-changes, mcp-server]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if any required job failed or was cancelled
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+        run: |
+          echo "Job results: ${RESULTS}"
+          for r in ${RESULTS}; do
+            if [[ "${r}" == "failure" || "${r}" == "cancelled" ]]; then
+              echo "::error::CI failed (${RESULTS})"
+              exit 1
+            fi
+          done

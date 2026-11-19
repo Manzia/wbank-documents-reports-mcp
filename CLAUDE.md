@@ -87,17 +87,61 @@ sam local invoke HelloWorldFunction -e events/event.json
   (deploy flags live there). `workflow_dispatch` always deploys, but it falls
   under the HARD RULE above.
 - Steps: `sam validate` → `rm -rf .aws-sam/` → `sam build --no-cached` →
-  `sam deploy --stack-name wbank-docs-reports-mcp-prod --resolve-s3
+  `sam deploy --stack-name wbank-docs-reports-mcp-prod --s3-bucket <artifacts>
   --no-confirm-changeset --no-fail-on-empty-changeset --force-upload`, then
   prints the stack outputs.
 - `concurrency: deploy-prod` queues overlapping deploys rather than colliding on
   an in-progress stack update.
+- The deploy job **pauses for approval** (environment `production`), then
+  assumes the deploy role through OIDC. See "AWS deploy identity" below.
+- Third-party `aws-actions/*` are pinned to commit SHAs. Bump them deliberately.
 
-### GitHub setup the pipeline needs
-- Environment **`production`** (Settings → Environments).
-- Secrets `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for an IAM user in
-  account 365677123675, with rights to deploy the stack (CloudFormation, Lambda,
-  API Gateway, IAM role creation, and the SAM-managed S3 artifact bucket).
+### GitHub protections (public repo)
+- **Environment `production`**: required reviewer **Manzia**, so every deploy
+  waits for a manual **Review deployments → Approve**. Deployment branches are
+  limited to **`main`**, so a `workflow_dispatch` from any other branch can't
+  use it. It holds the variable `AWS_DEPLOY_ROLE_ARN`. There are **no AWS
+  secrets in GitHub**.
+- **`main` branch protection**: PR required (0 approvals, since there's a single
+  maintainer), required status check **`CI result`**, enforced for admins too,
+  no force-push or deletion. `CI result` (in `ci.yml`) is the only check to
+  require; see the comment there for why.
+- **Fork PRs**: Actions runs need approval for all external contributors.
+
+### AWS deploy identity (GitHub OIDC)
+Created out-of-band with the AWS CLI (`wb-mcp` profile), not by any stack:
+
+| Resource | Notes |
+|---|---|
+| OIDC provider `token.actions.githubusercontent.com` | audience `sts.amazonaws.com` |
+| Role `wbank-docs-reports-mcp-github-deploy` | assumed by `deploy.yml` only |
+| Bucket `wbank-docs-reports-mcp-artifacts-365677123675` | SAM artifacts (`--s3-bucket`); private, TLS-only, objects expire after 30 days |
+
+**Trust policy**: `aud = sts.amazonaws.com`, **and**
+`sub = repo:Manzia@1263542/wbank-documents-reports-mcp@1461012963:environment:production`,
+**and** `ref = refs/heads/main`. The `sub` uses GitHub's *immutable* format
+(owner and repo IDs, from `gh api repos/Manzia/wbank-documents-reports-mcp/actions/oidc/customization/sub`).
+A job with `environment:` gets an `environment:` sub, not a `ref:` one, which
+is why `ref` is a separate condition. Renaming the environment, or the repo
+moving owner, breaks the trust.
+
+**Permissions: deliberately broad for now** (to be narrowed to least privilege
+once the MCP server's real resources are known: AgentCore Gateway, Bedrock
+models, DynamoDB cache):
+- `PowerUserAccess` (AWS managed). Covers everything except IAM.
+- Inline `stack-iam-roles`. IAM **only** on roles named
+  `wbank-docs-reports-mcp-prod-*`. `CreateRole` / `Put|Attach|Detach|DeleteRolePolicy`
+  / `PutRolePermissionsBoundary` are allowed **only with permissions boundary
+  `arn:aws:iam::aws:policy/PowerUserAccess`**. `PassRole` is allowed only to
+  `lambda.amazonaws.com` and `bedrock-agentcore.amazonaws.com`.
+  `DeleteRolePermissionsBoundary` is explicitly denied.
+
+The boundary means a role the pipeline creates can never exceed PowerUser, so
+role creation is no escalation path. **Every IAM role in `template.yaml` must
+carry the boundary**: `Globals.Function.PermissionsBoundary` handles SAM's
+implicit function roles, and an explicit `AWS::IAM::Role` must set
+`PermissionsBoundary` itself. Role names must stay CloudFormation-generated (or
+start with `wbank-docs-reports-mcp-prod-`), or the deploy fails with AccessDenied.
 
 ## Known Issues
 - **`sam validate --lint` is off** (`samconfig.toml` → `lint = false`). SAM

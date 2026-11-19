@@ -9,6 +9,12 @@ Description: >
 Globals:
   Function:
     Timeout: 3
+    # REQUIRED. The deploy role may only create IAM roles that carry this
+    # boundary, so any role created without it fails the deploy with
+    # AccessDenied. This covers SAM's implicit function roles. An explicit
+    # AWS::IAM::Role (e.g. the AgentCore Gateway service role) must set
+    # `PermissionsBoundary` itself. See CLAUDE.md -> "AWS deploy identity".
+    PermissionsBoundary: !Sub arn:${AWS::Partition}:iam::aws:policy/PowerUserAccess
 
     # You can add LoggingConfig parameters such as the Logformat, Log Group, and SystemLogLevel or ApplicationLogLevel. Learn more here https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html#sam-function-loggingconfig.
     LoggingConfig:
