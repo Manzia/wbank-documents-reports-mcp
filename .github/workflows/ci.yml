@@ -1,0 +1,77 @@
+name: CI Pipeline
+
+# Path-gated CI for the World Bank Documents & Reports MCP server
+# (single SAM project, single env). The `mcp-server` job runs only when
+# something under `mcp-server/` changed, or when CI itself changed.
+#
+# Branches: `main` + `feature/**` only — there is no develop/staging.
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  detect-changes:
+    name: Detect changed projects
+    runs-on: ubuntu-latest
+    outputs:
+      mcp-server: ${{ steps.diff.outputs.mcp-server }}
+      ci-config: ${{ steps.diff.outputs.ci-config }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - id: diff
+        name: Compute changed paths
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            BASE="${{ github.event.pull_request.base.sha }}"
+            HEAD="${{ github.event.pull_request.head.sha }}"
+          else
+            BASE="${{ github.event.before }}"
+            HEAD="${{ github.sha }}"
+          fi
+
+          # First push of a new branch has no `before`.
+          if [[ -z "${BASE}" || "${BASE}" == "0000000000000000000000000000000000000000" ]]; then
+            BASE="HEAD~1"
+          fi
+
+          CHANGED=$(git diff --name-only "${BASE}" "${HEAD}" || true)
+          echo "Changed files:"
+          echo "${CHANGED}"
+
+          if echo "${CHANGED}" | grep -q '^mcp-server/'; then
+            echo "mcp-server=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "mcp-server=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          # Re-run the pipeline when CI itself or its helper scripts change.
+          if echo "${CHANGED}" | grep -qE '^(\.github/|scripts/)'; then
+            echo "ci-config=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ci-config=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  mcp-server:
+    name: MCP server (SAM)
+    needs: detect-changes
+    if: needs.detect-changes.outputs.mcp-server == 'true' || needs.detect-changes.outputs.ci-config == 'true'
+    uses: ./.github/workflows/_ci-sam.yml
+    with:
+      project-path: mcp-server
+      package-path: mcp-server/hello-world
+      project-name: mcp-server
+      node-version: '24.x'
+      coverage-threshold: 80

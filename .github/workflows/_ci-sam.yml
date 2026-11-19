@@ -1,0 +1,181 @@
+name: _ci-sam (reusable)
+
+# Reusable CI workflow for an AWS SAM Node.js project.
+#
+# Two paths, because the SAM root and the npm package are not the same
+# directory: `project-path` holds template.yaml / samconfig.toml, while
+# `package-path` holds the function's package.json (SAM's esbuild layout —
+# one package per CodeUri).
+#
+# Pipeline: Lint → unit test (coverage gate) → npm audit → sam validate
+# → sam build.
+
+on:
+  workflow_call:
+    inputs:
+      project-path:
+        description: 'Path to the SAM root (template.yaml), relative to repo root.'
+        required: true
+        type: string
+      package-path:
+        description: 'Path to the npm package (package.json), relative to repo root.'
+        required: true
+        type: string
+      project-name:
+        description: 'Logical name (used in artifact names).'
+        required: true
+        type: string
+      node-version:
+        required: false
+        type: string
+        default: '24.x'
+      coverage-threshold:
+        description: 'Minimum overall line coverage percentage.'
+        required: false
+        type: number
+        default: 80
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: 'npm'
+          cache-dependency-path: ${{ inputs.package-path }}/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd "${{ inputs.package-path }}"
+          npm ci --no-audit --no-fund
+
+      - name: Run ESLint
+        run: |
+          cd "${{ inputs.package-path }}"
+          npm run lint
+
+      - name: Type-check
+        run: |
+          cd "${{ inputs.package-path }}"
+          npm run compile
+
+  test:
+    name: Unit tests + coverage gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: 'npm'
+          cache-dependency-path: ${{ inputs.package-path }}/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd "${{ inputs.package-path }}"
+          npm ci --no-audit --no-fund
+
+      - name: Run unit-test coverage (gate at ${{ inputs.coverage-threshold }}%)
+        run: |
+          set -euo pipefail
+          cd "${{ inputs.package-path }}"
+          npm run test:coverage
+          COVERAGE=$(jq -r '.total.lines.pct' coverage/coverage-summary.json)
+          echo "Line coverage: ${COVERAGE}%"
+          awk -v cov="${COVERAGE}" -v thr="${{ inputs.coverage-threshold }}" \
+            'BEGIN { if (cov+0 < thr+0) { printf("::error::Line coverage %s%% is below %s%% threshold\n", cov, thr); exit 1 } }'
+
+      - name: Upload coverage reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.project-name }}-coverage
+          path: ${{ inputs.package-path }}/coverage/
+          if-no-files-found: ignore
+
+  security:
+    name: npm audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: 'npm'
+          cache-dependency-path: ${{ inputs.package-path }}/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd "${{ inputs.package-path }}"
+          npm ci --no-audit --no-fund
+
+      - name: Run npm audit (moderate)
+        run: |
+          cd "${{ inputs.package-path }}"
+          npm audit --audit-level=moderate
+        continue-on-error: true
+
+  build:
+    name: SAM build + validate
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    env:
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_REGION: us-east-1
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: 'npm'
+          cache-dependency-path: ${{ inputs.package-path }}/package-lock.json
+
+      - name: Setup Python for SAM
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Setup SAM CLI
+        uses: aws-actions/setup-sam@v2
+        with:
+          use-installer: true
+
+      - name: Check template Description lengths
+        # CFN caps Description at 1024 chars and rejects the template at
+        # changeset creation. `sam validate` and `sam build` both pass it, so
+        # without this it surfaces only as a failed prod deploy.
+        run: |
+          python3 -m pip install --quiet pyyaml
+          python3 scripts/check-template-descriptions.py "${{ inputs.project-path }}"
+
+      - name: SAM validate
+        # `--lint` intentionally omitted — see samconfig.toml.
+        run: |
+          cd "${{ inputs.project-path }}"
+          sam validate
+
+      - name: SAM build
+        run: |
+          cd "${{ inputs.project-path }}"
+          sam build --parallel
+
+      - name: Upload SAM build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.project-name }}-sam-build
+          path: ${{ inputs.project-path }}/.aws-sam/
+          retention-days: 7
+          if-no-files-found: ignore
