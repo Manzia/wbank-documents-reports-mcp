@@ -151,5 +151,10 @@ start with `wbank-docs-reports-mcp-prod-`), or the deploy fails with AccessDenie
   at changeset creation. `sam validate` and `sam build` both accept a longer one.
   `scripts/check-template-descriptions.py` catches it in CI. Put long prose in
   `#` comments.
+- **`samconfig.toml` also applies in CI.** `sam deploy` merges
+  `[default.deploy.parameters]` with `deploy.yml`'s flags, so the two must not
+  conflict. The scaffold's `resolve_s3 = true` failed the first prod deploy
+  with "Cannot use both --resolve-s3 and --s3-bucket". samconfig now names the
+  same artifacts bucket.
 - **Never pass `--parameter-overrides` for a parameter the template doesn't
   declare**, because the deploy fails. `template.yaml` declares no Parameters today.

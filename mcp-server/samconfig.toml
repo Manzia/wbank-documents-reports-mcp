@@ -16,12 +16,19 @@ parallel = true
 lint = false
 
 [default.deploy.parameters]
+# Dedicated artifacts bucket, created out-of-band (see CLAUDE.md -> "AWS deploy
+# identity"). NOT `resolve_s3`: `sam deploy` reads this file in CI too, and
+# `resolve_s3` conflicts with the `--s3-bucket` that deploy.yml passes.
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
-resolve_s3 = true
+region = "us-east-1"
+s3_bucket = "wbank-docs-reports-mcp-artifacts-365677123675"
+s3_prefix = "wbank-docs-reports-mcp-prod"
 
 [default.package.parameters]
-resolve_s3 = true
+region = "us-east-1"
+s3_bucket = "wbank-docs-reports-mcp-artifacts-365677123675"
+s3_prefix = "wbank-docs-reports-mcp-prod"
 
 [default.sync.parameters]
 watch = true
