@@ -114,7 +114,18 @@ describe('checkCommand', () => {
     'GH_CONFIG_DIR=/tmp/x; export GH_CONFIG_DIR',
     'read GH_TOKEN < /tmp/t',
     'printf -v GH_CONFIG_DIR %s /tmp/x',
-    'unset GH_TOKEN'
+    'unset GH_TOKEN',
+    // fourth review: time options, coproc/function bodies, append assignments, disguised names
+    'time -p gh pr merge 1',
+    'time -- gh pr merge 1',
+    'coproc foo { gh pr merge 1; }',
+    'function f { gh pr merge 1; }',
+    'x { gh pr merge 1; }',
+    'GH_CONFIG_DIR+=/x gh pr view 1',
+    'export GH_CONFIG_DIR+=/x',
+    'export GH_CONFIG_{DIR,X}=/tmp/x',
+    "export $'GH_TOKEN'=x",
+    'declare -x G{H,}_TOKEN=x'
   ])('blocks %s', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone')).allowed).toBe(false);
   });
@@ -153,7 +164,10 @@ describe('checkCommand', () => {
     'if [ -f x ]; then npm test; fi',
     'for f in a b; do echo $f; done',
     'npm run lint && \\\n  npm test',
-    'ls src/*.ts'
+    'ls src/*.ts',
+    'time npm test',
+    'time -p npm run unit',
+    'PATH+=:/opt/x npm test'
   ])('allows %s on a feature branch', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone'))).toEqual({ allowed: true });
   });

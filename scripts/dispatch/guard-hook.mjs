@@ -22,13 +22,17 @@ const GH_BLOCKED = [
 const GH_API_BLOCKED = /\/merges?\b|\/dispatches\b|\/pending_deployments\b|\/environments\b|\/protection\b|\/rulesets\b|\/(actions|dependabot|codespaces)\/(secrets|variables|permissions)\b|\/collaborators\b|\/hooks\b|\/keys\b|\/deployments\b|\/(rerun|rerun-failed-jobs|cancel|force-cancel|approve)\b|\/git\/refs\b|\/contents\//;
 
 // Variables that would change what git or gh run, which credentials they use, or where their config comes from
-// Any word naming one (FOO=…, or bare after export/read/unset/printf -v) refuses the command.
-const BLOCKED_VARS = /^(GIT_CONFIG\w*|GIT_EXEC_PATH|GIT_ALIAS\w*|GH_CONFIG_DIR|GH_TOKEN|GITHUB_TOKEN|GH_HOST|GH_ENTERPRISE_TOKEN|AWS_CONFIG_FILE|AWS_SHARED_CREDENTIALS_FILE|AWS_PROFILE)(=|$)/;
+// Any word that names one refuses the command: FOO=…, FOO+=…, bare after export/read/unset/printf -v, and
+// spellings that the shell turns into the name (GH_CONFIG_{DIR,X}, $'GH_TOKEN'), since the word is tested
+// with every non-identifier character removed.
+const BLOCKED_VARS = /GIT_CONFIG|GIT_EXEC_PATH|GIT_ALIAS|GH_CONFIG_DIR|GH_TOKEN|GITHUB_TOKEN|GH_HOST|GH_ENTERPRISE_TOKEN|AWS_CONFIG_FILE|AWS_SHARED_CREDENTIALS_FILE|AWS_PROFILE/;
+const namesBlockedVar = (w) => BLOCKED_VARS.test(w.replace(/[^A-Za-z0-9_]/g, ''));
 // Shell reserved words and grouping that can precede a command: `{ gh pr merge 1; }`, `if …; then gh …`
-const RESERVED = ['{', '}', '!', 'if', 'then', 'else', 'elif', 'fi', 'do', 'done', 'while', 'until', 'for', 'in', 'case', 'esac', 'coproc', 'function', 'time', '[[', ']]'];
+// (`time` is a wrapper, below, so its options are skipped too; `coproc` and `function` are refused.)
+const RESERVED = ['{', '}', '!', 'if', 'then', 'else', 'elif', 'fi', 'do', 'done', 'while', 'until', 'for', 'in', 'case', 'esac', '[[', ']]'];
 // Brace expansion and globs change words after the hook has looked at them
 const EXPANDS = /[{}*?[\]]/;
-const ASSIGN = /^[A-Za-z_][A-Za-z0-9_]*=/;
+const ASSIGN = /^[A-Za-z_][A-Za-z0-9_]*\+?=/;
 const SUBSTITUTION = '$(…)';
 
 // Quote-aware shell lexer: splits on ; & | ( ) and newlines outside quotes, removes quotes, and pulls out
@@ -236,8 +240,12 @@ const DECLARE = ['export', 'declare', 'typeset', 'local', 'readonly', 'set'];
 const MAX_DEPTH = 4;
 
 function checkWords(rawWords, opts, depth) {
-  const blockedVar = rawWords.find((w) => BLOCKED_VARS.test(w));
+  const blockedVar = rawWords.find(namesBlockedVar);
   if (blockedVar) return block(`Setting or naming ${blockedVar.split('=')[0]} is not allowed: it changes what git, gh or the AWS CLI use.`);
+  if (rawWords.some((w) => w === 'coproc' || w === 'function')) return block('`coproc` and `function` are not allowed in dispatcher sessions. Write the commands out.');
+  // `{` starts a command group wherever it stands as a word (`f() { … }`, `while x; do { … }`): check what follows
+  const brace = rawWords.indexOf('{', 1);
+  if (brace > 0) return checkWords(rawWords.slice(0, brace), opts, depth) || checkWords(rawWords.slice(brace + 1), opts, depth);
   let start = 0;
   while (start < rawWords.length && (ASSIGN.test(rawWords[start]) || RESERVED.includes(rawWords[start]))) start += 1;
   const words = rawWords.slice(start);
