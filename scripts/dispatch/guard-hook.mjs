@@ -22,7 +22,12 @@ const GH_BLOCKED = [
 const GH_API_BLOCKED = /\/merges?\b|\/dispatches\b|\/pending_deployments\b|\/environments\b|\/protection\b|\/rulesets\b|\/(actions|dependabot|codespaces)\/(secrets|variables|permissions)\b|\/collaborators\b|\/hooks\b|\/keys\b|\/deployments\b|\/(rerun|rerun-failed-jobs|cancel|force-cancel|approve)\b|\/git\/refs\b|\/contents\//;
 
 // Variables that would change what git or gh run, which credentials they use, or where their config comes from
-const BLOCKED_VARS = /^(GIT_CONFIG\w*|GIT_EXEC_PATH|GIT_ALIAS\w*|GH_CONFIG_DIR|GH_TOKEN|GITHUB_TOKEN|GH_HOST|GH_ENTERPRISE_TOKEN|AWS_CONFIG_FILE|AWS_SHARED_CREDENTIALS_FILE|AWS_PROFILE)=/;
+// Any word naming one (FOO=…, or bare after export/read/unset/printf -v) refuses the command.
+const BLOCKED_VARS = /^(GIT_CONFIG\w*|GIT_EXEC_PATH|GIT_ALIAS\w*|GH_CONFIG_DIR|GH_TOKEN|GITHUB_TOKEN|GH_HOST|GH_ENTERPRISE_TOKEN|AWS_CONFIG_FILE|AWS_SHARED_CREDENTIALS_FILE|AWS_PROFILE)(=|$)/;
+// Shell reserved words and grouping that can precede a command: `{ gh pr merge 1; }`, `if …; then gh …`
+const RESERVED = ['{', '}', '!', 'if', 'then', 'else', 'elif', 'fi', 'do', 'done', 'while', 'until', 'for', 'in', 'case', 'esac', 'coproc', 'function', 'time', '[[', ']]'];
+// Brace expansion and globs change words after the hook has looked at them
+const EXPANDS = /[{}*?[\]]/;
 const ASSIGN = /^[A-Za-z_][A-Za-z0-9_]*=/;
 const SUBSTITUTION = '$(…)';
 
@@ -54,6 +59,11 @@ export function parse(command) {
       continue;
     }
     if (c === '\\' && i + 1 < command.length) {
+      // A backslash-newline is a line continuation: bash joins the two lines into one word
+      if (command[i + 1] === '\n') {
+        i += 1;
+        continue;
+      }
       cur += command[i + 1];
       inWord = true;
       i += 1;
@@ -110,7 +120,7 @@ export function parse(command) {
 }
 
 const base = (cmd) => cmd.split('/').pop();
-const hasVariable = (w) => w.includes('$');
+const hasVariable = (w) => w.includes('$') || EXPANDS.test(w);
 
 function gitSubcommand(words) {
   let i = 1;
@@ -227,15 +237,13 @@ const MAX_DEPTH = 4;
 
 function checkWords(rawWords, opts, depth) {
   const blockedVar = rawWords.find((w) => BLOCKED_VARS.test(w));
-  if (blockedVar && (ASSIGN.test(rawWords[0]) || DECLARE.includes(rawWords[0]) || base(rawWords[0]) === 'env')) {
-    return block(`Setting ${blockedVar.split('=')[0]} is not allowed: it changes what git, gh or the AWS CLI use.`);
-  }
+  if (blockedVar) return block(`Setting or naming ${blockedVar.split('=')[0]} is not allowed: it changes what git, gh or the AWS CLI use.`);
   let start = 0;
-  while (start < rawWords.length && ASSIGN.test(rawWords[start])) start += 1;
+  while (start < rawWords.length && (ASSIGN.test(rawWords[start]) || RESERVED.includes(rawWords[start]))) start += 1;
   const words = rawWords.slice(start);
   if (words.length === 0) return undefined;
   const cmd = base(words[0]);
-  if (hasVariable(words[0])) return block('A variable or substitution as the command name can\'t be checked. Write the command out.');
+  if (!['[', '[['].includes(words[0]) && hasVariable(words[0])) return block('A variable or substitution as the command name can\'t be checked. Write the command out.');
   if (SHELLS.includes(cmd)) {
     // bash -c '<command>' (also -lc, -ec, …): check the inner command. Extra arguments would become $0, $1, …
     // inside it, which can't be checked, so they are refused. A script file can't be seen into.

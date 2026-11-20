@@ -95,7 +95,26 @@ describe('checkCommand', () => {
     'env GH_CONFIG_DIR=/tmp/gh gh m 1',
     'git --config-env=alias.p=V p origin main',
     "echo 'unbalanced",
-    'echo "unbalanced'
+    'echo "unbalanced',
+    // third review: reserved words and grouping, line continuations, expansion, wrapped variables
+    '{ gh pr merge 1; }',
+    '! gh pr merge 1',
+    'if true; then gh pr merge 1; fi',
+    'while true; do git push origin main; done',
+    'for i in 1; do gh pr merge $i; done',
+    'f() { gh pr merge 1; }; f',
+    'time gh pr merge 1',
+    'gh pr mer\\\nge 1',
+    'gh pr {merge,view} 1',
+    'gh pr m?rge 1',
+    'git push origin ma{i,}n',
+    'git pu*h origin main',
+    'sudo GH_CONFIG_DIR=/tmp/x gh pr view 1',
+    'nohup env GIT_CONFIG_COUNT=1 git status',
+    'GH_CONFIG_DIR=/tmp/x; export GH_CONFIG_DIR',
+    'read GH_TOKEN < /tmp/t',
+    'printf -v GH_CONFIG_DIR %s /tmp/x',
+    'unset GH_TOKEN'
   ])('blocks %s', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone')).allowed).toBe(false);
   });
@@ -130,7 +149,11 @@ describe('checkCommand', () => {
     "git commit -m 'Fix: do not run gh pr merge here'",
     'gh api "repos/Manzia/wbank-documents-reports-mcp/pulls/$N/comments"',
     'export NODE_ENV=test && npm test',
-    'npm test 2>&1 | tail -5'
+    'npm test 2>&1 | tail -5',
+    'if [ -f x ]; then npm test; fi',
+    'for f in a b; do echo $f; done',
+    'npm run lint && \\\n  npm test',
+    'ls src/*.ts'
   ])('allows %s on a feature branch', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone'))).toEqual({ allowed: true });
   });
