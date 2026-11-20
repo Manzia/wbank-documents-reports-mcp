@@ -155,3 +155,7 @@ vite.config.ts.timestamp-*
 .nx/cache
 .nx/workspace-data
 .nx/migrate-runs
+
+# Dispatcher session worktrees and their per-session npm cache (context/tasks/wbank-mcp-implementation-plan.md §6)
+.claude/worktrees/
+.npm-cache/

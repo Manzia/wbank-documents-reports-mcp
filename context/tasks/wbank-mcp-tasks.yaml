@@ -1,0 +1,59 @@
+# Dispatch data for context/tasks/wbank-mcp-implementation-plan.md.
+# This file is the source of truth for runs / depends / infra / after_deploy.
+# The plan's §5 describes each task (owns, resources, numbered acceptance checks); if they disagree with this file, this file wins.
+#
+# runs:         local = scripts/dispatch/dispatch-local.sh starts it as a background Claude Code session on Roy's Mac
+#               human = Roy does it (an interactive Claude session may help); it is done only when its PR merges
+#               There are no cloud tasks: this project runs local sessions only (plan §2.1).
+# depends:      task IDs whose PRs must be merged into main before the task starts
+# infra:        true = the PR changes template.yaml resources; merge it on its own, approve the deploy, watch it pass
+# after_deploy: true = start only once the prod deploy for the current head of main has finished green
+#
+# DONE:  a PR from this repo (not a fork) whose title starts with "<id>:" is merged into main.
+# TAKEN: a local claim file, a local branch or worktree for the task, a branch feature/<id>-* on origin,
+#        or an open PR from this repo whose title starts with "<id>:".
+# No session deploys. The stack changes only when Roy merges a PR and approves the deploy (environment `production`).
+# Environments: prod only.
+
+paused: false
+local_capacity: 2   # local sessions running at once
+stale_hours: 6      # no commit or PR activity for this long → macOS notification (never restarted automatically)
+
+tasks:
+  # Wave 0: setup
+  - { id: MCP-100, title: Implementation plan and local dispatcher,             runs: human, depends: [] }
+  - { id: MCP-101, title: Session token dispatcher install and self-test,       runs: human, depends: [MCP-100] }
+  - { id: MCP-102, title: Build prechecks,                                      runs: local, depends: [MCP-101] }
+
+  # Wave 1: walking skeleton (design §14 step 1); infra tasks merge one at a time
+  - { id: MCP-110, title: Delegated hosted zone,                                runs: local, depends: [MCP-101], infra: true }
+  - { id: MCP-111, title: NS delegation and AI-platform IP ranges,              runs: human, depends: [MCP-110] }
+  - { id: MCP-112, title: Skeleton MCP server function and streaming URL,       runs: local, depends: [MCP-102, MCP-110], infra: true }
+  - { id: MCP-113, title: Gateway target regional WAF and origin secret,        runs: local, depends: [MCP-112], infra: true }
+  - { id: MCP-114, title: Certificate CloudFront and CloudFront WAF,            runs: local, depends: [MCP-111, MCP-113], infra: true }
+  - { id: MCP-115, title: Verify the walking skeleton end to end,               runs: local, depends: [MCP-114], after_deploy: true }
+  - { id: MCP-116, title: Connector check in Claude ChatGPT and Gemini,         runs: human, depends: [MCP-115] }
+
+  # Wave 2: evaluation set and harness (design §14 step 2); runs alongside wave 1
+  - { id: MCP-120, title: Evaluation set,                                       runs: local, depends: [MCP-101] }
+  - { id: MCP-121, title: Evaluation harness,                                   runs: local, depends: [MCP-120] }
+
+  # Wave 3: tool code (design §14 step 3); code-only deploys
+  - { id: MCP-130, title: Upstream clients and catalog tables,                  runs: local, depends: [MCP-112] }
+  - { id: MCP-131, title: Haiku helpers,                                        runs: local, depends: [MCP-112] }
+  - { id: MCP-132, title: search_documents and search_projects,                 runs: local, depends: [MCP-130, MCP-131] }
+  - { id: MCP-133, title: get_project and read_document,                        runs: local, depends: [MCP-130, MCP-131] }
+  - { id: MCP-134, title: retrieve_skill skills and tool guidance,              runs: local, depends: [MCP-132, MCP-133] }
+
+  # Wave 4: rest of the stack (design §14 step 4)
+  - { id: MCP-140, title: Rate limits and monitoring,                           runs: local, depends: [MCP-115], infra: true }
+
+  # Wave 5: evaluate and iterate (design §14 step 5); fix tasks MCP-16x are added here by Roy after MCP-151
+  - { id: MCP-150, title: Evaluation run 1 and failure analysis,                runs: local, depends: [MCP-121, MCP-134, MCP-140], after_deploy: true }
+  - { id: MCP-151, title: Review evaluation run 1,                              runs: human, depends: [MCP-150] }
+
+  # Wave 6: harden, accept, launch (design §14 step 6)
+  - { id: MCP-170, title: Hardening,                                            runs: local, depends: [MCP-151], infra: true }
+  - { id: MCP-171, title: Launch evaluation run,                                runs: local, depends: [MCP-170], after_deploy: true }
+  - { id: MCP-172, title: Launch acceptance and sign-off,                       runs: human, depends: [MCP-171] }
+  - { id: MCP-180, title: Least-privilege deploy role,                          runs: human, depends: [MCP-172] }
