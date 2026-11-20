@@ -1,0 +1,75 @@
+{
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "excludedCommands": [],
+    "enableWeakerNetworkIsolation": true,
+    "credentials": {
+      "files": [
+        {
+          "path": "~/.aws/credentials",
+          "mode": "deny"
+        },
+        {
+          "path": "~/.aws/config",
+          "mode": "deny"
+        },
+        {
+          "path": "~/.config/gh/hosts.yml",
+          "mode": "deny"
+        }
+      ]
+    },
+    "network": {
+      "allowedDomains": [
+        "*.amazonaws.com",
+        "github.com",
+        "*.github.com",
+        "*.githubusercontent.com",
+        "registry.npmjs.org",
+        "search.worldbank.org",
+        "documents1.worldbank.org",
+        "worldbank-mcp.manzia.com"
+      ]
+    },
+    "filesystem": {
+      "allowWrite": [
+        "~/.aws-sam"
+      ],
+      "denyRead": [
+        "~/.aws",
+        "~/.ssh",
+        "~/.config/gh",
+        "~/.wbank-mcp-dispatch/sessions"
+      ]
+    }
+  },
+  "permissions": {
+    "deny": [
+      "Read(~/.aws/**)",
+      "Edit(~/.aws/**)",
+      "Read(~/.config/gh/**)",
+      "Edit(~/.config/gh/**)",
+      "Read(~/.ssh/**)",
+      "Edit(~/.ssh/**)",
+      "Edit(~/.wbank-mcp-dispatch/**)",
+      "Read(~/.wbank-mcp-dispatch/sessions/**)",
+      "RemoteTrigger",
+      "CronCreate"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Agent|Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.wbank-mcp-dispatch/guard-hook.mjs\""
+          }
+        ]
+      }
+    ]
+  }
+}

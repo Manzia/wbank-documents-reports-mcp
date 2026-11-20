@@ -25,6 +25,7 @@ jobs:
     outputs:
       mcp-server: ${{ steps.diff.outputs.mcp-server }}
       ci-config: ${{ steps.diff.outputs.ci-config }}
+      dispatch: ${{ steps.diff.outputs.dispatch }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -57,6 +58,13 @@ jobs:
             echo "mcp-server=false" >> "$GITHUB_OUTPUT"
           fi
 
+          # The local dispatcher's tests (scripts/dispatch/) also read the task file.
+          if echo "${CHANGED}" | grep -qE '^(scripts/dispatch/|context/tasks/wbank-mcp-tasks\.yaml$|\.github/workflows/ci\.yml$)'; then
+            echo "dispatch=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "dispatch=false" >> "$GITHUB_OUTPUT"
+          fi
+
           # Re-run the pipeline when CI itself or its helper scripts change.
           if echo "${CHANGED}" | grep -qE '^(\.github/|scripts/)'; then
             echo "ci-config=true" >> "$GITHUB_OUTPUT"
@@ -76,13 +84,35 @@ jobs:
       node-version: '24.x'
       coverage-threshold: 80
 
+  # Local dispatcher (context/tasks/wbank-mcp-implementation-plan.md §6).
+  # Build tooling only: never deployed.
+  dispatch:
+    name: Dispatcher tests
+    needs: detect-changes
+    if: needs.detect-changes.outputs.dispatch == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: scripts/dispatch
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.x'
+          cache: 'npm'
+          cache-dependency-path: scripts/dispatch/package-lock.json
+
+      - run: npm ci
+      - run: npm test
+
   # The ONE check `main`'s branch protection requires. It always reports,
   # so a path-gated skip (docs-only change) still yields a green check;
   # requiring the nested `MCP server (SAM) / *` checks instead would block
   # such PRs forever, because a skipped reusable workflow never reports them.
   ci-result:
     name: CI result
-    needs: [detect-changes, mcp-server]
+    needs: [detect-changes, mcp-server, dispatch]
     if: always()
     runs-on: ubuntu-latest
     steps:

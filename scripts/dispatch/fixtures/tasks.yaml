@@ -1,0 +1,13 @@
+# Synthetic task file for the dispatcher tests.
+paused: false
+local_capacity: 2
+stale_hours: 6
+
+tasks:
+  - { id: MCP-900, title: Human setup,             runs: human, depends: [] }
+  - { id: MCP-901, title: Human gate,              runs: human, depends: [] }
+  - { id: MCP-902, title: Local done task,         runs: local, depends: [] }
+  - { id: MCP-903, title: Local ready task,        runs: local, depends: [MCP-902] }
+  - { id: MCP-904, title: Local waiting task,      runs: local, depends: [MCP-901] }
+  - { id: MCP-905, title: Second local ready task, runs: local, depends: [] }
+  - { id: MCP-906, title: Verify after deploy,     runs: local, depends: [MCP-902], after_deploy: true }

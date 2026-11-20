@@ -1,0 +1,68 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadTheStack",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:Describe*",
+        "cloudformation:Get*",
+        "cloudformation:List*",
+        "logs:Describe*",
+        "logs:Get*",
+        "logs:FilterLogEvents",
+        "logs:StartQuery",
+        "logs:StopQuery",
+        "cloudwatch:Describe*",
+        "cloudwatch:Get*",
+        "cloudwatch:List*",
+        "lambda:GetFunctionConfiguration",
+        "lambda:GetFunctionUrlConfig",
+        "lambda:List*",
+        "bedrock-agentcore:GetGateway",
+        "bedrock-agentcore:GetGatewayTarget",
+        "bedrock-agentcore:List*",
+        "route53:GetHostedZone",
+        "route53:ListHostedZones",
+        "route53:ListResourceRecordSets",
+        "acm:DescribeCertificate",
+        "acm:ListCertificates",
+        "servicequotas:Get*",
+        "servicequotas:List*",
+        "bedrock:GetFoundationModel*",
+        "bedrock:ListFoundationModels",
+        "bedrock:GetInferenceProfile",
+        "bedrock:ListInferenceProfiles"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "InvokeClaude",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream"
+      ],
+      "Resource": [
+        "arn:aws:bedrock:*::foundation-model/anthropic.*",
+        "arn:aws:bedrock:*:365677123675:inference-profile/*anthropic.*"
+      ]
+    },
+    {
+      "Sid": "NeverEvenIfAllowedLater",
+      "Effect": "Deny",
+      "Action": [
+        "secretsmanager:*",
+        "cloudfront:*",
+        "wafv2:*",
+        "ssm:GetParameter*",
+        "kms:Decrypt",
+        "iam:*",
+        "lambda:Invoke*",
+        "bedrock-agentcore:*Token*",
+        "bedrock-agentcore:*ApiKey*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
