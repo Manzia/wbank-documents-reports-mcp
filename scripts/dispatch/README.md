@@ -104,8 +104,10 @@ set on the `claude --bg` call never reach it. Before each start and resume the d
 `~/.wbank-mcp-dispatch/sessions/<ID>.json` (mode 600): `session-settings.json` plus an `env` block with
 the credentials, `GH_TOKEN`, region `us-east-1` and `npm_config_cache` in the worktree, and passes it
 with `--settings`. It also points the AWS CLI (`AWS_CONFIG_FILE`, `AWS_SHARED_CREDENTIALS_FILE`) and
-`gh` (`GH_CONFIG_DIR`) at an empty `.session-config/` in the worktree, so neither needs `~/.aws` or
-`~/.config/gh`, which the sandbox denies outright. `claude` itself runs with no `AWS_*` or token variable. Sessions can't write
+`gh` (`GH_CONFIG_DIR`) at an empty `~/.wbank-mcp-dispatch/session-config/<ID>/`, so neither needs
+`~/.aws` or `~/.config/gh`, which the sandbox denies outright. That folder is outside the worktree, so
+a session can't plant a `gh` alias or an AWS profile in it; the guard hook also refuses commands that
+set those variables. `claude` itself runs with no `AWS_*` or token variable. Sessions can't write
 `~/.wbank-mcp-dispatch/` and their Read tool can't read `sessions/`; the file is deleted when the task
 is cleaned up. Credentials are never logged.
 
@@ -135,6 +137,7 @@ checks below as its prompt. Watch it, then exit; the worktree is removed.
 | Read tool on `~/.aws/credentials` and `~/.config/gh/hosts.yml` | Denied |
 | `touch ~/.aws/x`, `touch ~/.npm/x` | Fail |
 | `curl -sI https://example.com` | Fails (network allow-list) |
+| `touch "$GH_CONFIG_DIR/config.yml"` | Fails (the session's gh config is read-only to it) |
 | `aws cloudformation create-stack …`, `aws secretsmanager list-secrets`, `aws lambda invoke …` | AccessDenied |
 | `gh pr merge 1`, `bash -c "gh pr merge 1"`, `gh -R … pr merge 1`, `gh run rerun 1`, `security find-generic-password …`, `claude --version` | Blocked by the guard hook |
 

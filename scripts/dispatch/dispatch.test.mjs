@@ -132,13 +132,13 @@ describe('helpers', () => {
   test('claude runs without AWS or GitHub token variables; the session settings carry them', () => {
     expect(launchEnv({ HOME: '/h', AWS_PROFILE: 'wb-mcp', AWS_ACCESS_KEY_ID: 'old', GH_TOKEN: 'roy', GITHUB_TOKEN: 'roy' })).toEqual({ HOME: '/h' });
     const guard = { sandbox: { enabled: true }, env: { KEEP: '1' } };
-    expect(sessionSettings(guard, '/wt', { AccessKeyId: 'k', SecretAccessKey: 's', SessionToken: 't' }, 'pat')).toEqual({
+    expect(sessionSettings(guard, '/wt', { AccessKeyId: 'k', SecretAccessKey: 's', SessionToken: 't' }, 'pat', '/cfg')).toEqual({
       sandbox: { enabled: true },
       env: {
         KEEP: '1', AWS_ACCESS_KEY_ID: 'k', AWS_SECRET_ACCESS_KEY: 's', AWS_SESSION_TOKEN: 't',
         AWS_REGION: 'us-east-1', AWS_DEFAULT_REGION: 'us-east-1',
-        AWS_CONFIG_FILE: '/wt/.session-config/aws-config', AWS_SHARED_CREDENTIALS_FILE: '/wt/.session-config/aws-credentials',
-        GH_TOKEN: 'pat', GH_CONFIG_DIR: '/wt/.session-config/gh', GH_PROMPT_DISABLED: '1',
+        AWS_CONFIG_FILE: '/cfg/aws-config', AWS_SHARED_CREDENTIALS_FILE: '/cfg/aws-credentials',
+        GH_TOKEN: 'pat', GH_CONFIG_DIR: '/cfg/gh', GH_PROMPT_DISABLED: '1', GH_NO_UPDATE_NOTIFIER: '1',
         GIT_TERMINAL_PROMPT: '0', npm_config_cache: '/wt/.npm-cache'
       }
     });
@@ -358,6 +358,7 @@ describe('dispatcher pass', () => {
     const p = paths(home, repo);
     mkdirSync(p.sessions, { recursive: true });
     writeFileSync(join(p.sessions, 'MCP-902.json'), '{}');
+    mkdirSync(join(p.sessionConfig, 'MCP-902', 'gh'), { recursive: true });
     writeClaimFile({ id: 'MCP-902', branch: 'feature/MCP-902-local-done-task', startedAt: iso(NOW), resumes: 0 });
     const w = world({ worktrees: [wt], localBranches: ['feature/MCP-902-local-done-task'] });
     expect(line(run(w), 'MCP-902')).toBe('MCP-902 cleaned up: done (claim file, local branch, worktree)');
@@ -366,6 +367,7 @@ describe('dispatcher pass', () => {
     expect(gitArgs).toContain('branch -D feature/MCP-902-local-done-task');
     expect(existsSync(join(claimsDir(), 'MCP-902.json'))).toBe(false);
     expect(existsSync(join(p.sessions, 'MCP-902.json'))).toBe(false);
+    expect(existsSync(join(p.sessionConfig, 'MCP-902'))).toBe(false);
   });
 
   test('human tasks are never selected', () => {
@@ -432,6 +434,11 @@ describe('dispatcher pass', () => {
     const settings = sessionSettingsOf(start);
     expect(settings).toMatchObject({ ...JSON.parse(SETTINGS), env: { AWS_ACCESS_KEY_ID: 'FAKEKEYID', AWS_SESSION_TOKEN: 'fake-token', GH_TOKEN: 'github_pat_fake', npm_config_cache: join(wt, '.npm-cache') } });
     expect(statSync(settingsFile).mode & 0o777).toBe(0o600);
+    // gh and AWS CLI config live outside the worktree, where sessions can't write
+    const configDir = join(p.sessionConfig, 'MCP-903');
+    expect(settings.env.GH_CONFIG_DIR).toBe(join(configDir, 'gh'));
+    expect(settings.env.AWS_CONFIG_FILE.startsWith(wt)).toBe(false);
+    expect(existsSync(join(configDir, 'gh'))).toBe(true);
 
     const claim = readClaim('MCP-903');
     expect(claim).toMatchObject({ id: 'MCP-903', branch, worktree: wt, resumes: 0, sessionId: 'session-MCP-903' });

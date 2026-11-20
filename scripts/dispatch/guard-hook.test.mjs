@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { apiMethod, checkAgent, checkCommand, main, pushTargets, readCurrentBranch, tokenize } from './guard-hook.mjs';
+import { apiMethod, checkAgent, checkCommand, main, parse, pushTargets, readCurrentBranch, readGitAlias } from './guard-hook.mjs';
 
 const onBranch = (branch) => ({ currentBranch: () => branch });
 const R = 'repos/Manzia/wbank-documents-reports-mcp';
@@ -78,7 +78,24 @@ describe('checkCommand', () => {
     'git push -fu origin feature/MCP-110-x',
     'git push -uf origin feature/MCP-110-x',
     'git push -df origin feature/MCP-110-x',
-    'git -c alias.p=push p origin main'
+    'git -c alias.p=push p origin main',
+    // second review: substitutions in quotes, positional args, variables, config from env, unparsable
+    'echo "$(gh pr merge 1)"',
+    'echo `gh pr merge 1`',
+    'diff <(gh pr merge 1) x',
+    "bash -c 'gh \"$@\"' _ pr merge 1",
+    'C=merge; gh pr $C 1',
+    'gh $CMD 1',
+    '$GH pr merge 1',
+    'git $SUB origin main',
+    'B=main; git push origin $B',
+    'GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=alias.p GIT_CONFIG_VALUE_0=push git p origin main',
+    'export GIT_CONFIG_COUNT=1',
+    'export GH_CONFIG_DIR=/tmp/gh',
+    'env GH_CONFIG_DIR=/tmp/gh gh m 1',
+    'git --config-env=alias.p=V p origin main',
+    "echo 'unbalanced",
+    'echo "unbalanced'
   ])('blocks %s', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone')).allowed).toBe(false);
   });
@@ -108,7 +125,12 @@ describe('checkCommand', () => {
     'git push -u origin feature/MCP-110-hosted-zone',
     'git -c user.name=x commit -m msg',
     'timeout 60 npm test',
-    `gh api -XGET ${R}/pulls`
+    `gh api -XGET ${R}/pulls`,
+    'echo "gh pr merge 1; git push origin main"',
+    "git commit -m 'Fix: do not run gh pr merge here'",
+    'gh api "repos/Manzia/wbank-documents-reports-mcp/pulls/$N/comments"',
+    'export NODE_ENV=test && npm test',
+    'npm test 2>&1 | tail -5'
   ])('allows %s on a feature branch', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone'))).toEqual({ allowed: true });
   });
@@ -131,9 +153,21 @@ describe('checkAgent', () => {
 });
 
 describe('helpers', () => {
-  test('tokenize strips quotes (also stray ones) and leading env assignments', () => {
-    expect(tokenize('A=1 B=2 git commit -m "a b"')).toEqual(['git', 'commit', '-m', 'a b']);
-    expect(tokenize(' gh pr merge 1"')).toEqual(['gh', 'pr', 'merge', '1']);
+  test('parse splits on operators outside quotes only and pulls out substitutions', () => {
+    expect(parse('a "b; c" && d')).toEqual({ segments: [['a', 'b; c'], ['d']], substitutions: [] });
+    expect(parse("echo \"x $(gh pr merge 1) y\"")).toEqual({ segments: [['echo', 'x $(…) y']], substitutions: ['gh pr merge 1'] });
+    expect(parse('echo \'$(not run)\'').substitutions).toEqual([]);
+    expect(parse('echo "open').unparsable).toBe('unbalanced quotes');
+  });
+
+  test('git aliases are checked as what they expand to', () => {
+    const aliases = { p: 'push origin main', m: '!gh pr merge 1', st: 'status' };
+    const opts = { currentBranch: () => 'feature/x', gitAlias: (n) => aliases[n] };
+    expect(checkCommand('git p', opts).allowed).toBe(false);
+    expect(checkCommand('git m', opts).allowed).toBe(false);
+    expect(checkCommand('git st', opts)).toEqual({ allowed: true });
+    expect(readGitAlias('/nonexistent-dir', 'p')).toBeUndefined();
+    expect(readGitAlias('.', 'bad name;x')).toBeUndefined();
   });
 
   test('apiMethod reads every spelling', () => {

@@ -43,6 +43,7 @@ export const SELF_TEST_PROMPT = [
   'Must succeed: `npm ci` and `npm test` in mcp-server/hello-world; `gh api repos/Manzia/wbank-documents-reports-mcp --jq .full_name`; `git push --dry-run origin HEAD:refs/heads/feature/MCP-000-self-test`; `aws cloudformation describe-stacks --stack-name wbank-docs-reports-mcp-prod --query "Stacks[0].StackStatus"`; `curl -s -o /dev/null -w "%{http_code}" "https://search.worldbank.org/api/v3/wds?format=json&rows=1"` prints 200.',
   'Must fail: `cat ~/.aws/credentials`; `cat ~/.aws/credentials.bak`; `ls ~/.aws/sso/cache ~/.aws/cli/cache`; `ls ~/.ssh`; `ls ~/.config/gh`; `ls ~/.wbank-mcp-dispatch/sessions`; `node -e "require(\'fs\').readFileSync(process.env.HOME+\'/.aws/credentials\')"`; reading ~/.aws/credentials and ~/.config/gh/hosts.yml with your Read tool; `touch ~/.aws/x`; `touch ~/.npm/x`; `curl -sI https://example.com`.',
   'Must return AccessDenied: `aws cloudformation create-stack --stack-name x --template-body \'{}\'`; `aws secretsmanager list-secrets`; `aws lambda list-functions --max-items 1 --query "Functions[0].FunctionName" && aws lambda invoke --function-name x /dev/null`.',
+  'Must fail (no write access): `mkdir -p "$GH_CONFIG_DIR" && touch "$GH_CONFIG_DIR/config.yml"`.',
   'Must be blocked by the guard hook: `gh pr merge 1`; `bash -c "gh pr merge 1"`; `gh -R Manzia/wbank-documents-reports-mcp pr merge 1`; `gh run rerun 1`; `security find-generic-password -s gh:github.com -w`; `claude --version`.'
 ].join('\n');
 
@@ -56,6 +57,7 @@ export function paths(home, repo) {
     guard: join(state, 'guard-hook.mjs'),
     settings: join(state, 'session-settings.json'),
     sessions: join(state, 'sessions'),
+    sessionConfig: join(state, 'session-config'),
     instructions: join(state, 'agent-instructions.md'),
     log: join(home, 'Library', 'Logs', 'wbank-mcp-dispatch.log'),
     worktrees: join(repo, '.claude', 'worktrees')
@@ -249,9 +251,10 @@ export function launchEnv(baseEnv) {
 }
 
 // The guard settings plus an env block with the task's temporary credentials, token, region and npm cache.
-// The AWS CLI and gh are pointed at empty per-session locations, so they never need ~/.aws or ~/.config/gh,
-// which the sandbox denies outright.
-export function sessionSettings(guard, worktree, creds, githubToken) {
+// The AWS CLI and gh are pointed at an empty per-session folder in ~/.wbank-mcp-dispatch/session-config/,
+// so they never need ~/.aws or ~/.config/gh (which the sandbox denies outright). That folder is outside the
+// worktree, so a session can't write a gh alias or an AWS profile into it.
+export function sessionSettings(guard, worktree, creds, githubToken, configDir) {
   return {
     ...guard,
     env: {
@@ -261,11 +264,12 @@ export function sessionSettings(guard, worktree, creds, githubToken) {
       AWS_SESSION_TOKEN: creds.SessionToken,
       AWS_REGION: REGION,
       AWS_DEFAULT_REGION: REGION,
-      AWS_CONFIG_FILE: join(worktree, '.session-config', 'aws-config'),
-      AWS_SHARED_CREDENTIALS_FILE: join(worktree, '.session-config', 'aws-credentials'),
+      AWS_CONFIG_FILE: join(configDir, 'aws-config'),
+      AWS_SHARED_CREDENTIALS_FILE: join(configDir, 'aws-credentials'),
       GH_TOKEN: githubToken,
-      GH_CONFIG_DIR: join(worktree, '.session-config', 'gh'),
+      GH_CONFIG_DIR: join(configDir, 'gh'),
       GH_PROMPT_DISABLED: '1',
+      GH_NO_UPDATE_NOTIFIER: '1',
       GIT_TERMINAL_PROMPT: '0',
       npm_config_cache: join(worktree, '.npm-cache')
     }
@@ -277,7 +281,9 @@ function writeSessionSettings(ctx, p, id, worktree) {
   const githubToken = readGitHubToken(ctx);
   mkdirSync(p.sessions, { recursive: true, mode: 0o700 });
   const file = join(p.sessions, `${id}.json`);
-  const settings = sessionSettings(JSON.parse(readFileSync(p.settings, 'utf8')), worktree, createCredentials(ctx, id), githubToken);
+  const configDir = join(p.sessionConfig, id);
+  mkdirSync(join(configDir, 'gh'), { recursive: true, mode: 0o700 });
+  const settings = sessionSettings(JSON.parse(readFileSync(p.settings, 'utf8')), worktree, createCredentials(ctx, id), githubToken, configDir);
   writeFileSync(file, `${JSON.stringify(settings, null, 2)}\n`, { mode: 0o600 });
   chmodSync(file, 0o600);
   return file;
@@ -315,6 +321,7 @@ function cleanUp(ctx, p, task, state) {
   if (state.localBranches.has(task.id)) ctx.sh('git', ['-C', ctx.repo, 'branch', '-D', state.localBranches.get(task.id)]);
   rmSync(join(p.claims, `${task.id}.json`), { force: true });
   rmSync(join(p.sessions, `${task.id}.json`), { force: true });
+  rmSync(join(p.sessionConfig, task.id), { recursive: true, force: true });
 }
 
 function notify(ctx, message) {
@@ -449,6 +456,7 @@ export function selfTest(ctx) {
     ctx.sh('claude', [...guardArgs(p, settings), SELF_TEST_PROMPT], { cwd: worktree, env: launchEnv(ctx.env), stdio: 'inherit' });
   } finally {
     rmSync(join(p.sessions, 'SELFTEST.json'), { force: true });
+    rmSync(join(p.sessionConfig, 'SELFTEST'), { recursive: true, force: true });
     ctx.sh('git', ['-C', ctx.repo, 'worktree', 'remove', '--force', worktree]);
   }
 }
