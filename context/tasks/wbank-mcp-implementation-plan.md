@@ -1,6 +1,6 @@
 # World Bank Public MCP Server — Implementation Plan
 
-**Date:** 2026-11-19 (v1)
+**Date:** 2026-11-19 (v2: design v5, i.e. live vocabulary snapshot A10 as MCP-135, term resolution in MCP-131, paged `read_document` in MCP-133)
 **Status:** Draft for review
 **Implements:** `context/design/wbank-mcp-architecture.md` (the "design doc"; § references marked "design §" point to it)
 **Expected queries:** `context/design/wbank-mcp-query-design.md`
@@ -12,7 +12,7 @@
 
 ## 1. Summary
 
-- **24 tasks** (`MCP-100` … `MCP-180`) in waves 0–6: **17 local, 7 human. No cloud tasks.** This
+- **25 tasks** (`MCP-100` … `MCP-180`) in waves 0–6: **18 local, 7 human. No cloud tasks.** This
   project runs Claude Code sessions **on Roy's Mac only**: no cloud sessions, scheduled tasks, routines
   or remote agents (§2.1).
 - **One dispatcher, no manual assignment.** `scripts/dispatch/dispatch-local.sh` is run every 15
@@ -34,8 +34,8 @@
   blocked sessions (`claude attach <ID>`); the human tasks (setup, DNS delegation, connector checks in
   the three web apps, reviewing evaluation results, sign-off, the least-privilege switch).
 - **Peak parallelism:** waves 1–3 overlap. The evaluation set (MCP-120) runs alongside the skeleton,
-  and the upstream and Haiku modules (MCP-130, MCP-131) run in parallel. `local_capacity` is 2.
-- **Critical path:** 100 → 101 → 102 → 112 → 113 → 114 → 115 → 140 → 150 → 151 → 170 → 171 → 172.
+  and the search and reading tools (MCP-132, MCP-133) run in parallel. `local_capacity` is 2.
+- **Critical path:** 100 → 101 → 102 → 112 → 113 → 114 → 135 → 140 → 150 → 151 → 170 → 171 → 172.
   The NS delegation (MCP-111) and the tool code (MCP-130…134) must be ready by the time their
   dependants reach the front.
 
@@ -134,7 +134,7 @@ What remains outside the guard:
 | G4 | **The gateway caches the tool list** | Design §6.1 | MCP-113 adds a re-sync step (`SynchronizeGatewayTargets`) to `deploy.yml` that fails the deploy if it fails. The deploy role (PowerUserAccess) can call it; sessions can't (layer 1). |
 | G5 | **CloudFormation support for the gateway's `NONE` authorizer, streaming flag and WAF association is unverified** | Design §3.2 [Assumption] | MCP-102 checks the CloudFormation registry schemas. A missing property becomes a post-deploy CLI step in `deploy.yml` (MCP-113), not a new component. |
 | G6 | **Sessions can't read CloudFront, WAF or Secrets Manager** (layer 1 hides the origin secret) | §2.4 | Verification uses HTTP behaviour (custom domain, direct gateway hostname), CloudFormation outputs and CloudWatch metrics (WAF `CountedRequests`/`BlockedRequests`, CloudFront 5xx). |
-| G7 | **Shared hotspot files**: `mcp-server/template.yaml`, the server's `package.json`/lock, the tool registry, `.github/workflows/*`, `CLAUDE.md` | — | MCP-112 adds every runtime dependency, the Bedrock permission and the tool registry with all five tool modules as stubs up front. Template changes happen only in infra tasks, which depend on each other in sequence (110 → 112 → 113 → 114 → 140 → 170). |
+| G7 | **Shared hotspot files**: `mcp-server/template.yaml`, the server's `package.json`/lock, the tool registry, `.github/workflows/*`, `CLAUDE.md` | — | MCP-112 adds every runtime dependency, the Bedrock permission and the tool registry with all five tool modules as stubs up front. Template changes happen only in infra tasks, which depend on each other in sequence (110 → 112 → 113 → 114 → 135 → 140 → 170). |
 | G8 | **Stub tools are live on the public endpoint** between MCP-112 and MCP-134 | Every merge deploys | The endpoint isn't advertised until launch (MCP-172). Stubs return a clear "not available yet" error. The test tool `diagnostic` is removed in MCP-170. |
 | G9 | **The scaffold's names are baked into CI and deploy** | CLAUDE.md: `package-path` in `ci.yml`, `cache-dependency-path` in `deploy.yml` | MCP-112 renames `mcp-server/hello-world/` to `mcp-server/server/` and updates both, plus CLAUDE.md. |
 | G10 | **Worktrees live inside the repo** (`.claude/worktrees/`) | Worktree docs | `.gitignore` covers `.claude/worktrees/` and `.npm-cache/` (MCP-100). ESLint and Jest in `mcp-server/server/` only look inside that package. |
@@ -150,6 +150,8 @@ What remains outside the guard:
 | G20 | **A stalled session looks taken forever** (crashed, or waiting on a question) | — | Stale check: no commit and no PR activity for `stale_hours` → notification. Blocked sessions also notify. The dispatcher never restarts a task from scratch. |
 | G21 | **The laptop sleeps or shuts down** | `launchd` runs jobs only while awake | Sleep suspends sessions. Shutdown stops them; the dispatcher resumes stopped sessions (at most twice) after the next login. |
 | G22 | **Parameters must be declared before `deploy.yml` passes them** | CLAUDE.md, Known Issues | MCP-140 declares `AlertEmail` and passes it from the `production` variable `ALERT_EMAIL` in the same PR. |
+| G23 | **`documents1` serves only whole files** and redirects the API's `/text/` links to `/txt/` | 2026-11-19: a ranged GET returned all 298,885 bytes; `/text/` → 301 → `/txt/` | `read_document` fetches whole files from `/txt/` and keeps them in memory while warm (MCP-133); no outline cache (design §13, A2). |
+| G24 | **Sessions can't read the vocabulary bucket or invoke the refresh function** | Layer 1 allows no S3 or Lambda invoke | MCP-135 is checked through its unit tests, the deploy log (the post-deploy refresh step) and its CloudWatch logs and alarm. |
 
 ---
 
@@ -164,10 +166,10 @@ What remains outside the guard:
              │
  Wave 2   local (from 101, alongside wave 1): 120 evaluation set ─► 121 harness
              │
- Wave 3   local (from 112): 130 upstream + catalog ─┬─► 132 search tools ─┬─► 134 retrieve_skill + guidance
-                            131 Haiku helpers ──────┴─► 133 project + read ┘
+ Wave 3   local (from 112): 130 transport + query building ─┬─► 132 search tools ─┬─► 134 retrieve_skill + guidance
+                            131 resolution + Haiku ─────────┴─► 133 project + read ┘
              │
- Wave 4   local (infra, from 115): 140 rate limits + monitoring
+ Wave 4   local (infra): 135 vocabulary snapshot (from 114, 130) ─► 140 rate limits + monitoring (from 115)
              │
  Wave 5   local: 150 evaluation run 1 (needs 121, 134, 140) ─► human: 151 review ─► fix tasks 16x (added by you)
              │
@@ -277,8 +279,11 @@ Design §14 step 1 asks for these checks "at the same start". They decide detail
 2. **Document text:** for 5 documents of different types (ICR, PAD, ISR, financing agreement,
    procurement plan), the `documents1.worldbank.org` text file returns 200, and contains form-feed page
    breaks; the same file on `documents.worldbank.org` returns 403 (as the design found).
-3. **WDS:** `srt=docdt&order=desc` returns records in date order; `proid=P117635` returns 129 or more
-   records; `fct=count_exact` returns country facet counts.
+3. **WDS and Projects API:** `srt=docdt&order=desc` returns records in date order; `proid=P117635`
+   returns 129 or more records; facets return the valid values for every filter in design §7.2
+   (countries, regions, document types, languages; sectors, themes, statuses); and the record lists
+   each API's documented query parameters (the allow-lists for MCP-130). The text link of a record is
+   reachable at `documents1` under `/txt/` (G23).
 4. **Haiku 5.5:** one Converse call through `us.anthropic.claude-haiku-5-5` succeeds; the record lists
    the tokens-per-minute and requests-per-minute quotas (value and quota code) for Haiku 5.5, Sonnet 5.5
    and Opus 5.5 from Service Quotas.
@@ -495,50 +500,66 @@ Code only: each merge redeploys the function without changing resources.
 
 | ID | Title | Runs | Depends on | Infra |
 |---|---|---|---|---|
-| MCP-130 | Upstream clients and catalog tables | 💻 | 112 | no |
-| MCP-131 | Haiku helpers | 💻 | 112 | no |
+| MCP-130 | Upstream transport and query building | 💻 | 112 | no |
+| MCP-131 | Term resolution and Haiku helpers | 💻 | 130 | no |
 | MCP-132 | `search_documents` and `search_projects` | 💻 | 130, 131 | no |
 | MCP-133 | `get_project` and `read_document` | 💻 | 130, 131 | no |
 | MCP-134 | `retrieve_skill`, skills and tool guidance | 💻 | 132, 133 | no |
 
 Shared contracts that several tasks must agree on (set by MCP-130 and MCP-131, changed only with
-approval): the upstream client functions and their return shapes; the catalog lookups; the Haiku
-helper signatures and their fallback behaviour; the provenance fields every result item carries
-(design §5, "Rules common to all tools").
+approval): the transport functions and the normalised record shape; the parameter allow-lists; the
+vocabulary snapshot format (`vocabulary.json`, also written by MCP-135); the resolver's signature and its
+"interpreted as" output; the Haiku helper signatures and their fallback behaviour; the provenance fields
+every result item carries (design §5, "Rules common to all tools").
 
-#### MCP-130 — Upstream clients and catalog tables (💻)
+#### MCP-130 — Upstream transport and query building (💻)
 
-**Owns:** `mcp-server/server/src/upstream/**`; `mcp-server/server/src/catalog/**`;
-`mcp-server/server/scripts/build-catalog.mjs`; recorded fixtures under `mcp-server/server/tests/fixtures/`.
+Design §5, "Upstream access, in two layers".
 
-**Acceptance:**
-1. WDS client: query, filters (project ID, countries, region, document type, language, dates, author,
-   report number, document ID, collection), `srt=docdt` sort with `order`, facets with
-   `fct=count_exact`, paging. It returns the query as executed alongside the records.
-2. Projects client: search with filters and date windows, and one project with `fl=*`.
-3. Document text: the record's text file fetched from `documents1.worldbank.org` only (no arbitrary
-   URL accepted), split into pages on form feeds.
-4. Every upstream call: 10-second timeout, one retry with backoff, at most 3 parallel calls per tool
-   call, a descriptive User-Agent, an in-memory cache for the life of the warm function.
-5. The catalog holds the document-type table of design §9 and the country and region lists. The lists
-   are built by `build-catalog.mjs` from the APIs' own facet values and committed as JSON.
-6. Tests use recorded, trimmed API responses (D8) and cover a timeout, a retry and a 403.
-
-#### MCP-131 — Haiku helpers (💻)
-
-**Owns:** `mcp-server/server/src/haiku/**`.
+**Owns:** `mcp-server/server/src/upstream/**`; `mcp-server/server/src/vocabulary/{format,fetch}.ts`;
+recorded fixtures under `mcp-server/server/tests/fixtures/`.
 
 **Acceptance:**
-1. Three helpers (design §7): reformulate a query into 2–3 keyword variants; map an informal name to
-   catalog values, **choosing only from the given list**; re-rank up to about 20 shortened pages for a
-   question and return page numbers.
-2. Every call uses the `us.anthropic.claude-haiku-5-5` inference profile, at most about 500 output
-   tokens and a 5-second timeout, and asks for a fixed output structure. Output outside that structure
-   (unknown catalog values, page numbers not offered) is discarded.
-3. On timeout, throttling or any error, each helper returns the plain keyword fallback and logs the
-   reason; a test covers each path.
-4. Document text is passed as data, never as instructions; a test with injected instructions in a page
-   shows the output is still only page numbers.
+1. **Transport, one per host** (`search.worldbank.org`, `documents1.worldbank.org`): any other host is
+   refused; 10-second timeout; one retry with backoff; at most 3 parallel requests per tool call; a
+   descriptive User-Agent; paging; an in-memory cache for the life of the warm function; API errors
+   turned into plain messages. It has no query logic.
+2. **Parameter allow-lists** for WDS and the Projects API, taken from the API documentation and the
+   MCP-102 record. A request with a parameter outside the list is refused before it is sent; a test
+   shows a parameter injected through a tool input is refused.
+3. **Normalised records:** WDS and Projects responses become one stable provenance shape (IDs, title,
+   document and disclosure dates, type, record and file links); every other returned field stays
+   available. The query as sent is returned with the records.
+4. **Document text:** built from the record's text link, rewritten to `documents1.worldbank.org` and
+   the `/txt/` path (G23); never from a URL given by a caller.
+5. **Vocabulary:** the `vocabulary.json` format (each filter's valid values as the APIs list them, plus
+   the date fetched) and `fetch`, which builds it from the WDS and Projects API facets. MCP-135 runs
+   the same code on a schedule; the server uses it live only when no snapshot exists.
+6. Tests use recorded, trimmed API responses (D8) and cover a timeout, a retry, a 403, a refused host
+   and a refused parameter.
+
+#### MCP-131 — Term resolution and Haiku helpers (💻)
+
+Design §7, §7.1.
+
+**Owns:** `mcp-server/server/src/haiku/**`; `mcp-server/server/src/vocabulary/{resolve,load}.ts`.
+
+**Acceptance:**
+1. `load` reads the snapshot from the vocabulary bucket at cold start and keeps it in memory; with no
+   snapshot it calls MCP-130's `fetch` and keeps the result in memory. A test covers both.
+2. `resolve` turns a plain-language value into vocabulary values in the order of design §7.1: forgiving
+   exact match (case, accents, punctuation); fuzzy match above a threshold set in code; Haiku choosing
+   **only from the list**; otherwise free text plus the closest valid values. There is **no
+   hand-written synonym or alias table**; a test greps the source for one.
+3. Every resolution returns an "interpreted as" sentence, e.g. "'East Africa' is not a World Bank
+   region; searched Kenya, Tanzania, …". Resolutions are remembered in memory.
+4. Query reformulation: a query becomes 2–3 keyword variants.
+5. Every Haiku call uses the `us.anthropic.claude-haiku-5-5` inference profile, at most about 500
+   output tokens and a 5-second timeout, and asks for a fixed output structure. Output outside it
+   (values not in the list) is discarded.
+6. On timeout, throttling or any error, each helper falls back (keyword logic for reformulation, step 4
+   for resolution) and logs the reason; a test covers each path. Injected instructions in a term or in
+   document text change nothing but the values chosen from the list.
 
 #### MCP-132 — `search_documents` and `search_projects` (💻)
 
@@ -548,8 +569,9 @@ helper signatures and their fallback behaviour; the provenance fields every resu
 1. Inputs and outputs as design §5.1 and §5.2, including `group_by_stage`, facets, `sort` (newest and
    oldest use `srt=docdt`), and paging (default 10, max 50).
 2. A free-text query runs the Haiku variants in parallel; results are merged and de-duplicated.
-3. Every result echoes the exact query it ran, labels facet counts as "matching document records",
-   labels commitments as commitments, and ends with next-step hints.
+3. Every result echoes the exact query it ran and how each term was interpreted (MCP-131), labels facet
+   counts as "matching document records", labels commitments as commitments, and ends with next-step
+   hints.
 4. Output stays under about 20,000 tokens and says when it was truncated and how to get the next part.
 5. Tests cover each Q1 query shape from the expected-queries doc with recorded fixtures.
 
@@ -560,14 +582,18 @@ helper signatures and their fallback behaviour; the provenance fields every resu
 **Acceptance:**
 1. `get_project` returns the profile of design §5.3. Financing keeps commitments separate from total
    cost, and implementation status is labelled as coming from the latest *disclosed* ISR, with its date.
-2. `read_document` follows design §5.4 steps 1–6. It accepts only a document ID or report number,
-   returns verbatim passages with page numbers and a ready-made citation, and always gives a coverage
-   note ("searched all N pages; M passages returned").
-3. Long documents are re-ranked by Haiku; without Haiku the keyword ranking is used and the result
-   says so.
-4. `pages` reads an explicit range. Without a `question`, the tool returns the outline and first pages.
-5. A long read sends progress notifications (design §6.1).
-6. A document with no text file: text from the PDF if the tool can extract it, otherwise a plain
+2. `read_document` follows design §5.4: accepts only a document ID or report number; fetches the whole
+   text (G23); splits it into pages; builds an **outline** of the numbered headings with their start
+   pages. A test checks the outline of a recorded ICR and PAD.
+3. No `question` or `pages`: the outline, the page count and the first pages. `question`: the outline plus
+   the best keyword-matching pages (with the reformulated terms). `pages`: exactly those pages. Pages are
+   verbatim, each with its page number and a ready-made citation.
+4. Every result has a coverage note ("72 pages; returned pages 12, 31–33 and 47 matching …"), stays under
+   about 20,000 tokens, and names the next page ranges when more is available.
+5. **No Haiku re-ranking** (design §5.4). The description tells the model, as AWS's does, that pages are
+   verbatim and need no re-reading to confirm them.
+6. A long read sends progress notifications (design §6.1).
+7. A document with no text file: text from the PDF if the tool can extract it, otherwise a plain
    statement that the text is unavailable.
 
 #### MCP-134 — `retrieve_skill`, skills and tool guidance (💻)
@@ -594,7 +620,33 @@ description and hint strings in every tool module (design §4.2).
 
 | ID | Title | Runs | Depends on | Infra |
 |---|---|---|---|---|
-| MCP-140 | Rate limits and monitoring | 💻 | 115 | yes |
+| MCP-135 | Vocabulary snapshot | 💻 | 114, 130 | yes |
+| MCP-140 | Rate limits and monitoring | 💻 | 115, 135 | yes |
+
+#### MCP-135 — Vocabulary snapshot (💻, infra)
+
+Design §3.2, §7.2 (A10, approved 2026-11-19).
+
+**Owns:** `mcp-server/template.yaml`; `mcp-server/server/src/handlers/refresh-vocabulary.ts` + tests;
+the post-deploy refresh step in `.github/workflows/deploy.yml`. **Resources:** CREATE the vocabulary S3
+bucket, the refresh function with its role and log group, the EventBridge Scheduler schedule with its
+role; UPDATE the MCP server function's role (`s3:GetObject` on the snapshot) and environment (bucket
+name).
+
+**Acceptance:**
+1. The bucket: private (all public access blocked), versioned, encrypted (SSE-S3), TLS-only bucket
+   policy; Retain on delete.
+2. The refresh function runs MCP-130's `fetch` and writes `vocabulary.json` only when every list was
+   fetched; on any failure it writes nothing and exits with an error. A test covers both.
+3. The schedule invokes it every 30 days. Its role may invoke only that function. All new roles carry
+   the permissions boundary.
+4. `deploy.yml` invokes the refresh function after `sam deploy` (and after the target re-sync), and the
+   job fails if the refresh fails.
+5. An alarm (on the SNS topic once MCP-140 exists; until then on the function's errors metric) fires on a
+   failed refresh.
+
+**After merge (you):** approve the deploy; the deploy log shows the refresh step passed, and the
+bucket holds `vocabulary.json` dated today.
 
 #### MCP-140 — Rate limits and monitoring (💻, infra)
 
@@ -609,7 +661,8 @@ monthly AWS Budgets alert.
 1. Gateway rate limits as design §8.3: per tool (`wb___read_document` 120 per minute, the other four
    600) and per target (`wb` 1,200 per minute, 100 concurrent connections).
 2. Alarms on: tool errors; p95 tool duration above 30 s; gateway throttling; a spike in `WafBlocks`;
-   any `WafFailCloses`; CloudFront 5xx; Bedrock throttling. All notify the SNS topic.
+   any `WafFailCloses`; CloudFront 5xx; Bedrock throttling; a failed vocabulary refresh, or a snapshot
+   older than 35 days (moving MCP-135's alarm onto the topic). All notify the SNS topic.
 3. The SNS topic has an e-mail subscription to parameter `AlertEmail`, which `deploy.yml` passes from
    the `production` variable `ALERT_EMAIL` (G22). The address is nowhere in the repo.
 4. One dashboard with these metrics; a monthly Budgets alert at the amount in §10 item 3.
@@ -631,7 +684,7 @@ monthly AWS Budgets alert.
 1. One full run (41 cases × 3) against the production endpoint, at the deployed commit named in the
    record.
 2. The record: the pass count against the gate (37 of 41), and for each failing case the rubric part
-   that failed, the likely cause (tool, guidance, catalog, upstream, judge) and a proposed fix with the
+   that failed, the likely cause (tool, guidance, term resolution, upstream, judge) and a proposed fix with the
    task it would belong to. **No fixes in this task.**
 3. The record lists 25% of the passing cases, chosen at random, for your spot check.
 
@@ -766,7 +819,7 @@ self-test; then install the `launchd` agent. Steps are in the runbook §2.1.
 
 | Limit | Effect |
 |---|---|
-| Infra tasks are serial | 110 → 112 → 113 → 114 → 140 → 170, each with your deploy approval |
+| Infra tasks are serial | 110 → 112 → 113 → 114 → 135 → 140 → 170, each with your deploy approval |
 | DNS delegation is manual | MCP-114 waits for your MCP-111 |
 | `local_capacity` 2 | At most two sessions at once; the evaluation set and the tool modules interleave with the skeleton |
 | Verification waits for your approval | `after_deploy` tasks start only after the deploy for the head of `main` is green |
@@ -785,10 +838,10 @@ self-test; then install the `launchd` agent. Steps are in the runbook §2.1.
 | 3 | Response streaming by default | 112, 113, 115, 116 |
 | 4 | Rate limiting | 140, 170 |
 | 5 | Basic WAF (bot and volumetric) | 113, 114, 170 |
-| 6 | ≥ 90% accurate on the expected queries | 120, 121, 130–134, 150, 151, 171, 172 |
+| 6 | ≥ 90% accurate on the expected queries | 120, 121, 130–135, 150, 151, 171, 172 |
 
-No task adds anything beyond these requirements and the approved design (A3 monitoring and A4 custom
-domain are approved items). The dispatcher and its guard (MCP-100, MCP-101) are build tooling, not
+No task adds anything beyond these requirements and the approved design (A3 monitoring, A4 custom
+domain and A10 vocabulary snapshot are approved items). The dispatcher and its guard (MCP-100, MCP-101) are build tooling, not
 part of the MCP server.
 
 ---

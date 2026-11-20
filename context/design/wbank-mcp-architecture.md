@@ -1,6 +1,6 @@
 # World Bank Public MCP Server: AWS Architecture & Design
 
-**Status:** Approved v4 · **Date:** 2026-11-19 · **Region:** us-east-1 · **Stack:** `wbank-docs-reports-mcp-prod` · **Endpoint:** `https://worldbank-mcp.manzia.com/mcp`
+**Status:** Approved v5 · **Date:** 2026-11-19 (v5: live vocabulary snapshot A10, dynamic term resolution, paged `read_document`; see §13) · **Region:** us-east-1 · **Stack:** `wbank-docs-reports-mcp-prod` · **Endpoint:** `https://worldbank-mcp.manzia.com/mcp`
 
 **Inputs:** the requirements in `context/tasks/wbank-mcp-to-do.md` and the expected queries in `context/design/wbank-mcp-query-design.md`.
 
@@ -21,7 +21,9 @@ A public MCP server at **`https://worldbank-mcp.manzia.com/mcp`** with no sign-i
 **What the target does:**
 
 - It exposes five read-only tools over the World Bank **Documents & Reports** (WDS) and **Projects & Operations** APIs.
-- It calls **Claude Haiku 5.5 on Amazon Bedrock** only for bounded tasks: reformulating search queries, mapping informal names to catalog values, and choosing which pages of a long document answer a question.
+- It calls **Claude Haiku 5.5 on Amazon Bedrock** only for bounded tasks: reformulating search queries, and resolving informal names ("East Africa", "PAD") to the World Bank's own values when plain matching fails.
+- It keeps a **snapshot of the World Bank's own vocabulary** (the valid countries, regions, document types, sectors, themes, statuses and languages) in S3, refreshed every 30 days by a scheduled job (A10, §7.2).
+- Documents are read the way the AWS Knowledge server reads its pages: an outline with page numbers, then verbatim pages on request. **The client's model decides what to read** (§5.4).
 - It keeps no data. Every answer carries the IDs, titles, dates, page references and links it relied on.
 
 ### Requirement map
@@ -60,6 +62,9 @@ These come from probes of the live APIs, AWS docs and a hands-on test on 2026-11
 | **[Verified]** `manzia.com` DNS is in Route 53 in **another AWS account**. | `worldbank-mcp.manzia.com` is delegated to a hosted zone in this account (one-time step, §3.2). |
 | **[Verified]** With no inbound auth, gateway rate limits can only use `targetName` and `toolName`. | Per-caller limiting is per IP, in WAF (§8). |
 | **[Verified]** The official **MCP TypeScript SDK** (v2.4.0, released 2026-10-23) provides `createMcpHandler`, a standard web handler (`Request` → `Response`). It serves the stateless 2026-07-28 protocol revision with a fallback for older clients, and sends **SSE keep-alive pings every 15 s** by default. Hono's Lambda adapter (`streamHandle`, in `@hono/aws-lambda`) bridges a web handler to **Lambda function URL response streaming**. | Option B needs only a thin wiring layer (§6). |
+| **[Verified]** Abstracts are rare: 13 of the 100 most recent records of project P117635 have one. An ICR's abstract summarises the project, not, for example, how maintenance was funded. | Abstract plus link can't answer substantive questions; the text has to be read (§5.4). |
+| **[Verified]** One ICR's text file is 298,885 characters (about 75,000 tokens) over 72 pages. `documents1` ignores byte-range requests (a ranged GET returns the whole file) and serves it in about 0.15 s. The API's `/text/` links redirect to `/txt/`. | A multi-document question can't hand whole files to the client model. A document is fetched whole; a cached outline alone would save nothing (§13, A2). |
+| **[Verified]** The AWS Knowledge MCP Server returns **verbatim chunks** from search, and reads pages **in parts** (10,000 characters by default) with a **table of contents giving each section's range**. Its descriptions tell the model to answer from the chunks and read further only when they lack the answer. | `read_document` follows the same pattern (§5.4). |
 | **[Verified]** Claude limits: about 150,000 characters per tool result and 240 s per call on claude.ai; 25,000 tokens in Claude Code. Gateway: 15-minute invocation timeout, 6 MB payload, 200 tool calls per second (adjustable). | Tool output is capped at about 20,000 tokens (§5). |
 
 ---
@@ -92,9 +97,13 @@ These come from probes of the live APIs, AWS docs and a hands-on test on 2026-11
    │ RESPONSE_STREAM) · MCP TS SDK        │      └──────────────────────────────┘
    │ Node.js 24, arm64 · 5 read-only tools│
    └───────┬──────────────────┬───────────┘
-           ▼                  ▼
-   search.worldbank.org   documents1.worldbank.org
-   (WDS + Projects APIs)  (document text and PDF files)
+           ▼                  ▼                    ▲ reads at cold start
+   search.worldbank.org   documents1.worldbank.org   │
+   (WDS + Projects APIs)  (document text and PDF)  ┌─┴────────────────────────────┐
+           ▲                                       │ S3: vocabulary.json          │
+           └──── refresh Lambda ──────────────────▶│ (World Bank's own values)    │
+                     ▲                             └──────────────────────────────┘
+          EventBridge Scheduler, every 30 days (and once after each deploy)
 ```
 
 ### 3.2 Components (all in stack `wbank-docs-reports-mcp-prod`, deployed by the existing pipeline)
@@ -109,9 +118,11 @@ These come from probes of the live APIs, AWS docs and a hands-on test on 2026-11
 | WAF web ACL (regional, on the gateway) | Origin lock plus reputation (§8.2). This is the gateway WAF integration that requirement 5 refers to. |
 | Gateway target `wb` | **MCP-server** target. Endpoint: the function URL's `/mcp`. Outbound auth: gateway IAM role, SigV4 with service `lambda`. Its tool list is synced from the server, so the pipeline **re-syncs the target after each deploy**. Clients see tools named `wb___<tool>`. |
 | MCP server function | Lambda, Node.js 24.x, arm64, TypeScript bundled with esbuild, 1,024 MB, 5-minute timeout. A **function URL** with auth type **AWS_IAM** and invoke mode **RESPONSE_STREAM**. Built on the official **MCP TypeScript SDK** (`createMcpHandler`, stateless) bridged to Lambda streaming with `@hono/aws-lambda` `streamHandle`. SDK versions are pinned. Replaces the scaffold's `HelloWorldFunction` and its API Gateway REST API. |
+| Vocabulary bucket (A10) | S3, private, versioned, encrypted, TLS only. Holds `vocabulary.json`: the valid countries, regions, document types, sectors, themes, statuses and languages, as the APIs list them, with the date fetched. Versioning keeps the previous snapshot. |
+| Vocabulary refresh function (A10) | Lambda, Node.js 24, arm64. Fetches the APIs' own value lists (facets) and writes the snapshot; on any failure it writes nothing, so the previous snapshot stays. Started every 30 days by an **EventBridge Scheduler** schedule, and once by the deploy pipeline after each deploy. |
 | Origin secret | AWS Secrets Manager secret with a random value. Both CloudFront and the regional WAF rule read it through CloudFormation dynamic references. |
 | Gateway service role | Trusted by `bedrock-agentcore.amazonaws.com`, limited by `aws:SourceAccount` and `aws:SourceArn`. Allows `lambda:InvokeFunctionUrl` (and `lambda:InvokeFunction`, which IAM-auth function URLs also require) on the MCP server function only. |
-| Tool execution role | CloudWatch Logs for its own log group. `bedrock:InvokeModel` and `InvokeModelWithResponseStream` on the Haiku 5.5 inference profile and its foundation model only. |
+| Tool execution role | CloudWatch Logs for its own log group. `bedrock:InvokeModel` and `InvokeModelWithResponseStream` on the Haiku 5.5 inference profile and its foundation model only. `s3:GetObject` on the vocabulary object only. The refresh function's role may write that object; the scheduler's role may invoke the refresh function. |
 | Monitoring (A3, approved) | CloudWatch alarms, a dashboard, an SNS topic with an e-mail subscription for the operator, and an AWS Budgets monthly alert (§11) |
 
 Both IAM roles follow the existing deploy-role rule: names generated by CloudFormation, plus the PowerUserAccess permissions boundary (CLAUDE.md, "AWS deploy identity").
@@ -167,7 +178,12 @@ There are five tools: the query doc's four, plus `retrieve_skill` (§4.2). All a
 - **Provenance in every item:** IDs (project ID, document ID, report number), title, document date, disclosure date where relevant, document type, and the official record link plus the file link.
 - **"Those results" without server state:** every search result echoes the **exact query it ran** (keywords, filters, sort, offset). The client changes one part and calls again. This handles follow-ups like "only English, 2022 onward, next ten".
 - **Clear about the source:** results say what they are, for example "matching document records" for facet counts, or "latest *disclosed* ISR" rather than "current status".
-- **Upstream calls:** they use the documented hosts only, with a 10-second timeout per call, one retry with backoff, at most 3 parallel upstream requests per tool call, and a descriptive User-Agent. Results are cached in memory while the code stays warm. A persistent cache is A2, on hold.
+- **Upstream access, in two layers:**
+  - **Transport, one per host** (`search.worldbank.org`, `documents1.worldbank.org`): only those hosts; a 10-second timeout, one retry with backoff, at most 3 parallel requests per tool call, a descriptive User-Agent, paging, an in-memory cache while the code stays warm, and API errors turned into plain messages. It knows nothing about queries.
+  - **Query building, in each tool,** using the APIs' own parameter names, checked against an **allow-list** of parameters taken from the API documentation and the build prechecks. Tools can use anything the APIs support without a new client function, while neither Haiku, the client model nor injected text can make the server send an unknown parameter or reach another host.
+  - Responses are **normalised**: the provenance fields go into one stable shape; every other returned field stays available to the tool.
+  - A persistent cache is A2, on hold.
+- **Term resolution (§7.1):** every filter value given in plain language is resolved against the live vocabulary, and every result says how it was interpreted ("interpreted as"), so the client's model can correct it in the next call.
 
 ### 5.1 `search_documents`
 
@@ -177,22 +193,22 @@ Finds Documents & Reports records, and doubles as a project's document list.
 |---|---|
 | `query` | Natural-language or keyword text (optional) |
 | `project_id` | e.g. P117635. Returns that project's records. |
-| `countries`, `region` | Plain names, converted to catalog values (§7) |
-| `document_types` | e.g. "Procurement Plan", "ISR" (§9 vocabulary) |
+| `countries`, `region` | Plain names, resolved against the live vocabulary (§7.1) |
+| `document_types` | e.g. "Procurement Plan", "ISR", resolved against the live vocabulary (§7.1) |
 | `language`, `date_from`, `date_to`, `author`, `report_number`, `document_id`, `collection` | Exact filters |
 | `sort` | `relevance` (default when there's a query), `newest` or `oldest` (uses `srt=docdt`) |
 | `facet` | Optional: `country`, `document_type`, `language` or `year`. Returns counts. |
 | `group_by_stage` | For a project ID: groups records into design, legal, environmental and social, implementation, restructuring and completion, using a fixed document-type table |
 | `limit`, `offset` | Paging (default 10, max 50) |
 
-**Output:** the total match count, the query as executed, records (provenance plus an abstract when present), facets when asked for, and next-step hints.
+**Output:** the total match count, the query as executed, how each term was interpreted, records (provenance plus an abstract when present), facets when asked for, and next-step hints.
 
 ### 5.2 `search_projects`
 
 | Input | Meaning |
 |---|---|
 | `query` | Keywords (sector or topic) |
-| `countries`, `region`, `status`, `sector`, `theme` | Converted to catalog values |
+| `countries`, `region`, `status`, `sector`, `theme` | Resolved against the live vocabulary (§7.1) |
 | `approval_from` / `approval_to`, `closing_from` / `closing_to` | Date windows. Closing-date filtering is done in the tool code if the API can't do it (**[Assumption]**). |
 | `sort`, `limit`, `offset` | e.g. "closing soonest" |
 
@@ -213,25 +229,27 @@ Implementation status is always labelled as coming from the latest *disclosed* I
 
 ### 5.4 `read_document`
 
-Reads one public document and returns the passages that answer a question, with page references.
+Reads one public document **in parts**, the way the AWS Knowledge server reads its pages (§2). The tool finds and returns text, verbatim; **the client's model does the reading** and decides what to read next.
 
 | Input | Meaning |
 |---|---|
 | `document_id` or `report_number` | Identifies the document. **No arbitrary URLs**, which prevents server-side request forgery. |
-| `question` | What to look for (optional). Without it, the tool returns the outline and first pages. |
-| `pages` | An explicit page range, for reading further or reading tables |
-| `max_passages` | Default 8 |
+| `question` | Optional. What to look for. |
+| `pages` | Optional. An explicit page range, e.g. `40-46`, for reading further or reading tables |
 
 **How it works:**
 
 1. Look up the record through WDS.
-2. Fetch the plain text from `documents1.worldbank.org`.
-3. Split it into pages on form-feed breaks.
-4. Score pages against the question using keyword matching plus the expanded terms from §7.
-5. For long documents, have Haiku re-rank the top candidate pages.
-6. Return the best passages verbatim, each with its page number and a ready-made citation.
+2. Fetch the plain text from `documents1.worldbank.org` (the `/txt/` path), whole: the host doesn't serve parts.
+3. Split it into pages on form-feed breaks, and build an **outline**: the document's numbered headings (ICRs and PADs have them) with the page each starts on.
+4. Return, depending on the input:
+   - **no `question`, no `pages`:** the outline, the total page count and the first pages;
+   - **`question`:** the outline plus the pages that best match it by keyword (with the terms from query reformulation, §7), verbatim;
+   - **`pages`:** those pages, verbatim.
 
-**Output:** metadata, total pages, the passages, a **coverage note** (for example, "searched all 142 pages; 6 passages returned"), and record and PDF links. Multi-document questions are put together by the client model from several calls. For documents with no text file: **[Assumption]** text is extracted from the PDF in the tool code; otherwise the tool says plainly that the text is unavailable.
+**Output:** metadata; the outline; the pages returned, each with its page number and a ready-made citation (title, date, page); a **coverage note** (for example, "72 pages; returned pages 12, 31–33 and 47 matching 'maintenance', 'road fund'"); and, when more is available, the next page ranges to ask for. At most about 20,000 tokens per call. The description says, as AWS's does, that pages are verbatim and need no re-reading to confirm them.
+
+Haiku does not re-rank pages by default; the client's model chooses from the outline and the matches. Re-ranking is added back only if the evaluation shows it improves accuracy (§10). For documents with no text file: **[Assumption]** text is extracted from the PDF in the tool code; otherwise the tool says plainly that the text is unavailable.
 
 ### 5.5 `retrieve_skill`
 
@@ -253,7 +271,7 @@ The tool code is an **MCP server running on Lambda**. AgentCore calls it as an *
 - **MCP implementation:** the official **MCP TypeScript SDK** (`@modelcontextprotocol/server`, v2.x, pinned). `createMcpHandler` turns a standard web request into a streamed web response. It runs **stateless**, serving the 2026-07-28 protocol revision with the fallback for older clients that the gateway may use.
 - **Lambda bridge:** `streamHandle` from `@hono/aws-lambda` connects that web handler to Lambda's response streaming. No session state is kept between requests.
 - **What streams:** with `enableResponseStreaming = true` on the gateway, clients that send `Accept: text/event-stream` receive Server-Sent Events through the gateway and CloudFront:
-  - **Progress notifications** from long tools (`read_document` on large documents, multi-variant searches), for example "fetched document", "ranked 142 pages", "selecting passages".
+  - **Progress notifications** from long tools (`read_document` on large documents, multi-variant searches), for example "fetched document", "72 pages, matching", "returning 5 pages".
   - **SSE keep-alive pings every 15 s** (the SDK default). These keep the connection inside CloudFront's 60-second idle limit, so a long read doesn't time out even when there's no progress to report.
   - **The final result** as the last event.
 - **Tool definitions come from the server code:** names, descriptions, input schemas, **annotations** and output schemas. The gateway caches the tool list, so the deploy pipeline runs a **target re-sync** (`SynchronizeGatewayTargets`) after each deploy that changes the function.
@@ -282,19 +300,35 @@ The tool code is an **MCP server running on Lambda**. AgentCore calls it as an *
 
 ---
 
-## 7. Use of Claude Haiku 5.5 (requirement 2)
+## 7. Vocabulary and Claude Haiku 5.5 (requirement 2)
 
 Haiku is used **only** where it measurably improves accuracy. Every use has a token cap (about 500 output tokens) and a 5-second timeout, and falls back to plain keyword logic if Bedrock is slow or throttles. Calls go through the `us.anthropic.claude-haiku-5-5` inference profile.
 
 | Use | When | Input → output |
 |---|---|---|
 | **Query reformulation** | `search_documents` and `search_projects` with free-text `query` | The user's words → 2 to 3 keyword variants (quoted phrases, synonyms, World Bank terms such as "learning poverty" or "EdTech"). The variants run in parallel and the results are merged and de-duplicated. |
-| **Catalog mapping** | When a name doesn't match exactly | An informal name ("East Africa", "Côte d'Ivoire", "completion report") → official catalog values. Haiku only picks from fixed lists built from the APIs' own facet values. |
-| **Passage re-ranking** | `read_document` on long documents | The question plus about 20 candidate pages, each shortened → a ranked list of page numbers. **Passages are returned verbatim.** |
+| **Term resolution** | A filter value that plain matching can't resolve (§7.1, step 3) | An informal term ("East Africa", "PAD", "completion report") plus the matching part of the live vocabulary → one or more values **from that list only**. |
 
-Haiku never writes the user-facing answer; the client's model does, from verbatim sources. Document text sent to Haiku is treated as **untrusted data**, and Haiku's output is restricted to a fixed structure (lists of terms or page numbers), so injected text can't steer results.
+Haiku never writes the user-facing answer; the client's model does, from verbatim sources. Document text sent to Haiku is treated as **untrusted data**, and Haiku's output is restricted to a fixed structure (lists of terms or vocabulary values), so injected text can't steer results.
 
----
+### 7.1 Term resolution: no hand-written mappings
+
+People phrase things in ways no table can anticipate, so the server keeps **no hand-written list of synonyms or aliases**. Each plain-language filter value is resolved against the World Bank's own vocabulary (§7.2), in this order, stopping at the first that works:
+
+1. **Forgiving exact match:** ignoring case, accents and punctuation ("Cote d'Ivoire" = "Côte d'Ivoire").
+2. **Fuzzy match:** similar wording above a similarity threshold.
+3. **Haiku** chooses from the live list (and may return several, such as a region's countries). It can't invent a value: anything not in the list is discarded.
+4. **Nothing resolves:** the term goes into the free-text search instead, and the result lists the closest valid values.
+
+Resolutions are remembered in memory while the code stays warm, so a new term costs a Haiku call once per instance. **Every result says how each term was interpreted**, for example "'East Africa' is not a World Bank region; searched Kenya, Tanzania, Uganda, Rwanda, Ethiopia, Burundi, South Sudan". Claude, ChatGPT and Gemini, which are stronger than Haiku and know the conversation, correct it in their next call when needed. The tool descriptions also ask them to expand informal terms themselves where they can.
+
+### 7.2 Vocabulary snapshot (A10, approved)
+
+- **What:** the valid values of each filter, as the APIs themselves list them (WDS and Projects API facets): countries, regions, document types, sectors, themes, statuses and languages, with the date fetched.
+- **Where:** `vocabulary.json` in the vocabulary bucket (§3.2).
+- **When:** every **30 days** by an EventBridge Scheduler schedule, and once after each deploy (the pipeline invokes the refresh function), so a new or changed stack always has a current snapshot.
+- **Failure:** a refresh that fails writes nothing, so the previous snapshot stays; an alarm reports it (§11). If the server ever finds no snapshot, it fetches the lists live and keeps them in memory.
+- **Use:** the MCP server function reads the snapshot at cold start and keeps it in memory.
 
 ## 8. Protection: WAF (requirement 5) and rate limits (requirement 4)
 
@@ -352,14 +386,14 @@ The expected queries fall into three tiers. Each needs something different.
 
 | Tier | Expected queries | What makes it accurate |
 |---|---|---|
-| **Search & retrieve** | Q1 (9), parts of Q4 | Correct filters (catalog mapping), `srt` for "latest", facets for "most often", keyword variants for recall, query echo for follow-ups |
+| **Search & retrieve** | Q1 (9), parts of Q4 | Correct filters (term resolution against the live vocabulary, §7.1), `srt` for "latest", facets for "most often", keyword variants for recall, query echo for follow-ups |
 | **Project-centred reading** | Q2 (5), most of Q3 (16), Q4 project items | `proid` → full document list → right document type and version (by date, ISR sequence, version type) → `read_document` with page citations |
 | **Cross-project synthesis** | Q3 "design precedents", "results measures", "apply lessons"; Q4 "comparable operations", "completion lessons" | `search_projects` to build a set of comparable projects → their ICRs and PADs → passages per project. The **coverage statement** is part of the answer ("in the 6 ICRs read…"). |
 
 These design choices target the most likely ways to fail:
 
 1. **Wrong "latest" document:** always sort by document date, never rely on relevance order, and show both document and disclosure dates.
-2. **Wrong document type:** a fixed table maps the queries' vocabulary to WDS document types. It's used by the tools and repeated in their descriptions and the skills.
+2. **Wrong document type:** terms such as "PAD" or "restructuring paper" are resolved against the live list of WDS document types (§7.1), and the result says how. The table below is **not a lookup**: it gives examples for tool descriptions and skills, so the client's model knows the vocabulary.
 
    | Query wording | WDS document type |
    |---|---|
@@ -373,7 +407,7 @@ These design choices target the most likely ways to fail:
    | Program appraisal document | Program Appraisal Document (Program-for-Results) |
    | Procurement plan | Procurement Plan |
 
-3. **Missing evidence in long documents:** page-level search over the whole text, re-ranking by Haiku, and the option to read explicit page ranges for tables (indicators, procurement packages).
+3. **Missing evidence in long documents:** the outline and keyword-matched pages of the whole text, then the client's model reads further page ranges itself, including tables (indicators, procurement packages).
 4. **Over-claiming:** coverage notes and source labels are in every tool result.
 5. **The client model using the tools badly:** tool descriptions, next-step hints and the skills served by `retrieve_skill` (§4.2) give Claude, GPT and Gemini the same workflow, **with no skill installed**.
 
@@ -409,7 +443,7 @@ A case passes only if **all** of the following hold:
 
 ## 11. Security & operations
 
-- **Exposure:** only `worldbank-mcp.manzia.com` is advertised. The gateway's own hostname rejects traffic that doesn't come through CloudFront (§8.2). The MCP server's function URL accepts only SigV4-signed requests from the gateway service role. It calls out only to `search.worldbank.org`, `documents1.worldbank.org` and Bedrock.
+- **Exposure:** only `worldbank-mcp.manzia.com` is advertised. The gateway's own hostname rejects traffic that doesn't come through CloudFront (§8.2). The MCP server's function URL accepts only SigV4-signed requests from the gateway service role. It calls out only to `search.worldbank.org`, `documents1.worldbank.org`, Bedrock and its own vocabulary object in S3.
 - **No user data:** nothing is stored. Logs record the tool name, arguments, timing and upstream status codes, never document contents. Logs are kept 30 days.
 - **Deploys:** the existing pipeline (PR → CI → approval → OIDC deploy). New IAM roles comply with the permissions boundary rule. The origin secret is rotated by hand, with a redeploy.
 - **Monitoring (A3, approved):** CloudWatch alarms notify an SNS topic, which e-mails the operator, on:
@@ -417,7 +451,8 @@ A case passes only if **all** of the following hold:
   - gateway throttling (rate limits hit);
   - a spike in `WafBlocks`, and any `WafFailCloses`;
   - CloudFront 5xx errors;
-  - Bedrock throttling.
+  - Bedrock throttling;
+  - a failed vocabulary refresh, or a snapshot older than 35 days.
 
   There's also one CloudWatch dashboard for these metrics, and an **AWS Budgets** alert on monthly spend.
 
@@ -436,6 +471,8 @@ A case passes only if **all** of the following hold:
 | Some clients don't call `retrieve_skill`, or weight server-provided guidance less than an installed skill | Lower accuracy in that client | Keep the key rules in tool results as well, not just descriptions. The manual acceptance test checks each app. |
 | CloudFormation lacks support for a gateway setting | Some settings can't be expressed in the template | Apply that setting with a post-deploy CLI step in the pipeline |
 | Bedrock Haiku 5.5 quota | Haiku calls throttled | Check the quota before launch. Keyword-only fallback is built in. |
+| The World Bank renames or adds values (a region, a document type) | Terms resolve to outdated values | The snapshot refreshes every 30 days and after each deploy; a failed refresh alarms. |
+| Keyword matching misses the right pages of a long document | The client's model doesn't see the evidence | The outline lets it ask for the right section; Haiku re-ranking can be added back if the evaluation shows a gap. |
 | Rate limits fail open | Unbounded load during an outage of the rate-limit service | WAF per-IP rules stay active. CloudWatch alarms flag unusual load (A3). A concurrency cap (A1) can be revisited. |
 
 ---
@@ -448,7 +485,7 @@ A case passes only if **all** of the following hold:
 | D2 | Does Gemini need sign-in? | **Resolved:** no. Your test with the AWS Knowledge MCP Server worked without sign-in. |
 | D3 | Gemini Enterprise and app eligibility | **Removed:** eligibility is up to users and their plans, not this design |
 | A1 | Lambda reserved concurrency | **Declined for now:** revisit later |
-| A2 | DynamoDB cache | **On hold** |
+| A2 | DynamoDB cache | **On hold.** Considered 2026-11-19 for `read_document` outlines: not useful alone, because `documents1` serves only whole files, so a cached outline still needs the full fetch (about 0.15 s). |
 | A3 | CloudWatch alarms + dashboard + AWS Budgets alert | **Approved**: in the design (§11) |
 | A4 | Custom domain `worldbank-mcp.manzia.com` | **Approved**: in the design (§3, §4.4) |
 | A5 | OAuth inbound auth | **Rejected** |
@@ -456,6 +493,9 @@ A case passes only if **all** of the following hold:
 | A7 | Scheduled or CI evaluation runs | **Rejected** |
 | A8 | WAF logging | **Rejected** |
 | A9 | Plugin and skill packaging, directory listings | **Removed:** users install nothing. Skills are served by the server through `retrieve_skill` (§4.2). |
+| A10 | Vocabulary snapshot in S3, refreshed every 30 days by EventBridge Scheduler and after each deploy | **Approved** 2026-11-19 (§3.2, §7.2) |
+| D4 | How documents are read | **Decided** 2026-11-19: outline plus verbatim pages on request, as the AWS Knowledge server does; the client's model reads. Not abstract plus link (abstracts are rare and the official links return 403). Haiku re-ranking off by default (§5.4). |
+| D5 | Filter vocabulary | **Decided** 2026-11-19: no hand-written mapping tables. Terms resolve against the live vocabulary: match, fuzzy match, Haiku from the list, then free text; results show the interpretation (§7.1). |
 | WAF | AWS managed Bot Control | **Excluded** for cost (§8) |
 
 ---
@@ -464,12 +504,13 @@ A case passes only if **all** of the following hold:
 
 1. **Walking skeleton:** the stack end to end (domain, CloudFront, both WAFs, gateway, MCP-server target, function URL) with a single test tool. Verify the four points in §6.2. At the same start, check `documents1` access, the Haiku 5.5 quota, and CloudFormation support for gateway settings.
 2. **Build the evaluation set:** instantiate the 41 cases and write the reference answers. This comes first so every later step can be measured.
-3. **Tool code:** the five tools, the catalog tables, the Haiku uses, the skills served by `retrieve_skill`, and the tool descriptions and result hints (§4.2, §5, §7). Unit tests with the 80% coverage gate, as now.
+3. **Tool code:** the upstream transport and query building, term resolution, the five tools, the Haiku uses, the skills served by `retrieve_skill`, and the tool descriptions and result hints (§4.2, §5, §7). Unit tests with the 80% coverage gate, as now.
 4. **Stack:**
    - Replace the scaffold.
    - Add the delegated hosted zone, certificate and CloudFront distribution.
    - Add both WAF web ACLs, in COUNT mode.
    - Add the gateway (no sign-in, streaming), the MCP-server target with the IAM-auth streaming function URL, the roles, the rate limits, the origin secret and the monitoring.
+   - Add the vocabulary bucket, refresh function and 30-day schedule, and the pipeline step that refreshes the snapshot after deploy.
    - Add the pipeline step that re-syncs the gateway target after deploy.
    - One-time manual step: add the NS delegation in the `manzia.com` zone.
 5. **Evaluate and iterate** until at least 37 of 41 cases pass.

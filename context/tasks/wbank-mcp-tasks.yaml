@@ -39,14 +39,15 @@ tasks:
   - { id: MCP-121, title: Evaluation harness,                                   runs: local, depends: [MCP-120] }
 
   # Wave 3: tool code (design §14 step 3); code-only deploys
-  - { id: MCP-130, title: Upstream clients and catalog tables,                  runs: local, depends: [MCP-112] }
-  - { id: MCP-131, title: Haiku helpers,                                        runs: local, depends: [MCP-112] }
+  - { id: MCP-130, title: Upstream transport and query building,               runs: local, depends: [MCP-112] }
+  - { id: MCP-131, title: Term resolution and Haiku helpers,                    runs: local, depends: [MCP-130] }
   - { id: MCP-132, title: search_documents and search_projects,                 runs: local, depends: [MCP-130, MCP-131] }
   - { id: MCP-133, title: get_project and read_document,                        runs: local, depends: [MCP-130, MCP-131] }
   - { id: MCP-134, title: retrieve_skill skills and tool guidance,              runs: local, depends: [MCP-132, MCP-133] }
 
   # Wave 4: rest of the stack (design §14 step 4)
-  - { id: MCP-140, title: Rate limits and monitoring,                           runs: local, depends: [MCP-115], infra: true }
+  - { id: MCP-135, title: Vocabulary snapshot,                                  runs: local, depends: [MCP-114, MCP-130], infra: true }
+  - { id: MCP-140, title: Rate limits and monitoring,                           runs: local, depends: [MCP-115, MCP-135], infra: true }
 
   # Wave 5: evaluate and iterate (design §14 step 5); fix tasks MCP-16x are added here by Roy after MCP-151
   - { id: MCP-150, title: Evaluation run 1 and failure analysis,                runs: local, depends: [MCP-121, MCP-134, MCP-140], after_deploy: true }
