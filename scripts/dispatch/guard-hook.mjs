@@ -281,9 +281,13 @@ function checkWords(rawWords, opts, depth) {
         }
       }
     } else {
-      const nameref = ['declare', 'typeset', 'local'].includes(cmd) && args.some((a) => /^-[A-Za-z]*n/.test(a));
+      // Namerefs (-n) are refused outright: one declared without a target takes it from a later assignment
+      // the hook may not see (read ref < file), so no single command shows what it points at.
+      if (['declare', 'typeset', 'local'].includes(cmd) && args.some((a) => /^[-+][A-Za-z]*n/.test(a))) {
+        return block(`\`${cmd} -n\` (nameref) is not allowed in dispatcher sessions.`);
+      }
       for (const a of args) {
-        if (hasVariable(name(a)) || (nameref && a.includes('=') && hasVariable(a.slice(a.indexOf('=') + 1)))) {
+        if (hasVariable(name(a))) {
           return block(`\`${cmd}\` with a variable or expanded name can't be checked. Write the name out.`);
         }
       }

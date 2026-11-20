@@ -149,7 +149,11 @@ describe('checkCommand', () => {
     'getopts ab $N',
     'let "$N=1"',
     'declare -n ref="$N"',
-    'local -n ref=$N'
+    'local -n ref=$N',
+    'declare -n ref',
+    'declare -n ref=PATH',
+    'typeset -xn ref',
+    'declare +n ref'
   ])('blocks %s', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone')).allowed).toBe(false);
   });
