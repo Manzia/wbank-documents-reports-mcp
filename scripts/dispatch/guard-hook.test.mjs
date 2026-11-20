@@ -125,7 +125,19 @@ describe('checkCommand', () => {
     'export GH_CONFIG_DIR+=/x',
     'export GH_CONFIG_{DIR,X}=/tmp/x',
     "export $'GH_TOKEN'=x",
-    'declare -x G{H,}_TOKEN=x'
+    'declare -x G{H,}_TOKEN=x',
+    // fifth review: wrapper options with values, and names built from variables
+    'exec -a name gh pr merge 1',
+    'time -o /tmp/t gh pr merge 1',
+    'nice -n 5 gh pr merge 1',
+    'env --unset=FOO gh pr merge 1',
+    'sudo -Z x gh pr view 1',
+    'timeout --weird 5 npm test',
+    'N=GH_TOKEN; export "$N"=x',
+    'read $N < /tmp/t',
+    'unset ${N}',
+    'printf -v "$N" %s x',
+    'declare "$(echo GH_TOKEN)"=x'
   ])('blocks %s', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone')).allowed).toBe(false);
   });
@@ -167,7 +179,12 @@ describe('checkCommand', () => {
     'ls src/*.ts',
     'time npm test',
     'time -p npm run unit',
-    'PATH+=:/opt/x npm test'
+    'PATH+=:/opt/x npm test',
+    'env -i PATH=/usr/bin npm test',
+    'timeout --foreground 60 npm test',
+    'export CI=true',
+    'printf "%s\\n" "$HOME"',
+    'read -r line < file.txt'
   ])('allows %s on a feature branch', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone'))).toEqual({ allowed: true });
   });

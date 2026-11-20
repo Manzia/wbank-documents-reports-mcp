@@ -227,16 +227,22 @@ function checkGit(words, opts, depth) {
 const SHELLS = ['bash', 'sh', 'zsh', 'dash', 'ksh', 'fish'];
 // Commands that run the rest of their arguments as another command
 const WRAPPERS = ['env', 'command', 'exec', 'sudo', 'nohup', 'time', 'nice', 'timeout', 'caffeinate', 'xargs'];
-// Wrapper options that take a value, so the value isn't mistaken for the command
-const VALUE_FLAGS = {
-  env: ['-u', '-C', '--unset', '--chdir'],
-  sudo: ['-u', '-g', '-U', '-C', '-h', '-p', '-D', '--user', '--group'],
-  nice: ['-n'],
-  timeout: ['-s', '-k', '--signal', '--kill-after'],
-  caffeinate: ['-t', '-w'],
-  xargs: ['-I', '-n', '-L', '-P', '-d', '-E', '-s', '-J', '-R']
+// Wrapper options, by whether they take a value. Any other option refuses the command (fail closed), so an
+// unknown option can't make the hook read its value as the command.
+const WRAPPER_FLAGS = {
+  env: { value: ['-u', '-C', '--unset', '--chdir'], flag: ['-i', '-0', '-v', '--ignore-environment', '--null', '--debug', '-'] },
+  command: { value: [], flag: ['-p'] },
+  exec: { value: ['-a'], flag: ['-c', '-l'] },
+  sudo: { value: ['-u', '-g', '-U', '-C', '-h', '-p', '-D', '--user', '--group'], flag: ['-E', '-H', '-n', '-S', '-k', '-b', '-P'] },
+  nohup: { value: [], flag: [] },
+  time: { value: ['-o', '-f', '--output', '--format'], flag: ['-p', '-l', '-a', '-v', '--append', '--portability', '--verbose'] },
+  nice: { value: ['-n', '--adjustment'], flag: [] },
+  timeout: { value: ['-s', '-k', '--signal', '--kill-after'], flag: ['-v', '--foreground', '--preserve-status', '--verbose'] },
+  caffeinate: { value: ['-t', '-w'], flag: ['-d', '-i', '-m', '-s', '-u'] },
+  xargs: { value: ['-I', '-n', '-L', '-P', '-d', '-E', '-s', '-J', '-R'], flag: ['-0', '-o', '-p', '-r', '-t', '-x'] }
 };
-const DECLARE = ['export', 'declare', 'typeset', 'local', 'readonly', 'set'];
+// Builtins that set, read into or unset variables by name
+const DECLARE = ['export', 'declare', 'typeset', 'local', 'readonly', 'set', 'read', 'unset', 'printf'];
 const MAX_DEPTH = 4;
 
 function checkWords(rawWords, opts, depth) {
@@ -261,15 +267,30 @@ function checkWords(rawWords, opts, depth) {
     if (words.length > i + 2) return block('`sh -c` with extra arguments can\'t be checked. Put the whole command in the -c string.');
     return nested(words[i + 1], opts, depth);
   }
+  if (DECLARE.includes(cmd)) {
+    // The variable names must be literal, so a name built from another variable ("$N"=x, read $N) can't
+    // hide a blocked one
+    const named = words.slice(1).filter((w) => !w.startsWith('-')).map((w) => (w.includes('=') ? w.slice(0, w.indexOf('=')) : w));
+    if (cmd !== 'printf' && named.some(hasVariable)) return block(`\`${cmd}\` with a variable or expanded name can't be checked. Write the name out.`);
+    const v = words.indexOf('-v');
+    if (cmd === 'printf' && v > 0 && hasVariable(words[v + 1] ?? '')) return block('`printf -v` with a variable or expanded name can\'t be checked.');
+  }
   if (cmd === 'eval' || cmd === 'source' || cmd === '.') {
     return cmd === 'eval' ? nested(words.slice(1).join(' '), opts, depth) : undefined;
   }
   if (WRAPPERS.includes(cmd)) {
+    const flags = WRAPPER_FLAGS[cmd];
     let i = 1;
     while (i < words.length && (words[i].startsWith('-') || ASSIGN.test(words[i]) || (cmd === 'timeout' && /^\d/.test(words[i])))) {
+      const w = words[i];
+      if (w === '--') { i += 1; break; }
+      if (ASSIGN.test(w) || (cmd === 'timeout' && /^\d/.test(w))) { i += 1; continue; }
       // env -S '<command>' splits its argument into a command line
-      if (cmd === 'env' && ['-S', '--split-string'].includes(words[i])) return nested(words.slice(i + 1).join(' '), opts, depth);
-      i += (VALUE_FLAGS[cmd] ?? []).includes(words[i]) ? 2 : 1;
+      if (cmd === 'env' && ['-S', '--split-string'].includes(w)) return nested(words.slice(i + 1).join(' '), opts, depth);
+      const name = w.includes('=') ? w.slice(0, w.indexOf('=')) : w;
+      if (flags.value.includes(name)) i += w.includes('=') ? 1 : 2;
+      else if (flags.flag.includes(name)) i += 1;
+      else return block(`\`${cmd} ${w}\` can't be checked: unknown option. Run the command without the wrapper.`);
     }
     return checkWords(words.slice(i), opts, depth);
   }
