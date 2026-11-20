@@ -226,12 +226,13 @@ function checkGit(words, opts, depth) {
 
 const SHELLS = ['bash', 'sh', 'zsh', 'dash', 'ksh', 'fish'];
 // Commands that run the rest of their arguments as another command
-const WRAPPERS = ['env', 'command', 'exec', 'sudo', 'nohup', 'time', 'nice', 'timeout', 'caffeinate', 'xargs'];
+const WRAPPERS = ['env', 'command', 'builtin', 'exec', 'sudo', 'nohup', 'time', 'nice', 'timeout', 'caffeinate', 'xargs'];
 // Wrapper options, by whether they take a value. Any other option refuses the command (fail closed), so an
 // unknown option can't make the hook read its value as the command.
 const WRAPPER_FLAGS = {
   env: { value: ['-u', '-C', '--unset', '--chdir'], flag: ['-i', '-0', '-v', '--ignore-environment', '--null', '--debug', '-'] },
   command: { value: [], flag: ['-p'] },
+  builtin: { value: [], flag: [] },
   exec: { value: ['-a'], flag: ['-c', '-l'] },
   sudo: { value: ['-u', '-g', '-U', '-C', '-h', '-p', '-D', '--user', '--group'], flag: ['-E', '-H', '-n', '-S', '-k', '-b', '-P'] },
   nohup: { value: [], flag: [] },
@@ -242,7 +243,7 @@ const WRAPPER_FLAGS = {
   xargs: { value: ['-I', '-n', '-L', '-P', '-d', '-E', '-s', '-J', '-R'], flag: ['-0', '-o', '-p', '-r', '-t', '-x'] }
 };
 // Builtins that set, read into or unset variables by name
-const DECLARE = ['export', 'declare', 'typeset', 'local', 'readonly', 'set', 'read', 'unset', 'printf'];
+const DECLARE = ['export', 'declare', 'typeset', 'local', 'readonly', 'read', 'unset', 'printf', 'mapfile', 'readarray', 'getopts', 'let'];
 const MAX_DEPTH = 4;
 
 function checkWords(rawWords, opts, depth) {
@@ -268,12 +269,25 @@ function checkWords(rawWords, opts, depth) {
     return nested(words[i + 1], opts, depth);
   }
   if (DECLARE.includes(cmd)) {
-    // The variable names must be literal, so a name built from another variable ("$N"=x, read $N) can't
-    // hide a blocked one
-    const named = words.slice(1).filter((w) => !w.startsWith('-')).map((w) => (w.includes('=') ? w.slice(0, w.indexOf('=')) : w));
-    if (cmd !== 'printf' && named.some(hasVariable)) return block(`\`${cmd}\` with a variable or expanded name can't be checked. Write the name out.`);
-    const v = words.indexOf('-v');
-    if (cmd === 'printf' && v > 0 && hasVariable(words[v + 1] ?? '')) return block('`printf -v` with a variable or expanded name can\'t be checked.');
+    // Variable names must be literal, so a name built from another variable ("$N"=x, read $N, -v$N) can't
+    // hide a blocked one. Options count too, since values can be attached (-vNAME, -aNAME).
+    const args = words.slice(1);
+    const name = (a) => (a.includes('=') ? a.slice(0, a.indexOf('=')) : a);
+    if (cmd === 'printf') {
+      // Only the -v target is a name; the format string and its arguments are data
+      for (let k = 0; k < args.length && args[k].startsWith('-'); k += 1) {
+        if ((args[k] === '-v' && hasVariable(args[k + 1] ?? '')) || (/^-v./.test(args[k]) && hasVariable(args[k]))) {
+          return block('`printf -v` with a variable or expanded name can\'t be checked. Write the name out.');
+        }
+      }
+    } else {
+      const nameref = ['declare', 'typeset', 'local'].includes(cmd) && args.some((a) => /^-[A-Za-z]*n/.test(a));
+      for (const a of args) {
+        if (hasVariable(name(a)) || (nameref && a.includes('=') && hasVariable(a.slice(a.indexOf('=') + 1)))) {
+          return block(`\`${cmd}\` with a variable or expanded name can't be checked. Write the name out.`);
+        }
+      }
+    }
   }
   if (cmd === 'eval' || cmd === 'source' || cmd === '.') {
     return cmd === 'eval' ? nested(words.slice(1).join(' '), opts, depth) : undefined;

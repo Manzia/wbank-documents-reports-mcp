@@ -137,7 +137,19 @@ describe('checkCommand', () => {
     'read $N < /tmp/t',
     'unset ${N}',
     'printf -v "$N" %s x',
-    'declare "$(echo GH_TOKEN)"=x'
+    'declare "$(echo GH_TOKEN)"=x',
+    // sixth review: builtin, more variable-setting builtins, attached option values, namerefs
+    'builtin export "$N"=x',
+    "builtin eval 'gh pr merge 1'",
+    'builtin -x gh pr view 1',
+    'printf -v$N %s x',
+    'read -a$N < /tmp/t',
+    'mapfile -t "$N" < /tmp/t',
+    'readarray $N < /tmp/t',
+    'getopts ab $N',
+    'let "$N=1"',
+    'declare -n ref="$N"',
+    'local -n ref=$N'
   ])('blocks %s', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone')).allowed).toBe(false);
   });
@@ -184,7 +196,13 @@ describe('checkCommand', () => {
     'timeout --foreground 60 npm test',
     'export CI=true',
     'printf "%s\\n" "$HOME"',
-    'read -r line < file.txt'
+    'read -r line < file.txt',
+    'builtin cd src',
+    'mapfile -t lines < file.txt',
+    'let count=count+1',
+    'declare -a list=(a b)',
+    'set -- "$@" x',
+    'printf -v out "%s-%s" "$a" "$b"'
   ])('allows %s on a feature branch', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone'))).toEqual({ allowed: true });
   });
