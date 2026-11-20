@@ -7,9 +7,18 @@
     "enableWeakerNetworkIsolation": true,
     "credentials": {
       "files": [
-        { "path": "~/.aws/credentials", "mode": "deny" },
-        { "path": "~/.aws/config", "mode": "deny" },
-        { "path": "~/.config/gh/hosts.yml", "mode": "deny" }
+        {
+          "path": "~/.aws/credentials",
+          "mode": "deny"
+        },
+        {
+          "path": "~/.aws/config",
+          "mode": "deny"
+        },
+        {
+          "path": "~/.config/gh/hosts.yml",
+          "mode": "deny"
+        }
       ]
     },
     "network": {
@@ -25,7 +34,15 @@
       ]
     },
     "filesystem": {
-      "allowWrite": ["~/.aws-sam"]
+      "allowWrite": [
+        "~/.aws-sam"
+      ],
+      "denyRead": [
+        "~/.aws",
+        "~/.ssh",
+        "~/.config/gh",
+        "~/.wbank-mcp-dispatch/sessions"
+      ]
     }
   },
   "permissions": {
@@ -35,6 +52,7 @@
       "Read(~/.config/gh/**)",
       "Edit(~/.config/gh/**)",
       "Read(~/.ssh/**)",
+      "Edit(~/.ssh/**)",
       "Edit(~/.wbank-mcp-dispatch/**)",
       "Read(~/.wbank-mcp-dispatch/sessions/**)",
       "RemoteTrigger",
@@ -46,7 +64,10 @@
       {
         "matcher": "Bash|Agent|Task",
         "hooks": [
-          { "type": "command", "command": "node \"$HOME/.wbank-mcp-dispatch/guard-hook.mjs\"" }
+          {
+            "type": "command",
+            "command": "node \"$HOME/.wbank-mcp-dispatch/guard-hook.mjs\""
+          }
         ]
       }
     ]

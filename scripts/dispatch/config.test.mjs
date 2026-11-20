@@ -86,6 +86,8 @@ describe('session-settings.json (plan §2.4 layers 2-4)', () => {
       'search.worldbank.org', 'documents1.worldbank.org', 'worldbank-mcp.manzia.com'
     ]);
     expect(sandbox.filesystem.allowWrite).toEqual(['~/.aws-sam']);
+    // Whole directories, not just the two key files: ~/.aws also holds credentials.bak, SSO and CLI caches
+    expect(sandbox.filesystem.denyRead).toEqual(['~/.aws', '~/.ssh', '~/.config/gh', '~/.wbank-mcp-dispatch/sessions']);
     expect(JSON.stringify(sandbox)).not.toContain('.npm"');
   });
 

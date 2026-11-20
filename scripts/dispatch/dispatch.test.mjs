@@ -136,7 +136,9 @@ describe('helpers', () => {
       sandbox: { enabled: true },
       env: {
         KEEP: '1', AWS_ACCESS_KEY_ID: 'k', AWS_SECRET_ACCESS_KEY: 's', AWS_SESSION_TOKEN: 't',
-        AWS_REGION: 'us-east-1', AWS_DEFAULT_REGION: 'us-east-1', GH_TOKEN: 'pat', GH_PROMPT_DISABLED: '1',
+        AWS_REGION: 'us-east-1', AWS_DEFAULT_REGION: 'us-east-1',
+        AWS_CONFIG_FILE: '/wt/.session-config/aws-config', AWS_SHARED_CREDENTIALS_FILE: '/wt/.session-config/aws-credentials',
+        GH_TOKEN: 'pat', GH_CONFIG_DIR: '/wt/.session-config/gh', GH_PROMPT_DISABLED: '1',
         GIT_TERMINAL_PROMPT: '0', npm_config_cache: '/wt/.npm-cache'
       }
     });

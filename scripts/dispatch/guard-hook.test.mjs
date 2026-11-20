@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { checkAgent, checkCommand, main, pushTargets, readCurrentBranch, tokenize } from './guard-hook.mjs';
+import { apiMethod, checkAgent, checkCommand, main, pushTargets, readCurrentBranch, tokenize } from './guard-hook.mjs';
 
 const onBranch = (branch) => ({ currentBranch: () => branch });
 const R = 'repos/Manzia/wbank-documents-reports-mcp';
@@ -56,7 +56,29 @@ describe('checkCommand', () => {
     'npx something && claude -p hi',
     'echo $(claude -p hi)',
     'security find-generic-password -s gh:github.com -w',
-    '/usr/bin/security dump-keychain'
+    '/usr/bin/security dump-keychain',
+    // wrappers, nested shells and flag spellings (security review, PR #4)
+    'bash -c "gh pr merge 1"',
+    "sh -lc 'git push origin main'",
+    'bash -c "cd x && gh pr merge 1"',
+    'zsh -c "bash -c \'gh workflow run deploy.yml\'"',
+    'eval "gh pr merge 1"',
+    'env -S "gh pr merge 1"',
+    'env FOO=1 gh pr merge 1',
+    'sudo -u roy gh pr merge 1',
+    'timeout 30 gh pr merge 1',
+    'echo 1 | xargs -I{} gh pr merge {}',
+    'xargs gh pr merge < ids.txt',
+    'gh -R Manzia/wbank-documents-reports-mcp pr merge 1',
+    'gh --repo=Manzia/x pr merge 1',
+    'gh pr -R Manzia/x merge 1',
+    `gh api -XPUT ${R}/issues/1/labels`,
+    `gh api --method=DELETE ${R}/issues/comments/1`,
+    `gh api --method delete ${R}/issues/comments/1`,
+    'git push -fu origin feature/MCP-110-x',
+    'git push -uf origin feature/MCP-110-x',
+    'git push -df origin feature/MCP-110-x',
+    'git -c alias.p=push p origin main'
   ])('blocks %s', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone')).allowed).toBe(false);
   });
@@ -80,7 +102,13 @@ describe('checkCommand', () => {
     'npm test',
     'sam validate',
     'sam build --parallel',
-    'echo "git push origin main is blocked"'
+    'echo "git push origin main is blocked"',
+    'bash -c "npm test"',
+    'bash scripts/build.sh',
+    'git push -u origin feature/MCP-110-hosted-zone',
+    'git -c user.name=x commit -m msg',
+    'timeout 60 npm test',
+    `gh api -XGET ${R}/pulls`
   ])('allows %s on a feature branch', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone'))).toEqual({ allowed: true });
   });
@@ -103,9 +131,21 @@ describe('checkAgent', () => {
 });
 
 describe('helpers', () => {
-  test('tokenize strips quotes, env assignments and wrappers', () => {
+  test('tokenize strips quotes (also stray ones) and leading env assignments', () => {
     expect(tokenize('A=1 B=2 git commit -m "a b"')).toEqual(['git', 'commit', '-m', 'a b']);
-    expect(tokenize('env nohup git push')).toEqual(['git', 'push']);
+    expect(tokenize(' gh pr merge 1"')).toEqual(['gh', 'pr', 'merge', '1']);
+  });
+
+  test('apiMethod reads every spelling', () => {
+    expect(apiMethod(['gh', 'api', '-X', 'put'])).toBe('PUT');
+    expect(apiMethod(['gh', 'api', '-XDELETE'])).toBe('DELETE');
+    expect(apiMethod(['gh', 'api', '--method=patch'])).toBe('PATCH');
+    expect(apiMethod(['gh', 'api', 'x'])).toBeUndefined();
+  });
+
+  test('nesting beyond the limit fails closed', () => {
+    expect(checkCommand('bash -c ls', {}, 4).allowed).toBe(false);
+    expect(checkCommand('bash -c ls', {}, 3)).toEqual({ allowed: true });
   });
 
   test('pushTargets reads destinations and skips option values', () => {

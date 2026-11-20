@@ -103,7 +103,9 @@ process that Claude Code's background service started, with the service's enviro
 set on the `claude --bg` call never reach it. Before each start and resume the dispatcher writes
 `~/.wbank-mcp-dispatch/sessions/<ID>.json` (mode 600): `session-settings.json` plus an `env` block with
 the credentials, `GH_TOKEN`, region `us-east-1` and `npm_config_cache` in the worktree, and passes it
-with `--settings`. `claude` itself runs with no `AWS_*` or token variable. Sessions can't write
+with `--settings`. It also points the AWS CLI (`AWS_CONFIG_FILE`, `AWS_SHARED_CREDENTIALS_FILE`) and
+`gh` (`GH_CONFIG_DIR`) at an empty `.session-config/` in the worktree, so neither needs `~/.aws` or
+`~/.config/gh`, which the sandbox denies outright. `claude` itself runs with no `AWS_*` or token variable. Sessions can't write
 `~/.wbank-mcp-dispatch/` and their Read tool can't read `sessions/`; the file is deleted when the task
 is cleaned up. Credentials are never logged.
 
@@ -129,12 +131,12 @@ checks below as its prompt. Watch it, then exit; the worktree is removed.
 | `git push --dry-run origin HEAD:refs/heads/feature/MCP-000-self-test` | Succeeds (git authenticates with the session token) |
 | `aws cloudformation describe-stacks --stack-name wbank-docs-reports-mcp-prod` | Succeeds |
 | `curl` to `search.worldbank.org` | 200 |
-| `cat ~/.aws/credentials`; `node -e "require('fs').readFileSync(process.env.HOME+'/.aws/credentials')"` | Fail |
+| `cat ~/.aws/credentials`; `cat ~/.aws/credentials.bak`; `ls ~/.aws/sso/cache ~/.aws/cli/cache`; `ls ~/.ssh`; `ls ~/.config/gh`; `ls ~/.wbank-mcp-dispatch/sessions`; `node -e "require('fs').readFileSync(process.env.HOME+'/.aws/credentials')"` | Fail (the whole of `~/.aws`, `~/.ssh` and `~/.config/gh` is denied, not just the key files) |
 | Read tool on `~/.aws/credentials` and `~/.config/gh/hosts.yml` | Denied |
 | `touch ~/.aws/x`, `touch ~/.npm/x` | Fail |
 | `curl -sI https://example.com` | Fails (network allow-list) |
 | `aws cloudformation create-stack …`, `aws secretsmanager list-secrets`, `aws lambda invoke …` | AccessDenied |
-| `gh pr merge 1`, `gh run rerun 1`, `security find-generic-password …`, `claude --version` | Blocked by the guard hook |
+| `gh pr merge 1`, `bash -c "gh pr merge 1"`, `gh -R … pr merge 1`, `gh run rerun 1`, `security find-generic-password …`, `claude --version` | Blocked by the guard hook |
 
 **Then, yourself, in the same session**, check whether the sandbox stops a *script* from reaching the
 Keychain (the hook only sees command text). Type these as `!` commands, which run sandboxed:

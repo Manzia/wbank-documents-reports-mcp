@@ -41,9 +41,9 @@ export function startPrompt(task) {
 export const SELF_TEST_PROMPT = [
   'This is the dispatcher guard self-test (scripts/dispatch/README.md). Run each check, never try to work around a block, and finish with a table of check, expected, result, pass/fail.',
   'Must succeed: `npm ci` and `npm test` in mcp-server/hello-world; `gh api repos/Manzia/wbank-documents-reports-mcp --jq .full_name`; `git push --dry-run origin HEAD:refs/heads/feature/MCP-000-self-test`; `aws cloudformation describe-stacks --stack-name wbank-docs-reports-mcp-prod --query "Stacks[0].StackStatus"`; `curl -s -o /dev/null -w "%{http_code}" "https://search.worldbank.org/api/v3/wds?format=json&rows=1"` prints 200.',
-  'Must fail: `cat ~/.aws/credentials`; `node -e "require(\'fs\').readFileSync(process.env.HOME+\'/.aws/credentials\')"`; reading ~/.aws/credentials and ~/.config/gh/hosts.yml with your Read tool; `touch ~/.aws/x`; `touch ~/.npm/x`; `curl -sI https://example.com`.',
+  'Must fail: `cat ~/.aws/credentials`; `cat ~/.aws/credentials.bak`; `ls ~/.aws/sso/cache ~/.aws/cli/cache`; `ls ~/.ssh`; `ls ~/.config/gh`; `ls ~/.wbank-mcp-dispatch/sessions`; `node -e "require(\'fs\').readFileSync(process.env.HOME+\'/.aws/credentials\')"`; reading ~/.aws/credentials and ~/.config/gh/hosts.yml with your Read tool; `touch ~/.aws/x`; `touch ~/.npm/x`; `curl -sI https://example.com`.',
   'Must return AccessDenied: `aws cloudformation create-stack --stack-name x --template-body \'{}\'`; `aws secretsmanager list-secrets`; `aws lambda list-functions --max-items 1 --query "Functions[0].FunctionName" && aws lambda invoke --function-name x /dev/null`.',
-  'Must be blocked by the guard hook: `gh pr merge 1`; `gh run rerun 1`; `security find-generic-password -s gh:github.com -w`; `claude --version`.'
+  'Must be blocked by the guard hook: `gh pr merge 1`; `bash -c "gh pr merge 1"`; `gh -R Manzia/wbank-documents-reports-mcp pr merge 1`; `gh run rerun 1`; `security find-generic-password -s gh:github.com -w`; `claude --version`.'
 ].join('\n');
 
 export function paths(home, repo) {
@@ -248,7 +248,9 @@ export function launchEnv(baseEnv) {
   return Object.fromEntries(Object.entries(baseEnv).filter(([k]) => !k.startsWith('AWS_') && !SESSION_SECRETS.includes(k)));
 }
 
-// The guard settings plus an env block with the task's temporary credentials, token, region and npm cache
+// The guard settings plus an env block with the task's temporary credentials, token, region and npm cache.
+// The AWS CLI and gh are pointed at empty per-session locations, so they never need ~/.aws or ~/.config/gh,
+// which the sandbox denies outright.
 export function sessionSettings(guard, worktree, creds, githubToken) {
   return {
     ...guard,
@@ -259,7 +261,10 @@ export function sessionSettings(guard, worktree, creds, githubToken) {
       AWS_SESSION_TOKEN: creds.SessionToken,
       AWS_REGION: REGION,
       AWS_DEFAULT_REGION: REGION,
+      AWS_CONFIG_FILE: join(worktree, '.session-config', 'aws-config'),
+      AWS_SHARED_CREDENTIALS_FILE: join(worktree, '.session-config', 'aws-credentials'),
       GH_TOKEN: githubToken,
+      GH_CONFIG_DIR: join(worktree, '.session-config', 'gh'),
       GH_PROMPT_DISABLED: '1',
       GIT_TERMINAL_PROMPT: '0',
       npm_config_cache: join(worktree, '.npm-cache')
