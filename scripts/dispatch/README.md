@@ -142,16 +142,23 @@ checks below as its prompt. Watch it, then exit; the worktree is removed.
 | `gh pr merge 1`, `bash -c "gh pr merge 1"`, `gh -R … pr merge 1`, `gh run rerun 1`, `security find-generic-password …`, `claude --version` | Blocked by the guard hook |
 
 **Then, yourself, in the same session**, check whether the sandbox stops a *script* from reaching the
-Keychain (the hook only sees command text). Type these as `!` commands, which run sandboxed:
+Keychain (the hook only sees command text). Type these as `!` commands. The first one shows whether
+`!` commands run in the sandbox at all; only if it fails with "Operation not permitted" do the other
+two say anything about sessions:
 
 ```text
+! touch ~/.npm/x
 ! printf '/usr/bin/security find-generic-password -s gh:github.com >/dev/null 2>&1 && echo FOUND || echo DENIED\n' > "$TMPDIR/k.sh"
 ! bash "$TMPDIR/k.sh"
 ```
 
-It never prints the token (no `-w`). Record FOUND or DENIED in MCP-101. FOUND means a script in a
-session could reach your own GitHub token: plan §2.4 lists it as a known gap, and your deploy approval
-remains the barrier.
+It never prints the token (no `-w`). If `touch` succeeded, `!` runs outside the sandbox: instead, tell
+the session to write that one line to `$TMPDIR/k.sh` with its Write tool and run `bash "$TMPDIR/k.sh"`
+with its Bash tool, approving it when asked. Record which way it ran and FOUND or DENIED in MCP-101.
+FOUND means a script in a session could reach your own GitHub token (plan §2.4, "What remains outside
+the guard"). That token can also approve deployments, so the barrier is then your review of what a
+session ran, not the deploy approval alone. `gh auth login --insecure-storage` moves the token to
+`~/.config/gh/hosts.yml`, which the sandbox denies.
 
 Also check, once: `git commit` works in a dispatcher worktree (the sandbox allows writes to the main
 checkout's shared `.git`, except `config` and `hooks`; the dispatcher sets each branch's upstream at

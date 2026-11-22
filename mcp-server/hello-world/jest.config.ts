@@ -12,4 +12,6 @@ export default {
     coverageDirectory: 'coverage',
     coverageProvider: 'v8',
     testMatch: ['**/tests/unit/*.test.ts'],
+    // The dispatcher's sandbox blocks watchman (it writes a launchd agent), which crashes Jest (plan G11)
+    watchman: false,
 };

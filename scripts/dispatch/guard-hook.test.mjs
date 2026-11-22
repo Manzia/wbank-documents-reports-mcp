@@ -153,7 +153,18 @@ describe('checkCommand', () => {
     'declare -n ref',
     'declare -n ref=PATH',
     'typeset -xn ref',
-    'declare +n ref'
+    'declare +n ref',
+    // self-test (MCP-101): redirections must not hide a command or be read as a push target
+    '>/dev/null gh pr merge 1',
+    '2>/dev/null git push origin main',
+    '< ids.txt gh pr merge 1',
+    'git push origin main 2>&1',
+    'git push origin main &>/tmp/log',
+    'git push origin HEAD:main >/tmp/out 2>&1',
+    'git push origin "2">/tmp/out',
+    'echo x > "$GH_CONFIG_DIR/config.yml"',
+    'cat >> $GH_CONFIG_DIR/hosts.yml',
+    'echo x >$(gh pr merge 1)'
   ])('blocks %s', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone')).allowed).toBe(false);
   });
@@ -206,7 +217,16 @@ describe('checkCommand', () => {
     'let count=count+1',
     'declare -a list=(a b)',
     'set -- "$@" x',
-    'printf -v out "%s-%s" "$a" "$b"'
+    'printf -v out "%s-%s" "$a" "$b"',
+    'git push --dry-run origin HEAD:refs/heads/feature/MCP-000-self-test 2>&1',
+    'git push -u origin feature/MCP-110-hosted-zone 2>&1 | tail -3',
+    'git push origin feature/MCP-110-hosted-zone >/tmp/out 2>&1',
+    'git push origin feature/MCP-110-hosted-zone &>/tmp/log',
+    'git push 2>/dev/null',
+    'npm test >/dev/null 2>&1',
+    'npm test 2>&- 1>&2',
+    'gh pr create --draft --title "MCP-110: x" --body-file - <<\'EOF\'\nbody\nEOF',
+    'jq . < out.json > pretty.json'
   ])('allows %s on a feature branch', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone'))).toEqual({ allowed: true });
   });
@@ -230,10 +250,19 @@ describe('checkAgent', () => {
 
 describe('helpers', () => {
   test('parse splits on operators outside quotes only and pulls out substitutions', () => {
-    expect(parse('a "b; c" && d')).toEqual({ segments: [['a', 'b; c'], ['d']], substitutions: [] });
-    expect(parse("echo \"x $(gh pr merge 1) y\"")).toEqual({ segments: [['echo', 'x $(…) y']], substitutions: ['gh pr merge 1'] });
+    expect(parse('a "b; c" && d')).toEqual({ segments: [['a', 'b; c'], ['d']], substitutions: [], redirects: [] });
+    expect(parse("echo \"x $(gh pr merge 1) y\"")).toEqual({ segments: [['echo', 'x $(…) y']], substitutions: ['gh pr merge 1'], redirects: [] });
     expect(parse('echo \'$(not run)\'').substitutions).toEqual([]);
     expect(parse('echo "open').unparsable).toBe('unbalanced quotes');
+  });
+
+  test('parse takes redirections out of the words and returns their targets', () => {
+    expect(parse('git push origin feature/x 2>&1 | tail -3')).toEqual({ segments: [['git', 'push', 'origin', 'feature/x'], ['tail', '-3']], substitutions: [], redirects: [] });
+    expect(parse('>out a 2> err b &>>log c <in d<<<w')).toEqual({ segments: [['a', 'b', 'c', 'd']], substitutions: [], redirects: ['out', 'err', 'log', 'in', 'w'] });
+    expect(parse('x>&2 y <&- z 3>| f')).toEqual({ segments: [['x', 'y', 'z']], substitutions: [], redirects: ['f'] });
+    expect(parse('echo "2">f \\3>g').segments).toEqual([['echo', '2', '3']]);
+    expect(parse('echo "a > b" \'c<d\'').segments).toEqual([['echo', 'a > b', 'c<d']]);
+    expect(parse('diff <(a) >(b)')).toEqual({ segments: [['diff', '$(…)', '$(…)']], substitutions: ['a', 'b'], redirects: [] });
   });
 
   test('git aliases are checked as what they expand to', () => {
