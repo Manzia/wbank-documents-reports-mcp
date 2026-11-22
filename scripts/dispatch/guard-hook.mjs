@@ -36,22 +36,34 @@ const ASSIGN = /^[A-Za-z_][A-Za-z0-9_]*\+?=/;
 const SUBSTITUTION = '$(…)';
 
 // Quote-aware shell lexer: splits on ; & | ( ) and newlines outside quotes, removes quotes, and pulls out
-// command substitutions ($(…), `…`, <(…), >(…)) as separate commands to check. Approximate, but it never
-// hides a command: anything it can't follow (unbalanced quotes) is reported as unparsable.
+// command substitutions ($(…), `…`, <(…), >(…)) as separate commands to check. Redirections ([n]>, >>, >|,
+// >&, &>, &>>, <, <<, <<-, <<<, <&, <>) are taken out of the words, so `git push origin x 2>&1` doesn't read
+// `2>` as a push target and `>/dev/null gh pr merge 1` is still seen as `gh`; their targets are returned
+// in `redirects` (checked for blocked variable names). Approximate, but it never hides a command: anything
+// it can't follow (unbalanced quotes) is reported as unparsable.
 export function parse(command) {
   const segments = [];
   const substitutions = [];
+  const redirects = [];
   let words = [];
   let cur = '';
   let inWord = false;
+  let quoted = false; // the current word has a quote or backslash, so it can't be a file-descriptor number
   let quote = null;
+  let target = false; // the next word is a redirection target
   const endWord = () => {
-    if (inWord) words.push(cur);
+    if (inWord) {
+      if (target) redirects.push(cur);
+      else words.push(cur);
+      target = false;
+    }
     cur = '';
     inWord = false;
+    quoted = false;
   };
   const endSegment = () => {
     endWord();
+    target = false;
     if (words.length > 0) segments.push(words);
     words = [];
   };
@@ -70,6 +82,7 @@ export function parse(command) {
       }
       cur += command[i + 1];
       inWord = true;
+      quoted = true;
       i += 1;
       continue;
     }
@@ -105,6 +118,38 @@ export function parse(command) {
     if (c === '"' || c === "'") {
       quote = c;
       inWord = true;
+      quoted = true;
+      continue;
+    }
+    if (c === '<' || c === '>' || (c === '&' && command[i + 1] === '>')) {
+      // An unquoted number right before the operator is its file descriptor (2>); any other word ends here
+      if (inWord && !quoted && /^\d+$/.test(cur)) {
+        cur = '';
+        inWord = false;
+      } else {
+        endWord();
+      }
+      let j = c === '&' ? i + 1 : i;
+      const op = command[j];
+      j += 1;
+      let dup = false;
+      if (op === '>') {
+        if (command[j] === '>' || command[j] === '|') j += 1;
+        else if (command[j] === '&') { j += 1; dup = true; }
+      } else if (command[j] === '<') {
+        j += 1;
+        if (command[j] === '<' || command[j] === '-') j += 1;
+      } else if (command[j] === '&') {
+        j += 1;
+        dup = true;
+      } else if (command[j] === '>') {
+        j += 1;
+      }
+      // >&1, <&0, >&-: the descriptor is part of the operator; otherwise the next word is the target
+      const fd = dup ? /^(\d+|-)(?![^\s;&|()<>])/.exec(command.slice(j)) : null;
+      if (fd) j += fd[0].length;
+      else target = true;
+      i = j - 1;
       continue;
     }
     if (c === ' ' || c === '\t') {
@@ -118,9 +163,9 @@ export function parse(command) {
     cur += c;
     inWord = true;
   }
-  if (quote) return { segments, substitutions, unparsable: 'unbalanced quotes' };
+  if (quote) return { segments, substitutions, redirects, unparsable: 'unbalanced quotes' };
   endSegment();
-  return { segments, substitutions };
+  return { segments, substitutions, redirects };
 }
 
 const base = (cmd) => cmd.split('/').pop();
@@ -330,8 +375,12 @@ function nested(command, opts, depth) {
 }
 
 export function checkCommand(command, opts = {}, depth = 0) {
-  const { segments, substitutions, unparsable } = parse(command);
+  const { segments, substitutions, redirects, unparsable } = parse(command);
   if (unparsable) return block(`The command can't be checked (${unparsable}).`);
+  // A redirection target is a file name, but one built from a blocked variable (> "$GH_CONFIG_DIR/x")
+  // could plant config, so the same rule applies as to any other word
+  const blockedTarget = redirects.find(namesBlockedVar);
+  if (blockedTarget) return block(`Naming ${blockedTarget} is not allowed: it changes what git, gh or the AWS CLI use.`);
   for (const sub of substitutions) {
     const result = nested(sub, opts, depth);
     if (result) return result;
