@@ -1,0 +1,49 @@
+{
+  "id": "Q3-03",
+  "query_id": "Q3.3",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "task": "Establish the country case",
+  "query_wording": "What do the latest country strategy and diagnostics say about water service constraints in Tanzania? Which findings support a new operation?",
+  "turns": [
+    { "user": "What do the latest country strategy and diagnostics say about water service constraints in Tanzania? Which findings support a new operation?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Latest country strategy and diagnostics for Tanzania", "filters": { "count_exact": "Tanzania", "docty_exact": "Country Partnership Framework (plus diagnostics and WASH studies by keyword)", "srt": "docdt", "order": "desc" } },
+    { "kind": "document", "document_id": "34342673", "report_number": "CPF0000021", "document_type": "Country Partnership Framework", "document_date": "2024-06-11", "pages": "12, 21, 35, 57", "role": "Latest country strategy: CPF FY25-FY29" },
+    { "kind": "document", "document_id": "28023284", "report_number": "120166", "document_type": "Working Paper", "document_date": "2017-01-01", "pages": "8, 17-18, 20", "role": "WASH Poverty Diagnostic, executive summary", "note": "The full report is 29718131 (Report 124255, 2018-03-01); either is acceptable." },
+    { "kind": "document", "document_id": "27245678", "report_number": "110894", "document_date": "2017-02-23", "title": "Tanzania - Systematic country diagnostic", "role": "Latest full SCD (2017); the 2023 SCD update is disclosed only as an information notice (34100435)", "required": false },
+    { "kind": "document", "document_id": "33952563", "report_number": "178427", "document_type": "Report", "document_date": "2022-11-01", "title": "Improving the Sustainability of Communal Water Infrastructure in Tanzania", "role": "Sector study on rural water sustainability", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Latest country strategy: Tanzania Country Partnership Framework FY25-FY29 (CPF0000021, 2024-06-11). Diagnostics: the WASH Poverty Diagnostic 'Reaching for the SDGs: The Untapped Potential of Tanzania's Water Supply, Sanitation, and Hygiene Sector' (executive summary 120166, full report 124255, 2017-2018); the latest full Systematic Country Diagnostic is from 2017 (an SCD update was announced in 2023 but only an information notice is public).",
+          "Constraints in the CPF: only 60% of people have basic drinking water (11% safely managed), 31% basic sanitation and 29% basic hygiene, with large rural-urban and gender gaps; about 57% of schools lack functional handwashing and almost 40% have no water on premises; inadequate WASH costs about US$2.4 billion a year (3.2% of 2022 GDP); renewable freshwater per capita has roughly halved in 25 years and is growing more variable with climate change; women and girls bear the burden when sources are remote or broken (CPF p. 21, fn. 20; p. 35). Climate variability will raise waterborne disease given poor sanitation (p. 12).",
+          "Constraints in the diagnostic: 40% of water points were reported non-functional (2014-2016) (p. 8); rural water and water resources sub-sectors used only 52% and 46% of their FY15/16 allocations and sanitation almost none, reflecting capacity limits to plan, implement and monitor (p. 17); 60% of early water-point failures came from the wrong pump type, with weak community management and backstopping (p. 17); urban utilities have high non-revenue water (Dar es Salaam's DAWASCO above 50% for years), so the poor on the periphery depend on unregulated informal providers whose water can cost up to five times more (p. 18); sanitation lacks a coherent policy and lead institution (p. 19); fiscal transfers to the sector are slow and unpredictable (p. 20).",
+          "Findings that support a new operation: the CPF makes 'Expanding Access to Safely Managed Water, Sanitation, and Hygiene Services' a new objective (Objective 3), to be pursued through investments that also cut non-revenue water, improve maintenance, embed water resource management and connect schools and health facilities, with private sector engagement under the 2026 Water Sector Development Plan (pp. 21, 35); its results matrix targets people with basic water rising from 39.2 million (60%) to 45.2 million, 15% safely managed, by 2028 (p. 35). The review of the previous CPF found the rural water access indicator not achieved for definitional reasons, though the Sustainable Rural Water Supply and Sanitation Program gave 4.75 million people improved water (p. 57). The diagnostic recommends shifting from construction to 'celebrating maintenance', fitting technology to local O&M capacity, tackling utility inefficiency and regulating informal providers (pp. 17-18).",
+          "Caveat: the diagnostic figures date from 2014-2017; the CPF's access figures are for 2022."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the latest CPF (FY25-FY29, 2024) and at least one water diagnostic (the WASH Poverty Diagnostic or its summary); the SCD or other sector studies are a plus."
+    ],
+    "grounded": [
+      "Figures (60% basic water, US$2.4 billion cost, 40% non-functional water points, 52%/46% budget execution, etc.) are cited to the right document and page."
+    ],
+    "complete": [
+      "Covers both what the documents say about constraints and which findings support a new operation."
+    ],
+    "scoped": [
+      "Names the documents and their dates and notes that diagnostic data are older than the strategy."
+    ]
+  },
+  "stability": "stable"
+}

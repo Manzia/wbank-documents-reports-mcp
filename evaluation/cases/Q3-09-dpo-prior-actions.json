@@ -1,0 +1,50 @@
+{
+  "id": "Q3-09",
+  "query_id": "Q3.9",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "task": "Review a policy operation",
+  "query_wording": "In this development policy operation, what prior actions and intended results are set out in the program document?",
+  "placeholders": [
+    { "placeholder": "this development policy operation", "resolved_to": "P180504, Tanzania Second Inclusive and Resilient Growth Development Policy Financing (Program Document PGD457, 2023-11-21)", "reason": "A recent DPF in the same country as the main project set, with seven prior actions and a results matrix in the program document." }
+  ],
+  "turns": [
+    { "user": "In this development policy operation, P180504 (Tanzania Second Inclusive and Resilient Growth DPF), what prior actions and intended results are set out in the program document?" }
+  ],
+  "expected_sources": [
+    { "kind": "document", "project_id": "P180504", "document_id": "34204850", "report_number": "PGD457", "document_type": "Program Document", "document_date": "2023-11-21", "pages": "5-6, 18-26, 35-37", "role": "Program document: summary, prior actions and policy and results matrix" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "P180504 - Tanzania Second Inclusive and Resilient Growth DPF, 2nd of a programmatic series of 2; Program Document PGD457 (2023-11-21). Financing US$750 million from IDA (US$500 million credit, US$250 million shorter-maturity loan); implementing agency Ministry of Finance; overall risk Moderate (p. 5). Development objective: support reforms to (i) improve the environment for private sector-driven recovery and growth, (ii) strengthen the management of SOEs and fiscal risks and improve fiscal transparency, and (iii) boost economic resilience (p. 5).",
+          "Prior actions (pp. 18-26; matrix in Annex 1, pp. 35-37):",
+          "Pillar 1 - 1. The Bank of Tanzania issued banking regulations and guidelines to meet Basel II/III requirements (capital quality and quantity, risk capture, leverage, liquidity and maturity-transformation risk) (p. 18).",
+          "Pillar 2 - 2. Submitted to Parliament a Public Investment Authority Bill (competitive recruitment of SOE board members) and issued a Treasury Registrar circular requiring publication of audited financial statements of all SOEs (p. 19). 3. Submitted an amendment to the PPP Act (international arbitration, supremacy of PPP law, project identification and preparation, regime for project companies) and issued revised PPP Regulations (p. 19). 4. The Ministry of Finance issued a circular requiring IFMIS (MUSE) to record obligations at commitment and the payables and purchasing modules to record and report all arrears, implementing the 2022 Arrears Management Strategy (p. 21).",
+          "Pillar 3 - 5. The Ministry of Agriculture issued a notification mandating use of the National Farmers Enterprise Registry to improve mobile extension and climate information services (p. 23). 6. Approved the National Social Protection Policy (2023), institutionalizing the PSSN, converting TASAF's PSSN registry into a unified social registry and creating a national coordination mechanism (p. 25). 7. Approved the National Gender Policy (2023) on inter-ministerial coordination, reproductive health access and women's access to capital (p. 26).",
+          "Intended results, baseline to FY2025 target (p. 6): FDI inflows 1.6% to 3.0% of GDP and registered FDI projects 274 to 380; bank assets meeting Basel II/III ratios 0% to 70%; outstanding VAT refunds 10.5% to 4.8% of VAT collections and refund processing 360 to 90 days; commercial SOEs publishing key financial information 14% to 95%; PPP projects contracted under the improved framework 0 to 3; verified arrears 9% to 4.5% of expenditures; health insurance coverage 14.7% to 20% for men and for women; banks complying with climate-risk guidance 0 to 35; new public investment projects complying with the PIM operational manual 0% to 75%; farmers registered 0 to 6 million and on M-Kilimo e-extension 0 to 1.5 million; households in the PSSN registry 1.9 million to 2.3 million; share of girls 15-19 who have been pregnant 22% to 18%.",
+          "Several indicators (FDI, VAT refunds, health insurance, public investment management) track reforms from the first operation in the series as well; the matrix in Annex 1 shows which prior action each indicator follows."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the program document of P180504 (34204850)."
+    ],
+    "grounded": [
+      "Prior actions and indicator baselines/targets match the document, with page references."
+    ],
+    "complete": [
+      "Lists all seven prior actions and the results indicators with baselines and targets (or the main ones, saying the list is partial)."
+    ],
+    "scoped": [
+      "Says these are the program document's intended results at approval, not achieved results."
+    ]
+  },
+  "stability": "stable"
+}
