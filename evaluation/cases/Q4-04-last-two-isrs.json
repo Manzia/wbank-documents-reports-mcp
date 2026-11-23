@@ -1,0 +1,51 @@
+{
+  "id": "Q4-04",
+  "query_id": "Q4.4",
+  "group": "Q4",
+  "tier": "project_centred_reading",
+  "task": "Track implementation",
+  "query_wording": "What changed between the last two publicly available implementation reports for P123456?",
+  "placeholders": [
+    { "placeholder": "P123456", "resolved_to": "P166685 (Uganda EASP)", "reason": "See Q4-01." }
+  ],
+  "turns": [
+    { "user": "What changed between the last two publicly available implementation reports for P166685?" }
+  ],
+  "expected_sources": [
+    { "kind": "document", "project_id": "P166685", "document_id": "40092287", "report_number": "ISR07389", "document_type": "Implementation Status and Results Report", "document_date": "2026-03-17", "pages": "1-4, 15", "role": "ISR seq. 9" },
+    { "kind": "document", "project_id": "P166685", "document_id": "40122525", "report_number": "ISR08554", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-14", "pages": "1-4, 15-16", "role": "ISR seq. 10 (latest)" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Last two disclosed ISRs for P166685 (EASP): seq. 9, ISR07389, 17 March 2026, and seq. 10, ISR08554, 14 August 2026.",
+          "Ratings: progress towards the PDO stays Moderately Satisfactory; overall implementation progress falls from Moderately Satisfactory to Moderately Unsatisfactory (seq. 9 p. 1; seq. 10 p. 1). Overall risk stays Substantial; the fiduciary risk is proposed up from Substantial to High in seq. 10; sector strategies and institutional capacity remain High, stakeholders Low (seq. 9 p. 2; seq. 10 p. 2).",
+          "Results (seq. 9 values of 16 March 2026 vs seq. 10 values of July 2026; seq. 10 pp. 3-4): total connections 534,158 to 612,757 (target 1,571,500); grid connections by Umeme and UEDCL 166,783 to 199,914 (Umeme's 155,088 unchanged since its concession ended; UEDCL 11,695 to 44,826); people with grid access 783,880 to 939,596; people with off-grid access 1,726,663 to 1,940,362; people with clean cooking 572,248 to 873,848; commercial and productive-use beneficiaries 11,058 to 11,722; people in refugee-hosting districts 119,103 to 143,308, of which refugees 30,926 to 35,795.",
+          "Disbursement: IDA credit 22.35% to 32.42% (US$72.26m to US$105.35m disbursed); IDA grant 28.89% to 34.08%; CTF grant TF-B5178 40% to 80%; CTF contingent recovery grant still 0% (seq. 9 p. 15; seq. 10 p. 15).",
+          "Between the two reports a Level 2 restructuring was approved on 26 June 2026, extending the CTF grants' closing date from 30 June 2026 to 30 June 2027 (seq. 10 pp. 16; key dates in seq. 9 still show 30 June 2026).",
+          "Implementation narrative: nearly identical in both ('implementation of grid and off-grid connections, and provision of clean cooking and productive use of energy solutions is underway'); seq. 10 gives no explanation for the downgrade (seq. 9 p. 2; seq. 10 p. 2). The restructuring paper of 18 August 2026, published after seq. 10, attributes the slow grid progress to RBF grid connections and moves US$20 million towards off-grid and clean cooking schemes."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the two most recent ISRs by document date (seq. 9 and seq. 10)."
+    ],
+    "grounded": [
+      "Each change is attributed to the right ISR with values that match; no invented explanation for the rating downgrade."
+    ],
+    "complete": [
+      "Covers ratings, risks, results indicators, disbursement and any restructuring between the two."
+    ],
+    "scoped": [
+      "Names both ISRs and dates and notes when the reports give no explanation."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "A new ISR changes which two are the last two."
+}

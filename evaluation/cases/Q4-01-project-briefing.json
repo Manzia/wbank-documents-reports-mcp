@@ -1,0 +1,55 @@
+{
+  "id": "Q4-01",
+  "query_id": "Q4.1",
+  "group": "Q4",
+  "tier": "project_centred_reading",
+  "task": "Prepare a project briefing",
+  "query_wording": "Brief me on P123456: objective, implementing agencies, commitment, closing date, latest public implementation update, and key issues.",
+  "placeholders": [
+    { "placeholder": "P123456", "resolved_to": "P166685 (Uganda Electricity Access Scale-up Project, EASP)", "reason": "Active ESF project with a PAD, financing agreement, ESCPs, ten ISRs and three restructurings: the Q4 project-centred cases use it." }
+  ],
+  "turns": [
+    { "user": "Brief me on P166685: objective, implementing agencies, commitment, closing date, latest public implementation update, and key issues." }
+  ],
+  "expected_sources": [
+    { "kind": "project", "project_id": "P166685", "role": "Projects API record: commitment, cost, dates, agencies" },
+    { "kind": "document", "project_id": "P166685", "document_id": "40122525", "report_number": "ISR08554", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-14", "pages": "1-4, 15-16", "role": "Latest disclosed ISR (seq. 10)", "note": "No form-feed breaks; pages are the printed 'Page N of 16'. The text drops the letter 't'." },
+    { "kind": "document", "project_id": "P166685", "document_id": "40123034", "report_number": "RES02060", "document_type": "Project Paper", "document_date": "2026-08-18", "pages": "1, 4-5", "role": "Latest restructuring paper (third restructuring)", "required": false },
+    { "kind": "document", "project_id": "P166685", "document_id": "33759023", "report_number": "PAD3416", "document_type": "Project Appraisal Document", "document_date": "2022-03-11", "role": "PAD", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "P166685 - Uganda Electricity Access Scale-up Project (EASP).",
+          "Objective: to increase access to energy for households, commercial enterprises, industrial parks and public institutions; unchanged since approval (ISR p. 1).",
+          "Implementing agencies: Ministry of Energy and Mineral Development (MEMD) and Uganda Energy Credit Capitalisation Company (UECCC) (Projects record; ISR p. 1). Borrower: Republic of Uganda.",
+          "Commitment: IDA US$568 million (credit IDA-70750 US$331.5 million and grant IDA-D9970 US$236.5 million), plus trust-fund grants (CTF US$30 million, ESMAP US$10 million); total project cost US$638 million including private sector and government contributions (Projects record; ISR p. 15). The commitment is the World Bank financing, not the total project cost.",
+          "Dates: approved 31 March 2022, signed 20 February 2023, effective 20 July 2023; closing 30 June 2027 (ISR p. 16). Midterm review held 7 November 2025 (p. 16).",
+          "Latest public implementation update: ISR seq. 10, 14 August 2026. Progress towards the PDO Moderately Satisfactory; implementation progress downgraded from Moderately Satisfactory to Moderately Unsatisfactory; overall risk Substantial, with sector strategies and institutional capacity rated High and fiduciary raised to High (pp. 1-2). Results: 612,757 connections against a 1,571,500 target (155,088 grid connections by Umeme, 44,826 by UEDCL, 412,843 off-grid); 873,848 people with clean cooking against 1,660,000; 284 public institutions against 700 (pp. 3-4). Disbursement: 32.42% of the IDA credit and 34.08% of the IDA grant (p. 15).",
+          "Key issues: grid connections lag because Umeme's concession ended in March 2025 and connection-material procurement was delayed, while off-grid results-based financing is oversubscribed. Three restructurings followed: October 2025 (US$10 million moved to off-grid financing), June 2026 (CTF grant closing extended to June 2027) and August 2026 (a further US$20 million moved to off-grid, clean cooking and productive-use schemes and the credit facility, with revised targets such as 1,600,200 connections) (restructuring paper RES02060, pp. 1, 4-5).",
+          "Status labels: progress figures are from the latest disclosed ISR, not the project's current internal status."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the Projects API record and the latest disclosed ISR (2026-08-14); the latest restructuring paper is a plus."
+    ],
+    "grounded": [
+      "Objective, agencies, commitment amounts, dates, ratings and indicator values match the sources."
+    ],
+    "complete": [
+      "Covers all six asks: objective, implementing agencies, commitment, closing date, latest public update, key issues."
+    ],
+    "scoped": [
+      "Keeps the commitment separate from total project cost and labels the implementation update as the latest disclosed ISR."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "A new ISR is expected about every six months."
+}
