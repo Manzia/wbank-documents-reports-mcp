@@ -1,0 +1,62 @@
+{
+  "id": "Q3-01",
+  "query_id": "Q3.1",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "task": "Get oriented",
+  "query_wording": "Pull the publicly available documents for project Pxxxxxx. Group them into design, legal, environmental and social, implementation, and restructuring documents. Show the latest in each group.",
+  "placeholders": [
+    { "placeholder": "Pxxxxxx", "resolved_to": "P164920 (Tanzania Roads to Inclusion and Socioeconomic Opportunities, RISE)", "reason": "Active rural roads project under the Environmental and Social Framework with a PAD, financing and project agreements, seven ESCP versions, ten ISRs, two additional financing papers, a midterm review aide-memoire and 65 procurement plans: every group has documents." }
+  ],
+  "turns": [
+    { "user": "Pull the publicly available documents for project P164920. Group them into design, legal, environmental and social, implementation, and restructuring documents. Show the latest in each group." }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "The project's full document list", "filters": { "proid": "P164920", "rows": "all (147 records on 2026-11-22)" } },
+    { "kind": "document", "project_id": "P164920", "document_id": "33121051", "report_number": "PAD2934", "document_type": "Project Appraisal Document", "document_date": "2021-04-30", "role": "Design: the PAD" },
+    { "kind": "document", "project_id": "P164920", "document_id": "40124719", "report_number": "PIDIAF0363", "document_type": "Project Information Document", "document_date": "2026-08-28", "role": "Design: latest design document by date (PID for the 2026 additional financing)" },
+    { "kind": "document", "project_id": "P164920", "document_id": "40054173", "document_type": "Project Agreement", "document_date": "2025-10-10", "role": "Legal: latest (Project Agreement for AF Credit 7716-TZ)" },
+    { "kind": "document", "project_id": "P164920", "document_id": "40054172", "document_type": "Financing Agreement", "document_date": "2025-09-30", "role": "Legal: latest financing agreement (AF Credit 7716-TZ)" },
+    { "kind": "document", "project_id": "P164920", "document_id": "40133756", "document_type": "Resettlement Plan; Environmental and Social Management Plan", "document_date": "2026-10-16", "role": "E&S: latest record" },
+    { "kind": "document", "project_id": "P164920", "document_id": "40124526", "document_type": "Environmental and Social Commitment Plan", "document_date": "2026-08-27", "role": "E&S: latest ESCP (AF No. 3)" },
+    { "kind": "document", "project_id": "P164920", "document_id": "40121415", "report_number": "ISR08628", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-09", "role": "Implementation: latest ISR (sequence 10)" },
+    { "kind": "document", "project_id": "P164920", "document_id": "40122472", "document_type": "Procurement Plan", "document_date": "2026-08-14", "role": "Implementation: latest procurement plan", "required": false },
+    { "kind": "document", "project_id": "P164920", "document_id": "40076267", "report_number": "210162", "document_type": "Aide Memoire", "document_date": "2025-11-21", "role": "Implementation: midterm review aide-memoire", "required": false },
+    { "kind": "document", "project_id": "P164920", "document_id": "40131419", "report_number": "PPIAF000398", "document_type": "Project Paper", "document_date": "2026-09-30", "role": "Restructuring: latest project paper (additional financing)" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "P164920 - Tanzania Roads to Inclusion and Socioeconomic Opportunities (RISE) Project: 147 public records (as of 2026-11-22). By group, with the latest in each (by document date):",
+          "Design (concept and appraisal PIDs, PAD, ESRS summaries at concept): latest is the Project Information Document for the additional financing, PIDIAF0363, 2026-08-28; the original PAD is PAD2934, 2021-04-30 (disclosed 2021-05-31), http://documents.worldbank.org/curated/en/245301622426454522.",
+          "Legal (financing, project and disbursement agreements and amendments): latest is the Project Agreement for Additional Financing Credit 7716-TZ, 2025-10-10, signed alongside the Financing Agreement for AF Credit 7716-TZ and the First Amendment to the Financing Agreement for Credit 6867-TZ (both 2025-09-30). Original Financing Agreement for Credit 6867-TZ: 2021-08-19.",
+          "Environmental and social (ESCPs, SEPs, ESMF, ESIAs, ESMPs, resettlement plans, labor management procedures): latest record is a Resettlement Plan, 2026-10-16; latest ESCP is the Additional Financing ESCP (AF No. 3), 2026-08-27, which follows ESCPs of 2020-04, 2021-02, 2021-03 (two), 2024-12 and 2025-02.",
+          "Implementation (ISRs, procurement plans, aide-memoires, audits): latest ISR is sequence 10, ISR08628, 2026-08-09, http://documents.worldbank.org/curated/en/099080926110030280; latest procurement plan 2026-08-14; midterm review aide-memoire (mission 6 October - 21 November 2025), dated 2025-11-21; latest audit 2026-06-26.",
+          "Restructuring (project papers): two additional financing papers, the latest dated 2026-09-30 (PPIAF000398), after PPIAF000101 of 2025-02-27. No standalone restructuring paper is disclosed.",
+          "Completion: none yet (the project is active).",
+          "The grouping is by document type; where a record carries several types (e.g. 'Resettlement Plan; Environmental and Social Management Plan') it is placed under environmental and social."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Retrieves the project's whole document list (not a first page of 10 or 20) and identifies the latest record in each group as listed."
+    ],
+    "grounded": [
+      "Every document named exists with the stated type and date; 'latest' is by document date."
+    ],
+    "complete": [
+      "Covers all five requested groups (plus completion or 'none'), with the latest document's title, date and link in each."
+    ],
+    "scoped": [
+      "Says the list is the publicly disclosed documents, notes that the restructuring group holds additional financing papers rather than a restructuring paper, and notes no completion documents exist."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "Active project: new ISRs, plans and E&S documents are disclosed regularly. A later run should accept newer latest documents."
+}

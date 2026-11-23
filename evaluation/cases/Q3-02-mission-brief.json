@@ -1,0 +1,55 @@
+{
+  "id": "Q3-02",
+  "query_id": "Q3.2",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "task": "Prepare a mission",
+  "query_wording": "Brief me on Pxxxxxx before my meeting with the ministry. What are its objectives, components, implementing agencies, latest reported progress, and main risks?",
+  "placeholders": [
+    { "placeholder": "Pxxxxxx", "resolved_to": "P164920 (Tanzania RISE)", "reason": "Active project with a PAD, ten ISRs and two additional financing papers, one of which changed the PDO." }
+  ],
+  "turns": [
+    { "user": "Brief me on P164920 before my meeting with the ministry. What are its objectives, components, implementing agencies, latest reported progress, and main risks?" }
+  ],
+  "expected_sources": [
+    { "kind": "project", "project_id": "P164920", "role": "Project record (status, dates, commitments)" },
+    { "kind": "document", "project_id": "P164920", "document_id": "33121051", "report_number": "PAD2934", "document_type": "Project Appraisal Document", "document_date": "2021-04-30", "pages": "9, 23-29, 39", "role": "Original PDO, components, implementing agencies" },
+    { "kind": "document", "project_id": "P164920", "document_id": "40121415", "report_number": "ISR08628", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-09", "pages": "1-10", "role": "Latest disclosed ISR (seq. 10): current PDO, ratings, indicators, risks, disbursement", "note": "The text file has no form-feed breaks; pages are the report's printed 'Page N of 10'. The text drops the letter 't' throughout." },
+    { "kind": "document", "project_id": "P164920", "document_id": "40131419", "report_number": "PPIAF000398", "document_type": "Project Paper", "document_date": "2026-09-30", "pages": "1-4, 10", "role": "Latest project paper (second AF and restructuring): status after the midterm review, financing gap, risks", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "P164920 - Tanzania Roads to Inclusion and Socioeconomic Opportunities (RISE) Project. Active; approved 27 May 2021, effective 16 November 2021; IDA credit 6867-TZ US$300 million plus US$50 million Government counterpart funding (PAD p. 9); first additional financing (AF1) US$100 million from the Crisis Response Window, approved 28 February 2025 (AF2 paper p. 1).",
+          "Objectives: the original PDO was \"to improve rural road access and provide employment opportunities for population in selected rural areas and build capacity in the sustainable management of rural roads incorporating community engagement approaches\" (PAD p. 23). Since AF1 (28 Feb 2025) the PDO is \"to improve rural road connectivity, generate jobs, strengthen road management capacity and support emergency response in selected areas, incorporating community engagement approaches\" (ISR p. 1).",
+          "Components (ISR p. 1; PAD pp. 24-29): 1 Rural Roads Development and Maintenance (US$299.5m in the ISR after US$25m moved to the CERC; sub-components regional upgrades, district upgrades, bottleneck improvements, community-based routine maintenance); 2 Institutional Strengthening and Human Capital Development (US$15m); 3 Community Engagement, Inclusion and Protection (US$3m); 4 Project Management, M&E (US$7.5m); 5 Contingency Emergency Response (US$25m, triggered 3 September 2024 after the El Niño floods and Cyclone Hidaya); 6 Restoration of Critical Connectivity (US$100m, added by AF1).",
+          "Implementing agencies: Tanzania Rural and Urban Roads Agency (TARURA), the lead coordinating agency hosting the PIU, and Tanzania National Roads Agency (TANROADS) (PAD pp. 9, 39; ISR p. 1). TARURA sits under the President's Office - Regional Administration and Local Government (PO-RALG) (PAD p. 20).",
+          "Latest reported progress, from the latest disclosed ISR (seq. 10, 9 August 2026): progress towards the PDO and implementation progress both Moderately Satisfactory, overall risk Substantial (ISR p. 2). The ISR reports disbursement at 43 percent (p. 2); its loan table shows IDA-68670 61.02% disbursed (US$173.75m of a revised US$284.72m) and the AF1 credit IDA-77160 0% disbursed (p. 9). Indicators: 6,258,535 direct users with improved access (target not yet set); civil works jobs 1,462 person-years against 35,000; district rural roads in good/fair condition 47% (target 48%), regional 69% (target 70%); 6 CERC interventions against 7 (pp. 3-4). Physical outputs lag: 50.2 km of rural roads improved against 535 km, 2,373 km of bottleneck improvements against 4,500, no CBRM maintenance km or CBRM jobs yet recorded, National Rural Roads Plan and TARURA modernization plan not yet approved (pp. 5-6). Closing date 30 June 2027 (p. 10).",
+          "Since that ISR, the second AF paper (30 September 2026) reports US$207.95 million (54%) of IDA disbursed as of August 2026, a midterm review (6 Oct - 21 Nov 2025) that found a US$90 million financing gap, and proposes US$25 million to replenish the CERC, an 18-month extension to 31 December 2028 and lower Component 1 targets (AF2 paper pp. 1-4, 8).",
+          "Main risks: overall Substantial; Substantial for sector strategies and policies, technical design, institutional capacity for implementation and sustainability, fiduciary, and environmental and social; Moderate for political and governance, macroeconomic and stakeholders (ISR p. 2). The AF2 paper explains the institutional capacity risk by the project's scale and nationwide coverage needing coordination among TARURA, local governments and communities, and lists E&S risks from civil works (dust, noise, access restrictions, road safety, vegetation loss) (AF2 paper p. 10).",
+          "Points to raise: the slow pace of road upgrading and maintenance outputs against end targets, the financing gap and proposed extension, and the pending national rural (district) roads plan."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the PAD and the latest disclosed ISR (ISR08628, 2026-08-09); citing the 2026 AF paper for the current situation is a plus."
+    ],
+    "grounded": [
+      "PDO wording, component names and amounts, agencies, ratings and indicator values match the cited documents; disbursement figures are attributed to the document that reports them."
+    ],
+    "complete": [
+      "Covers all five asks: objectives (noting the PDO was revised in 2025), components, implementing agencies, latest progress, main risks."
+    ],
+    "scoped": [
+      "Labels progress as coming from the latest disclosed ISR and its date, not as current status."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "A new ISR (seq. 11) is expected around early 2027; a later run should use the newest ISR. The ISR and AF2 paper report different disbursement figures because they measure different bases and dates."
+}
