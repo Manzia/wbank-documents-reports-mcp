@@ -1,7 +1,7 @@
 // node --test scripts/checks/prechecks.test.mjs  (no network: pure helpers only)
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { evaluateCfn, parseProjectDate, toDocuments1 } from './prechecks.mjs';
+import { evaluateCfn, pageMarkers, parseProjectDate, toDocuments1 } from './prechecks.mjs';
 
 test('toDocuments1 moves the API text link to documents1 /txt/', () => {
   const api = 'http://documents.worldbank.org/curated/en/099122425102515384/text/BOSIB-24e62aba.txt';
@@ -57,4 +57,9 @@ test('evaluateCfn reports a missing setting as not expressible', () => {
   assert.equal(byItem['Gateway authorizer NONE'], false);
   assert.equal(byItem['Gateway MCP response streaming'], false);
   assert.equal(byItem['Gateway rate limits'], false);
+});
+
+test('pageMarkers counts form feeds and centred page footers', () => {
+  const text = 'a\n            -2-\n\nb\n   - 11 -\nPage 3 of 9\n\fc\n2.06 text -2- inline\n';
+  assert.deepEqual(pageMarkers(text), { formFeeds: 1, footers: 3 });
 });

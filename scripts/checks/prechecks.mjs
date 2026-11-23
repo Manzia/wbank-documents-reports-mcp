@@ -53,7 +53,7 @@ export async function http(url, { redirect = 'follow', retries = 5 } = {}) {
       res = await fetch(url, { redirect, headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
     } catch (e) {
       if (attempt < retries) { await sleep(5000 * (attempt + 1)); continue; }
-      return { url, status: 0, error: String(e.cause?.code ?? e.message) };
+      return { url, status: 0, unreachable: true, error: `${e.message}: ${e.cause?.message ?? e.cause?.code ?? ''}` };
     }
     if (res.status === 403 && res.headers.get('x-proxy-error')) {
       return { url, status: 403, blocked: true, error: `blocked by local proxy (${res.headers.get('x-proxy-error')})` };
@@ -114,52 +114,71 @@ export function toDocuments1(txturl, path = 'txt') {
   return u.toString();
 }
 
+const SAMPLES_PER_TYPE = 3;
+
+// The P117635 record of each type first, then the newest records of that type elsewhere.
 async function pickDocuments() {
   const list = await projectList();
   const picks = [];
   const requests = [list.url];
   for (const t of DOC_TYPES) {
-    let rec = list.records.find((r) => t.types.includes(r.docty) && r.txturl);
-    if (!rec) {
-      for (const docty of t.types) {
-        const q = await api(WDS, { docty_exact: docty, rows: '10', srt: 'docdt', order: 'desc', fl: FL });
-        requests.push(q.url);
-        rec = q.records.find((r) => r.txturl);
-        if (rec) break;
-      }
+    const recs = list.records.filter((r) => t.types.includes(r.docty) && r.txturl).slice(0, 1);
+    for (const docty of t.types) {
+      if (recs.length >= SAMPLES_PER_TYPE) break;
+      const q = await api(WDS, { docty_exact: docty, rows: '10', srt: 'docdt', order: 'desc', fl: FL });
+      requests.push(q.url);
+      recs.push(...q.records.filter((r) => r.txturl && !recs.some((x) => x.id === r.id)).slice(0, SAMPLES_PER_TYPE - recs.length));
     }
-    picks.push({ label: t.label, rec });
+    picks.push({ label: t.label, recs });
   }
   return { picks, requests };
+}
+
+export function pageMarkers(text) {
+  return {
+    formFeeds: (text.match(/\f/g) ?? []).length,
+    footers: (text.match(/^[ \t]*(?:-[ \t]*\d{1,4}[ \t]*-|Page[ \t]+\d{1,4}(?:[ \t]+of[ \t]+\d+)?)[ \t]*$/gim) ?? []).length,
+  };
 }
 
 async function checkDocuments() {
   const { picks, requests } = await pickDocuments();
   const details = [];
   const statuses = [];
-  for (const { label, rec } of picks) {
-    if (!rec) { statuses.push('FAIL'); details.push(`${label}: no record with a text link found`); continue; }
-    const d1 = toDocuments1(rec.txturl);
-    const r1 = await http(d1);
-    const ff = r1.status === 200 ? (r1.body.match(/\f/g) ?? []).length : 0;
-    const original = new URL(rec.txturl);
-    original.protocol = 'https:';
-    const r0 = await http(original.toString(), { redirect: 'manual', retries: 1 });
-    requests.push(d1, original.toString());
-    const okText = r1.status === 200 && ff > 0;
-    const okDocs = r0.status === 403 && !r0.blocked;
-    statuses.push(!okText ? 'FAIL' : r0.blocked ? 'BLOCKED' : okDocs ? 'PASS' : 'FAIL');
-    details.push(
-      `${label} (${rec.docty}, ${rec.docdt?.slice(0, 10)}, id ${rec.id}, ${rec.projectid ?? ''}): ` +
-        `${DOCS1} /txt/ ${r1.status}, ${r1.body?.length ?? 0} chars, ${ff} form feeds; ` +
-        `${DOCS} ${r0.blocked ? 'not reachable from here: ' + r0.error : r0.status + (r0.server ? ` (${r0.server})` : '')}`,
-    );
+  for (const { label, recs } of picks) {
+    if (!recs.length) { statuses.push('FAIL'); details.push(`${label}: no record with a text link found`); continue; }
+    let withFf = 0;
+    let all200 = true;
+    let docs;
+    const lines = [];
+    for (const [i, rec] of recs.entries()) {
+      const d1 = toDocuments1(rec.txturl);
+      const r1 = await http(d1);
+      requests.push(d1);
+      const m = r1.status === 200 ? pageMarkers(r1.body) : { formFeeds: 0, footers: 0 };
+      all200 &&= r1.status === 200;
+      if (m.formFeeds > 0) withFf++;
+      let docsNote = '';
+      if (i === 0) {
+        const original = new URL(rec.txturl);
+        original.protocol = 'https:';
+        docs = await http(original.toString(), { redirect: 'manual', retries: 1 });
+        requests.push(original.toString());
+        docsNote = `; ${DOCS} ${docs.blocked || docs.unreachable ? `not reachable from here (${docs.error})` : docs.status + (docs.server ? ` (${docs.server})` : '')}`;
+      }
+      lines.push(`  ${rec.docty}, ${rec.docdt?.slice(0, 10)}, id ${rec.id}${rec.projectid ? `, ${rec.projectid}` : ''}: ` +
+        `/txt/ ${r1.status}, ${r1.body?.length ?? 0} chars, ${m.formFeeds} form feeds, ${m.footers} page-footer lines${docsNote}`);
+    }
+    const okText = all200 && withFf === recs.length;
+    const docsBlocked = docs.blocked || docs.unreachable;
+    statuses.push(!okText ? 'FAIL' : docsBlocked ? 'BLOCKED' : docs.status === 403 ? 'PASS' : 'FAIL');
+    details.push(`${label}: ${DOCS1} 200 for ${all200 ? 'all' : 'NOT all'}; form feeds in ${withFf}/${recs.length}`, ...lines);
   }
   const status = worst(...statuses);
   const n = statuses.filter((s) => s === 'PASS').length;
-  report(2, 'Document text', status, status === 'BLOCKED'
-    ? `${DOCS1} text OK for all; ${DOCS} could not be reached from this environment (run with --only 2 outside the sandbox)`
-    : `${n}/${picks.length} documents as expected`, details, requests);
+  report(2, 'Document text', status, `${n}/${picks.length} document types as expected` +
+    (statuses.includes('BLOCKED') ? `; ${DOCS} not reachable from this environment (run --only 2 outside the sandbox)` : ''),
+  details, requests);
 }
 
 // ---------- check 3: WDS and Projects API ----------
@@ -178,24 +197,40 @@ async function completeFacet(base, field, chain, filters = {}, requests = [], pa
   requests.push(q.url);
   const values = new Map(Object.values(q.facets[field] ?? {}).map((v) => [v.name, Number(v.count)]));
   if (values.size < FACET_CAP) return { values, complete: true, total: q.total };
-  const [part, ...rest] = chain.filter((c) => c !== field && !(c in filters));
-  if (!part) return { values, complete: false, total: q.total };
-  const pkey = `${part}|${JSON.stringify(filters)}`;
-  if (!partitionCache.has(pkey)) {
-    const p = await api(base, { rows: '1', fl: 'id', fct: part, ...filters });
-    requests.push(p.url);
-    partitionCache.set(pkey, Object.values(p.facets[part] ?? {}).map((v) => v.name));
+  const [part, ...rest] = chain.filter((c) => c !== field && !(c in filters) && !(c === YEARS && 'strdate' in filters));
+  if (!part) return { values, complete: false, total: q.total, capped: [JSON.stringify(filters)] };
+  let parts;
+  if (part === YEARS) {
+    parts = YEAR_RANGES.map(([strdate, enddate]) => ({ strdate, enddate }));
+  } else {
+    const pkey = `${part}|${JSON.stringify(filters)}`;
+    if (!partitionCache.has(pkey)) {
+      const p = await api(base, { rows: '1', fl: 'id', fct: part, ...filters });
+      requests.push(p.url);
+      partitionCache.set(pkey, Object.values(p.facets[part] ?? {}).map((v) => v.name));
+    }
+    parts = partitionCache.get(pkey).map((pv) => ({ [part]: pv }));
   }
   let complete = true;
   const unmatched = [];
-  for (const pv of partitionCache.get(pkey)) {
-    const sub = await completeFacet(base, field, rest, { ...filters, [part]: pv }, requests, partitionCache);
-    if (sub.total === 0) unmatched.push(`${part}=${pv}`);
+  const capped = [];
+  for (const pf of parts) {
+    const sub = await completeFacet(base, field, rest, { ...filters, ...pf }, requests, partitionCache);
+    if (sub.total === 0) unmatched.push(JSON.stringify(pf));
     complete &&= sub.complete;
+    capped.push(...(sub.capped ?? []));
+    unmatched.push(...(sub.unmatched ?? []));
     for (const [k, c] of sub.values) values.set(k, Math.max(values.get(k) ?? 0, c));
   }
-  return { values, complete, total: q.total, unmatched };
+  return { values, complete, total: q.total, unmatched, capped };
 }
+
+const YEARS = '@years';
+const YEAR_RANGES = [
+  ['1900-01-01', '1989-12-31'], ['1990-01-01', '1999-12-31'], ['2000-01-01', '2009-12-31'],
+  ['2010-01-01', '2014-12-31'], ['2015-01-01', '2019-12-31'], ['2020-01-01', '2022-12-31'],
+  ['2023-01-01', '2099-12-31'],
+];
 
 const WDS_FACETS = [
   ['countries', 'count_exact'],
@@ -278,10 +313,12 @@ async function checkApis() {
   for (const order of ['desc', 'asc']) {
     const q = await api(WDS, { srt: 'docdt', order, rows: '50', fl: 'docdt' });
     requests.push(q.url);
-    const ok = q.records.length === 50 && monotone(q.records.map((r) => r.docdt), order);
+    const dated = q.records.map((r) => r.docdt).filter(Boolean);
+    const undated = q.records.length - dated.length;
+    const ok = q.records.length === 50 && dated.length > 1 && monotone(dated, order);
     statuses.push(ok ? 'PASS' : 'FAIL');
     details.push(`WDS srt=docdt&order=${order}: ${q.records.length} records, ${ok ? 'in' : 'NOT in'} date order ` +
-      `(${q.records[0]?.docdt?.slice(0, 10)} … ${q.records.at(-1)?.docdt?.slice(0, 10)})`);
+      `(${dated[0]?.slice(0, 10)} … ${dated.at(-1)?.slice(0, 10)})${undated ? `; ${undated} records without docdt sort first` : ''}`);
   }
 
   const list = await projectList();
@@ -303,8 +340,8 @@ async function checkApis() {
   }
 
   for (const [api_, base, facets, chain] of [
-    ['WDS', WDS, WDS_FACETS, ['majdocty_exact', 'admreg_exact']],
-    ['Projects', PROJECTS, PROJECT_FACETS, ['regionname_exact', 'status_exact']],
+    ['WDS', WDS, WDS_FACETS, ['majdocty_exact', 'admreg_exact', YEARS]],
+    ['Projects', PROJECTS, PROJECT_FACETS, ['regionname_exact', 'status_exact', YEARS]],
   ]) {
     for (const [label, field] of facets) {
       log(`${api_} facet ${field}`);
@@ -312,7 +349,7 @@ async function checkApis() {
       const f = await completeFacet(base, field, chain, {}, requests);
       statuses.push(f.complete && f.values.size > 0 ? 'PASS' : 'FAIL');
       const sample = [...f.values.keys()].slice(0, 4).join(' | ');
-      details.push(`${api_} ${label} (${field}): ${f.values.size} values${f.complete ? '' : ' (INCOMPLETE: a partition still hits the cap)'}` +
+      details.push(`${api_} ${label} (${field}): ${f.values.size} values${f.complete ? '' : ' (INCOMPLETE: ' + f.capped.length + ' partitions still hit the cap, e.g. ' + f.capped[0] + ')'}` +
         `, ${requests.length - before} requests${f.unmatched?.length ? `, partitions matching nothing: ${f.unmatched.join('; ')}` : ''}; e.g. ${sample}`);
     }
   }
