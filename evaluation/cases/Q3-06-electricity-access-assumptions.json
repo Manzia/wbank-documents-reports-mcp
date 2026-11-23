@@ -1,0 +1,51 @@
+{
+  "id": "Q3-06",
+  "query_id": "Q3.6",
+  "group": "Q3",
+  "tier": "cross_project_synthesis",
+  "task": "Test assumptions",
+  "query_wording": "How did recent electricity access projects justify their connection targets and costs? Which assumptions proved difficult during implementation?",
+  "turns": [
+    { "user": "How did recent electricity access projects justify their connection targets and costs? Which assumptions proved difficult during implementation?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "projects", "role": "Recent electricity access projects", "filters": { "qterm": "electricity access / electrification" } },
+    { "kind": "document", "project_id": "P166685", "document_id": "33759023", "report_number": "PAD3416", "document_type": "Project Appraisal Document", "document_date": "2022-03-11", "pages": "23-24, 30, 43-44", "role": "Uganda EASP: connection targets, unit rates, economic analysis" },
+    { "kind": "document", "project_id": "P166685", "document_id": "40056433", "report_number": "RES00948", "document_type": "Project Paper", "document_date": "2025-10-16", "pages": "1-4", "role": "Uganda EASP restructuring: what happened to the grid connection assumption" },
+    { "kind": "document", "project_id": "P165453", "document_id": "34427253", "report_number": "ICR00015", "document_type": "Implementation Completion and Results Report", "document_date": "2024-10-30", "pages": "12-14, 17-19, 21", "role": "Mozambique ProEnergia: appraisal assumptions, unit costs, outcomes" },
+    { "kind": "document", "project_id": "P165453", "document_id": "30907094", "report_number": "PAD2873", "document_type": "Project Appraisal Document", "document_date": "2019-03-07", "role": "ProEnergia PAD", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Coverage: two recent electricity access operations read: Uganda Electricity Access Scale-up Project (EASP, P166685; PAD 2022, restructuring paper October 2025; still active, no ICR yet) and Mozambique Energy for All - ProEnergia (P165453; ICR 2024). Other access projects in the region (e.g. Kenya's Off-grid Solar Access Project) could be added.",
+          "Uganda EASP - justification: targets follow the national Electricity Connections Policy 2018-27, which aims at three million new connections by 2027 with fully subsidized no-pole and one-pole connections (PAD p. 23), and a geospatial least-cost analysis (p. 24). The PAD plans 1,073,500 grid connections at regulated unit rates of US$165 (no-pole) and US$627 (one-pole), US$260.3 million in total, including 663,500 in the Umeme concession area under results-based financing (PAD p. 30), plus about 150,000 off-grid connections (p. 43). Economic analysis: EIRR 53%, economic NPV US$1,182 million at 6% (US$661 million at 11%), FIRR 33%; benefits are avoided cost of energy and GHG reductions; connection cost about US$400, with NPV turning negative only if it rises above US$714 (+75%) (pp. 43-44).",
+          "Uganda EASP - what proved difficult: the assumption that Umeme would make 663,500 connections with its own resources failed when its concession ended on 31 March 2025 after only 155,088 connections; UEDCL took over and made 10,427 more by August 2025, and the remaining 410,000 shifted to a materials-provision approach, with materials only expected from June 2026; material procurement was delayed (restructuring paper pp. 2, 4). Off-grid did the opposite: 332,452 off-grid solar connections against a 142,000 target, so US$10 million was moved to the off-grid results-based financing (pp. 3-4). Clean cooking and productive-use equipment were at 37% and 21% of targets (p. 3). The PAD had also flagged that lower post-COVID incomes could affect affordability of wiring and electricity (PAD p. 44).",
+          "Mozambique ProEnergia - justification: targets tied to the National Electrification Strategy pace of 165,000 connections in 2018 rising to 590,000 a year in 2025-2030 (ICR p. 12); 250,000 household grid connections plus 18,000 off-grid (ICR p. 17); the design rested on two assumptions: separating engineering, materials supply and installation contracts would not create coordination problems, and bulk purchase of materials would cut unit costs (ICR p. 13).",
+          "Mozambique ProEnergia - what happened: the cost assumptions held and then some: unit connection cost fell from the US$505 estimate to US$232 (US$116 where only service drops and meters were needed), and the government's zero-connection-fee policy enabled mass connections; household grid connections reached 514,862 against 250,000 (ICR pp. 17-18). The public facilities target was cut to 30 because EDM had difficulty with connection-cost payments and found fewer facilities than expected (p. 17, note a). The off-grid component failed: the mini-grid enabling environment for private operators was weak and the SHS results-based facility was too small to attract experienced managers; its risks were not identified at appraisal, and it was dropped with no connections (pp. 19, 21).",
+          "Pattern: grid targets were justified by national connection policies and unit-rate cost tables with high EIRRs; the fragile assumptions were about delivery institutions (a concessionaire in Uganda, private off-grid operators in Mozambique) rather than unit costs."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Reads appraisal and implementation documents (PAD plus ICR, restructuring paper or ISR) of at least two recent electricity access projects; the reference uses P166685 and P165453, but other recent access projects are acceptable."
+    ],
+    "grounded": [
+      "Targets, unit costs, EIRR/NPV and implementation problems are cited to documents and pages; no invented figures."
+    ],
+    "complete": [
+      "Covers both how targets and costs were justified and which assumptions proved difficult, for each project."
+    ],
+    "scoped": [
+      "States which projects were read and notes where evidence is interim (e.g. no ICR yet for EASP)."
+    ]
+  },
+  "stability": "stable",
+  "notes": "EASP is active; later documents may add evidence but do not change what the cited documents say."
+}
