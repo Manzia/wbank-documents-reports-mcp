@@ -1,0 +1,61 @@
+{
+  "id": "Q1-03",
+  "query_id": "Q1.3",
+  "group": "Q1",
+  "tier": "search_and_retrieve",
+  "task": "Find a half-remembered report by title words",
+  "query_wording": "I remember ‘learning poverty’ was in the title. Can you find the report?",
+  "turns": [
+    { "user": "I remember ‘learning poverty’ was in the title. Can you find the report?" }
+  ],
+  "expected_sources": [
+    {
+      "kind": "search",
+      "api": "wds",
+      "role": "Title search for the phrase",
+      "filters": { "display_title": "\"learning poverty\"" },
+      "note": "Unquoted display_title=learning poverty matches either word (15,413 records on 2026-11-22); the quoted phrase gives 505, mostly country Learning Poverty Briefs."
+    },
+    { "kind": "document", "document_id": "31483486", "report_number": "142659", "document_type": "Working Paper", "document_date": "2019-10-01", "title": "Ending Learning Poverty : What Will It Take?", "role": "Flagship report that introduced the measure" },
+    { "kind": "document", "document_id": "32629753", "report_number": "154703", "document_type": "Report", "document_date": "2020-12-01", "title": "Realizing the Future of Learning : From Learning Poverty to Learning for Everyone, Everywhere", "role": "Candidate" },
+    { "kind": "document", "document_id": "34401455", "report_number": "193947", "document_type": "Report", "document_date": "2024-11-19", "title": "Learning Poverty Updates and Revisions : What's New?", "role": "Candidate (latest edition; earlier editions 161348 of 2021 and 191787 of 2024-06)", "required": false },
+    { "kind": "document", "document_id": "40039154", "report_number": "203942", "document_type": "Report", "document_date": "2025-03-31", "title": "Scaling Up Interventions to Reduce Learning Poverty in South Asia : The Six Scaling Principles for Success", "role": "Candidate", "required": false },
+    { "kind": "document", "document_id": "33844661", "report_number": "AUS0002949", "document_type": "Report", "document_date": "2022-05-31", "title": "Learning Poverty in Ethiopia : Status, Key Factors, and Priority Reduction Strategies", "role": "Candidate", "required": false },
+    { "kind": "document", "document_id": "33217293", "report_number": "161068", "document_type": "Report", "document_date": "2021-04-07", "title": "Advancing Arabic Language Teaching and Learning : A Path to Reducing Learning Poverty in the Middle East and North Africa", "role": "Candidate", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "About 505 Documents & Reports records have \"learning poverty\" in the title, most of them one-country Learning Poverty Briefs (e.g. Jordan, Mexico, Belize 2024). The likeliest reports are:",
+          "- Ending Learning Poverty: What Will It Take? (World, Working Paper 142659, 2019-10-01): the report that introduced the learning poverty measure. http://documents.worldbank.org/curated/en/395151571251399043",
+          "- Realizing the Future of Learning: From Learning Poverty to Learning for Everyone, Everywhere (World, Report 154703, 2020-12-01). http://documents.worldbank.org/curated/en/250981606928190510",
+          "- Learning Poverty Updates and Revisions: What's New? (World; editions 2021-07 as Working Paper 161348, 2024-06-25 as Report 191787, 2024-11-19 as Report 193947).",
+          "- Scaling Up Interventions to Reduce Learning Poverty in South Asia: The Six Scaling Principles for Success (South Asia, Report 203942, 2025-03-31).",
+          "- Learning Poverty in Ethiopia: Status, Key Factors, and Priority Reduction Strategies (Ethiopia, 2022-05-31).",
+          "- Advancing Arabic Language Teaching and Learning: A Path to Reducing Learning Poverty in the Middle East and North Africa (2021, English and Arabic).",
+          "If one of these isn't it, the country, year or region would narrow the list (for example to a specific country's Learning Poverty Brief)."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Searches titles for the phrase (not a plain keyword search over all fields) and returns several candidates, including Ending Learning Poverty: What Will It Take? (142659)."
+    ],
+    "grounded": [
+      "Candidate titles, countries/regions and dates match the records; links come from the records."
+    ],
+    "complete": [
+      "Gives several candidates with title, country or region and date, so the user can pick, rather than asserting a single answer."
+    ],
+    "scoped": [
+      "Says there are many matches (hundreds, mostly country briefs) and offers a way to narrow them."
+    ]
+  },
+  "stability": "stable",
+  "notes": "New country briefs may add to the count."
+}

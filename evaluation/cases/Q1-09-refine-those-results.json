@@ -1,0 +1,74 @@
+{
+  "id": "Q1-09",
+  "query_id": "Q1.9",
+  "group": "Q1",
+  "tier": "search_and_retrieve",
+  "task": "Refine and page a previous search",
+  "query_wording": "Of those results, show only English-language reports from 2022 onward. Give me the next ten.",
+  "placeholders": [
+    { "placeholder": "those results", "resolved_to": "a first turn that searches for school connectivity documents", "reason": "The query refers back to an earlier search, so the case is a 2-turn conversation (design §10.1)." }
+  ],
+  "turns": [
+    { "user": "Find World Bank documents on school connectivity." },
+    { "user": "Of those results, show only English-language reports from 2022 onward. Give me the next ten." }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "turn": 1, "role": "Original search", "filters": { "qterm": "school connectivity", "rows": "10", "os": "0" } },
+    {
+      "kind": "search",
+      "api": "wds",
+      "turn": 2,
+      "role": "The same search with language and date filters added, second page",
+      "filters": { "qterm": "school connectivity", "lang_exact": "English", "strdate": "2022-01-01", "enddate": "today", "rows": "10", "os": "10" },
+      "note": "139 records on 2026-11-22. Without enddate, strdate returns only 2022."
+    },
+    { "kind": "document", "turn": 2, "document_id": "40081012", "report_number": "207823", "document_type": "Brief", "document_date": "2025-06-30", "title": "The EdTech Readiness Index : Uganda Policy Brief", "role": "In results 11-20", "required": false },
+    { "kind": "document", "turn": 2, "document_id": "34097930", "report_number": "182976", "document_type": "Report", "document_date": "2023-06-01", "title": "Safeguarding Learning in Ukraine through Digitalization and Blended Learning", "role": "In results 11-20", "required": false },
+    { "kind": "document", "turn": 2, "document_id": "33340768", "report_number": "162391", "document_type": "Report", "document_date": "2022-03-30", "title": "Remote Learning During the Global School Lockdown : Multi-Country Lessons (Vol. 2 of 2)", "role": "In results 11-20", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "A keyword search for school connectivity returns 3,744 matching records. The first ten by relevance include Rethinking School Health (2011), the Nepal School Sector Development Program labor management procedures (2021), the Cambodia Road Connectivity Improvement Project PAD (2020), the Rapid Diagnostic of School Infrastructure in Haiti (2020) and Connecting Albania's Remote Areas with E-school Program (2010), each with date, type and link. Many matches are infrastructure-connectivity projects that also mention schools."
+        ]
+      },
+      {
+        "turn": 2,
+        "text": [
+          "Same search (school connectivity), now limited to English-language documents dated 2022-01-01 or later: 139 matching records. Results 11-20 by relevance:",
+          "11. Southern Africa - Trade and Connectivity Project: Environmental and Social Management Plan for box culverts and spot improvements on the Mdeka-Chinyangute Feeder Road, Blantyre District (216634, 2026-06-18)",
+          "12. Analysis of Shared Streets in São Paulo: Executive Summary (Report 181889, 2023-03-09)",
+          "13. Remote Learning During the Global School Lockdown: Multi-Country Lessons, Vol. 2 (Report 162391, 2022-03-30)",
+          "14. The EdTech Readiness Index: Uganda Policy Brief (Brief 207823, 2025-06-30)",
+          "15. Improving the Governance of Mobility Including the Specific Case Study of Sao Paulo's Metropolitan Region: Executive Summary (Report 181893, 2023-01-12)",
+          "16. Safeguarding Learning in Ukraine through Digitalization and Blended Learning (Report 182976, 2023-06-01)",
+          "17. Kiribati - Pacific Regional Connectivity Program Project: Environmental and Social Management Plan for Fourth Phase of Kiribati Connectivity Project (SFG7586, 2023-03-01)",
+          "18. Madagascar - Connecting Madagascar for Inclusive Growth Project, PAD (PAD4493, 2022-03-04)",
+          "19. Senegal - Enhancing Connectivity in the Northern and Central Agricultural Production Areas of Senegal Project: Additional Financing (Project Paper, 2026-06-10)",
+          "20. Practical Guide to Implement Task-Based Digital Skills Assessments in Schools and Technical Institutions in Sub-Saharan Africa (Report 207838, 2026-02-05)",
+          "The query as run (keyword, language English, date from 2022-01-01, offset 10, 10 rows) is shown so the next page can be requested. 'Reports' was read as all document types; restricting to the Report type would shorten the list."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Turn 2 reuses the turn-1 keywords, adds the English language filter and a 2022-01-01 start date (with no end-of-2022 cut-off), and pages with an offset."
+    ],
+    "grounded": [
+      "Every record listed in turn 2 is English, dated 2022 or later, and appears in that search; titles, dates and links match the records."
+    ],
+    "complete": [
+      "Turn 2 gives ten records (results 11-20; results 1-10 of the filtered set is acceptable if the answer says that is what it shows and how to get the next page)."
+    ],
+    "scoped": [
+      "States the filters and offset it applied and the total matching count, so the user can see how 'those results' were interpreted."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "Relevance order and the record set shift as documents are added; the judge should check the mechanism (carried-forward query, filters, offset) and that the records satisfy the filters, not the exact list."
+}

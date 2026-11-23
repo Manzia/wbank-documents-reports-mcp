@@ -1,5 +1,5 @@
 // Checks the evaluation set (MCP-120): 41 cases, Q1 9 / Q2 5 / Q3 16 / Q4 11, each valid against
-// case.schema.json. Run with `node --test evaluation/cases/`. No dependencies: the validator below
+// case.schema.json. Run with `node --test evaluation/cases/cases.test.mjs`. No dependencies: the validator below
 // covers the JSON Schema keywords case.schema.json uses, and fails on any other keyword.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';

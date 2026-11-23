@@ -1,0 +1,52 @@
+{
+  "id": "Q1-08",
+  "query_id": "Q1.8",
+  "group": "Q1",
+  "tier": "search_and_retrieve",
+  "task": "Rank countries by matching records (facet)",
+  "query_wording": "Which countries appear most often in the results for school connectivity?",
+  "turns": [
+    { "user": "Which countries appear most often in the results for school connectivity?" }
+  ],
+  "expected_sources": [
+    {
+      "kind": "search",
+      "api": "wds",
+      "role": "Keyword search with the country facet",
+      "filters": { "qterm": "school connectivity", "fct": "count_exact" },
+      "note": "3,744 matching records on 2026-11-22. The facet is returned under documents.facets in the JSON. The quoted phrase \"school connectivity\" matches only 24 records (Tunisia 4, Ghana 3, then 2 each for Africa, Indonesia, Lebanon, Mongolia, World)."
+    }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "A keyword search for \"school connectivity\" returns 3,744 matching document records. Ranked by the country facet (counts of matching document records):",
+          "1. India 233; 2. Viet Nam 152; 3. China 145; 4. Indonesia 111; 5. Bangladesh 85 and Brazil 85; 7. Pakistan 76; 8. Kenya 70; 9. Afghanistan 64 and Ghana 64; 11. Uganda 55; 12. Nepal 52.",
+          "The facet also has non-country entries, which are not countries: World 430 and Africa 123.",
+          "These are counts of matching document records, not of projects or reports about school connectivity as such: a multi-country record counts toward each country, and a keyword match on both words also catches documents about road or rural connectivity that mention schools.",
+          "As an exact phrase (\"school connectivity\") there are only 24 records, led by Tunisia (4) and Ghana (3)."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the WDS country facet on a school connectivity search (keyword or phrase) rather than counting a page of results by hand."
+    ],
+    "grounded": [
+      "Counts match the facet of the search it ran (as of 2026-11-22: India 233, Viet Nam 152, China 145 for the keyword search; Tunisia 4, Ghana 3 for the phrase); no invented counts."
+    ],
+    "complete": [
+      "Gives a ranked list of countries with counts and the total number of matching records."
+    ],
+    "scoped": [
+      "Labels the numbers as matching document records, notes that multi-country records count more than once, and does not present regional or 'World' entries as countries."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "Counts grow as documents are added; the ranking at the top is what matters. A phrase-based answer is acceptable if it says it searched the exact phrase."
+}

@@ -1,0 +1,58 @@
+{
+  "id": "Q1-04",
+  "query_id": "Q1.4",
+  "group": "Q1",
+  "tier": "search_and_retrieve",
+  "task": "Keyword search with language and two-country filter",
+  "query_wording": "Find French-language reports on teacher training for Senegal or Côte d’Ivoire.",
+  "turns": [
+    { "user": "Find French-language reports on teacher training for Senegal or Côte d’Ivoire." }
+  ],
+  "expected_sources": [
+    {
+      "kind": "search",
+      "api": "wds",
+      "role": "Keyword search (English and French terms) with an exact language filter and either country",
+      "filters": { "qterm": "teacher training / formation des enseignants / enseignants", "lang_exact": "French", "count_exact": "Senegal or Cote d'Ivoire" },
+      "note": "The catalog value is \"Cote d'Ivoire\" (no circumflex); \"Côte d'Ivoire\" returns nothing. On 2026-11-22 count_exact=Senegal^Cote d'Ivoire returned only Senegal records while Cote d'Ivoire^Senegal returned both, so running one search per country is the safe way."
+    },
+    { "kind": "document", "document_id": "34297936", "report_number": "189073", "document_type": "Brief", "document_date": "2024-04-09", "title": "Academie des Politiques de l'Education de la Petite Enfance : Senegal", "role": "Senegal match: regional training of over 3,500 preschool teachers on the revised curriculum" },
+    { "kind": "document", "document_id": "27121879", "report_number": "112243", "document_type": "Working Paper", "document_date": "2017-01-01", "title": "Le défi des compétences, pourquoi la Cote d'Ivoire doit reformer son système educatif?", "role": "Côte d'Ivoire match: teacher human-resource policy in education reform", "required": false },
+    { "kind": "document", "document_id": "40029291", "report_number": "203115", "document_type": "Report", "document_date": "2024-05-31", "title": "L'École ouverte du Sénégal : Atelier à Saly", "role": "Senegal match: open-school workshop", "required": false },
+    { "kind": "document", "document_id": "12160741", "report_number": "6179", "document_type": "Staff Appraisal Report", "document_date": "1986-09-09", "project_id": "P002325", "title": "Sénégal - Projet de développement de l'enseignement élémentaire", "role": "Older Senegal project document on teacher effectiveness", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Few French-language records for Senegal or Côte d'Ivoire match teacher training in the catalog's searchable fields (title, abstract and other record fields, not full text). The relevant ones:",
+          "- Senegal: Académie des Politiques de l'Éducation de la Petite Enfance : Sénégal (Brief 189073, 2024-04-09). Notes the government recently ran regional training for more than 3,500 preschool teachers on the revised curriculum. http://documents.worldbank.org/curated/en/099714004092416935",
+          "- Côte d'Ivoire: Le défi des compétences, pourquoi la Côte d'Ivoire doit réformer son système éducatif ? (Côte d'Ivoire Economic Update no. 4, Working Paper 112243, 2017-01). Argues for rethinking human-resource policy for teachers as part of education spending reform. http://documents.worldbank.org/curated/en/489601485265757400",
+          "- Senegal: L'École ouverte du Sénégal : Atelier à Saly (Report 203115, 2024-05-31), workshop slides on the open-school initiative (Mastercard Foundation series). http://documents.worldbank.org/curated/en/099800307102529371",
+          "- Older: Sénégal - Projet de développement de l'enseignement élémentaire (Staff Appraisal Report 6179, 1986), which aimed to improve the efficiency of the teaching corps.",
+          "French searches on 'enseignants' also return records about 'enseignements' (lessons learned), e.g. social protection briefs; those are not about teacher training. For more, the user could widen to English-language reports or to project documents (appraisal documents of education projects)."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Applies the French language filter and restricts to Senegal and Côte d'Ivoire (resolved to the catalog's 'Cote d'Ivoire'), covering both countries.",
+      "Returns the Senegal early-childhood policy brief (189073) and at least one Côte d'Ivoire record, or says plainly that none was found for Côte d'Ivoire."
+    ],
+    "grounded": [
+      "Every listed record exists with the stated title, country, language and date; the 3,500-teachers figure, if cited, comes from the 189073 abstract."
+    ],
+    "complete": [
+      "Covers both countries and gives title, date and link per record."
+    ],
+    "scoped": [
+      "Says the matches are few and come from a metadata search, and does not present unrelated 'enseignements' (lessons) records as teacher-training reports."
+    ]
+  },
+  "stability": "stable",
+  "notes": "A thin-result case: the test is honest coverage, correct filters and no padding with unrelated records."
+}

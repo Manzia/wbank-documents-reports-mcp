@@ -1,0 +1,60 @@
+{
+  "id": "Q1-02",
+  "query_id": "Q1.2",
+  "group": "Q1",
+  "tier": "search_and_retrieve",
+  "task": "Latest documents of a type for a country",
+  "query_wording": "Show me the five most recent procurement plans for Kenya.",
+  "turns": [
+    { "user": "Show me the five most recent procurement plans for Kenya." }
+  ],
+  "expected_sources": [
+    {
+      "kind": "search",
+      "api": "wds",
+      "role": "Filter by country and document type, newest first, five rows",
+      "filters": { "count_exact": "Kenya", "docty_exact": "Procurement Plan", "srt": "docdt", "order": "desc", "rows": "5" }
+    },
+    { "kind": "document", "document_id": "40138439", "project_id": "P513352", "document_type": "Procurement Plan", "document_date": "2026-11-10", "title": "Kenya - EASTERN AND SOUTHERN AFRICA- P513352- Housing Finance, Lands and Sustainable Investments - Procurement Plan", "role": "Most recent (as of as_of)" },
+    { "kind": "document", "document_id": "40138373", "project_id": "P176758", "document_type": "Procurement Plan", "document_date": "2026-11-10", "title": "Kenya - EASTERN AND SOUTHERN AFRICA- P176758- NATIONAL AGRICULTURAL VALUE CHAIN DEVELOPMENT PROJECT (NAVCDP) - Procurement Plan", "role": "Most recent (as of as_of)" },
+    { "kind": "document", "document_id": "40137362", "project_id": "P513352", "document_type": "Procurement Plan", "document_date": "2026-11-03", "title": "Kenya - EASTERN AND SOUTHERN AFRICA- P513352- Housing Finance, Lands and Sustainable Investments - Procurement Plan", "role": "Third most recent" },
+    { "kind": "document", "document_id": "40136923", "project_id": "P170941", "document_type": "Procurement Plan", "document_date": "2026-11-02", "title": "Kenya - EASTERN AND SOUTHERN AFRICA- P170941- Kenya Digital Economy Acceleration Project - Procurement Plan", "role": "Fourth most recent" },
+    { "kind": "document", "document_id": "40136078", "project_id": "P176758", "document_type": "Procurement Plan", "document_date": "2026-10-28", "title": "Kenya - EASTERN AND SOUTHERN AFRICA- P176758- NATIONAL AGRICULTURAL VALUE CHAIN DEVELOPMENT PROJECT (NAVCDP) - Procurement Plan", "role": "Fifth most recent (tied)", "required": false, "note": "Tied on 2026-10-28 with 40136097; either is correct as the fifth." },
+    { "kind": "document", "document_id": "40136097", "project_id": "P176758", "document_type": "Procurement Plan", "document_date": "2026-10-28", "title": "Kenya - EASTERN AND SOUTHERN AFRICA- P176758- NATIONAL AGRICULTURAL VALUE CHAIN DEVELOPMENT PROJECT (NAVCDP) - Procurement Plan", "role": "Fifth most recent (tied)", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "The five most recent Kenya procurement plans in Documents & Reports, by document date (newest first), as of 2026-11-22 (3,711 Kenya procurement plan records in total):",
+          "1. 2026-11-10 - Housing Finance, Lands and Sustainable Investments (P513352) - Procurement Plan. http://documents.worldbank.org/curated/en/099111026120042234",
+          "2. 2026-11-10 - National Agricultural Value Chain Development Project, NAVCDP (P176758) - Procurement Plan. http://documents.worldbank.org/curated/en/099111026072522685",
+          "3. 2026-11-03 - Housing Finance, Lands and Sustainable Investments (P513352) - Procurement Plan. http://documents.worldbank.org/curated/en/099110326151561076",
+          "4. 2026-11-02 - Kenya Digital Economy Acceleration Project (P170941) - Procurement Plan. http://documents.worldbank.org/curated/en/099110226000538000",
+          "5. 2026-10-28 - NAVCDP (P176758) - Procurement Plan (two NAVCDP plans share this date: 099102826015046239 and 099102826042017240).",
+          "Procurement plans are updated often, so several entries can be successive versions for the same project."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the Kenya country filter and the Procurement Plan document type, sorted by document date descending (not relevance order).",
+      "Lists the five newest Kenya procurement plans at run time; as of 2026-11-22 these are the records above."
+    ],
+    "grounded": [
+      "Dates, project IDs, project names and links match the records."
+    ],
+    "complete": [
+      "Exactly five plans (or five plus a note on a tie), each with date, project and link."
+    ],
+    "scoped": [
+      "Makes clear the order is by document date and the list reflects what is disclosed at the time of the search."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "Kenya procurement plans are disclosed every few days. If the run is after as_of, the judge should accept the five newest at run time when they are sorted by document date and are Kenya procurement plans; the reviewer can refresh the list."
+}
