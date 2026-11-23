@@ -141,10 +141,14 @@ export function writeClaim(claimsDir, claim) {
   writeFileSync(join(claimsDir, `${claim.id}.json`), `${JSON.stringify(claim, null, 2)}\n`);
 }
 
-// `claude agents` lists background sessions of every project on the Mac; only this repo's worktrees count.
+// `claude agents` lists the sessions of every project on the Mac; only those running in this repo's worktrees
+// count. The filter is on each session's `cwd`, not `--cwd`: that flag matches the project a session belongs to
+// (the repo root, since a worktree is part of the repo), so `--cwd <repo>/.claude/worktrees` returned nothing
+// and every running session looked stopped (first dispatcher passes, 2026-11-23). A session without a `cwd`
+// can't be placed, so it doesn't count.
 export function readSessions(sh, worktreesDir) {
-  const all = JSON.parse(sh('claude', ['agents', '--json', '--cwd', worktreesDir]) || '[]');
-  return all.filter((s) => !s.cwd || s.cwd === worktreesDir || s.cwd.startsWith(`${worktreesDir}/`));
+  const all = JSON.parse(sh('claude', ['agents', '--json']) || '[]');
+  return all.filter((s) => typeof s.cwd === 'string' && s.cwd.startsWith(`${worktreesDir}/`));
 }
 
 export function acquireLock(lockDir, isAlive) {
