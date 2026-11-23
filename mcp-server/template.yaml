@@ -20,6 +20,15 @@ Globals:
     LoggingConfig:
       LogFormat: JSON
 Resources:
+  # Delegated from manzia.com (another AWS account): its 4 NS records are
+  # added there by hand (MCP-111). Design §3.2.
+  HostedZone:
+    Type: AWS::Route53::HostedZone
+    Properties:
+      Name: worldbank-mcp.manzia.com
+      HostedZoneConfig:
+        Comment: Delegated from manzia.com for the World Bank MCP server
+
   HelloWorldFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
@@ -44,6 +53,10 @@ Resources:
         - app.ts
 
 Outputs:
+  HostedZoneNameServers:
+    Description: Name servers of the worldbank-mcp.manzia.com zone, for the NS
+      records in manzia.com
+    Value: !Join [",", !GetAtt HostedZone.NameServers]
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
   # Find out more about other implicit resources you can reference within SAM
   # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
