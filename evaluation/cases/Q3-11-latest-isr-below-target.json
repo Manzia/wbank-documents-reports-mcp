@@ -1,0 +1,50 @@
+{
+  "id": "Q3-11",
+  "query_id": "Q3.11",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "task": "Assess implementation",
+  "query_wording": "In the latest disclosed ISR for Pxxxxxx, which results indicators are below target, and what explanations does the report give?",
+  "placeholders": [
+    { "placeholder": "Pxxxxxx", "resolved_to": "P164920 (Tanzania RISE)", "reason": "Its latest ISR (seq. 10, 2026-08-09) has many indicators well short of their end targets and gives little explanation, which tests honest reporting." }
+  ],
+  "turns": [
+    { "user": "In the latest disclosed ISR for P164920, which results indicators are below target, and what explanations does the report give?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Find the latest ISR by document date", "filters": { "proid": "P164920", "docty_exact": "Implementation Status and Results Report", "srt": "docdt", "order": "desc", "rows": "1" } },
+    { "kind": "document", "project_id": "P164920", "document_id": "40121415", "report_number": "ISR08628", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-09", "pages": "2-8", "role": "Latest disclosed ISR (seq. 10)", "note": "Pages are the printed 'Page N of 10'; the text drops the letter 't'." }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Latest disclosed ISR: sequence 10, ISR08628, archived 9 August 2026. The ISR gives only end-of-project targets (closing period mostly April or June 2027), so 'below target' here means below the end target as of the latest measurement.",
+          "PDO indicators (pp. 3-4): civil works jobs created 1,462 person-years (measured April 2025) vs 35,000; share of district rural roads in good and fair condition 47% vs 48% (baseline 45%); share of regional rural roads in good and fair condition 69% vs 70% (baseline 68%); resilient-designed CERC interventions 6 vs 7. On target: 'people-centered' design approach (Yes). Direct users (6,258,535, July 2026) has no end target yet ('final target will be defined at appraisal').",
+          "Intermediate indicators (pp. 5-8): km of rural roads improved with climate-resilient approaches 50.2 vs 535 (regional 17.2 vs 135; district 33 vs 400); km of district roads under community-based routine maintenance 0 vs 23,000; km of bottleneck improvements 2,373 vs 4,500; National Rural Roads Plan, TARURA Business Modernization Plan and the road safety data collection system all 'No' vs 'Yes'; people employed under CBRM contracts 0 vs 19,000 person-years, women's share 0% vs 20%, CBRM workers trained in life skills 0% vs 100%; all Component 6 restoration indicators 0 with targets 'to be determined'. On target: TARURA gender policy approved; code of conduct signed by 100% of workers; grievance system in place; emergency management protocol operational.",
+          "Explanations given: very few. The indicator comments only define the indicators. The one narrative note says disbursement is at 43 percent and accelerated implementation is expected over the next 12 months, with key activities such as the second generation of roads (p. 2). Ratings are Moderately Satisfactory for PDO progress and implementation, risk Substantial (p. 2). Several values are stale: jobs date from April 2025 and many intermediate values from December 2025.",
+          "For reasons behind the delays, the ISR is not enough; the September 2026 additional financing paper and the midterm review aide-memoire (November 2025) discuss the financing gap and the need for an extension."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses ISR seq. 10 (40121415, 2026-08-09), found by document date, not an older ISR."
+    ],
+    "grounded": [
+      "Indicator values and targets match the ISR; nothing is presented as an ISR explanation that the ISR does not say."
+    ],
+    "complete": [
+      "Lists the below-target PDO indicators and the main below-target intermediate indicators, and reports what the ISR says (or that it gives little) by way of explanation."
+    ],
+    "scoped": [
+      "Labels the source as the latest disclosed ISR with its date, and notes that targets are end-of-project targets and some values are dated."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "A new ISR will supersede seq. 10, probably in early 2027."
+}

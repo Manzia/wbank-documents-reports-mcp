@@ -1,0 +1,53 @@
+{
+  "id": "Q3-12",
+  "query_id": "Q3.12",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "task": "Track change",
+  "query_wording": "Compare the last three ISRs. Which risks, ratings, results indicators, and implementation issues changed?",
+  "placeholders": [
+    { "placeholder": "the project (implied)", "resolved_to": "P164920 (Tanzania RISE)", "reason": "The query assumes a project in context; it is named in the turn." }
+  ],
+  "turns": [
+    { "user": "For P164920, compare the last three ISRs. Which risks, ratings, results indicators, and implementation issues changed?" }
+  ],
+  "expected_sources": [
+    { "kind": "document", "project_id": "P164920", "document_id": "40007559", "report_number": "ISR03384", "document_type": "Implementation Status and Results Report", "document_date": "2025-04-17", "pages": "1-8", "role": "ISR seq. 8" },
+    { "kind": "document", "project_id": "P164920", "document_id": "40076268", "report_number": "ISR06054", "document_type": "Implementation Status and Results Report", "document_date": "2025-12-16", "pages": "1-10", "role": "ISR seq. 9" },
+    { "kind": "document", "project_id": "P164920", "document_id": "40121415", "report_number": "ISR08628", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-09", "pages": "1-10", "role": "ISR seq. 10 (latest)" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Last three disclosed ISRs for P164920 (RISE): seq. 8 (ISR03384, 17 Apr 2025), seq. 9 (ISR06054, 16 Dec 2025), seq. 10 (ISR08628, 9 Aug 2026). Pages are the ISRs' printed pages.",
+          "Ratings: unchanged across all three - progress towards the PDO Moderately Satisfactory, implementation progress Moderately Satisfactory, overall risk Substantial (seq. 8 pp. 1-2; seq. 9 pp. 1-2; seq. 10 p. 2).",
+          "Risks: no category changed. Substantial: sector strategies and policies, technical design, institutional capacity, fiduciary, environmental and social; Moderate: political and governance, macroeconomic, stakeholders (seq. 8 p. 2; seq. 9 p. 2; seq. 10 p. 2).",
+          "Results indicators that moved: civil works jobs 171 (Mar 2024) to 1,462 person-years in seq. 8, then no new measurement in seq. 9 or 10 (still dated Apr 2025; target 35,000). District rural roads in good/fair condition 45% (seq. 8), 43% (seq. 9), 47% (seq. 10), target 48%. Regional rural roads 68%, 58%, 69%, target 70%. CERC resilient interventions 0, 6, 6 (target 7). Direct users first reported in seq. 10 (6,258,535). Bottleneck improvements 1,559.1 km (seq. 8) to 2,373 km (seq. 9, unchanged in seq. 10), target 4,500. TARURA gender policy approved between seq. 8 ('No') and seq. 9 ('yes'). Km of rural roads improved fell from 66.6 (seq. 8) to 50.2 (seq. 9 and 10), and regional km from 33.6 to 17.2, a downward revision the ISRs do not explain. Unchanged at zero: CBRM maintenance km and CBRM employment.",
+          "Disbursement of the original credit IDA-68670: 22.71% (US$63.04m, seq. 8 p. 10), 44.99% (US$126.83m, seq. 9 p. 10), 61.02% (US$173.75m, seq. 10 p. 9); the AF1 credit IDA-77160 stayed at 0% (signed 30 Sep 2025, effective 23 Dec 2025 per seq. 10 p. 10).",
+          "Implementation issues: seq. 8 reported improved environmental and social management since the July 2024 mission but a need to improve health and safety (including road safety), and the approval of the US$100 million CRW+ additional financing on 28 Feb 2025 (US$30m TARURA, US$70m TANROADS) (p. 2). Seq. 9 reported the AF signed on 30 Sep 2025 and the midterm review confirming the PDO and arrangements and full compliance (p. 2). Seq. 10 reported disbursement at 43 percent and expected acceleration over the next 12 months, with the second generation of roads (p. 2). The midterm review took place 6 Oct - 21 Nov 2025 (seq. 9 and 10, Key Dates).",
+          "The ISR comments do not explain the dips and revisions in road-condition and km values."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the three most recent ISRs by document date (seq. 8, 9, 10) and no older ones."
+    ],
+    "grounded": [
+      "Every rating, risk, indicator value and issue is attributed to the right ISR with its date; values match the reports."
+    ],
+    "complete": [
+      "Covers ratings, risks, results indicators and implementation issues, saying explicitly where nothing changed."
+    ],
+    "scoped": [
+      "States which ISRs were compared and their dates, and notes stale or unexplained indicator values instead of inventing reasons."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "A new ISR changes which three are 'the last three'."
+}
