@@ -1,0 +1,53 @@
+{
+  "id": "Q3-04",
+  "query_id": "Q3.4",
+  "group": "Q3",
+  "tier": "cross_project_synthesis",
+  "task": "Find design precedents",
+  "query_wording": "Find comparable rural roads projects in East Africa. How did they structure maintenance funding and local government responsibilities?",
+  "turns": [
+    { "user": "Find comparable rural roads projects in East Africa. How did they structure maintenance funding and local government responsibilities?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "projects", "role": "Rural/feeder roads projects in East African countries", "filters": { "qterm": "rural roads / feeder roads", "countrycode_exact": "e.g. TZ, RW, UG, KE, ET" } },
+    { "kind": "project", "project_id": "P164920", "role": "Tanzania RISE (active)" },
+    { "kind": "document", "project_id": "P164920", "document_id": "33121051", "report_number": "PAD2934", "document_type": "Project Appraisal Document", "document_date": "2021-04-30", "pages": "19-20, 25, 31", "role": "RISE design: Roads Fund maintenance financing, TARURA vs LGAs, CBRM" },
+    { "kind": "project", "project_id": "P126498", "role": "Rwanda Feeder Roads Development Project (closed)" },
+    { "kind": "document", "project_id": "P126498", "document_id": "40113716", "report_number": "ICR00745", "document_type": "Implementation Completion and Results Report", "document_date": "2026-06-30", "pages": "12, 15, 17, 20, 22, 25-26", "role": "Rwanda: district responsibilities, OPRC maintenance, Road Maintenance Fund, lessons" },
+    { "kind": "project", "project_id": "P125590", "role": "Uganda North-Eastern Road Corridor Asset Management Project (performance-based maintenance); an acceptable further comparator", "required": false },
+    { "kind": "document", "project_id": "P126498", "document_id": "19203326", "report_number": "PAD171", "document_type": "Project Appraisal Document", "document_date": "2014-02-26", "role": "Rwanda PAD (original design)", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Coverage: this answer reads two comparable rural roads operations in depth, Tanzania RISE (P164920, PAD 2021) and the Rwanda Feeder Roads Development Project (P126498, ICR 2026). Other East African candidates include Uganda's North-Eastern Road Corridor Asset Management Project (P125590, performance-based maintenance on a national corridor) and Ethiopia's road sector projects.",
+          "Tanzania RISE - maintenance funding: maintenance is financed by the Roads Fund Board, mostly from the fuel levy, by formula (70% to trunk and regional roads, 30% to district roads); available funds cover only 72% of routine and 36% of periodic maintenance needs, and district roads received 25.1% of their maintenance need in FY18/19 (PAD p. 19 and fn. 16). The project's community-based routine maintenance sub-component (1d, US$56 million) is financed mostly by the Government (US$50 million from the Roads Fund's annual maintenance allocation to TARURA, US$6 million IDA); roads upgraded under the project are to be maintained through CBRM (PAD pp. 25, 31).",
+          "Tanzania RISE - local government responsibilities: district roads (about 109,000 km) moved in July 2017 from Local Government Authorities to TARURA, a national agency under PO-RALG, because the LGA model suffered from fragmented works departments, bureaucratic procurement, late payments and weak maintenance capacity (PAD p. 20). Local communities take on routine maintenance through CBRM groups; LGAs are not the implementing agencies.",
+          "Rwanda Feeder Roads - local government responsibilities: decentralization had nominally given districts responsibility for feeder road maintenance, but they lacked money, technical capacity and institutional arrangements (ICR p. 12). The project worked through the national agency RTDA and districts; after implementation problems, fiduciary responsibility was consolidated under RTDA, removing the district procurement layer where capacity limits and staff turnover had caused delays (ICR p. 22). Local Community Associations did routine maintenance, employing 649 people, 34% women (ICR p. 20).",
+          "Rwanda Feeder Roads - maintenance funding: multi-year maintenance was built into the works contracts (OPRC/OPBRC and design-build-maintain contracts covering 437.4 km; 700.4 km of 720 km under maintenance) (ICR p. 17). A planned component to strengthen the Road Maintenance Fund was dropped because RMF reform was outside the project's control (ICR p. 15); the ICR cites the RMF's restructuring and a new levy on petrol, gas oil and motor vehicles as improving the predictability of maintenance financing (ICR p. 25). Lesson: performance-based contracts shift road-condition risk to contractors, but only work if government monitoring is credible and staffed (ICR p. 26).",
+          "Common pattern: both moved away from relying on district governments' own capacity, toward a national agency plus community or contractor-based maintenance, with funding tied to a fuel-levy road fund whose allocations fall short of needs."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Identifies at least two rural/feeder roads projects in East Africa (e.g. RISE, Rwanda Feeder Roads, or other qualifying projects) and reads their PADs or ICRs."
+    ],
+    "grounded": [
+      "Claims about maintenance funding and local government roles are cited to project documents with pages; other valid comparators are acceptable if equally cited."
+    ],
+    "complete": [
+      "Addresses both maintenance funding and local government responsibilities for each project discussed."
+    ],
+    "scoped": [
+      "States which projects and documents were read (a coverage statement) and that the set is not exhaustive."
+    ]
+  },
+  "stability": "stable",
+  "notes": "Cross-project case: the judge should accept other East African rural roads projects if the claims are grounded; the reference shows the expected depth."
+}
