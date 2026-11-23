@@ -21,9 +21,12 @@ Globals:
       LogFormat: JSON
 Resources:
   # Delegated from manzia.com (another AWS account): its 4 NS records are
-  # added there by hand (MCP-111). Design §3.2.
+  # added there by hand (MCP-111). Design §3.2. Retained so the delegation
+  # never points at a deleted zone; remove those NS records before deleting it.
   HostedZone:
     Type: AWS::Route53::HostedZone
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
     Properties:
       Name: worldbank-mcp.manzia.com
       HostedZoneConfig:
