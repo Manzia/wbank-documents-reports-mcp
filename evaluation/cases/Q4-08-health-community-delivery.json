@@ -1,0 +1,50 @@
+{
+  "id": "Q4-08",
+  "query_id": "Q4.8",
+  "group": "Q4",
+  "tier": "cross_project_synthesis",
+  "task": "Research design precedents",
+  "query_wording": "How have comparable health projects structured community delivery, and what problems emerged during implementation?",
+  "turns": [
+    { "user": "How have comparable health projects structured community delivery, and what problems emerged during implementation?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Health/nutrition projects with community delivery (community health units, village health teams, CHWs)", "filters": { "qterm": "community health workers / community health units / village health teams", "docty_exact": "Implementation Completion and Results Report or Project Appraisal Document" } },
+    { "kind": "document", "project_id": "P152394", "document_id": "26414452", "report_number": "PAD1694", "document_type": "Project Appraisal Document", "document_date": "2016-05-24", "pages": "47-48", "role": "Kenya THS-UC: definition and target of functional community units" },
+    { "kind": "document", "project_id": "P152394", "document_id": "34327185", "report_number": "ICR6313", "document_type": "Implementation Completion and Results Report", "document_date": "2024-05-29", "pages": "16, 19-20, 24, 31", "role": "Kenya THS-UC: community units results, e-CHIS, PHC Act, implementation problems" },
+    { "kind": "document", "project_id": "P149286", "document_id": "34360629", "report_number": "ICR6533", "document_type": "Implementation Completion and Results Report", "document_date": "2024-06-01", "pages": "12-13, 22", "role": "Uganda Multisectoral Food Security and Nutrition Project: community-based nutrition delivery through schools, community institutions and village health teams" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Coverage: two East African operations with community-level delivery read: Kenya Transforming Health Systems for Universal Care (THS-UC, P152394; PAD 2016, ICR 2024) and Uganda Multisectoral Food Security and Nutrition Project (UMFSNP, P149286; ICR 2024, a nutrition operation using village health teams). Others (e.g. Tanzania's PHC for Results) focus on facilities rather than community delivery.",
+          "Kenya THS-UC - structure: community health was organized through community units, counted as 'functional' when they hold community dialogue days (barazas with CHWs, CHEWs, village elders), monthly action days and use four approved community health information tools linked to the master facility list (PAD pp. 47-48, fn. 57); target 1,549 to 2,400 units. Delivery ran through county governments under Kenya's devolved health system. The project also financed national scale-up of the electronic community health information system (e-CHIS) (ICR p. 19) and supported the Primary Health Care Act, which entrenches community health providers and sets up primary care networks and community health units (ICR p. 24). Result: the indicator was redefined as community units reporting through DHIS, the target raised to 5,331, and 9,400 were achieved (ICR pp. 16, 20).",
+          "Kenya THS-UC - problems: delayed transfers of county allocations from national to county level shortened each year's implementation window; high county staff turnover, especially after the 2017 and 2022 elections, required repeated training; a portfolio-wide disbursement freeze delayed the start; the PMT and Bank team lacked enough fiduciary support for the county component; COVID-19 restrictions disrupted activities; KHIS routine data had shortcomings (ICR p. 31).",
+          "Uganda UMFSNP - structure: community-based nutrition services delivered through community-based institutions, primary schools, agricultural extension and village health teams with Health Center II, coordinated by the Office of the Prime Minister and implemented by the agriculture ministry's PCU with districts (ICR pp. 12-13, 22).",
+          "Uganda UMFSNP - problems: the design had no community procurement guideline, so simplified guidelines and school committees had to be created during implementation; the local government ministry was initially left out and only brought in at the MTR; start-up delays in meeting the PCU/fiduciary effectiveness condition; district splits created resource-allocation ambiguity (resolved by MoUs); frequent changes of officials and head teachers needed refresher training (ICR p. 22).",
+          "Common problems: weak and changing subnational capacity, slow or unpredictable fund flows to the level that delivers, and procurement and data systems not designed for community actors."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Reads documents of at least two health or health-related projects with community delivery (the reference uses P152394 and P149286; other comparable projects are acceptable)."
+    ],
+    "grounded": [
+      "Delivery structures and implementation problems are cited to project documents and pages."
+    ],
+    "complete": [
+      "Covers both how community delivery was structured and the problems that emerged, for each project."
+    ],
+    "scoped": [
+      "States which projects were read and their nature (e.g. that UMFSNP is a nutrition operation)."
+    ]
+  },
+  "stability": "stable",
+  "notes": "Cross-project case: other comparable community health projects are acceptable if grounded."
+}

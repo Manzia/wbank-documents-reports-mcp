@@ -1,0 +1,54 @@
+{
+  "id": "Q4-02",
+  "query_id": "Q4.2",
+  "group": "Q4",
+  "tier": "cross_project_synthesis",
+  "task": "Find comparable operations",
+  "query_wording": "Find active rural water projects in East Africa similar to this proposed operation. Show their design choices and implementing arrangements.",
+  "placeholders": [
+    { "placeholder": "this proposed operation", "resolved_to": "a proposed results-based rural water supply and sanitation program delivered through local governments", "reason": "The query needs a description of the proposed operation; a short one is given in the turn so 'similar' can be judged." }
+  ],
+  "turns": [
+    { "user": "Find active rural water projects in East Africa similar to this proposed operation: a results-based rural water supply and sanitation program delivered through local governments. Show their design choices and implementing arrangements." }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "projects", "role": "Active rural water projects in Eastern and Southern Africa", "filters": { "qterm": "rural water supply", "status_exact": "Active", "regionname_exact": "Eastern and Southern Africa" } },
+    { "kind": "document", "project_id": "P508698", "document_id": "40053951", "report_number": "PADHP00152", "document_type": "Project Appraisal Document", "document_date": "2024-11-13", "pages": "8, 57-58, 62", "role": "Tanzania SRWSSP Phase II (PforR + IPF), program appraisal document dated Sep 2025 inside" },
+    { "kind": "document", "project_id": "P179012", "document_id": "34207938", "report_number": "PAD5449", "document_type": "Program Appraisal Document", "document_date": "2023-11-29", "pages": "11, 15, 20-21", "role": "Kenya Water, Sanitation and Hygiene Program (K-WASH, PforR + IPF)" },
+    { "kind": "project", "project_id": "P507830", "role": "Ethiopia One WASH Consolidated Account Project; an acceptable further comparator", "required": false },
+    { "kind": "project", "project_id": "P509550", "role": "Zambia Water Supply and Sanitation Services in Growth Centers Program; an acceptable further comparator", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Active comparable operations (Projects API, Eastern and Southern Africa, rural water): Tanzania Sustainable Rural Water Supply and Sanitation Program Phase II (P508698, approved 2025-09-30, closing 2030-09-30), Kenya Water, Sanitation and Hygiene Program (K-WASH, P179012, approved 2023-12-20, closing 2030-06-30); others include Ethiopia One WASH (P507830), Zambia WSS in Growth Centers (P509550/P179237) and Somalia Barwaaqo rural water resilience (P177627). Two are read below.",
+          "Tanzania SRWSSP II - design: hybrid PforR (US$307 million: IDA US$185 million, Government US$100 million, ESMAP US$2 million, US$20 million expected from PPP commercial finance) plus a US$15 million IPF component for technical assistance (p. 57). Three results areas: access and sustainability of basic WASH including schools and health facilities, with climate-resilient design (RA 1, US$141.56 million IDA); policy, institutions and regulation (RA 2); maximizing finance for development (RA 3) (pp. 57-58). It is phase 2 of a regional WASH MPA led at regional level by AUDA-NEPAD (p. 27).",
+          "Tanzania SRWSSP II - implementing arrangements: Ministry of Water as program owner, with a National Steering Committee of MoW, MoH, MoEST, PO-RALG, MoF and others; RUWASA oversees rural water investments; MoH leads sanitation and hygiene; districts (supported by regional secretariats) procure and build WASH in schools, health facilities and household sanitation; PO-RALG's 25 regional secretariats backstop 137 district councils; the Internal Auditor General verifies results as Independent Verification Agent; in Zanzibar the Ministry of Water, Energy and Minerals leads (pp. 8, 62).",
+          "Kenya K-WASH - design: hybrid operation of US$458 million: PforR US$438 million (IDA US$230 million incl. US$40 million refugee-window grant, Government US$200 million, US$8 million commercial financing by water service providers) plus a US$20 million IPF (pp. 20-21). Covers 19 mainly rural counties selected on marginalization, ASAL status, density, access and open defecation, plus the refugee-hosting Turkana and Garissa (p. 20, fn. 29-30). Results areas start with county policy, institutional and regulatory reforms (a County Water and Sanitation Strategy and Investment Plan) before financing new and rehabilitated schemes with professional O&M models and multiple-use design, and include WSP financial performance reforms (pp. 19-21). It responds to WSP inefficiency (about US$90 million lost a year) and unregulated community schemes with non-cost-reflective tariffs (p. 15).",
+          "Kenya K-WASH - implementing arrangements: Ministry of Water, Sanitation and Irrigation (State Department for Water and Sanitation) as implementing agency (p. 7); county governments and county-owned WSPs as the incentivized delivery level; WASREB oversees WSP regulatory compliance (a DLI) and builds county capacity; the Water Sector Trust Fund helps WSPs prepare bankable projects for commercial finance (p. 11).",
+          "Common choices relevant to the proposed operation: PforR with an IPF for TA; disbursement tied to subnational performance; sustainability through professionalized O&M and regulation; a role for commercial finance; and independent verification."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Identifies active rural water projects in East Africa (from the Projects API) and reads the appraisal documents of at least two (the reference uses P508698 and P179012; other qualifying active projects are acceptable)."
+    ],
+    "grounded": [
+      "Design choices and arrangements are cited to the appraisal documents with pages; financing figures match."
+    ],
+    "complete": [
+      "Covers both design choices and implementing arrangements for each project discussed."
+    ],
+    "scoped": [
+      "States which projects were read and why they are comparable."
+    ]
+  },
+  "stability": "stable",
+  "notes": "Cross-project case: other active East African rural water operations are acceptable comparators if grounded."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "Q4-10",
+  "query_id": "Q4.10",
+  "group": "Q4",
+  "tier": "cross_project_synthesis",
+  "task": "Extract completion lessons",
+  "query_wording": "Across recently closed urban transport projects in South Asia, what recurring implementation lessons appear in completion reports?",
+  "turns": [
+    { "user": "Across recently closed urban transport projects in South Asia, what recurring implementation lessons appear in completion reports?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "projects", "role": "Closed urban transport projects in South Asia, newest closing first", "filters": { "qterm": "urban transport", "status_exact": "Closed", "regionname_exact": "South Asia" }, "note": "Most recently closed South Asia transport projects are highways, rural roads or freight; projects focused on urban transport with ICRs closed in 2016-2019." },
+    { "kind": "document", "project_id": "P110371", "document_id": "30943827", "report_number": "ICR4489", "document_type": "Implementation Completion and Results Report", "document_date": "2019-03-25", "pages": "32-33", "role": "India Sustainable Urban Transport Project (closed 2018-03-31)" },
+    { "kind": "document", "project_id": "P113028", "document_id": "27709242", "report_number": "ICR4109", "document_type": "Implementation Completion and Results Report", "document_date": "2017-06-27", "pages": "34-35", "role": "India Mumbai Urban Transport Project-2A (closed 2016-12-31)" },
+    { "kind": "document", "project_id": "P098151", "document_id": "31456159", "report_number": "ICR3097", "document_type": "Implementation Completion and Results Report", "document_date": "2019-09-26", "pages": "35-36", "role": "Bangladesh Clean Air and Sustainable Environment Project, with Dhaka urban transport components (closed 2019-03-31)", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Coverage: completion reports of three South Asian operations with urban transport at their core: India Sustainable Urban Transport Project (SUTP, P110371, closed March 2018, ICR 2019), India Mumbai Urban Transport Project-2A (MUTP-2A, P113028, closed December 2016, ICR 2017) and Bangladesh Clean Air and Sustainable Environment (CASE, P098151, closed March 2019, ICR 2019; Dhaka traffic and transport components). 'Recently closed' is a stretch: South Asia transport projects closed since 2020 are mostly highways, rural roads and freight corridors, not urban transport.",
+          "1. Institutional ownership and coordination decide outcomes. SUTP: city agencies' commitment wavered (Pune cancelled at the start; problems in Indore and Pimpri-Chinchwad), and a stronger state government role stabilized implementation, so future projects should engage states (ICR pp. 32); BRT needs a dedicated, multifunctional nodal entity such as an SPV - Hubli-Dharwad's HDBRTSCo worked, Pimpri-Chinchwad without one did not (pp. 32-33). MUTP-2A: MRVC implemented works on a railway operated by others; the Bank's convening power and restructurings helped resolve coordination issues such as trespass control, and agency mandates should be shaped for long-term sustainability (pp. 34-35). CASE: an integrated cross-sector approach needs mechanisms for inter-agency coordination, and stakeholder engagement within government should be planned at design to avoid delays such as the slow handover of traffic signals to the Dhaka Metropolitan Police (pp. 35-36).",
+          "2. Plan operations, not just civil works. SUTP: cities prepared for operating BRT and ITS only as works ended, despite advice years earlier; BRT and ITS realize value only with service plans and organizational capacity (p. 33).",
+          "3. Technical and interface risks need explicit preparation. MUTP-2A: developing a new rolling-stock configuration for legacy platforms caused design-approval delays and should be treated differently from buying proven designs (p. 35).",
+          "4. Choose attributable indicators. MUTP-2A's targets assumed a parallel project (MUTP-2B) and were probably too ambitious; use indicators strongly attributable to the project and restructure them if needed (p. 35).",
+          "5. Capacity building pays off when hands-on. SUTP's practitioner-oriented training and guidance with national workshops built a community of urban mobility practitioners (p. 32).",
+          "Recurring themes across the three: coordination among many agencies, the need for a clear lead entity, and preparing for operations and stakeholder buy-in early."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Reads ICRs of at least two closed South Asian urban transport projects (the reference set or other qualifying ones)."
+    ],
+    "grounded": [
+      "Each lesson is cited to an ICR and page; lessons are the ICRs' own, not generic advice."
+    ],
+    "complete": [
+      "Identifies lessons that recur across projects, not only per-project lists."
+    ],
+    "scoped": [
+      "States the projects read, their closing dates, and how 'recently closed' and 'urban transport' were interpreted."
+    ]
+  },
+  "stability": "stable",
+  "notes": "If newer South Asian urban transport ICRs appear (e.g. Karachi or Dhaka BRT operations), the judge should accept them if grounded."
+}

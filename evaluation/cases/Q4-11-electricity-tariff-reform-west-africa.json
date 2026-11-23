@@ -1,0 +1,63 @@
+{
+  "id": "Q4-11",
+  "query_id": "Q4.11",
+  "group": "Q4",
+  "tier": "search_and_retrieve",
+  "task": "Find background evidence",
+  "query_wording": "Find recent World Bank reports on electricity tariff reform in West Africa relevant to preparing a new operation.",
+  "turns": [
+    { "user": "Find recent World Bank reports on electricity tariff reform in West Africa relevant to preparing a new operation." }
+  ],
+  "expected_sources": [
+    {
+      "kind": "search",
+      "api": "wds",
+      "role": "Keyword variants restricted to the region and analytical document types, recent years",
+      "filters": { "qterm": "electricity tariff reform (variants: electricity tariffs, electricity subsidies, cost-reflective tariffs, power sector reform)", "admreg_exact": "Western and Central Africa", "majdocty_exact": "Publications & Research", "strdate": "2020-01-01", "enddate": "today" },
+      "note": "count_exact with a region name returns few records; the admin-region field works better. 'West Africa' resolves to the Bank's 'Western and Central Africa' region, which also includes Central African countries."
+    },
+    { "kind": "document", "document_id": "34402347", "report_number": "193883", "document_type": "Report", "document_date": "2024-10-03", "title": "Sierra Leone Economic Update : Unlocking the Potential of the Power Sector in Sierra Leone Breaking the Crisis Cycle", "role": "Recent, power-sector focused" },
+    { "kind": "document", "document_id": "34097262", "report_number": "182935", "document_type": "Report", "document_date": "2023-06-17", "title": "Technical Note 2 : Igniting Economic Growth by Reforming Nigeria's Power Sector", "role": "Recent, power-sector reform" },
+    { "kind": "document", "document_id": "34099211", "report_number": "183057", "document_type": "Report", "document_date": "2022-06-14", "title": "Nigeria Electricity Supply Industry (NESI) : Progress Report and Outlook", "role": "Tariff policy implementation and losses", "required": false },
+    { "kind": "document", "document_id": "34419528", "report_number": "194611", "document_type": "Brief", "document_date": "2024-11-08", "title": "MauSim 2024 : The Incidence of Tax Expenditures and Electricity Subsidies in Mauritania", "role": "Distributional incidence of electricity subsidies", "required": false },
+    { "kind": "document", "document_id": "32785199", "report_number": "156189", "document_type": "Brief", "document_date": "2020-11-01", "title": "Burkina Faso - Reallocating Energy Subsidies Toward Social Safety Net Programs", "role": "Subsidy reform", "required": false },
+    { "kind": "document", "document_id": "31693883", "report_number": "145047", "document_type": "Brief", "document_date": "2020-01-09", "title": "Electricity Utility Reform in Mali : Lessons from Operations", "role": "Utility financial restructuring", "required": false },
+    { "kind": "document", "document_id": "40004774", "report_number": "200233", "document_type": "ESMAP Paper", "document_date": "2025-04-03", "title": "Accelerating Liquid Fuel Reduction in West Africa", "role": "Regional power cost driver", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Recent World Bank analytical documents on electricity tariffs, subsidies and power-sector reform in West Africa (2020 onward), most relevant first:",
+          "1. Sierra Leone Economic Update: Unlocking the Potential of the Power Sector - Breaking the Crisis Cycle (Report 193883, 2024-10-03). Treats the energy sector as a major fiscal risk; calls for better EDSA operational and commercial performance and a shift away from costly liquid-fuel generation. http://documents.worldbank.org/curated/en/099100324123067416",
+          "2. Technical Note 2: Igniting Economic Growth by Reforming Nigeria's Power Sector (Report 182935, 2023-06-17). 85 million Nigerians without access; unreliable power costs 5-7% of GDP; privatized distribution companies have high technical, commercial and collection losses. http://documents.worldbank.org/curated/en/099061723133022449",
+          "3. Nigeria Electricity Supply Industry (NESI): Progress Report and Outlook (Report 183057, 2022-06-14). Flags inconsistent tariff policy implementation and unsustainable distribution losses; reviews the Power Sector Recovery Programme. http://documents.worldbank.org/curated/en/099062123033010348",
+          "4. MauSim 2024: The Incidence of Tax Expenditures and Electricity Subsidies in Mauritania (Brief 194611, 2024-11-08): distributional analysis of electricity subsidies. http://documents.worldbank.org/curated/en/099110824061627004",
+          "5. Burkina Faso - Reallocating Energy Subsidies Toward Social Safety Net Programs (ESRF country brief 156189, 2020-11): subsidy reform paired with safety nets. http://documents.worldbank.org/curated/en/947841611831952533",
+          "6. Electricity Utility Reform in Mali: Lessons from Operations (Live Wire 145047, 2020-01): diagnosing the utility's financial difficulties and a corporate and financial restructuring program. http://documents.worldbank.org/curated/en/477001578638072626",
+          "Also relevant: Accelerating Liquid Fuel Reduction in West Africa (ESMAP 200233, 2025-04), on a main driver of high supply costs.",
+          "Scope: these are matching document records from metadata searches; project documents (e.g. DPO program documents with tariff prior actions) and global reports on power sector reform are further sources but were not listed. 'West Africa' was searched as the Bank's Western and Central Africa region."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Searches with tariff/subsidy/power-sector keywords limited to West African countries or the Western and Central Africa region and recent years; returns at least two of the core records (193883, 182935, 183057)."
+    ],
+    "grounded": [
+      "Listed reports exist with the stated titles, dates and links; summaries follow the abstracts."
+    ],
+    "complete": [
+      "Gives several reports with title, date, a one-line relevance note and link."
+    ],
+    "scoped": [
+      "Says how 'West Africa' and 'recent' were interpreted and that the list comes from metadata searches."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "New reports may appear; other relevant West Africa tariff documents are acceptable if real and cited."
+}
