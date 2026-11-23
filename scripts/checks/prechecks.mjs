@@ -14,7 +14,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-if ((process.env.HTTPS_PROXY || process.env.https_proxy) && !process.env.NODE_USE_ENV_PROXY) {
+const isMain = import.meta.url === pathToFileURL(process.argv[1] ?? '').href;
+if (isMain && (process.env.HTTPS_PROXY || process.env.https_proxy) && !process.env.NODE_USE_ENV_PROXY) {
   const r = spawnSync(process.execPath, process.argv.slice(1), {
     stdio: 'inherit',
     env: { ...process.env, NODE_USE_ENV_PROXY: '1' },
@@ -544,4 +545,4 @@ async function main() {
   process.exit(summary === 'PASS' ? 0 : 1);
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) await main();
+if (isMain) await main();
