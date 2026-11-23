@@ -130,7 +130,7 @@ What remains outside the guard:
 |---|---|---|---|
 | G1 | **The account is prod-only.** There is no dev stack to test against. | CLAUDE.md: environments `prod` only | Sessions get **read-only** AWS (layer 1). Verification happens on prod after your approved deploy (`after_deploy` tasks). Infra PRs merge one at a time. |
 | G2 | **Every merge to `main` touching `mcp-server/` deploys prod**, and each deploy waits for your approval | `deploy.yml` (environment `production`, required reviewer) | Merge infra PRs one at a time and approve each deploy; code-only merges can be batched, since each deploy builds the head of `main`. |
-| G3 | **The certificate can't validate until `worldbank-mcp.manzia.com` is delegated**, and CloudFormation waits on a DNS-validated certificate | Design §3.2: `manzia.com` is in another AWS account | Split: MCP-110 creates the hosted zone and outputs its name servers; you add the 4 NS records (MCP-111); only then does MCP-114 add the certificate and CloudFront. |
+| G3 | **The certificate can't validate until `worldbank-mcp.manzia.com` is delegated**, and CloudFormation waits on a DNS-validated certificate | Design §3.2: `manzia.com` is in another AWS account | Split: the hosted zone was created by hand outside the stack (ID `Z0958616XII8519LOW0Q`, recorded in MCP-110); you add its 4 NS records (MCP-111); only then does MCP-114 add the certificate and CloudFront, in that zone by ID. |
 | G4 | **The gateway caches the tool list** | Design §6.1 | MCP-113 adds a re-sync step (`SynchronizeGatewayTargets`) to `deploy.yml` that fails the deploy if it fails. The deploy role (PowerUserAccess) can call it; sessions can't (layer 1). |
 | G5 | **CloudFormation support for the gateway's `NONE` authorizer, streaming flag and WAF association is unverified** | Design §3.2 [Assumption] | MCP-102 checks the CloudFormation registry schemas. A missing property becomes a post-deploy CLI step in `deploy.yml` (MCP-113), not a new component. |
 | G6 | **Sessions can't read CloudFront, WAF or Secrets Manager** (layer 1 hides the origin secret) | §2.4 | Verification uses HTTP behaviour (custom domain, direct gateway hostname), CloudFormation outputs and CloudWatch metrics (WAF `CountedRequests`/`BlockedRequests`, CloudFront 5xx). |
@@ -310,15 +310,18 @@ Design §14 step 1 asks for these checks "at the same start". They decide detail
 
 #### MCP-110 — Delegated hosted zone (💻, infra)
 
-**Owns:** `mcp-server/template.yaml` (the zone and one output). **Resources:** CREATE
-`AWS::Route53::HostedZone` `worldbank-mcp.manzia.com`.
+Roy created the public hosted zone `worldbank-mcp.manzia.com` by hand (2026-11-23), outside the stack,
+so this task records it instead of adding it to the template. The stack never creates a zone of that
+name: Route 53 allows duplicate names, and a second zone would have name servers nobody delegates to.
+
+**Owns:** this section, G3 and MCP-111/114 here; `CLAUDE.md` (resources created out-of-band); record.
+**Resources:** none (no change under `mcp-server/`, so the merge doesn't deploy).
 
 **Acceptance:**
-1. The template adds the hosted zone and an output `HostedZoneNameServers` (the 4 name servers, comma
-   separated). Nothing else changes.
-2. The PR says that the deploy adds one hosted zone and that MCP-111 then needs the 4 NS records.
-
-**After merge (you):** approve the deploy; the stack outputs show the 4 name servers.
+1. The record holds the zone ID (`Z0958616XII8519LOW0Q`) and its 4 name servers, and shows it is the
+   only zone of that name in the account.
+2. CLAUDE.md lists the zone with the resources created out-of-band, with the warning to remove the
+   `manzia.com` NS records before ever deleting it.
 
 #### MCP-111 — NS delegation and AI-platform IP ranges (👤)
 
@@ -326,7 +329,7 @@ Design §14 step 1 asks for these checks "at the same start". They decide detail
 
 **Acceptance:**
 1. An `NS` record set for `worldbank-mcp.manzia.com` in the `manzia.com` zone holds exactly the 4
-   name servers from the stack output. `dig +short NS worldbank-mcp.manzia.com` prints them.
+   name servers of zone `Z0958616XII8519LOW0Q` (MCP-110 record). `dig +short NS worldbank-mcp.manzia.com` prints them.
 2. `mcp-server/waf/ai-platform-ranges.json` holds the IPv4 and IPv6 ranges published by Anthropic and
    OpenAI for their outbound traffic, and Google's general service ranges, each group with its source
    URL and retrieval date (design §8.1 rule 2). Refresh stays manual (A6 on hold).
@@ -402,7 +405,9 @@ record, the CloudFront distribution, the CloudFront-scope WAF web ACL with its A
 the alias record.
 
 **Acceptance:**
-1. The certificate for `worldbank-mcp.manzia.com` is DNS-validated in the delegated zone.
+1. The certificate for `worldbank-mcp.manzia.com` is DNS-validated in the delegated zone, referred to
+   by a template parameter `HostedZoneId` with default `Z0958616XII8519LOW0Q` (`deploy.yml` passes no
+   override). The template creates no hosted zone.
 2. CloudFront: alternate domain `worldbank-mcp.manzia.com`; origin the gateway hostname over HTTPS;
    caching disabled; all methods; viewer headers forwarded except `Host`; the secret origin header
    added from the origin secret by dynamic reference; origin response timeout 60 s.
@@ -410,7 +415,7 @@ the alias record.
    AI-platform IP sets built from `mcp-server/waf/ai-platform-ranges.json`, 3,000 per 5 minutes; per-IP
    tier for everyone else, 300 per 5 minutes; body over 64 KB (Block). **Rules 2 and 3 are in COUNT.**
    The PR records the deploy date, which starts the one-week COUNT period (MCP-170).
-4. An alias record points `worldbank-mcp.manzia.com` at the distribution. Output: `McpEndpoint` =
+4. An alias record in that zone points `worldbank-mcp.manzia.com` at the distribution. Output: `McpEndpoint` =
    `https://worldbank-mcp.manzia.com/mcp`.
 
 #### MCP-115 — Verify the walking skeleton end to end (💻, after deploy)
