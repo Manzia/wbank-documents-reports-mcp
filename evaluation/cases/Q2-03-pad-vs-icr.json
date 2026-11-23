@@ -1,0 +1,50 @@
+{
+  "id": "Q2-03",
+  "query_id": "Q2.3",
+  "group": "Q2",
+  "tier": "project_centred_reading",
+  "task": "Compare appraisal targets with completion results",
+  "query_wording": "Compare what the appraisal document promised with what the completion report says the project achieved.",
+  "placeholders": [
+    { "placeholder": "the project (implied)", "resolved_to": "P169165, Tanzania Productive Social Safety Net Project II (PSSN II)", "reason": "Closed in 2025 with a public PAD (2019) and ICR (2026); its PDO indicators were revised by a 2023 restructuring, so the comparison has to flag changed targets." }
+  ],
+  "turns": [
+    { "user": "For P169165, compare what the appraisal document promised with what the completion report says the project achieved." }
+  ],
+  "expected_sources": [
+    { "kind": "document", "project_id": "P169165", "document_id": "31361587", "report_number": "PAD3139", "document_type": "Project Appraisal Document", "document_date": "2019-08-16", "pages": "7-8, 19, 43-44", "role": "Original PDO, PDO indicators and targets, financing and closing date" },
+    { "kind": "document", "project_id": "P169165", "document_id": "40103707", "report_number": "ICR00677", "document_type": "Implementation Completion and Results Report", "document_date": "2026-03-30", "pages": "17-19, 22-25, 36-37", "role": "Changes during implementation, achievements against targets, ratings" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "P169165 - Tanzania Productive Social Safety Net Project II. Sources: PAD (PAD3139, 2019-08-16) and ICR (ICR00677, 2026-03-30).",
+          "What the PAD set out: PDO \"to improve access to income-earning opportunities and socio-economic services for targeted poor households while enhancing and protecting the human capital of their children\" (PAD p. 19); IDA credit US$450 million, total project cost US$883.31 million, closing 30 September 2023 (PAD pp. 7-8). Six PDO indicators with end targets (PAD pp. 43-44): direct beneficiaries 4,851,768 (52% female, baseline 5,267,031); food consumption score above 'poor' 54% (baseline 50%); benefits reaching the poorest 20% 60%; households in functional income-generating investments one year after the livelihood grant 70% (60% female); primary school completion 30% (baseline 28%); households benefiting from public works assets 80%.",
+          "What changed before completion (ICR pp. 17-20): the PDO was unchanged, but a June 2023 restructuring with US$207.49 million additional financing extended closing to 30 September 2025 and revised the results framework. The beneficiaries indicator's baseline was reset to zero and its target raised to 5,195,605 (the PAD baseline had carried over PSSN I's caseload and assumed 4.6-4.8 people per household against an actual 3.8); the livelihoods indicator was reworded to measure engagement 'upon exit from the program' because grants were delayed and paid in tranches; all end-target dates moved to September 2025; nine intermediate indicators were dropped; the livelihood-grant intermediate target was cut from 200,000 to 100,000 households. A second restructuring (September 2025) only reallocated funds.",
+          "What the ICR reports as achieved (ICR pp. 22-23, 36-37), against the revised targets: 5,202,655 direct beneficiaries vs 5,195,605 (56% female vs 52%); 95.29% of livelihood households in functional income-generating activities at exit vs 70%; primary school completion 30.86% vs 30%; food consumption score above poor 84.70% vs 54%; 79.91% of benefits to the poorest quintile vs 60%; 78.56% of households benefiting from public works assets vs 80% (treated as achieved). Shortfalls among intermediate indicators: 70% of households paid within the first 10 days of the cycle vs 100%, and 814,889 households in public works vs 837,000.",
+          "Ratings: efficacy Substantial, efficiency Substantial, overall outcome Satisfactory (ICR pp. 22, 24-25). The ICR also notes the average transfer was only 2.6% of the poorest households' consumption and lost about 19% of its real value without inflation adjustment (ICR p. 24).",
+          "Caveat: because the beneficiaries and livelihoods indicators were redefined in 2023, their ICR results cannot be compared directly with the PAD's original targets; the other four indicators kept their PAD definitions and targets."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the project's PAD (31361587) and ICR (40103707)."
+    ],
+    "grounded": [
+      "PAD targets and ICR results match the documents and carry page citations; no invented indicators or values."
+    ],
+    "complete": [
+      "Covers the PDO, the PDO indicators (PAD target vs ICR result) and the outcome rating, and flags which indicators were revised during implementation."
+    ],
+    "scoped": [
+      "Makes clear that some ICR results are measured against revised (2023) targets, not the PAD's, and that results come from the ICR's own reporting."
+    ]
+  },
+  "stability": "stable"
+}
