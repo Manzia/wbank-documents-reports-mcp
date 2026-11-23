@@ -161,6 +161,12 @@ Created out-of-band with the AWS CLI (`wb-mcp` profile), not by any stack:
 | Role `wbank-docs-reports-mcp-github-deploy` | assumed by `deploy.yml` only |
 | Bucket `wbank-docs-reports-mcp-artifacts-365677123675` | SAM artifacts (`--s3-bucket`); private, TLS-only, objects expire after 30 days |
 
+Also out-of-band (console), not in any stack: the public Route 53 hosted zone
+`worldbank-mcp.manzia.com` (`Z0958616XII8519LOW0Q`), delegated by 4 NS records
+in `manzia.com` (another AWS account; MCP-110, MCP-111). The template refers to
+it by ID and never creates a zone of that name. **Before ever deleting the
+zone, remove those NS records**, or the subdomain can be taken over.
+
 **Trust policy**: `aud = sts.amazonaws.com`, **and**
 `sub = repo:Manzia@1263542/wbank-documents-reports-mcp@1461012963:environment:production`,
 **and** `ref = refs/heads/main`. The `sub` uses GitHub's *immutable* format
