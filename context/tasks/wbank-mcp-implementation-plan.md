@@ -659,7 +659,7 @@ monthly AWS Budgets alert.
 
 **Acceptance:**
 1. Gateway rate limits as design §8.3: per tool (`wb___read_document` 120 per minute, the other four
-   600) and per target (`wb` 1,200 per minute, 100 concurrent connections).
+   600) and per target (`wb` 1,200 per minute). No connection limit (design D8).
 2. Alarms on: tool errors; p95 tool duration above 30 s; gateway throttling; a spike in `WafBlocks`;
    any `WafFailCloses`; CloudFront 5xx; Bedrock throttling; a failed vocabulary refresh, or a snapshot
    older than 35 days (moving MCP-135's alarm onto the topic). All notify the SNS topic.

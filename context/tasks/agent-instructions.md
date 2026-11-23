@@ -129,3 +129,12 @@ You implement exactly one task from the plan, in the public repo `Manzia/wbank-d
 ## Decisions
 - A decision Roy makes in a PR comment applies to that task. A decision that affects other tasks
   belongs in this file; ask Roy to add it by PR, because sessions have no shared memory.
+- **Precheck findings (2026-11-23).** Read `context/ops/records/MCP-102.md` (findings F1–F8) before
+  starting MCP-112, MCP-130, MCP-131, MCP-133, MCP-135 or MCP-140. Roy's decisions on them:
+  - F2 (MCP-133): split pages on form feeds, else on page-footer lines (`-N-`, `Page N`), else into
+    fixed-size parts without page numbers; the coverage note says which (design D6).
+  - F4 (MCP-135): best-effort union of partitioned facet queries; mark each list complete or
+    best-effort in the snapshot (design D7).
+  - F7 (MCP-140): no gateway connection limit (design D8).
+  - F8 (MCP-112): pin `@hono/aws-lambda@1.0.1` and `hono@4.13.19` (the releases before the
+    one-day-old ones) and `@modelcontextprotocol/server@2.4.0`.
