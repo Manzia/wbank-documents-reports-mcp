@@ -30,6 +30,7 @@ const DOCS1 = 'documents1.worldbank.org';
 const REGION = 'us-east-1';
 const UA = 'wbank-docs-reports-mcp-prechecks (+https://github.com/Manzia/wbank-documents-reports-mcp)';
 const FACET_CAP = 100;
+const FACET_BUDGET = 200;
 const PROJECT_ID = 'P117635';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -207,7 +208,7 @@ async function completeFacet(base, field, chain, filters = {}, requests = [], pa
     if (!partitionCache.has(pkey)) {
       const p = await api(base, { rows: '1', fl: 'id', fct: part, ...filters });
       requests.push(p.url);
-      partitionCache.set(pkey, Object.values(p.facets[part] ?? {}).map((v) => v.name));
+      partitionCache.set(pkey, Object.values(p.facets[part] ?? {}).map((v) => v.name).filter(Boolean));
     }
     parts = partitionCache.get(pkey).map((pv) => ({ [part]: pv }));
   }
@@ -215,8 +216,13 @@ async function completeFacet(base, field, chain, filters = {}, requests = [], pa
   const unmatched = [];
   const capped = [];
   for (const pf of parts) {
+    if (requests.length - (partitionCache.start ??= requests.length) >= FACET_BUDGET) {
+      complete = false;
+      capped.push(`request budget (${FACET_BUDGET}) reached`);
+      break;
+    }
     const sub = await completeFacet(base, field, rest, { ...filters, ...pf }, requests, partitionCache);
-    if (sub.total === 0) unmatched.push(JSON.stringify(pf));
+    if (sub.total === 0) unmatched.push(JSON.stringify({ ...filters, ...pf }));
     complete &&= sub.complete;
     capped.push(...(sub.capped ?? []));
     unmatched.push(...(sub.unmatched ?? []));
