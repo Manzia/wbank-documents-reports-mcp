@@ -71,7 +71,7 @@ and why, cleaned up, resumed, stale). Crashes of the script itself go to
 2. Fetches `origin`; exits if the task file on `origin/main` says `paused: true`.
 3. Reads state: PRs into `main` from this repo (fork PRs are ignored): merged = done, open = taken;
    `feature/<ID>-*` branches on `origin`, claim files, local branches and worktrees (taken); this
-   repo's background sessions (`claude agents --json --cwd .claude/worktrees`); and the prod deploy for
+   repo's background sessions (`claude agents --json`, kept only if their `cwd` is under `.claude/worktrees/`); and the prod deploy for
    the head of `main` (ok, pending or failed).
 4. For local tasks now done: removes the worktree, the local branch, the claim file and the session
    settings file.

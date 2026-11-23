@@ -233,11 +233,17 @@ describe('dispatcher pass', () => {
     w.sh = (cmd, args, opts) => {
       if (cmd !== 'claude' || args[0] !== 'agents') return sh(cmd, args, opts);
       agentsArgs = args;
-      return JSON.stringify([{ name: 'MCP-904', state: 'working', pid: 2, cwd: '/elsewhere/.claude/worktrees/MCP-904' }]);
+      return JSON.stringify([
+        { name: 'MCP-904', state: 'working', pid: 2, cwd: '/elsewhere/.claude/worktrees/MCP-904' },
+        { name: 'MCP-904', state: 'working', pid: 3 },
+        { name: 'MCP-904', state: 'working', pid: 4, cwd: repo },
+        { name: 'MCP-904', state: 'working', pid: 5, cwd: `${repo}/.claude/worktrees-old/MCP-904` }
+      ]);
     };
     const lines = run(w, { dryRun: true });
     expect(line(lines, 'MCP-905')).toMatch(/would start/);
-    expect(agentsArgs).toEqual(['agents', '--json', '--cwd', join(repo, '.claude', 'worktrees')]);
+    // No --cwd: it matches the repo root, never the worktrees folder (2026-11-23)
+    expect(agentsArgs).toEqual(['agents', '--json']);
   });
 
   test('pause by paused: true on origin/main', () => {
