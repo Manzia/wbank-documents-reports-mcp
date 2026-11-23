@@ -1,0 +1,54 @@
+{
+  "id": "Q3-16",
+  "query_id": "Q3.16",
+  "group": "Q3",
+  "tier": "cross_project_synthesis",
+  "task": "Apply lessons",
+  "query_wording": "Across completed agricultural resilience projects in similar countries, what recurring implementation problems appear in the ICRs, and how did teams respond?",
+  "placeholders": [
+    { "placeholder": "similar countries", "resolved_to": "East and Southern African countries (Kenya, Ethiopia, Zambia)", "reason": "Named in the turn so the comparison set is defined; consistent with the East African focus of the other cases." }
+  ],
+  "turns": [
+    { "user": "Across completed agricultural resilience projects in similar countries in East and Southern Africa, what recurring implementation problems appear in the ICRs, and how did teams respond?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "ICRs of agricultural / climate resilience projects in the region", "filters": { "qterm": "climate resilient agriculture (resilience, livelihoods)", "docty_exact": "Implementation Completion and Results Report", "count_exact": "East and Southern African countries" } },
+    { "kind": "document", "project_id": "P154784", "document_id": "34338773", "report_number": "ICR6593", "document_type": "Implementation Completion and Results Report", "document_date": "2024-05-31", "pages": "22-23", "role": "Kenya Climate Smart Agriculture Project" },
+    { "kind": "document", "project_id": "P164336", "document_id": "40108844", "report_number": "ICR00705", "document_type": "Implementation Completion and Results Report", "document_date": "2026-06-10", "pages": "21-22", "role": "Ethiopia Lowlands Livelihood Resilience Project" },
+    { "kind": "document", "project_id": "P127254", "document_id": "34076468", "report_number": "ICR6143", "document_type": "Implementation Completion and Results Report", "document_date": "2023-06-07", "pages": "30-31", "role": "Zambia Strengthening Climate Resilience (PPCR Phase II)" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Coverage: three ICRs read (implementation-factor sections): Kenya Climate Smart Agriculture Project (P154784, ICR 2024), Ethiopia Lowlands Livelihood Resilience Project (P164336, ICR 2026), Zambia Strengthening Climate Resilience PPCR Phase II (P127254, ICR 2023). Other ICRs in the region (e.g. Ethiopia Resilient Landscapes and Livelihoods, Malawi Shire Valley) could extend the set.",
+          "1. Slow flow of funds to subnational levels. Kenya: delays in transferring funds from national to county level and slow disbursement (ICR p. 22); response: county-level operational accounts to fast-track disbursement, and more resources for better-performing counties (pp. 22-23). Zambia: budget delays and budget cuts not communicated to communities (p. 30).",
+          "2. Weak local capacity and procurement for many small grants. Kenya: community groups struggled to prepare quality proposals; procurement delays, inadequate staff, slow approval of micro-projects (p. 22); response: standardized training curriculum, consultants and new county staff, lead farmers per group (p. 22). Zambia: 2,233 subprojects strained decentralized procurement; wrong equipment specifications, confusion between World Bank and government procedures, high local staff turnover (pp. 30-31); response: initial training for national, provincial and district staff, vehicles and ICT for supervision, issues flagged and addressed by authorities and close Bank follow-up (p. 31).",
+          "3. Institutional arrangements that blocked implementation. Kenya: KALRO could not procure because it was not a formal implementing agency; making it one removed a layer and unlocked component 2 (p. 23). Ethiopia: a change of executing ministry delayed activities until the new ministry took over; the regional split of SNNPR was handled by quickly forming new regional units (p. 21).",
+          "4. External shocks. COVID-19 delayed community-driven processes in Kenya and Ethiopia (Kenya p. 22; Ethiopia p. 21); Ethiopia faced five failed rainy seasons since 2020 and local conflicts (p. 21); inflation and currency movements raised costs in Ethiopia and Zambia (Zambian inflation rose from 15% to 24% between Aug 2020 and Aug 2021, shrinking subproject budgets in real terms) (Ethiopia p. 21; Zambia p. 31).",
+          "5. Results measurement. Ethiopia's results framework leaned on output indicators (e.g. number of subprojects as a PDO indicator); its MTR revised indicators to match reduced financing (p. 22).",
+          "Common responses: restructuring to reallocate funds to the better-performing parts (Kenya, December 2020, p. 22), performance incentives for subnational units (Kenya), strong central coordination units (Ethiopia's FPCU, Zambia's PIU), and capacity and logistics support to local governments."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Reads the ICRs of at least three completed agricultural or climate resilience projects in comparable countries (the reference set or other qualifying ICRs)."
+    ],
+    "grounded": [
+      "Each problem and response is cited to a specific ICR and page."
+    ],
+    "complete": [
+      "Identifies problems that recur across projects (not just a list per project) and how teams responded."
+    ],
+    "scoped": [
+      "States the set of ICRs read (coverage) and that conclusions hold for that set."
+    ]
+  },
+  "stability": "stable",
+  "notes": "Cross-project case: other qualifying ICRs are acceptable if the recurring problems are grounded in them."
+}
