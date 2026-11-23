@@ -1,0 +1,58 @@
+{
+  "id": "Q2-05",
+  "query_id": "Q2.5",
+  "group": "Q2",
+  "tier": "project_centred_reading",
+  "task": "Compare two versions of a procurement plan",
+  "query_wording": "What changed between these two versions of the procurement plan?",
+  "placeholders": [
+    { "placeholder": "these two versions", "resolved_to": "the two most recent procurement plans of P174059 (2021-01-25, STEP44089, and 2021-06-14, STEP50498)", "reason": "The query refers back to two plans, so turn 1 retrieves them. The project is closed, so 'most recent' is stable." }
+  ],
+  "turns": [
+    { "user": "Show me the two most recent procurement plans for P174059." },
+    { "user": "What changed between these two versions of the procurement plan?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "turn": 1, "role": "The project's procurement plans, newest first", "filters": { "proid": "P174059", "docty_exact": "Procurement Plan", "srt": "docdt", "order": "desc", "rows": "2" } },
+    { "kind": "document", "project_id": "P174059", "document_id": "32775752", "report_number": "STEP44089", "document_type": "Procurement Plan", "document_date": "2021-01-25", "pages": "8-9", "role": "Earlier version" },
+    { "kind": "document", "project_id": "P174059", "document_id": "33173870", "report_number": "STEP50498", "document_type": "Procurement Plan", "document_date": "2021-06-14", "pages": "8-9", "role": "Later version" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "P174059, Kenya GPE COVID-19 Learning Continuity in Basic Education Project. Two most recent procurement plans: 2021-06-14 (STEP50498, http://documents.worldbank.org/curated/en/619871623678763620) and 2021-01-25 (STEP44089, http://documents.worldbank.org/curated/en/821551611598836249). The project has five plans in all; the earlier ones are from October-December 2020."
+        ]
+      },
+      {
+        "turn": 2,
+        "text": [
+          "Comparing the STEP activity tables (pp. 8-9 in both), matched by activity reference number. Estimated amounts (US$) are unchanged for every activity that appears in both versions, and no contract (actual) amounts are recorded in either.",
+          "Cancelled: KE-LCBEP-201273-GO-RFB, food items for distribution to schools (about 150,000 pupils), estimated 2,000,000 - pending in January, Canceled in June; KE-LCBEP-201232-NC-RFB, digitization of textbook evaluation, 180,000 - pending, then Canceled (p. 8).",
+          "Added: KE-LCBEP-239328-NC-RFB, liaison with community radios to enhance access for the most vulnerable, 192,000, Request for Bids with a Limited market approach, planned 2021-06-16 (p. 9). The earlier community-radio activity KE-LCBEP-201238-NC-RFB (192,000, Open - National) is still listed as pending, so the new line looks like a re-launch with limited competition.",
+          "Moved from pending to under implementation: licences for graphics/video/audio software (201224, 100,000), 'LIVE' broadcast streaming equipment (201199, 100,000), content refurbishment, dubbing and duplicating systems (201210, 50,000), platform digitization services for textbook evaluation (206340, 90,000), SMS infrastructure (201250, 37,500), redundant KICD-KBC broadcast link (201190, 20,000), Kenya Education Cloud upgrade and LMS (201228, 1,470,000), and the information and data security consultancy (201293, 135,000).",
+          "Unchanged: the virtual meeting room (168,800), digital archiving (150,000), ENG/EFP production equipment (346,000) and the online psychosocial support consultancy (827,000) stay under implementation; content producers (350,000), platform hosting (20,000) and the DLP training manual review (22,857) stay pending.",
+          "Net effect: 2,180,000 of planned activities were cancelled and 192,000 added. The plan does not say why the food procurement was cancelled."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Turn 1 returns the 2021-06-14 and 2021-01-25 plans; turn 2 reads both."
+    ],
+    "grounded": [
+      "Every change cited is visible in the two plans (reference number, amount, status, method or market approach), with page references; no invented reasons for changes."
+    ],
+    "complete": [
+      "Reports the two cancellations, the added community-radio activity and the status changes, and says whether amounts and methods changed."
+    ],
+    "scoped": [
+      "Says the comparison matches packages by reference number and covers only these two versions."
+    ]
+  },
+  "stability": "stable"
+}
