@@ -1,0 +1,57 @@
+{
+  "id": "Q3-08",
+  "query_id": "Q3.8",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "task": "Check agreed obligations",
+  "query_wording": "What actions does the environmental and social commitment plan require before civil works begin, who is responsible, and when are they due?",
+  "placeholders": [
+    { "placeholder": "the project (implied)", "resolved_to": "P164920 (Tanzania RISE)", "reason": "The query assumes a project; RISE has seven disclosed ESCP versions, so the agent must find the latest, which supersedes the others." }
+  ],
+  "turns": [
+    { "user": "For P164920, what actions does the environmental and social commitment plan require before civil works begin, who is responsible, and when are they due?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "The project's ESCPs, newest first", "filters": { "proid": "P164920", "docty_exact": "Environmental and Social Commitment Plan", "srt": "docdt", "order": "desc" } },
+    { "kind": "document", "project_id": "P164920", "document_id": "40124526", "document_type": "Environmental and Social Commitment Plan", "document_date": "2026-08-27", "pages": "2, 4, 8-15, 17", "role": "Latest ESCP (negotiated, updated 13 August 2026), which supersedes earlier versions" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Source: the latest ESCP for RISE, the negotiated Additional Financing ESCP, updated version dated 13 August 2026 (disclosed 2026-08-27). It supersedes the earlier versions (2020, 2021, December 2024, February 2025) and applies to both the original and additional financing (p. 2). The ESCP gives timeframes as events ('prior to...'), not calendar dates.",
+          "Before or as a condition for starting works on a sub-project:",
+          "- Prepare the ESIA and ESMP (or a free-standing ESMP) for each sub-project during its planning and preparation, and include the contractor's site-specific ESMP in the bidding documents before the sub-project is carried out - TARURA, TANROADS, contractors (1.1, p. 8).",
+          "- Put the ESCP's E&S requirements (ESIA/ESMP, Labor Management Procedures, Code of Conduct) into procurement documents and contracts during their preparation - TARURA and TANROADS (1.2, p. 9).",
+          "- Contractors prepare their OHS Management Plans before engaging project workers (2.2, p. 11) and set up the workers' grievance mechanism before engaging workers (2.3, p. 12) - TARURA, TANROADS, supervising firms, contractors.",
+          "- Prepare Waste Management Plans as part of sub-project ESMPs before civil works start (3.1, p. 12); traffic and road safety, community health and safety, resource efficiency, biodiversity and cultural heritage/chance-find measures go into the ESMPs on the same timeline (3.2, 4.1, 4.2, 6.1, 8.1-8.2, pp. 12-16).",
+          "- Prepare the project SEA/SH (GBV) Action Plan before project commencement; contractors prepare sub-project SEA/SH action plans before engaging workers (4.3, p. 13).",
+          "- Assess and manage security risks before security personnel are mobilized - TARURA, TANROADS, contractors (4.4, p. 14).",
+          "- Prepare and implement the RAP for each activity that needs one before the relevant works, and before taking possession of land ensure full compensation, resettlement and moving allowances are provided (5.1, p. 14).",
+          "- Contractors prepare Vulnerable Groups Plans before any activity that requires one (7.1, p. 15).",
+          "Institutional prerequisites: a PIU at TARURA and TANROADS HQ with qualified E&S staff before project effectiveness, and E&S officers deployed in regions and TARURA's 8 zones (A, p. 4); the project grievance mechanism established before appraisal of the AF and the SEP updated before AF appraisal (10.1-10.2, p. 17).",
+          "Related legal condition (outside the ESCP): the financing agreement bars withdrawals for TANROADS' and TARURA's works categories until each adopts Operational Health and Safety Measures under the ESCP."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the latest ESCP (2026-08-27), or explains if it uses an earlier version and why."
+    ],
+    "grounded": [
+      "Each action, responsible entity and timeframe is cited to an ESCP item and page; no calendar deadlines are invented where the ESCP gives event-based timeframes."
+    ],
+    "complete": [
+      "Covers the main pre-works actions (ESIA/ESMP, contract E&S clauses, OHS plans, worker grievance mechanism, SEA/SH plans, RAP and compensation before land possession) with responsibility and timing."
+    ],
+    "scoped": [
+      "Names the ESCP version and date, and says the timeframes are tied to events rather than dates."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "A further revised ESCP would supersede this one."
+}
