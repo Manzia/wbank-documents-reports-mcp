@@ -213,6 +213,7 @@ async function completeFacet(base, field, chain, filters = {}, requests = [], pa
     parts = partitionCache.get(pkey).map((pv) => ({ [part]: pv }));
   }
   let complete = true;
+  let covered = 0;
   const unmatched = [];
   const capped = [];
   for (const pf of parts) {
@@ -226,7 +227,13 @@ async function completeFacet(base, field, chain, filters = {}, requests = [], pa
     complete &&= sub.complete;
     capped.push(...(sub.capped ?? []));
     unmatched.push(...(sub.unmatched ?? []));
+    covered += sub.total;
     for (const [k, c] of sub.values) values.set(k, Math.max(values.get(k) ?? 0, c));
+  }
+  // A partition that doesn't cover every record (records without that field) can miss values.
+  if (complete && covered < q.total) {
+    complete = false;
+    capped.push(`${JSON.stringify(filters)}: ${q.total - covered} records not covered by ${part}`);
   }
   return { values, complete, total: q.total, unmatched, capped };
 }
