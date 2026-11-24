@@ -3,51 +3,50 @@
   "query_id": "Q4.6",
   "group": "Q4",
   "tier": "project_centred_reading",
+  "region": "Europe & Central Asia",
   "task": "Review environmental and social requirements",
   "query_wording": "What actions and deadlines does the environmental and social commitment plan set for P123456?",
   "placeholders": [
-    { "placeholder": "P123456", "resolved_to": "P166685 (Uganda Electricity Access Scale-up Project, EASP)", "reason": "Active ESF project with three disclosed ESCP versions (2020, 2021, 2022), all titled June 2020; its deadlines are partly dated and partly event-based, and some refer to an agency (REA) since merged into MEMD." }
+    { "placeholder": "P123456", "resolved_to": "P170132 (Tajikistan Rural Electrification Project)", "reason": "Seven ESCP versions are disclosed; the 2025 AF ESCP supersedes the others, and several of its deadlines are past or carry typos." }
   ],
   "turns": [
-    { "user": "What actions and deadlines does the environmental and social commitment plan set for P166685?" }
+    { "user": "What actions and deadlines does the environmental and social commitment plan set for P170132?" }
   ],
   "expected_sources": [
-    { "kind": "search", "api": "wds", "role": "The project's ESCPs, newest first", "filters": { "proid": "P166685", "docty_exact": "Environmental and Social Commitment Plan", "srt": "docdt", "order": "desc" } },
-    { "kind": "document", "project_id": "P166685", "document_id": "33747382", "document_type": "Environmental and Social Commitment Plan", "document_date": "2022-02-28", "pages": "4-23", "role": "Latest disclosed ESCP (cover dated June 9, 2020)" }
+    { "kind": "search", "api": "wds", "role": "The project's ESCPs, newest first", "filters": { "proid": "P170132", "docty_exact": "Environmental and Social Commitment Plan", "srt": "docdt", "order": "desc" } },
+    { "kind": "document", "project_id": "P170132", "document_id": "40021640", "document_type": "Environmental and Social Commitment Plan", "document_date": "2025-06-13", "pages": "1-11", "role": "Latest ESCP (for negotiations, June 2025), which supersedes earlier versions" }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "Source: the latest disclosed ESCP for EASP (record dated 2022-02-28; its cover and header still read 'June 9, 2020' / 'June 2020', like the 2020 and 2021 versions). Responsible entities are MEMD (PCU and its Health, Safety and Environment Unit), REA and UECCC; REA has since been folded into MEMD (the PAD refers to 'the former REA'), so its duties now sit with MEMD.",
-          "Reporting: consolidated quarterly E&S reports to the Bank from project effectiveness to completion; incidents and accidents with significant adverse effects (fatalities, serious injuries, SEA/SH, child labour, GBV) reported within 24 hours (pp. 4-5).",
-          "Institutions: PCU and PIU E&S staff recruited by March 2021 (REA: environmental and social safeguards specialists, a senior wayleaves officer and four wayleaves officers; UECCC: an E&S specialist) (1.1, pp. 5-6).",
-          "Assessments and contractors: sub-project ESIAs/ESMPs with mitigation measures completed and cleared two months before a sub-project starts, environmental audits annually (1.2, p. 6); contractor ESMPs, codes of conduct, labour, camp, HIV/AIDS, grievance and HSE plans two months before a sub-project is implemented (1.4, p. 7); permits and consents (1.5, 2021, p. 8).",
-          "Labour and safety (2.1-2.5, pp. 9-11): labour management procedures, workers' grievance mechanism, OHS measures, emergency preparedness and worker training, with completion dates given as 2025.",
-          "Community and land (pp. 12-16): traffic and road safety (2025), community health and safety (2021), GBV/SEA measures (2025), security personnel assessment by June 2021; resettlement under the RPF with RAPs before works and RAP monitoring throughout the project (5.1-5.4).",
-          "Other (pp. 17-23): biodiversity measures by December 2021 (6.1); vulnerable and marginalized groups plans (7.1-7.2, 2025); chance finds and cultural heritage procedures (8.1-8.2, 2025); UECCC to establish and maintain an Environmental and Social Management System for financial intermediation, with organizational capacity and a senior management representative (9.1-9.4, 2025).",
-          "Caveat: many completion dates (2021, 2025) predate the project's actual effectiveness (July 2023) and its June 2027 closing date; the disclosed ESCP has not been updated to reflect them, so the dates should be confirmed with the team."
+          "Source: the Additional Financing ESCP for P170132 ('For Negotiations', June 2025; record dated 2025-06-13). It supersedes earlier ESCPs and covers both the original and additional financing (p. 2). Responsible: Pamir Energy Company (PEC) in GBAO and Shabakahoi Taqsimoti Barq (STB) with ESPMU in Khatlon.",
+          "Organization and reporting: keep the existing E&S staff and structure (A); train PEC and STB E&S staff and contractors throughout (B) (p. 3); quarterly E&S reports within 30 days of each period and contractors' monthly reports (C-D, p. 4); notify incidents within 24 hours (E, p. 5).",
+          "Assessment: PEC to update the ESIA and finish the ESMP for the new 110 kV substation in GBAO, approved and disclosed, before the effective date (target July 2025) and before construction (1.1, p. 5); the ESIA/ESMP for the associated Sebzor HPP and Khorog line was disclosed before bidding in 2020 (1.2); screening of sub-projects with Bank prior review of the first two under each ESMF (1.4); update the SEP before construction (1.5.1); permits throughout (1.6) (pp. 5-6).",
+          "Labour: update the labour management procedures, including worker camps, before construction (June 2025); workers' grievance mechanism in place since April 2019; OHS plan for the new substation before construction (July 2025); emergency preparedness in place since 2019; worker training as works start (2.1-2.5, pp. 6-7).",
+          "Community and land: waste and battery disposal per ESIAs/ESMFs (3.1, p. 8); traffic safety and an updated community health and safety plan before construction (July 2025) (4.1-4.2, p. 8); community awareness throughout (4.5, p. 9); no resettlement expected because PEC already owns 2 ha at the 35 kV station, but a due-diligence report confirming the land is free of squatters before construction (June 2025) (5.2, p. 9); biodiversity management plan used throughout (6.1, p. 10); chance-finds procedure (8.1, p. 10); SEP disclosed before construction (10.1) and grievance mechanism reported quarterly (10.2, p. 11).",
+          "Caveats: most dated actions fall in June-July 2025, before the AF became effective (21 November 2025, per the June 2026 ISR), so they should now be complete; the SEP deadline is printed as 'June 2015' (p. 11), an evident typo for 2025; several actions still name Barqi Tojik, which no longer implements the Khatlon part."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Uses the latest disclosed ESCP (33747382) or notes which version it used."
+      "Uses the latest ESCP (40021640, 2025) or says which version it used."
     ],
     "grounded": [
-      "Actions, responsible entities and deadlines match the ESCP items with page references."
+      "Actions, responsible entities and deadlines match the ESCP items with pages; the 'June 2015' typo is not presented as a real date."
     ],
     "complete": [
-      "Covers the main action groups (reporting, organization, assessments, contractors, labour/OHS, community, land, FI/ESMS) with their deadlines."
+      "Covers the main action groups (organization, reporting, assessment, labour/OHS, community, land, biodiversity, stakeholder engagement) with their deadlines."
     ],
     "scoped": [
-      "Notes that the ESCP dates from 2020 (with REA named and dates that predate effectiveness), so deadlines may be outdated."
+      "Names the ESCP version and notes that dated deadlines have passed and their status is not reported in the ESCP."
     ]
   },
   "stability": "may_change",
-  "notes": "A revised ESCP may be disclosed later."
+  "notes": "A revised ESCP would supersede this one."
 }

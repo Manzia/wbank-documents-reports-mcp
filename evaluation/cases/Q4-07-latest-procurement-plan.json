@@ -3,48 +3,49 @@
   "query_id": "Q4.7",
   "group": "Q4",
   "tier": "project_centred_reading",
+  "region": "Europe & Central Asia",
   "task": "Review fiduciary arrangements",
   "query_wording": "Find the latest published procurement plan and summarize the main packages and planned timing.",
   "placeholders": [
-    { "placeholder": "the project (implied)", "resolved_to": "P166685 (Uganda EASP)", "reason": "The query needs a project; Q4 uses EASP. Its latest plan is UECCC's, and its STEP table text is column-split, which tests careful reading." }
+    { "placeholder": "the project (implied)", "resolved_to": "P170132 (Tajikistan Rural Electrification Project)", "reason": "The query needs a project; Q4 uses P170132. Its latest plan combines the original 2020 textual plan (with reviewer comments left in) and a STEP table revised on 2026-11-05." }
   ],
   "turns": [
-    { "user": "For P166685, find the latest published procurement plan and summarize the main packages and planned timing." }
+    { "user": "For P170132, find the latest published procurement plan and summarize the main packages and planned timing." }
   ],
   "expected_sources": [
-    { "kind": "search", "api": "wds", "role": "Newest procurement plan by document date", "filters": { "proid": "P166685", "docty_exact": "Procurement Plan", "srt": "docdt", "order": "desc", "rows": "1" } },
-    { "kind": "document", "project_id": "P166685", "document_id": "40114655", "document_type": "Procurement Plan", "document_date": "2026-07-01", "pages": "1-6", "role": "Latest plan (UECCC; revised plan date 2026-06-30)", "note": "The STEP table text is split by column (descriptions, then amounts, then statuses), so pairing values with packages needs care." }
+    { "kind": "search", "api": "wds", "role": "Newest procurement plan by document date", "filters": { "proid": "P170132", "docty_exact": "Procurement Plan", "srt": "docdt", "order": "desc", "rows": "1" } },
+    { "kind": "document", "project_id": "P170132", "document_id": "40137640", "document_type": "Procurement Plan", "document_date": "2026-11-05", "role": "Latest plan (Pamir Energy Company; STEP revision 2026-11-05)", "note": "No form-feed breaks; the text is one long page. The STEP export lists only actual amounts (mostly 0.00) and dates in a single run per row." }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "Latest published procurement plan for P166685: document dated 2026-07-01 (http://documents.worldbank.org/curated/en/099063026212521629; STEP revised plan date 2026-06-30, original plan approved 2022-08-10). Its executing agency is the Uganda Energy Credit Capitalization Company (UECCC), i.e. it covers UECCC's parts of the project (financial intermediation and its PIU), not MEMD's grid works; recent EASP plans disclosed in 2026 are all UECCC plans (p. 3).",
-          "The textual part is the generic 2021-2022 preamble (STEP use, standard procurement documents, national procedures under the PPDA) (pp. 1-2).",
-          "Main packages (STEP tables, pp. 3-6): consulting services for the financial intermediation component - development and operationalisation of Environmental and Social Management Systems for ESCOs and for participating financial institutions; a second Independent Verification Agent contract for the off-grid solar, productive-use and clean-cooking results-based financing schemes (for the additional US$20 million allocation); impact evaluations of the financial intermediation component, of productive-use uptake and of the electrification of schools and health centres; a productive-use market analysis; training of local biomass stove manufacturers; ISO 27001 certification; and individual consultants for the UECCC PIU (project manager, risk manager, programme managers, procurement, safeguards, refugee programme coordinator). Goods and non-consulting services: an electronic document and records management system, a management information system, computers, furniture and ICT upgrades.",
-          "Timing: the consultancies added for the financial intermediation work carry planned dates in the first half of 2026 (for example the schools and health centres impact study, the PUE market analysis and the PUE uptake impact study, Consultant Qualification Selection, Open - National, US$75,000, US$50,000 and US$60,000, with planned dates from January-March 2026 and status Under Implementation, p. 4); many PIU staff contracts are already signed; several packages are pending implementation or cancelled.",
-          "Caveat: the plan's table text separates descriptions from amounts and dates, so amounts and dates should be read from the PDF (or STEP) before relying on them for any package not quoted above."
+          "Latest published procurement plan for P170132: dated 2026-11-05 (http://documents.worldbank.org/curated/en/099110526031019911), executing agency OJSC 'Pamir Energy Company' (GBAO); original plan approved 2020-01-03, latest revision 2026-11-05; financing IDA D5040 and E4970.",
+          "It has two parts. (1) The original textual plan, which still includes reviewer comments ('Commented [DK1]...') and the 2019-2020 package list with estimates: design, supply and installation of mini-grids in GBAO (international RFB, prior review, estimate shown as about US$17.8 million), connection of target settlements in GBAO (about US$5 million) and in Barqi Tojik's area (about US$6 million), energy-efficiency piloting (US$200,000), project management consultants for PEC (US$900,000) and BT (US$500,000), and geological and seismic studies. (2) The STEP activity table, which shows the current status.",
+          "Main current packages (STEP table): construction and installation of the Sharifobod 110/35/10 kV substation in Khorog (TJ-PE-31/2025-WO-RFB, Request for Bids, Open - National, post review, under the second AF E4970) - Signed, milestones January to June 2026, completion planned around May 2027; supply of equipment and materials for the Sharifobod substation with installation supervision (TJ-PE-30/2025-GO-RFB, Request for Bids, Open - International, prior review, two-envelope) - Signed, milestones February to September 2026. Earlier packages are completed or signed: solar PV with storage mini-grids (TJ-PE-20/2022), hydropower plant equipment (TJ-PE-22/2022) and direct contracts for 8 and 5 small HPPs (TJ-PE-21/2022-WO-A and -B); several 2020 studies were cancelled and the first project management consultant contract terminated.",
+          "Timing in context: the June 2026 ISR reports substation construction started in June 2026 and the remaining hydropower mini-grids due by 30 November 2026, within the 30 June 2027 closing.",
+          "Caveat: the STEP table in this export has no estimated-amount column (actual amounts are mostly 0.00), and the textual table's figures are truncated in the text, so amounts should be checked in the PDF."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Identifies the newest plan by document date (40114655, 2026-07-01) and that it is UECCC's plan."
+      "Identifies the newest plan by document date (40137640, 2026-11-05)."
     ],
     "grounded": [
-      "Package descriptions come from the plan; any amounts, methods or dates quoted match the plan; nothing is guessed where the text cannot pair values with packages."
+      "Package names, methods, review types and statuses come from the plan; no amounts or dates are invented where the text does not give them."
     ],
     "complete": [
-      "Summarizes the main package types and gives timing information (planned dates or status) for the main packages."
+      "Summarizes the main current packages and their timing or status."
     ],
     "scoped": [
-      "Says which agency's plan it is and flags limits of reading the plan's text (or that MEMD's grid procurement is not in this plan)."
+      "Says which agency's plan it is and flags that the plan mixes the 2020 textual plan with the 2026 STEP status and lacks estimated amounts."
     ]
   },
   "stability": "may_change",
-  "notes": "EASP plans are updated every few weeks; a newer plan may be the latest at run time. The reviewer should confirm the three quoted amounts against the PDF."
+  "notes": "Newer plans may be disclosed; the reviewer should confirm the approximate textual-plan estimates against the PDF."
 }

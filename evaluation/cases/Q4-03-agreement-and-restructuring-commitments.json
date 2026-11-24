@@ -3,48 +3,50 @@
   "query_id": "Q4.3",
   "group": "Q4",
   "tier": "project_centred_reading",
+  "region": "Europe & Central Asia",
   "task": "Prepare for a client discussion",
   "query_wording": "For P123456, what commitments and milestones appear in the published agreement and latest restructuring paper? What questions should I raise with the ministry?",
   "placeholders": [
-    { "placeholder": "P123456", "resolved_to": "P166685 (Uganda EASP)", "reason": "See Q4-01; its financing agreement has staffing deadlines and performance-based conditions, and its latest restructuring paper (2026-08-18) reallocates US$20 million." }
+    { "placeholder": "P123456", "resolved_to": "P170132 (Tajikistan Rural Electrification Project)", "reason": "See Q4-01. Its latest project paper (2025) combines a second additional financing with a restructuring (18-month closing extension, new implementing agency, results changes); its latest agreement is the 2025 AF financing agreement." }
   ],
   "turns": [
-    { "user": "For P166685, what commitments and milestones appear in the published agreement and latest restructuring paper? What questions should I raise with the ministry?" }
+    { "user": "For P170132, what commitments and milestones appear in the published agreement and latest restructuring paper? What questions should I raise with the ministry?" }
   ],
   "expected_sources": [
-    { "kind": "document", "project_id": "P166685", "document_id": "34010454", "document_type": "Financing Agreement", "document_date": "2023-02-20", "pages": "3-4, 28, 30-31", "role": "Financing Agreement, Credit 7075-UG and Grant D9970-UG", "note": "No form-feed breaks; pages are the agreement's printed '-N-' markers; the text drops the letter 't'." },
-    { "kind": "document", "project_id": "P166685", "document_id": "40123034", "report_number": "RES02060", "document_type": "Project Paper", "document_date": "2026-08-18", "pages": "1, 4-5", "role": "Latest restructuring paper (third restructuring)" }
+    { "kind": "document", "project_id": "P170132", "document_id": "40037570", "document_type": "Financing Agreement", "document_date": "2025-08-09", "pages": "3, 6-8, 10-11", "role": "Latest published agreement: Financing Agreement for Additional Financing Grant E497-TJ" },
+    { "kind": "document", "project_id": "P170132", "document_id": "40027707", "report_number": "PPIAF000212", "document_type": "Project Paper", "document_date": "2025-06-25", "pages": "13, 19-22, 26", "role": "Latest project paper: second AF with restructuring" },
+    { "kind": "document", "project_id": "P170132", "document_id": "40111321", "report_number": "ISR07985", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-23", "pages": "2", "role": "Status of the milestones", "required": false }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "Published agreement: Financing Agreement for IDA Credit 7075-UG and Grant D9970-UG (signed 20 February 2023). Latest restructuring paper: RES02060 (18 August 2026), the project's third restructuring.",
-          "Agreement - effectiveness conditions (Article V, Section 5.01, pp. 3-4): the Bank satisfied that Uganda has an adequate refugee protection framework; MEMD has set up the Project Coordination Unit with a coordination manager, project accountant and environmental and social safeguards specialists; MEMD has set up its PIU (grid expansion manager, senior legal officer, project manager, connections manager, safeguards and procurement specialists, etc.); 90-day effectiveness deadline (Section 5.02). Further staffing within six months of effectiveness: 9 more PCU staff, 18 more MEMD-PIU staff and 9 more UECCC-PIU staff, with key positions retained (Schedule 2).",
-          "Agreement - performance-based conditions (Schedule 4, pp. 30-31): PBC 1, MEMD analyses a proposal for optimized grid design and connection materials with the Electricity Regulatory Authority and decides on the study findings within two years of implementation (SDR 358,750); PBC 2, MEMD's E&S capacity and tools, health, safety and GBV training, a working grievance mechanism and timely compensation of project-affected persons, assessed each fiscal year (SDR 286,850 a year, SDR 1,434,250 in total); PBC 3, UECCC runs nationwide energy market consultations and reports findings (SDR 143,425 a year); PBC 4, operation and maintenance costs for public institutions' solar systems paid in full and on time to service providers (SDR 3,585,875). The Government must budget these O&M costs in its MTEF: US$0 in FY1, US$500,000 in FY2, US$1.5 million in FY3, US$2 million in FY4 and US$1 million in FY5 (Section IV.A, p. 28). Closing date 30 June 2027 (p. 28).",
-          "Latest restructuring paper (pp. 1, 4-5): reallocates US$20 million (SDR 14,634,218) of the IDA grant - US$10 million from Component 1 (grid) to sub-component 2.1 and US$10 million from the refugee-window grid sub-component 3.1 to 3.2 (financial intermediation) - because RBF grid connections are slow and fewer ready boards are being bought; revises PDO targets, e.g. connections from 1,571,500 to 1,600,200, people with grid access from 5,050,000 to 4,800,000, people in refugee-hosting districts from 534,000 to 928,000, clean cooking from 1,660,000 to 1,900,000; the RBF operations manual is updated with tighter ESCO eligibility, claims verification and anti-fraud controls. No change to the PDO, closing date, components or legal covenants. It recalls the earlier restructurings: October 2025 (US$10 million to Component 2) and June 2026 (CTF grant closing extended to 30 June 2027).",
-          "Questions to raise with the ministry: How will MEMD and UEDCL reach the grid targets after Umeme's exit, and when will connection materials arrive? What did the PBC 1 grid-design study conclude, and was the decision taken within the two-year window? Are the O&M budget allocations for public-institution solar systems in the MTEF as the agreement requires (PBC 4)? With closing in June 2027 and the grant 34% disbursed in the latest ISR, is an extension being considered? How will the new anti-fraud and verification controls in the RBF schemes be enforced? These are suggestions derived from the documents, not issues the documents themselves raise."
+          "Documents: the Financing Agreement for Additional Financing Grant E497-TJ (dated 2025-08-09) and the Project Paper for the second additional financing (PPIAF000212, 25 June 2025), which also restructures the project. The project has no separate 'restructuring paper'; this AF paper carries the restructuring.",
+          "Agreement - commitments: PEC carries out Part 1 (GBAO) and STB, assisted by ESPMU, Part 2 (Khatlon) under project agreements (p. 3); additional condition of effectiveness: PEC has adopted and disclosed the ESIA for the Khorog substation (Part 1.2); effectiveness deadline 120 days after signature (Article IV, p. 3); the implementing entities keep qualified staff and follow their Project Operational Manuals; the Ministry of Finance passes the funds to PEC and STB through subsidiary agreements (Schedule 2, Section I.A-B, pp. 7-8); ESCP compliance and reporting (p. 8). Financing SDR 5,200,000: SDR 4,300,000 for Part 1 and SDR 900,000 for Part 2, plus zero-allocated CERC and Cat DDO categories (p. 10). Withdrawal conditions: no Part 1 withdrawals until PEC adopts its POM, no Part 2 withdrawals until STB adopts its POM (p. 11). Closing date 30 June 2027 (p. 11).",
+          "Project paper - milestones and changes: US$7 million IDA grant for (i) a 110 kV substation in Khorog, (ii) advanced electricity meters for irrigation pumping stations in Khatlon, (iii) a study on private investment in rooftop solar (p. 19); total cost US$48.7 million (p. 19); closing extended by 18 months to 30 June 2027 for both the AF and the parent grant (pp. 19, 21-22); implementing agency for Khatlon changed from Barqi Tojik to STB after unbundling (p. 20); mini-grid sub-components to finish under the parent project by November 2025 (p. 20); new indicators on livelihoods enhanced or jobs created (75), farmers benefiting from the irrigation metering (1,780) and the rooftop solar study (p. 54). The paper also records that 77.57% (US$31.25 million) had been disbursed and the mini-grids in remote GBAO were delayed by winter conditions (p. 13).",
+          "Status by the latest ISR (June 2026): the AF became effective on 21 November 2025; substation construction began in June 2026; the remaining six hydropower mini-grids are now due by 30 November 2026 (ISR p. 2).",
+          "Questions to raise with the ministry: Will the hydropower mini-grids and the Sharifobod substation finish before the June 2027 closing, given winter access? Have PEC's and STB's POMs been adopted (the withdrawal conditions) and have the subsidiary agreements been signed? How will the irrigation metering reduce costs for ALRI and STB, and who pays for the meters' operation? What is the plan for the rooftop-solar study's findings? These are suggestions, not issues the documents raise."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Uses the financing agreement (34010454) and the latest restructuring paper (40123034, 2026-08-18), not an older one."
+      "Uses the latest published agreement (the 2025 AF financing agreement) and the 2025 AF/restructuring paper."
     ],
     "grounded": [
-      "Conditions, PBCs, amounts and target changes are cited to the right document and clause/page; suggested questions are clearly marked as the assistant's suggestions."
+      "Conditions, allocations, dates and changes are cited to the right document and page; suggested questions are marked as suggestions."
     ],
     "complete": [
       "Covers commitments and milestones from both documents and offers questions for the ministry."
     ],
     "scoped": [
-      "Names the documents and dates and notes that the agreement may have been amended or conditions met since signing."
+      "Says the restructuring is carried by an additional financing paper and that the ISR shows later status."
     ]
   },
   "stability": "may_change",
-  "notes": "A later restructuring would become the 'latest'. PBC amounts are in SDR as the agreement states."
+  "notes": "If a later restructuring paper is disclosed it becomes the 'latest'."
 }

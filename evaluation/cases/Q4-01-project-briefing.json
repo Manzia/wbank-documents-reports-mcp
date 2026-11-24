@@ -3,53 +3,53 @@
   "query_id": "Q4.1",
   "group": "Q4",
   "tier": "project_centred_reading",
+  "region": "Europe & Central Asia",
   "task": "Prepare a project briefing",
   "query_wording": "Brief me on P123456: objective, implementing agencies, commitment, closing date, latest public implementation update, and key issues.",
   "placeholders": [
-    { "placeholder": "P123456", "resolved_to": "P166685 (Uganda Electricity Access Scale-up Project, EASP)", "reason": "Active ESF project with a PAD, financing agreement, ESCPs, ten ISRs and three restructurings: the Q4 project-centred cases use it." }
+    { "placeholder": "P123456", "resolved_to": "P170132 (Tajikistan Rural Electrification Project)", "reason": "Active ESF project in Europe & Central Asia with a PAD, financing agreements for the original grant and two additional financings, 7 ESCP versions, 13 ISRs and project papers that restructure it: the Q4 project-centred cases use it. It is in a different region from Q3's Pxxxxxx (Jordan) and not in Africa." }
   ],
   "turns": [
-    { "user": "Brief me on P166685: objective, implementing agencies, commitment, closing date, latest public implementation update, and key issues." }
+    { "user": "Brief me on P170132: objective, implementing agencies, commitment, closing date, latest public implementation update, and key issues." }
   ],
   "expected_sources": [
-    { "kind": "project", "project_id": "P166685", "role": "Projects API record: commitment, cost, dates, agencies" },
-    { "kind": "document", "project_id": "P166685", "document_id": "40122525", "report_number": "ISR08554", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-14", "pages": "1-4, 15-16", "role": "Latest disclosed ISR (seq. 10)", "note": "No form-feed breaks; pages are the printed 'Page N of 16'. The text drops the letter 't'." },
-    { "kind": "document", "project_id": "P166685", "document_id": "40123034", "report_number": "RES02060", "document_type": "Project Paper", "document_date": "2026-08-18", "pages": "1, 4-5", "role": "Latest restructuring paper (third restructuring)", "required": false },
-    { "kind": "document", "project_id": "P166685", "document_id": "33759023", "report_number": "PAD3416", "document_type": "Project Appraisal Document", "document_date": "2022-03-11", "role": "PAD", "required": false }
+    { "kind": "project", "project_id": "P170132", "role": "Projects API record: commitment, cost, dates, agencies" },
+    { "kind": "document", "project_id": "P170132", "document_id": "40111321", "report_number": "ISR07985", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-23", "pages": "1-5, 8-11", "role": "Latest disclosed ISR (seq. 13)", "note": "The results tables come out column by column; ISR seq. 12 (40078322) has the same indicators in a clean row layout." },
+    { "kind": "document", "project_id": "P170132", "document_id": "40027707", "report_number": "PPIAF000212", "document_type": "Project Paper", "document_date": "2025-06-25", "pages": "13, 19-20", "role": "Second additional financing paper: current PDO, financing, closing extension, agencies", "required": false }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "P166685 - Uganda Electricity Access Scale-up Project (EASP).",
-          "Objective: to increase access to energy for households, commercial enterprises, industrial parks and public institutions; unchanged since approval (ISR p. 1).",
-          "Implementing agencies: Ministry of Energy and Mineral Development (MEMD) and Uganda Energy Credit Capitalisation Company (UECCC) (Projects record; ISR p. 1). Borrower: Republic of Uganda.",
-          "Commitment: IDA US$568 million (credit IDA-70750 US$331.5 million and grant IDA-D9970 US$236.5 million), plus trust-fund grants (CTF US$30 million, ESMAP US$10 million); total project cost US$638 million including private sector and government contributions (Projects record; ISR p. 15). The commitment is the World Bank financing, not the total project cost.",
-          "Dates: approved 31 March 2022, signed 20 February 2023, effective 20 July 2023; closing 30 June 2027 (ISR p. 16). Midterm review held 7 November 2025 (p. 16).",
-          "Latest public implementation update: ISR seq. 10, 14 August 2026. Progress towards the PDO Moderately Satisfactory; implementation progress downgraded from Moderately Satisfactory to Moderately Unsatisfactory; overall risk Substantial, with sector strategies and institutional capacity rated High and fiduciary raised to High (pp. 1-2). Results: 612,757 connections against a 1,571,500 target (155,088 grid connections by Umeme, 44,826 by UEDCL, 412,843 off-grid); 873,848 people with clean cooking against 1,660,000; 284 public institutions against 700 (pp. 3-4). Disbursement: 32.42% of the IDA credit and 34.08% of the IDA grant (p. 15).",
-          "Key issues: grid connections lag because Umeme's concession ended in March 2025 and connection-material procurement was delayed, while off-grid results-based financing is oversubscribed. Three restructurings followed: October 2025 (US$10 million moved to off-grid financing), June 2026 (CTF grant closing extended to June 2027) and August 2026 (a further US$20 million moved to off-grid, clean cooking and productive-use schemes and the credit facility, with revised targets such as 1,600,200 connections) (restructuring paper RES02060, pp. 1, 4-5).",
-          "Status labels: progress figures are from the latest disclosed ISR, not the project's current internal status."
+          "P170132 - Tajikistan Rural Electrification Project (TREP).",
+          "Objective: to (i) provide electricity access to target settlements in GBAO and Khatlon regions and (ii) improve the reliability of electricity supply for grid-connected customers in GBAO (as stated in the 2025 AF paper p. 13 and the AF financing agreement p. 6; the 2019 PAD had only the first part).",
+          "Implementing agencies: Pamir Energy Company (PEC) in GBAO and Shabakahoi Taqsimoti Barq (STB), the national distribution company, in Khatlon with the Energy Sector Project Management Unit (ESPMU); STB replaced Barqi Tojik after the sector was unbundled (Projects record; AF paper p. 20).",
+          "Commitment: IDA US$41.7 million in the Projects record - the original IDA grant D504-TJ of US$31.7 million (2019) and the first AF grant D792-TJ of US$10 million (2021); the second AF grant E497-TJ adds US$7 million, for a total project cost of US$48.7 million (AF paper pp. 13, 19). These are IDA grants; the commitment is World Bank financing, not total cost.",
+          "Closing date: 30 June 2027, extended by 18 months from 31 December 2025 by the second AF (AF paper p. 19; ISR p. 11).",
+          "Latest public implementation update: ISR seq. 13, 23 June 2026: PDO progress Satisfactory, implementation Moderately Satisfactory, risk Moderate (p. 1). It reports the project on track; the AF agreements became effective on 21 November 2025; in GBAO, 23 solar PV mini-grids and one wind-based mini-grid with storage are commissioned, the remaining six hydropower mini-grids resumed construction in April 2026 for completion by 30 November 2026, and construction of the 110/35/10 kV Sharifobod substation in Khorog started in June 2026; in Khatlon, connections in all 64 villages are complete and meters are being installed at irrigation pumping stations (p. 2). People with new or improved electricity service: 59,700 against 245,000 (p. 4). Disbursement: original grant 94.18%, first AF 100% (closed), second AF 0% (p. 10).",
+          "Key issues: the remaining hydropower mini-grids in remote areas (seasonal access), the new Khorog substation under the second AF, and the irrigation metering and rooftop-solar study, both new under the second AF; fiduciary and environmental and social risks remain Substantial (ISR pp. 2-3).",
+          "Labels: progress is from the latest disclosed ISR, not current status."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Uses the Projects API record and the latest disclosed ISR (2026-08-14); the latest restructuring paper is a plus."
+      "Uses the Projects API record and the latest disclosed ISR (2026-06-23); the 2025 AF paper is a plus."
     ],
     "grounded": [
-      "Objective, agencies, commitment amounts, dates, ratings and indicator values match the sources."
+      "Objective, agencies, amounts, dates, ratings and progress figures match the sources."
     ],
     "complete": [
       "Covers all six asks: objective, implementing agencies, commitment, closing date, latest public update, key issues."
     ],
     "scoped": [
-      "Keeps the commitment separate from total project cost and labels the implementation update as the latest disclosed ISR."
+      "Keeps the IDA commitment separate from total project cost and labels the update as the latest disclosed ISR."
     ]
   },
   "stability": "may_change",
-  "notes": "A new ISR is expected about every six months."
+  "notes": "The Projects API commitment (US$41.7m) does not yet include the second AF (US$7m). A new ISR is expected around December 2026."
 }
