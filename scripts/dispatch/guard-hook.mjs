@@ -294,7 +294,6 @@ const MAX_DEPTH = 4;
 function checkWords(rawWords, opts, depth) {
   const blockedVar = rawWords.find(namesBlockedVar);
   if (blockedVar) return block(`Setting or naming ${blockedVar.split('=')[0]} is not allowed: it changes what git, gh or the AWS CLI use.`);
-  if (rawWords.some((w) => w === 'coproc' || w === 'function')) return block('`coproc` and `function` are not allowed in dispatcher sessions. Write the commands out.');
   // `{` starts a command group wherever it stands as a word (`f() { … }`, `while x; do { … }`): check what follows
   const brace = rawWords.indexOf('{', 1);
   if (brace > 0) return checkWords(rawWords.slice(0, brace), opts, depth) || checkWords(rawWords.slice(brace + 1), opts, depth);
@@ -302,6 +301,9 @@ function checkWords(rawWords, opts, depth) {
   while (start < rawWords.length && (ASSIGN.test(rawWords[start]) || RESERVED.includes(rawWords[start]))) start += 1;
   const words = rawWords.slice(start);
   if (words.length === 0) return undefined;
+  // Bash reads `coproc` and `function` as keywords only where a command starts. Elsewhere they are plain
+  // words, such as "function" in a PR title or a heredoc line, which the lexer splits like a command.
+  if (['coproc', 'function'].includes(words[0])) return block('`coproc` and `function` are not allowed in dispatcher sessions. Write the commands out.');
   const cmd = base(words[0]);
   if (!['[', '[['].includes(words[0]) && hasVariable(words[0])) return block('A variable or substitution as the command name can\'t be checked. Write the command out.');
   if (SHELLS.includes(cmd)) {
