@@ -1,0 +1,54 @@
+{
+  "id": "Q1-02",
+  "query_id": "Q1.2",
+  "group": "Q1",
+  "tier": "search_and_retrieve",
+  "region": "East Asia & Pacific",
+  "task": "Latest documents of a type for a country",
+  "query_wording": "Show me the five most recent procurement plans for the Philippines.",
+  "turns": [
+    { "user": "Show me the five most recent procurement plans for the Philippines." }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Filter by country and document type, newest first, five rows", "filters": { "count_exact": "Philippines", "docty_exact": "Procurement Plan", "srt": "docdt", "order": "desc", "rows": "5" } },
+    { "kind": "document", "document_id": "40138875", "project_id": "P176317", "document_type": "Procurement Plan", "document_date": "2026-11-12", "title": "Philippines - EAST ASIA AND PACIFIC- P176317- Philippines Digital Infrastructure Project - Procurement Plan", "role": "Most recent (as of as_of)" },
+    { "kind": "document", "document_id": "40138702", "project_id": "P506594", "document_type": "Procurement Plan", "document_date": "2026-11-12", "title": "Philippines - EAST ASIA AND PACIFIC- P506594- Philippines Community Resilience Project - Pagkilos - Procurement Plan", "role": "Most recent (as of as_of)" },
+    { "kind": "document", "document_id": "40137625", "project_id": "P176317", "document_type": "Procurement Plan", "document_date": "2026-11-05", "title": "Philippines - EAST ASIA AND PACIFIC- P176317- Philippines Digital Infrastructure Project - Procurement Plan", "role": "Third most recent" },
+    { "kind": "document", "document_id": "40137377", "project_id": "P174137", "document_type": "Procurement Plan", "document_date": "2026-11-04", "title": "Philippines - EAST ASIA AND PACIFIC- P174137- Philippine Fisheries and Coastal Resiliency Project - Procurement Plan", "role": "Fourth/fifth (three-way tie on 2026-11-04)", "required": false },
+    { "kind": "document", "document_id": "40137379", "project_id": "P174137", "document_type": "Procurement Plan", "document_date": "2026-11-04", "title": "Philippines - EAST ASIA AND PACIFIC- P174137- Philippine Fisheries and Coastal Resiliency Project - Procurement Plan", "role": "Fourth/fifth (three-way tie on 2026-11-04)", "required": false },
+    { "kind": "document", "document_id": "40137407", "project_id": "P180379", "document_type": "Procurement Plan", "document_date": "2026-11-04", "title": "Philippines - EAST ASIA AND PACIFIC- P180379- Philippine Rural Development Project Scale-up - Procurement Plan", "role": "Fourth/fifth (three-way tie on 2026-11-04)", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "The five most recent Philippines procurement plans in Documents & Reports, by document date (newest first), as of 2026-11-23 (813 Philippines procurement plan records in total):",
+          "1. 2026-11-12 - Philippines Digital Infrastructure Project (P176317) - Procurement Plan.",
+          "2. 2026-11-12 - Philippines Community Resilience Project - Pagkilos (P506594) - Procurement Plan.",
+          "3. 2026-11-05 - Philippines Digital Infrastructure Project (P176317) - Procurement Plan.",
+          "4-5. 2026-11-04 - three plans share this date: two for the Philippine Fisheries and Coastal Resiliency Project (P174137) and one for the Philippine Rural Development Project Scale-up (P180379); any two of them complete the five.",
+          "Each with its record link. Procurement plans are re-issued often, so several entries can be versions for the same project."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the Philippines country filter and the Procurement Plan type, sorted by document date descending (not relevance)."
+    ],
+    "grounded": [
+      "Dates, project IDs, names and links match the records."
+    ],
+    "complete": [
+      "Five plans (or five plus a note on the tie), each with date, project and link."
+    ],
+    "scoped": [
+      "Makes clear the order is by document date and the list reflects what is disclosed at search time."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "Plans are disclosed every few days. After as_of, the judge should accept the five newest at run time when they are Philippines procurement plans sorted by document date."
+}

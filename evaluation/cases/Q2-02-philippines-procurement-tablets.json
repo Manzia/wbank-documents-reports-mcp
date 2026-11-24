@@ -1,0 +1,55 @@
+{
+  "id": "Q2-02",
+  "query_id": "Q2.2",
+  "group": "Q2",
+  "tier": "project_centred_reading",
+  "region": "East Asia & Pacific",
+  "task": "Extract matching rows from procurement tables",
+  "query_wording": "Which Philippine education procurement plans mention tablets or digital content? Show the package description, procurement method, and estimated cost.",
+  "turns": [
+    { "user": "Which Philippine education procurement plans mention tablets or digital content? Show the package description, procurement method, and estimated cost." }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Philippine education procurement plans", "filters": { "count_exact": "Philippines", "docty_exact": "Procurement Plan", "qterm": "education / teacher / school" }, "note": "On 2026-11-23 the education-related projects with plans are P164765 (TEACEP, 12 plans), P180936 (Infrastructure for Safer and Resilient Schools), P176749 (JSDF No Bangsamoro Child Left Behind) and older community-driven projects that match the keywords." },
+    { "kind": "project", "project_id": "P164765", "role": "Teacher Effectiveness and Competencies Enhancement Project (TEACEP): tablets and laptops" },
+    { "kind": "document", "project_id": "P164765", "document_id": "40133030", "document_type": "Procurement Plan", "document_date": "2026-10-14", "role": "Latest TEACEP plan: tablets package signed", "note": "No form-feed breaks; the STEP table text is one long page." },
+    { "kind": "document", "project_id": "P164765", "document_id": "40006776", "report_number": "STEP111864", "document_type": "Procurement Plan", "document_date": "2025-04-14", "pages": "3", "role": "Last plan with the original 45,000-tablet package" },
+    { "kind": "document", "project_id": "P164765", "document_id": "40014672", "report_number": "STEP113516", "document_type": "Procurement Plan", "document_date": "2025-05-21", "pages": "3", "role": "First plan with the reduced 16,600-tablet package", "required": false },
+    { "kind": "document", "project_id": "P176749", "document_id": "34460803", "document_type": "Procurement Plan", "pages": "4", "role": "JSDF Bangsamoro plan: IT equipment (laptops) for administration, no tablets or digital content", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Of the Philippine education projects with public procurement plans, only the Teacher Effectiveness and Competencies Enhancement Project (TEACEP, P164765; Department of Education; IBRD loan 9481-PH) has tablet packages; none lists digital learning content as such. Amounts are estimates in US$ from the STEP tables.",
+          "TEACEP, latest plan (2026-10-14, revision of a plan first approved 2024-04-18):",
+          "- TEACEP-GO-3-RFB, supply and delivery of 16,600 tablets (component 'providing adequate materials for effective teaching and learning'): Request for Bids, Open - National, single-stage one-envelope, prior review; estimated US$5,629,363.65; status Signed, with a planned completion date of 2027-04-05 (actual contract amount not yet recorded).",
+          "- TEACEP-GO-1-RFQ and its re-launch -R1, IT equipment (36 laptops): Request for Quotations; estimated US$33,752.24; both Canceled.",
+          "- Other IT packages: GO-5-RFQ IT equipment, US$265,000, and GO-2-RFQ digital duplicators, US$222,000, both Pending Implementation; GO-4-RFQ 14,160 solar-powered radios, US$297,353, plus radio airtime contracts (US$100,000 each for Region IX, Region XII and BARMM). These support distance teaching by radio, not digital content.",
+          "Change across versions: the tablet package was 45,000 tablets estimated at US$9,425,494 in the plans up to 2025-04-14 (p. 3), and 16,600 tablets at US$5,629,363.65 from the 2025-05-21 plan onward (p. 3).",
+          "Other projects: the JSDF 'No Bangsamoro Child Left Behind' plan (P176749) buys laptops and other IT equipment for administration (e.g. about US$10,400, p. 4), not tablets or learning content; the Infrastructure for Safer and Resilient Schools plan has no such items.",
+          "Coverage: the latest plan of each education project and all 12 TEACEP versions were checked for tablets."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Reads the Philippine education projects' procurement plans and finds the TEACEP tablet package."
+    ],
+    "grounded": [
+      "Description, method and estimated cost match the plan, with the plan's date cited; the estimate is not presented as a contract amount."
+    ],
+    "complete": [
+      "Gives description, method and estimated cost for each matching package and says that no plan lists digital content."
+    ],
+    "scoped": [
+      "States which plans were checked; noting the 45,000-to-16,600 change between versions is a plus."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "TEACEP is active, so new plan versions may change statuses."
+}

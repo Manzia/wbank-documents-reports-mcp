@@ -1,0 +1,61 @@
+{
+  "id": "Q1-04",
+  "query_id": "Q1.4",
+  "group": "Q1",
+  "tier": "search_and_retrieve",
+  "region": "Middle East & North Africa",
+  "task": "Keyword search with language and two-country filter",
+  "query_wording": "Find French-language reports on teacher training for Morocco or Tunisia.",
+  "turns": [
+    { "user": "Find French-language reports on teacher training for Morocco or Tunisia." }
+  ],
+  "expected_sources": [
+    {
+      "kind": "search",
+      "api": "wds",
+      "role": "Keyword search (French and English terms) with the French language filter and either country",
+      "filters": { "qterm": "formation des enseignants / enseignants / teacher training", "lang_exact": "French", "count_exact": "Morocco or Tunisia" },
+      "note": "The French stem 'enseign-' also matches 'enseignements' (lessons) and 'enseignement' (education in general), so many hits are not about teacher training."
+    },
+    { "kind": "document", "document_id": "40095361", "report_number": "209429", "document_type": "Report", "document_date": "2023-12-31", "title": "Composante Learning and Evaluation du Pré-Test Teaching at the Right Level (TaRL) : Résultats de l’Évaluation de Processus", "role": "Morocco: TaRL process evaluation covering teacher and mentor training" },
+    { "kind": "document", "document_id": "40076559", "report_number": "207313", "document_type": "Working Paper", "document_date": "2025-12-17", "title": "Quels Enseignements Pouvons-Nous Tirer de l'Expansion de l'Enseignement Préscolaire au Maroc ?", "role": "Morocco: preschool expansion, with foundations recruiting and training teachers" },
+    { "kind": "document", "document_id": "40095354", "report_number": "209427", "document_type": "Report", "document_date": "2026-04-06", "title": "Rapport de la Phase de Pré-Test de TaRL : Analyse des Résultats de l’Apprentissage, des Enseignements et des Recommandations", "role": "Morocco: TaRL pre-test results", "required": false },
+    { "kind": "document", "document_id": "32149055", "report_number": "PAD3157", "document_type": "Project Appraisal Document", "document_date": "2019-05-30", "title": "Maroc - Project de Programme d'Appui au Secteur de l'Education", "role": "Morocco: education sector support program (French PAD)", "required": false },
+    { "kind": "document", "document_id": "8877817", "report_number": "ICR50", "document_type": "Implementation Completion and Results Report", "document_date": "2007-03-29", "title": "Le Projet d’amélioration du system éducatif tunisien (PAQSET)", "role": "Tunisia: older education quality program", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "French-language World Bank documents on teacher training for Morocco or Tunisia (catalog metadata search; few records are about teacher training specifically):",
+          "Morocco:",
+          "- Composante Learning and Evaluation du Pré-Test Teaching at the Right Level (TaRL): Résultats de l'Évaluation de Processus (Report 209429, 2023-12-31): process evaluation of the TaRL pre-test run by the Fondation Sanady for the INDH, covering the training of teachers and mentors. http://documents.worldbank.org/curated/en/099040326141039051",
+          "- Quels Enseignements Pouvons-Nous Tirer de l'Expansion de l'Enseignement Préscolaire au Maroc ? (Working Paper 207313, Early Learning Partnership series, 2025-12-17): foundations played a key role in recruiting and training preschool teachers. http://documents.worldbank.org/curated/en/099054412172524939",
+          "- Related TaRL reports: Rapport de la Phase de Pré-Test de TaRL (209427, 2026-04-06) and Évaluation de l'Impact des Programmes Éducatifs TaRL et Sanady Classique au Maroc (209425, 2024-12-31).",
+          "- Project document: Maroc - Projet de Programme d'Appui au Secteur de l'Éducation (PAD3157, 2019-05-30), the appraisal document of the education sector support program.",
+          "Tunisia: no recent French-language report on teacher training; older records are the education quality improvement program (PAQSET) appraisal documents (2000, 2004) and its completion report (ICR, 2007).",
+          "Many hits for 'enseignants' are false matches on 'enseignements' (lessons learned), e.g. youth employment, urban resilience and COVID-19 household surveys; they are not teacher-training reports."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Applies the French language filter and covers both Morocco and Tunisia; returns at least one of the TaRL reports (209429 or 209427) or the preschool working paper (207313)."
+    ],
+    "grounded": [
+      "Every listed record exists with the stated title, country, language and date."
+    ],
+    "complete": [
+      "Covers both countries (saying if Tunisia has little) and gives title, date and link per record."
+    ],
+    "scoped": [
+      "Says the matches come from a metadata search and does not present 'enseignements' (lessons) records as teacher-training reports."
+    ]
+  },
+  "stability": "stable",
+  "notes": "A thin-result case: honest coverage and filtering matter more than length."
+}
