@@ -43,12 +43,20 @@ jobs:
             HEAD="${{ github.sha }}"
           fi
 
-          # First push of a new branch has no `before`.
-          if [[ -z "${BASE}" || "${BASE}" == "0000000000000000000000000000000000000000" ]]; then
-            BASE="HEAD~1"
+          # The first push of a branch has no `before`, and after a force push
+          # `before` is on no branch, so this checkout doesn't have it (git
+          # diff failed with "bad object" and every job was skipped). Compare
+          # with where the branch left main instead; on main, the last commit.
+          if [[ -z "${BASE}" || "${BASE}" =~ ^0+$ ]] || ! git cat-file -e "${BASE}^{commit}" 2>/dev/null; then
+            BASE=$(git merge-base origin/main "${HEAD}")
+            if [[ "${BASE}" == "$(git rev-parse "${HEAD}")" ]]; then
+              BASE="${HEAD}~1"
+            fi
+            echo "Comparing with ${BASE} (no usable before commit)"
           fi
 
-          CHANGED=$(git diff --name-only "${BASE}" "${HEAD}" || true)
+          # No `|| true`: a failed diff must fail the job, not read as "nothing changed".
+          CHANGED=$(git diff --name-only "${BASE}" "${HEAD}")
           echo "Changed files:"
           echo "${CHANGED}"
 
