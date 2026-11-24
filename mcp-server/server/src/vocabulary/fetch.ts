@@ -117,7 +117,9 @@ class Fetcher {
         }
         // Records without the partition field are in no partition, so their values may be missing.
         if (complete && covered < facet.total) {
-            state.notes.push(`${facet.total - covered} records${where} have no ${partition}`);
+            state.notes.push(
+                `${facet.total - covered} records${where} have no ${partition === YEARS ? 'date' : partition}`,
+            );
             complete = false;
         }
         return { facet, complete };

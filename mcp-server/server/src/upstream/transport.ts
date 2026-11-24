@@ -271,7 +271,7 @@ export class Transport {
                     retry: true,
                     error: new UpstreamError(
                         'timeout',
-                        `${this.label} did not answer within ${this.config.timeoutMs / 1000} seconds, twice. Try again shortly.`,
+                        `${this.label} did not answer within ${this.config.timeoutMs / 1000} seconds, even after a retry. Try again shortly.`,
                     ),
                 };
             }
