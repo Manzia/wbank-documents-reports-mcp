@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import { callHaiku, type HaikuFailure, type HaikuOptions } from './client';
+import { callHaiku, logFallback, type HaikuFailure, type HaikuOptions } from './client';
 
 // Design §7, query reformulation: a free-text query becomes 2 to 3 keyword variants that the search tools run in
 // parallel. Without Haiku, plain keyword logic gives the query as typed and its keywords.
@@ -61,24 +61,24 @@ const variantOf = (raw: string): string | undefined => {
     return variant && variant.length <= MAX_VARIANT_CHARS ? variant : undefined;
 };
 
-const keywordVariants = (query: string): string[] => {
-    const keywords = extractKeywords(query)
-        .map((k) => (/\s/.test(k) ? `"${k}"` : k))
-        .join(' ');
-    return [variantOf(query.slice(0, MAX_VARIANT_CHARS)), variantOf(keywords)].filter((v): v is string => !!v);
-};
-
-const merge = (...lists: string[][]): string[] => {
+const merge = (...lists: (string | undefined)[][]): string[] => {
     const out: string[] = [];
     const seen = new Set<string>();
     for (const variant of lists.flat()) {
-        const key = variant.toLowerCase();
-        if (!seen.has(key) && out.length < MAX_VARIANTS) {
+        const key = variant?.toLowerCase();
+        if (variant && key && !seen.has(key) && out.length < MAX_VARIANTS) {
             seen.add(key);
             out.push(variant);
         }
     }
     return out;
+};
+
+const keywordVariants = (query: string): string[] => {
+    const keywords = extractKeywords(query)
+        .map((k) => (/\s/.test(k) ? `"${k}"` : k))
+        .join(' ');
+    return merge([variantOf(query.slice(0, MAX_VARIANT_CHARS)), variantOf(keywords)]);
 };
 
 const output = z.object({ variants: z.array(z.string()).min(1).max(MAX_VARIANTS) });
@@ -113,10 +113,15 @@ const remembered = new Map<string, string[]>();
 const MAX_REMEMBERED = 1_000;
 
 export const reformulateQuery = async (query: string, options: HaikuOptions = {}): Promise<Reformulation> => {
-    const text = clean(query).slice(0, MAX_QUERY_CHARS);
-    const fallback = keywordVariants(text);
-    if (!text) return { query, variants: [], method: 'keywords' };
-    const key = text.toLowerCase();
+    // Haiku sees the request with its punctuation, but without control characters or anything tag-like.
+    const text = query
+        .replace(/[\p{Cc}\p{Cf}<>]/gu, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .slice(0, MAX_QUERY_CHARS);
+    const fallback = keywordVariants(clean(text));
+    if (!fallback.length) return { query, variants: [], method: 'keywords' };
+    const key = clean(text).toLowerCase();
     const known = remembered.get(key);
     if (known) return { query, variants: known, method: 'haiku' };
     const result = await callHaiku(
@@ -124,8 +129,11 @@ export const reformulateQuery = async (query: string, options: HaikuOptions = {}
         options,
     );
     if (!result.ok) return { query, variants: fallback, method: 'keywords', fallback: result.reason };
-    const variants = result.value.variants.map(variantOf).filter((v): v is string => !!v);
-    if (!variants.length) return { query, variants: fallback, method: 'keywords', fallback: 'invalid-output' };
+    const variants = merge(result.value.variants.map(variantOf));
+    if (!variants.length) {
+        logFallback('reformulation', 'invalid-output', 'no usable variant');
+        return { query, variants: fallback, method: 'keywords', fallback: 'invalid-output' };
+    }
     const merged = merge(variants, variants.length < 2 ? fallback : []);
     if (remembered.size >= MAX_REMEMBERED) remembered.delete(remembered.keys().next().value as string);
     remembered.set(key, merged);
