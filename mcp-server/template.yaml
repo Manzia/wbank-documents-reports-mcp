@@ -684,6 +684,8 @@ Resources:
         - 216.239.32.0/19
         - 216.252.220.0/22
 
+  # Unused while the distribution is IPv4 only (see AliasRecord); kept so the
+  # rules stay complete if IPv6 is turned on.
   AiPlatformIpv6Set:
     Type: AWS::WAFv2::IPSet
     Properties:
@@ -820,7 +822,7 @@ Resources:
           SslSupportMethod: sni-only
           MinimumProtocolVersion: TLSv1.2_2021
         HttpVersion: http2
-        IPV6Enabled: true
+        IPV6Enabled: false
         WebACLId: !GetAtt CloudFrontWebAcl.Arn
         Origins:
           - Id: gateway
@@ -844,22 +846,18 @@ Resources:
           OriginRequestPolicyId: b689b0a8-53d0-40ab-baf2-68738e2966ac
           Compress: false
 
-  # Z2FDTNDATAQYW2 is the fixed hosted zone ID for CloudFront alias targets.
-  AliasRecords:
-    Type: AWS::Route53::RecordSetGroup
+  # IPv4 only (IPV6Enabled false, no AAAA): WAF counts rate limits per IP
+  # address, and one IPv6 client can rotate through many. Z2FDTNDATAQYW2 is
+  # the fixed hosted zone ID for CloudFront alias targets.
+  AliasRecord:
+    Type: AWS::Route53::RecordSet
     Properties:
       HostedZoneId: !Ref HostedZoneId
-      RecordSets:
-        - Name: worldbank-mcp.manzia.com
-          Type: A
-          AliasTarget:
-            DNSName: !GetAtt Distribution.DomainName
-            HostedZoneId: Z2FDTNDATAQYW2
-        - Name: worldbank-mcp.manzia.com
-          Type: AAAA
-          AliasTarget:
-            DNSName: !GetAtt Distribution.DomainName
-            HostedZoneId: Z2FDTNDATAQYW2
+      Name: worldbank-mcp.manzia.com
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt Distribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2
 
 Outputs:
   FunctionUrl:
