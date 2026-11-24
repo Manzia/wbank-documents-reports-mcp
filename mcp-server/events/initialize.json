@@ -1,0 +1,31 @@
+{
+  "version": "2.0",
+  "routeKey": "$default",
+  "rawPath": "/mcp",
+  "rawQueryString": "",
+  "headers": {
+    "host": "example.lambda-url.us-east-1.on.aws",
+    "content-type": "application/json",
+    "accept": "application/json, text/event-stream"
+  },
+  "requestContext": {
+    "accountId": "anonymous",
+    "apiId": "example",
+    "domainName": "example.lambda-url.us-east-1.on.aws",
+    "domainPrefix": "example",
+    "http": {
+      "method": "POST",
+      "path": "/mcp",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "192.0.2.1",
+      "userAgent": "sam-local"
+    },
+    "requestId": "sample-request",
+    "routeKey": "$default",
+    "stage": "$default",
+    "time": "23/Nov/2026:12:00:00 +0000",
+    "timeEpoch": 1795435200000
+  },
+  "body": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{},\"clientInfo\":{\"name\":\"sam-local\",\"version\":\"1.0.0\"}}}",
+  "isBase64Encoded": false
+}

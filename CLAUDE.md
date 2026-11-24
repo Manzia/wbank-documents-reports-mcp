@@ -36,11 +36,13 @@ Backend only — an AWS SAM project. **No frontend, no Next.js.**
 ├── mcp-server/                 # AWS SAM root
 │   ├── template.yaml           #   stack definition
 │   ├── samconfig.toml          #   SAM CLI defaults (stack name, build, validate)
-│   ├── hello-world/            #   Lambda function package (esbuild, TypeScript)
-│   │   ├── app.ts
+│   ├── server/                 #   MCP server package (esbuild, TypeScript; SDK versions pinned)
+│   │   ├── src/handlers/mcp.ts #     Lambda entry: createMcpHandler (stateless) → streamHandle
+│   │   ├── src/tools/          #     tool registry + one module per tool
 │   │   ├── package.json        #   lint | compile | unit | test | test:coverage
 │   │   └── tests/unit/
-│   └── events/                 #   sample invoke events
+│   ├── waf/                    #   AI-platform IP ranges (MCP-111)
+│   └── events/                 #   sample invoke events (function URL)
 ├── context/                    # not built or deployed
 │   ├── design/                 #   architecture (approved) + expected queries
 │   ├── tasks/                  #   implementation plan, task file, agent rules, owner runbook
@@ -56,14 +58,13 @@ Backend only — an AWS SAM project. **No frontend, no Next.js.**
         └── deploy.yml          #   workflow_run-triggered CD to prod
 ```
 
-`mcp-server/hello-world/` is the SAM scaffold's placeholder function. When it is
-renamed or replaced, update `package-path` in `ci.yml` and the
-`cache-dependency-path` in `deploy.yml` to match.
+`mcp-server/server/` is named in `package-path` in `ci.yml` and in
+`cache-dependency-path` in `deploy.yml`. If it moves, update both.
 
 ## Commands
 
 ```sh
-# mcp-server/hello-world/
+# mcp-server/server/
 npm ci
 npm run lint            # eslint (with --fix)
 npm run compile         # tsc type-check (noEmit)
@@ -73,7 +74,7 @@ npm run test:coverage   # jest + coverage/coverage-summary.json (CI gate reads t
 # mcp-server/
 sam validate
 sam build --parallel
-sam local invoke HelloWorldFunction -e events/event.json
+sam local invoke McpServerFunction -e events/initialize.json   # needs Docker
 
 # scripts/dispatch/ (local dispatcher)
 npm ci && npm test

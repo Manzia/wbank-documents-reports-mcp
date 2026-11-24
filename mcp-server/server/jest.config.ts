@@ -4,14 +4,18 @@
  */
 
 export default {
+    // Type-checking is `npm run compile`; Jest only transpiles. Hono and its Lambda adapter ship ES modules
+    // only, so they are transpiled to CommonJS too.
     transform: {
-        '^.+\\.ts?$': 'ts-jest',
+        '^.+\\.[tj]s$': ['ts-jest', { tsconfig: { module: 'commonjs', moduleResolution: 'node10', allowJs: true, esModuleInterop: false } }],
     },
+    transformIgnorePatterns: ['/node_modules/(?!(hono|@hono)/)'],
     clearMocks: true,
     collectCoverage: true,
+    collectCoverageFrom: ['src/**/*.ts'],
     coverageDirectory: 'coverage',
-    coverageProvider: 'v8',
-    testMatch: ['**/tests/unit/*.test.ts'],
+    setupFiles: ['<rootDir>/tests/setup/awslambda.ts'],
+    testMatch: ['**/tests/unit/**/*.test.ts'],
     // The dispatcher's sandbox blocks watchman (it writes a launchd agent), which crashes Jest (plan G11)
     watchman: false,
 };
