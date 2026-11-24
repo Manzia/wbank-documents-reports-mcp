@@ -1,0 +1,58 @@
+{
+  "rows": 10,
+  "os": "0",
+  "page": "1",
+  "total": "1",
+  "projects": {
+    "P117635": {
+      "id": "P117635",
+      "project_name": "Kenya Water Security and Climate Resilience Project",
+      "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P117635",
+      "boardapprovaldate": "2013-06-18T00:00:00Z",
+      "closingdate": "5/31/2025 12:00:00 AM",
+      "status": "Active",
+      "countryshortname": "Kenya",
+      "countrycode": [
+        "KE"
+      ],
+      "regionname": "Eastern and Southern Africa",
+      "curr_project_cost": "146060000",
+      "curr_total_commitment": "131.26",
+      "totalcommamt": "174,940,000",
+      "totalamt": "155,000,000",
+      "idacommamt": "155,000,000",
+      "ibrdcommamt": "0",
+      "lendinginstr": "Investment Project Financing",
+      "impagency": "The National Land Commission, Ministry of Water, Sanitation and Irrigation",
+      "borrower": "Republic of Kenya",
+      "pdo": "(a) increase access to irrigation water for project beneficiaries and (b) enhance the institutional framework and strengthen capacity for water security and climate resilience in certain areas of the territory of the Recipient.",
+      "sector": [
+        {
+          "Name": "Agricultural markets, commercialization and agri-business",
+          "code": "YX"
+        },
+        {
+          "Name": "Water Supply",
+          "code": "WX"
+        },
+        {
+          "Name": "Irrigation and Drainage",
+          "code": "AX"
+        },
+        {
+          "Name": "Other Water Supply, Sanitation and Waste Management",
+          "code": "WX"
+        },
+        {
+          "Name": "Public Administration - Water, Sanitation and Waste Management",
+          "code": "WX"
+        }
+      ],
+      "approvalfy": "2013",
+      "envassesmentcategorycode": "A",
+      "proj_last_upd_date": "2024-05-22T00:00:00Z",
+      "projectstatusdisplay": "Active"
+    }
+  },
+  "facets": {}
+}

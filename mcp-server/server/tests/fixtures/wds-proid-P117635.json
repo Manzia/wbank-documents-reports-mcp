@@ -1,0 +1,127 @@
+{
+  "rows": 2,
+  "os": 0,
+  "page": 1,
+  "total": 129,
+  "documents": {
+    "D40103324": {
+      "id": "40103324",
+      "last_modified_date": "2026-05-16T21:07:01Z",
+      "admreg": "Eastern and Southern Africa",
+      "authors": {
+        "0": {
+          "author": "IEG Review Team"
+        }
+      },
+      "count": "Kenya",
+      "docna": {
+        "0": {
+          "docna": "Kenya - KE Enhancing Wat Security   Climate Res"
+        }
+      },
+      "docty": "Implementation Completion Report Review",
+      "projn": "KE-Kenya Water Security and Climate Resilience Project -- P117635",
+      "subsc": "FY17 - Agricultural markets",
+      "theme": "FY17 - Climate change",
+      "prdln": "IBRD/IDA",
+      "seccl": "Public",
+      "lang": "English",
+      "lndinstr": {
+        "0": {
+          "lndinstr": "Investment Project Financing"
+        }
+      },
+      "lndinstr_exact": "Investment Project Financing",
+      "majtheme": "FY17 - Finance",
+      "sectr": {
+        "0": {
+          "sector": "FY17 - Industry, Trade and Services"
+        },
+        "1": {
+          "sector": "FY17 - Agriculture, Fishing and Forestry"
+        },
+        "2": {
+          "sector": "FY17 - Water, Sanitation and Waste Management"
+        }
+      },
+      "repnb": "ICRR0024889",
+      "docdt": "2026-05-15T04:00:00Z",
+      "datestored": "2026-05-15T16:25:14Z",
+      "majdocty": "Project Documents",
+      "display_title": "Kenya - KE Enhancing Wat Security   Climate Res",
+      "disclosure_date": "2026-05-15T04:00:00Z",
+      "pdfurl": "https://documents.worldbank.org/curated/en/099051526122584470/pdf/P117635-9bf7728d-7c1c-44c3-ba0a-c460082a1291.pdf",
+      "txturl": "https://documents.worldbank.org/curated/en/099051526122584470/text/P117635-9bf7728d-7c1c-44c3-ba0a-c460082a1291.txt",
+      "EnvironmentalCategory": "A",
+      "disclstat": "Disclosed",
+      "chronical_docm_id": "P117635-9bf7728d-7c1c-44c3-ba0a-c460082a1291",
+      "versiontyp": "Final",
+      "projectid": "P117635",
+      "guid": "099051526122584470",
+      "prdln_exact": "IBRD/IDA",
+      "available_in": "English",
+      "fullavailablein": [],
+      "url": "http://documents.worldbank.org/curated/en/099051526122584470"
+    },
+    "D40084009": {
+      "id": "40084009",
+      "last_modified_date": "2026-02-05T12:06:06Z",
+      "admreg": "Eastern and Southern Africa",
+      "authors": {
+        "0": {
+          "author": "Munge, James"
+        }
+      },
+      "count": "Kenya",
+      "docna": {
+        "0": {
+          "docna": "Kenya - EASTERN AND SOUTHERN AFRICA - P117635 - Kenya Water Security and Climate Resilience Project - Audited Financial Statement"
+        }
+      },
+      "docty": "Auditing Document",
+      "projn": "KE-Kenya Water Security and Climate Resilience Project -- P117635",
+      "subsc": "FY17 - Agricultural markets",
+      "theme": "FY17 - Climate change",
+      "prdln": "IBRD/IDA",
+      "seccl": "Public",
+      "lang": "English",
+      "lndinstr": {
+        "0": {
+          "lndinstr": "Investment Project Financing"
+        }
+      },
+      "lndinstr_exact": "Investment Project Financing",
+      "majtheme": "FY17 - Finance",
+      "sectr": {
+        "0": {
+          "sector": "FY17 - Industry, Trade and Services"
+        },
+        "1": {
+          "sector": "FY17 - Agriculture, Fishing and Forestry"
+        },
+        "2": {
+          "sector": "FY17 - Water, Sanitation and Waste Management"
+        }
+      },
+      "repnb": "SCA0097129",
+      "docdt": "2025-12-22T05:00:00Z",
+      "datestored": "2026-02-02T12:40:05Z",
+      "majdocty": "Project Documents",
+      "display_title": "Kenya - EASTERN AND SOUTHERN AFRICA - P117635 - Kenya Water Security and Climate Resilience Project - Audited Financial Statement",
+      "disclosure_date": "2026-02-02T05:00:00Z",
+      "pdfurl": "https://documents.worldbank.org/curated/en/099020226074046547/pdf/P117635-2ee3030a-1208-429f-bf63-10046dd5f9b9.pdf",
+      "txturl": "https://documents.worldbank.org/curated/en/099020226074046547/text/P117635-2ee3030a-1208-429f-bf63-10046dd5f9b9.txt",
+      "EnvironmentalCategory": "A",
+      "disclstat": "Disclosed",
+      "chronical_docm_id": "P117635-2ee3030a-1208-429f-bf63-10046dd5f9b9",
+      "versiontyp": "Final",
+      "projectid": "P117635",
+      "guid": "099020226074046547",
+      "prdln_exact": "IBRD/IDA",
+      "available_in": "English",
+      "fullavailablein": [],
+      "url": "http://documents.worldbank.org/curated/en/099020226074046547"
+    },
+    "facets": {}
+  }
+}

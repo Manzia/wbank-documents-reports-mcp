@@ -1,0 +1,65 @@
+{
+  "rows": 1,
+  "os": "0",
+  "page": "1",
+  "total": "22729",
+  "projects": {
+    "P505244": {
+      "id": "P505244",
+      "project_name": "Boosting Green Finance, Investment and Trade in Rwanda",
+      "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P505244",
+      "project_abstract": {
+        "cdata!": "The development objective of the Boosting Green Finance, Investment and Trade in Rwanda Project is to support reforms aimed at creating a level playing field an"
+      }
+    }
+  },
+  "facets": {
+    "regionname_exact": {
+      "0": {
+        "count": "3562",
+        "name": "Latin America and Caribbean",
+        "label": "Latin America and Caribbean"
+      },
+      "1": {
+        "count": "3246",
+        "name": "Eastern and Southern Africa",
+        "label": "Eastern and Southern Africa"
+      },
+      "2": {
+        "count": "3074",
+        "name": "East Asia and Pacific",
+        "label": "East Asia and Pacific"
+      },
+      "3": {
+        "count": "2948",
+        "name": "Western and Central Africa",
+        "label": "Western and Central Africa"
+      },
+      "4": {
+        "count": "2688",
+        "name": "Europe and Central Asia",
+        "label": "Europe and Central Asia"
+      },
+      "5": {
+        "count": "2441",
+        "name": "South Asia",
+        "label": "South Asia"
+      },
+      "6": {
+        "count": "1634",
+        "name": "Middle East and North Africa",
+        "label": "Middle East and North Africa"
+      },
+      "7": {
+        "count": "159",
+        "name": "Africa",
+        "label": "Africa"
+      },
+      "8": {
+        "count": "124",
+        "name": "Other",
+        "label": "Other"
+      }
+    }
+  }
+}

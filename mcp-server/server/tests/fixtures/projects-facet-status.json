@@ -1,0 +1,31 @@
+{
+  "rows": 0,
+  "os": "0",
+  "page": "0",
+  "total": "22729",
+  "projects": {},
+  "facets": {
+    "status_exact": {
+      "0": {
+        "count": "14602",
+        "name": "Closed",
+        "label": "Closed"
+      },
+      "1": {
+        "count": "2666",
+        "name": "Active",
+        "label": "Active"
+      },
+      "2": {
+        "count": "1909",
+        "name": "Dropped",
+        "label": "Dropped"
+      },
+      "3": {
+        "count": "700",
+        "name": "Pipeline",
+        "label": "Pipeline"
+      }
+    }
+  }
+}

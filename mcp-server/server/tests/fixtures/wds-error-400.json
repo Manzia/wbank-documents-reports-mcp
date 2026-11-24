@@ -1,0 +1,5 @@
+{
+  "Debug": true,
+  "error": "400 - {\"error\":{\"code\":\"\",\"message\":\"The request is invalid. Details: Cannot convert the literal 'abc' to the expected type 'Edm.Int32'.\"}}",
+  "RequestUrl": "(internal search endpoint, removed)"
+}
