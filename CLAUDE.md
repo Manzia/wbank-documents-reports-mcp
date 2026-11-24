@@ -135,8 +135,15 @@ The build follows `context/tasks/wbank-mcp-implementation-plan.md` (tasks `MCP-1
   under the HARD RULE above.
 - Steps: `sam validate` → `rm -rf .aws-sam/` → `sam build --no-cached` →
   `sam deploy --stack-name wbank-docs-reports-mcp-prod --s3-bucket <artifacts>
-  --no-confirm-changeset --no-fail-on-empty-changeset --force-upload`, then
-  prints the stack outputs.
+  --no-confirm-changeset --no-fail-on-empty-changeset --force-upload` →
+  **re-sync gateway target `wb`** (`synchronize-gateway-targets`, then waits
+  for `READY` with a fresh `lastSynchronizedAt`; fails the job otherwise,
+  because the gateway caches the tool list) → prints the stack outputs.
+- The AgentCore gateway is `Retain` (deletion and replacement). Deleting the
+  stack, or a change that replaces it, leaves the old gateway behind; delete
+  it by hand (disassociate its web ACL first). The origin secret never
+  appears in logs or outputs; deploy steps must not read the WAF web ACL or
+  the secret.
 - `concurrency: deploy-prod` on the **deploy job** (not the workflow) queues
   overlapping deploys rather than colliding on an in-progress stack update.
   The group holds one running and one pending entry, and a newer entry cancels
