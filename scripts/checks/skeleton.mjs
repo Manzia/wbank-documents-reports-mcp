@@ -313,8 +313,11 @@ function metricSum(webAcl, metric, rule, start, end) {
   return { sum: points.reduce((s, p) => s + p.Sum, 0), points: points.map((p) => [p.Timestamp, p.Sum]) };
 }
 
+// Decision A (Roy, 2026-11-24, record F1): the rate rules count only an IP over its limit, so test traffic
+// can't make them count. Check 6 passes when nothing was blocked and the traffic was counted as allowed;
+// the rate rules' counts are reported, and the rules are judged from real traffic in the COUNT week (MCP-170).
 function check6(since) {
-  const title = 'CloudFront WAF: CountedRequests for rules 2–3, no BlockedRequests for this traffic';
+  const title = 'CloudFront WAF: no BlockedRequests for this traffic, counted as allowed; rate rules 2–3 reported';
   const res = aws(['cloudformation', 'describe-stack-resource', '--stack-name', STACK, '--logical-resource-id', 'CloudFrontWebAcl']);
   if (!res.ok) return report(6, title, 'BLOCKED', `describe-stack-resource: ${res.error}`);
   const webAcl = res.data.StackResourceDetail.PhysicalResourceId.split('|')[0];
@@ -330,7 +333,7 @@ function check6(since) {
   const counted = RATE_RULES.map((r) => `${r} ${m[`counted:${r}`].sum}`);
   const problems = [];
   if (m.blocked.sum > 0) problems.push(`${m.blocked.sum} blocked`);
-  for (const r of RATE_RULES) if (!(m[`counted:${r}`].sum > 0)) problems.push(`no CountedRequests for ${r}`);
+  if (!(m.allowed.sum > 0)) problems.push('no AllowedRequests yet (metrics may not have landed)');
   report(6, title, problems.length ? 'FAIL' : 'PASS',
     `${start} to ${end}: allowed ${m.allowed.sum}, blocked ${m.blocked.sum}, counted ${counted.join(', ')}${problems.length ? `; ${problems.join('; ')}` : ''}`,
     { webAcl, start, end, metrics: m, problems });
