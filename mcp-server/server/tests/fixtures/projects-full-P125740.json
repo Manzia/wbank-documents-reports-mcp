@@ -1,0 +1,530 @@
+{
+ "rows": 5,
+ "os": "0",
+ "page": "1",
+ "total": "794",
+ "projects": {
+  "P125740": {
+   "themev2_level1_exact": [
+    "Human Development and Gender",
+    "Public Sector Management"
+   ],
+   "themev2_level2_exact": [
+    "Health Systems and Policies",
+    "Public Administration"
+   ],
+   "themev2_level3_exact": [
+    "Health System Strengthening",
+    "Municipal Institution Building"
+   ],
+   "curr_project_cost": "2721800000",
+   "curr_total_commitment": "1062.2",
+   "curr_ibrd_commitment": "0",
+   "curr_ida_commitment": "100",
+   "id": "P125740",
+   "projectfinancialtype": [
+    "Other",
+    "Other",
+    "IDA"
+   ],
+   "regionname": "Eastern and Southern Africa",
+   "countryname": [
+    "United Republic of Tanzania"
+   ],
+   "countryname_exact": [
+    "United Republic of Tanzania"
+   ],
+   "prodline": "PE",
+   "lendinginstr": "Investment Project Financing",
+   "lendinginstrtype": "IN",
+   "supplementprojectflg": "N",
+   "projectstatusdisplay": "Closed",
+   "project_name": "Tanzania - Basic Health Services Project",
+   "project_name_exact": "Tanzania - Basic Health Services Project",
+   "board_approval_month": "December",
+   "board_approval_year": "2011",
+   "totalamt": "100,000,000",
+   "borrower": "Ministry of Finance",
+   "impagency": "Ministry of Health and Social Welfare, Project Coordinator, Regional Administration and Local Government",
+   "countrycode": [
+    "TZ"
+   ],
+   "countryshortname": "Tanzania",
+   "indextype": "extprojdetails",
+   "sector1": {
+    "Name": "Health",
+    "Percent": 85
+   },
+   "sector2": {
+    "Name": "Sub-National Government",
+    "Percent": 12
+   },
+   "sector3": {
+    "Name": "Public Administration - Health",
+    "Percent": 3
+   },
+   "sector": [
+    {
+     "Name": "Public Administration - Health",
+     "code": "HX"
+    },
+    {
+     "Name": "Sub-National Government",
+     "code": "BX"
+    },
+    {
+     "Name": "Health",
+     "code": "HX"
+    }
+   ],
+   "mjsector": [
+    {
+     "Name": "Health",
+     "code": "HX"
+    },
+    {
+     "Name": "Public Administration",
+     "code": "BX"
+    },
+    {
+     "Name": "Health",
+     "code": "HX"
+    }
+   ],
+   "mjsectorcode": [
+    "HX",
+    "BX",
+    "HX"
+   ],
+   "theme1": "Health system performance!$!70!$!67",
+   "theme2": "Decentralization!$!30!$!26",
+   "theme": [
+    "Decentralization",
+    "Health system performance"
+   ],
+   "financier1": "!$!IDA50290",
+   "totalcommamt": "100,000,000",
+   "projectfinancialtype_exact": [
+    "Other",
+    "Other",
+    "IDA"
+   ],
+   "project_name_srt": "Tanzania - Basic Health Services Project",
+   "totalcommamt_srt": "100.0",
+   "lang": [
+    "French",
+    "Russian",
+    "Spanish",
+    "Arabic",
+    "Chinese",
+    "Portuguese",
+    "English"
+   ],
+   "lang_exact": [
+    "French",
+    "Russian",
+    "Spanish",
+    "Arabic",
+    "Chinese",
+    "Portuguese",
+    "English"
+   ],
+   "approvalfy": "2012",
+   "source": [
+    "IBRD"
+   ],
+   "prodline_exact": "PE",
+   "regionname_exact": "Eastern and Southern Africa",
+   "lendinginstr_exact": "Investment Project Financing",
+   "lendinginstrtype_exact": "IN",
+   "borrower_exact": "Ministry of Finance",
+   "supplementprojectflg_exact": "N",
+   "impagency_exact": "Ministry of Health and Social Welfare, Project Coordinator, Regional Administration and Local Government",
+   "status_exact": "Closed",
+   "sector_exact": [
+    "Public Administration - Health",
+    "Sub-National Government",
+    "Health"
+   ],
+   "mjsector_exact": [
+    "Health",
+    "Public Administration",
+    "Health"
+   ],
+   "mjsectorcode_exact": [
+    "HX",
+    "BX",
+    "HX"
+   ],
+   "theme_exact": [
+    "Decentralization",
+    "Health system performance"
+   ],
+   "board_approval_month_exact": "December",
+   "board_approval_year_exact": "2011",
+   "countrycode_exact": [
+    "TZ"
+   ],
+   "countryshortname_exact": "Tanzania",
+   "mjtheme": [
+    "Public sector governance",
+    "Human development"
+   ],
+   "sectorcode": [
+    "HG",
+    "BH",
+    "HF"
+   ],
+   "sectorcode_exact": [
+    "HG",
+    "BH",
+    "HF"
+   ],
+   "themecode": "67,26",
+   "themecode_exact": [
+    "67",
+    "26"
+   ],
+   "mjthemecode": "2,8",
+   "mjthemecode_exact": "2,8",
+   "goal1": "Corporate Advocacy Priorities!$!CAP",
+   "goal2": "Corporate Advocacy Priorities!$!CAP",
+   "fiscalyear": "2012",
+   "fiscalyear_exact": 2012,
+   "project_gp_info": "<PROJECT_GP_MAPPING PROJECTID=\"P125740\"><GP_PRACTICE_DETAILS><GP_PRACTICE_CODE>HNP</GP_PRACTICE_CODE><GP_PRACTICE_NAME><![CDATA[Health, Nutrition & Population]]",
+   "theme_namecodelist": [
+    "Human Development and Gender~60$Health Systems and Policies~63$Health System Strengthening~631",
+    "Public Sector Management~40$Public Administration~43$Municipal Institution Building~437"
+   ],
+   "theme_level1data": [
+    "Human Development and Gender~60",
+    "Public Sector Management~40"
+   ],
+   "theme_namecodelist_exact": [
+    "Human Development and Gender~60$Health Systems and Policies~63$Health System Strengthening~631",
+    "Public Sector Management~40$Public Administration~43$Municipal Institution Building~437"
+   ],
+   "theme_level1data_exact": [
+    "Human Development and Gender~60",
+    "Public Sector Management~40"
+   ],
+   "indicatormappingdata": "<Results><Indicators ProjectId=\"P125740\" FormId=\"FRM0096604\" SequenceNumber=\"7\" FromDate=\"2014-05-29T00:00:00\"/><Indicators ProjectId=\"P125740\" FormId=\"FRM0281719\" SequenceNumber=\"10\" FromDate=\"2016-10-28T00:00:00\"><ParentIndicator IndicatorID=\"IN00417168\" IndicatorName=\"Births attended in health facility broken down by LGA\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000003\" IndicatorUOMName=\"Percentage\" IndicatorType=\"PD\" IndicatorTypeName=\"PDO Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"Y\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>BS</ValueType><ValueDate>20101231</ValueDate><ValueCalendar>2010</ValueCalendar><ValueFiscal>2011</ValueFiscal><VALUE>58.40</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>PG</ValueType><ValueDate>20111230</ValueDate><ValueCalendar>2011</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>59.10</VALUE><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>PG</ValueType><ValueDate>20111230</ValueDate><ValueCalendar>2011</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>59.10</VALUE><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>PG</ValueType><ValueDate>20121231</ValueDate><ValueCalendar>2012</ValueCalendar><ValueFiscal>2013</ValueFiscal><VALUE>60.50</VALUE><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>PG</ValueType><ValueDate>20121231</ValueDate><ValueCalendar>2012</ValueCalendar><ValueFiscal>2013</ValueFiscal><VALUE>60.50</VALUE><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>PG</ValueType><ValueDate>20131231</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>58.00</VALUE><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>77.60</VALUE><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>77.60</VALUE><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>PG</ValueType><ValueDate>20160531</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE>65.90</VALUE><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>PG</ValueType><ValueDate>20160915</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2017</ValueFiscal><VALUE>65.90</VALUE><SortOrder>PG10</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417168</IndicatorID><ValueType>TG</ValueType><ValueDate>20160430</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE>69.00</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction></ParentIndicator><ParentIndicator IndicatorID=\"IN00417169\" IndicatorName=\"Average outpatient attendances per clinical staff broken down by LGA\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000002\" IndicatorUOMName=\"Number\" IndicatorType=\"PD\" IndicatorTypeName=\"PDO Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"Y\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>BS</ValueType><ValueDate>20101231</ValueDate><ValueCalendar>2010</ValueCalendar><ValueFiscal>2011</ValueFiscal><VALUE>1395.00</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>PG</ValueType><ValueDate>20111230</ValueDate><ValueCalendar>2011</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>1466.00</VALUE><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>PG</ValueType><ValueDate>20111230</ValueDate><ValueCalendar>2011</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>1466.00</VALUE><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>PG</ValueType><ValueDate>20111230</ValueDate><ValueCalendar>2011</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>1466.00</VALUE><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>PG</ValueType><ValueDate>20111230</ValueDate><ValueCalendar>2011</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>1466.00</VALUE><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>PG</ValueType><ValueDate>20131231</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>2719.00</VALUE><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>2534.00</VALUE><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>2534.00</VALUE><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>PG</ValueType><ValueDate>20160223</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE>2413.00</VALUE><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>PG</ValueType><ValueDate>20160915</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2017</ValueFiscal><VALUE>2259.00</VALUE><SortOrder>PG10</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417169</IndicatorID><ValueType>TG</ValueType><ValueDate>20160430</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE>1600.00</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction></ParentIndicator><ParentIndicator IndicatorID=\"IN00417167\" IndicatorName=\"Children immunized (number)\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000002\" IndicatorUOMName=\"Number\" IndicatorType=\"IO\" IndicatorTypeName=\"Intermediate Results Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"Y\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>BS</ValueType><ValueDate>20111220</ValueDate><ValueCalendar>2011</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>0.00</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>PG</ValueType><ValueDate>20120629</ValueDate><ValueCalendar>2012</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>733284.00</VALUE><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>PG</ValueType><ValueDate>20120629</ValueDate><ValueCalendar>2012</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>733284.00</VALUE><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>PG</ValueType><ValueDate>20130630</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2013</ValueFiscal><VALUE>2645913.00</VALUE><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>PG</ValueType><ValueDate>20130630</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2013</ValueFiscal><VALUE>2645913.00</VALUE><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>PG</ValueType><ValueDate>20131231</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>4668145.00</VALUE><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>6091030.00</VALUE><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>6091030.00</VALUE><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>PG</ValueType><ValueDate>20160223</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE>8015440.00</VALUE><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>PG</ValueType><ValueDate>20160915</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2017</ValueFiscal><VALUE>8016240.00</VALUE><SortOrder>PG10</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417167</IndicatorID><ValueType>TG</ValueType><ValueDate>20160430</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE>6142347.00</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction></ParentIndicator><ParentIndicator IndicatorID=\"IN00417193\" IndicatorName=\"Direct project beneficiaries\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000002\" IndicatorUOMName=\"Number\" IndicatorType=\"IO\" IndicatorTypeName=\"Intermediate Results Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"Y\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>BS</ValueType><ValueDate>20101231</ValueDate><ValueCalendar>2010</ValueCalendar><ValueFiscal>2011</ValueFiscal><VALUE>0.00</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>PG</ValueType><ValueDate>20120629</ValueDate><ValueCalendar>2012</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>4146046.00</VALUE><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>PG</ValueType><ValueDate>20120629</ValueDate><ValueCalendar>2012</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>4146046.00</VALUE><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>PG</ValueType><ValueDate>20130630</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2013</ValueFiscal><VALUE>14703973.00</VALUE><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>PG</ValueType><ValueDate>20130630</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2013</ValueFiscal><VALUE>14703973.00</VALUE><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>PG</ValueType><ValueDate>20130630</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2013</ValueFiscal><VALUE>14703973.00</VALUE><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>36612263.00</VALUE><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>36612263.00</VALUE><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>36612263.00</VALUE><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>PG</ValueType><ValueDate>20160915</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2017</ValueFiscal><VALUE>48605919.00</VALUE><SortOrder>PG10</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417193</IndicatorID><ValueType>TG</ValueType><ValueDate>20160430</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE>37118980.00</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction><ChildIndicator IndicatorID=\"IN00417206\" IndicatorName=\"Female beneficiaries\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000003\" IndicatorUOMName=\"Percentage\" IndicatorType=\"IO\" IndicatorTypeName=\"Intermediate Results Indicator\" IndicatorSubType=\"Supplemental\" IndicatorLevel=\"02\" IndicatorParentID=\"IN00417193\" BaselineExists=\"\" ProjectLevel=\"\"><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>BS</ValueType><ValueDate>20101231</ValueDate><ValueCalendar>2010</ValueCalendar><ValueFiscal>2011</ValueFiscal><VALUE>0.00</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>PG</ValueType><ValueDate>20120629</ValueDate><ValueCalendar>2012</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>50.74</VALUE><SortOrder>PG02</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>PG</ValueType><ValueDate>20120629</ValueDate><ValueCalendar>2012</ValueCalendar><ValueFiscal>2012</ValueFiscal><VALUE>50.74</VALUE><SortOrder>PG03</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>PG</ValueType><ValueDate>20130630</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2013</ValueFiscal><VALUE>51.15</VALUE><SortOrder>PG04</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>PG</ValueType><ValueDate>20130630</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2013</ValueFiscal><VALUE>51.15</VALUE><SortOrder>PG05</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>PG</ValueType><ValueDate>20130630</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2013</ValueFiscal><VALUE>51.30</VALUE><SortOrder>PG06</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>51.40</VALUE><SortOrder>PG07</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>51.40</VALUE><SortOrder>PG08</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>PG</ValueType><ValueDate>20141231</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>51.40</VALUE><SortOrder>PG09</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>PG</ValueType><ValueDate>20160915</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2017</ValueFiscal><VALUE>51.40</VALUE><SortOrder>PG10</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P125740</ProjectId><IndicatorID>IN00417206</IndicatorID><ValueType>TG</ValueType><ValueDate>20160430</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE>50.50</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ChildTransaction></ChildIndicator></ParentIndicator></Indicators><Indicators ProjectId=\"P125740\" FormId=\"FRM0281720\" SequenceNumber=\"13\" FromDate=\"2016-10-28T00:00:00\"/></Results>",
+   "boardapprovaldate": "2011-12-20T00:00:00Z",
+   "closingdate": "10/30/2016 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P125740",
+   "proj_and_ln_country": [
+    "TZ"
+   ],
+   "proj_and_ln_country_exact": [
+    "TZ"
+   ],
+   "ln_country_id": [
+    "TZ"
+   ],
+   "ln_country_id_exact": [
+    "TZ"
+   ],
+   "ln_country_id_desc": [
+    "Tanzania"
+   ],
+   "ln_country_id_desc_exact": [
+    "Tanzania"
+   ],
+   "countryid": [
+    "TZ"
+   ],
+   "countryid_exact": [
+    "TZ"
+   ],
+   "countryiddesc": [
+    "Tanzania"
+   ],
+   "countryiddesc_exact": [
+    "Tanzania"
+   ],
+   "sector_namecode": [
+    {
+     "name": "Public Administration - Health",
+     "code": "HF"
+    },
+    {
+     "name": "Sub-National Government",
+     "code": "BH"
+    },
+    {
+     "name": "Health",
+     "code": "HG"
+    }
+   ],
+   "mjsector_namecode": [
+    {
+     "name": "Health",
+     "code": "HX"
+    },
+    {
+     "name": "Public Administration",
+     "code": "BX"
+    },
+    {
+     "name": "Health",
+     "code": "HX"
+    }
+   ],
+   "mjtheme_namecode": [
+    {
+     "name": "Public sector governance",
+     "code": "2"
+    },
+    {
+     "name": "Human development",
+     "code": "8"
+    }
+   ],
+   "country_namecode": "2721800000!$!TZ",
+   "envassesmentcategorycode": "B",
+   "prodlinetext": "IBRD/IDA",
+   "idacommamt": "100,000,000",
+   "ibrdcommamt": "0",
+   "lendprojectcost": "2,721,800,000",
+   "status": "Closed",
+   "productlinetype": "L",
+   "project_abstract": {
+    "cdata!": "The objective of the Basic Health Services Project for Tanzania is to improve the geographic accessibility and use of basic health services by financing health service delivery and encouraging effective and efficient management of health services at the local level. There are three components to the project. The first component of the project is support to local government service delivery. This component will finance annual per capita grants to Local Government Authorities (LGAs) of approximately $0.30 per person per year to support service delivery at the district level, as well as funding medical supplies, medicines, vaccines and contraceptive commodities which will be procured centrally and used at the district level. The second component of the project is capacity building in local governments. This component will provides funding through the capacity building grant mechanism to improve the capacity of local governments to manage their health services, and will finance technical assistance, training and systems strengthening interventions, with a focus on improved public financial management (PFM), monitoring and evaluation (M&E), facility management, human resources management, procurement and governance and accountability mechanisms (including social accountability). The third component of the project is central programs to support local service delivery. This component will provides funding for central level interventions including training, central level PFM and M&E initiatives, technical assistance for development of central level initiatives, management guidance through the Prime Minister's Office - Regional Administration and Local Government (PMO-RALG) and the Regional Health Management Teams (RHMTs), initiatives to support the performance management process at the central and regional levels, and strengthening of central level oversight structures."
+   },
+   "listing_relative_url": "/basic-health-services-project",
+   "theme_namecode": [
+    {
+     "name": "Decentralization",
+     "code": "26"
+    },
+    {
+     "name": "Health system performance",
+     "code": "67"
+    }
+   ],
+   "sectordata": "HG$Health$85,HF$Public Administration - Health$3,BH$Sub-National Government$12",
+   "themedata": "000631$Health System Strengthening$70$000060$Human Development and Gender$000063$Health Systems and Policies,000437$Municipal Institution Building$30$000040$Public Sector Management$000043$Public Administration,000063$Health Systems and Policies$70$000060$Human Development and Gender$NA$NA,000043$Public Administration$30$000040$Public Sector Management$NA$NA",
+   "fincr_id": [
+    "BORR",
+    "ZBIL",
+    "IDA"
+   ],
+   "fincr_curr_id": [
+    "USD",
+    "USD",
+    "XDR"
+   ],
+   "themecodev2": "000631,000063,000060,000437,000043,000040",
+   "cmt_usd_amt_mil": "100.00",
+   "fingapcurr": ".00",
+   "principal1": "100000000",
+   "ibrd_ida_commits_mil": "100.00",
+   "access_level": "EXTERNAL",
+   "ida_cmt_usd_amt_mil": "100.00",
+   "ibrd_ida_commits": "100000000.00",
+   "ida_cmt_usd_amt": "100000000.00",
+   "financier_namecode": "!$!IDA50290",
+   "bankqualityofsupervision": [
+    "UNSATISFACTORY"
+   ],
+   "cancellations": [
+    "25953.87"
+   ],
+   "mjthemelist": {
+    "Name": "MJTHEME1",
+    "Percent": 0
+   },
+   "borrowername": "GOVERNMENT OF TANZANIA",
+   "pidrecdbwind": "Y",
+   "sectorlist": {
+    "Name": "SECTOR1",
+    "Percent": 0
+   },
+   "catname": "Overall Risk",
+   "lendinginstrcode": "IPF",
+   "issuecode": "ISS0739145",
+   "overall_prevrating": [
+    "Substantial"
+   ],
+   "projectid": "P125740",
+   "grant_usd_amt_mil": "0.00",
+   "outcome": [
+    "MODERATELY UNSATISFACTORY"
+   ],
+   "overallborrowperf": [
+    "MODERATELY UNSATISFACTORY"
+   ],
+   "fincr_curr_amt": [
+    "1,659,600,000.00",
+    "962,200,000.00",
+    "63,100,000.00"
+   ],
+   "projectcost": [
+    "2721800000.00"
+   ],
+   "finamtcurr": "2,721,800,000.00",
+   "statusdate": "10/28/2016 12:00:00 AM",
+   "evaltype": [
+    "ES"
+   ],
+   "performance_prevrating": [
+    "Moderately Unsatisfactory",
+    "Unsatisfactory"
+   ],
+   "overall_templatename": [
+    "Overall Implementation Risk 1"
+   ],
+   "ibrd_cmt_usd_amt": "0.00",
+   "performance_templatename": {
+    "cdata!": "Overall Implementation Progress (IP),Progress towards achievement of PDO"
+   },
+   "rel_loan_ids": [
+    "IDA50290"
+   ],
+   "categorycode": "CAT0000791",
+   "lendinginstrumenttypename": "Investment",
+   "borrowcompliance": [
+    "MODERATELY SATISFACTORY"
+   ],
+   "mttheme1name": "Health",
+   "undisbursed1": "0",
+   "overall_currentrating": [
+    "Substantial"
+   ],
+   "overallbankperf": [
+    "UNSATISFACTORY"
+   ],
+   "implementingname": "MINISTRY OF HEALTH AND SOCIAL WELFARE",
+   "mainloan": "50290",
+   "proj_last_upd_date": "2016-10-28T00:00:00Z",
+   "projcostcurr": "2,721,800,000.00",
+   "mequality": [
+    "MODEST"
+   ],
+   "productlinetypename": "LENDING PRODUCT",
+   "fincrname": [
+    "Borrower/Recipient",
+    "Bilateral Agencies (Unidentified)",
+    "Ida Credit"
+   ],
+   "evaluation_riskdo": [
+    "MODERATE"
+   ],
+   "completion_riskdo": [
+    "NIL"
+   ],
+   "laststatusdate": "6/30/2016 12:00:00 AM",
+   "countryhomepageurl": "http://www.worldbank.org/en/country/tanzania",
+   "code": [
+    "ISS1105531",
+    "ISS1105530"
+   ],
+   "icrquality": [
+    "SUBSTANTIAL"
+   ],
+   "approval_date1": "12/20/2011 12:00:00 AM",
+   "ibrd_cmt_usd_amt_mil": "0.00",
+   "overall_templatecode": [
+    "ISS0009071"
+   ],
+   "performance_templatecode": [
+    "ISS0008918",
+    "ISS0008916"
+   ],
+   "performance_currrating": [
+    "Moderately Satisfactory",
+    "Moderately Unsatisfactory"
+   ],
+   "bankqualityatentry": [
+    "MODERATELY UNSATISFACTORY"
+   ],
+   "performance_comments": [
+    "NIL",
+    "NIL"
+   ],
+   "grant_usd_amt": "0.00",
+   "lang_code": "FRE,RUS,SPA,ARA,CHI,POR,ENG",
+   "evaldate": [
+    "2017-06-23T00:00:00.000Z"
+   ],
+   "overall_comments": [
+    "Comments:The overall risk rating is substantial.  There are basically two sets of risks.  The first set center around theimplementation of a new funding modality to support the ongoing operating costs of service delivery at the district level.   Thesecond set of risks reflect the realities of dealing with the LGA level in Tanzania, including issues of capacity, governance, andensuring the actual achievement and monitoring of results.  Given the level of engagement that has already taken place with theGovernment and other development partners, the capacity building measures being put in place and the nature of the interventionbeing proposed, there is a high level of confidence that these risks can be effectively managed, as outlined above."
+   ],
+   "fincr_usd_amt": [
+    "1,659,600,000.00",
+    "962,200,000.00",
+    "100,000,000.00"
+   ],
+   "mttheme1": "13",
+   "borrowimplementation": [
+    "MODERATELY UNSATISFACTORY"
+   ],
+   "prodcode": "PE",
+   "themelist": {
+    "Name": "THEME1",
+    "Percent": 0
+   },
+   "cmt_usd_amt": "100000000.00",
+   "pdo": "The PDO for this project is to assist the Government of the United Republic of Tanzania in improving the equity of geographic access and use of basic health services across districts and enhancing the quality of health services being delivered.  This would be achieved by introducing innovative financing mechanisms for health service delivery which encourage both effective and efficient management of health services at the local level and a focus on quality improvement, and would be accomplished within the framework of theHealth Sector Strategic Plan III.",
+   "mttheme2": "11",
+   "disbursed1": "95092688.99",
+   "region_code": "8",
+   "mttheme2name": "Public sector governance",
+   "recent_close_date1": "10/30/2016 12:00:00 AM",
+   "goal": [
+    "Corporate Advocacy Priorities",
+    "Corporate Advocacy Priorities"
+   ],
+   "last_stage_reached_name": "Bank Approved",
+   "projectdocs": [],
+   "locations": [],
+   "theme_list": [
+    {
+     "name": "Human Development and Gender",
+     "code": "60",
+     "seqno": "4",
+     "percent": "70",
+     "theme2": [
+      {
+       "name": "Health Systems and Policies",
+       "code": "63",
+       "seqno": "5",
+       "percent": "70",
+       "theme3": [
+        {
+         "name": "Health System Strengthening",
+         "code": "631",
+         "seqno": "6",
+         "percent": "70"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Public Sector Management",
+     "code": "40",
+     "seqno": "1",
+     "percent": "30",
+     "theme2": [
+      {
+       "name": "Public Administration",
+       "code": "43",
+       "seqno": "2",
+       "percent": "30",
+       "theme3": [
+        {
+         "name": "Municipal Institution Building",
+         "code": "437",
+         "seqno": "3",
+         "percent": "30"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "facets": {}
+}
