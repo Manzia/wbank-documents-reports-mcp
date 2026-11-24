@@ -174,6 +174,13 @@ Created out-of-band with the AWS CLI (`wb-mcp` profile), not by any stack:
 | Role `wbank-docs-reports-mcp-github-deploy` | assumed by `deploy.yml` only |
 | Bucket `wbank-docs-reports-mcp-artifacts-365677123675` | SAM artifacts (`--s3-bucket`); private, TLS-only, objects expire after 30 days |
 
+Also out-of-band, not in any stack: the Secrets Manager secret
+`wbank-documents-reports-mcp/claude/access` (field `claude-api-key`), the
+Claude API key for Haiku 5.5 while Bedrock refuses Claude 5.5 (MCP-102 F1). The
+function reads it at run time (`HAIKU_BACKEND=claude-api`); the template names
+only its ARN. Dispatcher sessions can't read it (the session policy denies
+Secrets Manager), so they can't call Haiku live.
+
 Also out-of-band (console), not in any stack: the public Route 53 hosted zone
 `worldbank-mcp.manzia.com` (`Z0958616XII8519LOW0Q`), delegated by 4 NS records
 in `manzia.com` (another AWS account; MCP-110, MCP-111). The template refers to

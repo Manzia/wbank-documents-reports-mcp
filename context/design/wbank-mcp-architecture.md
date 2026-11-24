@@ -21,7 +21,7 @@ A public MCP server at **`https://worldbank-mcp.manzia.com/mcp`** with no sign-i
 **What the target does:**
 
 - It exposes five read-only tools over the World Bank **Documents & Reports** (WDS) and **Projects & Operations** APIs.
-- It calls **Claude Haiku 5.5 on Amazon Bedrock** only for bounded tasks: reformulating search queries, and resolving informal names ("East Africa", "PAD") to the World Bank's own values when plain matching fails.
+- It calls **Claude Haiku 5.5** (on Amazon Bedrock; for now through the Claude API, §7) only for bounded tasks: reformulating search queries, and resolving informal names ("East Africa", "PAD") to the World Bank's own values when plain matching fails.
 - It keeps a **snapshot of the World Bank's own vocabulary** (the valid countries, regions, document types, sectors, themes, statuses and languages) in S3, refreshed every 30 days by a scheduled job (A10, §7.2).
 - Documents are read the way the AWS Knowledge server reads its pages: an outline with page numbers, then verbatim pages on request. **The client's model decides what to read** (§5.4).
 - It keeps no data. Every answer carries the IDs, titles, dates, page references and links it relied on.
@@ -52,7 +52,7 @@ These come from probes of the live APIs, AWS docs and a hands-on test on 2026-11
 | **[Verified]** Older full-text files keep **form-feed page breaks**; most 2026 files have only `-N-` or "Page N" footer lines, and short ones neither (MCP-102, F2). | Page-level citations work where pages can be found; otherwise the text is split into fixed-size parts (§5.4, D6). |
 | **[Verified]** The `proid` filter returns all records for a project: 129 for P117635, in date order. `fct=count_exact` returns country facet counts. | One call fetches a project's document list. Facets answer "which countries appear most often". |
 | **[Verified]** The Projects API with `fl=*` returns about 69 fields: PDO, implementing agency, borrower, closing date, commitments, sectors, indicators, ISR and IEG ratings, milestones, financiers. | `get_project` requests the full set and trims it. |
-| **[Verified]** Claude Haiku 5.5 is ACTIVE in us-east-1, **only through an inference profile** (`us.` or `global.anthropic.claude-haiku-5-5`). | IAM grants both the inference profile and the underlying foundation model ARNs. |
+| **[Verified]** Claude Haiku 5.5 is ACTIVE in us-east-1, **only through an inference profile** (`us.` or `global.anthropic.claude-haiku-5-5`). **[Verified 2026-11-24]** Bedrock still refuses it for this account (MCP-102 F1). | IAM grants both the inference profile and the underlying foundation model ARNs. Until Bedrock grants access, Haiku 5.5 is called through the Claude API (§7). |
 | **[Verified, your test]** The public **AWS Knowledge MCP Server**, which is itself an AgentCore Gateway with no sign-in (its tools are named `aws___…`), connects as a **Gemini custom connector** with no credentials. Claude custom connectors ("No sign-in") and ChatGPT ("No authentication") also support servers with no sign-in. | **No sign-in works in all three primary web apps.** No OAuth needed. |
 | **[Verified, your test]** The AWS Knowledge server needed **no skill** in Gemini. It ships its own guidance as a tool (`retrieve_skill`). | Skills are **served by the server** through a `retrieve_skill` tool, as AWS does (§4.2). Users install nothing but the URL. |
 | **[Verified]** Gateway progress and log events are relayed **only from MCP-server targets**. A Lambda target returns one JSON result. MCP-server targets can authenticate to their backend with **IAM signing (SigV4)**: service `lambda` for a Lambda **function URL**, or `bedrock-agentcore` for an **AgentCore Runtime** server. | These defined the D1 options. **B was chosen** (§6). |
@@ -122,7 +122,7 @@ These come from probes of the live APIs, AWS docs and a hands-on test on 2026-11
 | Vocabulary refresh function (A10) | Lambda, Node.js 24, arm64. Fetches the APIs' own value lists (facets) and writes the snapshot; on any failure it writes nothing, so the previous snapshot stays. Started every 30 days by an **EventBridge Scheduler** schedule, and once by the deploy pipeline after each deploy. |
 | Origin secret | AWS Secrets Manager secret with a random value. Both CloudFront and the regional WAF rule read it through CloudFormation dynamic references. |
 | Gateway service role | Trusted by `bedrock-agentcore.amazonaws.com`, limited by `aws:SourceAccount` and `aws:SourceArn`. Allows `lambda:InvokeFunctionUrl` (and `lambda:InvokeFunction`, which IAM-auth function URLs also require) on the MCP server function only. |
-| Tool execution role | CloudWatch Logs for its own log group. `bedrock:InvokeModel` and `InvokeModelWithResponseStream` on the Haiku 5.5 inference profile and its foundation model only. `s3:GetObject` on the vocabulary object only. The refresh function's role may write that object; the scheduler's role may invoke the refresh function. |
+| Tool execution role | CloudWatch Logs for its own log group. `bedrock:InvokeModel` and `InvokeModelWithResponseStream` on the Haiku 5.5 inference profile and its foundation model only. `s3:GetObject` on the vocabulary object only. While the Claude API route is in use (§7), `secretsmanager:GetSecretValue` on the Claude API key secret only. The refresh function's role may write that object; the scheduler's role may invoke the refresh function. |
 | Monitoring (A3, approved) | CloudWatch alarms, a dashboard, an SNS topic with an e-mail subscription for the operator, and an AWS Budgets monthly alert (§11) |
 
 Both IAM roles follow the existing deploy-role rule: names generated by CloudFormation, plus the PowerUserAccess permissions boundary (CLAUDE.md, "AWS deploy identity").
@@ -304,6 +304,8 @@ The tool code is an **MCP server running on Lambda**. AgentCore calls it as an *
 
 Haiku is used **only** where it measurably improves accuracy. Every use has a token cap (about 500 output tokens) and a 5-second timeout, and falls back to plain keyword logic if Bedrock is slow or throttles. Calls go through the `us.anthropic.claude-haiku-5-5` inference profile.
 
+**Temporary route (approved 2026-11-24).** Bedrock refuses Claude 5.5 for this account (MCP-102 F1), so the function sets `HAIKU_BACKEND=claude-api` and calls `claude-haiku-5-5` on the Claude API instead, with the same caps, timeout, forced tool call and fallbacks. The API key is in the Secrets Manager secret `wbank-documents-reports-mcp/claude/access` (field `claude-api-key`, created out of band). The function reads it at run time and keeps it in memory, and it never appears in the template, logs or outputs. The inference profile and its IAM grant stay in the template. To return to Bedrock, remove `HAIKU_BACKEND` and `CLAUDE_API_KEY_SECRET_ARN`, then the secret grant.
+
 | Use | When | Input → output |
 |---|---|---|
 | **Query reformulation** | `search_documents` and `search_projects` with free-text `query` | The user's words → 2 to 3 keyword variants (quoted phrases, synonyms, World Bank terms such as "learning poverty" or "EdTech"). The variants run in parallel and the results are merged and de-duplicated. |
@@ -374,7 +376,7 @@ Limits are requests per minute unless noted. They can be changed without interru
 **Notes:**
 
 - Rate limits **fail open**: if the rate-limit service is unavailable, requests go through. WAF per-IP rules still apply. A Lambda concurrency cap (A1) was declined for now and can be revisited.
-- **[Assumption]:** Bedrock's quota for Haiku 5.5 on this account is above the `read_document` peak. This needs checking in Service Quotas before launch.
+- **[Assumption]:** Bedrock's quota for Haiku 5.5 on this account is above the `read_document` peak. This needs checking in Service Quotas before launch. While Haiku runs through the Claude API (§7), check the API key's rate limits instead.
 
 **Cost note:** at AWS list prices, each web ACL is about $5 per month plus $1 per rule per month, plus a per-million-request charge. That's two web ACLs and about 6 rules. Bot Control would have added a monthly fee plus per-request charges. Check current pricing.
 
