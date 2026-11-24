@@ -18,9 +18,9 @@ The **World Bank Documents & Reports API** can support three useful kinds of nat
 | What a user could ask | How the MCP server would answer |
 |---|---|
 | “Find World Bank reports on digital learning in Uganda since 2020.” | Search `qterm=digital learning`, filter with `count_exact=Uganda` and `strdate=2020-01-01`, and return titles, dates, abstracts, and links. |
-| “Show me the five most recent procurement plans for Kenya.” | Filter by country and `docty_exact=Procurement Plan`, order by document date descending, and request five records. |
+| “Show me the five most recent procurement plans for the Philippines.” | Filter by country and `docty_exact=Procurement Plan`, order by document date descending, and request five records. |
 | “I remember ‘learning poverty’ was in the title. Can you find the report?” | Search `display_title` for those words. Return candidate titles, countries, and dates so the user can identify the right one. |
-| “Find French-language reports on teacher training for Senegal or Côte d’Ivoire.” | Combine a keyword search with an exact language filter and either country. Resolve country names to the Bank’s catalog values. |
+| “Find French-language reports on teacher training for Morocco or Tunisia.” | Combine a keyword search with an exact language filter and either country. Resolve country names to the Bank’s catalog values. |
 | “I have the project ID. Show me its appraisal document, procurement plans, and completion report in chronological order.” | Filter by `projectid` and the selected document types, then order by document date. Return the available records for each requested type. |
 | “Find this report number and give me its abstract and PDF.” | Look up `repnb_exact`. Return the abstract, official record link, and PDF link where available. A user can also look up a document by `id`. |
 | “Find working papers by this author on education finance.” | Combine `authr`, a collection or series filter such as `colti_exact`, and a keyword search. |
@@ -31,17 +31,17 @@ These mappings use documented search fields, exact filters, facets, date ranges,
 
 ## Q2. Questions that need the server to read reports
 
-A useful dividing line is the difference between **“Find Kenya’s procurement plans”** and **“Which of those plans include digital learning materials?”** The first is a catalog query. The second may depend on a single line in a procurement table. The API documents `qterm` as a search across core record fields and exposes links to document text and PDFs. A metadata search alone cannot establish what appears in every table or annex. [documents.worldbank.org](https://documents.worldbank.org/en/publication/documents-reports/api?utm_source=chatgpt.com)
+A useful dividing line is the difference between **“Find the Philippines’ procurement plans”** and **“Which of those plans include digital learning materials?”** The first is a catalog query. The second may depend on a single line in a procurement table. The API documents `qterm` as a search across core record fields and exposes links to document text and PDFs. A metadata search alone cannot establish what appears in every table or annex. [documents.worldbank.org](https://documents.worldbank.org/en/publication/documents-reports/api?utm_source=chatgpt.com)
 
 | What a user could ask | What the MCP server would need to do |
 |---|---|
 | “What barriers to classroom technology adoption does the Uganda diagnostic identify? Cite the pages.” | Locate the diagnostic, read the report, and return each barrier with a supporting passage and page reference. |
-| “Which Kenyan education procurement plans mention tablets or digital content? Show the package description, procurement method, and estimated cost.” | Find candidate plans, read their procurement tables, and extract matching rows. Preserve the currency and distinguish an estimated cost from an awarded amount. |
+| “Which Philippine education procurement plans mention tablets or digital content? Show the package description, procurement method, and estimated cost.” | Find candidate plans, read their procurement tables, and extract matching rows. Preserve the currency and distinguish an estimated cost from an awarded amount. |
 | “Compare what the appraisal document promised with what the completion report says the project achieved.” | Match both documents by project ID, extract the original targets and reported results, and flag indicators that were revised or measured differently. |
 | “Which of these studies measured student learning outcomes, and which only reported device distribution or teacher training?” | Read the methods and results sections, classify the measures, and cite the evidence for each classification. |
 | “What changed between these two versions of the procurement plan?” | Retrieve both versions, match packages by identifier where available, and compare amounts, methods, dates, and status. |
 
-For these queries, **coverage is part of the answer**. “I found three matching packages in the eight plans I could read” tells a policy analyst something materially different from “Kenya had three such packages.” Likewise, when a user asks for page citations, the reader should preserve PDF page locations during extraction.
+For these queries, **coverage is part of the answer**. “I found three matching packages in the eight plans I could read” tells a policy analyst something materially different from “The Philippines had three such packages.” Likewise, when a user asks for page citations, the reader should preserve PDF page locations during extraction.
 
 
 ## Q3. Example TTL queries
@@ -52,8 +52,8 @@ For a Task Team Leader, design the MCP experience around **a project ID and a de
 |---|---|---|
 | **Get oriented** | “Pull the publicly available documents for project Pxxxxxx. Group them into design, legal, environmental and social, implementation, and restructuring documents. Show the latest in each group.” | Project ID and document metadata. |
 | **Prepare a mission** | “Brief me on Pxxxxxx before my meeting with the ministry. What are its objectives, components, implementing agencies, latest reported progress, and main risks?” | PAD, latest disclosed ISR, and any restructuring paper. |
-| **Establish the country case** | “What do the latest country strategy and diagnostics say about water service constraints in Tanzania? Which findings support a new operation?” | Country Partnership Framework, diagnostics, and sector studies. |
-| **Find design precedents** | “Find comparable rural roads projects in East Africa. How did they structure maintenance funding and local government responsibilities?” | Search across projects, then read selected PADs and completion reports. |
+| **Establish the country case** | “What do the latest country strategy and diagnostics say about water service constraints in Jordan? Which findings support a new operation?” | Country Partnership Framework, diagnostics, and sector studies. |
+| **Find design precedents** | “Find comparable rural roads projects in the Andean countries. How did they structure maintenance funding and local government responsibilities?” | Search across projects, then read selected PADs and completion reports. |
 | **Choose results measures** | “What indicators, baselines, targets, and data sources have similar primary health care projects used?” | Results frameworks in comparable PADs. |
 | **Test assumptions** | “How did recent electricity access projects justify their connection targets and costs? Which assumptions proved difficult during implementation?” | PAD economic analysis, ISRs, and completion reports. |
 | **Prepare for negotiations** | “For Pxxxxxx, compare the PAD and signed financing agreement. Where do the project description, effectiveness conditions, disbursement conditions, or implementing arrangements differ?” | Both documents, with clause and page references. |
@@ -75,16 +75,16 @@ The query design should follow **work tasks**, so the same tools serve TTLs, con
 | Common task | Example natural language query | Sources |
 |---|---|---|
 | Prepare a project briefing | “Brief me on P123456: objective, implementing agencies, commitment, closing date, latest public implementation update, and key issues.” | Projects + documents |
-| Find comparable operations | “Find active rural water projects in East Africa similar to this proposed operation. Show their design choices and implementing arrangements.” | Projects + documents |
+| Find comparable operations | “Find active rural water projects in South Asia similar to this proposed operation. Show their design choices and implementing arrangements.” | Projects + documents |
 | Prepare for a client discussion | “For P123456, what commitments and milestones appear in the published agreement and latest restructuring paper? What questions should I raise with the ministry?” | Projects + documents |
 | Track implementation | “What changed between the last two publicly available implementation reports for P123456?” | Documents |
 | Review results | “What are the project’s development objective indicators and targets, and what does the latest public report say about progress?” | Documents |
 | Review environmental and social requirements | “What actions and deadlines does the environmental and social commitment plan set for P123456?” | Documents |
 | Review fiduciary arrangements | “Find the latest published procurement plan and summarize the main packages and planned timing.” | Documents |
 | Research design precedents | “How have comparable health projects structured community delivery, and what problems emerged during implementation?” | Projects + documents |
-| Scan a portfolio | “Which active agriculture projects in Kenya are approaching their closing dates? Who implements them?” | Projects |
-| Extract completion lessons | “Across recently closed urban transport projects in South Asia, what recurring implementation lessons appear in completion reports?” | Projects + documents |
-| Find background evidence | “Find recent World Bank reports on electricity tariff reform in West Africa relevant to preparing a new operation.” | Documents |
+| Scan a portfolio | “Which active agriculture projects in Bangladesh are approaching their closing dates? Who implements them?” | Projects |
+| Extract completion lessons | “Across recently closed urban transport projects in Latin America, what recurring implementation lessons appear in completion reports?” | Projects + documents |
+| Find background evidence | “Find recent World Bank reports on electricity tariff reform in Central Asia relevant to preparing a new operation.” | Documents |
 
 The important implementation boundary is **search versus answering**. The Documents & Reports API can filter records by project ID, document type, country, date, and other metadata, and it returns abstracts and links to document files. Questions about obligations, risks, indicator values, or lessons require the server to open and read the linked public document. Searching its metadata alone cannot reliably answer them. [documents.worldbank.org](https://documents.worldbank.org/en/publication/documents-reports/api?utm_source=chatgpt.com)
 

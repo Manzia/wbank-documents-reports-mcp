@@ -130,7 +130,7 @@ What remains outside the guard:
 |---|---|---|---|
 | G1 | **The account is prod-only.** There is no dev stack to test against. | CLAUDE.md: environments `prod` only | Sessions get **read-only** AWS (layer 1). Verification happens on prod after your approved deploy (`after_deploy` tasks). Infra PRs merge one at a time. |
 | G2 | **Every merge to `main` touching `mcp-server/` deploys prod**, and each deploy waits for your approval | `deploy.yml` (environment `production`, required reviewer) | Merge infra PRs one at a time and approve each deploy; code-only merges can be batched, since each deploy builds the head of `main`. |
-| G3 | **The certificate can't validate until `worldbank-mcp.manzia.com` is delegated**, and CloudFormation waits on a DNS-validated certificate | Design §3.2: `manzia.com` is in another AWS account | Split: MCP-110 creates the hosted zone and outputs its name servers; you add the 4 NS records (MCP-111); only then does MCP-114 add the certificate and CloudFront. |
+| G3 | **The certificate can't validate until `worldbank-mcp.manzia.com` is delegated**, and CloudFormation waits on a DNS-validated certificate | Design §3.2: `manzia.com` is in another AWS account | Split: the hosted zone was created by hand outside the stack (ID `Z0958616XII8519LOW0Q`, recorded in MCP-110); you add its 4 NS records (MCP-111); only then does MCP-114 add the certificate and CloudFront, in that zone by ID. |
 | G4 | **The gateway caches the tool list** | Design §6.1 | MCP-113 adds a re-sync step (`SynchronizeGatewayTargets`) to `deploy.yml` that fails the deploy if it fails. The deploy role (PowerUserAccess) can call it; sessions can't (layer 1). |
 | G5 | **CloudFormation support for the gateway's `NONE` authorizer, streaming flag and WAF association is unverified** | Design §3.2 [Assumption] | MCP-102 checks the CloudFormation registry schemas. A missing property becomes a post-deploy CLI step in `deploy.yml` (MCP-113), not a new component. |
 | G6 | **Sessions can't read CloudFront, WAF or Secrets Manager** (layer 1 hides the origin secret) | §2.4 | Verification uses HTTP behaviour (custom domain, direct gateway hostname), CloudFormation outputs and CloudWatch metrics (WAF `CountedRequests`/`BlockedRequests`, CloudFront 5xx). |
@@ -140,7 +140,7 @@ What remains outside the guard:
 | G10 | **Worktrees live inside the repo** (`.claude/worktrees/`) | Worktree docs | `.gitignore` covers `.claude/worktrees/` and `.npm-cache/` (MCP-100). ESLint and Jest in `mcp-server/server/` only look inside that package. |
 | G11 | **Temporary AWS credentials last at most 36 hours**, and the sandbox breaks some tools | `GetFederationToken` limit; reference project: `gh` TLS under Seatbelt, npm's default cache, Jest with watchman | Fresh credentials on every start and resume. `gh`: `enableWeakerNetworkIsolation`. npm: per-session cache. Jest: `"watchman": false` in every package's Jest config (MCP-112, MCP-121). The self-test re-checks after Claude Code updates. |
 | G12 | **The session GitHub token expires** (fine-grained tokens have an expiry date) | GitHub | Set 90 days in MCP-101. When it expires, pushes fail and sessions mark their PR **Blocked**; you create a new token and update the Keychain item (runbook §2.2). |
-| G13 | **`claude agents` lists every project's background sessions** on the Mac | `claude agents --json` shows other repos' sessions | The dispatcher passes `--cwd <repo>/.claude/worktrees` and also filters by `cwd`, so other projects' sessions never use this project's capacity. |
+| G13 | **`claude agents` lists every project's background sessions** on the Mac | `claude agents --json` shows other repos' sessions | The dispatcher keeps only sessions whose `cwd` is under `<repo>/.claude/worktrees/`, so other projects' sessions never use this project's capacity. It doesn't pass `--cwd`: that flag matches a session's project (the repo root), so `--cwd <repo>/.claude/worktrees` listed nothing and running sessions looked stopped (2026-11-23). |
 | G14 | **Background sessions get the background service's environment, not the caller's** | Reference project, 2026-10-30: sessions ran with another task's credentials | Credentials and token go in a per-session settings file (`~/.wbank-mcp-dispatch/sessions/<ID>.json`, mode 600, unreadable by sessions); `claude` itself runs with no `AWS_*` or `GH_TOKEN`. |
 | G15 | **Sessions act as your GitHub user**, so GitHub doesn't notify you of their PRs | The token is yours | macOS notifications for blocked and stale sessions; bookmark the "ready to review" search (runbook §5). |
 | G16 | **Evaluation runs hit the public endpoint from your Mac's IP** | Design §8.1: 300 requests per 5 minutes per IP | The harness paces tool calls to stay under 200 per 5 minutes (MCP-121). In the first week the per-IP rules only count. |
@@ -310,15 +310,18 @@ Design §14 step 1 asks for these checks "at the same start". They decide detail
 
 #### MCP-110 — Delegated hosted zone (💻, infra)
 
-**Owns:** `mcp-server/template.yaml` (the zone and one output). **Resources:** CREATE
-`AWS::Route53::HostedZone` `worldbank-mcp.manzia.com`.
+Roy created the public hosted zone `worldbank-mcp.manzia.com` by hand (2026-11-23), outside the stack,
+so this task records it instead of adding it to the template. The stack never creates a zone of that
+name: Route 53 allows duplicate names, and a second zone would have name servers nobody delegates to.
+
+**Owns:** this section, G3 and MCP-111/114 here; `CLAUDE.md` (resources created out-of-band); record.
+**Resources:** none (no change under `mcp-server/`, so the merge doesn't deploy).
 
 **Acceptance:**
-1. The template adds the hosted zone and an output `HostedZoneNameServers` (the 4 name servers, comma
-   separated). Nothing else changes.
-2. The PR says that the deploy adds one hosted zone and that MCP-111 then needs the 4 NS records.
-
-**After merge (you):** approve the deploy; the stack outputs show the 4 name servers.
+1. The record holds the zone ID (`Z0958616XII8519LOW0Q`) and its 4 name servers, and shows it is the
+   only zone of that name in the account.
+2. CLAUDE.md lists the zone with the resources created out-of-band, with the warning to remove the
+   `manzia.com` NS records before ever deleting it.
 
 #### MCP-111 — NS delegation and AI-platform IP ranges (👤)
 
@@ -326,7 +329,7 @@ Design §14 step 1 asks for these checks "at the same start". They decide detail
 
 **Acceptance:**
 1. An `NS` record set for `worldbank-mcp.manzia.com` in the `manzia.com` zone holds exactly the 4
-   name servers from the stack output. `dig +short NS worldbank-mcp.manzia.com` prints them.
+   name servers of zone `Z0958616XII8519LOW0Q` (MCP-110 record). `dig +short NS worldbank-mcp.manzia.com` prints them.
 2. `mcp-server/waf/ai-platform-ranges.json` holds the IPv4 and IPv6 ranges published by Anthropic and
    OpenAI for their outbound traffic, and Google's general service ranges, each group with its source
    URL and retrieval date (design §8.1 rule 2). Refresh stays manual (A6 on hold).
@@ -402,7 +405,9 @@ record, the CloudFront distribution, the CloudFront-scope WAF web ACL with its A
 the alias record.
 
 **Acceptance:**
-1. The certificate for `worldbank-mcp.manzia.com` is DNS-validated in the delegated zone.
+1. The certificate for `worldbank-mcp.manzia.com` is DNS-validated in the delegated zone, referred to
+   by a template parameter `HostedZoneId` with default `Z0958616XII8519LOW0Q` (`deploy.yml` passes no
+   override). The template creates no hosted zone.
 2. CloudFront: alternate domain `worldbank-mcp.manzia.com`; origin the gateway hostname over HTTPS;
    caching disabled; all methods; viewer headers forwarded except `Host`; the secret origin header
    added from the origin secret by dynamic reference; origin response timeout 60 s.
@@ -410,7 +415,7 @@ the alias record.
    AI-platform IP sets built from `mcp-server/waf/ai-platform-ranges.json`, 3,000 per 5 minutes; per-IP
    tier for everyone else, 300 per 5 minutes; body over 64 KB (Block). **Rules 2 and 3 are in COUNT.**
    The PR records the deploy date, which starts the one-week COUNT period (MCP-170).
-4. An alias record points `worldbank-mcp.manzia.com` at the distribution. Output: `McpEndpoint` =
+4. An alias record in that zone points `worldbank-mcp.manzia.com` at the distribution. Output: `McpEndpoint` =
    `https://worldbank-mcp.manzia.com/mcp`.
 
 #### MCP-115 — Verify the walking skeleton end to end (💻, after deploy)
@@ -471,6 +476,15 @@ by a person").
    answer** drafted from those sources with page citations, and the four-part rubric of design §10.2.
 5. Each reference answer is marked `review: pending`; you change it to `review: done` as you check
    it. The PR is merged only when all 41 say `done`.
+6. **Regional spread.** The set covers six regions: Africa, East Asia & Pacific, Europe & Central
+   Asia, Latin America & Caribbean, Middle East & North Africa, and South Asia. Each region has at
+   least 3 cases and none has more than 13 (a third). A case counts for the region of the country or
+   project it is mainly about. Cases about no single country (`learning poverty`, the author search, …)
+   count for none. The query design names the places in 11 queries. Every other choice follows the
+   same rule: the placeholder projects, the comparator sets and the documents without a project.
+   Q3's `Pxxxxxx` and Q4's `P123456` are in two different regions, neither of them Africa. Where a
+   query says "similar" or "comparable" without naming a place, the comparator set draws on more than
+   one region. `evaluation/README.md` gives the count per region.
 
 #### MCP-121 — Evaluation harness (💻)
 
@@ -659,7 +673,7 @@ monthly AWS Budgets alert.
 
 **Acceptance:**
 1. Gateway rate limits as design §8.3: per tool (`wb___read_document` 120 per minute, the other four
-   600) and per target (`wb` 1,200 per minute, 100 concurrent connections).
+   600) and per target (`wb` 1,200 per minute). No connection limit (design D8).
 2. Alarms on: tool errors; p95 tool duration above 30 s; gateway throttling; a spike in `WafBlocks`;
    any `WafFailCloses`; CloudFront 5xx; Bedrock throttling; a failed vocabulary refresh, or a snapshot
    older than 35 days (moving MCP-135's alarm onto the topic). All notify the SNS topic.
@@ -779,7 +793,7 @@ the Mac is awake; a run missed during sleep fires once on wake.
 |---|---|
 | 1. Guard | Exit if the pause file `~/.wbank-mcp-dispatch-paused` exists. Take the lock or exit (runs never overlap). |
 | 2. Refresh | In the main checkout: `git fetch --prune origin`. Read `wbank-mcp-tasks.yaml` **from `origin/main`** (not the working copy). Exit if `paused: true`. |
-| 3. Read state | GitHub (`gh api`, REST): PRs into `main` **from this repo** → merged = **done**, open = taken. `origin` branches `feature/<ID>-*` → taken. Local: claim files, local `feature/<ID>-*` branches and worktrees → taken. Sessions: `claude agents --json --cwd <repo>/.claude/worktrees`, filtered by `cwd`. |
+| 3. Read state | GitHub (`gh api`, REST): PRs into `main` **from this repo** → merged = **done**, open = taken. `origin` branches `feature/<ID>-*` → taken. Local: claim files, local `feature/<ID>-*` branches and worktrees → taken. Sessions: `claude agents --json`, kept if their `cwd` is under `<repo>/.claude/worktrees/`. |
 | 4. Deploy state | The newest `deploy.yml` run on `main` triggered by CI: **ok** if it ran for the current head of `origin/main` and succeeded; **pending** if it is for an older commit, still running or waiting for approval; **failed** otherwise. |
 | 5. Pick candidates | `runs: local`, not done, not taken, all `depends` done, and for `after_deploy: true` the deploy state ok. Order by position in the file. |
 | 6. Clean up | For local tasks now done: remove the worktree, the local branch, the claim file and the session settings file. |

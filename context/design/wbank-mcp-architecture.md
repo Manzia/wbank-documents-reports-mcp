@@ -1,6 +1,6 @@
 # World Bank Public MCP Server: AWS Architecture & Design
 
-**Status:** Approved v5 · **Date:** 2026-11-19 (v5: live vocabulary snapshot A10, dynamic term resolution, paged `read_document`; see §13) · **Region:** us-east-1 · **Stack:** `wbank-docs-reports-mcp-prod` · **Endpoint:** `https://worldbank-mcp.manzia.com/mcp`
+**Status:** Approved v5.1 · **Date:** 2026-11-23 (v5.1: precheck corrections D6–D8; v5: live vocabulary snapshot A10, dynamic term resolution, paged `read_document`; see §13) · **Region:** us-east-1 · **Stack:** `wbank-docs-reports-mcp-prod` · **Endpoint:** `https://worldbank-mcp.manzia.com/mcp`
 
 **Inputs:** the requirements in `context/tasks/wbank-mcp-to-do.md` and the expected queries in `context/design/wbank-mcp-query-design.md`.
 
@@ -48,8 +48,8 @@ These come from probes of the live APIs, AWS docs and a hands-on test on 2026-11
 | **[Verified]** Sorting by date works with `srt=docdt&order=desc`. The `sort` parameter is **silently ignored**. Keyword searches default to relevance order. | "Latest" always uses `srt`, which answers the open question in the query doc. |
 | **[Verified]** A multi-word `qterm` is broad: `digital learning` matches 3,949 records, while the quoted phrase matches 23. The query from the doc ("digital learning in Uganda since 2020") returns 2 records, and the top hit is Board minutes. | Keyword quality is the main accuracy risk for search queries, so Haiku reformulates them (§7). |
 | **[Verified]** Abstracts are missing on many records (for example, most ISRs and aide-mémoires). | Substantive questions need the document text. |
-| **[Verified]** `documents.worldbank.org/curated/...` (both the `txturl` and `pdfurl` links) returns **HTTP 403**. It sits behind Cloudflare bot protection. The same files on **`documents1.worldbank.org`** return **HTTP 200**: plain text (about 300 KB for an ICR) and the PDF. `documents1` has no robots.txt restrictions. | Document text is fetched from `documents1` only. Access stability is the top risk (§12). |
-| **[Verified]** Full-text files keep **form-feed page breaks** and "Page N" footers. | Page-level citations are possible without PDF parsing. |
+| **[Verified]** `documents.worldbank.org/curated/...` (both the `txturl` and `pdfurl` links) returned **HTTP 403** on 2026-11-19 (Cloudflare bot protection); on 2026-11-23 the `txturl` links answered **301** to `documents1` instead (MCP-102). The same files on **`documents1.worldbank.org`** return **HTTP 200**: plain text (about 300 KB for an ICR) and the PDF. `documents1` has no robots.txt restrictions. | Document text is fetched from `documents1` only. Access stability is the top risk (§12). |
+| **[Verified]** Older full-text files keep **form-feed page breaks**; most 2026 files have only `-N-` or "Page N" footer lines, and short ones neither (MCP-102, F2). | Page-level citations work where pages can be found; otherwise the text is split into fixed-size parts (§5.4, D6). |
 | **[Verified]** The `proid` filter returns all records for a project: 129 for P117635, in date order. `fct=count_exact` returns country facet counts. | One call fetches a project's document list. Facets answer "which countries appear most often". |
 | **[Verified]** The Projects API with `fl=*` returns about 69 fields: PDO, implementing agency, borrower, closing date, commitments, sectors, indicators, ISR and IEG ratings, milestones, financiers. | `get_project` requests the full set and trims it. |
 | **[Verified]** Claude Haiku 5.5 is ACTIVE in us-east-1, **only through an inference profile** (`us.` or `global.anthropic.claude-haiku-5-5`). | IAM grants both the inference profile and the underlying foundation model ARNs. |
@@ -241,7 +241,7 @@ Reads one public document **in parts**, the way the AWS Knowledge server reads i
 
 1. Look up the record through WDS.
 2. Fetch the plain text from `documents1.worldbank.org` (the `/txt/` path), whole: the host doesn't serve parts.
-3. Split it into pages on form-feed breaks, and build an **outline**: the document's numbered headings (ICRs and PADs have them) with the page each starts on.
+3. Split it into pages on form-feed breaks, else on page-footer lines (`-N-`, `Page N`), else into fixed-size parts without page numbers; the coverage note says which (D6). Build an **outline**: the document's numbered headings (ICRs and PADs have them) with the page each starts on.
 4. Return, depending on the input:
    - **no `question`, no `pages`:** the outline, the total page count and the first pages;
    - **`question`:** the outline plus the pages that best match it by keyword (with the terms from query reformulation, §7), verbatim;
@@ -324,7 +324,7 @@ Resolutions are remembered in memory while the code stays warm, so a new term co
 
 ### 7.2 Vocabulary snapshot (A10, approved)
 
-- **What:** the valid values of each filter, as the APIs themselves list them (WDS and Projects API facets): countries, regions, document types, sectors, themes, statuses and languages, with the date fetched.
+- **What:** the valid values of each filter, as the APIs themselves list them (WDS and Projects API facets): countries, regions, document types, sectors, themes, statuses and languages, with the date fetched. Facets stop at 100 values, so most lists are a **best-effort union** of partitioned facet queries, and the snapshot marks each list complete or best-effort (D7).
 - **Where:** `vocabulary.json` in the vocabulary bucket (§3.2).
 - **When:** every **30 days** by an EventBridge Scheduler schedule, and once after each deploy (the pipeline invokes the refresh function), so a new or changed stack always has a current snapshot.
 - **Failure:** a refresh that fails writes nothing, so the previous snapshot stays; an alarm reports it (§11). If the server ever finds no snapshot, it fetches the lists live and keeps them in memory.
@@ -369,7 +369,7 @@ Limits are requests per minute unless noted. They can be changed without interru
 | Rate limit | Dimension | Entries |
 |---|---|---|
 | Per-tool budget | `toolName` | `wb___read_document`: 120 per minute (this tool uses Haiku and large downloads) · `wb___search_documents`: 600 · `wb___search_projects`: 600 · `wb___get_project`: 600 · `wb___retrieve_skill`: 600 |
-| Target budget | `targetName` | `wb`: 1,200 per minute in total; **concurrent connections: 100** |
+| Target budget | `targetName` | `wb`: 1,200 per minute in total. No connection limit: the gateway's `Connections` limit is a rate (per second), not a concurrency cap (D8) |
 
 **Notes:**
 
@@ -496,6 +496,9 @@ A case passes only if **all** of the following hold:
 | A10 | Vocabulary snapshot in S3, refreshed every 30 days by EventBridge Scheduler and after each deploy | **Approved** 2026-11-19 (§3.2, §7.2) |
 | D4 | How documents are read | **Decided** 2026-11-19: outline plus verbatim pages on request, as the AWS Knowledge server does; the client's model reads. Not abstract plus link (abstracts are rare and the official links return 403). Haiku re-ranking off by default (§5.4). |
 | D5 | Filter vocabulary | **Decided** 2026-11-19: no hand-written mapping tables. Terms resolve against the live vocabulary: match, fuzzy match, Haiku from the list, then free text; results show the interpretation (§7.1). |
+| D6 | Page splitting in `read_document` | **Decided** 2026-11-23: form feeds, else page-footer lines, else fixed-size parts; the coverage note says which (MCP-102 F2; §5.4) |
+| D7 | Incomplete facet lists | **Decided** 2026-11-23: best-effort union of partitioned facet queries, each list marked complete or best-effort; values not in a list still resolve live (MCP-102 F4; §7.2) |
+| D8 | Gateway connection limit | **Decided** 2026-11-23: left out; per-tool and target request budgets and the WAF per-IP rules cap load (MCP-102 F7; §8.3) |
 | WAF | AWS managed Bot Control | **Excluded** for cost (§8) |
 
 ---
