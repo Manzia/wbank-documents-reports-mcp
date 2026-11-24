@@ -94,7 +94,8 @@ const usd = (raw: unknown, millions = false): string | undefined => {
     const text = field(raw);
     if (!text) return undefined;
     const value = Number(text.replace(/,/g, '')) * (millions ? 1_000_000 : 1);
-    if (!Number.isFinite(value) || value <= 0) return undefined;
+    if (!Number.isFinite(value) || value < 0) return undefined;
+    if (value === 0) return 'US$0';
     if (value >= 1e9) return `US$${(value / 1e9).toFixed(2)} billion`;
     return `US$${(value / 1e6).toFixed(value >= 1e8 ? 0 : 1)} million`;
 };
@@ -106,7 +107,7 @@ const financing = (f: Readonly<Record<string, unknown>>): string => {
     const parts = [
         commitment ? `Commitment: ${commitment}` : current ? `Commitment: ${current}` : 'Commitment: not given',
         commitment && current && current !== commitment && `current commitment ${current}`,
-        cost && `total project cost ${cost} (a cost, not a commitment)`,
+        cost && cost !== 'US$0' && `total project cost ${cost} (a cost, not a commitment)`,
     ];
     return joinParts(parts);
 };

@@ -167,10 +167,12 @@ export const keywordSearches = async (
     query: string | undefined,
     freeText: readonly string[],
     deps: SearchDeps,
+    reformulate = true,
 ): Promise<Keywords> => {
     const extra = freeText.map((t) => (/\s/.test(t) ? `"${t.replace(/"/g, '')}"` : t)).join(' ');
     const withExtra = (qterm: string) => [qterm, extra].filter(Boolean).join(' ');
     if (!query?.trim()) return { qterms: [extra || undefined] };
+    if (!reformulate) return { qterms: [withExtra(query.trim())] };
     const reformulation = await reformulateQuery(query, deps.haiku);
     const variants = reformulation.variants.length ? reformulation.variants : [query.trim()];
     const note =
@@ -643,11 +645,12 @@ const groupByStage = async (
     upstream: Upstream,
 ): Promise<CallToolResult> => {
     const perGroup = input.limit ?? DEFAULT_LIMIT;
-    // One list, newest first; keywords as typed (the first variant) so the grouping covers one record set.
+    // One list, newest first, with the query as typed, so the grouping covers one record set.
     const qterm = keywords.qterms[0];
     const result = await searchWds(upstream, {
         ...base,
         qterm,
+        fct: undefined,
         fl: FIELDS.replace(',abstracts', ''),
         srt: 'docdt',
         order: 'desc',
@@ -733,7 +736,7 @@ export const runSearchDocuments = async (
             ],
             deps,
         );
-        const keywords = await keywordSearches(input.query, resolved.freeText, deps);
+        const keywords = await keywordSearches(input.query, resolved.freeText, deps, !input.group_by_stage);
         const hasKeywords = keywords.qterms.some(Boolean);
         const sort = input.sort ?? (hasKeywords ? 'relevance' : 'newest');
         const offset = input.offset ?? 0;
