@@ -1,0 +1,104 @@
+{
+ "rows": 10,
+ "os": 0,
+ "page": 1,
+ "total": 22,
+ "documents": {
+  "D10193015": {
+   "id": "10193015",
+   "count": "Tunisia",
+   "docna": {
+    "0": {
+     "docna": "Tunisie - Cinquieme projet education"
+    }
+   },
+   "docty": "Project Completion Report",
+   "lang": "French",
+   "repnb": "10215",
+   "docdt": "1991-04-26T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": " Ce document constitue le rapport d’achèvement de projet (RAP) du Cinquième projet d’éducation exécuté en Tunisie. Conçu pour appuyer les objectifs du Sixième plan (1982-1986), le projet visait à accroître l’offre de techniciens convenablement formés dans les secteurs agricole et agro-industriel, ainsi que d’instituteurs. Il permettra : i) d’aider le ministère de l’Agriculture (MA) à renforcer et ..."
+   },
+   "display_title": "Tunisie - Cinquième projet d’éducation",
+   "disclosure_date": "2010-06-18T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/838681468111836447/pdf/102150PCR0French0Tunisia0Box0334122B.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/838681468111836447/text/102150PCR0French0Tunisia0Box0334122B.txt",
+   "projectid": "P005650",
+   "guid": "838681468111836447",
+   "url": "http://documents.worldbank.org/curated/en/838681468111836447"
+  },
+  "D32149055": {
+   "id": "32149055",
+   "count": "Morocco",
+   "docna": {
+    "0": {
+     "docna": "Morocco - Education Support Program Project"
+    }
+   },
+   "docty": "Project Appraisal Document",
+   "lang": "French",
+   "repnb": "PAD3157",
+   "docdt": "2019-05-30T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "NULL"
+   },
+   "display_title": "Maroc - Project de Programme d'Appui au Secteur de l'Education",
+   "disclosure_date": "2020-06-19T05:25:36Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/513161592544417620/pdf/Morocco-Education-Support-Program-Project.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/513161592544417620/text/Morocco-Education-Support-Program-Project.txt",
+   "projectid": "P167619",
+   "guid": "513161592544417620",
+   "url": "http://documents.worldbank.org/curated/en/513161592544417620"
+  },
+  "D11790382": {
+   "id": "11790382",
+   "count": "Morocco",
+   "docna": {
+    "0": {
+     "docna": "Maroc - Quatrieme Projet d'Education"
+    }
+   },
+   "docty": "Staff Appraisal Report",
+   "lang": "French",
+   "repnb": "2094",
+   "docdt": "1979-03-19T05:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": ""
+   },
+   "disclosure_date": "2010-06-20T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/584601468060291244/pdf/20940SAR0FRENC101Official0Use0Only1.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/584601468060291244/text/20940SAR0FRENC101Official0Use0Only1.txt",
+   "projectid": "P005386",
+   "guid": "584601468060291244",
+   "url": "http://documents.worldbank.org/curated/en/584601468060291244"
+  },
+  "D15580095": {
+   "id": "15580095",
+   "count": "Morocco",
+   "docna": {
+    "0": {
+     "docna": "Maroc - Deuxième Projet Éducatif"
+    }
+   },
+   "docty": "Staff Appraisal Report",
+   "lang": "French",
+   "repnb": "PE29",
+   "docdt": "1971-07-06T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": ""
+   },
+   "colti": "Education projects series|no. PE 29",
+   "disclosure_date": "2011-12-26T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/295181468060900209/pdf/pe290SAR0FRENC0ion0Project000French.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/295181468060900209/text/pe290SAR0FRENC0ion0Project000French.txt",
+   "projectid": "P005362",
+   "guid": "295181468060900209",
+   "url": "http://documents.worldbank.org/curated/en/295181468060900209"
+  },
+  "facets": {}
+ }
+}

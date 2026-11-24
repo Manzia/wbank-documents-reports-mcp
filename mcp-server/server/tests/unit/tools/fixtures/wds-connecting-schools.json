@@ -1,0 +1,81 @@
+{
+ "rows": 10,
+ "os": 0,
+ "page": 1,
+ "total": 6,
+ "documents": {
+  "D15622375": {
+   "id": "15622375",
+   "count": "Indonesia",
+   "docna": {
+    "0": {
+     "docna": "The imperative for connected schools in Indonesia"
+    }
+   },
+   "docty": "Brief",
+   "lang": "English",
+   "repnb": "66276",
+   "docdt": "2012-01-01T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "Research conducted by the World Bank has demonstrated that the Internet can connect the Ministry of Education and Culture (MoEC) and schools throughout the archipelago. Up to 95 percent of schools are currently within affordable reach of at least low-speed Internet connectivity, enabling email, messaging, and downloads of limited size. Use of Information and Communication Technologies (ICT) can ..."
+   },
+   "colti": "Policy brief",
+   "display_title": "The imperative for connected schools in Indonesia",
+   "disclosure_date": "2012-01-10T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/158591468039059182/pdf/662760BRI00PUB0765B0policybrief0ICT.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/158591468039059182/text/662760BRI00PUB0765B0policybrief0ICT.txt",
+   "guid": "158591468039059182",
+   "url": "http://documents.worldbank.org/curated/en/158591468039059182"
+  },
+  "D15622377": {
+   "id": "15622377",
+   "count": "Indonesia",
+   "docna": {
+    "0": {
+     "docna": "Pentingnya konektivitas untuk seluruh sekolah di Indonesia"
+    }
+   },
+   "docty": "Brief",
+   "lang": "Bahasa (Indonesian)",
+   "repnb": "66276",
+   "docdt": "2012-01-01T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "Research conducted by the World Bank has demonstrated that the Internet can connect the Ministry of Education and Culture (MoEC) and schools throughout the archipelago. Up to 95 percent of schools are currently within affordable reach of at least low-speed Internet connectivity, enabling email, messaging, and downloads of limited size. Use of Information and Communication Technologies (ICT) can ..."
+   },
+   "colti": "Policy brief",
+   "display_title": "The imperative for connected schools in Indonesia : Pentingnya konektivitas untuk seluruh sekolah di Indonesia",
+   "disclosure_date": "2012-01-10T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/568991468267007629/pdf/662760BRI0BAHA0765B0policybrief0ICT.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/568991468267007629/text/662760BRI0BAHA0765B0policybrief0ICT.txt",
+   "guid": "568991468267007629",
+   "url": "http://documents.worldbank.org/curated/en/568991468267007629"
+  },
+  "D24739587": {
+   "id": "24739587",
+   "count": "Africa",
+   "docna": {
+    "0": {
+     "docna": "Sao Tome and Principe - Central African Backbone Project (APL2)"
+    }
+   },
+   "docty": "Implementation Completion and Results Report",
+   "lang": "English",
+   "repnb": "ICR3141",
+   "docdt": "2015-06-17T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "Ratings for the Central African Backbone Project (APL2) for Sao Tome and Principe were as follows: outcomes were highly satisfactory, the risk to development outcome was low or negligible, the Bank performance was satisfactory, and the Borrower performance was also satisfactory. Some lessons learned included: when the implementation capacity of the borrower is limited, more effort/resources are ..."
+   },
+   "display_title": "Sao Tome and Principe - Central African Backbone Project (APL2)",
+   "disclosure_date": "2015-07-30T17:26:49Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/234391468190440376/pdf/ICR3141-P117652-Box391488B-OUO-9.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/234391468190440376/text/ICR3141-P117652-Box391488B-OUO-9.txt",
+   "projectid": "P117652",
+   "guid": "234391468190440376",
+   "url": "http://documents.worldbank.org/curated/en/234391468190440376"
+  },
+  "facets": {}
+ }
+}

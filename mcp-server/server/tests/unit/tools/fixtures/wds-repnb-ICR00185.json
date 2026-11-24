@@ -1,0 +1,38 @@
+{
+ "rows": 10,
+ "os": 0,
+ "page": 1,
+ "total": 1,
+ "documents": {
+  "D40079232": {
+   "id": "40079232",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "Kenya",
+   "docna": {
+    "0": {
+     "docna": "Kenya - Kenya Water Security and Climate Resilience Project"
+    }
+   },
+   "docty": "Implementation Completion and Results Report",
+   "lang": "English",
+   "repnb": "ICR00185",
+   "docdt": "2025-12-19T05:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "Ratings of the Kenya Water Security and Climate Resilience Project for Kenya were as follows: outcome was moderately satisfactory, Bank performance was moderately unsatisfactory, and M&E quality was substantial. Lessons learned include that combining large-scale irrigation investments with broad institutional and policy reforms in a single investment operation can dilute focus and reduce ..."
+   },
+   "display_title": "Kenya - Kenya Water Security and Climate Resilience Project",
+   "disclosure_date": "2026-02-02T05:00:00Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099122425102515384/pdf/BOSIB-24e62aba-6021-41bf-82e8-bc2d425ba9ef.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099122425102515384/text/BOSIB-24e62aba-6021-41bf-82e8-bc2d425ba9ef.txt",
+   "projectid": "P117635",
+   "guid": "099122425102515384",
+   "url": "http://documents.worldbank.org/curated/en/099122425102515384"
+  },
+  "facets": {}
+ }
+}

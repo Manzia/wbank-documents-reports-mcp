@@ -1,0 +1,591 @@
+{
+ "rows": 10,
+ "os": 0,
+ "page": 1,
+ "total": 3745,
+ "documents": {
+  "D13882018": {
+   "id": "13882018",
+   "authors": {
+    "0": {
+     "author": "Bundy, Donald A. P."
+    }
+   },
+   "count": "World",
+   "docna": {
+    "0": {
+     "docna": "Rethinking school health : a key component of education for all"
+    }
+   },
+   "docty": "Publication",
+   "lang": "English",
+   "repnb": "60039",
+   "docdt": "2011-02-24T05:00:00Z",
+   "majdocty": "Publications; Publications & Research",
+   "abstracts": {
+    "cdata!": "Education is one of the most important drivers of the development of individuals and societies. It not only has powerful implications for the creation of human capacity, but also helps people realize their full potential and expand their connections with the world. Economic analyses repeatedly demonstrate that education gives a high economic return within the life - span of an individual and is a ..."
+   },
+   "colti": "Directions in development ; human development",
+   "display_title": "Rethinking school health : a key component of education for all",
+   "disclosure_date": "2011-03-09T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/900271468332690641/pdf/600390PUB0ID171Health09780821379073.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/900271468332690641/text/600390PUB0ID171Health09780821379073.txt",
+   "projectid": "P111640",
+   "guid": "900271468332690641",
+   "url": "http://documents.worldbank.org/curated/en/900271468332690641"
+  },
+  "D33367146": {
+   "id": "33367146",
+   "authors": {
+    "0": {
+     "author": "Borrowing Agency"
+    }
+   },
+   "count": "Nepal",
+   "docna": {
+    "0": {
+     "docna": "Labor Management Procedures Nepal School Sector Development Program (P160748)"
+    }
+   },
+   "docty": "Procedure and Checklist",
+   "lang": "English",
+   "docdt": "2021-08-25T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "display_title": "Labor Management Procedures Nepal School Sector Development Program (P160748)",
+   "disclosure_date": "2021-08-25T17:18:12Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/942791629911892785/pdf/Labor-Management-Procedures-Nepal-School-Sector-Development-Program-P160748.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/942791629911892785/text/Labor-Management-Procedures-Nepal-School-Sector-Development-Program-P160748.txt",
+   "projectid": "P160748",
+   "guid": "942791629911892785",
+   "url": "http://documents.worldbank.org/curated/en/942791629911892785"
+  },
+  "D32183253": {
+   "id": "32183253",
+   "count": "Cambodia",
+   "docna": {
+    "0": {
+     "docna": "Cambodia - Road Connectivity Improvement Project"
+    }
+   },
+   "docty": "Project Appraisal Document",
+   "lang": "English",
+   "repnb": "PAD3522",
+   "docdt": "2020-06-24T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The objective of the Road Connectivity Improvement Project for Cambodia is to improve climate resilient road access to economic and human development facilities in targeted provinces. The Project has four components. 1. National and Provincial Roads Improvement component will be implemented by Ministry of Public Works and Transport (MPWT) and includes the following subcomponents: 1.1. Improvement ..."
+   },
+   "display_title": "Cambodia - Road Connectivity Improvement Project",
+   "disclosure_date": "2020-07-20T02:00:25Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/448831595210426390/pdf/Cambodia-Road-Connectivity-Improvement-Project.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/448831595210426390/text/Cambodia-Road-Connectivity-Improvement-Project.txt",
+   "projectid": "P169930",
+   "guid": "448831595210426390",
+   "url": "http://documents.worldbank.org/curated/en/448831595210426390"
+  },
+  "facets": {
+   "count_exact": {
+    "0": {
+     "count": 430,
+     "name": "World",
+     "label": "World"
+    },
+    "1": {
+     "count": 233,
+     "name": "India",
+     "label": "India"
+    },
+    "2": {
+     "count": 152,
+     "name": "Viet Nam",
+     "label": "Viet Nam"
+    },
+    "3": {
+     "count": 145,
+     "name": "China",
+     "label": "China"
+    },
+    "4": {
+     "count": 123,
+     "name": "Africa",
+     "label": "Africa"
+    },
+    "5": {
+     "count": 111,
+     "name": "Indonesia",
+     "label": "Indonesia"
+    },
+    "6": {
+     "count": 85,
+     "name": "Bangladesh",
+     "label": "Bangladesh"
+    },
+    "7": {
+     "count": 85,
+     "name": "Brazil",
+     "label": "Brazil"
+    },
+    "8": {
+     "count": 76,
+     "name": "Pakistan",
+     "label": "Pakistan"
+    },
+    "9": {
+     "count": 70,
+     "name": "Kenya",
+     "label": "Kenya"
+    },
+    "10": {
+     "count": 64,
+     "name": "Afghanistan",
+     "label": "Afghanistan"
+    },
+    "11": {
+     "count": 64,
+     "name": "Ghana",
+     "label": "Ghana"
+    },
+    "12": {
+     "count": 55,
+     "name": "Uganda",
+     "label": "Uganda"
+    },
+    "13": {
+     "count": 52,
+     "name": "Nepal",
+     "label": "Nepal"
+    },
+    "14": {
+     "count": 49,
+     "name": "Mozambique",
+     "label": "Mozambique"
+    },
+    "15": {
+     "count": 47,
+     "name": "Sri Lanka",
+     "label": "Sri Lanka"
+    },
+    "16": {
+     "count": 46,
+     "name": "Senegal",
+     "label": "Senegal"
+    },
+    "17": {
+     "count": 45,
+     "name": "Peru",
+     "label": "Peru"
+    },
+    "18": {
+     "count": 42,
+     "name": "Colombia",
+     "label": "Colombia"
+    },
+    "19": {
+     "count": 42,
+     "name": "Nigeria",
+     "label": "Nigeria"
+    },
+    "20": {
+     "count": 42,
+     "name": "Yemen, Republic of",
+     "label": "Yemen, Republic of"
+    },
+    "21": {
+     "count": 40,
+     "name": "Romania",
+     "label": "Romania"
+    },
+    "22": {
+     "count": 39,
+     "name": "Cambodia",
+     "label": "Cambodia"
+    },
+    "23": {
+     "count": 39,
+     "name": "Egypt, Arab Republic of",
+     "label": "Egypt, Arab Republic of"
+    },
+    "24": {
+     "count": 39,
+     "name": "Philippines",
+     "label": "Philippines"
+    },
+    "25": {
+     "count": 37,
+     "name": "Ethiopia",
+     "label": "Ethiopia"
+    },
+    "26": {
+     "count": 37,
+     "name": "Kyrgyz Republic",
+     "label": "Kyrgyz Republic"
+    },
+    "27": {
+     "count": 37,
+     "name": "Rwanda",
+     "label": "Rwanda"
+    },
+    "28": {
+     "count": 37,
+     "name": "Tanzania",
+     "label": "Tanzania"
+    },
+    "29": {
+     "count": 36,
+     "name": "Latin America",
+     "label": "Latin America"
+    },
+    "30": {
+     "count": 34,
+     "name": "Congo, Democratic Republic of",
+     "label": "Congo, Democratic Republic of"
+    },
+    "31": {
+     "count": 34,
+     "name": "Mexico",
+     "label": "Mexico"
+    },
+    "32": {
+     "count": 33,
+     "name": "Morocco",
+     "label": "Morocco"
+    },
+    "33": {
+     "count": 32,
+     "name": "Cote d'Ivoire",
+     "label": "Cote d'Ivoire"
+    },
+    "34": {
+     "count": 31,
+     "name": "Armenia",
+     "label": "Armenia"
+    },
+    "35": {
+     "count": 31,
+     "name": "Niger",
+     "label": "Niger"
+    },
+    "36": {
+     "count": 30,
+     "name": "Argentina",
+     "label": "Argentina"
+    },
+    "37": {
+     "count": 30,
+     "name": "Haiti",
+     "label": "Haiti"
+    },
+    "38": {
+     "count": 28,
+     "name": "Bolivia",
+     "label": "Bolivia"
+    },
+    "39": {
+     "count": 28,
+     "name": "Cameroon",
+     "label": "Cameroon"
+    },
+    "40": {
+     "count": 28,
+     "name": "Djibouti",
+     "label": "Djibouti"
+    },
+    "41": {
+     "count": 27,
+     "name": "Madagascar",
+     "label": "Madagascar"
+    },
+    "42": {
+     "count": 27,
+     "name": "South Asia",
+     "label": "South Asia"
+    },
+    "43": {
+     "count": 27,
+     "name": "Tunisia",
+     "label": "Tunisia"
+    },
+    "44": {
+     "count": 27,
+     "name": "Zambia",
+     "label": "Zambia"
+    },
+    "45": {
+     "count": 26,
+     "name": "Middle East and North Africa",
+     "label": "Middle East and North Africa"
+    },
+    "46": {
+     "count": 26,
+     "name": "Nicaragua",
+     "label": "Nicaragua"
+    },
+    "47": {
+     "count": 25,
+     "name": "Lebanon",
+     "label": "Lebanon"
+    },
+    "48": {
+     "count": 24,
+     "name": "Georgia",
+     "label": "Georgia"
+    },
+    "49": {
+     "count": 23,
+     "name": "Ecuador",
+     "label": "Ecuador"
+    },
+    "50": {
+     "count": 22,
+     "name": "Burkina Faso",
+     "label": "Burkina Faso"
+    },
+    "51": {
+     "count": 22,
+     "name": "Congo, Republic of",
+     "label": "Congo, Republic of"
+    },
+    "52": {
+     "count": 22,
+     "name": "Liberia",
+     "label": "Liberia"
+    },
+    "53": {
+     "count": 22,
+     "name": "Malawi",
+     "label": "Malawi"
+    },
+    "54": {
+     "count": 22,
+     "name": "Sao Tome and Principe",
+     "label": "Sao Tome and Principe"
+    },
+    "55": {
+     "count": 22,
+     "name": "West Bank and Gaza",
+     "label": "West Bank and Gaza"
+    },
+    "56": {
+     "count": 21,
+     "name": "Albania",
+     "label": "Albania"
+    },
+    "57": {
+     "count": 20,
+     "name": "Bhutan",
+     "label": "Bhutan"
+    },
+    "58": {
+     "count": 19,
+     "name": "Burundi",
+     "label": "Burundi"
+    },
+    "59": {
+     "count": 19,
+     "name": "Chad",
+     "label": "Chad"
+    },
+    "60": {
+     "count": 19,
+     "name": "Chile",
+     "label": "Chile"
+    },
+    "61": {
+     "count": 19,
+     "name": "El Salvador",
+     "label": "El Salvador"
+    },
+    "62": {
+     "count": 19,
+     "name": "Honduras",
+     "label": "Honduras"
+    },
+    "63": {
+     "count": 19,
+     "name": "Mali",
+     "label": "Mali"
+    },
+    "64": {
+     "count": 19,
+     "name": "North Macedonia",
+     "label": "North Macedonia"
+    },
+    "65": {
+     "count": 18,
+     "name": "Caribbean",
+     "label": "Caribbean"
+    },
+    "66": {
+     "count": 18,
+     "name": "Lao People's Democratic Republic",
+     "label": "Lao People's Democratic Republic"
+    },
+    "67": {
+     "count": 18,
+     "name": "Mongolia",
+     "label": "Mongolia"
+    },
+    "68": {
+     "count": 18,
+     "name": "Sierra Leone",
+     "label": "Sierra Leone"
+    },
+    "69": {
+     "count": 18,
+     "name": "Turkiye",
+     "label": "Turkiye"
+    },
+    "70": {
+     "count": 17,
+     "name": "East Asia and Pacific",
+     "label": "East Asia and Pacific"
+    },
+    "71": {
+     "count": 16,
+     "name": "Kiribati",
+     "label": "Kiribati"
+    },
+    "72": {
+     "count": 16,
+     "name": "Moldova",
+     "label": "Moldova"
+    },
+    "73": {
+     "count": 16,
+     "name": "Tajikistan",
+     "label": "Tajikistan"
+    },
+    "74": {
+     "count": 16,
+     "name": "Uruguay",
+     "label": "Uruguay"
+    },
+    "75": {
+     "count": 15,
+     "name": "Europe and Central Asia",
+     "label": "Europe and Central Asia"
+    },
+    "76": {
+     "count": 14,
+     "name": "Gambia, The",
+     "label": "Gambia, The"
+    },
+    "77": {
+     "count": 14,
+     "name": "Guyana",
+     "label": "Guyana"
+    },
+    "78": {
+     "count": 14,
+     "name": "Iraq",
+     "label": "Iraq"
+    },
+    "79": {
+     "count": 14,
+     "name": "Lesotho",
+     "label": "Lesotho"
+    },
+    "80": {
+     "count": 14,
+     "name": "Papua New Guinea",
+     "label": "Papua New Guinea"
+    },
+    "81": {
+     "count": 14,
+     "name": "Russian Federation",
+     "label": "Russian Federation"
+    },
+    "82": {
+     "count": 14,
+     "name": "Timor-Leste",
+     "label": "Timor-Leste"
+    },
+    "83": {
+     "count": 14,
+     "name": "United States",
+     "label": "United States"
+    },
+    "84": {
+     "count": 14,
+     "name": "Western Africa",
+     "label": "Western Africa"
+    },
+    "85": {
+     "count": 13,
+     "name": "Jamaica",
+     "label": "Jamaica"
+    },
+    "86": {
+     "count": 13,
+     "name": "Samoa",
+     "label": "Samoa"
+    },
+    "87": {
+     "count": 12,
+     "name": "Angola",
+     "label": "Angola"
+    },
+    "88": {
+     "count": 12,
+     "name": "Benin",
+     "label": "Benin"
+    },
+    "89": {
+     "count": 12,
+     "name": "Botswana",
+     "label": "Botswana"
+    },
+    "90": {
+     "count": 12,
+     "name": "Bulgaria",
+     "label": "Bulgaria"
+    },
+    "91": {
+     "count": 12,
+     "name": "Central African Republic",
+     "label": "Central African Republic"
+    },
+    "92": {
+     "count": 12,
+     "name": "Jordan",
+     "label": "Jordan"
+    },
+    "93": {
+     "count": 12,
+     "name": "Malaysia",
+     "label": "Malaysia"
+    },
+    "94": {
+     "count": 11,
+     "name": "Korea, Republic of",
+     "label": "Korea, Republic of"
+    },
+    "95": {
+     "count": 11,
+     "name": "Serbia",
+     "label": "Serbia"
+    },
+    "96": {
+     "count": 10,
+     "name": "Cabo Verde",
+     "label": "Cabo Verde"
+    },
+    "97": {
+     "count": 10,
+     "name": "Guinea",
+     "label": "Guinea"
+    },
+    "98": {
+     "count": 10,
+     "name": "Mauritania",
+     "label": "Mauritania"
+    },
+    "99": {
+     "count": 10,
+     "name": "Ukraine",
+     "label": "Ukraine"
+    }
+   }
+  }
+ }
+}

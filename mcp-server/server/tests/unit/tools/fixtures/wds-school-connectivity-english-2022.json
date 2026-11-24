@@ -1,0 +1,607 @@
+{
+ "rows": 20,
+ "os": 0,
+ "page": 1,
+ "total": 139,
+ "documents": {
+  "D33313415": {
+   "id": "33313415",
+   "authors": {
+    "0": {
+     "author": "Barron Rodriguez, Maria Rebeca"
+    },
+    "1": {
+     "author": "Cobo Romani, Juan Cristobal"
+    },
+    "2": {
+     "author": "Munoz-Najar, Alberto"
+    },
+    "3": {
+     "author": "Sanchez Ciarrusta, Inaki Alejandro"
+    }
+   },
+   "count": "World",
+   "docna": {
+    "0": {
+     "docna": "Remote Learning During the Global School Lockdown : Multi-Country Lessons"
+    }
+   },
+   "docty": "Report",
+   "lang": "English",
+   "repnb": "162391",
+   "docdt": "2022-03-30T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "This study includes three main sections that have been organized in a chronological order within this report: the first one, “What can we learn from education emergency responses in low- and middle-income countries?” analyzes the emergency education responses to the COVID-19 pandemic of over 120 governments from April until May, 2020. The second section, “Is remote learning perceived as ..."
+   },
+   "display_title": "Remote Learning During the Global School Lockdown : Multi-Country Lessons (Vol. 1 of 2)",
+   "disclosure_date": "2022-03-30T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/668741627975171644/pdf/Remote-Learning-During-the-Global-School-Lockdown-Multi-Country-Lessons.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/668741627975171644/text/Remote-Learning-During-the-Global-School-Lockdown-Multi-Country-Lessons.txt",
+   "projectid": "P174252",
+   "guid": "668741627975171644",
+   "url": "http://documents.worldbank.org/curated/en/668741627975171644"
+  },
+  "D34288276": {
+   "id": "34288276",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "World",
+   "docna": {
+    "0": {
+     "docna": "EdTech Readiness Index (ETRI) : School Survey"
+    }
+   },
+   "docty": "Brief",
+   "lang": "English",
+   "repnb": "188648",
+   "docdt": "2024-03-01T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "The World Bank developed the EdTech Readiness Index (ETRI) to support countries in monitoring the extent to which technology supports teaching and learning processes within traditional school environments and beyond. The ETRI indicators seek to collect information on two key dimensions that impact student learning: practices (or provision of services offered in the school) and policies (that ..."
+   },
+   "display_title": "EdTech Readiness Index (ETRI) : School Survey",
+   "disclosure_date": "2024-03-26T06:06:49Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/099608503262429468/pdf/IDU1ffb2914e14c6c14fbd1bf3517724461c5238.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/099608503262429468/text/IDU1ffb2914e14c6c14fbd1bf3517724461c5238.txt",
+   "guid": "099608503262429468",
+   "url": "http://documents.worldbank.org/curated/en/099608503262429468"
+  },
+  "D34369298": {
+   "id": "34369298",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "India",
+   "docna": {
+    "0": {
+     "docna": "India - Madhya Pradesh Rural Connectivity Project"
+    }
+   },
+   "docty": "Implementation Completion and Results Report",
+   "lang": "English",
+   "repnb": "ICR6477",
+   "docdt": "2024-06-26T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "Ratings for the Madhya Pradesh Rural Connectivity Project for India were as follows: outcome was highly satisfactory, Bank performance was satisfactory, and monitoring and evaluation (M and E) quality was substantial. Some lessons learned included: the team built on previous rural connectivity programs (Pradhan Mantri Gram Sadak Yojana (PMGSY) and Chief Minister Gram Sadak Yojana (CMGSY)) to put ..."
+   },
+   "display_title": "India - Madhya Pradesh Rural Connectivity Project",
+   "disclosure_date": "2024-07-25T06:54:07Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099072524112523809/pdf/BOSIB-d84d9f20-0fcc-45ae-9223-1ddfd87e4e64.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099072524112523809/text/BOSIB-d84d9f20-0fcc-45ae-9223-1ddfd87e4e64.txt",
+   "projectid": "P157054",
+   "guid": "099072524112523809",
+   "url": "http://documents.worldbank.org/curated/en/099072524112523809"
+  },
+  "D40130851": {
+   "id": "40130851",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "Sri Lanka",
+   "docna": {
+    "0": {
+     "docna": "Sri Lanka - Inclusive Connectivity and Development Project : Additional Financing"
+    }
+   },
+   "docty": "Project Paper",
+   "lang": "English",
+   "repnb": "PPIAF000370",
+   "docdt": "2026-09-29T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objective of the Inclusive Connectivity and Development Project for Sri Lanka is to improve the safety, efficiency, and climate resilience of road connectivity; and enable an effective response to economic and disaster-related shocks. The additional financing is justified by the widespread damage and service disruptions caused by Cyclone Ditwah, which affected all provinces and ..."
+   },
+   "display_title": "Sri Lanka - Inclusive Connectivity and Development Project : Additional Financing",
+   "disclosure_date": "2026-10-01T16:39:02Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099100126094595772/pdf/BOSIB-d5af1f1c-b6ae-4381-abef-466393d14f96.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099100126094595772/text/BOSIB-d5af1f1c-b6ae-4381-abef-466393d14f96.txt",
+   "projectid": "P176164",
+   "guid": "099100126094595772",
+   "url": "http://documents.worldbank.org/curated/en/099100126094595772"
+  },
+  "D40109626": {
+   "id": "40109626",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "Cameroon",
+   "docna": {
+    "0": {
+     "docna": "Cameroon - Enhancing Connectivity and Resilience in the Far North of Cameroon for Inclusiveness Project : Additional Financing\n"
+    }
+   },
+   "docty": "Project Paper",
+   "lang": "English",
+   "repnb": "PPIAF000315",
+   "docdt": "2026-06-11T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objective of the Enhancing Connectivity and Resilience in the Far North of Cameroon for Inclusiveness Project for Cameroon is to enhance connectivity and climate resilience along the Mora-Dabanga-Kousseri road section and improve access to basic socioeconomic infrastructure in selected districts of the Far North. The additional financing is proposed to cover cost overruns ..."
+   },
+   "display_title": "Cameroon - Enhancing Connectivity and Resilience in the Far North of Cameroon for Inclusiveness Project : Additional Financing\n",
+   "disclosure_date": "2026-06-16T15:05:58Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099061626095040989/pdf/BOSIB-42135ea3-2c89-4905-929c-4dd8693b8e5e.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099061626095040989/text/BOSIB-42135ea3-2c89-4905-929c-4dd8693b8e5e.txt",
+   "projectid": "P178207",
+   "guid": "099061626095040989",
+   "url": "http://documents.worldbank.org/curated/en/099061626095040989"
+  },
+  "D40136277": {
+   "id": "40136277",
+   "authors": {
+    "0": {
+     "author": "Borrowing Agency"
+    }
+   },
+   "count": "Southern Africa",
+   "docna": {
+    "0": {
+     "docna": "Southern Africa - Trade and Connectivity Project : Environmental and Social Management Plan for Upgrading of Kholoni-Sitolo Road to Gravel Standard in Mchinji District\n"
+    }
+   },
+   "docty": "Environmental and Social Management Plan",
+   "lang": "English",
+   "repnb": "216631",
+   "docdt": "2026-06-18T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objective of the Trade and Connectivity Project for Southern Africa is to increase private sector activity along targeted corridors of Malawi and Mozambique, through reduced trade costs and time, increased value chain development, and improved access to infrastructure. Some of the negative impacts include: (1) dust, noise, and construction movement affecting nearby households, ..."
+   },
+   "display_title": "Southern Africa - Trade and Connectivity Project : Environmental and Social Management Plan for Upgrading of Kholoni-Sitolo Road to Gravel Standard in Mchinji District\n",
+   "disclosure_date": "2026-10-28T16:54:12Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099653210282642508/pdf/IDU-b277fda0-63a3-47e2-ab31-ac38c626e8b7.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099653210282642508/text/IDU-b277fda0-63a3-47e2-ab31-ac38c626e8b7.txt",
+   "projectid": "P164847",
+   "guid": "099653210282642508",
+   "url": "http://documents.worldbank.org/curated/en/099653210282642508"
+  },
+  "D40136280": {
+   "id": "40136280",
+   "authors": {
+    "0": {
+     "author": "Borrowing Agency"
+    }
+   },
+   "count": "Southern Africa",
+   "docna": {
+    "0": {
+     "docna": "Southern Africa - Trade and Connectivity Project : Environmental and Social Mitigation and Monitoring Plan for Construction of Multiple Box Culverts at Chingalu on Mitundu to Nsabwemanyazi Road in Lilongwe\n"
+    }
+   },
+   "docty": "Environmental and Social Management Plan",
+   "lang": "English",
+   "repnb": "216632",
+   "docdt": "2026-06-18T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objective of the Trade and Connectivity Project for Southern Africa is to increase private sector activity along targeted corridors of Malawi and Mozambique, through reduced trade costs and time, increased value chain development, and improved access to infrastructure. Some of the negative impacts include: (1) dust, noise, and construction movement affecting nearby households, ..."
+   },
+   "display_title": "Southern Africa - Trade and Connectivity Project : Environmental and Social Mitigation and Monitoring Plan for Construction of Multiple Box Culverts at Chingalu on Mitundu to Nsabwemanyazi Road in Lilongwe\n",
+   "disclosure_date": "2026-10-28T16:57:59Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099700510282624656/pdf/IDU-d98547f0-3660-4e6c-b143-b9b13702c549.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099700510282624656/text/IDU-d98547f0-3660-4e6c-b143-b9b13702c549.txt",
+   "projectid": "P164847",
+   "guid": "099700510282624656",
+   "url": "http://documents.worldbank.org/curated/en/099700510282624656"
+  },
+  "D40136284": {
+   "id": "40136284",
+   "authors": {
+    "0": {
+     "author": "Borrowing Agency"
+    }
+   },
+   "count": "Southern Africa",
+   "docna": {
+    "0": {
+     "docna": "Southern Africa - Trade and Connectivity Project : Environmental and Social Management Plan for Rehabilitation of Kanyenda-Mwendayekha Irrigation Scheme Access Road in Kanyama EPA, GVH Kasumbu, Dedza District\n"
+    }
+   },
+   "docty": "Environmental and Social Management Plan",
+   "lang": "English",
+   "repnb": "216633",
+   "docdt": "2026-06-18T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objective of the Trade and Connectivity Project for Southern Africa is to increase private sector activity along targeted corridors of Malawi and Mozambique, through reduced trade costs and time, increased value chain development, and improved access to infrastructure. Some of the negative impacts include: (1) dust, noise, and construction movement affecting nearby households, ..."
+   },
+   "display_title": "Southern Africa - Trade and Connectivity Project : Environmental and Social Management Plan for Rehabilitation of Kanyenda-Mwendayekha Irrigation Scheme Access Road in Kanyama EPA, GVH Kasumbu, Dedza District\n",
+   "disclosure_date": "2026-10-28T17:08:42Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099711010282637885/pdf/IDU-df292b4b-1c85-4cf3-8019-ccef1958c7a1.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099711010282637885/text/IDU-df292b4b-1c85-4cf3-8019-ccef1958c7a1.txt",
+   "projectid": "P164847",
+   "guid": "099711010282637885",
+   "url": "http://documents.worldbank.org/curated/en/099711010282637885"
+  },
+  "D40136299": {
+   "id": "40136299",
+   "authors": {
+    "0": {
+     "author": "Borrowing Agency"
+    }
+   },
+   "count": "Southern Africa",
+   "docna": {
+    "0": {
+     "docna": "Southern Africa - Trade and Connectivity Project : Environmental and Social Management Plan for the Upgrading of Zomba-Kachulu Road to Gravel Standard in Zomba District\n"
+    }
+   },
+   "docty": "Environmental and Social Management Plan",
+   "lang": "English",
+   "repnb": "216637",
+   "docdt": "2026-06-18T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objective of the Trade and Connectivity Project for Southern Africa is to increase private sector activity along targeted corridors of Malawi and Mozambique, through reduced trade costs and time, increased value chain development, and improved access to infrastructure. Some of the negative impacts include: (1) dust, noise, and construction movement affecting nearby households, ..."
+   },
+   "display_title": "Southern Africa - Trade and Connectivity Project : Environmental and Social Management Plan for the Upgrading of Zomba-Kachulu Road to Gravel Standard in Zomba District\n",
+   "disclosure_date": "2026-10-28T17:24:30Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099736510282674696/pdf/IDU-446b0a54-2d2a-49aa-9470-1f74a19927f5.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099736510282674696/text/IDU-446b0a54-2d2a-49aa-9470-1f74a19927f5.txt",
+   "projectid": "P164847",
+   "guid": "099736510282674696",
+   "url": "http://documents.worldbank.org/curated/en/099736510282674696"
+  },
+  "D40136303": {
+   "id": "40136303",
+   "authors": {
+    "0": {
+     "author": "Borrowing Agency"
+    }
+   },
+   "count": "Southern Africa",
+   "docna": {
+    "0": {
+     "docna": "Southern Africa - Trade and Connectivity Project : Environmental and Social Mitigation and Monitoring Plan for the Rehabilitation of Senzani to Doviko (T394/S125) Road, Ntcheu District\n"
+    }
+   },
+   "docty": "Environmental and Social Management Plan",
+   "lang": "English",
+   "repnb": "216642",
+   "docdt": "2026-06-18T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objective of the Trade and Connectivity Project for Southern Africa is to increase private sector activity along targeted corridors of Malawi and Mozambique, through reduced trade costs and time, increased value chain development, and improved access to infrastructure. Some of the negative impacts include: (1) dust, noise, and construction movement affecting nearby households, ..."
+   },
+   "display_title": "Southern Africa - Trade and Connectivity Project : Environmental and Social Mitigation and Monitoring Plan for the Rehabilitation of Senzani to Doviko (T394/S125) Road, Ntcheu District\n",
+   "disclosure_date": "2026-10-28T17:51:04Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099753510282623235/pdf/IDU-719eb5d9-3753-4f4f-9500-838c4da021b3.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099753510282623235/text/IDU-719eb5d9-3753-4f4f-9500-838c4da021b3.txt",
+   "projectid": "P164847",
+   "guid": "099753510282623235",
+   "url": "http://documents.worldbank.org/curated/en/099753510282623235"
+  },
+  "D40136289": {
+   "id": "40136289",
+   "authors": {
+    "0": {
+     "author": "Borrowing Agency"
+    }
+   },
+   "count": "Southern Africa",
+   "docna": {
+    "0": {
+     "docna": "Southern Africa - Trade and Connectivity Project : Environmental and Social Management Plan for the Construction of Reinforced Concrete Box Culverts and Selected Spot Improvements on the Mdeka–Chinyangute Feeder Road, Blantyre District\n"
+    }
+   },
+   "docty": "Environmental and Social Management Plan",
+   "lang": "English",
+   "repnb": "216634",
+   "docdt": "2026-06-18T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objective of the Trade and Connectivity Project for Southern Africa is to increase private sector activity along targeted corridors of Malawi and Mozambique, through reduced trade costs and time, increased value chain development, and improved access to infrastructure. Some of the negative impacts include: (1) dust, noise, and construction movement affecting nearby households, ..."
+   },
+   "display_title": "Southern Africa - Trade and Connectivity Project : Environmental and Social Management Plan for the Construction of Reinforced Concrete Box Culverts and Selected Spot Improvements on the Mdeka–Chinyangute Feeder Road, Blantyre District\n",
+   "disclosure_date": "2026-10-28T17:13:13Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099717110282612268/pdf/IDU-fd7efc58-fe38-429b-a37e-e5b9089908d6.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099717110282612268/text/IDU-fd7efc58-fe38-429b-a37e-e5b9089908d6.txt",
+   "projectid": "P164847",
+   "guid": "099717110282612268",
+   "url": "http://documents.worldbank.org/curated/en/099717110282612268"
+  },
+  "D34056141": {
+   "id": "34056141",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "Brazil",
+   "docna": {
+    "0": {
+     "docna": "Analysis of Shared Streets in São Paulo : Executive Summary"
+    }
+   },
+   "docty": "Report",
+   "lang": "English",
+   "repnb": "181889",
+   "docdt": "2023-03-09T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "This study has developed methodologies to measure the impacts of prioritizing individual motorized transport on road safety, atmospheric pollution, greenhouse gas emissions, and congestion, also presenting estimates of the social costs they entail. It is worth noting that there are details of the methods in the respective reports that precede this executive summary, in which the access locations ..."
+   },
+   "display_title": "Analysis of Shared Streets in São Paulo : Executive Summary",
+   "disclosure_date": "2023-05-03T16:11:31Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/099050223201017669/pdf/P1734140dc76b105509b6f074cc8fe0f3a1.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/099050223201017669/text/P1734140dc76b105509b6f074cc8fe0f3a1.txt",
+   "projectid": "P173414",
+   "guid": "099050223201017669",
+   "url": "http://documents.worldbank.org/curated/en/099050223201017669"
+  },
+  "D33340768": {
+   "id": "33340768",
+   "authors": {
+    "0": {
+     "author": "Barron Rodriguez, Maria Rebeca"
+    },
+    "1": {
+     "author": "Cobo Romani, Juan Cristobal"
+    },
+    "2": {
+     "author": "Munoz-Najar, Alberto"
+    },
+    "3": {
+     "author": "Sanchez Ciarrusta, Inaki Alejandro"
+    }
+   },
+   "count": "World",
+   "docna": {
+    "0": {
+     "docna": "Interactive Document"
+    }
+   },
+   "docty": "Report",
+   "lang": "English",
+   "repnb": "162391",
+   "docdt": "2022-03-30T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "This study includes three main sections that have been organized in a chronological order within this report: the first one, “What can we learn from education emergency responses in low- and middle-income countries?” analyzes the emergency education responses to the COVID-19 pandemic of over 120 governments from April until May, 2020. The second section, “Is remote learning perceived as ..."
+   },
+   "display_title": "Remote Learning During the Global School Lockdown : Multi-Country Lessons (Vol. 2 of 2) : Interactive Document",
+   "disclosure_date": "2022-03-30T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/484811628835265239/pdf/Interactive-Document.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/484811628835265239/text/Interactive-Document.txt",
+   "projectid": "P174252",
+   "guid": "484811628835265239",
+   "url": "http://documents.worldbank.org/curated/en/484811628835265239"
+  },
+  "D40081012": {
+   "id": "40081012",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "Uganda",
+   "docna": {
+    "0": {
+     "docna": "The EdTech Readiness Index : Uganda Policy Brief - Examining Readiness to Use Technology in Primary and Secondary Schools"
+    }
+   },
+   "docty": "Brief",
+   "lang": "English",
+   "repnb": "207823",
+   "docdt": "2025-06-30T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "This brief assesses Uganda’s readiness to leverage educational technology in primary and secondary education, situating the analysis within national goals for human capital and socio-economic transformation. Using the World Bank’s EdTech Readiness Index (ETRI), the study draws on school, policy, and student surveys conducted across four regions between October and December 2024. The findings ..."
+   },
+   "colti": "Mastercard Foundation",
+   "display_title": "The EdTech Readiness Index : Uganda Policy Brief - Examining Readiness to Use Technology in Primary and Secondary Schools",
+   "disclosure_date": "2026-01-14T06:50:37Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099824001142614497/pdf/IDU-f882d18d-c06e-41c0-90fc-d0de2c31aea6.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099824001142614497/text/IDU-f882d18d-c06e-41c0-90fc-d0de2c31aea6.txt",
+   "guid": "099824001142614497",
+   "url": "http://documents.worldbank.org/curated/en/099824001142614497"
+  },
+  "D34056068": {
+   "id": "34056068",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "Brazil",
+   "docna": {
+    "0": {
+     "docna": "Improving the Governance of Mobility Including the Specific Case Study of Sao Paulo's Metropolitan Region : Executive Summary"
+    }
+   },
+   "docty": "Report",
+   "lang": "English",
+   "repnb": "181893",
+   "docdt": "2023-01-12T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "Urban mobility is in crisis worldwide. The changes that have taken place in the way people commute in large urban centers are substantial and require rethinking the future of mobility. The advent of transport services booked through electronic applications, the socalled e-hailing, combined with the dissemination and innovation of automatic vehicle location (AVL) and routing systems, created ..."
+   },
+   "display_title": "Improving the Governance of Mobility Including the Specific Case Study of Sao Paulo's Metropolitan Region : Executive Summary",
+   "disclosure_date": "2023-05-03T15:23:55Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/099050223111340486/pdf/P17341404046e006b0a47706620c3d753b0.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/099050223111340486/text/P17341404046e006b0a47706620c3d753b0.txt",
+   "projectid": "P173414",
+   "guid": "099050223111340486",
+   "url": "http://documents.worldbank.org/curated/en/099050223111340486"
+  },
+  "D34097930": {
+   "id": "34097930",
+   "authors": {
+    "0": {
+     "author": "Gresham, James"
+    },
+    "1": {
+     "author": "Reyes, Joel E."
+    }
+   },
+   "count": "Ukraine",
+   "docna": {
+    "0": {
+     "docna": "Safeguarding Learning in Ukraine through Digitalization and Blended Learning : Intervention and Transition Roadmap"
+    }
+   },
+   "docty": "Report",
+   "lang": "English",
+   "repnb": "182976",
+   "docdt": "2023-06-01T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "Since the beginning of the war, the Ukrainian education system has been heavily reliant on online learning while also working to sustain key education reforms. Digitalization is essential for delivering education services during the war and for learning recovery afterward, including for the continuation of New Ukrainian School (NUS) reforms. Blended teaching and learning, which combines ..."
+   },
+   "display_title": "Safeguarding Learning in Ukraine through Digitalization and Blended Learning : Intervention and Transition Roadmap",
+   "disclosure_date": "2023-06-20T07:55:38Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/099061823081518319/pdf/P1800520b8c829030bbf80b31a6bf62cd6.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/099061823081518319/text/P1800520b8c829030bbf80b31a6bf62cd6.txt",
+   "projectid": "P180052",
+   "guid": "099061823081518319",
+   "url": "http://documents.worldbank.org/curated/en/099061823081518319"
+  },
+  "D34057248": {
+   "id": "34057248",
+   "authors": {
+    "0": {
+     "author": "Borrowing Agency"
+    }
+   },
+   "count": "Kiribati",
+   "docna": {
+    "0": {
+     "docna": "Kiribati - Pacific Regional Connectivity Program Project : Environmental and Social Management Plan for Fourth Phase of Kiribati Connectivity Project\n"
+    }
+   },
+   "docty": "Environmental Assessment",
+   "lang": "English",
+   "repnb": "SFG7586",
+   "docdt": "2023-03-01T05:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objective of Pacific Regional Connectivity Program Project for Kiribati is to reduce the cost and increase the availability of Internet services in Kiribati. Some of the negative impacts include: (i) dust will be generated from the project during the digging of the trenches for laying of cable and the construction of manholes where area needs extension to the service; (ii) noise ..."
+   },
+   "display_title": "Kiribati - Pacific Regional Connectivity Program Project : Environmental and Social Management Plan for Fourth Phase of Kiribati Connectivity Project\n",
+   "disclosure_date": "2023-05-04T07:42:46Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/099050423222510336/pdf/P15963207bc5b90f008ef70c1c65c09364b.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/099050423222510336/text/P15963207bc5b90f008ef70c1c65c09364b.txt",
+   "projectid": "P159632",
+   "guid": "099050423222510336",
+   "url": "http://documents.worldbank.org/curated/en/099050423222510336"
+  },
+  "D33753843": {
+   "id": "33753843",
+   "count": "Madagascar",
+   "docna": {
+    "0": {
+     "docna": "Madagascar - Connecting Madagascar for Inclusive Growth Project"
+    }
+   },
+   "docty": "Project Appraisal Document",
+   "lang": "English",
+   "repnb": "PAD4493",
+   "docdt": "2022-03-04T05:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objectives of Connecting Madagascar for Inclusive Growth Project for Madagascar is to improve the connectivity, resilience and management of key roads in selected rural areas, including in the South, for improved access to social and economic opportunities of rural communities. This project has four components. The first component, Improving Condition and Resilience of Primary ..."
+   },
+   "display_title": "Madagascar - Connecting Madagascar for Inclusive Growth Project",
+   "disclosure_date": "2022-03-26T00:31:30Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/292391648600324935/pdf/IBArchive-e0a131b2-d56d-4c49-9d78-6c53bfa85596.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/292391648600324935/text/IBArchive-e0a131b2-d56d-4c49-9d78-6c53bfa85596.txt",
+   "projectid": "P173711",
+   "guid": "292391648600324935",
+   "url": "http://documents.worldbank.org/curated/en/292391648600324935"
+  },
+  "D40111901": {
+   "id": "40111901",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "Senegal",
+   "docna": {
+    "0": {
+     "docna": "Senegal - Enhancing Connectivity in the Northern and Central Agricultural Production Areas of Senegal Project : Additional Financing"
+    }
+   },
+   "docty": "Project Paper",
+   "lang": "English",
+   "repnb": "PPIAF000341",
+   "docdt": "2026-06-10T04:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "The development objective of the Enhancing Connectivity in the Northern and Central Agricultural Production Areas of Senegal Project for Senegal is to enhance resilient road connectivity in selected agricultural areas and to support road safety institutional capacity development in Senegal. The additional financing is requested to scale up investments to underserved agro-sylvo-pastoral zones, ..."
+   },
+   "display_title": "Senegal - Enhancing Connectivity in the Northern and Central Agricultural Production Areas of Senegal Project : Additional Financing",
+   "disclosure_date": "2026-06-24T09:23:00Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099062426113560467/pdf/BOSIB-6455ea95-46c9-4c6b-92fe-2919cf3412ab.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099062426113560467/text/BOSIB-6455ea95-46c9-4c6b-92fe-2919cf3412ab.txt",
+   "projectid": "P176419",
+   "guid": "099062426113560467",
+   "url": "http://documents.worldbank.org/curated/en/099062426113560467"
+  },
+  "D40081048": {
+   "id": "40081048",
+   "authors": {
+    "0": {
+     "author": "Chinen, Marjorie H"
+    },
+    "1": {
+     "author": "Rodon, Gemma"
+    }
+   },
+   "count": "Africa",
+   "docna": {
+    "0": {
+     "docna": "Practical Guide to Implement Task-Based Digital Skills Assessments in Schools and Technical Institutions in Sub-Saharan Africa"
+    }
+   },
+   "docty": "Report",
+   "lang": "English",
+   "repnb": "207838",
+   "docdt": "2026-02-05T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "This toolkit has been developed under the Digital Skills for Africa (DS4A) initiative, a partnership between the World Bank and the Mastercard Foundation, to guide the implementation of rigorous, task-based digital skills assessments in schools and technical institutions across Sub-Saharan Africa. It consolidates practical resources, technical guidance, and implementation materials to support ..."
+   },
+   "colti": "Mastercard Foundation",
+   "display_title": "Practical Guide to Implement Task-Based Digital Skills Assessments in Schools and Technical Institutions in Sub-Saharan Africa",
+   "disclosure_date": "2026-01-14T11:42:56Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099147201142615447/pdf/IDU-5e8e0ff5-0e30-4944-8838-db4a6292706b.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099147201142615447/text/IDU-5e8e0ff5-0e30-4944-8838-db4a6292706b.txt",
+   "guid": "099147201142615447",
+   "url": "http://documents.worldbank.org/curated/en/099147201142615447"
+  },
+  "facets": {}
+ }
+}

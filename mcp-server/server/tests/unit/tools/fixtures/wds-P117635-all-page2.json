@@ -1,0 +1,410 @@
+{
+ "rows": 100,
+ "os": 100,
+ "page": 2,
+ "total": 129,
+ "documents": {
+  "D25842278": {
+   "id": "25842278",
+   "docty": "Auditing Document",
+   "repnb": "AUD0002828",
+   "docdt": "2016-01-25T05:00:00Z",
+   "display_title": "KWSCRP Audited FS",
+   "disclosure_date": "2016-01-30T19:56:58Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/192361468254079232/pdf/KWSCRP-Audited-FS.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/192361468254079232/text/KWSCRP-Audited-FS.txt",
+   "projectid": "P117635",
+   "guid": "192361468254079232",
+   "url": "http://documents.worldbank.org/curated/en/192361468254079232"
+  },
+  "D25514246": {
+   "id": "25514246",
+   "docty": "Implementation Status and Results Report",
+   "repnb": "ISR20728",
+   "docdt": "2015-12-02T05:00:00Z",
+   "display_title": "Kenya - Kenya Water Security and Climate Resilience Project : P117635 - Implementation Status Results Report : Sequence 04",
+   "disclosure_date": "2015-12-02T22:19:23Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/166371468276327274/pdf/Kenya-Kenya-Water-Security-and-Climate-Resilience-Project-P117635-Implementation-Status-Results-Report-Sequence-04.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/166371468276327274/text/Kenya-Kenya-Water-Security-and-Climate-Resilience-Project-P117635-Implementation-Status-Results-Report-Sequence-04.txt",
+   "projectid": "P117635",
+   "guid": "166371468276327274",
+   "url": "http://documents.worldbank.org/curated/en/166371468276327274"
+  },
+  "D25087927": {
+   "id": "25087927",
+   "docty": "Financing Agreement",
+   "docdt": "2015-09-07T04:00:00Z",
+   "display_title": "Official Documents- Financing Agreement for Credit 5674-KE, Amending and Restating Original Financing Agreement for Credit 5268-KE (Closing Package)",
+   "disclosure_date": "2015-10-05T15:52:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/334901468254048556/pdf/RAD278955818.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/334901468254048556/text/RAD278955818.txt",
+   "projectid": "P117635",
+   "guid": "334901468254048556",
+   "url": "http://documents.worldbank.org/curated/en/334901468254048556"
+  },
+  "D25088108": {
+   "id": "25088108",
+   "docty": "Disbursement Letter",
+   "docdt": "2015-09-07T04:00:00Z",
+   "display_title": "Official Documents- First Revised Disbursement Letter for Credits 5674-KE and 5268-KE (Closing Package)",
+   "disclosure_date": "2015-10-05T17:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/234451468254075984/pdf/RAD371810399.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/234451468254075984/text/RAD371810399.txt",
+   "projectid": "P117635",
+   "guid": "234451468254075984",
+   "url": "http://documents.worldbank.org/curated/en/234451468254075984"
+  },
+  "D25088102": {
+   "id": "25088102",
+   "docty": "Side Letter",
+   "docdt": "2015-09-07T04:00:00Z",
+   "display_title": "Official Documents- Supplemental Letter Ref. Fianncial Data for Credits 5674-KE and 5268-KE (Closing Package)",
+   "disclosure_date": "2015-10-05T17:02:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/439861468044335123/pdf/RAD435965022.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/439861468044335123/text/RAD435965022.txt",
+   "projectid": "P117635",
+   "guid": "439861468044335123",
+   "url": "http://documents.worldbank.org/curated/en/439861468044335123"
+  },
+  "D24839198": {
+   "id": "24839198",
+   "docty": "Auditing Document",
+   "repnb": "117982",
+   "docdt": "2015-07-29T04:00:00Z",
+   "display_title": "Kenya - Water Security and Climate Resilience Project : audited financial statement - year ending June 30, 2014",
+   "disclosure_date": "2017-08-07T18:29:25Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/948341438174804516/pdf/Kenya-Water-Security-and-Climate-Resilience-Project-audited-financial-statement-year-ending-June-30-2014.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/948341438174804516/text/Kenya-Water-Security-and-Climate-Resilience-Project-audited-financial-statement-year-ending-June-30-2014.txt",
+   "projectid": "P117635",
+   "guid": "948341438174804516",
+   "url": "http://documents.worldbank.org/curated/en/948341438174804516"
+  },
+  "D24600019": {
+   "id": "24600019",
+   "docty": "Project Paper",
+   "repnb": "PAD1387",
+   "docdt": "2015-06-04T04:00:00Z",
+   "abstracts": {
+    "cdata!": "The development objectives of the Water Security and Climate Resilience Project for Kenya are to: (i) increase availability and productivity of irrigation water for project beneficiaries; and (ii) enhance the institutional framework and strengthen capacity for water security and climate resilience for the country. The Additional Financing (AF) will support improved and new flood control ..."
+   },
+   "display_title": "Kenya - Water Security and Climate Resilience Project : additional financing",
+   "disclosure_date": "2015-07-01T17:03:08Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/140371468178181251/pdf/PAD1387-PJPR-P117635-P151660-IDA-R2015-0167-1-Box391454B-OUO-9.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/140371468178181251/text/PAD1387-PJPR-P117635-P151660-IDA-R2015-0167-1-Box391454B-OUO-9.txt",
+   "projectid": "P117635,P151660",
+   "guid": "140371468178181251",
+   "url": "http://documents.worldbank.org/curated/en/140371468178181251"
+  },
+  "D24371054": {
+   "id": "24371054",
+   "docty": "Implementation Status and Results Report",
+   "repnb": "ISR18551",
+   "docdt": "2015-04-15T04:00:00Z",
+   "display_title": "Kenya - Kenya Water Security and Climate Resilience Project : P117635 - Implementation Status Results Report : Sequence 03",
+   "disclosure_date": "2015-04-15T23:19:56Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/767831468080328895/pdf/ISR-Disclosable-P117635-04-15-2015-1429139984212.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/767831468080328895/text/ISR-Disclosable-P117635-04-15-2015-1429139984212.txt",
+   "projectid": "P117635",
+   "guid": "767831468080328895",
+   "url": "http://documents.worldbank.org/curated/en/767831468080328895"
+  },
+  "D20292595": {
+   "id": "20292595",
+   "docty": "Implementation Status and Results Report",
+   "docdt": "2014-10-14T04:00:00Z",
+   "display_title": "Kenya - Kenya Water Security and Climate Resilience Project : P117635 - Implementation Status Results Report : Sequence 02",
+   "disclosure_date": "2014-10-14T20:27:39Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/259841468048304432/pdf/ISR-Disclosable-P117635-10-14-2014-1413318446187.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/259841468048304432/text/ISR-Disclosable-P117635-10-14-2014-1413318446187.txt",
+   "projectid": "P117635",
+   "guid": "259841468048304432",
+   "url": "http://documents.worldbank.org/curated/en/259841468048304432"
+  },
+  "D25489554": {
+   "id": "25489554",
+   "repnb": "101275",
+   "docdt": "2014-06-30T04:00:00Z",
+   "display_title": "Kenya - Water Security and Climate Resilience Project : reports and financial statements for the year ended June 30, 2014",
+   "disclosure_date": "2015-11-26T05:23:44Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/295571467991027331/pdf/101275-AD-FY14-P117635-Kenya-Box393260B-PUBLIC.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/295571467991027331/text/101275-AD-FY14-P117635-Kenya-Box393260B-PUBLIC.txt",
+   "projectid": "P117635",
+   "guid": "295571467991027331",
+   "url": "http://documents.worldbank.org/curated/en/295571467991027331"
+  },
+  "D18737345": {
+   "id": "18737345",
+   "docty": "Implementation Status and Results Report",
+   "repnb": "ISR13059",
+   "docdt": "2014-01-01T05:00:00Z",
+   "display_title": "Kenya - Kenya Water Security and Climate Resilience Project : P117635 - Implementation Status Results Report : Sequence 01",
+   "disclosure_date": "2014-01-01T13:39:27Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/130611468048277769/pdf/ISR-Disclosable-P117635-01-01-2014-1388583555454.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/130611468048277769/text/ISR-Disclosable-P117635-01-01-2014-1388583555454.txt",
+   "projectid": "P117635",
+   "guid": "130611468048277769",
+   "url": "http://documents.worldbank.org/curated/en/130611468048277769"
+  },
+  "D18402997": {
+   "id": "18402997",
+   "docty": "Procurement Plan",
+   "repnb": "81895",
+   "docdt": "2013-10-14T04:00:00Z",
+   "display_title": "Kenya - Water Security and Climate Resilience Project : procurement plan",
+   "disclosure_date": "2013-10-16T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/336141468272712364/pdf/818950PROP0P110ox0379848B00PUBLIC0.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/336141468272712364/text/818950PROP0P110ox0379848B00PUBLIC0.txt",
+   "projectid": "P117635",
+   "guid": "336141468272712364",
+   "url": "http://documents.worldbank.org/curated/en/336141468272712364"
+  },
+  "D18438153": {
+   "id": "18438153",
+   "docty": "Procurement Plan",
+   "repnb": "82052",
+   "docdt": "2013-10-14T04:00:00Z",
+   "display_title": "Kenya - Water Security and Climate Resilience Project : procurement plan",
+   "disclosure_date": "2013-10-25T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/578471468046819757/pdf/820520PROP0P110ox0379855B00PUBLIC0.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/578471468046819757/text/820520PROP0P110ox0379855B00PUBLIC0.txt",
+   "projectid": "P117635",
+   "guid": "578471468046819757",
+   "url": "http://documents.worldbank.org/curated/en/578471468046819757"
+  },
+  "D17965730": {
+   "id": "17965730",
+   "docty": "Board Summary",
+   "repnb": "79272",
+   "docdt": "2013-06-18T04:00:00Z",
+   "abstracts": {
+    "cdata!": "Executive Directors approved the credit to the Republic of Kenya for the Kenya Water Security and Climate Resilience Project in the amount of SDR 103.4 million (US$155 million equivalent) on the payment terms and conditions set out in the President's Memorandum. Directors emphasized the vital issue of water security and climate resilience for Kenya, and welcomed the Bank's collaboration with the ..."
+   },
+   "display_title": "Kenya - Water Security and Climate Resilience Project : summary of discussion",
+   "disclosure_date": "2013-07-09T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/960581468273275787/pdf/792720SD0IDA0S00Box0377341B00OUO090.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/960581468273275787/text/792720SD0IDA0S00Box0377341B00OUO090.txt",
+   "projectid": "P117635",
+   "guid": "960581468273275787",
+   "url": "http://documents.worldbank.org/curated/en/960581468273275787"
+  },
+  "D17213239": {
+   "id": "17213239",
+   "docty": "Project Information Document",
+   "repnb": "PIDA1071",
+   "docdt": "2013-06-11T04:00:00Z",
+   "display_title": "Project Information Document (Appraisal Stage) - Kenya Water Security and Climate Resilience Project - P117635",
+   "disclosure_date": "2013-06-11T05:33:10Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/226581468285297990/pdf/PID-Appraisal-Print-P117635-06-11-2013-1370928769455.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/226581468285297990/text/PID-Appraisal-Print-P117635-06-11-2013-1370928769455.txt",
+   "projectid": "P117635",
+   "guid": "226581468285297990",
+   "url": "http://documents.worldbank.org/curated/en/226581468285297990"
+  },
+  "D17795192": {
+   "id": "17795192",
+   "docty": "Project Appraisal Document",
+   "repnb": "72374",
+   "docdt": "2013-05-22T04:00:00Z",
+   "abstracts": {
+    "cdata!": "The development objectives of the Water Security and Climate Resilience Project for Kenya are to (i) increase availability and productivity of irrigation water for project beneficiaries; and (ii) enhance the institutional framework and strengthen capacity for water security and climate resilience for the country. The project has three components. The first component is water resources ..."
+   },
+   "display_title": "Kenya - Water Security and Climate Resilience Project",
+   "disclosure_date": "2013-06-19T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/660001468045533836/pdf/723740PAD0P117010Box377322B00OUO090.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/660001468045533836/text/723740PAD0P117010Box377322B00OUO090.txt",
+   "projectid": "P117635",
+   "guid": "660001468045533836",
+   "url": "http://documents.worldbank.org/curated/en/660001468045533836"
+  },
+  "D17362671": {
+   "id": "17362671",
+   "docty": "Integrated Safeguards Data Sheet",
+   "repnb": "ISDSA3842",
+   "docdt": "2013-05-13T04:00:00Z",
+   "display_title": "Integrated Safeguards Data Sheet (Appraisal Stage) - Kenya Water Security and Climate Resilience Project - P117635",
+   "disclosure_date": "2013-05-13T17:27:51Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/803891468046845297/pdf/AppraisalISDS-Print-P117635-05-13-2013-1368466054975.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/803891468046845297/text/AppraisalISDS-Print-P117635-05-13-2013-1368466054975.txt",
+   "projectid": "P117635",
+   "guid": "803891468046845297",
+   "url": "http://documents.worldbank.org/curated/en/803891468046845297"
+  },
+  "D17353713": {
+   "id": "17353713",
+   "docty": "Environmental Assessment",
+   "repnb": "E4129",
+   "docdt": "2013-02-11T05:00:00Z",
+   "abstracts": {
+    "cdata!": "The project development objective for the Lower Nzoia Irrigation Development Project (LNIDP) is to support the institutionalization of processes and water-related investments to strengthen climate-resilient water resources development and management in Kenya. The Project Development Objective (PDO) will support the higher-level objectives of inclusive and sustained growth through the achievement ..."
+   },
+   "display_title": "Kenya - Lower Nzoia Irrigation Development Project : environmental assessment (Vol. 4 of 4) : Integrated pest management plan : draft",
+   "disclosure_date": "2013-02-13T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/946721468048841392/pdf/E41290v40P11760a0WSCRP0IPMP013FEB13.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/946721468048841392/text/E41290v40P11760a0WSCRP0IPMP013FEB13.txt",
+   "projectid": "P117635",
+   "guid": "946721468048841392",
+   "url": "http://documents.worldbank.org/curated/en/946721468048841392"
+  },
+  "D17350262": {
+   "id": "17350262",
+   "docty": "Resettlement Plan",
+   "repnb": "RP1395",
+   "docdt": "2013-02-11T05:00:00Z",
+   "abstracts": {
+    "cdata!": "The objective of the Water Security and Climate Resilience Project is to support the institutionalization of processes and water-related investments to strengthen climate-resilient water resources development and management in Kenya. Negative impacts include: loss of land acquisition, loss of asset, loss of income, and loss of livelihood. Mitigation measures include: a) it is accrued by ..."
+   },
+   "display_title": "Kenya - Water Security and Climate Resilience Project : restructuring (Vol. 2 of 2) : Resettlement policy framework",
+   "disclosure_date": "2013-02-13T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/782521468046145253/pdf/RP13950v20P1170ya0WSCRP0RPF013FEB13.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/782521468046145253/text/RP13950v20P1170ya0WSCRP0RPF013FEB13.txt",
+   "projectid": "P117635",
+   "guid": "782521468046145253",
+   "url": "http://documents.worldbank.org/curated/en/782521468046145253"
+  },
+  "D17260386": {
+   "id": "17260386",
+   "docty": "Environmental Assessment",
+   "repnb": "E4129",
+   "docdt": "2013-02-03T05:00:00Z",
+   "abstracts": {
+    "cdata!": "The project development objective for the Lower Nzoia Irrigation Development Project (LNIDP) is to support the institutionalization of processes and water-related investments to strengthen climate-resilient water resources development and management in Kenya. The Project Development Objective (PDO) will support the higher-level objectives of inclusive and sustained growth through the achievement ..."
+   },
+   "display_title": "Kenya - Lower Nzoia Irrigation Development Project : environmental assessment (Vol. 3 of 4) : Integrated pest management framework",
+   "disclosure_date": "2013-02-06T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/518871468276385963/pdf/E41290v30Box3700WSCRP0IPMF0006FEB13.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/518871468276385963/text/E41290v30Box3700WSCRP0IPMF0006FEB13.txt",
+   "projectid": "P117635",
+   "guid": "518871468276385963",
+   "url": "http://documents.worldbank.org/curated/en/518871468276385963"
+  },
+  "D17352880": {
+   "id": "17352880",
+   "docty": "Indigenous Peoples Plan",
+   "repnb": "IPP619",
+   "docdt": "2013-02-01T05:00:00Z",
+   "abstracts": {
+    "cdata!": "The objective of the Water Security and Climate Resilience Project is to support the institutionalization of processes and water-related investments to strengthen climate-resilient water resources development and management in Kenya. Some of the negative impacts and mitigation measures include: a) conservation of natural resources by adopting specific, tangible actions that demonstrate ..."
+   },
+   "display_title": "Kenya - Water Security and Climate Resilience Project : indigenous peoples plan",
+   "disclosure_date": "2013-02-13T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/668611468273329553/pdf/IPP6190P1176350a0WSCRP0VMGF013FEB13.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/668611468273329553/text/IPP6190P1176350a0WSCRP0VMGF013FEB13.txt",
+   "projectid": "P117635",
+   "guid": "668611468273329553",
+   "url": "http://documents.worldbank.org/curated/en/668611468273329553"
+  },
+  "D17212615": {
+   "id": "17212615",
+   "docty": "Environmental Assessment",
+   "repnb": "E4129",
+   "docdt": "2013-01-10T05:00:00Z",
+   "abstracts": {
+    "cdata!": "The project development objective for the Lower Nzoia Irrigation Development Project (LNIDP) is to support the institutionalization of processes and water-related investments to strengthen climate-resilient water resources development and management in Kenya. The Project Development Objective (PDO) will support the higher-level objectives of inclusive and sustained growth through the achievement ..."
+   },
+   "display_title": "Kenya - Lower Nzoia Irrigation Development Project : environmental assessment (Vol. 2 of 4) : Final report WSCRP environmental and social management framework (ESMF)",
+   "disclosure_date": "2013-02-01T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/582711468048849575/pdf/E4129v20P117630Disclosed00200102013.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/582711468048849575/text/E4129v20P117630Disclosed00200102013.txt",
+   "projectid": "P117635",
+   "guid": "582711468048849575",
+   "url": "http://documents.worldbank.org/curated/en/582711468048849575"
+  },
+  "D17467591": {
+   "id": "17467591",
+   "docty": "Board Report",
+   "repnb": "76141",
+   "docdt": "2013-01-01T05:00:00Z",
+   "abstracts": {
+    "cdata!": "This report covers findings of Environmental and Social Impact Assessment (ESIA) study that was originally conducted by ESF Consultants and thereafter updated by the Water Security and Climate Resilience Project (WSCRP) Lead Safeguards Specialist and Consultant-Tito Kodiaga. The Lower Nzoia Irrigation Development Project (LNIDP) will involve the construction of new water abstraction, conveyance, ..."
+   },
+   "display_title": "Kenya - Water Security And Climate Resilience Project : environmental and social impact assessment report",
+   "disclosure_date": "2013-03-19T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/841781468041385114/pdf/761410BR0P11760C0disclosed030190130.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/841781468041385114/text/761410BR0P11760C0disclosed030190130.txt",
+   "projectid": "P117635",
+   "guid": "841781468041385114",
+   "url": "http://documents.worldbank.org/curated/en/841781468041385114"
+  },
+  "D17212608": {
+   "id": "17212608",
+   "docty": "Environmental Assessment",
+   "repnb": "E4129",
+   "docdt": "2013-01-01T05:00:00Z",
+   "abstracts": {
+    "cdata!": "The project development objective for the Lower Nzoia Irrigation Development Project (LNIDP) is to support the institutionalization of processes and water-related investments to strengthen climate-resilient water resources development and management in Kenya. The Project Development Objective (PDO) will support the higher-level objectives of inclusive and sustained growth through the achievement ..."
+   },
+   "display_title": "Kenya - Lower Nzoia Irrigation Development Project : environmental assessment (Vol. 1 of 4) : Environmental and social impact assessment (ESIA) report",
+   "disclosure_date": "2013-02-05T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/356961468273297690/pdf/E4129v10P117630Disclosed00200102013.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/356961468273297690/text/E4129v10P117630Disclosed00200102013.txt",
+   "projectid": "P117635",
+   "guid": "356961468273297690",
+   "url": "http://documents.worldbank.org/curated/en/356961468273297690"
+  },
+  "D17350261": {
+   "id": "17350261",
+   "docty": "Resettlement Plan",
+   "repnb": "RP1395",
+   "docdt": "2013-01-01T05:00:00Z",
+   "abstracts": {
+    "cdata!": "The objective of the Water Security and Climate Resilience Project is to support the institutionalization of processes and water-related investments to strengthen climate-resilient water resources development and management in Kenya. Negative impacts include: loss of land acquisition, loss of asset, loss of income, and loss of livelihood. Mitigation measures include: a) it is accrued by ..."
+   },
+   "display_title": "Kenya - Water Security and Climate Resilience Project : restructuring (Vol. 1 of 2) : Resettlement action plan",
+   "disclosure_date": "2013-02-13T05:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/647951468041381728/pdf/RP13950v10P11700WSCRP0RAP00013FEB13.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/647951468041381728/text/RP13950v10P11700WSCRP0RAP00013FEB13.txt",
+   "projectid": "P117635",
+   "guid": "647951468041381728",
+   "url": "http://documents.worldbank.org/curated/en/647951468041381728"
+  },
+  "D16700246": {
+   "id": "16700246",
+   "docty": "Integrated Safeguards Data Sheet",
+   "repnb": "ISDSC629",
+   "docdt": "2012-08-15T04:00:00Z",
+   "display_title": "Integrated Safeguards Data Sheet (Concept Stage) - Kenya - Enhancing Water Security & Climate Resilience - P117635",
+   "pdfurl": "http://documents.worldbank.org/curated/en/332891468771347807/pdf/ISDS0Print0P11004201201346779260307.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/332891468771347807/text/ISDS0Print0P11004201201346779260307.txt",
+   "projectid": "P117635",
+   "guid": "332891468771347807",
+   "url": "http://documents.worldbank.org/curated/en/332891468771347807"
+  },
+  "D16290807": {
+   "id": "16290807",
+   "docty": "Project Information Document",
+   "repnb": "PIDC302",
+   "docdt": "2012-05-31T04:00:00Z",
+   "display_title": "Project Information Document (Concept Stage) - Kenya - Enhancing Water Security & Climate Resilience - P117635",
+   "pdfurl": "http://documents.worldbank.org/curated/en/563711468771319659/pdf/PID0Print0P11763500531201201338439015067.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/563711468771319659/text/PID0Print0P11763500531201201338439015067.txt",
+   "projectid": "P117635",
+   "guid": "563711468771319659",
+   "url": "http://documents.worldbank.org/curated/en/563711468771319659"
+  },
+  "D15933481": {
+   "id": "15933481",
+   "docty": "Disbursement Letter",
+   "docdt": "2011-12-21T05:00:00Z",
+   "display_title": "Official documents- Disbursement Letter for Advance Q795-KE",
+   "disclosure_date": "2012-03-14T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/902171468043509962/pdf/RAD95313587.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/902171468043509962/text/RAD95313587.txt",
+   "projectid": "P117635",
+   "guid": "902171468043509962",
+   "url": "http://documents.worldbank.org/curated/en/902171468043509962"
+  },
+  "D15933459": {
+   "id": "15933459",
+   "docty": "Agreement",
+   "docdt": "2011-12-21T05:00:00Z",
+   "display_title": "Official documents- Agreement for Advance Q795-KE",
+   "disclosure_date": "2012-03-14T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/824021468284078656/pdf/RAD2101868714.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/824021468284078656/text/RAD2101868714.txt",
+   "projectid": "P117635",
+   "guid": "824021468284078656",
+   "url": "http://documents.worldbank.org/curated/en/824021468284078656"
+  },
+  "facets": {}
+ }
+}

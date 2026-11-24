@@ -1,0 +1,141 @@
+{
+ "rows": 10,
+ "os": 0,
+ "page": 1,
+ "total": 10,
+ "documents": {
+  "D441545": {
+   "id": "441545",
+   "authors": {
+    "0": {
+     "author": "Moock, Peter R."
+    },
+    "1": {
+     "author": "Patrinos, Harry Anthony"
+    },
+    "2": {
+     "author": "Venkatar"
+    }
+   },
+   "count": "Viet Nam",
+   "docna": {
+    "0": {
+     "docna": "Education and earnings in a transition economy (Vietnam)"
+    }
+   },
+   "docty": "Policy Research Working Paper",
+   "lang": "English",
+   "repnb": "WPS1920",
+   "docdt": "1998-05-31T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "一份研究表明，在越南开放劳动力市场时，小学和高等教育已经有了较高的私人回报率。在费用回收加快和费用降低的情况下(效率更高的体制)，可能还会更高。   中央计划经济向市场经济转轨可能会对劳动力市场、相关收入和教育回报率产生巨大影响。   越南1986年以来的主要经济改革(所谓的 Doi Moi 政策)包括了若干开放劳动力市场的措施。现在来评价这些改革的总体作用还为时过早。但是， Moock, Patrinos 和 Venkataraman 根据1992-93年间的收入(来自越南第一次生活水平调查)分析了教育回报。   这是在劳动力市场转轨过程中，有关越南学校教育货币收益的第一批全国性分析之一。   ..."
+   },
+   "colti": "Policy, Research working paper ; no. WPS 1920",
+   "display_title": "转轨经济中的教育与收入(越南)",
+   "disclosure_date": "2010-07-01T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/665571468760770581/pdf/multi-page.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/665571468760770581/text/multi-page.txt",
+   "guid": "665571468760770581",
+   "url": "http://documents.worldbank.org/curated/en/665571468760770581"
+  },
+  "D11692513": {
+   "id": "11692513",
+   "authors": {
+    "0": {
+     "author": "Patrinos, Harry Anthony"
+    }
+   },
+   "count": "Netherlands",
+   "docna": {
+    "0": {
+     "docna": "Private education provision and public finance : the Netherlands"
+    }
+   },
+   "docty": "Policy Research Working Paper",
+   "lang": "English",
+   "repnb": "WPS5185",
+   "docdt": "2010-01-01T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "One of the key features of the Dutch education system is freedom of education -- freedom to establish schools and organize teaching.  Almost 70 percent of schools in the Netherlands are administered by private school boards, and all schools are government funded equally. This allows school choice. Using an instrument to identify school choice, it is shown that the Dutch system promotes academic ..."
+   },
+   "colti": "Policy Research working paper ; no. WPS 5185",
+   "display_title": "Private education provision and public finance : the Netherlands",
+   "disclosure_date": "2010-07-01T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/624601468054259404/pdf/WPS5185.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/624601468054259404/text/WPS5185.txt",
+   "guid": "624601468054259404",
+   "url": "http://documents.worldbank.org/curated/en/624601468054259404"
+  },
+  "D3167798": {
+   "id": "3167798",
+   "authors": {
+    "0": {
+     "author": "Sakellariou, Chris"
+    },
+    "1": {
+     "author": " Patrinos, Harry Anthony"
+    }
+   },
+   "count": "Cote d'Ivoire",
+   "docna": {
+    "0": {
+     "docna": "Incidence analysis of public support to the private education sector in Cote d'Ivoire"
+    }
+   },
+   "docty": "Policy Research Working Paper",
+   "lang": "English",
+   "repnb": "WPS3231",
+   "docdt": "2004-03-01T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "Sakellariou和Patrinos分析了科特迪瓦私立学校公共补贴的公平效应，更新了以前的分析，并试图评估公共支出定位的效率。对经济状况较好的五分之一学生来说，私立(公立)学校学生的人均补贴提高了。家庭经济状况最好的五分之一学生获得的补贴是家庭经济状况最差的五分之一学生的两倍以上，而在公立学校，这种情况则是四倍以上。此外，补贴制度是累进性的，因为对经济状况较好的五分之一学生来说，补贴覆盖的家庭教育支出比例有明确的下降趋势。对私立学校的学生来说，这种累进性更明显。"
+   },
+   "colti": "Policy, Research working paper ; no. WPS 3231",
+   "display_title": "对科特迪瓦私营教育部门公共支持的效益分析",
+   "disclosure_date": "2010-07-01T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/656751468770934269/pdf/wps3231coted0ivoire.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/656751468770934269/text/wps3231coted0ivoire.txt",
+   "guid": "656751468770934269",
+   "url": "http://documents.worldbank.org/curated/en/656751468770934269"
+  },
+  "D30682141": {
+   "id": "30682141",
+   "authors": {
+    "0": {
+     "author": "Santibanez, Lucrecia Margarita"
+    },
+    "1": {
+     "author": "Saavedra, Juan E."
+    },
+    "2": {
+     "author": "Bentaouet Kattan, Raja"
+    },
+    "3": {
+     "author": "Patrinos, Harry Anthony"
+    }
+   },
+   "count": "Mexico",
+   "docna": {
+    "0": {
+     "docna": "Comprehensive Private School Model for Low-Income Urban Children in Mexico"
+    }
+   },
+   "lang": "English",
+   "repnb": "WPS8669",
+   "docdt": "2018-12-10T05:00:00Z",
+   "abstracts": {
+    "cdata!": "In low-income countries, private schools are perceived as superior alternatives to the public sector, often improving achievement at a fraction of the cost. It is unclear whether private schools are as effective in middle-income countries where the public sector has relatively more resources. To address this gap, this paper takes advantage of lottery-based admissions in first grade for a Mexico ..."
+   },
+   "colti": "Policy Research working paper|no. WPS 8669",
+   "display_title": "Comprehensive Private School Model for Low-Income Urban Children in Mexico",
+   "disclosure_date": "2018-12-10T19:50:08Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/224651544471608631/pdf/WPS8669.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/224651544471608631/text/WPS8669.txt",
+   "guid": "224651544471608631",
+   "url": "http://documents.worldbank.org/curated/en/224651544471608631"
+  },
+  "facets": {}
+ }
+}

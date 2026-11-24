@@ -1,0 +1,83 @@
+{
+ "rows": 10,
+ "os": "0",
+ "page": "1",
+ "total": "15",
+ "projects": {
+  "P179039": {
+   "curr_project_cost": "1144907500",
+   "curr_total_commitment": "363",
+   "id": "P179039",
+   "regionname": "South Asia",
+   "lendinginstr": "Program-for-Results Financing",
+   "project_name": "Karnataka Sustainable Rural Water Supply Program",
+   "impagency": "Rural Drinking Water and Sanitation Department, Government of Karnataka, Rural Development and Panchayat Department, Government of Karnataka",
+   "countryshortname": "India",
+   "totalcommamt": "363,000,000",
+   "boardapprovaldate": "2023-03-28T00:00:00Z",
+   "closingdate": "6/1/2028 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P179039",
+   "status": "Active"
+  },
+  "P169342": {
+   "curr_project_cost": "550500000",
+   "curr_total_commitment": "400",
+   "id": "P169342",
+   "regionname": "South Asia",
+   "lendinginstr": "Investment Project Financing",
+   "project_name": "BD Rural Water, Sanitation and Hygiene for Human Capital Development  Project",
+   "impagency": "Department of Public Health Engineering (DPHE), Palli Karma-Sahayak Foundation (PKSF)",
+   "countryshortname": "Bangladesh",
+   "totalcommamt": "400,000,000",
+   "boardapprovaldate": "2020-09-25T00:00:00Z",
+   "closingdate": "10/31/2025 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P169342",
+   "status": "Active"
+  },
+  "P158146": {
+   "curr_project_cost": "150000000",
+   "curr_total_commitment": "120",
+   "id": "P158146",
+   "regionname": "South Asia",
+   "lendinginstr": "Program-for-Results Financing",
+   "project_name": "Uttarakhand Water Supply Program for Peri Urban Areas",
+   "impagency": "Department of Drinking Water and Sanitation, Government of Uttarakhand",
+   "countryshortname": "India",
+   "totalcommamt": "120,000,000",
+   "boardapprovaldate": "2018-01-04T00:00:00Z",
+   "closingdate": "6/30/2025 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P158146",
+   "status": "Active"
+  },
+  "P170843": {
+   "curr_project_cost": "42740000",
+   "curr_total_commitment": "40",
+   "id": "P170843",
+   "regionname": "South Asia",
+   "lendinginstr": "Investment Project Financing",
+   "project_name": "Water Supply and Sanitation Improvement Project AF",
+   "impagency": "National Water Supply and Drainage Board",
+   "countryshortname": "Sri Lanka",
+   "totalcommamt": "40,000,000",
+   "boardapprovaldate": "2021-06-10T00:00:00Z",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P170843",
+   "status": "Active"
+  },
+  "P169071": {
+   "curr_project_cost": "553000000",
+   "curr_total_commitment": "442.4",
+   "id": "P169071",
+   "regionname": "South Asia",
+   "lendinginstr": "Investment Project Financing",
+   "project_name": "Punjab Rural Sustainable Water Supply and Sanitation Project",
+   "impagency": "Local Government Department, Government of Punjab",
+   "countryshortname": "Pakistan",
+   "totalcommamt": "442,400,000",
+   "boardapprovaldate": "2021-06-18T00:00:00Z",
+   "closingdate": "6/30/2028 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P169071",
+   "status": "Active"
+  }
+ },
+ "facets": {}
+}

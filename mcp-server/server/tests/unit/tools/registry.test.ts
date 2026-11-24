@@ -4,11 +4,12 @@ import { createApp } from '../../../src/handlers/mcp';
 import { TOOLS } from '../../../src/tools/registry';
 import { jsonRpc, mcpPost, messagesIn } from '../helpers';
 
-const STUBS = ['search_documents', 'search_projects', 'get_project', 'read_document', 'retrieve_skill'];
+const TOOL_NAMES = ['search_documents', 'search_projects', 'get_project', 'read_document', 'retrieve_skill'];
+const STUBS = ['get_project', 'read_document', 'retrieve_skill'];
 
 describe('tool registry', () => {
     it('lists the five tools and diagnostic', () => {
-        expect(TOOLS.map((tool) => tool.name)).toEqual([...STUBS, 'diagnostic']);
+        expect(TOOLS.map((tool) => tool.name)).toEqual([...TOOL_NAMES, 'diagnostic']);
     });
 
     it('declares every tool read-only, non-destructive and open-world in tools/list', async () => {
