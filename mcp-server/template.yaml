@@ -152,12 +152,17 @@ Resources:
     Properties:
       RetentionInDays: 30
 
+  # Logical IDs of functions and roles stay short: CloudFormation names a role
+  # <stack>-<LogicalId>-<12 chars> and truncates it past 64 characters, and the
+  # deploy role may only create roles named wbank-docs-reports-mcp-prod-*. A
+  # function's implicit role is <LogicalId>Role. Hence RefreshFunction and
+  # RefreshScheduleRole, not RefreshVocabulary... (CLAUDE.md, Known Issues).
   # Design §3.2 "Vocabulary refresh function", §7.2. Runs MCP-130's fetch
   # (paced, sequential requests; about 175 of them per MCP-102) and writes
   # vocabulary.json only when every list was fetched. Started every 30 days by
   # the schedule below and once by deploy.yml after each deploy. A failed
   # refresh writes nothing and fails the invocation, which the alarm reports.
-  RefreshVocabularyFunction:
+  RefreshFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: server/
@@ -194,7 +199,7 @@ Resources:
   # Trusted by EventBridge Scheduler for this account's default schedule group
   # (Scheduler's aws:SourceArn is the group, not the schedule); may invoke
   # only the refresh function.
-  RefreshVocabularyScheduleRole:
+  RefreshScheduleRole:
     Type: AWS::IAM::Role
     Properties:
       PermissionsBoundary: !Sub arn:${AWS::Partition}:iam::aws:policy/PowerUserAccess
@@ -216,7 +221,7 @@ Resources:
             Statement:
               - Effect: Allow
                 Action: lambda:InvokeFunction
-                Resource: !GetAtt RefreshVocabularyFunction.Arn
+                Resource: !GetAtt RefreshFunction.Arn
 
   RefreshVocabularySchedule:
     Type: AWS::Scheduler::Schedule
@@ -227,8 +232,8 @@ Resources:
         Mode: 'OFF'
       State: ENABLED
       Target:
-        Arn: !GetAtt RefreshVocabularyFunction.Arn
-        RoleArn: !GetAtt RefreshVocabularyScheduleRole.Arn
+        Arn: !GetAtt RefreshFunction.Arn
+        RoleArn: !GetAtt RefreshScheduleRole.Arn
         RetryPolicy:
           MaximumRetryAttempts: 3
           MaximumEventAgeInSeconds: 3600
@@ -244,7 +249,7 @@ Resources:
       MetricName: Errors
       Dimensions:
         - Name: FunctionName
-          Value: !Ref RefreshVocabularyFunction
+          Value: !Ref RefreshFunction
       Statistic: Sum
       Period: 3600
       EvaluationPeriods: 1
@@ -1052,4 +1057,4 @@ Outputs:
     Value: !Ref VocabularyBucket
   RefreshVocabularyFunction:
     Description: Vocabulary refresh function (deploy.yml invokes it after each deploy)
-    Value: !Ref RefreshVocabularyFunction
+    Value: !Ref RefreshFunction
