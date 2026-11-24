@@ -1,0 +1,1829 @@
+                                                        Document of
+                                                   The World Bank
+                                              FOR OFFICIAL USE ONLY
+
+                                                                                                      Report No: ICR00185
+
+                        IMPLEMENTATION COMPLETION AND RESULTS REPORT
+                                      (IDA Credit 5268-KE)
+
+
+                                                            ON A
+
+
+                                                          CREDIT
+
+                                    IN THE AMOUNT OF SDR 103.4 MILLION
+                                        (US$155 MILLION EQUIVALENT)
+
+                                                          TO THE
+
+                                                REPUBLIC OF KENYA
+
+                                                         FOR THE
+
+                   KENYA WATER SECURITY AND CLIMATE RESILIENCE PROJECT
+                                     December 19, 2025
+
+
+
+
+Water Global Practice
+Eastern and Southern Africa Region
+
+       This document has a restricted distribution and may be used by recipients only in the performance of their
+       official duties. Its contents may not otherwise be disclosed without World Bank authorization.
+
+
+
+
+                                                                                                                    Official Use Only
+The World Bank
+Kenya Water Security and Climate Resilience Project (P117635)                       ICR DOCUMENT
+
+
+                                   CURRENCY EQUIVALENTS
+
+                               Exchange Rate Effective May 31, 2025
+
+                                    Currency Unit = Kenya Shilling (KES)
+                                        KES 129.5 = US$1
+                                           US$1.36 = SDR 1
+
+                                           FISCAL YEAR
+                                       January 1 – December 31
+
+
+
+
+                        Regional Vice President:Ndiame Diop
+                              Country Director: Qimiao Fan
+                             Regional Director: Anna Wellenstein
+                              Practice Manager: Francis Ghesquiere
+                                                Irene Rehberger Bescos, Pieter Waalewijn, James
+                          Task Team Leader (s):
+                                                Origa Otieno
+                          ICR Main Contributor: Imran Sajid
+
+                                 Official Use Only
+                      ABBREVIATIONS AND ACRONYMS
+
+AF        Additional Financing
+AM        Aide Memoire
+BCR       Benefit-Cost Ratio
+BWRC      Basin Water Resource Committee
+CEO       Chief Executive Officer
+CF        Conversion Factor
+CPF       Country Partnership Framework
+EFA       Economic and Financial Analysis
+EIRR      Economic Internal Rate of Return
+EIU       Economist Intelligence Unit
+ENPV      Economic Net Present Value
+ERR       Economic Rate of Return
+ESIA      Environmental and Social Impact Assessment
+ESMP      Environmental and Social Management Plan
+FFEWS     Flood Forecasting and Early Warning System
+FIRR      Financial Internal Rate of Return
+FM        Financial Management
+GBV       Gender-Based Violence
+GDP       Gross Domestic Product
+GHG       Greenhouse Gas
+GoK       Government of Kenya
+GRM       Grievance Redress Mechanism
+I&D       Irrigation and Drainage
+ICR       Implementation Completion and Results Report
+IF        Investment Framework
+IPF       Investment Project Financing
+IRI       Intermediate Result Indicator
+IRR       Internal Rate of Return
+ISC       Implementation Support Consultant
+ISR       Implementation Status and Results Report
+IWUA      Irrigation Water Users Association
+KEWI      Kenya Water Institute
+KfW       Kreditanstalt für Wiederaufbau
+KMD       Kenya Meteorological Department
+KWSCRP    Kenya Water Security and Climate Resilience Project
+LNISP-1   Lower Nzoia Irrigation Scheme Project Phase 1
+M&E       Monitoring and Evaluation
+MIS       Management Information System
+MOWASCO   Mombasa Water Supply and Sanitation Company
+MoWSI     Ministry of Water, Sanitation, and Irrigation
+MTR       Midterm Review
+NIA       National Irrigation Authority
+
+
+
+
+                                                                Official Use Only
+    The World Bank
+    Kenya Water Security and Climate Resilience Project (P117635)   ICR DOCUMENT
+
+
+NISIP              National Irrigation Sector Investment Plan
+NLC                National Land Commission
+NPV                Net Present Value
+NRW                Nonrevenue Water
+O&M                Operation and Maintenance
+PAD                Project Appraisal Document
+PAP                Project-Affected Person
+PDO                Project Development Objective
+PIM                Project Implementation Manual
+PIU                Project Implementation Unit
+PMU                Project Management Unit
+PS                 Principal Secretary
+PSC                Project Steering Committee
+RAP                Resettlement Action Plan
+RF                 Results Framework
+SCF                Standard Conversion Factor
+SCMPs              Sub Catchment Management Plans
+SDGs               Sustainable Development Goals
+SEAH               Sexual Exploitation and Abuse/Harassment
+SPIU               Scheme Project Implementation Unit
+TA                 Technical Assistance
+TF                 Trust Fund
+ToC                Theory of Change
+ToT                Training of Trainers
+TTL                Task Team Leader
+WASREB             Water Services Regulatory Board
+WOP                Without Project
+WP                 With Project
+WRA                Water Resources Authority
+WRUA               Water Resources Users Association
+WSI                Water Sector Institution
+WSTF               Water Sector Trust Fund
+WSTP               Water Sector Transition Plan
+WWDA               Water Works Development Agency
+
+
+
+
+                                     Official Use Only
+            The World Bank
+            Kenya Water Security and Climate Resilience Project (P117635)                                                                  ICR DOCUMENT
+
+
+TABLE OF CONTENTS
+
+DATA SHEET ........................................................................................................................................................ i
+I.        PROJECT CONTEXT AND DEVELOPMENT OBJECTIVES .......................................................... 1
+II.       OUTCOME ................................................................................................................................................ 5
+III.      KEY FACTORS AFFECTED IMPLEMENTATION AND OUTCOME ......................................... 14
+IV. BANK PERFORMANCE, COMPLIANCE ISSUES, AND RISK TO DEVELOPMENT
+OUTCOME ......................................................................................................................................................... 17
+V.        LESSONS AND RECOMMENDATIONS ............................................................................................ 22
+ANNEX 1. RESULTS FRAMEWORK AND KEY OUTPUTS ..................................................................... 23
+ANNEX 2. BANK LENDING AND IMPLEMENTATION SUPPORT/SUPERVISION ........................... 29
+ANNEX 3. PROJECT COST BY COMPONENT ........................................................................................... 33
+ANNEX 4. EFFICIENCY ANALYSIS ............................................................................................................. 34
+ANNEX 5. BORROWER, CO-FINANCIER, AND OTHER STAKEHOLDER COMMENTS ................ 45
+ANNEX 6. SUPPORTING DOCUMENTS (IF ANY) ..................................................................................... 46
+ANNEX 7. ADDITIONAL DOCUMENTS (IF ANY) ..................................................................................... 47
+
+
+
+
+                                                                                                                                                     Official Use Only
+              The World Bank
+              Kenya Water Security and Climate Resilience Project (P117635)                                  ICR DOCUMENT
+
+
+
+
+    DATA SHEET
+
+    @#&OPS~Doctype~OPS^dynamics@icrbasicdata#doctemplate
+    BASIC DATA
+
+    Product Information
+
+    Operation ID                                                      Operation Name
+    P117635                                                           Kenya Water Security and Climate Resilience Project
+
+    Product                                                           Operation Short Name
+    Investment Project Financing (IPF)                                KE Enhancing Wat Security & Climate Res
+
+    Operation Status                                                  Approval Fiscal Year
+    Closed                                                            2013
+
+    Original EA Category
+    Full Assessment (A) (Approval package - 24 Jul 2023)
+
+
+    CLIENTS
+
+
+    Borrower/Recipient                                                Implementing Agency
+                                                                      Ministry of Water, Sanitation and Irrigation, The National
+    Republic of Kenya
+                                                                      Land Commission
+
+    DEVELOPMENT OBJECTIVE
+
+    Original Development Objective (Approved as part of Approval Package on 24-Jul-2023)
+    The project development objectives of KWSCRP-1 are to: (i) increase availability and productivity of irrigation water for
+    project beneficiaries; and
+    (ii) enhance the institutional framework and strengthen capacity for water security and climate resilience for thecountry.
+    Current Development Objective (Approved as part of Additional Financing Package Seq No 2 on 27-Oct-2023)
+    (a) increase access to irrigation water for project beneficiaries and (b) enhance the institutional framework and strengthen
+    capacity for water security and climate resilience in certain areas of the territory of the Recipient.
+
+s
+s
+s
+s
+s
+s
+s
+
+
+
+
+    @#&OPS~Doctype~OPS^dynamics@icrfinancing#doctemplate
+
+                                                                                                                                 i
+
+
+                                                                                                                    Official Use Only
+      The World Bank
+      Kenya Water Security and Climate Resilience Project (P117635)                                  ICR DOCUMENT
+
+
+FINANCING
+
+Financing Source              Original Amount (US$)           Revised Amount (US$)         Actual Disbursed (US$)
+World Bank Financing                     243,000,000.00                141,235,419.09                  147,324,401.28
+IDA-56740                                 58,000,000.00                  3,132,427.14                    3,024,622.40
+IDA-52680                                155,000,000.00                107,369,025.95                  114,406,411.94
+IDA-74230                                 30,000,000.00                 30,733,966.00                   29,893,366.94
+World Bank Administered                                                  2,795,601.33                    2,795,601.33
+                                             3,500,000.00
+Financing
+TF-A0761                                     3,500,000.00                   2,795,601.33                 2,795,601.33
+Non-World Bank Financing                    27,670,000.00                           0.00                    14,985.12
+GERMANY:                                    20,010,000.00                           0.00                    14,985.12
+KREDITANSTALT FUR
+WIEDERAUFBAU (KFW)
+Borrower/Recipient                          7,660,000.00                            0.00                         0.00
+Total                                     274,170,000.00                  144,031,020.42               150,134,987.73
+
+RESTRUCTURING AND/OR ADDITIONAL FINANCING
+
+                                          Amount Disbursed
+    Date(s)                 Type                                                     Key Revisions
+                                          (US$M)
+                                                                 •    Components
+                                                                 •    Results
+                                                                 •    Disbursement Estimates
+  04-Sep-2017      Portal                                19.59   •    Loan Cancellations
+                                                                 •    Reallocations
+                                                                 •    Institutional Arrangement
+                                                                 •    Other Changes
+                                                                 •    Components
+                                                                 •    Results
+                                                                 •    Legal Covenants
+                                                                 •    Disbursement Estimates
+  25-Jun-2019      Portal                                53.81
+                                                                 •    Disbursement Arrangements
+                                                                 •    Loan Cancellations
+                                                                 •    Reallocations
+                                                                 •    Procurement
+  17-Dec-2020      Portal                                85.46   • Loan Closing Date Extension
+                                                                 • Development Objective
+  16-Mar-2022      Portal                              103.08
+                                                                 • Results
+  14-Dec-2022      Portal                              112.88    • Loan Closing Date Extension
+
+
+                                                                                                                     ii
+
+
+                                                                                                          Official Use Only
+          The World Bank
+          Kenya Water Security and Climate Resilience Project (P117635)                                   ICR DOCUMENT
+
+
+  22-Sep-2023          Portal                              117.60    • Loan Closing Date Extension
+
+
+@#&OPS~Doctype~OPS^dynamics@icrkeydates#doctemplate
+KEY DATES
+
+
+                          Key Events                                      Planned Date                     Actual Date
+Concept Review                                                            21-Mar-2012                      26-Mar-2012
+Decision Review                                                            28-Jan-2013                     28-Jan-2013
+Authorize Negotiations                                                     22-Apr-2013                     22-Apr-2013
+Approval                                                                                                   18-Jun-2013
+Signing                                                                    29-Jul-2013                     29-Jul-2013
+Effectiveness                                                              24-Oct-2013                     24-Oct-2013
+Additional Financing Sequence.01                                          Not Applicable                   26-Jun-2015
+Restructuring Sequence.01                                                 Not Applicable                   04-Sep-2017
+Restructuring Sequence.02                                                 Not Applicable                   25-Jun-2019
+Restructuring Sequence.03                                                 Not Applicable                   17-Dec-2020
+Restructuring Sequence.04                                                 Not Applicable                   16-Mar-2022
+Restructuring Sequence.05                                                 Not Applicable                   14-Dec-2022
+Restructuring Sequence.06                                                 Not Applicable                   22-Sep-2023
+Additional Financing Sequence.02                                          Not Applicable                   27-Oct-2023
+Mid-Term Review No. 01                                                     20-Apr-2017                     04-May-2017
+                                                                                                      Automatically populated
+Operation Closing/Cancellation                                            31-May-2025
+                                                                                                        from Loans System
+ICR/NCO                                                                   19-Dec-2025                            --
+
+
+@#&OPS~Doctype~OPS^dynamics@icrratings#doctemplate
+RATINGS SUMMARY
+
+
+                Outcome                             Bank Performance                               M&E Quality
+
+Moderately Satisfactory                   Moderately Unsatisfactory                  Substantial
+
+
+
+                                                                                                                           iii
+
+
+                                                                                                                 Official Use Only
+       The World Bank
+       Kenya Water Security and Climate Resilience Project (P117635)                                  ICR DOCUMENT
+
+
+ISR RATINGS
+
+                                                                                                   Actual Disbursements
+ No.      Date ISR Archived                 DO Rating                          IP Rating
+                                                                                                          (US$M)
+01      01-Jan-2014                Satisfactory                        Moderately Satisfactory                     1.52
+02      14-Oct-2014                Satisfactory                        Moderately Satisfactory                     7.00
+03      15-Apr-2015                Moderately Satisfactory             Moderately Satisfactory                     8.17
+04      02-Dec-2015                Moderately Satisfactory             Moderately Satisfactory                     8.17
+05      28-Jun-2016                Moderately Satisfactory             Moderately Unsatisfactory                  12.72
+06      28-Dec-2016                Moderately Unsatisfactory           Moderately Unsatisfactory                  14.81
+07      26-Jun-2017                Unsatisfactory                      Unsatisfactory                             17.34
+08      05-Jan-2018                Unsatisfactory                      Unsatisfactory                             24.93
+09      13-Sep-2018                Unsatisfactory                      Unsatisfactory                             40.04
+10      17-Mar-2019                Unsatisfactory                      Unsatisfactory                             47.90
+11      05-Jun-2019                Unsatisfactory                      Unsatisfactory                             52.51
+12      17-Oct-2019                Moderately Unsatisfactory           Moderately Unsatisfactory                  57.89
+13      30-Apr-2020                Moderately Satisfactory             Moderately Satisfactory                    70.09
+14      24-Nov-2020                Moderately Unsatisfactory           Moderately Unsatisfactory                  83.74
+15      31-May-2021                Moderately Unsatisfactory           Moderately Satisfactory                    91.67
+16      03-Feb-2022                Moderately Unsatisfactory           Moderately Satisfactory                   101.21
+17      14-Apr-2022                Moderately Satisfactory             Moderately Satisfactory                   103.08
+18      24-Aug-2022                Moderately Unsatisfactory           Moderately Unsatisfactory                 110.59
+19      07-Dec-2022                Moderately Unsatisfactory           Moderately Satisfactory                   112.88
+20      25-May-2023                Moderately Satisfactory             Satisfactory                              115.00
+21      19-Jul-2023                Moderately Satisfactory             Satisfactory                              115.59
+22      04-Nov-2023                Moderately Satisfactory             Satisfactory                              118.49
+23      26-May-2024                Moderately Satisfactory             Moderately Satisfactory                   123.22
+24      06-Dec-2024                Moderately Satisfactory             Moderately Satisfactory                   140.65
+25      13-May-2025                Moderately Satisfactory             Moderately Satisfactory                   146.31
+
+
+                                                                                                                      iv
+
+
+                                                                                                            Official Use Only
+      The World Bank
+      Kenya Water Security and Climate Resilience Project (P117635)                                    ICR DOCUMENT
+
+
+26        30-May-2025             Moderately Satisfactory             Moderately Satisfactory                        148.44
+
+
+@#&OPS~Doctype~OPS^dynamics@icrsectortheme#doctemplate
+SECTORS AND THEMES
+
+
+Sectors
+                                                                                     Adaptation
+                                                                                                        Mitigation
+     Major Sector                           Sector                         %        Co-benefits
+                                                                                                      Co-benefits (%)
+                                                                                    (%)
+FY17 - Agriculture,
+                            FY17 - Irrigation and Drainage                     20               100                   0
+Fishing and Forestry
+FY17 - Industry, Trade      FY17 - Agricultural markets,
+                                                                                5               100                   0
+and Services                commercialization and agri-business
+                            FY17 - Other Water Supply,
+                                                                               25               100                   0
+                            Sanitation and Waste Management
+FY17 - Water,               FY17 - Public Administration -
+Sanitation and Waste        Water, Sanitation and Waste                        40               100                   0
+Management                  Management
+                            FY17 - Water Supply                                10               100                   0
+
+
+Themes
+     Major Theme                       Theme (Level 2)                       Theme (Level 3)                %
+
+                            FY17 - Climate change                        FY17 - Adaptation                         100
+FY17 - Environment and
+Natural Resource                                                         FY17 - Water
+Management                  FY17 - Water Resource Management             Institutions, Policies and                  64
+                                                                         Reform
+                                                                         FY17 - Disaster Risk
+FY17 - Finance              FY17 - Finance for Development                                                            4
+                                                                         Finance
+                                                                         FY17 - Disaster
+                                                                                                                      4
+                                                                         Preparedness
+                                                                         FY17 - Disaster
+                            FY17 - Disaster Risk Management                                                           4
+                                                                         Response and Recovery
+FY17 - Urban and Rural
+                                                                         FY17 - Disaster Risk
+Development                                                                                                           4
+                                                                         Reduction
+                                                                         FY17 - Rural
+                            FY17 - Rural Development                     Infrastructure and                          20
+                                                                         service delivery
+
+
+
+
+                                                                                                                           v
+
+
+                                                                                                                Official Use Only
+       The World Bank
+       Kenya Water Security and Climate Resilience Project (P117635)                        ICR DOCUMENT
+
+
+
+
+ADM STAFF
+
+Role                                    At Approval                    At ICR
+Practice Manager                        Jonathan Kamkwalala            Francis Ghesquiere
+Regional Director                       Jamal Saghir                   Anna Wellenstein
+Global Director                                                        Saroj Kumar Jha
+Practice Group Vice President                                          Juergen Voegele
+Country Director                        Diariétou Gaye                 Qimiao Fan
+Regional Vice President                 Makhtar Diop                   Ndiame Diop
+ADM Responsible Team Leader             Gustavo Saltiel                Irene Rehberger Bescos
+                                                                       Pieter Waalewijn, James Origa
+Co-Team Learder(s)
+                                                                       Otieno
+ICR Main Contributor                   Imran sajid
+
+
+
+
+                                                                                                          VI
+
+
+                                                                                                Official Use Only
+          The World Bank
+          Kenya Water Security and Climate Resilience Project (P117635)                                     ICR DOCUMENT
+
+
+    I.   PROJECT CONTEXT AND DEVELOPMENT OBJECTIVES
+
+A.       CONTEXT AT APPRAISAL
+
+1.      Country context. Kenya emerged from a decade of uneven growth, with a growth rate of 3.9 percent in the 2000s.
+Despite challenges such as political instability, drought, and global crises, the economy rebounded in 2010 with a 5.6 percent
+growth rate, driven by reforms and infrastructure investments, while it slowed to 4.4 percent in 2011.1 Extreme poverty
+affected nearly half of the population, with 80 percent of the poor in rural areas dependent on agriculture, contributing 24
+percent to gross domestic product (GDP), 62 percent of formal employment, and 60 percent of exports. Its productivity
+hinged on rainfall and water access. Kenya had launched Vision 2030, which was approved by Parliament in 2012, aiming
+to become a middle-income country by 2030. This ambitious plan targeted a 10 percent annual GDP growth to transition
+from poverty to shared prosperity and focused on three pillars: economic, social, and political. Key to its success was
+achieving water security and reducing climate vulnerability for sustained growth, equity, and social stability.2
+
+2.       Water resources context. At the time of the project appraisal, Kenya’s freshwater resources were estimated at
+526 m3 per capita annually, and the country was classified as a ‘water-scarce’ country. The water scarcity was predominantly
+concentrated in arid and semiarid lands, which account for over 80 percent of the country’s area and were home to 20
+percent of the population. Meanwhile, other more populated regions faced challenges related to the limited productive use
+of available water resources or exposure to floods. With rising population, economic growth, and urbanization, there was
+increasing competition for the use of the limited water resources. In 2012, only 60 percent of the urban and 40 percent of
+the rural population had access to safe drinking water, and only 90,000 ha out of a potential irrigated area of 539,000 ha had
+been developed. Close to 26 million ha of agricultural land was dependent on unpredictable rainfall. Kenya faced the
+additional challenge of high inter- and intra-annual rainfall variability that resulted in frequent droughts and floods. A post-
+disaster needs assessment estimated that the overall effects of the 2008–11 drought cost the economy US$12 billion.3
+
+3.       Rationale for World Bank engagement. The Government of Kenya (GoK) had planned a large-scale water
+investment program to address water challenges and close the massive investment gap in water sector infrastructure that
+had been estimated at US$5–7 billion in various studies. The Water Sector Strategic Plan (2010) of the Ministry of Water,
+Sanitation and Irrigation (MoWSI) that focused on reducing the water investment gap found substantial opportunities for
+multipurpose storage to secure reliable water supply, manage floods, provide irrigation, and generate hydropower. The
+World Bank Kenya Country Partnership Strategy (2010–2013)4 supported the GoK’s Vision 2030 for sustainable growth,
+including water security and reducing climate change impacts. The GoK requested the World Bank to support its ambitious
+plans in closing the investment gap for the water sector through a long-term and transformational program aimed at building
+water security and climate resilience for economic growth. The provisions of Kenya’s Constitution, which was adopted in
+2010, included the devolution of certain functions from the national level to 47 counties. This entailed a redefinition and
+realignment of roles and responsibilities and the creation of new organizations for the water sector. The urgent need to invest
+in priority water infrastructure, while at the same time aiding the GoK to establish the requisite enabling institutional and
+legal foundation to improve the performance and sustainability of the water sector, called for a pragmatic approach of phased
+support. This project was designed to respond to this need.
+4.      Theory of Change (Results Chain). At the time of appraisal, the project’s Theory of Change (ToC) was not
+required. Figure 1 has been created for this Implementation Completion and Results Report (ICR) and is based on the 2013
+Project Appraisal Document (PAD) information.
+
+
+1
+  World Bank. 2012. Kenya Economic Update: Walking on a Tightrope.
+2
+  World Bank, Kenya Overview, accessed in August 2012 at http://www.worldbank.org/en/country/kenya/overview.
+3
+  World Bank. 2006. Climate Variability and Water Resources Degradation in Kenya.
+4
+  World Bank. 2010. Kenya - Country partnership strategy for the period FY2010-13. Washington, DC: World Bank.
+https://documentsinternal.worldbank.org/search/12012273
+
+                                             Official Use Only                                                          Page 1
+         The World Bank
+         Kenya Water Security and Climate Resilience Project (P117635)                                         ICR DOCUMENT
+
+
+             Figure 1. Generated ToC for the Kenya Water Security and Climate Resilience Project (KWSCRP)
+
+
+
+
+5.      Project Development Objectives (PDOs). As per the Legal Agreement, the original PDO was to: (i) increase
+availability and productivity of irrigation water for project beneficiaries; and (ii) enhance the institutional framework and
+strengthen capacity for water security and climate resilience for the country.
+
+6.      Components: The project had three components, as shown in Table 1.
+
+              Table 1. Details of Original Project Components and Subcomponents with Their Funding Amount
+       Component/Subcomponent and Funding                                        Key Activities/Description
+1. Water Resources Development (US$76.8 million at        Support for climate resilience, water security, and investment pipeline
+appraisal and US$139.24 million at completion)            for economic growth.
+1.1 Water Sector Investments                              • Lower Nzoia Irrigation Scheme Project Phase 1 (LNISP-1)
+                                                          • Agricultural support, market linkages, value chains
+                                                          • Formation & capacity building of Irrigation Water User
+                                                              Associations (IWUAs)
+1.2 Water Investment Pipeline                             Pre-feasibility and feasibility studies and detailed designs for future
+                                                          investments.
+2. Effective Water Sector Institutions (US$56.3 million   Support for sector transition, reforms to align with the 2010
+at appraisal and US$15.74 million at completion)          Constitution, strengthening of water management, and planning.
+2.1 Water Sector Transition & Reforms                     • Support for institutional and legal reforms
+                                                          • Transition process (Water Sector Transition Plan [WSTP])
+                                                          • Building the capacity of key water sector institutions (WSIs)
+2.2 Strengthening Water Management & Planning             • Water resources knowledge base
+                                                          • Planning and allocation
+                                                          • Institutional capacity and partnerships
+
+
+
+                                            Official Use Only                                                               Page 2
+          The World Bank
+          Kenya Water Security and Climate Resilience Project (P117635)                                       ICR DOCUMENT
+
+
+        Component/Subcomponent and Funding                                      Key Activities/Description
+3. Project Implementation Support (US$15.2 million at       Project management, coordination, procurement, financial management
+appraisal and US$20.41 million at completion)               (FM), and monitoring and evaluation (M&E)
+
+B.       SIGNIFICANT CHANGES DURING IMPLEMENTATION
+
+7.       The KWSCRP underwent seven restructurings as follows to address changing challenges and priorities:
+
+     (a) First restructuring (June 2015): Added US$58 million in financing, a US$3.5 million grant from the Korea World
+         Bank Partnership Facility Trust Fund, and reallocated US$25 million, expanding the scope to improve water
+         services in Mombasa County, strengthen flood infrastructure and early warning systems, and enhance the Nzoia
+         watershed.
+     (b) Second restructuring (September 2017): Addressed delays in major contracts and low disbursement due to limited
+         readiness and procurement inefficiencies that lead to streamlined implementation arrangements, revise the result
+         framework (RF) and canceled US $ 13 million.
+     (c) Third restructuring (June 2019): Reduced project scope and cancelled uncommitted funds (US $ 70 millions) in
+         response to persistent implementation setbacks, especially procurement and land acquisition delays, to focus on
+         achievable objectives.
+     (d) Fourth restructuring (February 2022): Dropped the PDO indicator, reduced the scope, adjusting RF and reducing
+         expectations and targets due to continued land acquisition delays.
+     (e) Fifth restructuring (November 2022): This restructuring followed a breakthrough agreement with MoWSI, National
+         Irrigation Authority (NIA), and National Land Commission (NLC) that resolved land acquisition bottlenecks and
+         enabled LNISP-1 project delivery, leading to a nine-month extension. Based on the principle of minimizing
+         involuntary resettlement impact, maintaining the sustainability and ownership principles of the infrastructure
+         considering international and in- country experiences, the GoK agreed to: (a) reduce the footprint of the farm canals
+         (tertiary canals) through revision of the design; and (b) only construct tertiary and feeder canals where farmers
+         voluntarily consented to provide access to the canal construction on a minor portion of their farm in return for
+         receiving irrigation water access through this productive asset.
+     (f) Sixth restructuring (September 2023): Provided a two-month extension to finalize preparations for additional
+         financing.
+     (g) Seventh restructuring (October 2023): Secured US$30 million in new financing and extended the closing date by
+         18 months to May 2025 to complete LNISP-1 and reinstate its original targets. See more details on annex 7.
+
+8.       Revised PDOs. The PDO was revised during the 2022 restructuring to (a) increase access to irrigation water for
+project beneficiaries and (b) enhance the institutional framework and strengthen capacity for water security and climate
+resilience in certain areas of the territory of the recipient. The revision involved replacing ‘availability and productivity of
+irrigation water’ with ‘access to irrigation water’ for project beneficiaries in part (a) and replacing ‘for the country’ with ‘in
+certain areas of the territory of the Recipient’ in part (b).
+
+9.     Revised PDO indicators. During restructurings, PDO indicators were dropped, reworded, added and PDO targets
+were adjusted to be more focused on achievable outcome.
+
+     •   The original PDO indicator related to “productivity of irrigation water” was dropped entirely in 2022.
+     •   The PDO indicator for irrigated area was revised: its target was reduced from 4,043 ha to 777 ha in 2019, then later
+         adjusted to 2,385 ha in 2022, and finally reinstated to 3,904 ha in 2023 as project scope and financing changed.
+     •   The original PDO indicator, “Water Policy adopted and Water Bill submitted to Parliament,” was later revised to
+         “Water Act, Sector Policy, and Regulations adopted”, similarly, the original indicator as “Satisfactory ratings of
+
+
+
+                                              Official Use Only                                                           Page 3
+         The World Bank
+         Kenya Water Security and Climate Resilience Project (P117635)                                     ICR DOCUMENT
+
+
+         key water institution performance contracts”, was revised to “Percentage of institutions mandated by Water Act
+         established (%)”.
+    • Additional PDO indicators were introduced, including “the establishment and operationalization of the Water
+         Resources Authority”, and “the number of people with increased flood protection” to reflect enhanced institutional
+         framework capacity for water security and climate change.
+10.      Revised components. The first component of the project, that is, Water Resources Development, had its scope
+expanded under the first restructuring in 2015 to include (a) the construction and rehabilitation of flood protection
+infrastructure to protect the irrigation infrastructure and approximately 66,700 people living along the banks of Lower Nzoia
+River, (b) Nzoia watershed management activities, (c) upgrading and expansion of the flood forecasting and early warning
+system (FFEWS) for Lower Nzoia River basin, and (iv) rehabilitation of priority sections of the water distribution network
+in Mombasa to reduce water losses.
+
+Other Changes
+
+11.      Changes to Result Framework (RF): The intermediate result indicators (IRIs) were repeatedly revised during
+restructurings to reflect changes in project scope, feasibility, and lessons learned during implementation. It was revised
+during five key restructurings: the 2015 restructuring made targeted adjustments to IRIs, including cancelations, additions,
+and revisions; the 2017 restructuring adjusted PDO-level indicators and adjusted/canceled IRIs; the changes to the RF in
+2019 included reductions to the scope of the indicators and the inclusion of new indicators; the 2022 restructuring involved
+the dropping of a PDO indicator, target adjustments, and the addition of new indicators; finally, the 2023 restructuring
+corrected the targets and scope of the indicators at project closure. For a detailed summary of modifications to the RF, please
+refer to Annex 7, Table 7.2.
+
+12.      Some of these changes to IRIs included dropping and replacing indicators. Several intermediate indicators were
+dropped, especially those related to agricultural productivity (e.g., cropping intensity, value of agricultural products
+marketed) and Mombasa water utility performance (e.g., non-revenue water reduction, revenue collection efficiency), as
+these outcomes became unachievable. Few were replaced or merged. For example, the indicator on “establishment and
+operationalization of basin water resources committees (BWRCs)” was replaced by “Water Resources Authority (WRA)
+established and operational,”. While New intermediate indicators were introduced such as: “Operational IWUAs created or
+strengthened”, “Number of Sub-catchment Management Plans (SCMPs) revised/developed and implemented”, “Six Basin
+Plans Developed and Adopted”, “Land area under sustainable land and water management in Nzoia watershed”, and gender-
+focused indicators was introduced too, as “female representation in IWUA leadership”.
+
+Rationale for changes and their implication on the original theory of change
+
+13.      The project’s seven restructurings responded to evolving implementation challenges and opportunities (see para. 7
+and Annex 7). The main implication for the theory of change was the 2022 removal of productivity-related indicators,
+shifting the ToC to emphasize access to irrigation water, institutional strengthening, and pathways to resilience and water
+security. The initial ToC figure reflecting this shift was developed during the 2022 restructuring and is presented in Annex
+2, Figure 1.
+
+
+
+
+                                             Official Use Only                                                         Page 4
+          The World Bank
+          Kenya Water Security and Climate Resilience Project (P117635)                                     ICR DOCUMENT
+
+
+ II.     OUTCOME
+
+A.      RELEVANCE OF PDO
+
+Assessment of Relevance of PDOs and Rating
+Rating: High
+
+14.      At closing, the PDOs aligned closely with the World Bank Group’s Kenya CPF (FY2023–2028), which prioritizes
+improving water security, increasing household resilience to shocks, and extending infrastructure services to the last mile —
+toward outcomes of greater natural capital resilience and more equitable service delivery. KWSCRP investments—LNISP-
+1 irrigation infrastructure, flood protection benefiting 66,700 people through dyke construction, expansion of Mombasa’s
+drinking water network, and institutional strengthening—directly support these objectives. The project’s legal and
+institutional reforms, including operationalizing the Water Resources Authority, training 571 officials, and supporting the
+Water Act and sector policy, bolster governance and institutional effectiveness. Collectively, by improving water
+management, advancing climate adaptation, and strengthening sector institutions, the PDO advances Kenya’s Vision 2030
+and the CPF’s goal of an inclusive, resilient, middle-income economy.
+15.     The PDOs remain highly relevant to Kenya’s development priorities. The KWSCRP PDO addressed climate change
+vulnerabilities, strengthens institutional effectiveness and water security, and is well aligned with the focus of National
+Climate Change Action Plan 2023–2027 and Kenya’s Country Climate and Development Report (2023). LNISP-1
+development also complements Kenya’s National Irrigation Sector Investment Plan (NISIP) 2025–2035 and the
+Agricultural Sector Transformation Strategy, both of which prioritize irrigation expansion and productivity gains. The PDO
+makes significant contributions to Kenya’s Sustainable Development Goals (SDGs), notably SDG 2 (zero hunger), SDG 6
+(clean water), SDG 13 (climate action), and SDG 5 (gender equality).
+16.    Given its strong alignment with national priorities, World Bank strategic documents, and global SDGs, the
+Relevance of the PDO is rated High.
+
+B.      ACHIEVEMENT OF PDOs (EFFICACY)
+
+Assessment of Achievement of Each Objective/Outcome
+
+Rating before 2022 restructuring: Substantial
+Rating after 2022 Restructuring: Substantial
+
+17.      The project had a PDO change (concurrent with Restructuring 4), two AFs (concurrent with Restructurings 1 and
+7), two cancelations (concurrent with Restructurings 2 and 3), and three extensions of the closing date (concurrent with
+Restructurings 5, 6, and 7). Therefore, the project efficacy is assessed using the original and revised indicators before and
+after Restructuring 4 in February 2022, which removed the irrigation water productivity PDO and its related IRIs as a major
+change in project scope and RF. While other restructurings primarily adjusted PDO targets, modified IRIs and extended the
+project timeline, thus, for simplicity and directing focus on the project’s turning point, 2022 restructuring was considered
+in the split rating.
+
+18.     In each instance, the attainment of the relevant PDO elements and sub-elements, specifically PDO element A1:
+Increase availability (later revised to access) of irrigation water; A2: Increase productivity of irrigation water (subsequently
+omitted); B1: Enhance institutional framework; and B2: Strengthen capacity for water security and climate resilience, is
+evaluated against the corresponding RF indicator targets. The extent of achievement of the original and revised PDOs are
+provided in Table 2.
+
+
+
+
+                                             Official Use Only                                                          Page 5
+         The World Bank
+         Kenya Water Security and Climate Resilience Project (P117635)                                   ICR DOCUMENT
+
+
+                            Table 2. Achievement Relative to Original and Revised/Final Targets
+                                                                     Target            Project       Percentage achieved
+                                                                                   achievement at
+                          Indicator                             Original Revised    closure (As of   Original    Revised in
+                                                                 2013 in 2022       November 2,       2013         2022
+                                                                                        2025)
+PDO A1.1 Area provided with irrigation and drainage services -
+                                                                   4,043    2,385          2,457            60.7      103
+new/improved (ha)
+PDO A1.2 Farmers gaining access to new/improved irrigation           -      7,600          8,142               -      107
+and drainage services (Number, of % female)                                 (38%)         (38%)                      (100)
+PDO A2.1 Value of scheme agriculture products per m³ water          30     dropped                       Not tracked   -
+                                                                                      Not Tracked*
+(Ksh/m³), revised to Agricultural production per m3 of water used
+PDO A2.2 Increase yields of major irrigated crops in irrigation Increased dropped                         Achieved     -
+                                                                                        Achieved*
+scheme (tons/ha)                                                   yield
+PDO B1.1 Water Policy adopted, and Water Bill Submitted to
+Parliament, later was revised to Water Act, Sector Policy and       Yes      Yes            Yes             Yes       Yes
+Regulations adopted,
+PDO B1.2 Satisfactory ratings of key water institution
+performance contracts, later was revised to Percentage of           Yes      Yes            Yes             Yes       Yes
+institutions mandated by Water Act established (%)
+PDO B1.3 Water Resources Authority established and                   -       Yes                               -      Yes
+                                                                                            Yes
+operational
+PDO B2.1 Direct project beneficiaries (Number, % female)          20,000 148,316         158,791             794      107
+                                                                  (48%)     (35%)         (36%)             (36)
+PDO B2.2 Number of people with flood protection                      -      66,700          100                -      100
+* PDO A2 and related IRIs were measured for the Bunyala Scheme within LNISP-1 (discussed later under PDO A2 and in Annex 7),
+PDO A2.2 as increases in major crops’ yield was measured, and documented, including in the ICR survey, while PDO A2.1 was not
+tracked due to its intensive fieldwork and measurement requirements when it was dropped in 2022 restructuring.
+19.      The IRIs for both outcome 1: increase availability and productivity of irrigation water and outcome 2: Enhanced
+institutional framework and capacity for water security and climate resilience, relative to original and revised targets are
+provided in Annex 7, table 7.3.
+20.      The KWSCRP aimed to invest in complementary water infrastructure for climate change adaptation and to
+strengthen Kenya’s WSIs. For this purpose and guided by its ToC, the project sought to increase water availability (PDO
+A1) through the construction of LNISP-1 to expand irrigated areas and support its operation and maintenance (O&M)
+planning. It also aimed to improve water productivity (PDO A2) by supporting agricultural activities and farmer practices
+in the LNISP-1 area to better use delivered irrigation water. The project intended to support the ongoing devolution process
+in the country and build strong water institutions (PDO B1) by reinforcing institutional frameworks, approving the Water
+Act and policies, enabling institutions to fulfill their mandates, building capacity, and developing water management plans.
+Additionally, it anticipated enhancing beneficiary resilience (PDO B2) through interventions for water security and climate
+adaptation for emerging national needs by improving understanding and physical capacity in this domain. The project also
+aimed, through some IRIs, to bridge water and climate information gaps by expanding/upgrading hydrometeorological
+stations and address future water and climate resilience investment planning and needs through developing feasibility studies
+and master plans.
+21.       The original PDO and IRIs were repeatedly modified over seven restructurings, but the project largely maintained
+its initial objectives by adjusting targets—except for water productivity, which was removed in 2022. Each PDO indicator
+is reviewed individually below.
+
+
+
+                                            Official Use Only                                                        Page 6
+           The World Bank
+           Kenya Water Security and Climate Resilience Project (P117635)                                ICR DOCUMENT
+
+
+22.      PDO A1: Increase Access to Irrigation Water (Substantial for original targets; High for 2022 restructuring
+targets). The PDO originally aimed to complete LNISP-1 construction and its indicator was targeted to track I&D services
+to the estimated command area (4,043 Ha), which was more precisely measured later in 2023 to be 3905 Ha. The November
+2, 2025 ICR mission reported that the contractor continued work after project closure in May 2025 and made progress. As
+of November 2, 2025, LNISP-1 has completed 78 percent of civil works following measures and steps in a post closure
+action plan agreed by client and the Bank that enables the likelihood of its completion by the client. As of November 2,
+2025, the scheme is providing I&D services to 2,457 ha—60.7 percent of the original estimated target (4,043 ha) or 63
+percent of the final measured command area; and full achievement as 103 percent of the revised target (2,385 ha) in 2022—
+and benefiting 8,142 farmers, as shown in Table 2. During the 2022 restructuring, access was defined as water being
+available within 250 meters of a farmer’s field. The team determined that constructing all tertiary canals within a block
+would serve as an effective proxy for measuring water access for all farmers in that block according to the 250-meter
+standard, irrespective of the completion status of feeder canals. Additionally, such construction does not necessitate heavy
+machinery and can be completed manually by the farmers themselves, while the scheme office is equipped with O&M
+equipment through this project and is there to help farmers to a large extent. Without LNISP-1, these 8,142 farmers would
+have depended entirely on rain-fed agriculture, leaving their yields highly exposed to rainfall variability as had been the
+case for decades in this area. With LNISP-1, farmers can now receive gravity-fed irrigation for next several decades,
+provided the scheme is properly operated and maintained.
+
+23.      The LNISP-1 construction primarily advanced towards the end of the project period (2018-2026) due to the need
+to revise feasibility studies, face procurement delays, and address protracted land acquisition bottlenecks. The team
+navigated initial challenges and dealt with them consistently, prioritizing achievable outcomes throughout implementation.
+In response to these evolving circumstances, LNISP-1 targets were strategically revised from the estimated command area
+4,043 ha to 777 ha in 2019, then to 2,385 ha in 2022, and finally to the measured command area 3,905 ha in the 2023
+restructuring. While the final completion attempt of LNISP-1 introduced through the 2023 restructuring and AF did not
+fully complete the scheme (see Key Factors During Implementation section), by November 2, 2025 the project had
+completed 78 percent of LNISP-1 civil works and the GoK committed to complete the remaining sections in post closure
+action plan. This highlights the likelihood of achieving the full PDO target for A1 in near future. An aerial view of the
+scheme can be visualized here5.
+24.     Notably, the 78 percent works completed encompass the most complex components such as intakes, the main canal,
+80 percent of distributary canals, three spillways, substantial auxiliary systems and most part of main drainage system .
+Significant progress has been achieved in the upper hilly Blocks 1–7, where mostly all tertiary and feeder canals have been
+constructed. The remaining activities—including the finalization of tertiary canals, land development and less complex parts
+of secondary drainage sections in the lower flat Blocks 8–14, require less investment and lighter equipment, leaving simpler
+components to be addressed by GoK at a later stage. In addition, 88 percent of the necessary land parcels for infrastructure
+have already been aquired, facilitating the efficient and likelihood of completion of pending work.
+25.      The progress of LNISP-1 was thoroughly validated by two ICR missions (May 30 and November 2, 2025), which
+included comprehensive site visits, structured interviews with key project stakeholders such as PMU and PIU staff,
+supervising consultants, contractors, and interactive focus group discussions with farmers. The annual progress of LNISP-
+1 was further corroborated through project documentation. For a detailed overview, Annex 7 provides a schematic layout
+map (figure 7.1) and a descriptive summary of completed and remaining works at project closure. Moreover, the project
+established the Scheme Project Implementation Unit (SPIU) within the National Irrigation Authority (NIA) and created 14
+IWUAs covering all scheme blocks, and enhanced thier capacity-building and achieved inclusive leadership measures,
+including women's representation in IWUA’s bodies, meeting IRI 1.3 and 1.4 in Table 2. The development of an O&M
+manual clarified operational responsibilities between SPIU and IWUAs, defined irrigation fee collection procedures as well,
+
+
+5
+    LNISP-1 aerial view by NIA https://youtu.be/920t_PERQWo?si=O2yRyqam2uvYnpV0
+
+
+                                              Official Use Only                                                     Page 7
+            The World Bank
+            Kenya Water Security and Climate Resilience Project (P117635)                                                                   ICR DOCUMENT
+
+
+and provided necessary O&M equipment such as heavy machinery. These provisions were verified during ICR mission
+visits.
+
+26.      Moreover, the project also supported future investments by developing an investment framework and completing
+12 preparatory studies for the investment pipeline including preparation of RAPs for LNISP-1. These studies included water
+supply master plans for Kwale, Upper Rift Valley, and Tanathi Regions, and four RAPs for LNISP-1, fulfilling IRI 1.5 and
+1.6. The project contributed to the preparation and appraisal of the Mwache Dam under KWSCRP-2 and the development
+of the National Irrigation Sector Investment Plan (NISIP) for 2025–2035, reinforcing Kenya’s strategic approach to
+irrigation development. Annex 7 Table 7.6 provides details on the scope and value of these investments, and the NISIP is
+available online for reference6.
+
+27.      PDO A2: Increase Productivity of Irrigation Water (Modest for original targets; dropped at 2022
+restructuring). The project was set out to maximize the use of delivered irrigation water through agricultural support
+interventions in LNISP-1. Although the final completion of the LNISP-1 scheme was delayed and water productivity
+indicators (PDO A2.1 and A2.2, IRI 1.1 and 1.2) were ultimately dropped during the 2022 restructuring, the project's
+commitment to improving productivity remained evident. Notably, under the project, KFW partnership ensured continued
+agricultural support in the Bunyala scheme within the LNISP-1 command area, where farmers had already relied on pumped
+irrigation. Based on advancement of LNISP-1, the Bunyala scheme, originally covering about 238 ha in Block 8, benefited
+from gravity-fed LNISP-1 water, eliminating the need for pumps.
+28.     Project-supported agricultural interventions expanded the irrigated area in Bunyala to approximately 1,000 ha
+across adjacent Blocks 7, 9, 12, and 13, and enabled increased yields from the baseline for major crops —paddy, banana,
+passion fruit, maize, and tomato—fulfilling PDO A2.2. While PDO A2.1 (agricultural production per m³ of water) was not
+measured after 2022 due to intensive field requirements, the combination of higher yields and double-cropping suggests
+improved productivity per unit water. Further details on Bunyala and the A2 indicators, as captured by the ICR survey, are
+provided in Annex 7..
+29.     While some activities related to water productivity were scaled down in 2019 restructuring, the agriculture
+subcomponent support under the project delivered tangible benefits to farmers. It directly benefited 33,400 farmers—
+surpassing the target of 31,500 (IRI 1.8)—through extension services, targeted training, and value chain support. Training
+in good agricultural practices, value chain development for key crops (rice, kale, and vegetables), irrigation management,
+and the System of Rice Intensification (SRI) reached 11,700 of the 12,600 targeted farmers (IRI 1.7). As a result, in Bunyala,
+3,000 rice farmers adopted SRI, experiencing a 30 percent increase in yields, the ability to cultivate two seasons per year,
+and substantial savings on seed and labor costs.
+30.     The project also strengthened farmers’ linkages with the private sector companies, cooperatives, local markets
+linkages, to improve access to inputs, mechanization, finance, markets and quality seedlings, ultimately enhancing value of
+agriculture products marketed (IRI 1.2). As a result of this support, even farmers without immediate gravity-water access
+during construction initiated farmer-led irrigation using buckets and pumps from scheme canals. With improved varieties,
+weed and pest management, and better harvesting practices, these farmers increased productivity; where gravity water was
+available, farmers shifted from one to two seasons annually. The recent 10-year lease with Nile Logistics Ltd to modernize
+and operate the Usonga Siriwo Rice Mill, supported by KWSCRP, processes rice for Bunyala farmers, indicates the
+increased rice production in the area and fostered private-sector linkages by project interventions7.
+31.      The positive impact of the interventions was confirmed by an ICR M&E survey of 250 farmers—primarily in the
+Bunyala scheme and surrounding areas within the LNISP-1 area. Of these respondents, 88% reported increased yields (PDO
+A2.2) for major crops—paddy, banana, passion fruit, maize, and tomato—along with two cultivation seasons annually
+indicating higher cropping intensity (IRI 1.1) of 170 percent. These outcomes in Bunyala clearly demonstrate high relevance
+
+6
+ Kenya NISIP https://www.irrigation.go.ke/sites/default/files/downloads/NISIP_compiled%20GREEN_19.03.2025%20V19-1.pdf
+7
+ Rice Mill upgrade in project year: https://www.citizen.digital/article/siaya-county-signs-10-year-lease-to-upgrade-and-operate-usonga-siriwo-rice-mill-n374098
+
+                                                          Official Use Only                                                                                 Page 8
+          The World Bank
+          Kenya Water Security and Climate Resilience Project (P117635)                                     ICR DOCUMENT
+
+
+and lasting benefits for farmers. The transition from pumped to gravity-fed irrigation, together with agricultural support,
+underscores the project’s transformative impact and contributes to even greater results with full LNISP-1 completion across
+the scheme command area.
+
+32.      PDO B1: Enhance Institutional Framework (the rating remained High both before and after the
+restructuring). It aimed to enhance water sector institutions and refine the policy framework, with notable progress
+evidenced by the approval of the Water Act and the adoption of associated policies and regulations through project support
+(PDO B1.1). Furthermore, the Water Act mandated compliance for all sector institutions (PDO B1.2), including the
+establishment of thirteen Water Works Development Agencies (WWDAs) and the Water Resources Authority (WRA) (PDO
+B1.3). In 2016, legal reforms were accomplished through the Water Act, ensuring alignment with the 2010 Constitution.
+These reforms provided a foundation for devolution within the sector and facilitated institutional development as well as
+the establishment of key agencies. The Water Sector Transition Plan (WSTP) was comprehensively prepared and adopted,
+and Kenya’s national water policy received Cabinet approval. Organizational reviews for various entities—including WRA,
+the Water Services Regulatory Board, the National Water Harvesting and Storage Authority, and the Water Sector Trust
+Fund—were completed and ratified by their respective boards, resulting in these agencies being reconstituted in accordance
+with the Water Act 2016. Cabinet endorsement and gazettement of criteria for establishing WWDAs led to the creation of
+multiple agencies. While cabinet approval contributed to some delays, the enactment of the Water Act and related policies
+represented significant milestones in consolidating sectoral policies and institutional mandates, an achievement
+corroborated by ICR structured interview with key officials and previous project members.
+
+33.       Moreover, the project built capacity across key institutions—MoWSI, NIA, WRA, and KMD—by training 571
+officials and providing essential technical assistance, tools, and systems, thereby meeting IRI 2.3. WRA was established
+and strengthened through training, office equipment, and modern decision-support systems, consolidating its regulatory
+role. It prepared river basin plans for six major rivers (IRI 2.1), sectoral and national plans, and 59 sub-catchment plans (IRI
+2.6), and supported guidelines for groundwater, surface water, and water quality management. KMD’s flood forecasting
+role was also enhanced. Table 7.7 in the annex 7 summarizes outcomes of legal and institutional reforms and capacity
+building, corroborated by ICR interviews with WRA, NIA, and MoWSI officials. The project modernized Kenya’s FFEWSs
+by installing or upgrading 105 hydromet stations nationwide (IRI 2.2 and 2.9), significantly improving data availability for
+flood risk management, and provided targeted training, equipping WRA and KMD with FFEWSs. During the ICR mission,
+10 hydromet stations were randomly visited, the FFEWS portal was verified, and structured interviews with the FFEWS
+team lead and project members confirmed these results.
+
+34.      PDO B2: Strengthening Capacity for Water Security and Climate Resilience (the rating remained High both
+before and after the restructuring). The project defined capacity for water security and climate resilience as enhancing
+infrastructural and analytical capacity to understand and manage hydrological variability, with the PDO measured by the
+number of direct beneficiaries. At closure, the project reached 158,791 direct beneficiaries, surpassing the original target of
+20,000 and the 2022 revised target of 148,316. These beneficiaries included 8,142 LNISP-1 irrigation farmers, 66,700
+people protected from floods, and 34,320 participants in agricultural activities (extension services, training, and value chain
+linkages support). Additionally, 571 staff from WRA and other institutions received specialized training. The Mombasa
+water distribution network connected 18,000 people, and 31,058 individuals benefited from watershed management
+initiatives, including community spring protection and school rainwater harvesting tanks. The 66,700 people protected from
+floods was elevated to a PDO-level indicator (PDO B2.2) in 2017. These interventions enhanced beneficiaries’ capacity to
+understand and cope with hydrological variability.
+
+35.     At the end of the project, in an ICR M&E survey of 402 households in Busia and Siaya Counties protected by flood
+dykes, 65 percent and 59 percent of respondents reported they experienced floods “very often” and “often,” respectively,
+without the project intervention of constructing the dykes. These figures dropped to 0 percent and 10 percent for the similar
+question about flood frequency experienced after the dykes were constructed, which confirms the 66,700 population
+
+
+                                             Official Use Only                                                          Page 9
+         The World Bank
+         Kenya Water Security and Climate Resilience Project (P117635)                                   ICR DOCUMENT
+
+
+effectively protected by dykes. Similarly, M&E surveys confirmed that 88 percent of 402 agriculture participants received
+services such as training, extension, or input support, validating the figure of 34,320 farmer beneficiaries.
+
+36.     At project closure, all added or modified IRIs during restructurings were substantially achieved. Sustainable land
+and watershed management across 1,830 ha in the Nzoia watershed (IRI 2.7 achieved its target of 1,450 ha), led by WRUAs
+in five LNISP-1 counties, helped reduce flood risk and sedimentation for LNISP-1. The project connected 3,000
+households—about 18,000 people (IRI 2.10)—in Likoni Mombasa county to the water distribution network. During the
+ICR mission, the area was visited; 10 households were randomly interviewed; several manholes were inspected; and results
+were confirmed through interviews with the PIU, contractor, and 10 beneficiary households.
+
+37.      The project's accomplishments demonstrate the transformative effects of infrastructure investments, institutional
+development, and reform, as well as community participation in enhancing water security and climate resilience in Kenya.
+In the absence of this project, Kenya would have faced escalating challenges; for instance, approximately 66,700 individuals
+would have remained vulnerable to severe flooding, and WSIs would likely have continued to operate in a fragmented
+manner without the necessary capacity, coordination, or legal authority to implement major initiatives such as the Mwache
+Dam. This scenario would have left the country less equipped to address critical needs in irrigation, water supply, flood
+management, and watershed protection. Furthermore, the absence of strategic planning documents, including river basin
+plans and NISIP, could have impeded effective water resource management and limited the potential for successful irrigation
+development, resulting in suboptimal water sector investment outcomes.
+
+Justification of Overall Efficacy Rating
+
+38.      The overall Project efficacy demonstrated notable progress, being rated Substantial in relation to the original and
+the revised 2022 restructuring targets.
+
+39.     For the original project targets: Overall Efficacy was rated Substantial, reflecting full or High achievement of the
+second elements of the PDO (B1 and B2). For the first part (A1 and A2), the project reached 60.7 percent (or 63 percent of
+the final measured command area) of PDO A1’s targets and completed 78 percent of LNISP-1 complex civil works,
+supported by a post-action plan enabling the likelihood of full completion, securing a Substantial rating. PDO A2 was rated
+modest, since LNISP-1 scheme only began delivering water to its completed areas by the end of the project, Bunyala and
+adjacent areas that received water via the pump system benefited from agricultural interventions and improved major crops
+yields (achieved PDO A2.2), while PDO A2.1 was not measured and crop intensity as IRI 1.1 achieved. Moreover, the
+project met all IRIs, with shortfalls in investment and pipeline studies (IRI 1.6), and hydromet stations (IRI 2.2).
+
+40.      Under the revised 2022 targets: Overall Efficacy received a Substantial rating, with all PDOs (A1, B1, B2) and IRIs
+meeting their objectives. PDO A2 was dropped, only two IRIs remained just short of full completion: flood protection
+structures reached 77 percent (IRI 2.8), and the number of people benefiting from the Mombasa water distribution network
+stood at 42 percent (IRI 2.10). Importantly, LNISP-1 (PDO A) achieved its targeted outcomes.
+
+C.      EFFICIENCY
+
+Assessment of Efficiency and Rating
+Rating: Modest
+
+41.     Economic efficiency. The economic performance of the project is positive. At a social discount rate of 6 percent,
+the project yields an economic net present value (ENPV) of US$61.42 million and an economic internal rate of return
+(EIRR) of 13.81 percent (over a 30-year period). The economic benefit-cost ratio (BCR) is 3.99. These economic results do
+not include the benefits from reduced greenhouse gas (GHG) emissions and institutional strengthening at the country level.
+The EIRR of 13.81 percent is slightly lower than the ex ante estimate of 14.6 percent at appraisal (2013) but higher than the
+
+
+                                            Official Use Only                                                       Page 10
+          The World Bank
+          Kenya Water Security and Climate Resilience Project (P117635)                                       ICR DOCUMENT
+
+
+revised estimate of 8.9 percent following the project restructuring in 2019. The lower EIRR is primarily due to slow
+implementation during the first half, which undermined the project design in terms of ambition, complexity, and cost
+estimates. The ENPV of US$61.42 million is significantly higher than the ex ante estimate of US$7.3 million, largely due
+to the adoption of a lower social discount rate of 6 percent, compared to 12 percent used at appraisal.
+
+42.      Justification on using updated parameters for economic analysis at project closure. A 30-year analysis period
+is used to fully capture the long-term benefits of the project’s infrastructure investments, whose economic life and sustained
+benefits extend well beyond two decades. This extended period is also justified by the 13-year implementation timeline, as
+most infrastructures became operational in the later years, delaying the accrual of benefits. Thus, a 30-year horizon ensures
+the analysis reflects the full operational lifespan of these assets. Additionally, applying a 6 percent social discount rate aligns
+with the World Bank’s 2023 Guidelines, which recommend this rate for developing countries to better account for the social
+opportunity cost of capital and long-term societal benefits.
+
+43.     To ensure comparability with the appraisal and illustrate the effect of parameter choices,Table 3 summarizes the
+key results under different scenarios:
+
+                                      Table 3. Comparison of Economic Analysis Scenarios
+                                                          Period       Discount rate
+           Economic Analysis Scenarios                                                     EIRR (%)        ENPV (US$, millions)
+                                                          (years)           (%)
+At appraisal (2013)                                        20              12                14.6                 7.3
+At project closure, based on appraisal parameters          20              12                 9.11               −6.3
+At project closure, based on updated parameters            30              6                 13.46               57.29
+Note: FIRR = Financial internal rate of return.
+
+44.     The financial analysis assessed viability of key project interventions, including flood control, irrigation
+development, water distribution network, and catchment protection. The results of the financial analysis, such as internal
+rate of return (IRR), net present value (NPV), and BCR, confirm financial viability of these investments for targeted
+beneficiaries, particularly in flood-prone and water-scarce areas. Crop yields increased in irrigated zones of LNISP-1 mainly
+in Bunyala scheme and adjacent blocks and in areas benefiting from flood protection and enhanced agricultural support.
+Annex 4 contains details of the economic and financial analysis.
+
+45.     Design and implementation efficiency. The project’s ambitious design faced substantial early delays due to
+complex PMU/PIU arrangements that introduced cumbersome workflows, weakening procurement and financial
+management and causing payment delays to contractors and consultants and extended contracts timeline. Project efficiency
+was further affected by land acquisition bottlenecks arising from limited readiness for RAP preparation and execution, and
+also by LNISP-1 design revisions that took almost four years. The project underwent seven restructurings, including two
+cancellations and additional financing to close project financing gaps caused by cost overruns and exchange losses. External
+shocks—major floods and COVID-19 restrictions—also disrupted timelines and impeded on-the-ground activities. COVID
+was also one factor, at that time land acquisition processes were starting to advance, necessitating land valuations, public
+inquires, and public barazas to advance land acquisition, COVID exacerbated these delays. Collectively, these factors
+increased administrative and transaction costs (including extended PMU support and international supervision consultant
+contracts), raised LNISP-1 contractor standing-time costs and idle-time claims, and at times triggered interest payments due
+to delayed disbursements; associated cash-flow constraints and dispute resolution processes further extended contract
+durations. As a result the project took 13-year implementation period.
+
+46.     The seven restructuring measures also tackled disbursement issues and improved it particularly in the second half
+of the project. By project closure, approximately US$150.12 million had been disbursed, representing a 100 percent
+
+
+
+                                               Official Use Only                                                          Page 11
+            The World Bank
+            Kenya Water Security and Climate Resilience Project (P117635)                                          ICR DOCUMENT
+
+
+disbursement rate, with 65 percent of the funds disbursed in the second half, reflecting compressed implementation
+timelines.
+
+47.        Based on the above discussion, Efficiency of the project is rated Modest.
+
+D.         JUSTIFICATION OF OVERALL OUTCOME RATING
+
+Rating: Moderately Satisfactory
+
+48.      Applying the World Bank’s split rating evaluation methodology for the selected restructuring phases, the project’s
+overall outcome is rated Moderately Satisfactory (see Table 4). Feedback from 450 end beneficiaries in ICR M&E surveys,
+including water institution staff, consistently reflected satisfaction with the project’s accomplishments. Although initial
+challenges stemmed from an ambitious design, limited preparedness, and slower disbursement in the first half, these
+obstacles were progressively overcome. The project resulted in a mid-project turnaround that delivered tangible outcomes
+relative to ambitious targets across institutions, water sub-sector and regions spread over western and eastern of Kenya
+including flood protection infrastructure, Mombasa’s water supply network, 78% completion of LNISP-1 irrigation scheme
+with clear completion strategy from GoK, watershed management, FFEWS, and a strengthened investment pipeline.
+
+49.      The project maintained strong alignment with Kenya’s national development priorities and the World Bank CPFs.
+By closure, all allocated funds had been effectively disbursed, while over 158,000 direct beneficiaries experienced
+strengthened capacity for water security and climate change resilience, supported by advances in water sector reform. The
+establishment of the WRA and particularly the adoption of the Water Act, achieved through Cabinet and Parliamentary
+approval—stand out as major institutional milestones. The project also strengthened water resources planning, management,
+and implementation, laying a foundation for advanced institutions capable of delivering transformative water sector
+initiatives such as the Mwache Dam.
+
+50.     Furthermore, the project derived important lessons for a paradigm shift in irrigation development, shifting the focus
+toward farmer-led irrigation than large schemes. This direction is now reflected in the design of new Kenya country and
+East Africa regional projects, such as Africa RISE (Resilient Irrigation for Sustainable Economy). Overall, despite early
+challenges, the project’s achievements have set the stage for high-impact water sector development in Kenya.
+
+                                            Table 4. Project’s Split Rating Calculation
+                                                                                                         Revised Targets with
+                                                                     Original Project Targets in
+                                                                                                       Restructuring-2022 (PDO
+                                                                                2013
+                                                                                                              Dropped)
+      Relevance of PDO                                                                             High
+      Overall Efficacy (PDO)
+                                                                             Substantial                      Substantial
+
+                               PDO A1                                        Substantial                        High
+                               PDO A2                                         Modest                           Dropped
+                               PDO B1                                          High                             High
+                               PDO B2                                          High                             High
+      Efficiency                                                                                 Modest
+      1 Outcome ratings                                                Moderately Satisfactory          Moderately Satisfactory
+      2 Numerical value of the outcome ratings                                   4                                4
+
+
+
+
+                                                 Official Use Only                                                                Page 12
+            The World Bank
+            Kenya Water Security and Climate Resilience Project (P117635)                                                                       ICR DOCUMENT
+
+
+                                                                                                                                Revised Targets with
+                                                                                   Original Project Targets in
+                                                                                                                              Restructuring-2022 (PDO
+                                                                                              2013
+                                                                                                                                     Dropped)
+     3 Disbursement8 (US$, millions)                                                            102.87                                 47.24
+     4 Share of disbursement                                                                0.685 (68.5%)                   0.315 (31.5%)
+     5 Weighted value of the outcome rating (Row 2 × Row 4)                                     2.74                            1.26
+     6 Final outcome rating                                                                             Moderately Satisfactory
+                                                                                                            2.74+1.26=4
+      Note: a. Highly Unsatisfactory (1); Unsatisfactory (2); Moderately Unsatisfactory (3); Moderately Satisfactory (4); Satisfactory (5); Highly Satisfactory (6).
+
+E.        OTHER OUTCOMES AND IMPACTS
+
+51.      Gender. A total of around 55,300 women benefited directly from the project (35 percent of the total over 158,000
+direct beneficiaries). The project promoted women’s participation through gender sensitization programs, achieving at least
+30 percent of IWUA leadership positions for women and a gender-sensitive approach to farmer selection. By supporting
+women’s livelihoods and facilitating their involvement in consultations, training, and leadership within WRUAs and
+IWUAs, the project empowered women in agricultural, irrigation, and watershed management activities. Women also
+benefited from flood management measures—including the rehabilitation and construction of dykes along the Nzoia
+River—as women are particularly vulnerable to flood impacts due to social, economic, and legal disadvantages. Community
+feedback captured in 402 household M&E surveys highlighted overall high satisfaction among women with interventions
+such as the protection of water points and springs for drinking water and domestic use, also from dykes. Moreover, the
+project has supported land acquisition in LNISP-1 for women as well, especially widows, by mandating joint compensation
+payments, ensuring women’s participation in all consultations, and providing financial literacy training. The project’s GRMs
+and committee quotas have helped resolve succession cases fairly, protecting widows’ rights to inherit land and assets.
+
+52.      Poverty reduction and shared prosperity. The KWSCRP has been impactful in advancing poverty reduction and
+promoting shared prosperity by supporting water management, agricultural activities, and local economies in Kenya’s most
+vulnerable regions. The project provided I&D services to over 2,457 ha, with plans to expand to 3,905 ha that could lift an
+estimated 8,000 farmers and their families out of poverty. The project catalyzed local economic growth by creating direct
+and indirect jobs during implementation and by enabling improvement of agricultural production, which in turn stimulated
+related sectors such as transportation and agro-processing through the market links for high-value crops. The formation and
+strengthening of WRUAs empowered disadvantaged groups, especially women, to invest in diverse livelihood options
+including beekeeping, livestock rearing, and kitchen gardening, with affirmative action ensuring at least 30 percent female
+representation in leadership roles. KWSCRP also prioritized climate resilience and disaster risk reduction, safeguarding
+66,700 people through the construction of 34 km of flood protection dykes along the Nzoia River, which improved public
+health and enhanced the safety and well-being of communities living in flood-prone areas. Additionally, the project
+improved access to water for 18,000 individuals in Mombasa contributing to better health outcomes and quality of life.
+Overall, KWSCRP’s integrated approach—combining infrastructure development, institutional strengthening, gender
+inclusion, and targeted support for vulnerable groups—has directly benefited over 158,000 people for sustained prosperity.
+
+53.     Institutional strengthening was discussed in the Efficacy section, and mobilizing private sector financing was not
+applicable to this project.
+
+
+
+
+7
+ The disbursement in row 3 represents the amount disbursed between two restructuring periods; it is not cumulative. Also, total
+project disbursement was US$150.1 million. However, due to a system glitch and disbursements not recorded after the final
+Implementation Status and Results Report (ISR), the system-generated disbursement may slightly differ.
+
+                                                            Official Use Only                                                                                  Page 13
+         The World Bank
+         Kenya Water Security and Climate Resilience Project (P117635)                                    ICR DOCUMENT
+
+
+F.      OTHER UNINTENDED OUTCOMES AND IMPACTS
+
+54.      The KWSCRP prepared ground for the second phase of LNISP-2, a future initiative, expected to bring another
+4,000 ha under irrigation on the right bank of the Nzoia River. The hydrological feasibility of Phase 2 with detailed design
+and bidding documents were prepared, and all supporting structures for delivering water to phase 2 are already constructed
+under LNSIP-1, for example, intake gates, size of main canal, spillway, and divert structures. Meanwhile, the northern dykes
+already included and constructed the main drainage system for Phase 2’s irrigated lands. Moreover, this project, as
+KWSCRP-1 initiated the second project in the program named KWSCRP-2, included the construction of Mwache Dam,
+covering its preparation, feasibility study, and appraisal. The Project Implementation Manual (PIM) developed under
+KWSCRP-1 is being used for KWSCRP-2, for smooth implementation. Additionally, the empowerment of WRUAs with
+developed sub-catchment plans under KWSCRP-1 enabled WRUAs around Mwache Dam to conduct watershed
+management activities, essential for controlling sedimentation in the dam. The project also offered significant support to the
+National Land Commission (NLC), working closely with its staff to strengthen capacity and assist in implementing its
+policies and regulations. By addressing land acquisition challenges, the operation not only resolved issues in LNISP-1 but
+also contributed to solving land matters in KWSCRP-2.
+
+ III.    KEY FACTORS AFFECTED IMPLEMENTATION AND OUTCOME
+
+A.      KEY FACTORS DURING PREPARATION
+
+55.      The PDOs were clearly defined, and the RF was largely adequate, capturing the key parameters necessary
+to reflect progress toward meeting the PDOs. The design was developed through consultative workshops with
+government counterparts and aligned with the World Bank and GoK commitments on climate adaptation, building
+institutions and investing in critical infrastructure. A comprehensive and flexible multipronged approach was intentionally
+agreed with the client at appraisal to meet emerging needs of the country as water institutions were changing under the
+devolution process to strengthen the water sector for economic growth in line with Vision 2030.
+
+56.      Risks and mitigation measures were properly identified at appraisal, and the project was classified as high
+risk because of its support to the devolution agenda in the water sector. However early implementation encountered
+challenges because some initial mitigation measures, like needing the update of the LNISP-1 feasibility study and the RAP,
+proved inadequate. Furthermore the 2010 Constitution shifted water and sanitation services to 47 county governments,
+requiring a transition plan, capacity building, and new coordination frameworks. These institutional changes, although
+recognized at appraisal, unavoidably created initial implementation difficulties and delays. It’s important to highlight that
+the project engaged several agencies, including the MoWSI/PMU and PIUs such as NIA, WRA, MOWASCO, National
+Water Harvesting and Storage Authority, NLC, and later the Siaya and Busia County Irrigation Departments, and
+interventions spanned Siaya, Busia, Kakamega, Mombasa, and Kwale counties, and hydrometeorological stations were
+distributed nationwide.
+
+57.     Moreover, the project’s flexible, pragmatic, and adaptive design principles to respond to Kenya’s evolving
+water sector needs also allowed the project to expand its interventions through the 2015 restructuring and AF. This
+expansion proved counterproductive and ineffective in a challenging and complex implementation environment. The
+scope of the project was broadened to enable the delivery of highly impactful interventions for the country by including
+flood infrastructure, Nzoia watershed activities, and support for FFEWS. Additionally, funds were reallocated to introduce
+a program aimed at improving water services and management in Mombasa County. However, these expansions presented
+implementation burdens and setbacks due to the broad scope and lack of strong implementation measures in place.
+Consequently, the restructurings in 2017 aimed to address (a) limited project readiness, (b) complex and inefficient
+implementation arrangements, and (c) significant procurement delays. While subsequent restructurings adjusted the targets
+and implementation issues and delivered those high impact interventions.
+
+
+                                            Official Use Only                                                        Page 14
+         The World Bank
+         Kenya Water Security and Climate Resilience Project (P117635)                                    ICR DOCUMENT
+
+
+B.      KEY FACTORS DURING IMPLEMENTATION
+
+Factors Subject to the Control of the Government
+
+58.     Delays due to revision of LNISP-1’s poor feasibility study and cost escalation. KWSCRP began in 2013, but
+LNISP-1 implementation was delayed until 2018. Between 2013 and 2017, low-quality feasibility study led to revisions,
+redesigns, and procurement delays. The revised feasibility study significantly increased the scheme’s estimated cost from
+US$37 million to US$58 million, lowering the projected EIRR from 14.6 percent to 9.2 percent. Identifying an appropriate
+scheme intake became a complex process with multiple options considered. In 2017, disconnects between procurement and
+technical teams further contributed to poor-quality bidding documents.
+
+59.     One significant implementation challenge was the delay stemming from inadequate preparedness in both the
+development and application of social and environmental safeguard instruments, especially the RAP. Construction
+commencement in 2018 was postponed by around six months because the contractor and project team had not completed
+the necessary environmental safeguard compliance documentation due to poor coordination. Even after these issues were
+addressed, construction could not begin as land acquisition had not been completed, exposing a critical failure to properly
+sequence RAP preparation, clearance, and construction works within the project timeline. This misalignment resulted in
+increased costs from contractor standing time, financial setbacks, and ongoing contract disputes, with the contractor even
+resorting to renting land to commence works. Land acquisition itself became a major bottleneck, delaying LNISP-1 by over
+two years and affecting other interventions such as the Mombasa water distribution network and flood protection structures,
+which experienced delays of 7–12 months.
+
+60.      As an example, after two years of LNISP-1 contract commencement, only about 10 percent of the required land had
+been fully acquired, largely due to procedural hurdles; reforms and leadership changes at the NLC; ambiguous and
+inconsistent land documentation; and capacity gaps within the NLC, PMU, and the World Bank. The land acquisition
+process stipulated under the Land Act 2012 is complex and time-consuming, involving multiple steps such as gazettement,
+inspection, inquiry, award preparation, and compensation payments, with payment processing alone averaging 3–4 months.
+At that stage, these processes had not been fully implemented in the country and there were significant capacity gaps. This,
+along with insufficient government funding for compensation, resulted in extended delays.
+
+61.       Farmers’ land and crop compensation communications caused delays. Farmers’ compensation communications
+were not timely and clear due to poor stakeholder communication and protracted dispute among beneficiaries. Farmers
+initially understood the payment arrangements differently than what eventually unfolded, which led to increased opposition
+and additional delays in the project rollout. Typically, when contractors needed temporary access to farmland—for purposes
+like land leveling, rehabilitating the Bunyala irrigation block, or acquiring cultivated parcels—there was only a two-month
+window to complete the work or complete compensation before the next cropping season began. This short timeframe
+complicated construction efforts and raised crop compensation costs if coordination was inadequate.
+
+62.      Project implementation arrangement challenges and payment delays. In the early phase, centralized decision-
+making within the PMU with individual consultants and limited empowerment of various PIUs led to unclear roles, weak
+coordination, and capacity constraints. Key management tools, including a comprehensive PIM and effective M&E
+arrangements, were delayed. Some PIUs including NIA as the main implementing agency for LNISP-1 lacked budget
+control, reducing accountability, and with its transition between ministries (Agriculture and Water), coordination became
+challenging. Progress across various project components—including institutional framework, LNISP-1, dykes, and pipeline
+studies—was hindered by payment delays resulting from complex workflows, multiple approval levels extending to the
+National Treasury, parallel funding processes (World Bank Group and KfW), and inadequate contingency planning. These
+issues led to cash flow constraints for contractors and, in some instances, resulted in claims and extended project timelines.
+
+
+
+
+                                            Official Use Only                                                        Page 15
+         The World Bank
+         Kenya Water Security and Climate Resilience Project (P117635)                                   ICR DOCUMENT
+
+
+63.      Unlocking the Complexities of Project Implementation Arrangements. The project teams held several
+discussions to analyze the PMU structure, mapping out reporting arrangements, decision-making processes, and
+inefficiencies in approving invoices and deliverables. An action plan was created in 2017 to address the issues identified in
+the restructuring paper. This plan included all PIUs in the PMU structure and established component leads and sub-teams
+for tasks, with the aim of decentralizing decision-making and streamlining processes to improve efficiency and
+accountability. Further, to coordinate these different PIUs, the team conducted a monthly meeting of a Project Steering
+Committee (PSC), chaired by the Principal Secretary (PS) with the involvement of the chief executive officers (CEOs) of
+the various PIUs. Although PSC was discontinued post COVID-19, PSC monthly meetings improved decision-making as
+it properly allocated responsibilities to agencies and strengthen accountability.
+
+64.     The last 18-month extension was not fully utilized, primarily due to the expiration of the LNISP-1
+contractor’s contract, delays in obtaining a new contract, and an extended account setup process at NLC. The
+Synohydro contract for LNISP-1 ended because uncertainty around additional financing hindered timely action on the
+extension. After expiration, poor coordination between the PMU and the World Bank procurement teams delayed processing
+of the new contract for several months. Opening an NLC bank account for IDA-funded compensation for project-affected
+persons (PAPs) involved prolonged discussions among MoWSI, National Treasury, and NLC. These challenges, along with
+two rainy seasons, left less than a year for actual work completion.
+
+Factors Subject to World Bank’s Control
+
+65.     The World Bank collaborated closely with the PMU team and demonstrated responsive management by
+successfully implementing seven restructurings over the course of the project. It adjusted the project scope, secured
+additional financing, canceled uncommitted funds, and reallocated resources to address readiness and emerging
+implementation challenges.
+
+66.      The World Bank maintained a close partnership with the client to identify and resolve challenges
+progressively across technical, fiduciary, and safeguards domains. The team conducted regular, hands-on supervision
+and provided technical guidance. For example, based on the World Bank’s advice, the project team redesigned part of the
+dykes, reducing costs by nearly half as shifting the construction of the dykes to the riverside, minimizing land acquisition
+needs. Moreover, the World Bank team also took several measures to strengthen PMU and PIU arrangements for improved
+performance, as discussed in the previous section on unlocking project implementation challenges. Fiduciary oversight was
+adequate, with the World Bank supporting the PMU and implementing agencies to progressively strengthen FM, address
+audit findings, and gradually enhance M&E and procurement processes. Safeguards compliance was monitored, with the
+World Bank facilitating RAP implementation and environmental compliance while ensuring grievance mechanisms
+remained accessible.
+
+67.      Earlier review of land acquisition requirements and improved coordination during the 2023 restructuring
+and provision of additional financing could have mitigated delays in LNISP-1 civil works. Implementing the minimum
+impact rule, emphasizing sustainability and local ownership from the outset, and designing more limited land acquisition
+areas for LNISP-1 tertiary canals—excluding non-essential access roads—would have likely reduced the duration of delays
+related to land acquisition. Additionally, administrative inefficiencies and inadequate coordination between the World Bank
+and client procurement teams during the LNISP-1 contract renewal in 2023 resulted in over six months of delays that
+ultimately reduced the 18-month extension timeline provided.
+
+Factors outside the Control of the Government
+
+68.    External shocks, including flooding, political instability, and the COVID-19 pandemic, impeded the project's
+progress. The 2019 floods, which were the most severe in Kenya since 1961, devastated all rehabilitation works previously
+completed in LNISP-1 during the long rainy season from March to June of that year. Consequently, the contractor's
+
+
+                                            Official Use Only                                                       Page 16
+         The World Bank
+         Kenya Water Security and Climate Resilience Project (P117635)                                    ICR DOCUMENT
+
+
+equipment was immobilized for three months, necessitating the re-execution of the works. The turbulent political
+atmosphere during the elections of 2013 and 2017, coupled with county-level political interference, delayed decision-
+making processes. The pandemic further disrupted supply chains, hampering contractor mobilization and slowing
+stakeholder engagement. Social distancing requirements curtailed the frequency and scope of training sessions, community
+consultations, and field supervision, while increased costs arose from material shortages and safety measures.
+
+ IV.     BANK PERFORMANCE, COMPLIANCE ISSUES, AND RISK TO DEVELOPMENT OUTCOME
+
+A.      QUALITY OF MONITORING AND EVALUATION (M&E)
+
+Rating: Substantial
+
+69.      M&E Design. A formal ToC was not required at appraisal; however, the relationship between activities, outputs,
+outcomes, and the PDO was clear and logical. A comprehensive RF was developed to monitor progress toward outcomes,
+with PDO and intermediate indicators disaggregated by gender, location, and sector. The baseline survey provided
+sufficiently disaggregated data, and the M&E arrangements for data collection, analysis, and reporting were identified at
+appraisal. Some indicators—such as the value of scheme agricultural products per cubic meter of water (a PDO indicator)—
+proved difficult to measure and were modified during implementation via project restructurings to improve clarity and
+feasibility.
+
+70.     M&E Implementation. Although there were initial delays in forming the M&E team, the project successfully
+recruited the necessary staff as implementation progressed, enabling effective monitoring as activities commenced on the
+ground. In the absence of a centralized Management Information System (MIS), efforts to develop tailored MIS tools
+encountered operational difficulties; consequently, the team used structured Excel workbooks to track tasks and manage
+data. These tools supported regular weekly, biweekly, quarterly, semiannual, and annual reporting. Modifications to certain
+indicators prompted adaptive improvements to the RF—including refining, redefining, adjusting, or replacing indicators—
+to enhance clarity and measurability in line with project objectives. Through these impactful approaches, the project
+consistently collected data with clear methodologies, documented and reported progress, facilitating informed decision-
+making for all restructurings and adjustments in M&E data management.
+
+71.       M&E utilization. Aligning an effective M&E system for a large, multi-component project proved challenging at
+initial stage in the absence of a centralized MIS and a strong M&E team. This contributed to data-quality concerns in early
+phases—such as insufficient supporting evidence and inconsistent understanding of results indicators across components in
+early stages. The project progressively addressed staffing issues going forward, while regular project meetings helped
+surface and address these issues, strengthening data collection, validation and gradually harmonizing methodologies for RF
+data collection, analysis, and reporting. As the system matured, M&E findings increasingly supported key decisions,
+including project cancellations, additional financing, fund reallocations during restructurings, and modifications to project
+scope and sequencing. For example, the M&E data were timely informing both engineering and social teams on land
+acquisition priorities and efforts. While opportunities remained for more consistent and comprehensive data collection at
+entry and earlier standardization of methods, the M&E system evolved to provide meaningful support for achieving results
+and prioritizing activities.
+
+72.      Justification of overall rating of quality of M&E. The overall quality of M&E is rated Substantial. The project
+started with a sound RF and baseline design, and, despite early staffing gaps and the lack of a centralized MIS, it instituted
+disciplined data tracking and routine reporting that ensured continuity of monitoring. Indicator definitions and measurement
+approaches were refined throughout project lifetime to address feasibility and attribution challenges, improving the
+robustness of tracking against the PDO. Critically, M&E products were increasingly used to inform high-stakes management
+decisions—cancellations, reallocations, additional financing, and scope adjustments—demonstrating the system’s
+operational value beyond compliance. While residual limitations persisted, they did not materially undermine the reliability
+
+                                            Official Use Only                                                        Page 17
+          The World Bank
+          Kenya Water Security and Climate Resilience Project (P117635)                                     ICR DOCUMENT
+
+
+of results reporting in later phases nor the effectiveness of M&E in guiding implementation across a complex, multi-
+component operation. Taken together, design adequacy, adaptive strengthening during implementation, and demonstrated
+utilization justify a Substantial rating.
+
+B.      ENVIRONMENTAL, SOCIAL, AND FIDUCIARY COMPLIANCE
+
+73.      Environmental safeguards. The environmental policies that were triggered in this project included Environmental
+and Social Impact Assessments (ESIAs); Environmental and Social Management Plans (ESMPs); contractors’ ESMPs;
+licensing of ESIAs by the National Environmental Management Agency; Integrated Pest Management Plans; and
+Environment, Health, and Safety Plans. These safeguard policies were prepared and cleared by the World Bank, and the
+project successfully adhered to them. These instruments were prepared to manage potential adverse impacts on the
+environment, construction workers and community health and safety and well-being, community resettlements, and physical
+cultural resources from proposed project investments such as the construction of LNISP-1, flood infrastructure, and the
+Mombasa water distribution network. The instruments identified the impacts and provided mitigation measures, which were
+fully implemented. During the project's implementation, the capacity for managing environment risks within the project by
+the implementing agencies was progressively built and enhanced. The PMU, supported by the implementation support
+consultants (ISCs) and environmental and social experts, monitored compliance through frequent inspections and monthly
+audits. Regular monitoring confirmed improvements in environmental and social risk management. Unfortunately, during
+the implementation period, the project sustained two fatalities related to drowning hazard. All construction work was
+immediately suspended, investigation was conducted to understand the root causes, and the required corrective actions were
+implemented. At the time of project closure, all the Environment and Social Incidents Response Toolkit (ESIRT) cases had
+been satisfactorily closed, and the environmental performance rating was ‘Satisfactory’ at end of project.
+
+74.     Social safeguards. The project complied with the World Bank-triggered social safeguard policies including
+Operational Policy (OP) 4.12 and OP 4.01. RAPs and the ESMPs were prepared by the client and cleared by the World
+Bank. These policies and the accompanying instruments were activated because of potential adverse impacts on land,
+structures, and physical cultural resources from activities such as construction of LNISP-1, flood infrastructure, and the
+Mombasa water distribution network. In all, four RAPs were prepared and implemented. The processes for developing and
+seeking clearance for the RAPs, compensation disbursements took considerable time to finalize; and thus, flagged in project
+documents as contributing to overall project slowdowns.
+
+75.       At project closure, of the 4,704 PAPs, 88 percent were compensated, while the remaining were 568 PAPs (12
+percent) with a value of around US$883,000. This is mainly due to unresolved issues such as absentee PAPs, succession
+grants, pending affidavits, and missing title documentation. Despite substantial efforts during implementation to convert
+these cases to ‘payable’, they remained on the non-payable list at project closure, and the borrower retains liability for these
+compensations as safeguard policy compliance continues beyond project completion. To address this, the NLC is required
+to secure and ringfence the funds until the non-payable PAPs become eligible, with regular reporting and bank statement
+verification included in the post-closure safeguard action plan. The World Bank will monitor the implementation of this
+plan biannually, including through an ongoing operation of KWSCRP-2 with MoWSI. Throughout implementation, the
+ratings for Social Safeguards mostly remained ‘Moderately Satisfactory’ including at project closure.
+
+76.      Grievance redress. A GRM was set up as per the requirements indicated in the ESMP and was functional during
+project implementation. Contractors, consultants, and the SPIU had different GRM mechanisms, which were consolidated
+with the help of the World Bank team. A total of 156 grievances were reported including compensation, social and
+environmental safeguard issues, as well as complaints related to construction and access challenges (that is, need for foot
+bridges across canal/drainage channels). The GRM system resolved 142 grievances cases, and efforts are ongoing to address
+the remaining 14 which will also be monitored by the Bank biannually including via the ongoing KWSCRP-2 until the cases
+are resolved. Out of these 14 cases, 11 pertain to pending compensation matters and are included within the 568 PAPs
+awaiting compensation. The remaining three cases concern construction-related issues and beneficiaries’ access inquiries.
+
+                                             Official Use Only                                                         Page 18
+         The World Bank
+         Kenya Water Security and Climate Resilience Project (P117635)                                   ICR DOCUMENT
+
+
+77.       Financial management. The project submitted audited financial statements and interim financial reports as
+required, meeting the standards for quality and timeliness. The project also maintained a dedicated accountant throughout
+the life of the project. The PMU coordinated with the World Bank and relevant PIUs on budgeting and planning, fund flows,
+reporting, and auditing. Some of the FM issues faced by the project included delays in the budgeting process due to lengthy
+approval processes which led to delays in movement of funds from the Designated Accounts to the project account.
+Furthermore, during the initial years of implementation, insufficient funding for the GoK’s counterpart contribution resulted
+in ineligible payments—such as interest on delayed payments—being made from IDA funds. These expenses were
+subsequently refunded, with substitute documentation provided only at the conclusion of the project. The project was
+restructured to incorporate land compensation, which necessitated additional mitigation measures to secure IDA funds. This
+included opening a special-purpose account for land compensation using IDA funds, separate from the Government’s pooled
+land compensation account. In the 2017 MTR, FM was focused as an area which required substantial strengthening in terms
+of fund flow, and timely payment and continuous capacity building undertaken throughout the life of the project.
+
+78.      Procurement. The project faced initial delays due to capacity limitations requiring the provision of training in
+procurement and contract management across all levels of PMU/PIUs. Gaps in technical capacities, funds flow between
+KWSCRP-1 and KWSCRP-2, multiple financing partners, and the complexity of the initial implementation arrangements
+slowed implementation over the project period. This was further compounded by delayed handover of sections of the project
+sites for irrigation to the contractor due to land compensation and related environmental and social challenges, changes in
+the applicable procurement regulations for AF, and weak procurement and contract management capacity. Lack of effective
+planning and synergy between the project teams on site affected the implementation of the environmental and social
+component of the project, resulting in lengthy delays and contractual claims, leading to project time and cost overruns. To
+mitigate implementation delays, the implementation and institutional arrangements were reviewed and strengthened by
+addressing procurement and contract award decision-making bottlenecks, reorganizing procurement workflow, and
+enhancing procurement and contract management capacity within the PMU. The World Bank’s procurement team further
+provided hands-on procurement and contract management support, expedited reviews and no-objections, and organized
+procurement clinics to address capacity gaps, resulting in accelerated disbursement post 2019, while facing procurement
+delays in 2023 as well.
+
+C.      BANK PERFORMANCE
+
+Rating: Moderately Unsatisfactory
+
+79.      Quality at entry. The World Bank team designed the KWSCRP with a clear and smart development approach by
+focusing on building physical resilience through critical infrastructure investments and strengthening institutions aligned
+with Kenya’s 2010 Constitution and Vision 2030 for resilience and economic growth. The project was grounded in analytics;
+baselines surveys; sector assessments; and risk, safeguard, financial, and economic analyses. Substantial engagement with
+government counterparts ensured technical soundness, the project ambition level, and ownership. For better design, the team
+also leveraged lessons from ongoing World Bank operations, such as the Water and Sanitation Service Improvement Project
+and the Nile Basin Initiative, which helped address the country’s most critical water needs. Moreover, the project was
+closely linked with partner programs and built partnerships to tap co‑financing opportunities; thereby, co‑financing with
+KfW for LNISP‑1 was agreed and signed at the initial stage.
+
+80.     Early implementation of the project faced some challenges, mainly due to the complexities of the devolution process
+and the need for greater readiness as a high-risk project, discussed in detail under ‘Key Factors During Preparation and
+Implementation’ and ‘M&E Design’. Lack of effective project implementation arrangements affected procurement and FM
+early on, while the timely preparation and execution of RAPs proved challenging at the beginning, especially as NLC
+regulations continued to evolve. Enhanced irrigation expertise within the task team was needed at the initial stage to
+proactively address the feasibility study and RAP issues for LNISP-1. As a result, disbursements reached about 8 percent
+by the end of the first four years.
+
+                                            Official Use Only                                                       Page 19
+         The World Bank
+         Kenya Water Security and Climate Resilience Project (P117635)                                    ICR DOCUMENT
+
+
+81.      Quality of supervision. The World Bank maintained a regular management approach throughout project
+implementation. Implementation support missions, ISRs, MTR, and AMs were timely and responsive to emerging issues.
+Missions’ AMs, Management Letters, and ISRs candidly highlighted problems and addressed them while keeping the
+Country Management Unit and the client informed. ISR ratings accurately reflected project progress and challenges. The
+World Bank teams’ collaborative approach, working closely with the client, led to seven project restructurings to manage
+the scope of work, realign funds, and address emerging challenges, as detailed in the ‘Factors Affected Project
+Implementation’ section. During the COVID-19 pandemic, the World Bank approved adaptive adjustments to workplans,
+facilitated virtual supervision, and maintained fiduciary oversight.
+
+82.      The World Bank team also established a good relationship with client counterparts and provided technical guidance
+to help advance GoK processes when delays occurred. For example, to address the main bottleneck of land acquisition for
+LNISP-1, the World Bank team, together with the client, implemented several impactful measures as outlined below:
+
+        (a)   Hired a resettlement implementation consultant to dissect the process, mapping out the complexity of
+              the task and each step and the time required to transition from one phase to another. The role of the consultant
+              included guiding PAPs through the process of land acquisition, and assisting them in dispute resolution.
+        (b) Improved stakeholder engagement on the ground, to accelerate the land acquisition processes. The
+            project team organized regular workshops, bringing together all involved teams, for example, finance, NLC,
+            social, PMU, PIU, and PAPs, to foster collaboration and expedite compensation payments.
+        (c)   Engaged a legal team. PAPs faced numerous challenges, including succession issues; land jurisdiction
+              disputes; and unregistered parcels due to lack of affidavit, title, or green card, which hindered the process. A
+              legal team was engaged to address these issues in court, significantly speeding up the resolution.
+        (d) Instituted weekly and biweekly meetings focused on land issues and maintained regular dialogues
+            among land acquisition team at PMU, NLC, supervising consultants, contractor, surveyor, NIA, and
+            succession legal team. These meetings had actionable points for high-ranking officials from NLC, MoWSI,
+            and NIA to unlock any encountered matter and were fundamental to ensure coordination between contractor’s
+            program and land acquisition prioritization.
+        (e)   Unlocked IDA resources for land acquisition. To overcome financial constraints, the team applied for AF
+              in 2023 and secured a waiver to allocate IDA resources for land acquisition as a special authorization from the
+              Regional Vice President was granted.
+        (f)   Revised RAP 4 as specified under paragraph 7 (e).
+83.     Therefore, at project closure, NLC CEO expressed “we learned land acquisition through KWSCRP in
+Kenya, particularly via LNISP-1, which also supported NLC in acquiring land for other large and complex projects
+including Mwacha Dam.”
+
+84.      The World Bank’s implementation performance was also consistently challenged by Kenya’s turbulent context, the
+ongoing devolution, the project’s inadequate readiness measures, and emerging implementation issues. Tackling and
+unlocking these challenges nearly doubled the original project timeline and left LNISP-1 close to completion at project end.
+Despite these compound challenges that affected implementation, particularly in the first half, persistent efforts by both the
+World Bank and client teams enabled a turnaround in the second half, with the project adapting to changing PMU and PIU
+arrangements and coordination, gradually navigating evolving NLC procedures and social complexities for RAP execution,
+strengthening LNISP-1 feasibility study, and mobilizing expertise for irrigation. and continuity was maintained despite high
+staff turnover, including six Task Team Leaders (TTLs) over 13 years. Therefore, the Bank team resolved almost all the
+issues by closing, the project ultimately took longer. These challenges are discussed in detail in the sections ‘Key Factors
+During Implementation’, Quality of M&E’, and ‘Environmental, Social, and Fiduciary Compliance’.
+
+
+
+                                            Official Use Only                                                        Page 20
+          The World Bank
+          Kenya Water Security and Climate Resilience Project (P117635)                                     ICR DOCUMENT
+
+
+ 85.      Despite these challenges, the World Bank team delivered this ambitious 13-year project, achieving substantial
+ development objectives and completing 100 percent disbursement in Kenya’s challenging environment. The team delivered
+ infrastructure development objectives across regions, institutions, and subsectors and achieved significant institutional
+ strengthening and legislative reforms addressing devolution changes. Notably, the establishment of the WRA and the
+ adoption of the Water Act are outcomes which required Cabinet and Parliamentary approval and represent substantial
+ institutional milestones. The teams’ efforts under the project also prepared institutions to implement more ambitious project s
+ and unlocked complexities in land acquisition and irrigation development in Kenya, benefiting ongoing operations such as
+ the Mwache Dam and the upcoming operation, the Kenya NISIP support project, under preparation.
+
+86.       Justification of overall rating of Bank performance. Despite adaptive supervision—timely missions and ISRs,
+ candid management letters, close client engagement, and seven restructurings the Bank’s performance is rated Moderately
+ Unsatisfactory due to material shortcomings that constrained mainly efficiency and few achievements. Quality at entry was
+ weak for a complex, multi-component operation in a devolving context: RAP and land acquisition readiness (including
+ financing) and implementation/coordination arrangements were underdeveloped; risks related to NLC procedures and social
+ complexities were underestimated; and timelines and sequencing were overly optimistic. The project period nearly doubled
+ and LNISP-1 remained near completion at closing. While intensive later support enabled full disbursement and important
+ project outcome achievements particularly institutional results, while the impact of early deficiencies justifies a Moderately
+ Unsatisfactory rating.
+
+ D.      RISK TO DEVELOPMENT OUTCOME
+
+ 87.      Financial sustainability risks are associated with the WRA’s responsibility for the O&M of all 105
+ established/upgraded hydrometeorological stations and FFEWS under this project. The WRA faces substantial challenges
+ due to low user fee collection through water permits and unreliable GoK funding, which affects its ability to maintain the
+ stations. Consequently, 89 (85 percent) of the stations were found to be dysfunctional during the ICR mission. As a result,
+ data from these stations are not being transferred to FFEWS, preventing the production of early warning systems for targeted
+ communities, and the stations and FFEWS have remained non-operational just two years after their completion. New
+ regulations have been submitted to the Cabinet to increase water permit fees and enhance WRA's self-sufficiency; these
+ need to be approved and implemented as soon as possible to make the stations and FFEWS operational.
+
+ 88.     LNISP-1 is well positioned to deliver lasting benefits, while fiscal constraints may delay the completion of the
+ scheme, the government has committed to complete the LNISP-1 and operate it safely. These commitments are outlined in
+ post closure action plans as (a) the scheme completion strategy endorsed by National Treasury via correspondence dated
+ August 28, 2025, (b) an excess water management plan to ensure safety until full scheme completion, and (c) an endorsed
+ post-closure safeguards plan. With 78 percent of civil works already accomplished, the ongoing completion of secondary
+ drainage systems and the remaining tertiary canals facilitate water flow to lower Blocks (11–14) and ensure safe
+ management of excess water during rainfall.
+
+ 89.      Sustainability and effective operation of LNISP-1 were supported by the project. NIA has received a detailed O&M
+ Manual covering irrigation service fees, maintenance plans, and staffing requirements which has strengthened NIA-SPIU’s
+ capacity. The deployment of O&M equipment and the development of a service-oriented water distribution model provided
+ effective scheme management measures. Drawing on Kenya’s experience, ongoing capacity building for the scheme
+ management unit and securing reliable, predictable O&M financing through user fee collection and/or public funding remain
+ necessary. These steps will enhance LNISP-1’s long-term functionality, and service-based irrigation water delivery will
+ foster farmers’ accountability. The government also aims to mitigate sustainability risks through NISIP, which places strong
+ emphasis on improving O&M performance in existing GoK’s irrigation schemes.
+
+
+
+
+                                              Official Use Only                                                        Page 21
+          The World Bank
+          Kenya Water Security and Climate Resilience Project (P117635)                                       ICR DOCUMENT
+
+
+ V.      LESSONS AND RECOMMENDATIONS
+
+90.      The KWSCRP became ambitious by adopting flexible and long-term programmatic approach, integrating
+institutional and policy reforms with infrastructure development across various water subsectors, regions, and institutions
+including major investments for a large scheme such as LNISP-1. In retrospect, implementing large-scale irrigation projects
+like LNISP-1 as a stand-alone initiative may offer advantages, as embedding them within broader Investment Project
+Financing (IPF) operations like the KWSCRP that combine infrastructure and policy reforms can dilute focus. Furthermore,
+institutional and legislative reforms that require Cabinet or Parliamentary approval are often more effectively pursued
+through Development Policy Financing instruments rather than being incorporated into IPF projects. These lessons highlight
+the importance of carefully considering the appropriate financing and implementation modalities when designing future
+water sector programs.
+
+91.     Land acquisition is a critical and often complex aspect of irrigation projects, requiring early planning, legal
+preparedness, stakeholder coordination, and adaptive strategies to minimize delays and ensure timely implementation. First,
+for LNISP-1, misalignment between construction and land acquisition activities led to delays in site handover, increased
+costs due to contractor standing time, and tensions from demands for work acceleration. Therefore, proactive coordination
+between land and engineering teams facilitates the identification and prioritization of access areas. Second, farmer
+compensation communications must be timely, consistent, and clear. Initially, it was unclear which farmers were affected
+or how they would be compensated, leading to misunderstandings and delays. Third, crop compensation must be identified,
+coordinated with construction timelines, and appropriately funded. The lack of specific funding for crop compensation led
+to construction delays. Future projects should prioritize land acquisition from the outset, strengthen institutional and legal
+capacity, secure financing early, and maintain continuous coordination.
+
+92.      LNISP-1 unpacked a lot of lessons in future irrigation development in Kenya, embedded in NISIP as a strategic
+document for Kenyan Irrigation development (2025–2035). Its lessons learned placed a hold on prioritizing development
+of large-scale irrigation schemes in Kenya. From design to 75 percent completion, LNISP-1 took 13 years, to bring only
+2,457 ha of land under irrigation. As a result, NISIP shifted the focus for irrigation development to farmer-led irrigation
+instead of large-scale irrigation, based on considerations of implementation speed, impact, and scale to achieve desirable
+targeted acreage under irrigation. For large-scale irrigation development in Kenya, or any other large-scale infrastructure
+regardless of the sector, drawing on lessons from LNISP-1, a two-stage approach is recommended to ensure strong project
+readiness and focused implementation to maximize impact. Stage 1 focuses on feasibility studies, detailed design, and land
+acquisition, while Stage 2 involves construction and activities to ensure the sustainability of the outcome (that is, agricultural
+productivity, O&M arrangements, and so on).
+
+93.      Technical interventions must be matched by financial planning to safeguard investments and project outcomes.
+WRA struggled to maintain 105 hydrometeorological stations and FFEWS due to unreliable funding and low water user fee
+collection, resulting in 85 percent of stations and FFEWS becoming nonfunctional within two years. Similarly, LNISP-1
+poses sustainability risks. Therefore, a strong focus should be given to O&M of infrastructure during the implementation
+period to plan secure and predictable sources of funding, whether through irrigation service fees or reliable government
+transfers. Meanwhile, when farmers contribute to the cost-of-service delivery, it fosters accountability and ownership. Well-
+designed irrigation water pricing structures balance affordability and financial sustainability. It can also strengthen the
+customer–service provider relationship; encourage demand for better services; and, over time, improve system performance.
+For future projects, it is essential to develop clear financial strategies including identifying funding sources, assessing
+revenue potential, and securing timely regulatory support to ensure systems remain operational and deliver long-term
+benefits.
+
+
+
+
+                                              Official Use Only                                                          Page 22
+              The World Bank
+              Kenya Water Security and Climate Resilience Project (P117635)                                                                                      ICR DOCUMENT
+
+
+                                                     ANNEX 1. RESULTS FRAMEWORK AND KEY OUTPUTS
+
+@#&OPS~Doctype~OPS^dynamics@icrresultframework#doctemplate
+ A. RESULTS FRAMEWORK
+
+
+PDO Indicators by Outcomes
+
+Increase access to irrigation water for project beneficiaries
+          Indicator Name                           Baseline                Closing Period (Original)               Closing Period (Current)           Actual Achieved at Completion
+                                          Result          Month/Year        Result          Month/Year         Result         Month/Year             Result         Month/Year
+Farmers gaining access to                  0.00            Oct/2013                                           11,133.00        May/2025              7,296           May/2025
+new/improved irrigation and drainage   Comments on achieving targets   On November 2, 2025, the ICR mission confirmed 8142 farmers gaining access to new/improved irrigation and
+services (Number)                                                      drainage services
+Farmers gaining access to                  0.00            Oct/2013                                           11,133.00        May/2025              7,296           May/2025
+new/improved irrigation and drainage   Comments on achieving targets   On November 2, 2025, the ICR mission confirmed 8142 farmers gaining access to new/improved irrigation and
+services (Number)                                                      drainage services
+                                           0.00                                                                      35.00                                38%
+       of which female                 Comments on achieving targets   Target achieved- the project had in place a robust gender integration mechanism, ensuring that both men and
+       (Percentage)                                                    women participated in the activities. This includes in community leadership opportunities.
+Area provided with irrigation and          0.00            Oct/2013                                           3,905.00         May/2025            1,788.00          May/2025
+drainage services (ha)                 Comments on achieving targets   On November 2, 2025, the ICR mission confirmed 2457 hectares provided with new/improved irrigation and
+(Hectare(Ha))                                                          drainage services
+                                           0.00            Oct/2013                                                116,694.00           May/2025            157,945             May/2025
+                                       Comments on achieving targets   As of November 2, 2025, the ICR mission confirmed that the project reached 158,791 beneficiaries. This
+                                                                       included 8,142 irrigation farmers, 66,700 individuals protected from floods, and 34,320 participants in
+Direct project beneficiaries
+                                                                       agricultural activities such as extension services, training, and input provision. Additionally, 571 staff from WRA
+(Number)
+                                                                       and other institutions received specialized training. The Mombasa water distribution network connected 18,000
+                                                                       people, while 31,058 individuals benefited from watershed management initiatives, including community spring
+                                                                       protection and the installation of rainwater harvesting tanks in schools.
+                                           0.00                                                                       35.00                                  36.00
+       of which female beneficiaries   Comments on achieving targets   Target Achieved - the percentage of female farmers gaining access to irrigation services has increased from 0% in
+       (Percentage)                                                    October 2013 to 36% in January 2025. This indicates a positive trend in gender inclusion, with more women
+                                                                       accessing water. To ensure women’s participation, the project was deliberate on affirmative actions. For example,
+
+
+
+                                                                                                                                                                                    Page 23
+
+
+
+                                                                                                                                                                               Official Use Only
+             The World Bank
+             Kenya Water Security and Climate Resilience Project (P117635)                                                                                              ICR DOCUMENT
+
+
+                                                                           the project ensured that at least 30% of IWUA leadership positions were ringfenced for women. Selection of
+                                                                           farmers for training was done with gender lens etc.
+                                             0.00            Oct/2013                                                  3,208.00         May/2025           7,296.00           May/2025
+      of which irrigation farmers        Comments on achieving targets     The are the Bunyala farmers plus blocks 1 to 5 farmers. The computation also considers the out growers of block
+      (Number)                                                             8. These have access as per the definition.
+                                             0.00            Oct/2013                                                   66,700.00          May/2025            66,700.00           May/2025
+                                         Comments on achieving targets     Target Achieved - these are the people living on the banks of River Nzoia, both Northern and Southern who are
+                                                                           prone to effects of floods. - 2 Counties in the Nzoia Basin (Chevyawa & Shibale communities both in Kakamega
+                                                                           County and Nyandorera Community in Siaya County). Number of people targeted with increased flood protection
+      of which flood protection
+                                                                           is 66,700. This includes 20,658 direct beneficiaries, with the rest being residents of the 180 villages in the vicinity
+      beneficiaries (Number)
+                                                                           of the Lower Nzoia Flood Protection activities. This includes people located directly adjacent to the area to be
+                                                                           protected by the dykes as well as people in nearby communities that benefitted from protection to roads and other
+                                                                           community infrastructure. The 34 Kms long dykes were completed in 2023. This indicator has therefore been
+                                                                           achieved.
+                                             0.00            Oct/2013                                                   31,500.00          May/2025            34,320.00           May/2025
+                                         Comments on achieving targets     Target Achieved - an additional 207 farmers have been realized since the previous period. These farmers, from
+      of which people benefitting                                          blocks 1 and 2, have been trained to cultivate vegetables using furrow irrigation. The vegetables include kale,
+      from agricultural activities                                         black nightshade, tomato, and cowpea. Furthermore, the project, in collaboration with the cooperative
+      (extension, training and inputs)                                     departments in Busia and Siaya counties, has strengthened the capacity of the Lower Nzoia Rice and Horticulture
+      (Number)                                                             Farmers Savings and Credit Cooperative Society Limited, the Lower Nzoia Farmers’ Cooperative Society
+                                                                           Limited, and the Usonga Rice Producers Cooperative Society Limited. The areas of enhancement include the
+                                                                           operation and functioning of the management and supervisory committees.
+      of which Capacity building of          0.00            Oct/2013                                                    571.00            May/2025              571.00            May/2025
+      WRA and other sector               Comments on achieving targets     Target Achieved - in the previous reporting period; therefore, there is no change to the result.
+      institutions (Number)
+                                             0.00            Oct/2013                                             18,000.00          May/2025            18,000.00           May/2025
+      of which people benefiting
+                                         Comments on achieving targets   Target Achieved - a total of 3000 households in Mombasa that were connected to the water supply system after
+      from Mombasa water
+                                                                         the rehabilitation and expansion works undertaken under the project. According to the national census, Mombasa
+      distribution (Number)
+                                                                         has a household size of six members, implying that the connections have benefitted 18,000 individuals.
+Enhance the institutional framework and strengthen capacity for water security and c.resilience
+         Indicator Name                         Baseline                      Closing Period (Original)             Closing Period (Current)          Actual Achieved at Completion
+                                            Result          Month/Year          Result           Month/Year             Result         Month/Year              Result           Month/Year
+                                             0.00            Apr/2015                                                 66,700.00          May/2025            66,700.00           May/2025
+Number of people with increased          Comments on achieving targets     Target Achieved- in the previous reporting period. The result reflects the population residing within the 25,000
+flood protection (Number)                                                  hectares protected by the rehabilitated dykes.
+Water Resources Authority (WRA)             WRA not          Mar/2019                                              WRA established         May/2025        WRA established         Mar/2025
+Established and Operational (Text)         established                                                             and operational                         and operational
+
+
+
+
+                                                                                                                                                                                           Page 24
+
+
+
+                                                                                                                                                                                       Official Use Only
+             The World Bank
+             Kenya Water Security and Climate Resilience Project (P117635)                                                                                               ICR DOCUMENT
+
+
+                                       Comments on achieving targets         WRA has been fully established and is now operational. This includes its establishment under Section 11 of the
+                                                                             Water Act 2016. The authority is fully staffed with qualified personnel and possesses the necessary planning and
+                                                                             regulatory tools, including but not limited to a spatial knowledge base, decision-support systems, and a functional
+                                                                             water resource monitoring network. Additionally, it has a functional management board constituted in accordance
+                                                                             with the legal provisions of Kenya. The WRA also has an annual operational budget that is fully funded through a
+                                                                             combination of sources, including government transfers.
+                                       Water Act in draft        Oct/2013                                             Water Policy and      May/2025         Water Act and        Mar/2025
+                                      form with Ministry                                                               Bill adopted,                         Policy adopted
+Water Act, Sector Policy and                                                                                        regulations adopted.
+Regulations adopted (Text)             Comments on achieving targets         The water resources regulations and organization structure were reviewed in 2016 and passed by parliament (the
+                                                                             Water Act) and eventually approved by cabinet (in the case of policy and regulations).
+                                           0.00            Oct/2013                                                       100.00            May/2025              100.00             Mar/2025
+Percentage of institutions mandated    Comments on achieving targets         The objective of this indicator was to operationalize the water Act, targeting 13 national institutions. The
+by the Water Act that have been                                              institutions are: Water Services Regulatory Board (WASREB), WRA, Water Sector Trust Fund. Others are the
+established (Percentage)                                                     Water Works Development Agencies (WWDA), namely, Athi, Tana, Tanathi, Coast, Northern, L. Victoria North,
+                                                                             L. Victoria South., Central Rift Valley and North Rift Valley”. All of these have been established.
+
+
+Intermediate Indicators by Components
+
+C3: Support for Project Implementation
+           Indicator Name                            Baseline                    Closing Period (Original)               Closing Period (Current)           Actual Achieved at Completion
+                                            Result              Month/Year        Result          Month/Year             Result           Month/Year            Result           Month/Year
+                                             NA                  Oct/2013                                          Fully Operational       May/2025         M&E System            May/2025
+                                                                                                                                                             established
+
+Project M&E Established and            Comments on achieving targets         Target Achieved -The agriculture and water management MIS is developed and ready for adoption and scaling.
+Operational (Text)                                                           The system, which is domiciled at NIA and is customized for use by other irrigation/agriculture projects, has
+                                                                             faced some challenges that require purchase of more servers, firewall and training. This is contingent on
+                                                                             availability of resources. The M&E MIS/Module is domiciled at PMU and require annual license to host. It will
+                                                                             be handed over to MOWSI for adaption and use by other projects.
+C1: Water Resources Development
+           Indicator Name                            Baseline                    Closing Period (Original)               Closing Period (Current)           Actual Achieved at Completion
+                                            Result              Month/Year        Result          Month/Year             Result           Month/Year            Result           Month/Year
+                                             0.00                Apr/2015                                               3,000.00           May/2025            3,000.00           May/2025
+
+
+
+
+                                                                                                                                                                                          Page 25
+
+
+
+                                                                                                                                                                                     Official Use Only

@@ -1,0 +1,23 @@
+{
+ "rows": 10,
+ "os": 0,
+ "page": 1,
+ "total": 1,
+ "documents": {
+  "D40135874": {
+   "id": "40135874",
+   "docdt": "2026-10-20T04:00:00Z",
+   "disclosure_date": "2026-11-12T05:00:00Z",
+   "docty": "Project Appraisal Document",
+   "repnb": "PADMP00270",
+   "display_title": "Democratic Republic of Congo - Fourth Phase of the Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region Using the Multi-Phase Programmatic Approach",
+   "txturl": "https://documents.worldbank.org/curated/en/099102726092029744/text/BOSIB-2bab892a-c6f3-449f-bdd5-bae8f6f1bd18.txt",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099102726092029744/pdf/BOSIB-2bab892a-c6f3-449f-bdd5-bae8f6f1bd18.pdf",
+   "url": "http://documents.worldbank.org/curated/en/099102726092029744",
+   "projectid": "P512763",
+   "lang": "English",
+   "guid": "099102726092029744"
+  },
+  "facets": {}
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "rows": 3,
+ "os": 0,
+ "page": 1,
+ "total": 27,
+ "documents": {
+  "D40017824": {
+   "id": "40017824",
+   "docdt": "2025-05-30T04:00:00Z",
+   "disclosure_date": "2025-05-30T04:00:00Z",
+   "docty": "Implementation Status and Results Report",
+   "repnb": "ISR04454",
+   "display_title": "Disclosable Version of the ISR - Kenya Water Security and Climate Resilience Project - P117635 - Sequence No : 26",
+   "txturl": "https://documents.worldbank.org/curated/en/099053025092010768/text/P117635-8418b85e-041b-4111-b59c-6767f027d321.txt",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099053025092010768/pdf/P117635-8418b85e-041b-4111-b59c-6767f027d321.pdf",
+   "url": "http://documents.worldbank.org/curated/en/099053025092010768",
+   "projectid": "P117635",
+   "guid": "099053025092010768"
+  },
+  "facets": {}
+ }
+}

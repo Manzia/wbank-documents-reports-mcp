@@ -1,0 +1,664 @@
+{
+ "rows": 10,
+ "os": "0",
+ "page": "1",
+ "total": "1",
+ "projects": {
+  "P117635": {
+   "themev2_level1_exact": [
+    "Environment and Natural Resource Management",
+    "Urban and Rural Development",
+    "Finance"
+   ],
+   "themev2_level2_exact": [
+    "Water Resource Management",
+    "Climate change",
+    "Disaster Risk Management",
+    "Rural Development",
+    "Finance for Development"
+   ],
+   "themev2_level3_exact": [
+    "Water Institutions, Policies and Reform",
+    "Adaptation",
+    "Disaster Preparedness",
+    "Disaster Risk Reduction",
+    "Disaster Response and Recovery",
+    "Rural Infrastructure and service delivery",
+    "Disaster Risk Finance"
+   ],
+   "curr_project_cost": "146060000",
+   "curr_total_commitment": "131.26",
+   "curr_ibrd_commitment": "0",
+   "curr_ida_commitment": "111.32",
+   "id": "P117635",
+   "projectfinancialtype": [
+    "Grants",
+    "Other",
+    "Other",
+    "IDA"
+   ],
+   "regionname": "Eastern and Southern Africa",
+   "countryname": [
+    "Republic of Kenya"
+   ],
+   "countryname_exact": [
+    "Republic of Kenya"
+   ],
+   "prodline": "PE",
+   "lendinginstr": "Investment Project Financing",
+   "lendinginstrtype": "IN",
+   "supplementprojectflg": "N",
+   "projectstatusdisplay": "Active",
+   "project_name": "Kenya Water Security and Climate Resilience Project",
+   "project_name_exact": "Kenya Water Security and Climate Resilience Project",
+   "board_approval_month": "June",
+   "board_approval_year": "2013",
+   "totalamt": "155,000,000",
+   "borrower": "Republic of Kenya",
+   "impagency": "The National Land Commission, Ministry of Water, Sanitation and Irrigation",
+   "countrycode": [
+    "KE"
+   ],
+   "countryshortname": "Kenya",
+   "indextype": "extprojdetails",
+   "sector1": {
+    "Name": "Public Administration - Water, Sanitation and Waste Management",
+    "Percent": 40
+   },
+   "sector2": {
+    "Name": "Other Water Supply, Sanitation and Waste Management",
+    "Percent": 25
+   },
+   "sector3": {
+    "Name": "Irrigation and Drainage",
+    "Percent": 20
+   },
+   "sector4": {
+    "Name": "Water Supply",
+    "Percent": 10
+   },
+   "sector5": "Agricultural markets, commercialization and agri-business!$!5!$!YA",
+   "sector": [
+    {
+     "Name": "Agricultural markets, commercialization and agri-business",
+     "code": "YX"
+    },
+    {
+     "Name": "Water Supply",
+     "code": "WX"
+    },
+    {
+     "Name": "Irrigation and Drainage",
+     "code": "AX"
+    },
+    {
+     "Name": "Other Water Supply, Sanitation and Waste Management",
+     "code": "WX"
+    },
+    {
+     "Name": "Public Administration - Water, Sanitation and Waste Management",
+     "code": "WX"
+    }
+   ],
+   "mjsector": [
+    {
+     "Name": "Industry, Trade and Services",
+     "code": "YX"
+    },
+    {
+     "Name": "Water, Sanitation and Waste Management",
+     "code": "WX"
+    },
+    {
+     "Name": "Agriculture, Fishing and Forestry",
+     "code": "AX"
+    },
+    {
+     "Name": "Water, Sanitation and Waste Management",
+     "code": "WX"
+    },
+    {
+     "Name": "Water, Sanitation and Waste Management",
+     "code": "WX"
+    }
+   ],
+   "mjsectorcode": [
+    "YX",
+    "WX",
+    "AX",
+    "WX",
+    "WX"
+   ],
+   "theme1": "Rural services and infrastructure!$!20!$!78",
+   "theme2": "Natural disaster management!$!16!$!52",
+   "theme3": "Water resource management!$!64!$!85",
+   "theme": [
+    "Water resource management",
+    "Natural disaster management",
+    "Rural services and infrastructure"
+   ],
+   "financier1": "!$!IDA56740",
+   "financier2": "!$!IDA52680",
+   "totalcommamt": "174,940,000",
+   "projectfinancialtype_exact": [
+    "Grants",
+    "Other",
+    "Other",
+    "IDA"
+   ],
+   "project_name_srt": "Kenya Water Security and Climate Resilience Project",
+   "totalcommamt_srt": "174.94",
+   "lang": [
+    "French",
+    "Russian",
+    "Spanish",
+    "Arabic",
+    "Chinese",
+    "Portuguese",
+    "English"
+   ],
+   "lang_exact": [
+    "French",
+    "Russian",
+    "Spanish",
+    "Arabic",
+    "Chinese",
+    "Portuguese",
+    "English"
+   ],
+   "approvalfy": "2013",
+   "source": [
+    "IBRD"
+   ],
+   "prodline_exact": "PE",
+   "regionname_exact": "Eastern and Southern Africa",
+   "lendinginstr_exact": "Investment Project Financing",
+   "lendinginstrtype_exact": "IN",
+   "borrower_exact": "Republic of Kenya",
+   "supplementprojectflg_exact": "N",
+   "impagency_exact": "The National Land Commission, Ministry of Water, Sanitation and Irrigation",
+   "status_exact": "Active",
+   "sector_exact": [
+    "Agricultural markets, commercialization and agri-business",
+    "Water Supply",
+    "Irrigation and Drainage",
+    "Other Water Supply, Sanitation and Waste Management",
+    "Public Administration - Water, Sanitation and Waste Management"
+   ],
+   "mjsector_exact": [
+    "Industry, Trade and Services",
+    "Water, Sanitation and Waste Management",
+    "Agriculture, Fishing and Forestry",
+    "Water, Sanitation and Waste Management",
+    "Water, Sanitation and Waste Management"
+   ],
+   "mjsectorcode_exact": [
+    "YX",
+    "WX",
+    "AX",
+    "WX",
+    "WX"
+   ],
+   "theme_exact": [
+    "Water resource management",
+    "Natural disaster management",
+    "Rural services and infrastructure"
+   ],
+   "board_approval_month_exact": "June",
+   "board_approval_year_exact": "2013",
+   "countrycode_exact": [
+    "KE"
+   ],
+   "countryshortname_exact": "Kenya",
+   "mjtheme": [
+    "Environment and natural resources management",
+    "Social protection and risk management",
+    "Rural development"
+   ],
+   "sectorcode": [
+    "WF",
+    "WZ",
+    "AI",
+    "WC",
+    "YA"
+   ],
+   "sectorcode_exact": [
+    "WF",
+    "WZ",
+    "AI",
+    "WC",
+    "YA"
+   ],
+   "themecode": "78,52,85",
+   "themecode_exact": [
+    "78",
+    "52",
+    "85"
+   ],
+   "mjthemecode": "11,6,10",
+   "mjthemecode_exact": "11,6,10",
+   "goal1": "Corporate Advocacy Priorities!$!CAP",
+   "goal2": "Corporate Advocacy Priorities!$!CAP",
+   "goal3": "Global Public Goods Priorities|Millennium Development Goals!$!GPG|MDG",
+   "fiscalyear": "2013",
+   "fiscalyear_exact": 2013,
+   "project_gp_info": "<PROJECT_GP_MAPPING PROJECTID=\"P117635\"><GP_PRACTICE_DETAILS><GP_PRACTICE_CODE>WAT</GP_PRACTICE_CODE><GP_PRACTICE_NAME><![CDATA[Water]]",
+   "theme_namecodelist": [
+    "Environment and Natural Resource Management~80$Water Resource Management~85$Water Institutions, Policies and Reform~851",
+    "Environment and Natural Resource Management~80$Climate change~81$Adaptation~812",
+    "Urban and Rural Development~70$Disaster Risk Management~75$Disaster Preparedness~753",
+    "Urban and Rural Development~70$Disaster Risk Management~75$Disaster Risk Reduction~752",
+    "Urban and Rural Development~70$Disaster Risk Management~75$Disaster Response and Recovery~751",
+    "Urban and Rural Development~70$Rural Development~72$Rural Infrastructure and service delivery~723",
+    "Finance~30$Finance for Development~33$Disaster Risk Finance~331"
+   ],
+   "theme_level1data": [
+    "Environment and Natural Resource Management~80",
+    "Urban and Rural Development~70",
+    "Finance~30"
+   ],
+   "theme_namecodelist_exact": [
+    "Environment and Natural Resource Management~80$Water Resource Management~85$Water Institutions, Policies and Reform~851",
+    "Environment and Natural Resource Management~80$Climate change~81$Adaptation~812",
+    "Urban and Rural Development~70$Disaster Risk Management~75$Disaster Preparedness~753",
+    "Urban and Rural Development~70$Disaster Risk Management~75$Disaster Risk Reduction~752",
+    "Urban and Rural Development~70$Disaster Risk Management~75$Disaster Response and Recovery~751",
+    "Urban and Rural Development~70$Rural Development~72$Rural Infrastructure and service delivery~723",
+    "Finance~30$Finance for Development~33$Disaster Risk Finance~331"
+   ],
+   "theme_level1data_exact": [
+    "Environment and Natural Resource Management~80",
+    "Urban and Rural Development~70",
+    "Finance~30"
+   ],
+   "indicatormappingdata": "<Results><Indicators ProjectId=\"P117635\" FormId=\"FRM0846782\" SequenceNumber=\"32\" FromDate=\"2023-11-01T00:00:00\"/><Indicators ProjectId=\"P117635\" FormId=\"FRM0846781\" SequenceNumber=\"22\" FromDate=\"2023-11-01T00:00:00\"><ParentIndicator IndicatorID=\"IN01360837\" IndicatorName=\"Water Resources Authority (WRA) Established and Operational\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000004\" IndicatorUOMName=\"Text\" IndicatorType=\"PD\" IndicatorTypeName=\"PDO Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>BS</ValueType><ValueDate>20190322</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>WRA not established</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>PG</ValueType><ValueDate>20190430</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>Launch for WRA establishment is under preparation</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>PG</ValueType><ValueDate>20190430</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>Launch for WRA establishment is under preparation</VALUE><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>PG</ValueType><ValueDate>20200420</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2020</ValueFiscal><VALUE>WRA established and operational</VALUE><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>PG</ValueType><ValueDate>20201105</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>WRA established and operational</VALUE><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>PG</ValueType><ValueDate>20210429</ValueDate><ValueCalendar>2021</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>WRA established and operational</VALUE><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>PG</ValueType><ValueDate>20220519</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2022</ValueFiscal><VALUE>WRA established and operational</VALUE><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>PG</ValueType><ValueDate>20221003</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>WRA established and operational</VALUE><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>PG</ValueType><ValueDate>20230516</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>WRA established and operational</VALUE><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>PG</ValueType><ValueDate>20230831</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>WRA established and operational</VALUE><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360837</IndicatorID><ValueType>TG</ValueType><ValueDate>20231130</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>WRA established and operational</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction></ParentIndicator><ParentIndicator IndicatorID=\"IN01360838\" IndicatorName=\"Area provided with irrigation and drainage services (ha)\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000025\" IndicatorUOMName=\"Hectare(Ha)\" IndicatorType=\"PD\" IndicatorTypeName=\"PDO Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>BS</ValueType><ValueDate>20131001</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>0.00</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20131211</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20131211</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20131211</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20151019</ValueDate><ValueCalendar>2015</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20160613</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20161221</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2017</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20171222</ValueDate><ValueCalendar>2017</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20180504</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20180504</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG10</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20181016</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG11</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG12</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG13</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20200420</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2020</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG14</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20201105</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG15</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20210429</ValueDate><ValueCalendar>2021</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG16</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20220519</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2022</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG17</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20221002</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG18</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20230516</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG19</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>PG</ValueType><ValueDate>20230831</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>534.00</VALUE><SortOrder>PG20</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>TG</ValueType><ValueDate>20240430</ValueDate><ValueCalendar>2024</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>750.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>TG</ValueType><ValueDate>20240930</ValueDate><ValueCalendar>2024</ValueCalendar><ValueFiscal>2025</ValueFiscal><VALUE>2000.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>TG</ValueType><ValueDate>20240430</ValueDate><ValueCalendar>2024</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>800.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>TG</ValueType><ValueDate>20241031</ValueDate><ValueCalendar>2024</ValueCalendar><ValueFiscal>2025</ValueFiscal><VALUE>2000.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>2500.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>3905.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360838</IndicatorID><ValueType>TG</ValueType><ValueDate>20231130</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>1358.00</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction></ParentIndicator><ParentIndicator IndicatorID=\"IN01360839\" IndicatorName=\"Water Act, Sector Policy and Regulations adopted\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000004\" IndicatorUOMName=\"Text\" IndicatorType=\"PD\" IndicatorTypeName=\"PDO Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>BS</ValueType><ValueDate>20131001</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>Water Act in draft form with Ministry</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE/><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20131211</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE/><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20140905</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE/><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20140905</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE/><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20151019</ValueDate><ValueCalendar>2015</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE/><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20160613</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE/><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20161221</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2017</ValueFiscal><VALUE/><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20171222</ValueDate><ValueCalendar>2017</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE/><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20180504</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE/><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20180504</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE/><SortOrder>PG10</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20181016</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>5th Draft National Water Policy prepared. Stakeholder consultations still ongoing</VALUE><SortOrder>PG11</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>8th Draft National Water Policy prepared and under Cabinet review.</VALUE><SortOrder>PG12</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>8th Draft National Water Policy prepared and under Cabinet review.</VALUE><SortOrder>PG13</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20200420</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2020</ValueFiscal><VALUE>The Water Act was adopted and passed in 2016. Water policy under cabinet review.  A sector transition plan has been finalized asrequired under the Water Act 2016. Key sector institutions have been established as per the Water Act 2016 and are operational.</VALUE><SortOrder>PG14</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20201105</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>The Water Act was adopted and passed in 2016. Water policy under cabinet review.  A sector transition plan has been finalized asrequired under the Water Act 2016. Key sector institutions have been established as per the Water Act 2016 and are operational.</VALUE><SortOrder>PG15</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20210429</ValueDate><ValueCalendar>2021</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>The indicator has been achieved. Water Act was adopted and passed in 2016. MoWSI prepared variousnew regulations to implement theWater Act 2016. These include new water resources regulations toregulate the management, use, and development of water resources,water services regulations to regulate the provision of water and sanitation services, and water harvesting and storage regulationsto regulate water harvesting and storage. MoWSI has also prepared a new water policy through wide-ranging consultations (includingwith County governments). Cabinet approved both the regulations and the policy on February 25, 2021. Both instruments are nowbefore parliament for final endorsement before they are published/gazetted. </VALUE><SortOrder>PG16</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20220519</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2022</ValueFiscal><VALUE>The indicator has been achieved. Water Act was adopted and passed in 2016. MoWSI prepared variousnew regulations to implement theWater Act 2016. These include new water resources regulations toregulate the management, use, and development of water resources,water services regulations to regulate the provision of water and sanitation services, and water harvesting and storage regulationsto regulate water harvesting and storage. MoWSI has also prepared a new water policy through wide-ranging consultations (includingwith County governments). Cabinet approved both the regulations and the policy on February 25, 2021. Both instruments are nowbefore parliament for final endorsement before they are published/gazetted. </VALUE><SortOrder>PG17</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20221003</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>Water Act and Policy adopted</VALUE><SortOrder>PG18</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20230516</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>Water Act and Policy adopted</VALUE><SortOrder>PG19</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>PG</ValueType><ValueDate>20230831</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>Water Act and Policy adopted</VALUE><SortOrder>PG20</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Water Act in draft form with ministry</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Water Act submitted to Cabinet</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Water Act submitted to Parliament and Senate</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Water Act Adopted</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Water Policy submitted to Cabinet</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Transition Plan Adopted for Implementation</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Water Policy submitted to Parliament and Senate</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Water Policy Adopted</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Water Policy Adopted</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360839</IndicatorID><ValueType>TG</ValueType><ValueDate>20231130</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>Water Policy and Bill adopted, regulations adopted.</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction></ParentIndicator><ParentIndicator IndicatorID=\"IN01360841\" IndicatorName=\"Farmers gaining access to new/improved irrigation and drainage services\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000002\" IndicatorUOMName=\"Number\" IndicatorType=\"PD\" IndicatorTypeName=\"PDO Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>BS</ValueType><ValueDate>20131001</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>0.00</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>PG</ValueType><ValueDate>20210429</ValueDate><ValueCalendar>2021</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>PG</ValueType><ValueDate>20220519</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2022</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>PG</ValueType><ValueDate>20221003</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>PG</ValueType><ValueDate>20230516</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>0.00</VALUE><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>PG</ValueType><ValueDate>20230831</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>600.00</VALUE><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360841</IndicatorID><ValueType>TG</ValueType><ValueDate>20231130</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>3208.00</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction><ChildIndicator IndicatorID=\"IN01360854\" IndicatorName=\"of which female\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000003\" IndicatorUOMName=\"Percentage\" IndicatorType=\"PD\" IndicatorTypeName=\"PDO Indicator\" IndicatorSubType=\"Supplemental\" IndicatorLevel=\"02\" IndicatorParentID=\"IN01360841\" BaselineExists=\"\" ProjectLevel=\"\"><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>BS</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360854</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>35.00</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ChildTransaction></ChildIndicator></ParentIndicator><ParentIndicator IndicatorID=\"IN01360825\" IndicatorName=\"Lower Nzoia Irrigation Water User Association (IWUA) established and operational\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000014\" IndicatorUOMName=\"Yes/No\" IndicatorType=\"IO\" IndicatorTypeName=\"Intermediate Results Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>BS</ValueType><ValueDate>20130724</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>No</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE/><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20171222</ValueDate><ValueCalendar>2017</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE/><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20180504</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE/><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20180504</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE/><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20181016</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE/><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE/><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE/><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20200420</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2020</ValueFiscal><VALUE/><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20201105</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE/><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20210429</ValueDate><ValueCalendar>2021</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>No</VALUE><SortOrder>PG10</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20220519</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2022</ValueFiscal><VALUE>Yes</VALUE><SortOrder>PG11</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20220519</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2022</ValueFiscal><VALUE>Yes</VALUE><SortOrder>PG12</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20220519</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2022</ValueFiscal><VALUE>Yes</VALUE><SortOrder>PG13</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>PG</ValueType><ValueDate>20230831</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>Yes</VALUE><SortOrder>PG14</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE/><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Yes</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Yes</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360825</IndicatorID><ValueType>TG</ValueType><ValueDate>20231130</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>Yes</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction></ParentIndicator><ParentIndicator IndicatorID=\"IN01360836\" IndicatorName=\"Project M&amp;E Established and Operational\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000004\" IndicatorUOMName=\"Text\" IndicatorType=\"IO\" IndicatorTypeName=\"Intermediate Results Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>BS</ValueType><ValueDate>20131001</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>NA</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE/><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20131211</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE/><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20140905</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE/><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20140905</ValueDate><ValueCalendar>2014</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE/><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20151019</ValueDate><ValueCalendar>2015</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE/><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20160613</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2016</ValueFiscal><VALUE/><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20161221</ValueDate><ValueCalendar>2016</ValueCalendar><ValueFiscal>2017</ValueFiscal><VALUE/><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20171222</ValueDate><ValueCalendar>2017</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE/><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20180504</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE/><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20180504</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2018</ValueFiscal><VALUE/><SortOrder>PG10</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20181016</ValueDate><ValueCalendar>2018</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>M&amp;E System partially established</VALUE><SortOrder>PG11</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>M&amp;E System partially established</VALUE><SortOrder>PG12</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>M&amp;E System partially established</VALUE><SortOrder>PG13</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20200420</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2020</ValueFiscal><VALUE>M&amp;E System partially established</VALUE><SortOrder>PG14</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20201105</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>M&amp;E System partially established</VALUE><SortOrder>PG15</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20210429</ValueDate><ValueCalendar>2021</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>M&amp;E System partially established</VALUE><SortOrder>PG16</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20220519</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2022</ValueFiscal><VALUE>M&amp;E System partially established</VALUE><SortOrder>PG17</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20221003</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>M&amp;E System partially established</VALUE><SortOrder>PG18</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20221003</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>M&amp;E System partially established</VALUE><SortOrder>PG19</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>PG</ValueType><ValueDate>20230831</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>M&amp;E System partially established</VALUE><SortOrder>PG20</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Not Established</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Not Established</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>Not Established</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>M&amp;E system partially established</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>M&amp;E system operational</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>M&amp;E system fully operational</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>M&amp;E system fully operational</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>M&amp;E system fully operational</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>M&amp;E system fully operational</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360836</IndicatorID><ValueType>TG</ValueType><ValueDate>20231130</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>Fully Operational</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction></ParentIndicator><ParentIndicator IndicatorID=\"IN01360840\" IndicatorName=\"Number of farmers trained in improved agriculture practices (including irrigated agriculture)\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000002\" IndicatorUOMName=\"Number\" IndicatorType=\"IO\" IndicatorTypeName=\"Intermediate Results Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>BS</ValueType><ValueDate>20131001</ValueDate><ValueCalendar>2013</ValueCalendar><ValueFiscal>2014</ValueFiscal><VALUE>0.00</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>1250.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>1250.00</VALUE><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>PG</ValueType><ValueDate>20200420</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2020</ValueFiscal><VALUE>2700.00</VALUE><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>PG</ValueType><ValueDate>20201105</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>2700.00</VALUE><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>PG</ValueType><ValueDate>20210429</ValueDate><ValueCalendar>2021</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>2478.00</VALUE><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>PG</ValueType><ValueDate>20220519</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2022</ValueFiscal><VALUE>9344.00</VALUE><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>PG</ValueType><ValueDate>20221003</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>9764.00</VALUE><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>PG</ValueType><ValueDate>20221003</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>9764.00</VALUE><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>PG</ValueType><ValueDate>20230831</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>11410.00</VALUE><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>200.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>400.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>600.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>800.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>2000.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>2500.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>3000.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>3500.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>4000.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360840</IndicatorID><ValueType>TG</ValueType><ValueDate>20231130</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>12600.00</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction><ChildIndicator IndicatorID=\"IN01360855\" IndicatorName=\"of which female\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000003\" IndicatorUOMName=\"Percentage\" IndicatorType=\"IO\" IndicatorTypeName=\"Intermediate Results Indicator\" IndicatorSubType=\"Supplemental\" IndicatorLevel=\"02\" IndicatorParentID=\"IN01360840\" BaselineExists=\"\" ProjectLevel=\"\"><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>BS</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>PG</ValueType><ValueDate/><ValueCalendar/><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ChildTransaction><ChildTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360855</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>40.00</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ChildTransaction></ChildIndicator></ParentIndicator><ParentIndicator IndicatorID=\"IN01360843\" IndicatorName=\"Number of household water connections (new or rehabilitated) in Mombasa supported under the project\" IndicatorDescription=\"\" IndicatorUOM=\"UOM0000002\" IndicatorUOMName=\"Number\" IndicatorType=\"IO\" IndicatorTypeName=\"Intermediate Results Indicator\" IndicatorSubType=\"\" IndicatorLevel=\"01\" IndicatorParentID=\"\" BaselineExists=\"\" ProjectLevel=\"\"><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>BS</ValueType><ValueDate>20150406</ValueDate><ValueCalendar>2015</ValueCalendar><ValueFiscal>2015</ValueFiscal><VALUE>0.00</VALUE><SortOrder>BS1</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>1475.00</VALUE><SortOrder>PG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>PG</ValueType><ValueDate>20190501</ValueDate><ValueCalendar>2019</ValueCalendar><ValueFiscal>2019</ValueFiscal><VALUE>1475.00</VALUE><SortOrder>PG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>PG</ValueType><ValueDate>20200420</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2020</ValueFiscal><VALUE>47.00</VALUE><SortOrder>PG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>PG</ValueType><ValueDate>20201105</ValueDate><ValueCalendar>2020</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>4102.00</VALUE><SortOrder>PG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>PG</ValueType><ValueDate>20210429</ValueDate><ValueCalendar>2021</ValueCalendar><ValueFiscal>2021</ValueFiscal><VALUE>3700.00</VALUE><SortOrder>PG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>PG</ValueType><ValueDate>20220519</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2022</ValueFiscal><VALUE>3000.00</VALUE><SortOrder>PG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>PG</ValueType><ValueDate>20221003</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>3000.00</VALUE><SortOrder>PG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>PG</ValueType><ValueDate>20221003</ValueDate><ValueCalendar>2022</ValueCalendar><ValueFiscal>2023</ValueFiscal><VALUE>3000.00</VALUE><SortOrder>PG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>PG</ValueType><ValueDate>20230831</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>3000.00</VALUE><SortOrder>PG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG01</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG02</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>0.00</VALUE><SortOrder>TG03</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>1475.00</VALUE><SortOrder>TG04</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>3000.00</VALUE><SortOrder>TG05</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>3000.00</VALUE><SortOrder>TG06</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>3000.00</VALUE><SortOrder>TG07</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>3000.00</VALUE><SortOrder>TG08</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>TG</ValueType><ValueDate/><ValueCalendar>0</ValueCalendar><ValueFiscal/><VALUE>3000.00</VALUE><SortOrder>TG09</SortOrder><ValueComments/></ParentTransaction><ParentTransaction><ProjectId>P117635</ProjectId><IndicatorID>IN01360843</IndicatorID><ValueType>TG</ValueType><ValueDate>20231130</ValueDate><ValueCalendar>2023</ValueCalendar><ValueFiscal>2024</ValueFiscal><VALUE>3000.00</VALUE><SortOrder>TG10</SortOrder><ValueComments/></ParentTransaction></ParentIndicator></Indicators><Indicators ProjectId=\"P117635\" FormId=\"FRM0109480\" SequenceNumber=\"4\" FromDate=\"2014-09-17T00:00:00\"/></Results>",
+   "boardapprovaldate": "2013-06-18T00:00:00Z",
+   "closingdate": "5/31/2025 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P117635",
+   "proj_and_ln_country": [
+    "KE"
+   ],
+   "proj_and_ln_country_exact": [
+    "KE"
+   ],
+   "ln_country_id": [
+    "KE"
+   ],
+   "ln_country_id_exact": [
+    "KE"
+   ],
+   "ln_country_id_desc": [
+    "Kenya"
+   ],
+   "ln_country_id_desc_exact": [
+    "Kenya"
+   ],
+   "countryid": [
+    "KE"
+   ],
+   "countryid_exact": [
+    "KE"
+   ],
+   "countryiddesc": [
+    "Kenya"
+   ],
+   "countryiddesc_exact": [
+    "Kenya"
+   ],
+   "sector_namecode": [
+    {
+     "name": "Agricultural markets, commercialization and agri-business",
+     "code": "YA"
+    },
+    {
+     "name": "Water Supply",
+     "code": "WC"
+    },
+    {
+     "name": "Irrigation and Drainage",
+     "code": "AI"
+    },
+    {
+     "name": "Other Water Supply, Sanitation and Waste Management",
+     "code": "WZ"
+    },
+    {
+     "name": "Public Administration - Water, Sanitation and Waste Management",
+     "code": "WF"
+    }
+   ],
+   "mjsector_namecode": [
+    {
+     "name": "Industry, Trade and Services",
+     "code": "YX"
+    },
+    {
+     "name": "Water, Sanitation and Waste Management",
+     "code": "WX"
+    },
+    {
+     "name": "Agriculture, Fishing and Forestry",
+     "code": "AX"
+    },
+    {
+     "name": "Water, Sanitation and Waste Management",
+     "code": "WX"
+    },
+    {
+     "name": "Water, Sanitation and Waste Management",
+     "code": "WX"
+    }
+   ],
+   "mjtheme_namecode": [
+    {
+     "name": "Environment and natural resources management",
+     "code": "11"
+    },
+    {
+     "name": "Social protection and risk management",
+     "code": "6"
+    },
+    {
+     "name": "Rural development",
+     "code": "10"
+    }
+   ],
+   "country_namecode": "146060000!$!KE",
+   "envassesmentcategorycode": "A",
+   "prodlinetext": "IBRD/IDA",
+   "grantamt": "19,940,000",
+   "idacommamt": "155,000,000",
+   "ibrdcommamt": "0",
+   "lendprojectcost": "182,670,000",
+   "status": "Active",
+   "productlinetype": "L",
+   "project_abstract": {
+    "cdata!": "The development objectives of the Water Security and Climate Resilience Project for Kenya are to (i) increase availability and productivity of irrigation water for project beneficiaries; and (ii) enhance the institutional framework and strengthen capacity for water security and climate resilience for the country. The project has three components. The first component is water resources development. This component will support climate resilience and water security for economic growth by financing water investments and by progressively building a longer-term investment pipeline. This component has following two sub-components: water sector investments; and water investment pipeline. The second component is effective water sector institutions. It will support the current sector institutions, as well as the preparation, implementation and full functioning of the new; legal and institutional framework resulting from alignments with the Constitution of Kenya 2010. It will also support integrated and participatory basin planning, including developing the requisite knowledge base and building capacity and institutional partnerships for effective water management and planning. The overall objective of this component will be to strengthen the enabling institutional and legal framework to sustainably advance Kenya's vast water sector investment program in order to achieve water security and climate resilience. It has following two sub-components: (i) support for water sector transition and reforms and (ii) strengthening water management and planning. The third component is support for project implementation. This component will support the establishment of the Project Management Unit (PMU) to provide for effective project implementation through the completion of the First Kenya Water Security and Climate Resilience Project (KWSCRP-1) and throughout the reform period. This component will finance the required office space, goods (e.g., vehicles), equipment (e.g., computers), staff, consultant services, travel, training and operating costs that will allow the PMU to carry out its responsibilities for project implementation."
+   },
+   "listing_relative_url": "/kenya-enhancing-water-security-climate-resilience",
+   "theme_namecode": [
+    {
+     "name": "Water resource management",
+     "code": "85"
+    },
+    {
+     "name": "Natural disaster management",
+     "code": "52"
+    },
+    {
+     "name": "Rural services and infrastructure",
+     "code": "78"
+    }
+   ],
+   "sectordata": "YA$Agricultural markets, commercialization and agri-business$5,WZ$Other Water Supply, Sanitation and Waste Management$25,WF$Public Administration - Water, Sanitation and Waste Management$40,WC$Water Supply$10,AI$Irrigation and Drainage$20",
+   "themedata": "000851$Water Institutions, Policies and Reform$64$000080$Environment and Natural Resource Management$000085$Water Resource Management,000812$Adaptation$100$000080$Environment and Natural Resource Management$000081$Climate change,000753$Disaster Preparedness$4$000070$Urban and Rural Development$000075$Disaster Risk Management,000752$Disaster Risk Reduction$4$000070$Urban and Rural Development$000075$Disaster Risk Management,000751$Disaster Response and Recovery$4$000070$Urban and Rural Development$000075$Disaster Risk Management,000723$Rural Infrastructure and service delivery$20$000070$Urban and Rural Development$000072$Rural Development,000331$Disaster Risk Finance$4$000030$Finance$000033$Finance for Development,000085$Water Resource Management$64$000080$Environment and Natural Resource Management$NA$NA,000081$Climate change$100$000080$Environment and Natural Resource Management$NA$NA,000075$Disaster Risk Management$12$000070$Urban and Rural Development$NA$NA,000072$Rural Development$20$000070$Urban and Rural Development$NA$NA,000033$Finance for Development$4$000030$Finance$NA$NA",
+   "fincr_id": [
+    "KTF",
+    "BORR",
+    "KFW",
+    "IDA"
+   ],
+   "fincr_curr_id": [
+    "USD",
+    "USD",
+    "USD",
+    "USD"
+   ],
+   "themecodev2": "000851,000085,000812,000081,000080,000753,000752,000751,000075,000723,000072,000070,000331,000033,000030",
+   "cmt_usd_amt_mil": "155.00",
+   "fingapcurr": ".00",
+   "principal2": "155000000",
+   "principal1": "58000000",
+   "ibrd_ida_commits_mil": "155.00",
+   "access_level": "EXTERNAL",
+   "ida_cmt_usd_amt_mil": "155.00",
+   "ibrd_ida_commits": "155000000.00",
+   "ida_cmt_usd_amt": "155000000.00",
+   "financier_namecode": "!$!IDA56740,!$!IDA52680",
+   "cancellations": [
+    "14990328.82",
+    "0"
+   ],
+   "recent_close_date2": "12/31/2022 12:00:00 AM",
+   "mjthemelist": {
+    "Name": "MJTHEME1",
+    "Percent": 0
+   },
+   "borrowername": "THE NATIONAL TREASURY",
+   "pidrecdbwind": "Y",
+   "sectorlist": {
+    "Name": "SECTOR1",
+    "Percent": 0
+   },
+   "catname": "Overall Risk",
+   "lendinginstrcode": "IPF",
+   "issuecode": "ISS0800114",
+   "overall_prevrating": [
+    "High"
+   ],
+   "projectid": "P117635",
+   "grant_usd_amt_mil": "0.00",
+   "fincr_curr_amt": [
+    "3,500,000.00",
+    "14,800,000.00",
+    "16,440,000.00",
+    "111,320,000.00"
+   ],
+   "projectcost": [
+    "182670000.00"
+   ],
+   "finamtcurr": "182,670,000.00",
+   "mttheme3name": "Environmental commons|Ensure environmental sustainability",
+   "statusdate": "11/4/2023 12:00:00 AM",
+   "performance_prevrating": [
+    "Satisfactory",
+    "Moderately Satisfactory"
+   ],
+   "overall_templatename": [
+    "Overall Implementation Risk 1"
+   ],
+   "ibrd_cmt_usd_amt": "0.00",
+   "performance_templatename": {
+    "cdata!": "Overall Implementation Progress (IP),Progress towards achievement of PDO"
+   },
+   "rel_loan_ids": [
+    "IDA52680, IDA56740, IDAQ7950, TFA0761"
+   ],
+   "categorycode": "CAT0000791",
+   "lendinginstrumenttypename": "Investment",
+   "mttheme1name": "N/A",
+   "undisbursed1": "54907074.96",
+   "undisbursed2": "91086812.78",
+   "overall_currentrating": [
+    "High"
+   ],
+   "implementingname": "MINISTRY OF ENVIRONMENT, WATER AND NATURAL RESOURCES",
+   "mainloan": "74230",
+   "proj_last_upd_date": "2024-05-22T00:00:00Z",
+   "projcostcurr": "182,670,000.00",
+   "mequality": [
+    "NIL"
+   ],
+   "productlinetypename": "LENDING PRODUCT",
+   "fincrname": [
+    "Korea Trust Fund",
+    "Borrower/Recipient",
+    "Germany: Kreditanstalt Fur Wiederaufbau (Kfw)",
+    "Ida Credit"
+   ],
+   "evaluation_riskdo": [
+    "NIL"
+   ],
+   "completion_riskdo": [
+    "NIL"
+   ],
+   "laststatusdate": "7/19/2023 12:00:00 AM",
+   "countryhomepageurl": "http://www.worldbank.org/en/country/kenya",
+   "code": [
+    "ISS1726821",
+    "ISS1726820"
+   ],
+   "approval_date1": "6/26/2015 12:00:00 AM",
+   "ibrd_cmt_usd_amt_mil": "0.00",
+   "overall_templatecode": [
+    "ISS0009071"
+   ],
+   "performance_templatecode": [
+    "ISS0008918",
+    "ISS0008916"
+   ],
+   "performance_currrating": [
+    "Satisfactory",
+    "Moderately Satisfactory"
+   ],
+   "performance_comments": [
+    "NIL",
+    "NIL"
+   ],
+   "grant_usd_amt": "0.00",
+   "lang_code": "FRE,RUS,SPA,ARA,CHI,POR,ENG",
+   "overall_comments": [
+    "High risk was selected considering (i) weak institutional and coordination capacity for water resources development and (ii)required rigorous preparatory works including the ESIA for possibly high risk high reward investment schemes."
+   ],
+   "fincr_usd_amt": [
+    "3,500,000.00",
+    "14,800,000.00",
+    "16,440,000.00",
+    "111,320,000.00"
+   ],
+   "mttheme1": "-1",
+   "prodcode": "PE",
+   "themelist": {
+    "Name": "THEME1",
+    "Percent": 0
+   },
+   "cmt_usd_amt": "155000000.00",
+   "pdo": "(a) increase access to irrigation water for project beneficiaries and (b) enhance the institutional framework and strengthen capacity for water security and climate resilience in certain areas of the territory of the Recipient.",
+   "mttheme2": "9",
+   "disbursed1": "2730511.64",
+   "region_code": "8",
+   "mttheme2name": "Empowerment, security & social inclusion",
+   "mttheme3": "15|7",
+   "disbursed2": "39923488.45",
+   "approval_date2": "6/18/2013 12:00:00 AM",
+   "recent_close_date1": "12/31/2022 12:00:00 AM",
+   "goal": [
+    "Global Public Goods Priorities|Millennium Development Goals",
+    "Corporate Advocacy Priorities",
+    "Corporate Advocacy Priorities"
+   ],
+   "last_stage_reached_name": "Bank Approved",
+   "projectdocs": [],
+   "locations": [],
+   "theme_list": [
+    {
+     "name": "Environment and Natural Resource Management",
+     "code": "80",
+     "seqno": "11",
+     "percent": "164",
+     "theme2": [
+      {
+       "name": "Water Resource Management",
+       "code": "85",
+       "seqno": "14",
+       "percent": "64",
+       "theme3": [
+        {
+         "name": "Water Institutions, Policies and Reform",
+         "code": "851",
+         "seqno": "15",
+         "percent": "64"
+        }
+       ]
+      },
+      {
+       "name": "Climate change",
+       "code": "81",
+       "seqno": "12",
+       "percent": "100",
+       "theme3": [
+        {
+         "name": "Adaptation",
+         "code": "812",
+         "seqno": "13",
+         "percent": "100"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Urban and Rural Development",
+     "code": "70",
+     "seqno": "4",
+     "percent": "32",
+     "theme2": [
+      {
+       "name": "Disaster Risk Management",
+       "code": "75",
+       "seqno": "7",
+       "percent": "12",
+       "theme3": [
+        {
+         "name": "Disaster Preparedness",
+         "code": "753",
+         "seqno": "10",
+         "percent": "4"
+        },
+        {
+         "name": "Disaster Risk Reduction",
+         "code": "752",
+         "seqno": "9",
+         "percent": "4"
+        },
+        {
+         "name": "Disaster Response and Recovery",
+         "code": "751",
+         "seqno": "8",
+         "percent": "4"
+        }
+       ]
+      },
+      {
+       "name": "Rural Development",
+       "code": "72",
+       "seqno": "5",
+       "percent": "20",
+       "theme3": [
+        {
+         "name": "Rural Infrastructure and service delivery",
+         "code": "723",
+         "seqno": "6",
+         "percent": "20"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Finance",
+     "code": "30",
+     "seqno": "1",
+     "percent": "4",
+     "theme2": [
+      {
+       "name": "Finance for Development",
+       "code": "33",
+       "seqno": "2",
+       "percent": "4",
+       "theme3": [
+        {
+         "name": "Disaster Risk Finance",
+         "code": "331",
+         "seqno": "3",
+         "percent": "4"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "facets": {}
+}

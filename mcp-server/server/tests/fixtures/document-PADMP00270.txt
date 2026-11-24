@@ -1,0 +1,1071 @@
+FOR OFFICIAL USE ONLY
+Report No:PADMP00270
+US$250 MILLION
+TO THE
+DEMOCRATIC REPUBLIC OF CONGO
+FOR A
+SCALING UP WATER SUPPLY AND SANITATION ACCESS IN KINSHASA PROJECT
+AS PHASE IV OF THE ACCELERATING ACCESS TO WATER, SANITATION AND HYGIENE IN THE EASTERN AND
+SOUTHERN AFRICA REGION USING THE MULTI-PHASE PROGRAMMATIC APPROACH
+WITH AN OVERALL FINANCING ENVELOPE OF US$1,580 MILLION EQUIVALENT
+APPROVED BY THE BOARD ON SEPTEMBER 30, 2025
+October 20, 2026
+Water Global Practice
+Eastern and Southern Africa Region
+This document has a restricted distribution and may be used by recipients only in the performance of their official duties. Its contents may not otherwise be disclosed without World Bank authorization.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+CURRENCY EQUIVALENTS
+(Exchange Rate Effective—September 30, 2026})
+Currency Unit =
+CONGOLESE
+FRANC (CDF)
+CDF 2,300 = US$1
+US$ = CDF 1
+FISCAL YEAR
+January 1 - December 31
+Regional Vice President: Ndiame Diop
+Regional Practice Director: Anna Wellenstein
+Division Director: Albert G. Zeufack
+Practice Manager: Josses Mugabi
+Task Team Leaders:
+Feriha Mukuve Mugisha,
+Patrick Goy Ndolo
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+ABBREVIATIONS AND ACRONYMS
+AFD Agence Française de Développement (French Development Agency)
+AFE Eastern and Southern Africa Region
+AfDB African Development Bank
+AGREE Access, Governance, and Reform for Electricity and Water Sector Project
+ARSPE Autorité de Régulation du Service Public de l’Eau (Regulatory Authority for Water Service)
+AUDA-
+NEPAD
+African Union Development Agency – New Partnership for Africa’s Development
+BADEA Arab Bank for Economic Development in Africa
+BSPE Brigade Spéciale pour la Protection de l'Environnement (Special Brigade for the Protection of the
+Environment, City of Kinshasa)
+CBA Cost-Benefit Analysis
+CCDR Country Climate and Development Report
+CDF Congolese Franc
+CDP Cassa Depositi e Prestiti (Deposit and Loan Fund of the Italian Government)
+CDUK Cellule de Développement Urbain de Kinshasa (Urban Development Unit within the city of Kinshasa)
+CEP-O Cellule d’Exécution des Projets – Eau (Water Project Implementation Unit within MRHE)
+CPF Country Partnership Framework
+CRI Corporate Results Indicator
+CWIS Citywide Inclusive Sanitation
+DAS Direction de l’Assainissement (Sanitation Department within MEDDNEC)
+DRC Democratic Republic of the Congo
+EIRR Economic Internal Rate of Return
+ENPV Economic Net Present Value
+ESCP Environmental and Social Commitment Plan
+ESF Environmental and Social Framework
+ESIA Environmental and Social Impact Assessment
+ESMP Environmental and Social Management Plan
+ESS Environmental and Social Standard
+FCV Fragility, Conflict and Violence
+FM Financial Management
+FONAK Fonds d’Assainissement de Kinshasa (Sanitation Fund or Kinshasa)
+FSM Fecal Sludge Management
+FSTP Fecal Sludge Treatment Plant
+GBV Gender-Based Violence
+GDP Gross Domestic Product
+GHG Greenhouse Gas
+GIS Geographical Information System
+GRM Grievance Redress Mechanism
+GRS Grievance Redress Service
+HR Human Resources
+IBRD International Bank for Reconstruction and Development
+IDA International Development Association
+IFC International Finance Corporation
+IFR Interim Financial Report
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+IPF Investment Project Financing
+JMP WHO/UNICEF Joint Monitoring Programme
+KINELENDA Kinshasa Multisector Development and Urban Resilience Project
+KfW Kreditanstalt für Wiederaufbau (German Development Bank)
+MBJ More and Better Jobs
+M&E Monitoring and Evaluation
+MEDDNEC Ministère de l'Environnement, Développement Durable et Nouvelle Économie du Climat (Ministry of
+Environment and Sustainable Development and New Climate Economy)
+MFD Maximizing Finance for Development
+MIGA Multilateral Investment Guarantee Agency
+MPA Multiphase Programmatic Approach
+MRHE Ministère des Ressources Hydrauliques et de l’Electricité (Ministry of Water Resources and Electricity)
+NDC Nationally Determined Contribution
+NRW Non-Revenue Water
+OFID OPEC Fund for International Development
+O&M Operation and Maintenance
+OP Operational Policy
+PASEA Water Supply and Sanitation Access Program
+PCM Private Capital Mobilization
+PIU Project Implementation Unit
+PIM Project Implementation Manual
+PIP Performance Improvement Plan
+PNEHA Programme National d’Eau, Hygiène et Assainissement
+PPP Public-Private Partnership
+PPSD Project Procurement Strategy for Development
+PrDO Program Development Objective
+PSC Project Steering Committee
+RAP Resettlement Action Plan
+RASKIN Régie d’Assainissement de Kinshasa (Sanitation Department of Kinshasa)
+REGEDEK Régie de Gestion des Déchets de Kinshasa (under the City of Kinshasa)
+REGIDESO Régie de Distribution d’Eau (National Water Supply Utility)
+SCADA Supervisory Control and Data Acquisition
+SEA/SH Sexual Exploitation and Abuse / Sexual Harassment
+SEP Stakeholder Engagement Plan
+SPC Shadow Price of Carbon
+SPV Special Purpose Vehicle for the PPP
+TA Technical Assistance
+UC-PPP Unité de Conseil et de Coordination des Partenariats Public-Privé (Coordination and Advisory Unit on
+PPPs within the Ministry of Planning)
+UNICEF United Nations Children's Fund
+VGF Viability Gap Funding
+VPK Ville-Province de Kinshasa (City-Province of Kinshasa)
+WASH Water, Sanitation and Hygiene
+WBG World Bank Group
+WHO World Health Organization
+WSIP Water Strategy Implementation Plan
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+WSS Water Supply and Sanitation
+WTP Water Treatment Plant
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+TABLE OF CONTENTS
+MPA PROGRAM DATASHEET .....................................................................................................................i
+I. MPA PROGRAM STRATEGIC CONTEXT .................................................................................................1
+II. MPA PROGRAM DESCRIPTION.............................................................................................................1
+A. Program Development Objective and Indicators..............................................................................................1
+B. Program Theory of Change.................................................................................................................................2
+C. Program Beneficiaries ........................................................................................................................................2
+D. Program Description ..........................................................................................................................................2
+E. Program Framework...........................................................................................................................................3
+F. Learning Agenda .................................................................................................................................................4
+G. Program Implementation..................................................................................................................................4
+H. Overall Program Risk..........................................................................................................................................4
+III. MPA OPERATIONS..............................................................................................................................8
+OPERATION 1: DRC: Scaling Up Water Supply and Sanitation Access in Kinshasa Project (P513301)..........8
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4 i
+@#&OPS~Doctype~OPS^dynamics@consolidatedpadmpasimplified#doctemplate
+MPA PROGRAM DATASHEET
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region ( P512763 )
+Expected Approval Date: 30-Sep-2025 Expected Completion Date: 06-Sep-2033
+Practice Area (Lead): () Contributing Practice Area/s:
+MPA Program Development Objective
+The PrDO for the MPA is to increase access to climate-resilient drinking water supply, sanitation and hygiene services in participating countries in the Eastern and Southern Africa (AFE) Region
+MPA Financing (US$ millions)
+Total MPA Financing 5,970.30
+MPA Financing Envelope: Total 2,055.00
+International Bank for Reconstruction and Development (IBRD) 825.88
+International Development Association (IDA) 1,229.12
+Other MPA Financing: Total 3,915.30
+Trust Fund: 7.00
+Counterpart Financing 735.80
+Co-Financing 1,227.50
+Commercial Financing 745.00
+MIGA 1,200.00
+Operations Proposed in this Phase
+Phase Project ID Operation Name
+Proposed
+Financing from the MPA
+Envelope (US$
+millions)
+Other Proposed
+Financing (US$
+millions)
+E&S Risk
+Classification
+4 P513301
+DRC: Scaling Up Water Supply and
+Sanitation Access in Kinshasa
+Project
+250.00 325.00 Substantial
+Total 250.00 325.00
+Previously Approved MPA operations—Only for subsequent phases}
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4 ii
+Phase Project ID Operation Name
+Committed MPA
+Financing
+Envelope (US$
+millions)
+Other
+Committed MPA
+Financing (US$
+millions)
+E&S Risk
+Classification
+1 P508698
+Sustainable Rural Water Supply and Sanitation Program Phase II
+200.00 122.00 Substantial
+1 P506439
+Accelerating Access to Water,
+Sanitation and Hygiene in the
+Eastern and Southern Africa
+Region
+10.00 5.00 Moderate
+2 P507207
+Burundi Water Supply and
+Sanitation Access Project
+80.00 10.00 Substantial
+3 P514166
+Comoros - Accelerated Access to
+Water, Sanitation and Hygiene
+(WASH) MPA
+29.00 0.00 Moderate
+Total 319.00 137.00
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 1
+I. MPA PROGRAM STRATEGIC CONTEXT
+1. The Accelerating Access to Water Supply, Sanitation and Hygiene in the Eastern and Southern Africa Region
+using the Multiphase Programmatic Approach (AFE WASH MPA) was approved on 30 September 2025 with a financing envelope of US$ 1,580 million (Report No: PADHI01078). The AFE WASH MPA comprises one regional operation and 12 country operations in Angola, Burundi, Comoros, Democratic Republic of Congo
+(DRC), Ethiopia, Malawi, Madagascar, Mozambique, Somalia, South Sudan, Tanzania, and Zambia. The first regional WASH project (P506439) and Tanzania operation (P508698) were approved on September 30, 2025;
+Burundi (P507207) on December 10, 2025; and Comoros (P514166) on March 24, 2025.
+2. Eastern and Southern Africa faces a deepening WASH crisis that constrains economic growth, human capital,
+and jobs. In 2022, 277 million people lacked basic water services and 458 million lacked basic sanitation, disproportionately affecting rural poor households, women and girls, and populations in FCV settings.
+Inadequate WASH services cost an estimated 5 percent of regional GDP annually, contribute to stunting, and reinforce gender inequalities. Addressing these gaps requires stronger governance, climate-resilient service delivery, and increased private financing. Through country-led investments and sector reforms, the AFE WASH
+MPA directly advances the WBG’s Water Forward, Jobs, Gender, and FCV priorities.
+3. Water Forward seeks to advance water security for 1 billion people by 2030, including 400 million reached
+by the WBG through the Water Strategy Implementation Plan (WSIP), approved in December 2025. The AFE
+WASH MPA supports the Water Strategy Implementation Plan’s Water for People pillar, which targets basic
+WASH access for 250 million people by 2030, through country-led investments and reforms anchored in national Compacts. The DRC: Scaling Up Water Supply and Sanitation Access in Kinshasa Project (P513301) is a flagship operation of the WASH MPA, accounting for around 25% of the MPA water supply access target.
+Through investments in utility performance improvement, sector governance reforms, mobilization of private capital through PPPs, and expanded water and sanitation access in Kinshasa, the project directly advances all four pillars of the regional MPA and strengthens achievement of the MPA’s access and systems-change objectives.
+II. MPA PROGRAM DESCRIPTION
+A. Program Development Objective and Indicators
+4. The Program Development Objective (PrDO) is to increase access to climate-resilient water supply, sanitation,
+and hygiene services in participating Eastern and Southern African countries. The MPA applies a common framework to expand household and institutional WASH access. No PrDO results are yet reported, as the FY26 operations became effective only on February 19, 2026 (Tanzania), March 30, 2026 (Burundi), and June 9, 2026
+(Comoros).
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 2
+Indicator Unit of
+Measure
+Baseline Current achievement
+End target (September 2033)
+PrDO Indicator 1: Number of people with access to water supply services
+Number of people
+0 0 17 million people with access to at least basic water supply services
+PrDO Indicator 2: Number of people with access to sanitation services
+Number of people
+0 0 13 million people with access to at least basic sanitation services
+PrDO Indicator 3: Number of schools and health care facilities with WASH facilities
+Number of facilities
+0 0 7,500 schools or healthcare facilities with new WASH facilities
+PrDO Indicator 4: Number of beneficiaries with enhanced resilience to climate risks
+Number of beneficiaries
+0 0 17 million beneficiaries with enhanced resilience to climate risks
+(same target as PrDO Indicator 1)
+PrDO Indicator 5: Number of transboundary aquifer management plans for climate-resilient water supply development completed and adopted
+Number of plans
+0 0 6 transboundary aquifer management plans completed and adopted
+B. Program Theory of Change
+5. The theory of change for the program remains unchanged.
+C. Program Beneficiaries
+6. Program beneficiaries remain unchanged: across the 12 participating countries, the MPA will provide at least
+basic water services to 17 million people, basic sanitation to 13 million people, and WASH services to 7,500 schools and health care facilities; already approved operations account for 3.8 million water beneficiaries, 4.6 million sanitation beneficiaries, and 2,300 institutional WASH facilities. The DRC: Scaling Up Water Supply and
+Sanitation Access in Kinshasa Project accounts for 4.2 million water beneficiaries and 100 institutional WASH facilities.
+D. Program Description
+7. The AFE WASH MPA structure consists of four pillars or Program Components encompassing the overall
+scope of the Program and covering urban and rural, water and sanitation sub-sectors. The four pillars contain a comprehensive menu of activities that is tailored to the needs and priorities of participating countries. The participating countries select indicators across a menu of indicators to measure the results for the various program components
+8. Pillar 1: WASH Acceleration Platforms. This component establishes regional and government-led national
+platforms to coordinate stakeholders around multi-year WASH Investment Plans anchored in National WASH
+Compacts. It promotes budget prioritization, cross-country learning, and stronger sector M&E and data systems, with AUDA-NEPAD providing capacity-building and partnership support.
+9. Pillar 2: Sector Governance Reforms. This component strengthens governance, transparency, and
+accountability by updating policies and laws, clarifying mandates, reinforcing decentralized service delivery and institutional capacity, and improving regulatory functions, tariff frameworks, and formalization of local
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 3 providers. Regional tools, knowledge exchange, and analytical reviews will inform national investment planning.
+10. Pillar 3: Improving Service Provision Performance. This component strengthens the sustainability, financial
+viability, and climate resilience of urban and rural WASH services. It supports utility performance improvement, digitalization, energy efficiency, creditworthiness, inclusive sanitation, rural service professionalization, market-based sanitation, smart subsidies, behavior change, and skills development for women and youth, while strengthening information systems, customer engagement, renewable energy use, and private-sector innovation.
+11. Pillar 4: Financing Climate-Resilient Water Supply and Sanitation (WSS) Infrastructure and Promoting Private
+Sector Participation. This pillar finances climate-resilient WASH infrastructure in urban and rural areas, including schools, health centers, and rural sanitation, while mobilizing private and innovative finance through blended structures, Public Private Partnerships (PPPs), risk mitigation instruments, microfinance, and climate finance in partnership with IFC and MIGA. It addresses financing constraints for utilities and service providers, supports WASH budget allocations, and strengthens water security through flood and drought management, storage, aquifer recharge, water reuse, and transboundary groundwater planning.
+E. Program Framework
+12. Principles of country engagement. Achieving universal WASH access in AFE requires substantial investment
+amid limited fiscal space. In response to country demand, the MPA supports 12 countries in establishing government-led WASH programs with time-bound access targets, credible financing plans, and reforms anchored in national WASH Compacts. These programs address governance constraints and mobilize private financing. The DRC WASH Compact aligns with the Program framework by advancing governance reforms, utility efficiency, and scaled-up financing, including private capital.
+13. The AFE WASH MPA will be implemented over eight years, from September 2025 to September 2033. Four
+of the 12 countries joined in FY26; the remaining eight are expected to join in FY27–FY28, allowing sufficient time to meet their targets. Since Board approval, operational and country-context changes have resulted in the following adjustments, with no changes yet in the Board approved MPA financing envelope (IBRD and IDA)
+of US$1,580 million.
+• Burundi (P507207): Other financing decreased from US$15 million to US$10 million; IDA financing
+remains US$80 million.
+• Comoros (P514166): Approval advanced from December 2026 to March 2026; risk lowered from
+Substantial to Moderate; IDA financing increased from US$20 million to US$29 million; and other financing of US$10 million was not mobilized.
+• DRC (P513301): Approval shifting from July to November 2026; IDA financing increased from US$200
+million to US$250 million, and other financing increased from US$300 million to US$325 million.
+• South Sudan (P518890): Approval delayed from March 2026 to February 2027.
+• Ethiopia (P516998): Approval delayed from September 2026 to February 2027; IDA financing increased
+from US$200 million to US$350 million; other financing increased from US$185 million to US$255.5 million.
+• Angola (P518656): Approval advanced from March to February 2027; IBRD financing increased from
+US$240 million to US$350.9 million; other financing increased from US$210 million to US$1,350 million
+• Madagascar (P-number not yet assigned): Approval delayed from September 2026 to FY27/FY28.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 4
+• Somalia (P-number not yet assigned): Approval delayed from September 2026 to FY27/FY28.
+• Regional operations: Second and third regional project implemented by AUDA-NEPAD delayed and
+contingent on progress under the first regional operation(P506439).
+F. Learning Agenda
+14. No learning agenda findings are available, as MPA and regional operation implementation has only recently
+begun. The learning agenda remains unchanged from the PAD.
+G. Program Implementation
+15. Country operations. Each country operation is implemented by designated national agencies, consistent with
+the country’s institutional framework. A governance body provides strategic oversight, coordinates sector institutions, and approves annual work plans and budgets, while a Project Management Unit manages day-to-
+day implementation, fiduciary and environmental and social functions, results monitoring, and capacity building.
+16. Regional project. AUDA-NEPAD implements the regional project through its Project Implementation Unit,
+which manages regional technical assistance, knowledge exchange, benchmarking, and support for country reforms. A Regional Project Advisory Committee provides strategic coordination and agrees on joint regional activities, while Country Coordination Teams in the 12 participating countries identify demand and coordinate delivery of regional support. Their respective roles are defined in the Project Operations Manual.
+H. Overall Program Risk
+17. The overall Program risk remains Substantial, with no change in the risks to achieving the PrDO.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 5
+@#&OPS~Doctype~OPS^dynamics@mpaprogramstrategiccontextlandscape#doctemplate
+MPA Program Framework
+Phase # Operation
+ID Country IPF or
+PforR
+IBRD
+($ million)
+IDA
+($ million)
+Board approved
+Trust
+Funds
+($ million)
+Other MPA
+Financing
+($ million)
+Approval Date E&S Risk
+Classification
+1 P508698 Tanzania PforR 0.00 200.00 0.00 122.00 30-Sep-2025 Substantial
+1 P506439
+Angola,
+Burundi,
+Comoros,
+Congo,
+Democratic
+Republic of,
+Ethiopia,
+Madagascar,
+Malawi,
+Mozambique,
+Somalia,
+Federal
+Republic of,
+South
+Sudan,
+Tanzania,
+Zambia
+IPF 0.00 10.00 0.00 5.00 30-Sep-2025 Moderate
+2 P507207 Burundi IPF 0.00 80.00 0.00 10.00 10-Dec-2025 Substantial
+3 P514166 Comoros IPF 0.00 29.00 0.00 0.00 24-Mar-2026 Moderate
+4 P513301
+Congo,
+Democratic
+Republic of
+IPF 0.00 250.00 0.00 325.00 12-Nov-2026 Substantial
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 6
+5 P518890 South Sudan IPF 0.00 85.00 0.00 0.00 19-Feb-2027
+6 P516998 Ethiopia PforR 0.00 350.00 0.00 810.80 23-Feb-2027 Substantial
+7 P518656 Angola IPF 350.88 0.00 0.00 1,300.00 26-Feb-2027
+8 P519902 Angola IPF 475.00 0.00 0.00 1,226.00 31-Mar-2027
+Somalia,
+Federal
+Republic of
+IPF 0.00 40.00 0.00 5.00
+Madagascar IPF 0.00 55.00 0.00 30.00
+Malawi IPF 0.00 55.00 0.00 25.00
+Zambia PforR 0.00 50.12 0.00 0.00
+Mozambique PforR 0.00 25.00 0.00 56.50
+P519870 Sudan IPF 0.00 0.00 0.00 0.00
+Total 825.88 1,229.12 0.00 3,915.30
+Total MPA Financing Envelope (IBRD+IDA+Board Approved
+TF)
+$ 2,055.00
+Total MPA Financing (Total MPA Financing Envelope+Other MPA
+Financing)
+$ 5,970.30
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 7
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 8
+III. MPA OPERATIONS
+OPERATION 1: DRC: Scaling Up Water Supply and Sanitation Access in Kinshasa Project (P513301)
+@#&OPS~Doctype~OPS^dynamics@padbasicinformation#doctemplate
+DATASHEET
+BASIC INFORMATION
+Project
+Beneficiary(ies)
+Operation Name
+Congo, Democratic
+Republic of
+DRC: Scaling Up Water Supply and Sanitation Access in Kinshasa Project
+Operation ID Financing Instrument
+Environmental and Social Risk
+Classification
+P513301
+Investment Project
+Financing (IPF)
+Substantial
+@#&OPS~Doctype~OPS^dynamics@padprocessing#doctemplate
+Financing & Implementation Modalities
+[✓] Multiphase Programmatic Approach (MPA) [ ] Contingent Emergency Response Component (CERC)
+[ ] Series of Projects (SOP) [✓] Fragile State(s)
+[ ] Performance-Based Conditions (PBCs) [ ] Small State(s)
+[ ] Financial Intermediaries (FI) [ ] Fragile within a non-fragile Country
+[ ] Project-Based Guarantee [ ] Conflict
+[ ] Deferred Drawdown [ ] Responding to Natural or Man-made Disaster
+[ ] Alternative Procurement Arrangements (APA) [ ] Hands-on Expanded Implementation Support (HEIS)
+Expected Approval Date Expected Closing Date
+12-Nov-2026 28-Feb-2032
+Bank/IFC Collaboration Joint Level
+Yes
+Joint Project – involving co financing with IFC (loan, equity, budget, other) or staffing
+Proposed Development Objective(s)
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 9
+To increase access to climate-resilient water supply and sanitation services in Kinshasa.
+Components
+Component Name Cost (US$)
+National WASH Program, Governance Reforms, and Operator Performance
+Improvement
+51,000,000.00
+Increasing Access to Climate-Resilient Water Supply and Sanitation 490,000,000.00
+Project Coordination and Management, Resettlement Costs 34,000,000.00
+@#&OPS~Doctype~OPS^dynamics@padborrower#doctemplate
+Organizations
+Borrower/Recipient: Democratic Republic of the Congo
+Implementing Agency: Ministry of Water Resources and Electricity
+@#&OPS~Doctype~OPS^dynamics@padfinancingsummary#doctemplate
+PROJECT FINANCING DATA (US$, Millions)
+Maximizing Finance for Development
+Is this an MFD-Enabling Project (MFD-EP)? Yes
+Is this project Private Capital Enabling (PCE)? No
+SUMMARY
+Total Operation Cost 575.00
+Total Financing 575.00 of which IBRD/IDA 250.00
+Financing Gap 0.00
+DETAILS
+World Bank Group Financing
+International Development Association (IDA) 250.00
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 10
+IDA Credit 250.00
+Non-World Bank Group Financing
+Commercial Financing 50.00
+Unguaranteed Commercial Financing 50.00
+Other Sources 260.00
+ITALY: Dev. Coop. Department (MOFA) 135.00
+OPEC FUND 50.00
+Arab Bank for Economic Development in Africa 75.00
+Counterpart Funding 15.00
+National Government 15.00
+IDA Resources (US$, Millions)
+Credit Amount Grant Amount SML Amount
+Guarantee
+Amount
+Total Amount
+National
+Performance-Based
+Allocations (PBA)
+250.00 0.00 0.00 0.00 250.00
+Total 250.00 0.00 0.00 0.00 250.00
+@#&OPS~Doctype~OPS^dynamics@paddisbursementprojection#doctemplate
+Expected Disbursements (US$, Millions)
+WB Fiscal
+Year 2027 2028 2029 2030 2031 2032
+Annual 32.00 43.00 68.00 51.00 31.00 25.00
+Cumulative 32.00 75.00 143.00 194.00 225.00 250.00
+@#&OPS~Doctype~OPS^dynamics@padclimatechange#doctemplate
+PRACTICE AREA(S)
+Practice Area (Lead) Contributing Practice Areas
+Water
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 11
+CLIMATE
+Climate Change and Disaster Screening
+Yes, it has been screened and the results are discussed in the Operation Document
+@#&OPS~Doctype~OPS^dynamics@padrisk#doctemplate
+SYSTEMATIC OPERATIONS RISK- RATING TOOL (SORT)
+Risk Category Rating
+1. Political and Governance  Substantial
+2. Macroeconomic  Substantial
+3. Sector Strategies and Policies  Substantial
+4. Technical Design of Project or Program  Moderate
+5. Institutional Capacity for Implementation and Sustainability  Substantial
+6. Fiduciary  Substantial
+7. Environment and Social  Substantial
+8. Stakeholders  Substantial
+9. Overall  Substantial
+@#&OPS~Doctype~OPS^dynamics@padcompliance#doctemplate
+POLICY COMPLIANCE
+Policy
+Does the project depart from the CPF in content or in other significant respects?
+[ ] Yes [✓] No
+Does the project require any waivers of Bank policies?
+[ ] Yes [✓] No
+ENVIRONMENTAL AND SOCIAL
+Environmental and Social Standards Relevance Given its Context at the Time of Appraisal
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 12
+E & S Standards Relevance
+ESS 1: Assessment and Management of Environmental and Social Risks and
+Impacts
+Relevant
+ESS 10: Stakeholder Engagement and Information Disclosure Relevant
+ESS 2: Labor and Working Conditions Relevant
+ESS 3: Resource Efficiency and Pollution Prevention and Management Relevant
+ESS 4: Community Health and Safety Relevant
+ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement Relevant
+ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural
+Resources
+Relevant
+ESS 7: Indigenous Peoples/Sub-Saharan African Historically Underserved
+Traditional Local Communities
+Not Currently Relevant
+ESS 8: Cultural Heritage Relevant
+ESS 9: Financial Intermediaries Not Currently Relevant
+NOTE: For further information regarding the World Bank’s due diligence assessment of the Project’s potential
+environmental and social risks and impacts, please refer to the Project’s Appraisal Environmental and Social Review
+Summary (ESRS).
+@#&OPS~Doctype~OPS^dynamics@padlegalcovenants#doctemplate
+LEGAL
+Legal Covenants
+Sections and Description
+Schedule 2, section I.A.3(a): No later than three (3) months after the Effective Date, recruit or assign to the CEP-O, an environmental and social manager and an occupational health and safety specialist, with experience, qualifications, and skills and under terms of reference acceptable to the Association.
+Schedule 2, section I.A.2: No later than three (3) months after the Effective Date, or such later date as agreed by the
+Association, establish and maintain at all times during Project implementation, a high-level inter-ministerial steering committee (the “Project Steering Committee”), with a structure, functions, and responsibilities acceptable to the
+Association, which shall be responsible for overall Project oversight and strategic guidance and approving Annual Work
+Plans and Budgets. The Project Steering Committee shall be chaired by the MRHE represented by the Secretary General of the MRHE. The Project Steering Committee shall be co-chaired by the Secretary General of the MEDDNEC and shall include representatives from the Presidency, the Prime Minister’s Office, from the Recipient’s ministries in charge of finance, planning, portfolio, health, education, urbanism and housing, land, City of Kinshasa, REGIDESO, ARSPE and CEP-
+O coordinator.
+Schedule 2, section I.A.3(c): REGIDESO to designate by no later than [three (3)] months after the Effective Date, or such later date as agreed by the Association, and thereafter maintain during the implementation of the Project, a technical support team to provide technical support to CEP-O, with composition, mandate and resources satisfactory to the
+Association as detailed in the Project Implementation Manual.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 13
+Schedule 2, section I.A.3(d): No later than ninety (90) days after the Effective Date defining the scope of collaboration, including the roles and responsibilities of each party, as well as the specific expertise, technical assistance, and support to be provided by the technical experts of REGIDESO.
+Schedule 2, section I.C.1: 1. To facilitate the carrying out of Part 2.1(viii) of the Project, the Recipient (directly or through
+REGIDESO) shall, by no later than Financial Close, enter into an agreement, under terms and conditions acceptable to
+the Association (“Subsidiary Agreement”), with the SPV established for purposes of implementing the Part 2.1(viii) of the Project, and/or any other entity involved in the implementation of Part 2.1(viii) of the Project.
+Schedule 2, section I.D.1.a: No later than November 30 of each year during the implementation of the Project, starting in 2027, or such later date as agreed with the Association, a proposed consolidated Annual Work Plan and Budget for the next calendar year containing: (i) all activities to be carried out under the Project during that calendar year; and (ii)
+a proposed financing plan for expenditures required for such activities, setting forth the proposed amounts and sources of financing including the Counterpart Financing and the Cofinancing.
+@#&OPS~Doctype~OPS^dynamics@padconditions#doctemplate
+Conditions
+Type Citation Description Financing Source
+Effectiveness article 5.01 a
+The Project
+Implementation Manual
+(except the Stipends
+Manual) has been prepared and adopted by the
+Recipient, in form and substance satisfactory to the Association;
+IBRD/IDA
+Effectiveness article 5.01 b
+The Recipient has prepared and disclosed the Labor
+Management Procedures in form and substance satisfactory to the
+Association.
+IBRD/IDA
+Disbursement schedule 2 Section III B.1.b
+No withdrawal shall be made under Category 2, unless and until the
+Recipient provides the evidence of the establishment of the contractual and/or institutional arrangements within the Kinshasa
+Provincial Government to ensure the long-term governance and sustainable delivery of the relevant services;
+IBRD/IDA
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 14
+Disbursement schedule 2 Section III B.1.c
+No withdrawal shall be made under Category 4, unless and until the CDP
+Co-financing Agreement has been duly executed and delivered by the parties thereto and is in full force and effect; and all conditions precedent to the first disbursement under the CDP Co-financing
+Agreement have been fulfilled or waived in accordance with the terms thereof, other than any condition requiring that a withdrawal or disbursement be made under this Agreement;
+IBRD/IDA
+Disbursement schedule 2 Section III B.1.d
+No withdrawal shall be made under Category 5, unless and until the OFID
+Co-financing Agreement has been duly executed and delivered by the parties thereto and is in full force and effect; and all conditions precedent to the first disbursement under the OFID Co-financing
+Agreement have been fulfilled or waived in accordance with the terms thereof, other than any condition requiring that a withdrawal or disbursement be made under this Agreement;
+IBRD/IDA
+Disbursement schedule 2 Section III B.1.e
+No withdrawal shall be made under Category 6 unless and until the BADEA
+Co-financing Agreement has been duly executed and delivered by the
+IBRD/IDA
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 15 parties thereto and is in full force and effect; and all conditions precedent to the first disbursement under the BADEA Co-financing
+Agreement have been fulfilled or waived in accordance with the terms thereof, other than any condition requiring that a withdrawal or disbursement be made under this Agreement;
+Disbursement schedule 2 Section III B.1.f
+No withdrawal shall be made under Category 7, until and unless (i) the
+BADEA Co-financing
+Agreement has been duly executed and delivered by the parties thereto and is in full force and effect; and all conditions precedent to the first disbursement under the BADEA Co-financing
+Agreement have been fulfilled or waived in accordance with the terms thereof, other than any condition requiring that a withdrawal or disbursement be made under this Agreement and
+(ii) the Recipient has caused REGIDESO to make available the Counterpart
+Tranche B as hereinafter defined and referred to under Section IV.D of
+Schedule 2 to this
+Agreement in a manner satisfactory to the
+Association;
+IBRD/IDA
+Disbursement schedule 2 Section III B.1.g
+No withdrawal shall be made under Category 8,
+IBRD/IDA
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 16 until and unless (i) the SPV has been selected by the
+Recipient in a manner satisfactory to the
+Association, and (ii): (ii) the
+Recipient has furnished evidence, acceptable to the
+Association, that all conditions for Financial
+Close have been met, including, without limitation, confirmation from the lenders under the
+Finance Documents that all conditions precedent to the first disbursement under the Finance Documents have been met; (iii) the
+Subsidiary Agreement under Section I.[C] of this
+Schedule 2 and the Project
+Agreement have been executed in form and substance acceptable to the Association; and (iii)
+the Recipient has furnished evidence, acceptable to the
+Association, that the PPP
+Transaction Documents satisfactory to the
+Association have been executed and are effective;
+Disbursement schedule 2 Section III B.1.h
+No withdrawal shall be made under Category 9, until and unless the
+Association is satisfied that the Stipends Manual has been adopted by the
+Recipient in form and substance acceptable to the Association;
+IBRD/IDA
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 17
+I. STRATEGIC CONTEXT
+A. Country Context
+1. The Democratic Republic of Congo (DRC) possesses significant economic potential, underpinned by its
+vast natural resources, abundant water resources, and a population of approximately 109 million.1 These demographic and resource endowments present opportunities for job creation and private investment. DRC has
+52 percent of all freshwater resources and 23 percent of internal renewable water resources in Sub-Saharan
+Africa.2 Despite its potential, the DRC remains one of the world's poorest countries, with an extreme poverty rate of 72.9 percent and a Human Development Index ranking of 179 out of 191.3 More than half of the DRC’s impoverished population resides in and around major urban areas.4 The country faces widespread gender inequality and high rates of violence against women.
+2. Unlocking DRC’s potential requires addressing persistent infrastructure gaps, institutional fragility,
+governance challenges, and regulatory constraints. Economic growth during 2020-24, averaged over 6.4 percent, yet gains in per capita income and poverty reduction have remained limited due to rapid population growth and dependence on the mining sector. Although poverty has declined from 78.9 percent of Congolese in
+2020 to an estimated 72.9 percent in 2024,5 the figure remains exceedingly high. Converting resource-driven growth into broad-based improvements in living standards and access to basic services remains a major challenge.
+3. DRC has an urbanization rate of approximately 44.5 percent but is urbanizing at income levels
+significantly below global comparators. The capital Kinshasa is a densely populated and fast-growing city of over
+17 million people (2021),6 concentrating the highest number of people living in poverty compared to any other province in the DRC. About 12 million Kinshasa inhabitants live in poverty. Moreover, Kinshasa's population is growing faster than that of other urban areas, at 5.1 per cent per year, compared to a national population growth of nearly 3.2 per cent. It could exceed 20 million inhabitants in 2030.7
+4. DRC is highly vulnerable to climate change, with major implications for people, infrastructure, and
+ecosystems. DRC ranks as the 21st most vulnerable country and the fifth least ready to adapt, according to the
+Notre Dame Global Adaptation Initiative Country Index.8 The country faces multiple climate change-exacerbated hazards, of which rainfall-triggered floods and landslides are the most prevalent. The DRC’s Country Climate and
+Development Report (CCDR)9 concludes that climate change is already increasing temperatures and rainfall variability – trends expected to intensify over time. More frequent extreme events disproportionately affect poor and vulnerable households, communities, small businesses, and governments, exacerbating poverty through damage to livelihoods, infrastructure, and productive assets. These hazards disrupt water services, damage infrastructure, and increase the incidence of waterborne diseases such as cholera, underscoring the need for climate-resilient infrastructure and services.
+1 World Bank Databank 2026 Population statistics.
+2 Natural Resources Governance Institute (NRGO) 2015. Country Strategy Note: Democratic Republic of Congo.
+3 World Bank. 2025. MACRO POVERTY OUTLOOK: Country-by-country Analysis and Projections for the Developing World
+4 World Bank. 2017. Productive and Inclusive Cities for an emerging DRC
+5 World Bank. 2024. “Macro Poverty Outlook: Democratic Republic of Congo.” Washington, DC: World Bank. Available at:
+https://www.worldbank.org/en/publication/macro-poverty-outlook/mpo_cod
+6 Institut National de la Statistique (INS). (2021). Annuaire statistique RDC 2020. Ministère du Plan, République Démocratique du Congo.
+7 2030 population projection using 5.1 percent growth rate from a population of 17.5 million in 2021.
+8 University of Notre Dame, Notre Dame Global Adaptation Initiative, Country Rankings, Scores for 2022.
+9 World Bank Group. 2023. Democratic Republic of Congo (DRC) Country Climate and Development Report. CCDR Series. © World Bank
+Group.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 18
+B. Sectoral and Institutional Context
+5. Due to the vast resources of the Congo basin and a high average annual rainfall of over 1,500 mm per
+year, the DRC is water rich. Internal renewable freshwater resources per capita are estimated at 12,213 m3/person (2017),10 significantly above the internationally recognized water sufficiency threshold of 1,700 m3/person/year. Despite this abundance, access to safe and reliable water remains a challenge for many
+Congolese citizens. The total volume of freshwater withdrawn by major economic sectors is only about 0.2 percent of the total resource endowment. Decades of conflict, underinvestment, and lack of connectivity across the DRC’s vast territory have resulted in significant infrastructure gaps which are major constraints to sustainable and inclusive growth.
+6. The DRC has the largest population in Sub-Saharan Africa without access to water, and third-largest
+population after Nigeria and Ethiopia, lacking access to sanitation, and hygiene (WASH). As of 2024, about 70 million people (64 percent) lack basic water access, 91 million people lack basic sanitation (84 percent), and 88 million people lack basic hygiene services (81 percent).11 Kinshasa in particular is facing a severe water supply and sanitation crisis, as population growth continuously surpasses the pace of service expansion. More than 8 million people in the city (48 percent) do not have access to basic water supply. The proportion of households with access to piped water, mostly outdoors, declined from about 72 percent in 2018 to 52 percent in 2022.12
+7. Kinshasa’s water supply system is under severe strain with only about 60 percent of current demand
+met. The city relies primarily on two major water treatment plants (WTP) located in the central part of the city:
+the aging N’djili WTP (330,000 m³/day capacity) and the recently commissioned Ozone WTP (330,000 m³/day).
+The Ozone plant draws water from the Congo river, but N’djili WTP suffers frequent breakdowns due to obsolete equipment, flooding, and severe pollution of the N’djili river. Additional smaller plants, such as Lemba-Imbu,
+Ngaliema, Lukunga and Lukaya, operate at limited capacity and face recurrent outages due to similar challenges.
+Overall, the city faces a severe water production deficit of more than 500,000m3/day to meet current demand, and the deficit is projected to exceed 1,200,000 m3/day by 2035.13 The city’s water supply infrastructure is characterized by aging assets, uneven coverage, and vulnerability to climate shocks, leaving peri-urban areas underserved. The eastern, western and southern parts of the city have very limited water supply infrastructure.
+8. The Government of DRC prepared a 2020-2030 National Program for Water, Sanitation and Hygiene
+(Programme National d’Eau, Hygiène et Assainissement, PNEHA). It lays out investments required – estimated at US$8 billion – to reach the ambitious access targets of 80 percent for urban water, 60 percent for rural water,
+70 percent for sanitation and universal access in schools and health centers by 2030. A mid-term review of the
+PNEHA held in October 2025, facilitated by the National Action Committee for Water Supply, Sanitation, and
+Hygiene (CNAEHA, Committée Nationale d’Action, d’Eau, Hygiène et Assaisinissement), showed that progress is lagging behind due to inadequate investment. To reinforce reform momentum and mobilize investment, the
+Government launched the DRC WASH Compact (Pacte Présidentiel Eau–Hygiène–Assainissement) in 2026. The
+10 https://www.cia.gov/the-world-factbook/countries/congo-democratic-republic-of-the/#geography.
+11 WHO/UNICEF Joint Monitoring Programme for Water Supply, Sanitation and Hygiene (JMP). 2025. “Progress on household drinking water, sanitation and hygiene 2000–2024: special focus on inequalities.” Geneva: WHO/UNICEF. Available at:
+https://washdata.org/reports/jmp-2025-wash-households.
+12 Kapembo ML, Mukeba FB, Sivalingam P, Mukoko JB, Bokolo MK, Mulaji CK, Mpiana PT, Poté JW. Survey of water supply and assessment of groundwater quality in the suburban communes of Selembao and Kimbanseke, Kinshasa in Democratic Republic of the Congo. Sustain
+Water Resour Manag. 2022;8(1):3. doi: 10.1007/s40899-021-00592-y. Epub 2021 Nov 10. PMID: 34790861; PMCID: PMC8580925.
+13 As of 2026, Kinshasa’s main water treatment plants and their functional capacities are: N’djili (280,000 m³/day), Ngaliema (80,000 m³/day), Ozone (272,000 m³/day), Lukaya (36,000 m³/day), Lukunga (35,000 m³/day), Lemba Imbu (35,000 m³/day), Maluku (2,280 m³/day), Mitendi (1,800 m³/day), and several borehole systems. The combined functional capacity is approximately 742,100 m³/day against an installed capacity of 886,800 m³/day, well below the city’s estimated demand of over 2 million m³/day by 2035. Source:
+REGIDESO, 2020. Integrated Urban Water Management Master plan for Kinshasa. Kinshasa, DRC.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 19
+Compact sets intermediate targets for 2035 of 60 percent access to drinking water, 50 percent access to sanitation and hygiene services, and 80 percent WASH coverage in schools and health facilities (equivalent to reaching an additional 69 million people with at least basic services), as milestones toward universal access by
+2050. It combines governance, utility performance, financial sustainability, and private sector reforms with a
+sector financing strategy requiring an estimated US$20 billion in investments over 2026–2035. The Compact identifies a financing gap of approximately US$14.7 billion, highlighting the need for increased public, donor, private, and climate-related financing.
+9. Public spending for WASH is low and budget execution rates are insufficient, leaving the sector
+dependent on donor financing. An analysis of expenditure data over the 2017-2021 period reveals that domestic public expenditure on WASH was only 0.23 percent of overall government expenditure (excluding external funds), a mere 0.02 percent of GDP and in absolute terms only US$9 million on average annually, of which just
+15 percent for investments. Donor-financed expenditure is tenfold, at US$93 million on average annually, mostly off budget. Domestic budget execution rates are low at around 20 percent.14
+10. The regulatory and governance framework for the water and sanitation sector in the DRC has recently
+undergone significant reforms, yet important challenges remain. The establishment of the Autorité de
+Régulation du Secteur de l’Eau Potable et de l’Assainissement (ARSPE) as the sector regulator in 2022 marked an important step toward stronger oversight, transparency, and accountability.15 However, ARSPE remains at an early stage of operationalization. The recent appointment of its key officials and approval of its operating manual by the Board of Directors have established the foundations for the Agency to progressively assume its regulatory functions.16 Public-Private Partnerships (PPP) in the sector are governed by PPP Law No. 18/016 of July 9, 2018 and Water Law No. 15/026 of December 31, 2015, which permit private participation and define procedures for project preparation, procurement, and contract management. However, inconsistencies remain between the two laws, particularly regarding Public Service Delegation arrangements. A new PPP law is under preparation, which should address these inconsistencies.17 PPPs are managed by the Coordination and Advisory Unit on
+Public-Private Partnerships (UC-PPP, Unité de Conseil et de Coordination des Partenariats Public-Privé) under the
+Ministry of Planning.18 While UC-PPP is responsible for implementing PPP policy, promoting and monitoring projects, and advising contracting authorities, practical implementation is still nascent. Capacity building, standardized tools, and stronger coordination among UC-PPP, ARSPE, and sector ministries are needed. The regulatory environment for PPPs—particularly regarding risk allocation, fiscal commitments, and dispute resolution—requires further support to attract and sustain private sector participation.
+11. The Government is reforming key state-owned enterprises responsible for service delivery, including the
+national water utility (Régie de Distribution d’Eau – REGIDESO). Established in 1929, REGIDESO is a public company whose historic mission is to ensure access to drinking water for all citizens. REGIDESO was restructured into a public limited company (Société Anonyme) on September 4, 2014, with the Congolese State as its sole shareholder. It enjoys corporate legal status and is subjected to fiscal oversight by the Ministry of Portfolio, while its technical operations are overseen by the Ministry of Water Resources and Electricity (Ministère des Ressources
+Hydrauliques et de l’Électricité, MRHE). The Board of Directors and the Managing Director are appointed by the
+14 World Bank. 2023. DRC Water Sector Public Expenditure Review. Available Online:
+https://thedocs.worldbank.org/en/doc/dd99b720176a81d2243053bc3986cccd-0010012024/original/DRC-WASH-Infographic-English.pdf
+15 Article 1 of Decree 22/04 of 1 March 2022 on the creation and functioning of the Public Water Service Regulatory Authority (ARSPE).
+16 The members of the Board of Directors and Management of the ARSPE were appointed through Ordinance No. 26/137 of September 14,
+2026, marking an important milestone toward the Agency’s full operationalization.
+17 The proposed new PPP law will address competitive procurement of private operators, and articulate clear responsibilities between the state and the private operator, which are not adequately reflected in the current PPP Law 2018 and the Water Law 2015.
+18 Governed by Law No. 18/016 of July 9, 2018, on PPPs, and Decree No. 21/04 of October 2, 2021, creating the UC-PPP.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 20
+State, with the latter most recently selected through a competitive recruitment process. This transformation is part of a broad effort to rebuild the institutional landscape of the water sector, consolidated in Water Law 2015.
+12. Currently, REGIDESO develops and manages drinking water production and distribution in 101 urban
+centers across the DRC’s 26 provinces but faces severe operational and financial challenges. National service coverage remains critically low at 16 percent, with non-revenue water (NRW) at approximately 38 percent in
+2026. Kinshasa is the anchor of REGIDESO's operational and financial sustainability: the capital accounts for
+roughly 60 percent of the utility's 411,000 active customer accounts, generates a 36 percent operating surplus that cross-subsidizes a 52 percent operating loss across other provinces, and outperforms the rest of the network on service coverage (approximately 50 percent) and NRW (35 percent). This cross-subsidization mechanism, supported by public investment subsidies, underpins the utility's ability to maintain a financially viable tariff structure while extending services nationwide. Thus, improvements in Kinshasa's service quality, revenue collection, and NRW reduction are essential to REGIDESO's overall viability. The utility’s financial sustainability is further undermined by chronic non-payment of government water bills, with arrears exceeding US$600 million, contributing to infrastructure degradation, elevated water losses, and limited capacity to expand or maintain services, particularly for vulnerable households.
+13. In response, REGIDESO’s management is implementing a comprehensive performance improvement
+plan (PIP), under a performance contract signed with the Government in December 2023, leveraging digitalization and operational innovations to strengthen efficiency and accountability. Early results are promising, with revenue collection rising from approximately CDF 270 billion in 2020 to CDF 470 billion in 2024, and NRW reducing from 43 percent in 2022. These gains have significantly enhanced stakeholder confidence in the utility and the sector, helping create the conditions for the Government to approve a major tariff increase in March
+2026.19 The tariff adjustment is expected to improve cost recovery and restore REGIDESO’s financial sustainability while preserving targeted social protection measures for vulnerable consumers. It was implemented under the tariff-setting and adjustment framework adopted in July 2024, which established the principles and procedures for future tariff revisions.20 Sustaining REGIDESO’s transformation will require continued Government commitment to the performance contract, tariff reforms, and stronger sector governance, supported by targeted investments and technical assistance. In particular, a credible tariff indexation mechanism, together with measures to reduce Government arrears and strengthen payment discipline, will be critical to improving operational performance and ensuring long-term financial sustainability.
+14. The urban sanitation sector in Kinshasa operates within a complex institutional framework involving
+multiple city-level entities and faces significant challenges in service delivery, regulation, and financing. Key actors include the Régie d’Assainissement de Kinshasa (RASKIN), which oversees urban sanitation services; the
+Régie de Gestion des Déchets de Kinshasa (REGEDEK), which is responsible for primary waste collection; the Fonds d’Assainissement de Kinshasa (FONAK), which is responsible for mobilizing and managing financing for sanitation activities; and the Brigade Spéciale pour la Protection de l’Environnement (BSPE), which monitors and supervises sanitation projects and activities. These entities operate under the authority of the City of Kinshasa. The Cellule de Développement Urbain de Kinshasa (CDUK) is responsible for urban planning and development across the city.
+Collectively, these institutions operate under the policy guidance of the Ministère de l’Environnement, du
+Développement durable et de la Nouvelle Économie du Climat (MEDDNEC) through the Direction de l’Assainissement (DAS). Strengthening their capacity and coordination is essential for improving sanitation outcomes in the city. A Citywide Inclusive Sanitation (CWIS) masterplan for Kinshasa is nearing completion, with support from the KIN ELENDA Project (P171141). This masterplan includes the identification of required institutional reforms and prescribes both sewered and non-sewered solutions to sanitation management,
+19 Arrêté Interministériel portant Fixation des Tarifs de Vente d’Eau Potable de REGIDESO SA, 26 March 2026.
+20 Arrêté Interministériel portant Règles de Fixation et de Révision des Tarifs du Service Public de l’Eau, 19 July 2024.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 21 including the role of local private sector actors in the sanitation and fecal sludge management (FSM) value chain.
+It also incorporates priority investments, including a Fecal Sludge Treatment Plant (FSTP) to be financed under this project.
+15. The project will consolidate and build on the recent gains and reforms in the sector by expanding access
+to safe water and sanitation services in underserved areas of Kinshasa while strengthening the institutional foundations for sustainable service delivery. It builds on the achievements of the water component of the
+Kinshasa Multisector Development and Urban Resilience Project (KIN ELENDA, P171141), which has financed additional water production capacity at the Ozone plant complex, network expansion, and utility reforms, benefiting more than 2 million people in Kinshasa. The project also complements the broader sector reform agenda supported by the DRC Water Supply and Sanitation Access Program (PASEA, P178389) and the Access,
+Governance and Reform of the Electricity and Water Sectors Project (AGREE, P173506) project, by providing additional support to accelerate the REGIDESO’s transformation program, advance PPP preparation, and strengthen urban sanitation sector institutions. In addition, the project aligns with the Inga3 Development
+Program (P506438), through the expansion of water infrastructure and services in the Inga Growth Corridor and specifically the Maluku Special Economic Zone.
+C. Relevance to Higher Level Objectives
+16. The project is aligned with the objectives of the World Bank’s Country Partnership Framework (CPF) for
+DRC for FY22-26 (Report No. 168084-ZR), particularly Focus Area 2, Objective 2.2, by expanding access to WASH services for underserved populations and reducing the burden on women and girls. It is also well-positioned to contribute to the forthcoming CPF under preparation for FY2027–2036 (P516836, PCN approved), which adopts an integrated corridor approach — “Three Corridors for More and Better Jobs” (3C4J) centered on the Inga,
+Lobito, and Peace Corridors as zones for economic transformation, improved connectivity, private investment, and job creation. The project's support for WASH access, institutional strengthening, and gender-responsive service delivery aligns with the new CPF's outcome of Connected Markets and Communities. The project is further aligned with the 2025 DRC Risk and Resilience Assessment (RRA)21 by addressing FCV drivers such as rapid urbanization and youth unemployment through investments that support economic transformation, private sector participation, and job creation. The robust reform package supported by Component 1 directly addresses elite capture of the state undermining service delivery and the accountability gap between the state and citizens
+(RRA driver 1). The project's youth employment agenda reflected in the results framework contributes to addressing socioeconomic marginalization and youth vulnerability to recruitment into violence (RRA driver 2).
+The project thus advances the CPF cross-cutting priorities of climate, gender, and governance.
+17. The project is aligned with the Mobilizing Finance for Development (MFD) principles and applies a one
+World Bank Group (WBG) approach, working closely with IFC and MIGA under the Scaling-Up Water Finance initiative.22 Private investment generated through the project will count toward Private Capital Mobilization
+(PCM).23 Component 1 is verified as MFD-enabling through its support for sector reforms, the regulatory framework, and REGIDESO’s performance improvement program, including exploration of a NRW performance-
+based contract. The project will also finance studies to mobilize private financing for local manufacturing of sector equipment, such as pipes, pumps, and valves, supporting import substitution and long-term sustainability.
+Under subcomponent 2.2, sludge collection for the FSTP is also verified as MFD-enabling, as private operators are expected to lease trucks and collect fees directly from households. For PCM, the project includes a hybrid
+PPP for bulk-water production facilities in Lukunga, with REGIDESO serving as off-taker. A PPP feasibility study
+21 World Bank. 2020. World Bank Group Strategy for Fragility, Conflict, and Violence 2020–2025.
+22 The World Bank. 2023. Scaling Up Finance for Water: A WBG Strategic Framework and Roadmap for Action. © World Bank.
+http://hdl.handle.net/10986/40225
+23 Mobilization of private equity, IFC debt and other development financing institutions debt
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 22 estimates the cost of this subproject at about US$87 million, with a preliminary assessment indicating a US$37 million viability gap fund (VGF) to be fully financed by IDA. The remaining US$50 million in PCM is expected to comprise US$10 million in equity and US$40 million in debt. The study also identified the need for risk-mitigation instruments, including a potential future payment risk guarantee financed through IDA.
+18. The project is aligned with the WBG Strategy on Water Security, the Water Strategy Implementation
+Plan (WSIP) and the WBG Action Plan on Climate Change Adaptation and Resilience 2021–2025. The project directly supports the WSIP24 by expanding access to WASH under the “water for people” pillar of the Water
+Forward Initiative. On mitigation, the project will improve energy and water efficiency through NRW reduction and operational efficiency measures. On adaptation, it will strengthen resilience by developing climate-resilient infrastructure and protecting water and sanitation assets from floods, droughts, and landslides.
+19. The project is aligned with the WBG’s Gender Strategy 2024–2030.25 It will improve health and education
+outcomes for women and girls by expanding household water access, reducing exposure to gender-based violence (GBV) risks, and supporting menstrual hygiene management. The project will also reduce the time and physical burden of water collection and create economic opportunities through skills development programs.
+20. The project is also aligned with the WBG’s private sector development and job creation agenda. It will
+provide critical WASH infrastructure for households and businesses in Kinshasa while supporting business-
+enabling reforms, private sector development, and skills training. The project will create opportunities for better jobs within REGIDESO, including through utility digitalization. As a labor-intensive sector, WASH investments generate employment through construction, operations, maintenance, and supply chains, while improved services boost productivity and economic activity. The project is estimated to generate 43,118 more and better-
+paid jobs (MBJ) over its lifetime, measured as project-attributable increases in labor income converted into job equivalents at baseline wages. Of these, 42,539 MBJ (99 percent) are expected from expanded water supply access and 579 MBJ from improved sanitation access.
+21. The REGIDESO Center of Excellence (CoE) will establish partnerships with national academic and
+vocational institutions, including the University of Kinshasa, the National Institute for Professional Education
+(Institut National de Préparation Professionnelle, INPP), the National Institute for Construction and Public Works
+(Institut National de Bâtiment et Travaux Publics, INBTP), (Institut de Bâtiment et Travaux Publics, IBTP) to strengthen sector skills development and ensure the sustainability of training programs beyond project closing.
+The CoE will also support youth development through certification, internships, apprenticeships, and job-
+readiness programs, creating a pipeline of qualified candidates for future employment within REGIDESO and the water sector.
+II. PROJECT DESCRIPTION
+A. Project Development Objective (PDO)
+22. To increase access to climate-resilient water supply and sanitation services in Kinshasa.
+PDO Level Indicators
+23. Progress towards the PDO will be measured through three PDO-indicators, which also serve as Program-
+level indicators (PrDO indicators) directly reporting to Corporate Results indicators.
+• PDO Indicator 1: People with access to safely managed water supply services. Disaggregated by gender,
+youth, (baseline: 0; target: 4.2 million) [PrDO indicator]
+24 World Bank Group Water Strategy Implementation Plan: Water Forward - Investing in Water for People, Food, and Planet
+(English). Corporate Strategy, Scorecard, and Results Documents Washington, D.C.: World Bank Group.
+25 World Bank Group Gender Strategy 2024 – 2030: Accelerate Gender Equality to End Poverty on a Livable Planet. WBG; Washington DC.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 23
+• PDO Indicator 2: Number of people with safely managed access to sanitation services. Disaggregated by
+gender, youth (percentage basic and safely managed) (baseline: 0; target: 200,000) [PrDO indicator]
+• PDO Indicator 3: People benefiting from climate resilient infrastructure (Number). Disaggregated by gender,
+youth, of which people benefiting from climate-resilient infrastructure (baseline: 0; target: 4.4 million) [PrDO indicator]
+B. Beneficiaries
+24. The project is expected to provide 4.2 million people with access to safely managed water services and
+200,000 people with access to safely managed sanitation, reducing Kinshasa’s water access gap from 59 percent to 40 percent.26 Beneficiaries include: (a) residents gaining access to safely managed water services through expanded production, network extensions, and improved utility performance;27 (b) people benefiting from vocational training and job placement opportunities in water-related disciplines including employees of
+REGIDESO as well as new entrants to the job market, (c) REGIDESO, through improved capacity, reduced NRW, expanded service coverage, and enhanced financial sustainability, and (d) sector institutions, including MRHE and ARPSE, through a stronger sector framework. All activities are designed to improve the resilience of communities and infrastructure to floods and droughts.
+25. Given that women and girls are responsible for water collection in 72.5 percent of households,28 the
+project is expected to generate significant time savings for approximately 1.6 million women and girls.29 It will also provide menstrual health and hygiene education to 9,000 girls. Students, patients and staff of 70 schools and 35 health centers in Kinshasa are expected to benefit from the installation/rehabilitation of toilet and handwashing facilities. In addition, 30,000 people, primarily internally displaced persons living in Camp Kabila, will benefit from new or rehabilitated communal WASH facilities.
+C. Components
+26. The project comprises three components, fully aligned with the AFE WASH MPA design and pillars. It will
+establish the foundation for a phased scale-up of WASH access in Kinshasa, leveraging both private capital and development partner financing. The operation will be financed through an IDA credit of US$250 million, complemented by joint cofinancing of US$50 million from the OPEC Fund for International Development (OFID),
+US$75 million from the Arab Bank for Economic Development in Africa (BADEA) and US$135 million equivalent from Cassa Depositi e Prestiti (CDP) financed through the Italian Climate Fund, alongside US$15 million in counterpart financing from REGIDESO.30 In addition, the proposed hybrid PPP is expected to mobilize approximately US$50 million in private capital.
+27. Table 1 presents the financing allocation and shows how each component links to the MPA Program Pillars.
+26 From about 12.9 million people (59 percent) lacking access by 2031 down to about 8.7 million people (40 percent)
+27 Beneficiaries include new customers receiving first-time access to safely managed services and existing customers benefiting from improved service quality and reliability.
+28Democratic Republic of Congo National Institute of Statistics, Kinshasa School of Public Health, and ICF. 2024. Democratic Republic of
+Congo Demographic and Health Survey 2023–2024: Final Report. Kinshasa, DRC and Rockville, Maryland, USA: ICF
+29 4.2 million people reside in around 800,000 households. In 575,000 households, women/girls are responsible for water hauling, representing 1.6 million women and girls that would benefit (2.8 females/household)
+30 OFID, BADEA, and CDP are all expected to approve their financing by December 31, 2026.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 24
+
+Table 1. Project Budget Allocation and Link to the MPA Pillars
+IDA OFID BADEA CDP (Italy) REGIDESO PCM Total
+Project Components Link to MPA Program Pillars US$
+M
+US$
+M
+US$
+M
+US$
+Equivalent
+M
+US$ M
+US$
+M
+US$
+M
+
+National WASH Program,
+Governance Reforms, and
+Operator Performance
+Improvement
+Pillar 1: National Platforms to
+Accelerate Access to WASH
+Pillar 2: Addressing Sector Governance
+Pillar 3: Service Provider Performance
+Improvement
+51 51
+
+Increasing Access to Climate-
+Resilient Water Supply and
+Sanitation
+180 50 75 135 50 490
+
+Project Coordination and
+Management, Resettlement Costs
+Pillar 4: Leveraging Finance to
+Increase WASH Access
+19 15 34
+Total financing 250 50 75 135 15 50 575
+28. Component 1: National WASH Program, Governance Reforms, and Operator Performance Improvement
+(US$51 million IDA equivalent). This component finances TA, training and equipment for driving governance and institutional reforms [aligned to Pillars 1, 2 and 3 of the MPA respectively].
+• Subcomponent 1.1 – National WASH Program, Governance and Reforms (US$1.4 million IDA
+equivalent): This subcomponent finances TA, training and equipment for (i) Support for National WASH investment program and financing framework, (ii) Feasibility studies, preliminary design studies, detailed design studies, and tender documents for scaling up of future climate-resilient WSS investments in
+Kinshasa, including the rehabilitation and expansion of the Ngaliema water treatment plant, (iii)
+institutional support and capacity development of key liquid sanitation departments and units within the city of Kinshasa administration (CDUK, RASKIN, REGEDEK, FONAK, BSPE), (iv) Support to the implementation of the Government’s commitments under the PPP transaction, including support to
+COPIREP.
+• Subcomponent 1.2 – REGIDESO Performance Improvement (US$49.6 million IDA equivalent): This
+subcomponent finances TA, training, works and equipment to support the implementation of
+REGIDESO's Performance Improvement Action Plan including improving their creditworthiness, digitalization efforts for reducing NRW and other efficiency improvements, thus reducing water losses and Greenhouse gas (GHG) emissions. This specifically includes: (i) the establishment of a REGIDESO center of excellence, including construction of a dedicated training facility, curriculum development, staff professional development, and workforce development programs for new labor market entrants. The
+Center will provide training in digitalization, water quality, NRW management, customer engagement, and implementation of REGIDESO’s Gender Strategy, while facilitating internships and job placement opportunities, (ii) trainee stipends and technical assistance to manage the stipends through the selection and hiring of a Stipends Management Entity,31 (iii) establishment of a central control center for
+REGIDESO HQ (iv) measures to reduce NRW, improve revenue collection—particularly through the deployment of smart/pre-paid meters, and enhance energy efficiency, thereby strengthening resilience to flooding, drought, and water pollution, (v) implementation of digital applications and Supervisory
+Control and Data Acquisition systems (SCADA), (vi) improved water quality management systems, (vii)
+support for equipment and vehicles to enhance operational efficiency (viii) TA for the development of a
+Performance-Based Contract for NRW reduction in a pilot zone of the distribution network, (ix) TA to
+31 Trainees from across the country (not only Kinshasa) are eligible beneficiaries. The stipends will be managed according to the provisions of the Project Implementation Manual (PIM), which will include a dedicated Annex on the same.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 25 mobilize and promote private capital for local manufacturing of select sector equipment such as pipes, pumps, valves, meters with the objective of strengthening local supply chains, reducing import dependence, and creating jobs and (x) a social connections program for households including a communications campaign.
+29. Component 2: Increasing Access to Climate-Resilient Water Supply and Sanitation (US$490 million total;
+US$180 million IDA equivalent, US$260 million co-financing, and US$50 million in PCM) [aligned to Pillar 4 of the MPA].
+• Subcomponent 2.1 Supporting Climate-Resilient Water Supply Access (US$472.7 million; US$162.7
+million IDA equivalent, US$260 million co-financing, US$50 million PCM). This sub-component finances climate-resilient water supply infrastructure, including a Viability Gap Financing (VGF) grant to support a
+PPP for bulk water production in Kinshasa. The investments will reduce the city’s current water production deficit by 64 percent, strengthen water security, reduce vulnerability to droughts, and enhance resilience to flooding by limiting damage to critical infrastructure and reducing contamination risks that contribute to adverse public health outcomes. It includes:
+(i) Construction of a new intake on the Congo River to replace the existing flood and pollution prone intake on the N’djili River, including a transmission pipeline to the N’djili WTP;
+(ii) Rehabilitation of the existing three modules of the N’djili WTP, including the construction of a meter repair and calibration workshop, to ensure resilience against flooding;
+(iii) Expansion of the N’djili WTP with a fourth module of (110,000 m3/day);
+(iv) Construction of a new WTP in Maluku, including intake in the Congo River and transmission pipeline, resilient to flooding
+(v) Rehabilitation and expansion of distribution network infrastructure, including reservoirs and primary, secondary and tertiary networks in selected areas of Kinshasa supplied by the N’djili WTP;
+(vi) Rehabilitation and expansion of distribution network infrastructure, including reservoirs and primary, secondary and tertiary networks in selected areas of Kinshasa supplied by the Ozone WTP;
+(vii)Construction of new distribution network infrastructure, including reservoirs and primary, secondary and tertiary networks in a selected area of Kinshasa supplied by a future WTP in the Maluku area;
+(viii) A Viability Gap Financing (VGF) grant will support the financial viability of the Lukunga bulk water
+PPP. The VGF may be provided as (a) a capital subsidy to the competitively selected Special Purpose
+Vehicle (SPV) responsible for the design, financing, construction, operation, and transfer of the treatment plants, and/or (b) an equity contribution by the State and/or REGIDESO in the SPV. A transaction advisor, financed under the AGREE Project, will support the Government in structuring and conducting the competitive tender process, evaluating bids, selecting the preferred bidder, and finalizing the PPP Agreement, Bulk Water Supply Agreement, and related legal, financing, guarantee, and financial arrangements required for financial close. The Project includes an indicative IDA-
+financed VGF envelope of US$37 million. The final VGF requirement will be determined through competitive tendering, with the contract awarded to the compliant bidder requiring the lowest VGF subsidy while meeting the specified technical, service, and bulk water tariff requirements acceptable to REGIDESO as off-taker. IFC and MIGA are expected to provide stapled financing and guarantee terms as part of the PPP tender package.
+(ix) Engineering and construction supervision services for investments under subcomponent 2.1.
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 26
+
+Table 2: Cofinancing contributions under subcomponent 2.1
+Budget US$ M IDA % CDP % OPEC% BADEA%
+Intake in Congo River and transmission for N’djili WTP 110.0
+Rehabilitation N’djili WTP (module 1-2-3) 24.0
+Construction of Maluku WTP, and intake 78.0
+36.32 63.68
+Expansion of N’djili WTP - 4th module for water production 45.0
+Rehabilitation and expansion distribution system WTP N’djili 24.0
+27.52 72.48
+Rehabilitation and expansion distribution system WTP Ozone 29.2
+Construction distribution system Maluku WTP 68.0
+22.84 77.16
+• Subcomponent 2.2 – Sanitation and WASH access in institutions (US$17.3 million IDA equivalent). This
+subcomponent will support implementation of the CWIS Master Plan by financing (i) the preparation of detailed technical studies for priority sanitation infrastructure, including additional wastewater and fecal sludge treatment plants to reduce GHG emissions and protect water resources; and (ii) TA, works, training, and equipment for no-regret investments, including (a) climate-resilient WASH facilities in schools and health centers, together with menstrual hygiene management activities for girls; (b)
+construction of sanitation facilities at Camp Kabila, together with support for the establishment of a sustainable management model; (c) strengthen liquid sanitation research and management capacity at the University of Kinshasa (goods); (d) construction of a fecal sludge treatment plant (FSTP) in Kinshasa to address uncontrolled fecal sludge disposal and reduce GHG emissions; (e) TA, training, vehicles, and equipment to support the professionalization of private sanitation service operators; (f) sanitation communication and behavior-change campaigns to improve public health outcomes; and (g) supervision costs for construction activities. Investments in the FSTP will be conditional on the establishment of contractual and/or institutional arrangements within the Kinshasa Provincial Government to ensure the long-term sustainability of sanitation services.
+30. Component 3: Project Coordination and Management, Resettlement Costs (US$34 million total; US$19
+million IDA equivalent and US$15 million counterpart funding by REGIDESO). This component finances operating costs; training; TA, equipment and vehicles for project coordination, management, communication, implementation, monitoring and evaluation (M&E), including baseline and end line surveys, for the proposed
+Project Implementation Unit (PIU) – the Cellule d’Exécution des Projets – Eau (CEP-O, Water Project
+Implementation Unit) and the technical support unit at REGIDESO respectively, as well as coordination costs related to the AFE WASH MPA. It includes knowledge exchange visits to countries with experience on private financing for climate-resilient water service delivery, and participation in international trainings and forums, including activities of the AFE WASH Access MPA. This component will also finance the preparation and implementation of environmental and social (E&S) instruments, and resettlement and land acquisition costs associated with investments under subcomponents 1.2, 2.1 and 2.2.
+D. Rationale for Bank Involvement and Role of Partners
+31. The World Bank’s engagement is grounded in its comparative advantage in supporting complex,
+infrastructure programs in FCV and low-capacity environments. The World Bank brings extensive global and regional experience in designing and implementing WASH programs, particularly in contexts that require institutional and governance reforms. DRC will benefit extensively from Phase I of the regional MPA (P506439), implemented by AUDA-NEPAD. AUDA-NEPAD will engage global and regional knowledge partners to deliver TA, analytics, and peer-to-peer exchanges through a learning agenda tailored to the DRC context. Hence, the World
+Bank’s involvement is critical to assist the government with knowledge to (a) advance institutional reforms and regulatory competencies; (b) enhance utility performance through energy efficiency, digitalization, and NRW
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 27 measures; (c) prepare the hybrid PPP; (d) achieve good international practice relating to E&S sustainability, and
+(e) integrate climate adaptation and mitigation measures in infrastructure design and operations.
+32. The World Bank is an active participant in the WASH sectoral coordination group, which ensures
+alignment of development partner interventions with government priorities. The World Bank’s convening and technical leadership roles are instrumental in harmonizing efforts and scaling up impact in the sector. The project is designed to complement and leverage the efforts of key development partners active in DRC’s WASH sector, specifically the UNICEF, AFD, AfDB, KfW-GIZ, OFID, Italian Cooperation (CDP), and BADEA. Details below.
+
+Table 2. Development Partners contributing to or complementing the project
+Name of Development Partner Nature of Involvement /Description
+OFID (OPEC Fund) Joint Co-financier
+BADEA Joint Co-financier
+CDP Joint Co-financier
+African Development Bank (AfDB) Financing a complementary water project in western Kinshasa, aligned with the operation, specifically investments in network rehabilitation and expansion, and household connections in the Lukunga and Ozone areas.
+KfW Supporting improvement of the legislative framework and strengthening of the nascent sector regulator; also contributing to support for REGIDESO.
+GIZ Supporting coordination of investments and institutional support to
+REGIDESO in collaboration with KfW.
+Agence Française de Développement (AFD) Complementary investments and institutional support for REGIDESO.
+UNICEF Supporting the National WASH Program and the Sanitation Roadmap.
+E. Lessons Learned Reflected in the Project Design
+33. The project design draws lessons from the World Bank’s global and regional WASH portfolio, the AFE
+WASH Access MPA (P512763) learning agenda, and implementation experience under KIN ELENDA (P171141),
+PASEA (P178389), and AGREE (P173506) in DRC. These lessons have directly informed the project’s architecture, implementation arrangements, and risk mitigation measures.
+34. Key lessons reflected in the design include: (i) the need for sustained institutional support and phased
+reforms to strengthen REGIDESO; (ii) the use of performance-based management and Key Performance Indicator monitoring to improve utility accountability, service quality, and financial sustainability; (iii) the importance of well-structured hybrid PPPs, combining transaction advisory support, viability gap funding, and other de-risking instruments to mobilize private capital; (iv) the adoption of digital solutions, including SCADA, Management
+Information Systems, and customer engagement platforms, to improve efficiency, transparency, and NRW reduction; (v) targeted gender interventions to reduce women’s time burden, expand access to safely managed services, and promote female employment in the sector; and (vi) the integration of climate-resilient infrastructure and adaptation measures from the outset.
+35. Whereas the AFE WASH MPA learning agenda has not yet started, the program has been influential in
+shaping the operation through lessons learned from the already approved phases and the program priority framework. Key lessons/priorities incorporated in this project include (a) need for policy and regulatory reforms, particularly in FCV contexts, and providing institutional support to state-owned enterprises (REGIDESO); (b)
+contributing to the regional benchmarking of MPA-participating countries in terms of progress on the systems change agenda; (c) documenting utility turnaround toward financial viability, including lessons on opportunities for hybrid PPP models; (d) evaluating the effectiveness of digital tools in improving NRW and overall utility performance; (e) assessing the impact of WASH interventions on girls’/women’s time burden; and (f) generating
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 28 evidence on the cost-effectiveness and scalability of climate-resilient water infrastructure. The proposed interventions are designed not only to deliver results in DRC, but also to generate evidence on the effectiveness of the interventions at regional level. Through the MPA’s knowledge, evaluation, and learning platform, project results will contribute to regional benchmarking and systems-change assessments, and the lessons generated in
+DRC will inform future MPA phases and similar operations across Africa.
+III. PROJECT IMPLEMENTATION
+A. Institutional and Implementation Arrangements
+36. A Project Steering Committee (PSC) that includes the key ministries and agencies involved in the Project
+will be set up to provide strategic guidance during project implementation. The PSC will guide project implementation, approve annual work plans and budgets, and facilitate coordination among the ministries and institutions involved in the Project. The PSC will be chaired by the Ministry of Water Resources and Electricity
+(MRHE), represented by the Secretary General of MRHE. The Ministry of the Environment, Sustainable
+Development and New Climate Economy (MEDDNEC) will serve as vice-chair of this committee, represented by the Secretary General of the MEDDNEC. Its membership will include representatives of the Presidency, the Prime
+Minister’s Office, the Ministries of Finance (Cellule de Suivi des Projets et Programmes, CSPP), Planning, Portfolio
+(Comité de Pilotage de la Réforme des Entreprises du Portefeuille de l'Etat, COPIREP), Health, Education, Urbanism and Housing, Land Affairs, the Governorate of the Ville-Province de Kinshasa (VPK), REGIDESO, ARSPE, and the
+CEP-O Coordinator. CEP-O will serve as the secretariat of the PSC.
+37. CEP-O, hosted within the MRHE, will serve as the Project Implementation Unit (PIU) responsible for
+implementation of all Project activities. CEP-O will be responsible for project management, procurement, technical quality control, contract management, implementation oversight, financial management, E&S risk management, monitoring and evaluation, reporting, coordination, and liaison with the PSC. CEP-O will prepare and consolidate project work plans and budgets, oversee implementation across all components, manage project funds, and ensure compliance with World Bank requirements. CEP-O is already staffed with the specialists required for project implementation.
+38. For the water supply component, CEP-O’s technical staff will be complemented by a team of technical
+experts from REGIDESO’s Projects and Works Directorate, comprising REGIDESO staff and additional specialists
+(consultants). The team will provide technical support to CEP-O in the preparation and review of technical specifications, engineering studies, bidding documents, cost estimates, technical designs, participation in evaluation committees, and implementation monitoring, with the objective of strengthening technical quality and project management capacity. CEP-O will remain solely responsible for project implementation as mentioned above. A collaboration agreement between CEP-O and REGIDESO will clearly define the scope of collaboration, including the roles and responsibilities of each party, as well as the specific expertise, TA, and support to be provided by the technical experts.
+39. For the hybrid PPP, the SPV will be responsible for financing, design, construction, commissioning,
+operation, and maintenance of the bulk water production facilities. A concession agreement (or similar PPP contract), a bulk water supply agreement, and any other agreements required for the financing, implementation, operation, maintenance, and support of the facilities will be entered into among REGIDESO, the selected private partner (through the SPV), and other relevant government entities, as applicable. Collectively, these agreements and instruments will constitute the PPP Transaction Documents. CEP-O will lead the competitive procurement of the private partner in accordance with World Bank procurement requirements and will provide overall oversight, coordination, and consolidated reporting through financial close and throughout project implementation. The
+SPV will enter into a Subsidiary Agreement with the Government and a Project Agreement with IDA, setting out
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 29 the terms of the VGF support and ensuring compliance with the applicable World Bank Environmental and Social
+Standards.
+40. For sanitation-related activities, CEP-O will likewise retain full responsibility for project implementation
+and will coordinate technical inputs from the relevant national and provincial entities. The VPK, through the
+CDUK and other specialized provincial services (RASKIN, REGEDEK, BSPE, and FONAK), will provide technical support to CEP-O during project preparation and implementation. This support may include assistance with technical specifications, participation in evaluation committees, technical review of designs, monitoring of sanitation investments, incorporation of urban resilience considerations, and engagement with local stakeholders and provincial authorities. A dedicated Sanitation expert will be recruited and seconded to CDUK to facilitate coordination and technical support. The DAS of the MEDDNEC will provide policy oversight to ensure that the national standards are respected. CEP-O will coordinate these inputs as part of its overall responsibility for project implementation and reporting.
+41. Specialized technical entities will support implementation in their respective areas of mandate. UC-PPP
+and ARSPE will support PPP-related activities, including reviewing relevant procurement and consultation documents, participation in evaluation processes, and monitoring of PPP contractual arrangements. COPIREP will support activities related to the continued reform and transformation of REGIDESO. The entities responsible for health facilities, schools, roads, urban planning, and land administration, will contribute to technical review, permitting, land allocation, monitoring, and supervision within their respective mandates. The detailed roles, responsibilities, membership of the PSC, and coordination arrangements will be further specified in the Project
+Implementation Manual (PIM).
+42. To ensure coordination with Phase I of the AFE WASH Access MPA, a representative of MRHE has been
+assigned to the Regional Project Advisory Committee to ensure that MPA activities are well scoped and add value to the project.
+B. Results Monitoring, Evaluation, and Verification Arrangements
+43. CEP-O will be responsible for overall M&E of the project. A dedicated M&E specialist will lead data
+collection, consolidation, analysis, and reporting against the Results Framework, providing regular updates on progress toward outcomes. CEP-O will coordinate with REGIDESO, CDUK, and the specialized entities to ensure timely and accurate reporting. Component 3 will finance M&E capacity building and baseline and end-point surveys. CEP-O will establish and manage the M&E system, including: (a) collection and reporting of results data, disaggregated by gender and age; (b) beneficiary surveys and technical audits to validate service delivery outcomes, including impacts on women’s and girls’ time burden and perception surveys to track the impact of improved water and sanitation services on community trust in the state as a service provider; (c) midterm and completion evaluations to assess results, sustainability, and lessons learned. CEP-O will submit semi-annual progress reports, as well as midterm and completion reports, to the World Bank. M&E findings will be used throughout implementation to monitor progress, address emerging challenges, and inform future operations.
+C. Sustainability
+44. Institutional and Financial Sustainability. The project strengthens governance, institutional capacity, and
+utility performance to enhance sector sustainability. Implementation of REGIDESO’s PIP, digitalization, and accountability measures will improve operational efficiency, revenue collection, and reduce NRW. Tariff and financing studies will guide future reforms, while co-financing and hybrid PPPs will help mobilize private capital.
+45. Technical Sustainability and Climate Resilience. Sustainability is supported through climate-resilient
+investments in water production and distribution infrastructure, designed to withstand flood and drought risks.
+Digital tools, including SCADA systems, will improve efficiency and service reliability. Capacity building,
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 30 knowledge transfer under works and PPP contracts, and investments based on master plans, feasibility studies, and detailed designs will strengthen long-term operation and maintenance.
+46. Environmental and Social Sustainability. Environmental and social considerations are integrated into
+project design through application of the WBG Environmental and Social Framework (ESF). The project will screen all subproject activities for E&S risks and impacts, and prepare Environmental and Social Impact Assessments
+(ESIA), Environmental and Social Management Plans (ESMP) and Resettlement Action Plans (RAP), a Stakeholder
+Engagement Plan (SEP), Labor Management and Operational Health and Safety Procedures, and other instruments as needed to ensure an effective and inclusive implementation and management of E&S risks and impacts, including Sexual Exploitation and Abuse/Sexual Harassment (SEA/SH) risks. Citizen engagement and communication activities will support service expansion, promote responsible water use, and reduce vandalism.
+IV. PROJECT APPRAISAL SUMMARY
+A. Technical, Economic and Financial Analysis
+47. The project design incorporates a phased, climate-resilient and inclusive approach to address critical gaps
+in WSS infrastructure and service delivery in Kinshasa. The project is structured around three components that collectively aim to strengthen institutional frameworks, improve service provider performance, expand access, and ensure effective project coordination and management. The technical design prioritizes investments to urgently increase production capacity, through new climate-proof water intakes for water treatment plants on the Congo River, as well as transmission lines, reservoirs, and rehabilitation and expansion of the distribution network. The project, through TA, also reinforces the roles of key institutions such as REGIDESO and the sanitation institutions in the city.
+48. The technical design is underpinned by feasibility studies, assessments, and climate risk screening. Key
+technical features include the following:
+(a) Climate-resilient infrastructure. Water supply investments are designed to withstand floods, droughts, and landslides. Replacing the N’djili tributary intake with a Congo River intake for the N’djili and Lukunga WTPs will improve resilience by reducing exposure to highly polluted and sediment-laden water during flood events.
+(b) Digitalization and operational efficiency. Investments include SCADA, digital customer tools, and energy-efficient upgrades to reduce NRW and improve service quality, as prioritized in REGIDESO’s PIP.
+(c) Inclusive sanitation follows the CWIS approach, integrating household demand creation with support to professionalize local FSM operators. Investments include a fecal sludge treatment plant, behavior change interventions, and durable sanitation facilities in military camps, schools, and health centers, complemented by menstrual hygiene education to support girls’ empowerment and school attendance.
+49. Preparation activities financed under KIN ELENDA (P171141) and AGREE (P173506) have substantially
+advanced project readiness. Detailed designs for the water supply investments are complete or well advanced, and procurement is underway for the N’djili works package (approximately US$200 million), with contract award expected before project effectiveness. For the Lukunga hybrid PPP (approximately US$88 million), the transaction advisor is being recruited under AGREE, while reference designs and bidding documents are expected to be finalized by June 2027. For sanitation, detailed designs and bidding documents for the fecal sludge treatment plant have been completed and procurement is underway. The ESIA and RAP for the N’djili works are expected to be completed by May 2027. An implementation plan has been prepared, with about 40 percent of civil works expected to commence within the first year of implementation. CEP-O has demonstrated implementation
+The World Bank
+Accelerating Access to Water, Sanitation and Hygiene in the Eastern and Southern Africa Region (P512763) –
+Phase 4
+Page 31 capacity through the ongoing projects and will be further reinforced by REGIDESO technical experts and a dedicated CDUK sanitation specialist, expected to be in place by credit effectiveness.
+Economic Assessment
+50. Economic analysis. An economic analysis was carried out to assess the economic viability of the project,
+and the results confirm the strong justification for the proposed investments. The cost-benefit analysis (CBA)
+evaluates the economic costs and benefits of water supply and sanitation investments under a 30-year time horizon using a 6 percent discount rate. The analysis includes (a) total project costs, comprising capital investments, operation and maintenance (O&M), and replacement costs, as well as TA and project management expenditures, and (b) all quantifiable benefits, including reduced incidence of waterborne diseases, healthcare cost savings, and significant time savings for households and caregivers.
+51. The project is expected to deliver substantial economic and social benefits by expanding access to climate-
+resilient water supply services to approximately 4.2 million people and sanitation services to about 200,000 people in Kinshasa. In addition to quantified benefits, the project generates important non-monetized benefits, including an improved social contract between the state and citizens as service provider, improved environmental quality, protection of water resources, enhanced climate resilience, reduced pollution from untreated fecal sludge, strengthened institutional capacity, improved educational outcomes through better
+WASH facilities in schools, and positive gender impacts, particularly for women and girls.
+52. Economic efficiency and climate co-benefits. The efficiency analysis yields strong results, confirming the
+project’s economic viability. The aggregated economic analysis estimates an Economic Net Present Value (ENPV)
+of approximately US$1.48 billion and an Economic Internal Rate of Return (EIRR) of 33.2 percent, and a benefit-
+cost ratio exceeding 3.09, indicating that the economic benefits significantly outweigh the costs. The water supply component generates most of the benefits, reflecting large gains from improved service reliability and reduced time spent collecting water, while the sanitation component also contributes positively through health improvements and environmental benefits.
+53. The economic analysis incorporates greenhouse gas (GHG) accounting using both high and low Shadow
+Price of Carbon scenarios. Results show that the project will lead to a net reduction in emissions of approximately
+-715,400 tonnes of CO₂ equivalent over its lifetime (about –23,850 tonnes annually), driven mainly by reduced
+reliance on boiling water and improved wastewater management. The inclusion of climate externalities does not materially alter the economic results, as the magnitude of emission reductions, while positive, remains modest relative to the overall economic benefits.
+54. The sensitivity analysis confirms the robustness of the project’s economic viability under a range of
+adverse scenarios. The analysis was conducted to test the robustness of the CBA results under changes in key parameters, including investment cost overruns, O&M costs, individual benefit categories (time savings and health benefits), the Shadow Price of Carbon (SPC), and the discount rate. The results demonstrate that the project's economic viability is not highly sensitive to variations in any of these parameters. Switching value analysis shows that investment costs would need to increase by more than 350 percent, O&M costs by more than
+645 percent, or the discount rate by more than 500 percent before the project would cease to generate a positive net present value. The project's economic returns are thus robust across a wide range of adverse scenarios.
+55. Financial analysis. The financial and economic analysis assessed the feasibility of mobilizing private capital
+for bulk water production through a Public-Private Partnership (PPP) for the proposed Lukunga (100,000 m³/day)
+and Maluku (110,000 m³/day) water treatment plants, with a combined capacity of approximately 210,000 m³/day and annual production of about 69 million m³. The analysis was based on a medium-growth scenario reflecting realistic improvements in service coverage, operational performance, and customer growth. Under this scenario, water service coverage in Kinshasa is projected to increase from about 50 percent today to 61 percent

@@ -5,7 +5,7 @@ import { TOOLS } from '../../../src/tools/registry';
 import { jsonRpc, mcpPost, messagesIn } from '../helpers';
 
 const TOOL_NAMES = ['search_documents', 'search_projects', 'get_project', 'read_document', 'retrieve_skill'];
-const STUBS = ['get_project', 'read_document', 'retrieve_skill'];
+const STUBS = ['retrieve_skill'];
 
 describe('tool registry', () => {
     it('lists the five tools and diagnostic', () => {
