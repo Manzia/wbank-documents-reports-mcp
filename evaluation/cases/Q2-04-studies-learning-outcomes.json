@@ -3,6 +3,7 @@
   "query_id": "Q2.4",
   "group": "Q2",
   "tier": "project_centred_reading",
+  "region": "none",
   "task": "Classify studies by what they measured",
   "query_wording": "Which of these studies measured student learning outcomes, and which only reported device distribution or teacher training?",
   "placeholders": [

@@ -1,5 +1,5 @@
 // Checks the evaluation set (MCP-120): 41 cases, Q1 9 / Q2 5 / Q3 16 / Q4 11, each valid against
-// case.schema.json. Run with `node --test evaluation/cases/cases.test.mjs`. No dependencies: the validator below
+// case.schema.json, with 3 to 13 cases in each of six regions. Run with `node --test evaluation/cases/cases.test.mjs`. No dependencies: the validator below
 // covers the JSON Schema keywords case.schema.json uses, and fails on any other keyword.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -92,6 +92,26 @@ for (const { file, data } of cases) {
     }
   });
 }
+
+const REGIONS = ['Africa', 'East Asia & Pacific', 'Europe & Central Asia', 'Latin America & Caribbean',
+  'Middle East & North Africa', 'South Asia'];
+
+test('each of the six regions has 3 to 13 cases', () => {
+  for (const r of REGIONS) {
+    const n = cases.filter(c => c.data.region === r).length;
+    assert.ok(n >= 3 && n <= 13, `${r}: ${n} cases`);
+  }
+});
+
+test('Pxxxxxx and P123456 cases each sit in one region, different from each other and not Africa', () => {
+  const regionOf = re => [...new Set(cases.filter(c => re.test(c.data.query_wording)).map(c => c.data.region))];
+  const q3 = regionOf(/Pxxxxxx/);
+  const q4 = regionOf(/P123456/);
+  assert.equal(q3.length, 1, `Pxxxxxx regions: ${q3}`);
+  assert.equal(q4.length, 1, `P123456 regions: ${q4}`);
+  assert.notEqual(q3[0], q4[0]);
+  for (const r of [q3[0], q4[0]]) assert.ok(REGIONS.includes(r) && r !== 'Africa', r);
+});
 
 test('case IDs and query IDs are unique', () => {
   assert.equal(new Set(cases.map(c => c.data.id)).size, cases.length);

@@ -3,6 +3,7 @@
   "query_id": "Q1.6",
   "group": "Q1",
   "tier": "search_and_retrieve",
+  "region": "none",
   "task": "Look up a document by report number",
   "query_wording": "Find this report number and give me its abstract and PDF.",
   "placeholders": [

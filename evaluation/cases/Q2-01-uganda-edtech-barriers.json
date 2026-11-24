@@ -3,6 +3,7 @@
   "query_id": "Q2.1",
   "group": "Q2",
   "tier": "project_centred_reading",
+  "region": "Africa",
   "task": "Extract findings from one diagnostic, with pages",
   "query_wording": "What barriers to classroom technology adoption does the Uganda diagnostic identify? Cite the pages.",
   "placeholders": [

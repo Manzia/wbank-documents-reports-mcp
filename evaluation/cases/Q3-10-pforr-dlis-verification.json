@@ -3,10 +3,11 @@
   "query_id": "Q3.10",
   "group": "Q3",
   "tier": "project_centred_reading",
+  "region": "Africa",
   "task": "Review a results program",
   "query_wording": "For this Program-for-Results operation, what are the disbursement-linked indicators and how is each one verified?",
   "placeholders": [
-    { "placeholder": "this Program-for-Results operation", "resolved_to": "P163732, Tanzania Sustainable Rural Water Supply and Sanitation Program (SRWSSP)", "reason": "A PforR with eight DLIs and a verification protocol table; its 2018 program appraisal document is catalogued as 'Project Appraisal Document', which tests document-type handling. Links to the Tanzania water case (Q3-03)." }
+    { "placeholder": "this Program-for-Results operation", "resolved_to": "P163732, Tanzania Sustainable Rural Water Supply and Sanitation Program (SRWSSP)", "reason": "A PforR with eight DLIs and a verification protocol table; its 2018 program appraisal document is catalogued as 'Project Appraisal Document', which tests document-type handling." }
   ],
   "turns": [
     { "user": "For this Program-for-Results operation, P163732 (Tanzania Sustainable Rural Water Supply and Sanitation Program), what are the disbursement-linked indicators and how is each one verified?" }

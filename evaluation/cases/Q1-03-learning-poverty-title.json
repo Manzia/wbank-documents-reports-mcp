@@ -3,6 +3,7 @@
   "query_id": "Q1.3",
   "group": "Q1",
   "tier": "search_and_retrieve",
+  "region": "none",
   "task": "Find a half-remembered report by title words",
   "query_wording": "I remember ‘learning poverty’ was in the title. Can you find the report?",
   "turns": [

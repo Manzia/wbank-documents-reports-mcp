@@ -3,6 +3,7 @@
   "query_id": "Q1.7",
   "group": "Q1",
   "tier": "search_and_retrieve",
+  "region": "none",
   "task": "Author, document type and topic search",
   "query_wording": "Find working papers by this author on education finance.",
   "placeholders": [

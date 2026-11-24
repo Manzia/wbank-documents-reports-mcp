@@ -3,6 +3,7 @@
   "query_id": "Q1.9",
   "group": "Q1",
   "tier": "search_and_retrieve",
+  "region": "none",
   "task": "Refine and page a previous search",
   "query_wording": "Of those results, show only English-language reports from 2022 onward. Give me the next ten.",
   "placeholders": [

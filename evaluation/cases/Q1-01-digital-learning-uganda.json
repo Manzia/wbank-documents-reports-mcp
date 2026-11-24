@@ -3,6 +3,7 @@
   "query_id": "Q1.1",
   "group": "Q1",
   "tier": "search_and_retrieve",
+  "region": "Africa",
   "task": "Keyword, country and date search",
   "query_wording": "Find World Bank reports on digital learning in Uganda since 2020.",
   "turns": [

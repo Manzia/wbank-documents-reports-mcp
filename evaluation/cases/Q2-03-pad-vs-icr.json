@@ -3,6 +3,7 @@
   "query_id": "Q2.3",
   "group": "Q2",
   "tier": "project_centred_reading",
+  "region": "Africa",
   "task": "Compare appraisal targets with completion results",
   "query_wording": "Compare what the appraisal document promised with what the completion report says the project achieved.",
   "placeholders": [

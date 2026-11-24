@@ -3,6 +3,7 @@
   "query_id": "Q1.8",
   "group": "Q1",
   "tier": "search_and_retrieve",
+  "region": "none",
   "task": "Rank countries by matching records (facet)",
   "query_wording": "Which countries appear most often in the results for school connectivity?",
   "turns": [
