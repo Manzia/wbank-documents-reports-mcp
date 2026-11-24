@@ -1,12 +1,11 @@
 import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
 import { fetchVocabulary, type FetchVocabularyOptions } from '../vocabulary/fetch';
 import { VOCABULARY_FILE, serialiseVocabulary, type Vocabulary } from '../vocabulary/format';
+import { BUCKET_ENV } from '../vocabulary/load';
 
 // Design §7.2: started every 30 days by EventBridge Scheduler and once by deploy.yml after each deploy. The
 // snapshot is written only when every list was fetched; on any failure nothing is written, so the previous
 // snapshot (a version in the bucket) stays, and the error fails the invocation, which the alarm reports.
-// The same variable MCP-131's `load` reads; the template sets it on both functions.
-export const BUCKET_ENV = 'VOCABULARY_BUCKET';
 
 export interface RefreshOptions {
     bucket?: string;

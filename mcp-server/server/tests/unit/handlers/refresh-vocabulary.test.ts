@@ -1,9 +1,10 @@
 import { afterEach, beforeAll, beforeEach, describe, expect, it, jest } from '@jest/globals';
 import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
 import { mockClient } from 'aws-sdk-client-mock';
-import { BUCKET_ENV, lambdaHandler, refreshVocabulary } from '../../../src/handlers/refresh-vocabulary';
+import { lambdaHandler, refreshVocabulary } from '../../../src/handlers/refresh-vocabulary';
 import * as fetchModule from '../../../src/vocabulary/fetch';
 import { VOCABULARY_FILE, parseVocabulary, type Vocabulary } from '../../../src/vocabulary/format';
+import { BUCKET_ENV } from '../../../src/vocabulary/load';
 import { blockNetwork, json, testUpstream, type Reply } from '../upstream/fake-fetch';
 
 const BUCKET = 'vocabulary-bucket';
