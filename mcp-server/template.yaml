@@ -54,6 +54,12 @@ Resources:
         Variables:
           NODE_OPTIONS: --enable-source-maps
           VOCABULARY_BUCKET: !Ref VocabularyBucket
+          # Temporary: Haiku 5.5 through the Claude API, because Bedrock refuses
+          # Claude 5.5 for this account (MCP-102 F1). Remove both to go back to
+          # the Bedrock inference profile below. The secret is created out of
+          # band; only its ARN is here, and the key is read at run time.
+          HAIKU_BACKEND: claude-api
+          CLAUDE_API_KEY_SECRET_ARN: !Sub arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:wbank-documents-reports-mcp/claude/access-WKipFP
       FunctionUrlConfig:
         AuthType: AWS_IAM
         InvokeMode: RESPONSE_STREAM
@@ -64,6 +70,7 @@ Resources:
               Action: s3:GetObject
               Resource: !Sub ${VocabularyBucket.Arn}/vocabulary.json
         # Haiku 5.5 through the US cross-region inference profile only (design §7).
+        # Unused while HAIKU_BACKEND is claude-api; kept for the move back.
         - Statement:
             - Effect: Allow
               Action:
@@ -74,6 +81,12 @@ Resources:
                 - !Sub arn:${AWS::Partition}:bedrock:us-east-1::foundation-model/anthropic.claude-haiku-5-5
                 - !Sub arn:${AWS::Partition}:bedrock:us-east-2::foundation-model/anthropic.claude-haiku-5-5
                 - !Sub arn:${AWS::Partition}:bedrock:us-west-2::foundation-model/anthropic.claude-haiku-5-5
+        # The Claude API key (temporary route above): this one secret, read only.
+        # It uses the aws/secretsmanager key, so no KMS grant is needed.
+        - Statement:
+            - Effect: Allow
+              Action: secretsmanager:GetSecretValue
+              Resource: !Sub arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:wbank-documents-reports-mcp/claude/access-WKipFP
     Metadata:
       BuildMethod: esbuild
       BuildProperties:
