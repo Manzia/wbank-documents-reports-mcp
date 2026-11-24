@@ -3,10 +3,11 @@
   "query_id": "Q3.5",
   "group": "Q3",
   "tier": "cross_project_synthesis",
+  "region": "none",
   "task": "Choose results measures",
   "query_wording": "What indicators, baselines, targets, and data sources have similar primary health care projects used?",
   "placeholders": [
-    { "placeholder": "similar (implied comparison)", "resolved_to": "primary health care operations in East Africa", "reason": "Kept as worded; the reference reads two East African PHC operations, and the rubric accepts other comparable PHC projects." }
+    { "placeholder": "similar (implied comparison)", "resolved_to": "primary health care operations in East Africa and South Asia", "reason": "Kept as worded; the reference reads two East African PHC operations and one South Asian one, so the comparator set spans two regions, and the rubric accepts other comparable PHC projects." }
   ],
   "turns": [
     { "user": "What indicators, baselines, targets, and data sources have similar primary health care projects used?" }
@@ -15,26 +16,28 @@
     { "kind": "search", "api": "projects", "role": "Primary health care projects", "filters": { "qterm": "primary health care" } },
     { "kind": "document", "project_id": "P152394", "document_id": "26414452", "report_number": "PAD1694", "document_type": "Project Appraisal Document", "document_date": "2016-05-24", "pages": "46-49", "role": "Kenya Transforming Health Systems for Universal Care: results framework with data sources" },
     { "kind": "document", "project_id": "P152736", "document_id": "33778767", "report_number": "ICR5729", "document_type": "Implementation Completion and Results Report", "document_date": "2022-03-29", "pages": "14, 18, 23, 39-41", "role": "Tanzania Strengthening Primary Health Care for Results: PDO indicators, baselines, original and revised targets, results, data sources" },
+    { "kind": "document", "project_id": "P181564", "document_id": "34332881", "report_number": "PADHI00450", "document_type": "Project Appraisal Document", "document_date": "2024-05-30", "pages": "7, 33-34, 38-39", "role": "Sri Lanka Primary Healthcare System Enhancing Project: results framework and M&E plan" },
     { "kind": "document", "project_id": "P152394", "document_id": "34327185", "report_number": "ICR6313", "document_type": "Implementation Completion and Results Report", "document_date": "2024-05-29", "role": "Kenya THS-UC ICR (achieved values)", "required": false }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "Coverage: two East African primary health care operations read in detail; other PHC projects (for example in Nigeria, Ethiopia or Uganda) use similar indicators.",
+          "Coverage: three primary health care operations read in detail, two in East Africa and one in South Asia; other PHC projects (for example in Nigeria, Indonesia or the Kyrgyz Republic) use similar indicators.",
           "1. Kenya - Transforming Health Systems for Universal Care (P152394), PAD 2016 (pp. 46-49). PDO: improve utilization and quality of primary health care services with a focus on RMNCAH. PDO indicators, baseline to end target: children under 1 fully immunized 73% to 76%; pregnant women with at least four ANC visits 40% to 46%; births attended by skilled personnel 57% to 64%; women 15-49 using modern family planning 41% to 45%; inspected facilities meeting safety standards 0% to 50%. Intermediate indicators include functional community units 1,549 to 2,400; ANC attendees given iron-folic acid 31% to 40%; facilities providing basic emergency obstetric care 39% to 60%; facilities submitting complete, timely DHIS data 76% to 85%; birth registration 60% to 80%; people receiving essential health, nutrition and population services 3,704,547 to 4,200,000. Data sources: DHIS2 (collected by county departments of health) for the service-coverage indicators; administrative inspection data using the Joint Health Inspection Checklist (MoH Quality Standards) for safety standards; Master Community Unit listing; Master Facility List for BEmOC; civil registration annual report for births; grievance registers and project status reports for process indicators (pp. 48-49).",
           "2. Tanzania - Strengthening Primary Health Care for Results (P152736), PforR, ICR 2022 (pp. 14, 39-41). PDO: improve the quality of PHC services nationwide with a focus on MNCH. PDO indicators with baseline (Aug 2015), original target, revised target and result: PHC facilities rated 3 stars or above 0%, 50%, revised 30%, achieved 19% (2018; the third assessment round was not carried out); pregnant women with four or more ANC visits 41.2%, 60%, 68%, 90%; ANC attendees receiving two doses of malaria IPT 42.52%, 60%, 80%, 79%; institutional deliveries 44.72%, 60%, 70%, 83%; children 12-59 months receiving vitamin A 51%, 65%, 90%, 100%. Intermediate indicators include health's share of the government budget (8.5% baseline, target 9.75%, result 7%) and completeness of quarterly HMIS data in DHIS (89.5% baseline, target 95%, result 96%) (pp. 18, 41). Data sources: the national Star Rating assessment of all PHC facilities for the quality indicator (p. 23, fn. 8 p. 14) and the routine HMIS/DHIS2 for service indicators (pp. 18, 21).",
-          "Common choices: ANC4+, skilled or institutional delivery and immunization as coverage measures from routine DHIS2 data; a facility quality score from a national assessment tool (Star Rating, JHIC); data-quality indicators (DHIS completeness) because the routine system is the main source."
+          "3. Sri Lanka - Primary Healthcare System Enhancing Project (P181564), PAD 2024 (IDA US$150 million; Ministry of Health; pp. 7, 33-34). PDO: improve access and quality of primary health care services across all districts. PDO indicators, baseline (March 2024) to target (December 2028): women aged 35-45 who tested positive for cervical cancer followed up 10% to 55%; people aged 35+ diagnosed with hypertension effectively managed and followed up 30% to 50%; primary medical care institutions (PMCIs) meeting four of five minimum capabilities (essential drugs mandatory, plus staff, equipment, laboratory access and emergency care) 550 to 825, a performance-based condition; RDHS divisions with palliative and geriatric services at selected PMCIs 0 to 26. Intermediate indicators include PMCIs adopting the expanded service package 0% to 65%, PMCIs running annual patient-experience surveys 0% to 40%, staff trained on the integrated packages 0% to 60% and PMCIs with all three safe dispensing practices 0 to 825 (pp. 33-34). Data sources: PMCI routine health records with Family Health Bureau and NCD Directorate data, reported through the provinces to the MoH; PMCI/MOH office routine data and the project monitoring system; MoH publications for policy indicators (pp. 38-39).",
+          "Common choices: the African projects use ANC4+, skilled or institutional delivery and immunization as coverage measures from routine DHIS2 data, while Sri Lanka measures NCD and cancer follow-up; all three use a facility quality or capability measure (Star Rating, the JHIC safety standards, PMCI minimum capabilities) and rely on routine information systems, which is why data-quality indicators (DHIS completeness) or data-quality assessments appear."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Reads the results frameworks of at least two primary health care operations (the reference uses P152394 and P152736; other PHC projects are acceptable)."
+      "Reads the results frameworks of at least two primary health care operations from more than one region (the reference uses P152394, P152736 and P181564; other PHC projects are acceptable)."
     ],
     "grounded": [
       "Indicators, baselines, targets and data sources match the cited documents with pages; no invented values."
