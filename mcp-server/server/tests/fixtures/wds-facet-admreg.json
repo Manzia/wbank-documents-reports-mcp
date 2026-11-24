@@ -1,0 +1,69 @@
+{
+  "rows": 1,
+  "os": 0,
+  "page": 1,
+  "total": 623825,
+  "documents": {
+    "D34442285": {
+      "id": "34442285",
+      "display_title": "Official Documents- Amendment No. 2 to the GPE Grant Agreement for Grant TF0B0846.pdf",
+      "pdfurl": "https://documents.worldbank.org/curated/en/099010125191591417/pdf/P165557-f25f8ee3-ba39-43fe-a0eb-cd711d88eb49.pdf",
+      "guid": "099010125191591417",
+      "url": "http://documents.worldbank.org/curated/en/099010125191591417"
+    },
+    "facets": {
+      "admreg_exact": {
+        "0": {
+          "count": 92842,
+          "name": "Eastern and Southern Africa",
+          "label": "Eastern and Southern Africa"
+        },
+        "1": {
+          "count": 85491,
+          "name": "Western and Central Africa",
+          "label": "Western and Central Africa"
+        },
+        "2": {
+          "count": 81526,
+          "name": "East Asia and Pacific",
+          "label": "East Asia and Pacific"
+        },
+        "3": {
+          "count": 79519,
+          "name": "Latin America and Caribbean",
+          "label": "Latin America and Caribbean"
+        },
+        "4": {
+          "count": 77157,
+          "name": "Europe and Central Asia",
+          "label": "Europe and Central Asia"
+        },
+        "5": {
+          "count": 66014,
+          "name": "Other",
+          "label": "Other"
+        },
+        "6": {
+          "count": 58612,
+          "name": "South Asia",
+          "label": "South Asia"
+        },
+        "7": {
+          "count": 55202,
+          "name": "Middle East, North Africa, Afghanistan, and Pakistan",
+          "label": "Middle East, North Africa, Afghanistan, and Pakistan"
+        },
+        "8": {
+          "count": 16591,
+          "name": "Africa",
+          "label": "Africa"
+        },
+        "9": {
+          "count": 12,
+          "name": "Northern Africa",
+          "label": "Northern Africa"
+        }
+      }
+    }
+  }
+}
