@@ -121,6 +121,16 @@ describe('checkCommand', () => {
     'coproc foo { gh pr merge 1; }',
     'function f { gh pr merge 1; }',
     'x { gh pr merge 1; }',
+    // `coproc` / `function` stay blocked wherever a command starts
+    'function f',
+    'coproc npm test',
+    'X=1 function f { npm test; }',
+    'if true; then function f { npm test; }; fi',
+    '{ coproc npm test; }',
+    'npm test; function f { npm test; }',
+    'time function f { npm test; }',
+    'bash -c "function f { npm test; }"',
+    'echo $(coproc npm test)',
     'GH_CONFIG_DIR+=/x gh pr view 1',
     'export GH_CONFIG_DIR+=/x',
     'export GH_CONFIG_{DIR,X}=/tmp/x',
@@ -226,6 +236,12 @@ describe('checkCommand', () => {
     'npm test >/dev/null 2>&1',
     'npm test 2>&- 1>&2',
     'gh pr create --draft --title "MCP-110: x" --body-file - <<\'EOF\'\nbody\nEOF',
+    // MCP-112: "function" as a plain word, as in its task title, a heredoc line or a commit message
+    'gh pr create --draft --base main --title "MCP-112: Skeleton MCP server function and streaming URL"',
+    'cat > /tmp/body.md <<\'EOF\'\n## Task\n\nMCP-112: Skeleton MCP server function and streaming URL\nEOF',
+    'git commit -m MCP-112: Add the server function',
+    'echo function coproc',
+    'grep -rn function src',
     'jq . < out.json > pretty.json'
   ])('allows %s on a feature branch', (command) => {
     expect(checkCommand(command, onBranch('feature/MCP-110-hosted-zone'))).toEqual({ allowed: true });
