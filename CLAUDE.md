@@ -230,7 +230,11 @@ start with `wbank-docs-reports-mcp-prod-`), or the deploy fails with AccessDenie
   with "Cannot use both --resolve-s3 and --s3-bucket". samconfig now names the
   same artifacts bucket.
 - **Never pass `--parameter-overrides` for a parameter the template doesn't
-  declare**, because the deploy fails. `template.yaml` declares no Parameters today.
+  declare**, because the deploy fails. `template.yaml` declares two:
+  `HostedZoneId` (its default is used, no override) and `AlertEmail` (NoEcho),
+  which `deploy.yml` passes from the `production` variable `ALERT_EMAIL` and
+  masks in the log. The address is never in the repo. Adding a parameter
+  without a default means adding its override to `deploy.yml` in the same PR.
 - **Keep the logical IDs of roles and functions short.** CloudFormation names a
   role `<stack>-<LogicalId>-<12 chars>` (a function's implicit role is
   `<LogicalId>Role`) and truncates the whole name past 64 characters, to
