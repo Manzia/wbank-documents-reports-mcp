@@ -53,10 +53,16 @@ Resources:
       Environment:
         Variables:
           NODE_OPTIONS: --enable-source-maps
+          VOCABULARY_BUCKET: !Ref VocabularyBucket
       FunctionUrlConfig:
         AuthType: AWS_IAM
         InvokeMode: RESPONSE_STREAM
       Policies:
+        # Design §3.2 "Tool execution role": the vocabulary snapshot only.
+        - Statement:
+            - Effect: Allow
+              Action: s3:GetObject
+              Resource: !Sub ${VocabularyBucket.Arn}/vocabulary.json
         # Haiku 5.5 through the US cross-region inference profile only (design §7).
         - Statement:
             - Effect: Allow
@@ -76,6 +82,162 @@ Resources:
         Sourcemap: true
         EntryPoints:
           - src/handlers/mcp.ts
+
+  # Design §3.2 "Vocabulary bucket", §7.2. Holds vocabulary.json only.
+  # Versioning keeps earlier snapshots; noncurrent versions expire after a
+  # year, the newest 5 always kept. Retained so a stack deletion or a
+  # replacing change keeps the snapshot.
+  VocabularyBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership: BucketOwnerEnforced
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+          - Id: expire-old-snapshots
+            Status: Enabled
+            NoncurrentVersionExpiration:
+              NoncurrentDays: 365
+              NewerNoncurrentVersions: 5
+            AbortIncompleteMultipartUpload:
+              DaysAfterInitiation: 1
+
+  VocabularyBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref VocabularyBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: TlsOnly
+            Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource:
+              - !GetAtt VocabularyBucket.Arn
+              - !Sub ${VocabularyBucket.Arn}/*
+            Condition:
+              Bool:
+                aws:SecureTransport: 'false'
+
+  RefreshVocabularyLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      RetentionInDays: 30
+
+  # Design §3.2 "Vocabulary refresh function", §7.2. Runs MCP-130's fetch
+  # (paced, sequential requests; about 175 of them per MCP-102) and writes
+  # vocabulary.json only when every list was fetched. Started every 30 days by
+  # the schedule below and once by deploy.yml after each deploy. A failed
+  # refresh writes nothing and fails the invocation, which the alarm reports.
+  RefreshVocabularyFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: server/
+      Handler: refresh-vocabulary.lambdaHandler
+      Runtime: nodejs24.x
+      Architectures:
+        - arm64
+      MemorySize: 512
+      Timeout: 900
+      LoggingConfig:
+        LogFormat: JSON
+        LogGroup: !Ref RefreshVocabularyLogGroup
+      Environment:
+        Variables:
+          NODE_OPTIONS: --enable-source-maps
+          VOCABULARY_BUCKET: !Ref VocabularyBucket
+      # The schedule invokes asynchronously: one retry, then the error stands.
+      EventInvokeConfig:
+        MaximumRetryAttempts: 1
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action: s3:PutObject
+              Resource: !Sub ${VocabularyBucket.Arn}/vocabulary.json
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: es2023
+        Sourcemap: true
+        EntryPoints:
+          - src/handlers/refresh-vocabulary.ts
+
+  # Trusted by EventBridge Scheduler for this account's default schedule group
+  # (Scheduler's aws:SourceArn is the group, not the schedule); may invoke
+  # only the refresh function.
+  RefreshVocabularyScheduleRole:
+    Type: AWS::IAM::Role
+    Properties:
+      PermissionsBoundary: !Sub arn:${AWS::Partition}:iam::aws:policy/PowerUserAccess
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: scheduler.amazonaws.com
+            Action: sts:AssumeRole
+            Condition:
+              StringEquals:
+                aws:SourceAccount: !Ref AWS::AccountId
+                aws:SourceArn: !Sub arn:${AWS::Partition}:scheduler:${AWS::Region}:${AWS::AccountId}:schedule-group/default
+      Policies:
+        - PolicyName: invoke-refresh-vocabulary
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: lambda:InvokeFunction
+                Resource: !GetAtt RefreshVocabularyFunction.Arn
+
+  RefreshVocabularySchedule:
+    Type: AWS::Scheduler::Schedule
+    Properties:
+      Description: Refresh the vocabulary snapshot (vocabulary.json) every 30 days
+      ScheduleExpression: rate(30 days)
+      FlexibleTimeWindow:
+        Mode: 'OFF'
+      State: ENABLED
+      Target:
+        Arn: !GetAtt RefreshVocabularyFunction.Arn
+        RoleArn: !GetAtt RefreshVocabularyScheduleRole.Arn
+        RetryPolicy:
+          MaximumRetryAttempts: 3
+          MaximumEventAgeInSeconds: 3600
+
+  # Design §7.2, §11. Any failed refresh, scheduled or from deploy.yml, is an
+  # error of the function. No action yet: MCP-140 adds the SNS topic and moves
+  # this alarm onto it.
+  RefreshVocabularyErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: The vocabulary refresh failed; vocabulary.json was not written and the previous snapshot stays
+      Namespace: AWS/Lambda
+      MetricName: Errors
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref RefreshVocabularyFunction
+      Statistic: Sum
+      Period: 3600
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
 
   # Design §3.2 "Gateway service role". The gateway signs its calls to the
   # function URL with this role (SigV4, service `lambda`). IAM-auth function
@@ -872,3 +1034,9 @@ Outputs:
   McpEndpoint:
     Description: Public MCP endpoint (CloudFront); the URL users add as a connector
     Value: https://worldbank-mcp.manzia.com/mcp
+  VocabularyBucket:
+    Description: Bucket holding the vocabulary snapshot vocabulary.json
+    Value: !Ref VocabularyBucket
+  RefreshVocabularyFunction:
+    Description: Vocabulary refresh function (deploy.yml invokes it after each deploy)
+    Value: !Ref RefreshVocabularyFunction

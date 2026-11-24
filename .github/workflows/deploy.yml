@@ -224,6 +224,42 @@ jobs:
           echo "::error::Re-sync of target wb did not finish within 10 minutes"
           exit 1
 
+      # Design §7.2: a new or changed stack always gets a current vocabulary
+      # snapshot. Invokes the refresh function synchronously (it runs for up
+      # to 15 minutes) and fails the job if it fails; a failed refresh writes
+      # nothing, so the previous snapshot stays. One attempt only, so a read
+      # timeout can't start a second refresh.
+      - name: Refresh vocabulary snapshot
+        env:
+          AWS_MAX_ATTEMPTS: '1'
+        run: |
+          set -euo pipefail
+          FUNCTION=$(aws cloudformation describe-stacks \
+            --stack-name ${{ env.STACK_NAME }} \
+            --query "Stacks[0].Outputs[?OutputKey=='RefreshVocabularyFunction'].OutputValue | [0]" \
+            --output text)
+          if [[ -z "${FUNCTION}" || "${FUNCTION}" == "None" ]]; then
+            echo "::error::Refresh function not found in the stack outputs"
+            exit 1
+          fi
+          echo "Invoking ${FUNCTION}"
+          OUT="${RUNNER_TEMP}/refresh-vocabulary.json"
+          FUNCTION_ERROR=$(aws lambda invoke \
+            --function-name "${FUNCTION}" \
+            --invocation-type RequestResponse \
+            --cli-binary-format raw-in-base64-out \
+            --payload '{}' \
+            --cli-read-timeout 960 \
+            --query 'FunctionError' \
+            --output text \
+            "${OUT}")
+          cat "${OUT}"; echo
+          if [[ "${FUNCTION_ERROR}" != "None" ]]; then
+            echo "::error::Vocabulary refresh failed (${FUNCTION_ERROR}); the previous snapshot stays"
+            exit 1
+          fi
+          echo "Vocabulary snapshot refreshed."
+
       - name: Stack outputs
         run: |
           aws cloudformation describe-stacks \
