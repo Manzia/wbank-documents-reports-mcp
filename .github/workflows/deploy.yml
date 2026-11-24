@@ -103,7 +103,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
-          cache-dependency-path: mcp-server/hello-world/package-lock.json
+          cache-dependency-path: mcp-server/server/package-lock.json
 
       - uses: actions/setup-python@v5
         with:
