@@ -3,61 +3,53 @@
   "query_id": "Q1.5",
   "group": "Q1",
   "tier": "search_and_retrieve",
+  "region": "Latin America & Caribbean",
   "task": "A project's documents of selected types, in order",
   "query_wording": "I have the project ID. Show me its appraisal document, procurement plans, and completion report in chronological order.",
   "placeholders": [
-    { "placeholder": "the project ID", "resolved_to": "P174059 (Kenya GPE COVID-19 Learning Continuity in Basic Education Project)", "reason": "Closed project whose public record has exactly one PAD, five procurement plans and one ICR, so the full list is short and checkable." }
+    { "placeholder": "the project ID", "resolved_to": "P174677 (Nicaragua COVID-19 Education Sector Response Project)", "reason": "Closed project whose public record has exactly one PAD, three procurement plans and one ICR, so the full list is short and checkable." }
   ],
   "turns": [
-    { "user": "I have the project ID: P174059. Show me its appraisal document, procurement plans, and completion report in chronological order." }
+    { "user": "I have the project ID: P174677. Show me its appraisal document, procurement plans, and completion report in chronological order." }
   ],
   "expected_sources": [
-    {
-      "kind": "search",
-      "api": "wds",
-      "role": "The project's records of the three document types, by document date ascending",
-      "filters": { "proid": "P174059", "docty_exact": "Project Appraisal Document^Procurement Plan^Implementation Completion and Results Report", "srt": "docdt", "order": "asc" }
-    },
-    { "kind": "document", "project_id": "P174059", "document_id": "32238794", "report_number": "PAD3937", "document_type": "Project Appraisal Document", "document_date": "2020-07-13", "title": "Kenya - GPE COVID-19 Learning Continuity in Basic Education Project", "role": "Appraisal document" },
-    { "kind": "document", "project_id": "P174059", "document_id": "32512593", "report_number": "STEP40346", "document_type": "Procurement Plan", "document_date": "2020-10-23", "role": "Procurement plan 1 of 5" },
-    { "kind": "document", "project_id": "P174059", "document_id": "32518681", "report_number": "STEP40463", "document_type": "Procurement Plan", "document_date": "2020-10-27", "role": "Procurement plan 2 of 5" },
-    { "kind": "document", "project_id": "P174059", "document_id": "32652432", "report_number": "STEP42327", "document_type": "Procurement Plan", "document_date": "2020-12-09", "role": "Procurement plan 3 of 5" },
-    { "kind": "document", "project_id": "P174059", "document_id": "32775752", "report_number": "STEP44089", "document_type": "Procurement Plan", "document_date": "2021-01-25", "role": "Procurement plan 4 of 5" },
-    { "kind": "document", "project_id": "P174059", "document_id": "33173870", "report_number": "STEP50498", "document_type": "Procurement Plan", "document_date": "2021-06-14", "role": "Procurement plan 5 of 5" },
-    { "kind": "document", "project_id": "P174059", "document_id": "33864368", "report_number": "ICR5949", "document_type": "Implementation Completion and Results Report", "document_date": "2022-06-22", "title": "Kenya - GPE COVID 19 Learning Continuity in Basic Education Project", "role": "Completion report" }
+    { "kind": "search", "api": "wds", "role": "The project's records of the three document types, by document date ascending", "filters": { "proid": "P174677", "docty_exact": "Project Appraisal Document^Procurement Plan^Implementation Completion and Results Report", "srt": "docdt", "order": "asc" } },
+    { "kind": "document", "project_id": "P174677", "document_id": "32634743", "report_number": "PAD4106", "document_type": "Project Appraisal Document", "document_date": "2020-12-02", "title": "Nicaragua - COVID-19 Education Sector Response Project", "role": "Appraisal document" },
+    { "kind": "document", "project_id": "P174677", "document_id": "32797193", "report_number": "STEP44409", "document_type": "Procurement Plan", "document_date": "2021-02-01", "role": "Procurement plan 1 of 3" },
+    { "kind": "document", "project_id": "P174677", "document_id": "33711832", "report_number": "STEP59663", "document_type": "Procurement Plan", "document_date": "2022-01-24", "role": "Procurement plan 2 of 3" },
+    { "kind": "document", "project_id": "P174677", "document_id": "33920124", "report_number": "STEP71173", "document_type": "Procurement Plan", "document_date": "2022-10-18", "role": "Procurement plan 3 of 3" },
+    { "kind": "document", "project_id": "P174677", "document_id": "34051804", "report_number": "ICR6217", "document_type": "Implementation Completion and Results Report", "document_date": "2023-04-27", "title": "Nicaragua - COVID-19 Education Sector Response Project", "role": "Completion report" }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "P174059 - Kenya GPE COVID-19 Learning Continuity in Basic Education Project (closed). Seven matching public records, oldest first by document date:",
-          "1. 2020-07-13 - Project Appraisal Document (PAD3937), disclosed 2021-04-01. http://documents.worldbank.org/curated/en/136241617300233433",
-          "2. 2020-10-23 - Procurement Plan (STEP40346). http://documents.worldbank.org/curated/en/914731603482598925",
-          "3. 2020-10-27 - Procurement Plan (STEP40463). http://documents.worldbank.org/curated/en/654481603801465261",
-          "4. 2020-12-09 - Procurement Plan (STEP42327). http://documents.worldbank.org/curated/en/262751607528578492",
-          "5. 2021-01-25 - Procurement Plan (STEP44089). http://documents.worldbank.org/curated/en/821551611598836249",
-          "6. 2021-06-14 - Procurement Plan (STEP50498). http://documents.worldbank.org/curated/en/619871623678763620",
-          "7. 2022-06-22 - Implementation Completion and Results Report (ICR5949), disclosed 2022-07-12. http://documents.worldbank.org/curated/en/099245007082214737",
-          "All three requested types are available. The project's other public records (ISRs, ESCPs, an ICR Review, audits) were not requested."
+          "P174677 - Nicaragua COVID-19 Education Sector Response Project (closed 2022-10-31). Five matching public records, oldest first by document date:",
+          "1. 2020-12-02 - Project Appraisal Document (PAD4106), disclosed 2021-02-02. http://documents.worldbank.org/curated/en/593891612224683734",
+          "2. 2021-02-01 - Procurement Plan (STEP44409). http://documents.worldbank.org/curated/en/407641612213320657",
+          "3. 2022-01-24 - Procurement Plan (STEP59663). http://documents.worldbank.org/curated/en/099800001242217813",
+          "4. 2022-10-18 - Procurement Plan (STEP71173). http://documents.worldbank.org/curated/en/099300010182227675",
+          "5. 2023-04-27 - Implementation Completion and Results Report (ICR6217), disclosed 2023-04-28. http://documents.worldbank.org/curated/en/099042723124529199",
+          "All three requested types are available. The project's other public records (ISRs, ESCPs, an ICR Review and others) were not requested."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Filters by project ID P174059 and the three document types; returns the PAD, all five procurement plans and the ICR."
+      "Filters by project ID P174677 and the three document types; returns the PAD, all three procurement plans and the ICR."
     ],
     "grounded": [
       "Dates, report numbers and links match the records; nothing is added that the project does not have."
     ],
     "complete": [
-      "All seven records, in ascending document-date order, with a link each."
+      "All five records, in ascending document-date order, with a link each."
     ],
     "scoped": [
-      "Orders by document date (and does not confuse it with disclosure date, e.g. the PAD was disclosed 2021-04-01); says whether each requested type was found."
+      "Orders by document date (and does not confuse it with disclosure date, e.g. the PAD was disclosed 2021-02-02, after the first plan); says whether each requested type was found."
     ]
   },
   "stability": "stable"
