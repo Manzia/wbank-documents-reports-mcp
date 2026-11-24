@@ -16,6 +16,15 @@ Parameters:
     Default: Z0958616XII8519LOW0Q
     Description: Hosted zone worldbank-mcp.manzia.com (certificate validation and alias records)
 
+  # Design §11 (A3). deploy.yml passes it from the `production` environment
+  # variable ALERT_EMAIL; the address is never in the repo. NoEcho keeps it
+  # out of describe-stacks and the console.
+  AlertEmail:
+    Type: String
+    NoEcho: true
+    AllowedPattern: '^[^@\s]+@[^@\s]+\.[^@\s]+$'
+    Description: Address the alarm topic and the budget alert e-mail
+
 Globals:
   Function:
     # REQUIRED. The deploy role may only create IAM roles that carry this
@@ -239,12 +248,13 @@ Resources:
           MaximumEventAgeInSeconds: 3600
 
   # Design §7.2, §11. Any failed refresh, scheduled or from deploy.yml, is an
-  # error of the function. No action yet: MCP-140 adds the SNS topic and moves
-  # this alarm onto it.
+  # error of the function.
   RefreshVocabularyErrorsAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
       AlarmDescription: The vocabulary refresh failed; vocabulary.json was not written and the previous snapshot stays
+      AlarmActions:
+        - !Ref AlertTopic
       Namespace: AWS/Lambda
       MetricName: Errors
       Dimensions:
@@ -1038,6 +1048,555 @@ Resources:
       AliasTarget:
         DNSName: !GetAtt Distribution.DomainName
         HostedZoneId: Z2FDTNDATAQYW2
+
+  # Design §8.3. Gateway-wide budgets, changeable without interruption; they
+  # fail open, and the WAF per-IP rules still apply. A tool without an entry
+  # (diagnostic) is held only by the target budget. No connection limit (D8).
+  ToolRateLimit:
+    Type: AWS::BedrockAgentCore::GatewayRateLimit
+    Properties:
+      GatewayIdentifier: !GetAtt Gateway.GatewayIdentifier
+      RateLimitId: per-tool
+      Description: Requests per minute for each tool, across all callers
+      DimensionKeys:
+        - toolName
+      Entries:
+        - Dimensions:
+            toolName: wb___read_document
+          Requests:
+            - Rate: 120
+              Period: minute
+        - Dimensions:
+            toolName: wb___search_documents
+          Requests:
+            - Rate: 600
+              Period: minute
+        - Dimensions:
+            toolName: wb___search_projects
+          Requests:
+            - Rate: 600
+              Period: minute
+        - Dimensions:
+            toolName: wb___get_project
+          Requests:
+            - Rate: 600
+              Period: minute
+        - Dimensions:
+            toolName: wb___retrieve_skill
+          Requests:
+            - Rate: 600
+              Period: minute
+
+  TargetRateLimit:
+    Type: AWS::BedrockAgentCore::GatewayRateLimit
+    Properties:
+      GatewayIdentifier: !GetAtt Gateway.GatewayIdentifier
+      RateLimitId: per-target
+      Description: Requests per minute for target wb, across all callers
+      DimensionKeys:
+        - targetName
+      Entries:
+        - Dimensions:
+            targetName: wb
+          Requests:
+            - Rate: 1200
+              Period: minute
+
+  # Design §11 (A3). Every alarm notifies this topic, which e-mails the
+  # operator; the subscription waits for confirmation from that e-mail. Not
+  # KMS-encrypted: CloudWatch can't publish to a topic under the AWS managed
+  # SNS key.
+  AlertTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: World Bank MCP alerts
+      Subscription:
+        - Protocol: email
+          Endpoint: !Ref AlertEmail
+
+  # Thresholds below are starting values, tuned once real traffic is seen.
+  # Gateway metrics: namespace AWS/Bedrock-AgentCore, dimensions as the
+  # gateway publishes them (Operation, Protocol, Resource = gateway ARN, plus
+  # Method and Name for tool calls). Missing data is normal at low traffic.
+
+  # Tool errors: failed tool calls at the gateway (5xx) plus errors of the
+  # MCP server function. A tool result with isError (an upstream failure,
+  # reported to the caller) is a successful call to both and isn't counted.
+  ToolErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Tool calls are failing (gateway 5xx on tools/call plus MCP server function errors, 3 or more in 5 minutes)
+      AlarmActions:
+        - !Ref AlertTopic
+      Metrics:
+        - Id: errors
+          Label: Tool errors
+          Expression: FILL(gateway, 0) + FILL(fn, 0)
+          ReturnData: true
+        - Id: gateway
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/Bedrock-AgentCore
+              MetricName: SystemErrors
+              Dimensions:
+                - Name: Method
+                  Value: tools/call
+                - Name: Operation
+                  Value: InvokeGateway
+                - Name: Protocol
+                  Value: MCP
+                - Name: Resource
+                  Value: !GetAtt Gateway.GatewayArn
+            Period: 300
+            Stat: Sum
+        - Id: fn
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/Lambda
+              MetricName: Errors
+              Dimensions:
+                - Name: FunctionName
+                  Value: !Ref McpServerFunction
+            Period: 300
+            Stat: Sum
+      EvaluationPeriods: 1
+      Threshold: 3
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+
+  # p95 of each tool's end-to-end duration at the gateway; the alarm takes the
+  # slowest tool. The diagnostic tool is left out: it runs long on purpose.
+  ToolDurationAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: p95 duration of a tool above 30 s in 2 of the last 3 five-minute periods
+      AlarmActions:
+        - !Ref AlertTopic
+      Metrics:
+        - Id: slowest
+          Label: Slowest tool p95 (ms)
+          Expression: MAX(METRICS("d"))
+          ReturnData: true
+        - Id: d1
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/Bedrock-AgentCore
+              MetricName: Duration
+              Dimensions:
+                - Name: Method
+                  Value: tools/call
+                - Name: Name
+                  Value: wb___search_documents
+                - Name: Operation
+                  Value: InvokeGateway
+                - Name: Protocol
+                  Value: MCP
+                - Name: Resource
+                  Value: !GetAtt Gateway.GatewayArn
+            Period: 300
+            Stat: p95
+        - Id: d2
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/Bedrock-AgentCore
+              MetricName: Duration
+              Dimensions:
+                - Name: Method
+                  Value: tools/call
+                - Name: Name
+                  Value: wb___search_projects
+                - Name: Operation
+                  Value: InvokeGateway
+                - Name: Protocol
+                  Value: MCP
+                - Name: Resource
+                  Value: !GetAtt Gateway.GatewayArn
+            Period: 300
+            Stat: p95
+        - Id: d3
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/Bedrock-AgentCore
+              MetricName: Duration
+              Dimensions:
+                - Name: Method
+                  Value: tools/call
+                - Name: Name
+                  Value: wb___get_project
+                - Name: Operation
+                  Value: InvokeGateway
+                - Name: Protocol
+                  Value: MCP
+                - Name: Resource
+                  Value: !GetAtt Gateway.GatewayArn
+            Period: 300
+            Stat: p95
+        - Id: d4
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/Bedrock-AgentCore
+              MetricName: Duration
+              Dimensions:
+                - Name: Method
+                  Value: tools/call
+                - Name: Name
+                  Value: wb___read_document
+                - Name: Operation
+                  Value: InvokeGateway
+                - Name: Protocol
+                  Value: MCP
+                - Name: Resource
+                  Value: !GetAtt Gateway.GatewayArn
+            Period: 300
+            Stat: p95
+        - Id: d5
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/Bedrock-AgentCore
+              MetricName: Duration
+              Dimensions:
+                - Name: Method
+                  Value: tools/call
+                - Name: Name
+                  Value: wb___retrieve_skill
+                - Name: Operation
+                  Value: InvokeGateway
+                - Name: Protocol
+                  Value: MCP
+                - Name: Resource
+                  Value: !GetAtt Gateway.GatewayArn
+            Period: 300
+            Stat: p95
+      EvaluationPeriods: 3
+      DatapointsToAlarm: 2
+      Threshold: 30000
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+
+  # Requests the gateway answered with 429: a rate limit above, or a
+  # service-managed limit, was hit.
+  GatewayThrottlesAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: The gateway throttled requests (rate limits hit)
+      AlarmActions:
+        - !Ref AlertTopic
+      Namespace: AWS/Bedrock-AgentCore
+      MetricName: Throttles
+      Dimensions:
+        - Name: Operation
+          Value: InvokeGateway
+        - Name: Protocol
+          Value: MCP
+        - Name: Resource
+          Value: !GetAtt Gateway.GatewayArn
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+
+  # Requests the gateway's web ACL blocked. Traffic through CloudFront carries
+  # the origin secret, so blocks are direct calls to the gateway's hostname or
+  # IP-reputation hits.
+  WafBlocksAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Spike in requests blocked by the gateway's web ACL (50 or more in 5 minutes)
+      AlarmActions:
+        - !Ref AlertTopic
+      Namespace: AWS/Bedrock-AgentCore
+      MetricName: WafBlocks
+      Dimensions:
+        - Name: Operation
+          Value: InvokeGateway
+        - Name: Protocol
+          Value: MCP
+        - Name: Resource
+          Value: !GetAtt Gateway.GatewayArn
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 50
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+
+  # FAIL_CLOSE: requests rejected because the gateway couldn't reach its WAF.
+  WafFailClosesAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: The gateway rejected requests because its web ACL was unreachable (FAIL_CLOSE)
+      AlarmActions:
+        - !Ref AlertTopic
+      Namespace: AWS/Bedrock-AgentCore
+      MetricName: WafFailCloses
+      Dimensions:
+        - Name: Operation
+          Value: InvokeGateway
+        - Name: Protocol
+          Value: MCP
+        - Name: Resource
+          Value: !GetAtt Gateway.GatewayArn
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+
+  # CloudFront publishes a 5xx rate, not a count; rate x requests gives an
+  # approximate count, so a single error at low traffic doesn't alarm.
+  CloudFront5xxAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: CloudFront returned 5xx errors (about 5 or more in 5 minutes)
+      AlarmActions:
+        - !Ref AlertTopic
+      Metrics:
+        - Id: errors
+          Label: CloudFront 5xx (approximate count)
+          Expression: FILL(errorRate, 0) * FILL(requests, 0) / 100
+          ReturnData: true
+        - Id: errorRate
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/CloudFront
+              MetricName: 5xxErrorRate
+              Dimensions:
+                - Name: DistributionId
+                  Value: !Ref Distribution
+                - Name: Region
+                  Value: Global
+            Period: 300
+            Stat: Average
+        - Id: requests
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/CloudFront
+              MetricName: Requests
+              Dimensions:
+                - Name: DistributionId
+                  Value: !Ref Distribution
+                - Name: Region
+                  Value: Global
+            Period: 300
+            Stat: Sum
+      EvaluationPeriods: 1
+      Threshold: 5
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+
+  # Haiku through the Bedrock inference profile (design §7). A throttled call
+  # falls back at once, so the answer loses Haiku's help. No data while
+  # HAIKU_BACKEND is claude-api.
+  BedrockThrottlesAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Bedrock throttled Haiku calls (us.anthropic.claude-haiku-5-5)
+      AlarmActions:
+        - !Ref AlertTopic
+      Namespace: AWS/Bedrock
+      MetricName: InvocationThrottles
+      Dimensions:
+        - Name: ModelId
+          Value: us.anthropic.claude-haiku-5-5
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+
+  # A scheduled refresh that never reached the function: Scheduler gave up
+  # after its retries, or the invoke itself failed. Scheduler publishes these
+  # per schedule group (the default one), not per schedule.
+  RefreshScheduleFailedAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: EventBridge Scheduler could not start the vocabulary refresh (default schedule group)
+      AlarmActions:
+        - !Ref AlertTopic
+      Metrics:
+        - Id: failed
+          Label: Failed scheduled invocations
+          Expression: FILL(dropped, 0) + FILL(targetErrors, 0)
+          ReturnData: true
+        - Id: dropped
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/Scheduler
+              MetricName: InvocationDroppedCount
+              Dimensions:
+                - Name: ScheduleGroup
+                  Value: default
+            Period: 3600
+            Stat: Sum
+        - Id: targetErrors
+          ReturnData: false
+          MetricStat:
+            Metric:
+              Namespace: AWS/Scheduler
+              MetricName: TargetErrorCount
+              Dimensions:
+                - Name: ScheduleGroup
+                  Value: default
+            Period: 3600
+            Stat: Sum
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+
+  # Design §11: one dashboard for the alarmed metrics, plus the CloudFront web
+  # ACL's per-rule counts for the COUNT-mode week (MCP-170).
+  Dashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: !Ref AWS::StackName
+      DashboardBody: !Sub
+        - |
+          {
+            "widgets": [
+              {
+                "type": "alarm", "x": 0, "y": 0, "width": 24, "height": 3,
+                "properties": {
+                  "title": "Alarms",
+                  "alarms": [
+                    "${ToolErrorsAlarm.Arn}", "${ToolDurationAlarm.Arn}", "${GatewayThrottlesAlarm.Arn}",
+                    "${WafBlocksAlarm.Arn}", "${WafFailClosesAlarm.Arn}", "${CloudFront5xxAlarm.Arn}",
+                    "${BedrockThrottlesAlarm.Arn}", "${RefreshVocabularyErrorsAlarm.Arn}", "${RefreshScheduleFailedAlarm.Arn}"
+                  ]
+                }
+              },
+              {
+                "type": "metric", "x": 0, "y": 3, "width": 12, "height": 6,
+                "properties": {
+                  "title": "Gateway tool calls", "region": "${AWS::Region}", "stat": "Sum", "period": 60, "view": "timeSeries",
+                  "metrics": [
+                    ["AWS/Bedrock-AgentCore", "Invocations", "Method", "tools/call", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}"],
+                    ["AWS/Bedrock-AgentCore", "SystemErrors", "Method", "tools/call", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}"],
+                    ["AWS/Bedrock-AgentCore", "UserErrors", "Method", "tools/call", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}"],
+                    ["AWS/Bedrock-AgentCore", "Throttles", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}", {"label": "Throttles (all methods)"}]
+                  ]
+                }
+              },
+              {
+                "type": "metric", "x": 12, "y": 3, "width": 12, "height": 6,
+                "properties": {
+                  "title": "p95 tool duration (ms)", "region": "${AWS::Region}", "stat": "p95", "period": 300, "view": "timeSeries",
+                  "annotations": {"horizontal": [{"label": "Alarm 30 s", "value": 30000}]},
+                  "metrics": [
+                    ["AWS/Bedrock-AgentCore", "Duration", "Method", "tools/call", "Name", "wb___search_documents", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}"],
+                    ["AWS/Bedrock-AgentCore", "Duration", "Method", "tools/call", "Name", "wb___search_projects", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}"],
+                    ["AWS/Bedrock-AgentCore", "Duration", "Method", "tools/call", "Name", "wb___get_project", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}"],
+                    ["AWS/Bedrock-AgentCore", "Duration", "Method", "tools/call", "Name", "wb___read_document", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}"],
+                    ["AWS/Bedrock-AgentCore", "Duration", "Method", "tools/call", "Name", "wb___retrieve_skill", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}"]
+                  ]
+                }
+              },
+              {
+                "type": "metric", "x": 0, "y": 9, "width": 12, "height": 6,
+                "properties": {
+                  "title": "MCP server function", "region": "${AWS::Region}", "stat": "Sum", "period": 60, "view": "timeSeries",
+                  "metrics": [
+                    ["AWS/Lambda", "Invocations", "FunctionName", "${McpServerFunction}"],
+                    ["AWS/Lambda", "Errors", "FunctionName", "${McpServerFunction}"],
+                    ["AWS/Lambda", "ConcurrentExecutions", "FunctionName", "${McpServerFunction}", {"stat": "Maximum", "yAxis": "right"}]
+                  ]
+                }
+              },
+              {
+                "type": "metric", "x": 12, "y": 9, "width": 12, "height": 6,
+                "properties": {
+                  "title": "Gateway web ACL", "region": "${AWS::Region}", "stat": "Sum", "period": 300, "view": "timeSeries",
+                  "metrics": [
+                    ["AWS/Bedrock-AgentCore", "WafBlocks", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}"],
+                    ["AWS/Bedrock-AgentCore", "WafFailCloses", "Operation", "InvokeGateway", "Protocol", "MCP", "Resource", "${Gateway.GatewayArn}"]
+                  ]
+                }
+              },
+              {
+                "type": "metric", "x": 0, "y": 15, "width": 12, "height": 6,
+                "properties": {
+                  "title": "CloudFront", "region": "${AWS::Region}", "period": 300, "view": "timeSeries",
+                  "metrics": [
+                    ["AWS/CloudFront", "Requests", "DistributionId", "${Distribution}", "Region", "Global", {"stat": "Sum"}],
+                    ["AWS/CloudFront", "5xxErrorRate", "DistributionId", "${Distribution}", "Region", "Global", {"stat": "Average", "yAxis": "right"}],
+                    ["AWS/CloudFront", "4xxErrorRate", "DistributionId", "${Distribution}", "Region", "Global", {"stat": "Average", "yAxis": "right"}]
+                  ]
+                }
+              },
+              {
+                "type": "metric", "x": 12, "y": 15, "width": 12, "height": 6,
+                "properties": {
+                  "title": "CloudFront web ACL", "region": "${AWS::Region}", "stat": "Sum", "period": 300, "view": "timeSeries",
+                  "metrics": [
+                    ["AWS/WAFV2", "AllowedRequests", "WebACL", "${CloudFrontWebAclName}", "Rule", "ALL"],
+                    ["AWS/WAFV2", "BlockedRequests", "WebACL", "${CloudFrontWebAclName}", "Rule", "ALL"],
+                    ["AWS/WAFV2", "CountedRequests", "WebACL", "${CloudFrontWebAclName}", "Rule", "ai-platform-rate"],
+                    ["AWS/WAFV2", "CountedRequests", "WebACL", "${CloudFrontWebAclName}", "Rule", "per-ip-rate"]
+                  ]
+                }
+              },
+              {
+                "type": "metric", "x": 0, "y": 21, "width": 12, "height": 6,
+                "properties": {
+                  "title": "Haiku on Bedrock", "region": "${AWS::Region}", "stat": "Sum", "period": 300, "view": "timeSeries",
+                  "metrics": [
+                    ["AWS/Bedrock", "Invocations", "ModelId", "us.anthropic.claude-haiku-5-5"],
+                    ["AWS/Bedrock", "InvocationThrottles", "ModelId", "us.anthropic.claude-haiku-5-5"]
+                  ]
+                }
+              },
+              {
+                "type": "metric", "x": 12, "y": 21, "width": 12, "height": 6,
+                "properties": {
+                  "title": "Vocabulary refresh (daily)", "region": "${AWS::Region}", "stat": "Sum", "period": 86400, "view": "timeSeries",
+                  "metrics": [
+                    ["AWS/Lambda", "Invocations", "FunctionName", "${RefreshFunction}"],
+                    ["AWS/Lambda", "Errors", "FunctionName", "${RefreshFunction}"],
+                    ["AWS/Scheduler", "InvocationDroppedCount", "ScheduleGroup", "default"],
+                    ["AWS/Scheduler", "TargetErrorCount", "ScheduleGroup", "default"]
+                  ]
+                }
+              }
+            ]
+          }
+        - CloudFrontWebAclName: !Select [0, !Split ['|', !Ref CloudFrontWebAcl]]
+
+  # Design §11, plan §10 item 3: USD 50 a month, e-mailed when actual spend
+  # passes it. Budgets covers the whole account; it e-mails the address
+  # directly, so the topic needs no policy for Budgets.
+  MonthlyBudget:
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetName: !Sub ${AWS::StackName}-monthly
+        BudgetType: COST
+        TimeUnit: MONTHLY
+        BudgetLimit:
+          Amount: 50
+          Unit: USD
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 100
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref AlertEmail
 
 Outputs:
   FunctionUrl:

@@ -144,11 +144,21 @@ jobs:
           sam build --no-cached
 
       - name: Deploy
+        env:
+          # A `production` variable, not a secret, so mask it before any
+          # output: the address must not appear in the run log (MCP-140).
+          ALERT_EMAIL: ${{ vars.ALERT_EMAIL }}
         run: |
           set -euo pipefail
+          if [[ -z "${ALERT_EMAIL}" ]]; then
+            echo "::error::The production environment variable ALERT_EMAIL is not set"
+            exit 1
+          fi
+          echo "::add-mask::${ALERT_EMAIL}"
           cd mcp-server
-          # No --parameter-overrides: the template declares no Parameters,
-          # and passing one it does not declare fails the deploy.
+          # Override only parameters the template declares: passing one it
+          # doesn't declare fails the deploy. AlertEmail is NoEcho.
+          # HostedZoneId keeps its default.
           #
           # Dedicated artifacts bucket (created out-of-band, us-east-1), not
           # --resolve-s3: that would make the pipeline create and own a
@@ -160,6 +170,7 @@ jobs:
             --s3-bucket ${{ env.ARTIFACTS_BUCKET }} \
             --s3-prefix ${{ env.STACK_NAME }} \
             --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND \
+            --parameter-overrides "AlertEmail=${ALERT_EMAIL}" \
             --no-confirm-changeset \
             --no-fail-on-empty-changeset \
             --force-upload
