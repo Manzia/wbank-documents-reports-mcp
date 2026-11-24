@@ -3,52 +3,51 @@
   "query_id": "Q4.2",
   "group": "Q4",
   "tier": "cross_project_synthesis",
+  "region": "South Asia",
   "task": "Find comparable operations",
-  "query_wording": "Find active rural water projects in East Africa similar to this proposed operation. Show their design choices and implementing arrangements.",
+  "query_wording": "Find active rural water projects in South Asia similar to this proposed operation. Show their design choices and implementing arrangements.",
   "placeholders": [
-    { "placeholder": "this proposed operation", "resolved_to": "a proposed results-based rural water supply and sanitation program delivered through local governments", "reason": "The query needs a description of the proposed operation; a short one is given in the turn so 'similar' can be judged." }
+    { "placeholder": "this proposed operation", "resolved_to": "a proposed rural water supply operation that expands household connections and makes local governments responsible for operation and maintenance", "reason": "The query needs a description of the proposed operation; a short one is given in the turn so 'similar' can be judged." }
   ],
   "turns": [
-    { "user": "Find active rural water projects in East Africa similar to this proposed operation: a results-based rural water supply and sanitation program delivered through local governments. Show their design choices and implementing arrangements." }
+    { "user": "Find active rural water projects in South Asia similar to this proposed operation: a rural water supply program that expands household connections and makes local governments responsible for operation and maintenance. Show their design choices and implementing arrangements." }
   ],
   "expected_sources": [
-    { "kind": "search", "api": "projects", "role": "Active rural water projects in Eastern and Southern Africa", "filters": { "qterm": "rural water supply", "status_exact": "Active", "regionname_exact": "Eastern and Southern Africa" } },
-    { "kind": "document", "project_id": "P508698", "document_id": "40053951", "report_number": "PADHP00152", "document_type": "Project Appraisal Document", "document_date": "2024-11-13", "pages": "8, 57-58, 62", "role": "Tanzania SRWSSP Phase II (PforR + IPF), program appraisal document dated Sep 2025 inside" },
-    { "kind": "document", "project_id": "P179012", "document_id": "34207938", "report_number": "PAD5449", "document_type": "Program Appraisal Document", "document_date": "2023-11-29", "pages": "11, 15, 20-21", "role": "Kenya Water, Sanitation and Hygiene Program (K-WASH, PforR + IPF)" },
-    { "kind": "project", "project_id": "P507830", "role": "Ethiopia One WASH Consolidated Account Project; an acceptable further comparator", "required": false },
-    { "kind": "project", "project_id": "P509550", "role": "Zambia Water Supply and Sanitation Services in Growth Centers Program; an acceptable further comparator", "required": false }
+    { "kind": "search", "api": "projects", "role": "Active rural water projects in South Asia", "filters": { "qterm": "rural water supply", "status_exact": "Active", "regionname_exact": "South Asia" }, "note": "Count each project by its Projects API regionname; the record for Pakistan's Punjab rural water project (P169071) fetched on 2026-11-23 shows 'Middle East, North Africa, Afghanistan, and Pakistan', so the reference uses India and Bangladesh." },
+    { "kind": "document", "project_id": "P179039", "document_id": "34018880", "report_number": "PAD5226", "document_type": "Program Appraisal Document", "document_date": "2023-03-04", "pages": "6-7, 11-13, 20, 24, 27", "role": "India Karnataka Sustainable Rural Water Supply Program (PforR)" },
+    { "kind": "document", "project_id": "P169342", "document_id": "32391369", "report_number": "PAD3753", "document_type": "Project Appraisal Document", "document_date": "2020-09-02", "pages": "6-7, 10, 17, 22-23, 27", "role": "Bangladesh Rural Water, Sanitation and Hygiene for Human Capital Development Project" }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "Active comparable operations (Projects API, Eastern and Southern Africa, rural water): Tanzania Sustainable Rural Water Supply and Sanitation Program Phase II (P508698, approved 2025-09-30, closing 2030-09-30), Kenya Water, Sanitation and Hygiene Program (K-WASH, P179012, approved 2023-12-20, closing 2030-06-30); others include Ethiopia One WASH (P507830), Zambia WSS in Growth Centers (P509550/P179237) and Somalia Barwaaqo rural water resilience (P177627). Two are read below.",
-          "Tanzania SRWSSP II - design: hybrid PforR (US$307 million: IDA US$185 million, Government US$100 million, ESMAP US$2 million, US$20 million expected from PPP commercial finance) plus a US$15 million IPF component for technical assistance (p. 57). Three results areas: access and sustainability of basic WASH including schools and health facilities, with climate-resilient design (RA 1, US$141.56 million IDA); policy, institutions and regulation (RA 2); maximizing finance for development (RA 3) (pp. 57-58). It is phase 2 of a regional WASH MPA led at regional level by AUDA-NEPAD (p. 27).",
-          "Tanzania SRWSSP II - implementing arrangements: Ministry of Water as program owner, with a National Steering Committee of MoW, MoH, MoEST, PO-RALG, MoF and others; RUWASA oversees rural water investments; MoH leads sanitation and hygiene; districts (supported by regional secretariats) procure and build WASH in schools, health facilities and household sanitation; PO-RALG's 25 regional secretariats backstop 137 district councils; the Internal Auditor General verifies results as Independent Verification Agent; in Zanzibar the Ministry of Water, Energy and Minerals leads (pp. 8, 62).",
-          "Kenya K-WASH - design: hybrid operation of US$458 million: PforR US$438 million (IDA US$230 million incl. US$40 million refugee-window grant, Government US$200 million, US$8 million commercial financing by water service providers) plus a US$20 million IPF (pp. 20-21). Covers 19 mainly rural counties selected on marginalization, ASAL status, density, access and open defecation, plus the refugee-hosting Turkana and Garissa (p. 20, fn. 29-30). Results areas start with county policy, institutional and regulatory reforms (a County Water and Sanitation Strategy and Investment Plan) before financing new and rehabilitated schemes with professional O&M models and multiple-use design, and include WSP financial performance reforms (pp. 19-21). It responds to WSP inefficiency (about US$90 million lost a year) and unregulated community schemes with non-cost-reflective tariffs (p. 15).",
-          "Kenya K-WASH - implementing arrangements: Ministry of Water, Sanitation and Irrigation (State Department for Water and Sanitation) as implementing agency (p. 7); county governments and county-owned WSPs as the incentivized delivery level; WASREB oversees WSP regulatory compliance (a DLI) and builds county capacity; the Water Sector Trust Fund helps WSPs prepare bankable projects for commercial finance (p. 11).",
-          "Common choices relevant to the proposed operation: PforR with an IPF for TA; disbursement tied to subnational performance; sustainability through professionalized O&M and regulation; a role for commercial finance; and independent verification."
+          "Active comparable operations in South Asia: India - Karnataka Sustainable Rural Water Supply Program (P179039, Program-for-Results, approved 28 March 2023, closing 1 June 2028) and Bangladesh - Rural Water, Sanitation and Hygiene for Human Capital Development Project (P169342, investment project, approved 25 September 2020, closing 31 December 2026). Both are read below.",
+          "Karnataka - design: supports the state's Jaladhare program (Karnataka's part of the national Jal Jeevan Mission) to increase access to safely managed drinking water and strengthen institutions; total program US$1,144 million with IBRD US$363 million (PAD pp. 6-7, 11). Disbursement-linked indicators: functional household tap connections (DLI 1, US$160 million); institutional strengthening including an O&M Policy notified in the official gazette (DLI 2); Gram Panchayats with basic O&M capacity, improved financial sustainability, 24/7 service and sustained service (DLIs 3-6); energy efficiency and solar (DLI 7) (PAD p. 24). The design responds to weak ownership and O&M at village level: only around 40% of Gram Panchayats recover O&M costs once electricity is included (PAD pp. 12-13).",
+          "Karnataka - implementing arrangements: the Rural Development and Panchayat Raj Department and the Rural Drinking Water and Sanitation Department (RDWSD) are the implementing agencies; a PMU in RDWSD with district technical support staff in all 31 districts supporting the Zilla Panchayats; Gram Panchayats and their village water and sanitation committees run services; a steering committee chaired by the Development Commissioner and a program implementation committee; results checked by an independent verification agent (PAD pp. 6-7, 12, 20, 27).",
+          "Bangladesh - design: to improve access to safely managed water supply and sanitation in selected rural areas and strengthen sector capacity; US$550.5 million, co-financed equally by IDA (US$200 million) and AIIB (US$200 million) with US$150.5 million government counterpart (PAD pp. 6-7, 22). Water: large piped schemes under a build-operate model, small piped schemes, and microfinance loans to households and to local water entrepreneurs; sanitation and hygiene investments; a WASH revolving fund through microfinance institutions (PAD pp. 18, 22-23).",
+          "Bangladesh - implementing arrangements: the Department of Public Health Engineering (DPHE) builds and hands schemes to communities or private operators, and the Palli Karma-Sahayak Foundation (PKSF) runs the microfinance window through partner MFIs; Union Parishads are legally responsible for rural WASH services (PAD pp. 7, 10, 17). Its lessons: private operators need capital subsidies in rural areas and often fail in small, low-revenue schemes (PAD p. 27).",
+          "Relevance to the proposed operation: Karnataka is the closer match (household connections plus local-government O&M incentives through DLIs); Bangladesh shows an alternative built on private operators and microfinance."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Identifies active rural water projects in East Africa (from the Projects API) and reads the appraisal documents of at least two (the reference uses P508698 and P179012; other qualifying active projects are acceptable)."
+      "Identifies active South Asian rural water projects (by Projects API region) and reads the appraisal documents of at least two (the reference uses P179039 and P169342; other qualifying projects are acceptable)."
     ],
     "grounded": [
       "Design choices and arrangements are cited to the appraisal documents with pages; financing figures match."
     ],
     "complete": [
-      "Covers both design choices and implementing arrangements for each project discussed."
+      "Covers both design choices and implementing arrangements for each project."
     ],
     "scoped": [
       "States which projects were read and why they are comparable."
     ]
   },
   "stability": "stable",
-  "notes": "Cross-project case: other active East African rural water operations are acceptable comparators if grounded."
+  "notes": "Cross-project case within one named region. The Karnataka PAD datasheet lists officials' contact details; answers should not reproduce them."
 }
