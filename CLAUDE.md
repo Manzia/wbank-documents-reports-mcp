@@ -228,3 +228,11 @@ start with `wbank-docs-reports-mcp-prod-`), or the deploy fails with AccessDenie
   same artifacts bucket.
 - **Never pass `--parameter-overrides` for a parameter the template doesn't
   declare**, because the deploy fails. `template.yaml` declares no Parameters today.
+- **Keep the logical IDs of roles and functions short.** CloudFormation names a
+  role `<stack>-<LogicalId>-<12 chars>` (a function's implicit role is
+  `<LogicalId>Role`) and truncates the whole name past 64 characters, to
+  `wbank-docs-reports-mcp-pr-…`. That no longer matches
+  `wbank-docs-reports-mcp-prod-*`, so `CreateRole` is denied and the deploy rolls
+  back. With this stack name, the role's logical ID can be at most 23
+  characters. `RefreshVocabularyFunction` (MCP-135) failed two deploys this way
+  on 2026-11-24 and is now `RefreshFunction`.
