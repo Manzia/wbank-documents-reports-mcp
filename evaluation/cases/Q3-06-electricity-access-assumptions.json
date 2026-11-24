@@ -7,13 +7,13 @@
   "task": "Test assumptions",
   "query_wording": "How did recent electricity access projects justify their connection targets and costs? Which assumptions proved difficult during implementation?",
   "placeholders": [
-    { "placeholder": "recent electricity access projects", "resolved_to": "off-grid electricity access projects in South Asia: Bangladesh RERED II (P131263) and Nepal Private Sector-Led Mini-Grid Energy Access (P149239)", "reason": "The query names no place; the turn scopes it to South Asia so the reference set is checkable. Both projects have an appraisal document with an economic analysis and a later document that tests its assumptions." }
+    { "placeholder": "recent electricity access projects", "resolved_to": "off-grid electricity access projects in South Asia: Bangladesh RERED II (P131263) and Nepal Private Sector-Led Mini-Grid Energy Access (P149239)", "reason": "The query names no place and asks as worded; the reference reads two South Asian projects, each with an appraisal document containing an economic analysis and a later document that tests its assumptions. The rubric accepts other recent access projects." }
   ],
   "turns": [
-    { "user": "How did recent electricity access projects in South Asia justify their connection targets and costs? Which assumptions proved difficult during implementation?" }
+    { "user": "How did recent electricity access projects justify their connection targets and costs? Which assumptions proved difficult during implementation?" }
   ],
   "expected_sources": [
-    { "kind": "search", "api": "projects", "role": "Recent electricity access projects in South Asia", "filters": { "qterm": "rural electrification / solar home / mini-grid / electricity access", "regionname_exact": "South Asia" } },
+    { "kind": "search", "api": "projects", "role": "Recent electricity access projects (the reference set is from South Asia)", "filters": { "qterm": "rural electrification / solar home / mini-grid / electricity access" } },
     { "kind": "document", "project_id": "P131263", "document_id": "16698635", "report_number": "71700", "document_type": "Project Appraisal Document", "document_date": "2012-08-16", "pages": "5, 7, 19-20", "role": "RERED II PAD: SHS targets, grant per system, economic and financial returns", "note": "No form-feed breaks; pages are the printed page numbers." },
     { "kind": "document", "project_id": "P131263", "document_id": "34342587", "report_number": "ICR3251", "document_type": "Implementation Completion and Results Report", "document_date": "2024-06-17", "pages": "12-14, 25-26, 29-30", "role": "RERED II ICR: assumptions, targets versus results, ex-post efficiency" },
     { "kind": "document", "project_id": "P149239", "document_id": "30761344", "report_number": "PAD2441", "document_type": "Project Appraisal Document", "document_date": "2018-12-27", "pages": "13-14, 21-22, 30", "role": "Nepal mini-grid PAD: targets, financing structure, economic and financial analysis" },
@@ -38,7 +38,7 @@
   },
   "rubric": {
     "right_sources": [
-      "Reads appraisal and implementation documents (PAD plus ICR, restructuring paper or ISR) of at least two recent electricity access projects; the reference uses P131263 and P149239, but other recent South Asian access projects are acceptable."
+      "Reads appraisal and implementation documents (PAD plus ICR, restructuring paper or ISR) of at least two recent electricity access projects; the reference uses P131263 and P149239, but other recent access projects are acceptable."
     ],
     "grounded": [
       "Targets, unit costs or subsidies, EIRR/FIRR and implementation problems are cited to documents and pages; no invented figures."
