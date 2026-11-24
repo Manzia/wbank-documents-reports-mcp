@@ -509,12 +509,13 @@ const inputSchema = z.object({
     language: z.string().max(100).optional().describe('e.g. "French".'),
     date_from: DATE_INPUT.optional(),
     date_to: DATE_INPUT.optional(),
-    author: z.string().max(200).optional(),
-    report_number: z.string().max(100).optional(),
+    author: z.string().max(200).optional().describe('Surname or full name, as on the record.'),
+    report_number: z.string().max(100).optional().describe('e.g. "ICR00185".'),
     document_id: z
         .string()
         .regex(/^\d{1,12}$/, 'A document ID is a number.')
-        .optional(),
+        .optional()
+        .describe('e.g. "40079232".'),
     collection: z.string().max(200).optional().describe('Series, e.g. "Policy Research working paper".'),
     sort: z
         .enum(['relevance', 'newest', 'oldest'])
@@ -529,7 +530,7 @@ const inputSchema = z.object({
         .optional()
         .describe("With project_id: the project's documents grouped by stage, newest first, up to limit per group."),
     limit: z.number().int().min(1).max(MAX_LIMIT).optional().describe(`Default ${DEFAULT_LIMIT}, max ${MAX_LIMIT}.`),
-    offset: z.number().int().min(0).max(MAX_OFFSET).optional(),
+    offset: z.number().int().min(0).max(MAX_OFFSET).optional().describe('Skip this many results, for the next page.'),
 });
 
 export type SearchDocumentsInput = z.infer<typeof inputSchema>;

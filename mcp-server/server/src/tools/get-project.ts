@@ -390,7 +390,8 @@ export const renderProfile = (project: ProjectRecord, extras: ProjectExtras): st
     const notes = extras.notes.length ? extras.notes.map((note) => `Note: ${note}`).join('\n') : null;
     const next =
         `Next steps: search_documents with project_id ${id} (and document_types, sort newest) lists the documents; ` +
-        'read_document reads one (outline, then pages), e.g. the latest ISR, the PAD or the ICR.';
+        'read_document reads one (outline, then pages), e.g. the latest ISR, the PAD or the ICR. ' +
+        'For a full briefing, call retrieve_skill with task project-briefing.';
     return [head, identity, dates, money, classification, performance, documents, notes, next]
         .filter(Boolean)
         .join('\n\n');
@@ -448,7 +449,8 @@ export const getProjectWith = (deps: GetProjectDeps = {}) =>
             'Returns the profile of one World Bank project from its Projects API record, given its project ID (e.g. P117635): ' +
             'objective (PDO), borrower, implementing agency, country, region, status; approval and closing dates; financing, with commitments kept separate from total project cost; ' +
             'sectors and themes; ISR ratings with their dates and the latest disclosed ISR, IEG ratings where they exist, results indicators; and counts of public documents by type. ' +
-            'Implementation status comes from the latest disclosed ISR, not live data: say so, with its date. Use search_documents and read_document for the documents themselves.',
+            'Implementation status comes from the latest disclosed ISR, not live data: say so, with its date. Use search_documents and read_document for the documents themselves. ' +
+            'For a project briefing or other multi-step research, call retrieve_skill first.',
         inputSchema: z.object({
             project_id: z
                 .string()

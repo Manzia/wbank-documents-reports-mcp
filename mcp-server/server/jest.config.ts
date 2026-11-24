@@ -8,6 +8,7 @@ export default {
     // only, so they are transpiled to CommonJS too.
     transform: {
         '^.+\\.[tj]s$': ['ts-jest', { tsconfig: { module: 'commonjs', moduleResolution: 'node10', allowJs: true, esModuleInterop: false } }],
+        '^.+\\.md$': '<rootDir>/tests/setup/text-transform.cjs',
     },
     transformIgnorePatterns: ['/node_modules/(?!(hono|@hono)/)'],
     clearMocks: true,

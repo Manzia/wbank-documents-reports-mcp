@@ -743,7 +743,8 @@ export const readDocumentWith = (deps: ReadDocumentDeps = {}) =>
             'Without question or pages: the outline (numbered headings with their start pages), the page count and the first pages. ' +
             'With question: the outline and the pages that best match it by keyword. With pages (e.g. "40-46"): exactly those pages. ' +
             'Pages are verbatim, each with its page number and a ready-made citation: quote them directly, with no need to re-read them to confirm. ' +
-            'Every result has a coverage note saying which pages were returned; state that coverage in the answer, and ask for the page ranges it names when the answer is not in the pages returned.',
+            'Every result has a coverage note saying which pages were returned; state that coverage in the answer, and ask for the page ranges it names when the answer is not in the pages returned. ' +
+            'For multi-step research (comparisons, lessons across projects), call retrieve_skill first.',
         inputSchema,
         annotations: READ_ONLY_ANNOTATIONS,
         handler: async (args, ctx) => {

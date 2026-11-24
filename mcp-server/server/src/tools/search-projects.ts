@@ -65,7 +65,7 @@ const inputSchema = z.object({
     region: z.string().max(200).optional().describe('e.g. "South Asia", "Latin America and Caribbean".'),
     status: z.string().max(50).optional().describe('Active, Closed, Pipeline or Dropped.'),
     sector: z.string().max(200).optional().describe('e.g. "Health", "Irrigation and Drainage".'),
-    theme: z.string().max(200).optional(),
+    theme: z.string().max(200).optional().describe('e.g. "Climate change", "Urban and Rural Development".'),
     approval_from: DATE_INPUT.optional(),
     approval_to: DATE_INPUT.optional(),
     closing_from: DATE_INPUT.optional(),
@@ -75,7 +75,7 @@ const inputSchema = z.object({
         .optional()
         .describe('Default: relevance with a query, else approval_newest. closing_soonest for "approaching closing".'),
     limit: z.number().int().min(1).max(MAX_LIMIT).optional().describe(`Default ${DEFAULT_LIMIT}, max ${MAX_LIMIT}.`),
-    offset: z.number().int().min(0).max(MAX_OFFSET).optional(),
+    offset: z.number().int().min(0).max(MAX_OFFSET).optional().describe('Skip this many results, for the next page.'),
 });
 
 export type SearchProjectsInput = z.infer<typeof inputSchema>;
