@@ -79,7 +79,7 @@ jobs:
     uses: ./.github/workflows/_ci-sam.yml
     with:
       project-path: mcp-server
-      package-path: mcp-server/hello-world
+      package-path: mcp-server/server
       project-name: mcp-server
       node-version: '24.x'
       coverage-threshold: 80

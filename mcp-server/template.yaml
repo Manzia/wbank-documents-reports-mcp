@@ -1,59 +1,74 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  mcp-server
+  Unofficial MCP server for the World Bank Documents & Reports and Projects
+  APIs (not affiliated with the World Bank).
 
-  Sample SAM Template for mcp-server
+# Design: context/design/wbank-mcp-architecture.md. Long prose goes in comments:
+# CloudFormation caps Description at 1024 characters (CLAUDE.md, Known Issues).
 
-# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
-    Timeout: 3
     # REQUIRED. The deploy role may only create IAM roles that carry this
     # boundary, so any role created without it fails the deploy with
     # AccessDenied. This covers SAM's implicit function roles. An explicit
     # AWS::IAM::Role (e.g. the AgentCore Gateway service role) must set
     # `PermissionsBoundary` itself. See CLAUDE.md -> "AWS deploy identity".
     PermissionsBoundary: !Sub arn:${AWS::Partition}:iam::aws:policy/PowerUserAccess
-
-    # You can add LoggingConfig parameters such as the Logformat, Log Group, and SystemLogLevel or ApplicationLogLevel. Learn more here https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html#sam-function-loggingconfig.
     LoggingConfig:
       LogFormat: JSON
+
 Resources:
-  HelloWorldFunction:
-    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+  McpServerLogGroup:
+    Type: AWS::Logs::LogGroup
     Properties:
-      CodeUri: hello-world/
-      Handler: app.lambdaHandler
+      RetentionInDays: 30
+
+  # Design §3.2 "MCP server function", §6.1. The function URL accepts only
+  # SigV4-signed requests (the AgentCore gateway's service role, MCP-113) and
+  # streams responses, so SSE progress events and keep-alive pings reach the
+  # client while a tool runs.
+  McpServerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: server/
+      Handler: mcp.lambdaHandler
       Runtime: nodejs24.x
       Architectures:
-      - arm64
-      Events:
-        HelloWorld:
-          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-          Properties:
-            Path: /hello
-            Method: get
-    Metadata: # Manage esbuild properties
+        - arm64
+      MemorySize: 1024
+      Timeout: 300
+      LoggingConfig:
+        LogFormat: JSON
+        LogGroup: !Ref McpServerLogGroup
+      Environment:
+        Variables:
+          NODE_OPTIONS: --enable-source-maps
+      FunctionUrlConfig:
+        AuthType: AWS_IAM
+        InvokeMode: RESPONSE_STREAM
+      Policies:
+        # Haiku 5.5 through the US cross-region inference profile only (design §7).
+        - Statement:
+            - Effect: Allow
+              Action:
+                - bedrock:InvokeModel
+                - bedrock:InvokeModelWithResponseStream
+              Resource:
+                - !Sub arn:${AWS::Partition}:bedrock:${AWS::Region}:${AWS::AccountId}:inference-profile/us.anthropic.claude-haiku-5-5
+                - !Sub arn:${AWS::Partition}:bedrock:us-east-1::foundation-model/anthropic.claude-haiku-5-5
+                - !Sub arn:${AWS::Partition}:bedrock:us-east-2::foundation-model/anthropic.claude-haiku-5-5
+                - !Sub arn:${AWS::Partition}:bedrock:us-west-2::foundation-model/anthropic.claude-haiku-5-5
+    Metadata:
       BuildMethod: esbuild
       BuildProperties:
         Minify: true
-        Target: es2020
+        Target: es2023
         Sourcemap: true
         EntryPoints:
-        - app.ts
+          - src/handlers/mcp.ts
 
 Outputs:
-  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
-  # Find out more about other implicit resources you can reference within SAM
-  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
-  HelloWorldApi:
-    Description: API Gateway endpoint URL for Prod stage for Hello World 
-      function
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/Prod/hello/"
-  HelloWorldFunction:
-    Description: Hello World Lambda Function ARN
-    Value: !GetAtt HelloWorldFunction.Arn
-  HelloWorldFunctionIamRole:
-    Description: Implicit IAM Role created for Hello World function
-    Value: !GetAtt HelloWorldFunctionRole.Arn
+  FunctionUrl:
+    Description: MCP server function URL (IAM auth, response streaming); the MCP endpoint is its /mcp path
+    Value: !GetAtt McpServerFunctionUrl.FunctionUrl

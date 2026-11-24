@@ -1,0 +1,38 @@
+{
+  "name": "wbank-mcp-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Unofficial MCP server for the World Bank Documents & Reports and Projects APIs (not affiliated with the World Bank)",
+  "license": "MIT",
+  "scripts": {
+    "unit": "jest",
+    "lint": "eslint 'src/**/*.ts' 'tests/**/*.ts' --quiet --fix",
+    "compile": "tsc",
+    "test": "npm run compile && npm run unit",
+    "test:coverage": "jest --coverage --coverageReporters=json-summary --coverageReporters=text --coverageReporters=lcov"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "3.1174.0",
+    "@hono/aws-lambda": "1.0.1",
+    "@modelcontextprotocol/server": "2.4.0",
+    "esbuild": "0.28.2",
+    "hono": "4.13.19",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@jest/globals": "30.5.2",
+    "@types/aws-lambda": "8.10.164",
+    "@types/node": "24.19.2",
+    "aws-sdk-client-mock": "4.1.0",
+    "eslint": "10.15.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.7",
+    "jest": "30.5.2",
+    "prettier": "3.10.1",
+    "ts-jest": "29.4.15",
+    "ts-node": "10.9.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.74.0"
+  }
+}
