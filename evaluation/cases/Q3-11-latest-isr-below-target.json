@@ -3,48 +3,51 @@
   "query_id": "Q3.11",
   "group": "Q3",
   "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
   "task": "Assess implementation",
   "query_wording": "In the latest disclosed ISR for Pxxxxxx, which results indicators are below target, and what explanations does the report give?",
   "placeholders": [
-    { "placeholder": "Pxxxxxx", "resolved_to": "P164920 (Tanzania RISE)", "reason": "Its latest ISR (seq. 10, 2026-08-09) has many indicators well short of their end targets and gives little explanation, which tests honest reporting." }
+    { "placeholder": "Pxxxxxx", "resolved_to": "P176619 (Jordan Water Sector Efficiency Project)", "reason": "Its latest ISR (seq. 8, 2026-06-15) shows nearly every indicator at zero with little explanation, which tests honest reporting." }
   ],
   "turns": [
-    { "user": "In the latest disclosed ISR for P164920, which results indicators are below target, and what explanations does the report give?" }
+    { "user": "In the latest disclosed ISR for P176619, which results indicators are below target, and what explanations does the report give?" }
   ],
   "expected_sources": [
-    { "kind": "search", "api": "wds", "role": "Find the latest ISR by document date", "filters": { "proid": "P164920", "docty_exact": "Implementation Status and Results Report", "srt": "docdt", "order": "desc", "rows": "1" } },
-    { "kind": "document", "project_id": "P164920", "document_id": "40121415", "report_number": "ISR08628", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-09", "pages": "2-8", "role": "Latest disclosed ISR (seq. 10)", "note": "Pages are the printed 'Page N of 10'; the text drops the letter 't'." }
+    { "kind": "search", "api": "wds", "role": "Find the latest ISR by document date", "filters": { "proid": "P176619", "docty_exact": "Implementation Status and Results Report", "srt": "docdt", "order": "desc", "rows": "1" } },
+    { "kind": "document", "project_id": "P176619", "document_id": "40109225", "report_number": "ISR07766", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-15", "pages": "1-8", "role": "Latest disclosed ISR (seq. 8)", "note": "The results tables come out column by column in the text, so values must be matched to indicators with care." },
+    { "kind": "document", "project_id": "P176619", "document_id": "40093957", "report_number": "RES01493", "document_type": "Project Paper", "document_date": "2026-03-27", "pages": "6-7", "role": "Restructuring paper with the explanation of delays", "required": false }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "Latest disclosed ISR: sequence 10, ISR08628, archived 9 August 2026. The ISR gives only end-of-project targets (closing period mostly April or June 2027), so 'below target' here means below the end target as of the latest measurement.",
-          "PDO indicators (pp. 3-4): civil works jobs created 1,462 person-years (measured April 2025) vs 35,000; share of district rural roads in good and fair condition 47% vs 48% (baseline 45%); share of regional rural roads in good and fair condition 69% vs 70% (baseline 68%); resilient-designed CERC interventions 6 vs 7. On target: 'people-centered' design approach (Yes). Direct users (6,258,535, July 2026) has no end target yet ('final target will be defined at appraisal').",
-          "Intermediate indicators (pp. 5-8): km of rural roads improved with climate-resilient approaches 50.2 vs 535 (regional 17.2 vs 135; district 33 vs 400); km of district roads under community-based routine maintenance 0 vs 23,000; km of bottleneck improvements 2,373 vs 4,500; National Rural Roads Plan, TARURA Business Modernization Plan and the road safety data collection system all 'No' vs 'Yes'; people employed under CBRM contracts 0 vs 19,000 person-years, women's share 0% vs 20%, CBRM workers trained in life skills 0% vs 100%; all Component 6 restoration indicators 0 with targets 'to be determined'. On target: TARURA gender policy approved; code of conduct signed by 100% of workers; grievance system in place; emergency management protocol operational.",
-          "Explanations given: very few. The indicator comments only define the indicators. The one narrative note says disbursement is at 43 percent and accelerated implementation is expected over the next 12 months, with key activities such as the second generation of roads (p. 2). Ratings are Moderately Satisfactory for PDO progress and implementation, risk Substantial (p. 2). Several values are stale: jobs date from April 2025 and many intermediate values from December 2025.",
-          "For reasons behind the delays, the ISR is not enough; the September 2026 additional financing paper and the midterm review aide-memoire (November 2025) discuss the financing gap and the need for an extension."
+          "Latest disclosed ISR: sequence 8, ISR07766, archived 15 June 2026. Targets are end-of-project targets (May or November 2028).",
+          "PDO indicators, all at 0 against target (pp. 3-4): beneficiaries with improved water services 0 of 1,600,000 (female 0 of 752,000; refugees 0 of 80,000; host communities 0 of 480,000); volume of NRW reduction 0 of 7,000,000 m3/year; electricity use reduced 0 of 60 GWh/year; drought management system 0 of 4 components operationalized.",
+          "Intermediate indicators (pp. 4-7): women certified as plumbers 20 of 550 (first training in May 2026); km of networks and reservoirs rehabilitated or replaced 0 of 1,500; DMAs with NRW foundations 0 (target revised in March 2026); renewable energy capacity 0 of 25 MW; drought bulletins, annual water allocation plans, drought contingency plans and dam rehabilitation assessments all 0; utility performance and NRW systems PBC indicators 'No'.",
+          "Performance-based conditions (pp. 7-8): only the dam risk-indexing PBC is recorded as achieved; the others are not yet achieved or not due.",
+          "Explanations in the ISR: very little. The key-issues note says the March-April 2026 mission saw moderate improvement in the pace of implementation and procurement, with consultancy contracts awarded and more key contracts expected in calendar 2026 (p. 2). Ratings: PDO Moderately Satisfactory, implementation Moderately Unsatisfactory, risk Moderate (p. 1). Disbursement 3.86% of the IBRD loan (p. 9).",
+          "The fuller explanation is in the March 2026 restructuring paper: detailed designs did not exist at appraisal, so design-and-supervision consultants had to be hired before works; Component 2 procurement was slow for capacity reasons; PBC achievements had not yet been verified (pp. 6-7)."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Uses ISR seq. 10 (40121415, 2026-08-09), found by document date, not an older ISR."
+      "Uses ISR seq. 8 (40109225, 2026-06-15), found by document date."
     ],
     "grounded": [
       "Indicator values and targets match the ISR; nothing is presented as an ISR explanation that the ISR does not say."
     ],
     "complete": [
-      "Lists the below-target PDO indicators and the main below-target intermediate indicators, and reports what the ISR says (or that it gives little) by way of explanation."
+      "Lists the below-target PDO indicators and the main intermediate indicators, and reports the (thin) explanation given."
     ],
     "scoped": [
-      "Labels the source as the latest disclosed ISR with its date, and notes that targets are end-of-project targets and some values are dated."
+      "Labels the source as the latest disclosed ISR with its date and notes that targets are end-of-project targets."
     ]
   },
   "stability": "may_change",
-  "notes": "A new ISR will supersede seq. 10, probably in early 2027."
+  "notes": "A new ISR will supersede seq. 8."
 }

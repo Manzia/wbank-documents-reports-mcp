@@ -3,53 +3,53 @@
   "query_id": "Q3.2",
   "group": "Q3",
   "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
   "task": "Prepare a mission",
   "query_wording": "Brief me on Pxxxxxx before my meeting with the ministry. What are its objectives, components, implementing agencies, latest reported progress, and main risks?",
   "placeholders": [
-    { "placeholder": "Pxxxxxx", "resolved_to": "P164920 (Tanzania RISE)", "reason": "Active project with a PAD, ten ISRs and two additional financing papers, one of which changed the PDO." }
+    { "placeholder": "Pxxxxxx", "resolved_to": "P176619 (Jordan Water Sector Efficiency Project)", "reason": "See Q3-01." }
   ],
   "turns": [
-    { "user": "Brief me on P164920 before my meeting with the ministry. What are its objectives, components, implementing agencies, latest reported progress, and main risks?" }
+    { "user": "Brief me on P176619 before my meeting with the ministry. What are its objectives, components, implementing agencies, latest reported progress, and main risks?" }
   ],
   "expected_sources": [
-    { "kind": "project", "project_id": "P164920", "role": "Project record (status, dates, commitments)" },
-    { "kind": "document", "project_id": "P164920", "document_id": "33121051", "report_number": "PAD2934", "document_type": "Project Appraisal Document", "document_date": "2021-04-30", "pages": "9, 23-29, 39", "role": "Original PDO, components, implementing agencies" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40121415", "report_number": "ISR08628", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-09", "pages": "1-10", "role": "Latest disclosed ISR (seq. 10): current PDO, ratings, indicators, risks, disbursement", "note": "The text file has no form-feed breaks; pages are the report's printed 'Page N of 10'. The text drops the letter 't' throughout." },
-    { "kind": "document", "project_id": "P164920", "document_id": "40131419", "report_number": "PPIAF000398", "document_type": "Project Paper", "document_date": "2026-09-30", "pages": "1-4, 10", "role": "Latest project paper (second AF and restructuring): status after the midterm review, financing gap, risks", "required": false }
+    { "kind": "project", "project_id": "P176619", "role": "Project record" },
+    { "kind": "document", "project_id": "P176619", "document_id": "34071081", "report_number": "PAD5170", "document_type": "Project Appraisal Document", "document_date": "2023-05-24", "pages": "6-8, 21-22, 34-35", "role": "PDO, components, financing, implementing agencies, risk ratings at appraisal" },
+    { "kind": "document", "project_id": "P176619", "document_id": "40109225", "report_number": "ISR07766", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-15", "pages": "1-5, 8-10", "role": "Latest disclosed ISR (seq. 8)" },
+    { "kind": "document", "project_id": "P176619", "document_id": "40093957", "report_number": "RES01493", "document_type": "Project Paper", "document_date": "2026-03-27", "pages": "6-7", "role": "Restructuring paper: implementation status and reasons for delays", "required": false }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "P164920 - Tanzania Roads to Inclusion and Socioeconomic Opportunities (RISE) Project. Active; approved 27 May 2021, effective 16 November 2021; IDA credit 6867-TZ US$300 million plus US$50 million Government counterpart funding (PAD p. 9); first additional financing (AF1) US$100 million from the Crisis Response Window, approved 28 February 2025 (AF2 paper p. 1).",
-          "Objectives: the original PDO was \"to improve rural road access and provide employment opportunities for population in selected rural areas and build capacity in the sustainable management of rural roads incorporating community engagement approaches\" (PAD p. 23). Since AF1 (28 Feb 2025) the PDO is \"to improve rural road connectivity, generate jobs, strengthen road management capacity and support emergency response in selected areas, incorporating community engagement approaches\" (ISR p. 1).",
-          "Components (ISR p. 1; PAD pp. 24-29): 1 Rural Roads Development and Maintenance (US$299.5m in the ISR after US$25m moved to the CERC; sub-components regional upgrades, district upgrades, bottleneck improvements, community-based routine maintenance); 2 Institutional Strengthening and Human Capital Development (US$15m); 3 Community Engagement, Inclusion and Protection (US$3m); 4 Project Management, M&E (US$7.5m); 5 Contingency Emergency Response (US$25m, triggered 3 September 2024 after the El Niño floods and Cyclone Hidaya); 6 Restoration of Critical Connectivity (US$100m, added by AF1).",
-          "Implementing agencies: Tanzania Rural and Urban Roads Agency (TARURA), the lead coordinating agency hosting the PIU, and Tanzania National Roads Agency (TANROADS) (PAD pp. 9, 39; ISR p. 1). TARURA sits under the President's Office - Regional Administration and Local Government (PO-RALG) (PAD p. 20).",
-          "Latest reported progress, from the latest disclosed ISR (seq. 10, 9 August 2026): progress towards the PDO and implementation progress both Moderately Satisfactory, overall risk Substantial (ISR p. 2). The ISR reports disbursement at 43 percent (p. 2); its loan table shows IDA-68670 61.02% disbursed (US$173.75m of a revised US$284.72m) and the AF1 credit IDA-77160 0% disbursed (p. 9). Indicators: 6,258,535 direct users with improved access (target not yet set); civil works jobs 1,462 person-years against 35,000; district rural roads in good/fair condition 47% (target 48%), regional 69% (target 70%); 6 CERC interventions against 7 (pp. 3-4). Physical outputs lag: 50.2 km of rural roads improved against 535 km, 2,373 km of bottleneck improvements against 4,500, no CBRM maintenance km or CBRM jobs yet recorded, National Rural Roads Plan and TARURA modernization plan not yet approved (pp. 5-6). Closing date 30 June 2027 (p. 10).",
-          "Since that ISR, the second AF paper (30 September 2026) reports US$207.95 million (54%) of IDA disbursed as of August 2026, a midterm review (6 Oct - 21 Nov 2025) that found a US$90 million financing gap, and proposes US$25 million to replenish the CERC, an 18-month extension to 31 December 2028 and lower Component 1 targets (AF2 paper pp. 1-4, 8).",
-          "Main risks: overall Substantial; Substantial for sector strategies and policies, technical design, institutional capacity for implementation and sustainability, fiduciary, and environmental and social; Moderate for political and governance, macroeconomic and stakeholders (ISR p. 2). The AF2 paper explains the institutional capacity risk by the project's scale and nationwide coverage needing coordination among TARURA, local governments and communities, and lists E&S risks from civil works (dust, noise, access restrictions, road safety, vegetation loss) (AF2 paper p. 10).",
-          "Points to raise: the slow pace of road upgrading and maintenance outputs against end targets, the financing gap and proposed extension, and the pending national rural (district) roads plan."
+          "P176619 - Jordan Water Sector Efficiency Project. IBRD Loan 9560-JO US$200 million, with US$50 million GCFF concessional financing (TF0C1892) and US$50 million AFD co-financing; total cost US$300 million (PAD p. 7; restructuring paper p. 6). Approved 15 June 2023, effective 7 November 2023, closing 31 December 2028 (ISR p. 10). Investment project with performance-based conditions (PBCs) and a CERC; first of a series of projects (PAD p. 6).",
+          "Objective: \"to improve the efficiency of water services in Jordan\" - better services through rehabilitated distribution networks, energy efficiency and drought management (PAD p. 21).",
+          "Components (PAD p. 7; current costs ISR p. 1): 1 Sustainable non-revenue water reduction (US$209 million at appraisal, US$221 million after the 2026 restructuring); 2 Increased energy efficiency and reduced energy supply costs (US$54 million, now US$42 million); 3 Water security measures - drought management, water allocation, dam safety (US$27 million); 4 Project management and implementation support (US$10 million); 5 Contingent Emergency Response (US$0).",
+          "Implementing agencies: the Ministry of Planning and International Cooperation (MOPIC) and Ministry of Water and Irrigation (MWI) are the named implementing agencies (PAD p. 7). Day-to-day implementation sits with the Water Authority of Jordan's PMU (designated account, procurement, FM, E&S); the Jordan Valley Authority (dam safety), MWI (drought management), and the three regional water companies (MWC for the central areas including greater Amman, YWC in the north, AWC in the south) implement works; an Oversight and Coordination Committee chaired by MOPIC and a Steering Committee chaired by MWI oversee (PAD pp. 34-35). The restructuring moved MWI's fiduciary role for sub-component 3.1 to WAJ (restructuring paper p. 7).",
+          "Latest reported progress - ISR seq. 8, 15 June 2026: progress towards the PDO Moderately Satisfactory; implementation progress Moderately Unsatisfactory (downgraded in July 2025); overall risk Moderate (ISR p. 1; restructuring paper p. 7). Disbursement is very low: 3.86% of the IBRD loan (US$7.71 million) and 3.62% of the GCFF financing (ISR p. 9). All PDO indicators are still at zero (e.g. 0 of 1.6 million beneficiaries with improved water services, 0 of 7 million m3/year of NRW reduction, 0 of 60 GWh/year electricity saved); 20 of 550 women certified as plumbers after the first training in May 2026; the dam risk-indexing PBC is the only PBC achieved (ISR pp. 3-5, 8). The mission of March-April 2026 noted moderate improvement, with consultancy contracts awarded and key contracts expected in 2026 (ISR p. 2).",
+          "Main risks (ISR p. 2): overall Moderate; Substantial for macroeconomic, institutional capacity for implementation and sustainability, fiduciary, and environmental and social; Moderate for political and governance, technical design and stakeholders; Low for sector strategies. The restructuring paper explains the delays: no detailed designs at appraisal, so design-and-supervision consultancies had to be hired first, slow Component 2 procurement due to capacity constraints, and PBC achievements not yet verified (pp. 6-7).",
+          "Points for the ministry: award of the remaining design-and-supervision contracts, the technical assistance firm's start, verification of PBC achievements by the Audit Bureau, and the disbursement path (the restructuring projects US$135 million in FY27)."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Uses the PAD and the latest disclosed ISR (ISR08628, 2026-08-09); citing the 2026 AF paper for the current situation is a plus."
+      "Uses the PAD and the latest disclosed ISR (ISR07766, 2026-06-15); the 2026 restructuring paper is a plus."
     ],
     "grounded": [
-      "PDO wording, component names and amounts, agencies, ratings and indicator values match the cited documents; disbursement figures are attributed to the document that reports them."
+      "PDO, components and costs, agencies, ratings, risks and indicator values match the cited documents."
     ],
     "complete": [
-      "Covers all five asks: objectives (noting the PDO was revised in 2025), components, implementing agencies, latest progress, main risks."
+      "Covers objectives, components, implementing agencies, latest progress and main risks."
     ],
     "scoped": [
-      "Labels progress as coming from the latest disclosed ISR and its date, not as current status."
+      "Labels progress as from the latest disclosed ISR with its date, not current status."
     ]
   },
   "stability": "may_change",
-  "notes": "A new ISR (seq. 11) is expected around early 2027; a later run should use the newest ISR. The ISR and AF2 paper report different disbursement figures because they measure different bases and dates."
+  "notes": "A new ISR (seq. 9) is expected around December 2026."
 }

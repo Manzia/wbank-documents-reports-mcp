@@ -3,50 +3,49 @@
   "query_id": "Q3.13",
   "group": "Q3",
   "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
   "task": "Prepare a client discussion",
   "query_wording": "What implementation bottlenecks does the latest reporting identify, and which actions are assigned to the government or the Bank?",
   "placeholders": [
-    { "placeholder": "the project (implied)", "resolved_to": "P164920 (Tanzania RISE)", "reason": "The query assumes a project in context; it is named in the turn. Its latest reporting includes a disclosed midterm review aide-memoire with an agreed-actions table." }
+    { "placeholder": "the project (implied)", "resolved_to": "P176619 (Jordan Water Sector Efficiency Project)", "reason": "The query assumes a project; it is named in the turn. No aide-memoire is public, so the latest reporting is the ISR plus the 2026 restructuring paper." }
   ],
   "turns": [
-    { "user": "For P164920, what implementation bottlenecks does the latest reporting identify, and which actions are assigned to the government or the Bank?" }
+    { "user": "For P176619, what implementation bottlenecks does the latest reporting identify, and which actions are assigned to the government or the Bank?" }
   ],
   "expected_sources": [
-    { "kind": "document", "project_id": "P164920", "document_id": "40121415", "report_number": "ISR08628", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-09", "pages": "2", "role": "Latest ISR: thin narrative" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40076267", "report_number": "210162", "document_type": "Aide Memoire", "document_date": "2025-11-21", "pages": "2-3, 12-13", "role": "Midterm review aide-memoire: bottlenecks and Table 1 of agreed actions with responsibilities" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40131419", "report_number": "PPIAF000398", "document_type": "Project Paper", "document_date": "2026-09-30", "pages": "2-4", "role": "AF2 paper: later status of the same bottlenecks", "required": false }
+    { "kind": "document", "project_id": "P176619", "document_id": "40109225", "report_number": "ISR07766", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-15", "pages": "1-2", "role": "Latest ISR (thin narrative)" },
+    { "kind": "document", "project_id": "P176619", "document_id": "40093957", "report_number": "RES01493", "document_type": "Project Paper", "document_date": "2026-03-27", "pages": "6-10", "role": "Restructuring paper: implementation status, bottlenecks and agreed changes" }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "Latest reporting: the latest ISR (seq. 10, 9 Aug 2026) says only that disbursement is at 43 percent and implementation should accelerate over the next 12 months with the second generation of roads (ISR p. 2). The fullest account of bottlenecks and actions is the midterm review aide-memoire (mission 6 October - 21 November 2025, document dated 2025-11-21, disclosed 2026-05-07).",
-          "Bottlenecks (aide-memoire pp. 2-3): a US$90 million financing gap, including US$25 million to replenish the CERC, driven by the shift to people-centered design, heavier traffic loading needing stronger pavements, and inflation and design changes; a needed 18-month extension (paras. 5-6); unresolved application of the VAT exemption across both credits (para. 7); delays in Component 1 and procurement/contract management problems made worse by prolonged approvals and SDR/USD exchange losses; TANROADS' design-and-build bids for the Geita and Lindi second-generation roads came in about 70% and 64% above estimates and were cancelled for re-tendering (paras. 8, 13); delays on the six CERC contracts and occupational health and safety issues, which led to that component being downgraded (para. 10); slippage on the Iringa (Ipogolo)-Kilolo road (79% physical progress at 84% of contract time) due to the NMT lane, Ruaha Bridge girders, equipment stuck at Dar es Salaam port and the privately owned Ipogolo bus stand (para. 11); work-zone traffic management and road safety audit recommendations not implemented (para. 12).",
-          "Actions for the government side (implementing agencies), Table 1 (pp. 12-13): TARURA and TANROADS - meet the three AF effectiveness conditions (amendment letter, subsidiary agreements with the Ministry of Finance, revised Project Implementation Manual; by 30 Dec 2025 per para. 4), open designated accounts for IDA 77160, share annual work plans by 31 May each year, pay contractors and consultants on time, share names of deployed E&S officers; TARURA - confirm the VAT exemption interpretation in writing (by 30 Dec 2025 per para. 7), submit CBRM data for the 302 community groups and a CBRM replication proposal for 2026/27-2027/28, prioritize second-generation roads within available funds and sign the US$113.7 million second-generation road contracts within six months, revise the M&E framework and baselines for new indicators, resubmit the National District Roads Program ToR; TANROADS - submit the final Ipogolo bus stand design and flood control measures and the RSA compliance matrix, traffic management plan and revised work program (by 30 Nov 2025 per paras. 11-12), a design review and repackaging strategy for Geita and Lindi, rebid those two packages (US$30.8m and US$15.4m) within three months, a time-bound plan for high-value packages, have CERC contractors submit revised work plans, recruit an additional project accountant.",
-          "Actions involving the Bank: the World Bank team to run a technical mission to the CERC contracts in Lindi by early March 2026, followed by an implementation status mission (para. 59); joint items 'TARURA & World Bank' (agree and approve the road safety training concept note) and 'TRDS & WB' (confirm how the VAT exemption applies to both credits; the agreement on the approach to the CERC designated account sits next to it in the table, but the layout makes its responsible party ambiguous) (Table 1, p. 13). The Ministry of Finance is named for the subsidiary agreements and the VAT review (paras. 4, 7).",
-          "The table's date column is laid out separately from its rows in the document; deadlines are safest quoted where the paragraphs state them.",
-          "Later status: the September 2026 AF2 paper proposes US$25 million and the 18-month extension in response to the financing gap (AF2 paper pp. 1-4)."
+          "Latest reporting: ISR seq. 8 (15 June 2026), whose narrative only notes moderate improvement in implementation and procurement, consultancy contracts awarded and key contracts expected in 2026 (ISR p. 2), and the restructuring paper of 27 March 2026, which sets out the bottlenecks. No aide-memoire is publicly disclosed for this project.",
+          "Bottlenecks (restructuring paper pp. 6-7): no detailed designs at appraisal, so design-and-supervision consultants had to be hired before small works contracts, delaying works; very low disbursement - US$11.3 million in total and US$13 million committed under contracts after more than two years; PBC results achieved but not yet verified for disbursement; slow procurement of energy-efficiency investments because of capacity constraints; MWI's limited procurement and financial management capacity for drought and water allocation activities; implementation rated Moderately Unsatisfactory since July 2025.",
+          "Actions by the government side: three sub-projects shifted to design-build contracts at the MTR (September 2025); award of the remaining design-and-supervision contracts (expected by May 2026) and of a technical assistance firm for all implementers (start expected March 2026) (p. 6); WAJ takes over procurement and contract management for sub-component 3.1 from MWI, with MWI certifying deliverables, and the POM is updated (pp. 7, 9); PBCs streamlined, with broader eligible expenditures and verification by the Jordan Audit Bureau (pp. 7-9); US$12 million moved from Component 2 to NRW reduction (p. 7); indicator targets aligned with the selected sub-projects (pp. 9-10).",
+          "Bank actions: Hands-on Extended Implementation Support for procurement and environmental and social risk management since May 2025 (p. 6); the team will recommend upgrading the implementation rating once most design-and-supervision contracts and the technical assistance contract are awarded (p. 7).",
+          "The restructuring paper projects that, without further major delays, all sub-projects finish by 30 June 2028 (p. 6). Neither document gives a dated action table like an aide-memoire would."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Uses the latest ISR and the midterm review aide-memoire (40076267); the AF2 paper is optional."
+      "Uses the latest ISR and the March 2026 restructuring paper (the fullest recent account)."
     ],
     "grounded": [
-      "Each bottleneck and action is cited to the aide-memoire paragraph or table; responsibilities match the table; no invented deadlines."
+      "Each bottleneck and action is cited to the document and page; no invented deadlines or responsibilities."
     ],
     "complete": [
-      "Gives the main bottlenecks and separates actions assigned to the implementing agencies/government from those involving the Bank."
+      "Gives the main bottlenecks and separates actions by the government/implementing agencies from Bank actions."
     ],
     "scoped": [
-      "Says which documents and dates the answer reflects (an aide-memoire from November 2025 and an ISR from August 2026), and that later progress on the actions is not reported in them."
+      "Says which documents and dates the answer reflects and that no aide-memoire or action table is public."
     ]
   },
   "stability": "may_change",
-  "notes": "A newer ISR or aide-memoire would change 'latest reporting'."
+  "notes": "A newer ISR or a disclosed aide-memoire would change 'latest reporting'."
 }

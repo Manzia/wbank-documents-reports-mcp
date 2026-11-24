@@ -3,51 +3,53 @@
   "query_id": "Q3.12",
   "group": "Q3",
   "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
   "task": "Track change",
   "query_wording": "Compare the last three ISRs. Which risks, ratings, results indicators, and implementation issues changed?",
   "placeholders": [
-    { "placeholder": "the project (implied)", "resolved_to": "P164920 (Tanzania RISE)", "reason": "The query assumes a project in context; it is named in the turn." }
+    { "placeholder": "the project (implied)", "resolved_to": "P176619 (Jordan Water Sector Efficiency Project)", "reason": "The query assumes a project in context; it is named in the turn." }
   ],
   "turns": [
-    { "user": "For P164920, compare the last three ISRs. Which risks, ratings, results indicators, and implementation issues changed?" }
+    { "user": "For P176619, compare the last three ISRs. Which risks, ratings, results indicators, and implementation issues changed?" }
   ],
   "expected_sources": [
-    { "kind": "document", "project_id": "P164920", "document_id": "40007559", "report_number": "ISR03384", "document_type": "Implementation Status and Results Report", "document_date": "2025-04-17", "pages": "1-8", "role": "ISR seq. 8" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40076268", "report_number": "ISR06054", "document_type": "Implementation Status and Results Report", "document_date": "2025-12-16", "pages": "1-10", "role": "ISR seq. 9" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40121415", "report_number": "ISR08628", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-09", "pages": "1-10", "role": "ISR seq. 10 (latest)" }
+    { "kind": "document", "project_id": "P176619", "document_id": "40074535", "report_number": "ISR05792", "document_type": "Implementation Status and Results Report", "document_date": "2025-12-10", "pages": "1-2, 4-5, 10-11", "role": "ISR seq. 6" },
+    { "kind": "document", "project_id": "P176619", "document_id": "40093540", "report_number": "ISR07264", "document_type": "Implementation Status and Results Report", "document_date": "2026-03-25", "pages": "1-2, 4-5, 9-11", "role": "ISR seq. 7" },
+    { "kind": "document", "project_id": "P176619", "document_id": "40109225", "report_number": "ISR07766", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-15", "pages": "1-10", "role": "ISR seq. 8 (latest)" }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "Last three disclosed ISRs for P164920 (RISE): seq. 8 (ISR03384, 17 Apr 2025), seq. 9 (ISR06054, 16 Dec 2025), seq. 10 (ISR08628, 9 Aug 2026). Pages are the ISRs' printed pages.",
-          "Ratings: unchanged across all three - progress towards the PDO Moderately Satisfactory, implementation progress Moderately Satisfactory, overall risk Substantial (seq. 8 pp. 1-2; seq. 9 pp. 1-2; seq. 10 p. 2).",
-          "Risks: no category changed. Substantial: sector strategies and policies, technical design, institutional capacity, fiduciary, environmental and social; Moderate: political and governance, macroeconomic, stakeholders (seq. 8 p. 2; seq. 9 p. 2; seq. 10 p. 2).",
-          "Results indicators that moved: civil works jobs 171 (Mar 2024) to 1,462 person-years in seq. 8, then no new measurement in seq. 9 or 10 (still dated Apr 2025; target 35,000). District rural roads in good/fair condition 45% (seq. 8), 43% (seq. 9), 47% (seq. 10), target 48%. Regional rural roads 68%, 58%, 69%, target 70%. CERC resilient interventions 0, 6, 6 (target 7). Direct users first reported in seq. 10 (6,258,535). Bottleneck improvements 1,559.1 km (seq. 8) to 2,373 km (seq. 9, unchanged in seq. 10), target 4,500. TARURA gender policy approved between seq. 8 ('No') and seq. 9 ('yes'). Km of rural roads improved fell from 66.6 (seq. 8) to 50.2 (seq. 9 and 10), and regional km from 33.6 to 17.2, a downward revision the ISRs do not explain. Unchanged at zero: CBRM maintenance km and CBRM employment.",
-          "Disbursement of the original credit IDA-68670: 22.71% (US$63.04m, seq. 8 p. 10), 44.99% (US$126.83m, seq. 9 p. 10), 61.02% (US$173.75m, seq. 10 p. 9); the AF1 credit IDA-77160 stayed at 0% (signed 30 Sep 2025, effective 23 Dec 2025 per seq. 10 p. 10).",
-          "Implementation issues: seq. 8 reported improved environmental and social management since the July 2024 mission but a need to improve health and safety (including road safety), and the approval of the US$100 million CRW+ additional financing on 28 Feb 2025 (US$30m TARURA, US$70m TANROADS) (p. 2). Seq. 9 reported the AF signed on 30 Sep 2025 and the midterm review confirming the PDO and arrangements and full compliance (p. 2). Seq. 10 reported disbursement at 43 percent and expected acceleration over the next 12 months, with the second generation of roads (p. 2). The midterm review took place 6 Oct - 21 Nov 2025 (seq. 9 and 10, Key Dates).",
-          "The ISR comments do not explain the dips and revisions in road-condition and km values."
+          "Last three disclosed ISRs for P176619: seq. 6 (ISR05792, 10 Dec 2025), seq. 7 (ISR07264, 25 Mar 2026), seq. 8 (ISR07766, 15 Jun 2026).",
+          "Ratings: unchanged in all three - PDO progress Moderately Satisfactory, implementation progress Moderately Unsatisfactory, overall risk Moderate (p. 1 of each).",
+          "Risks: no category changed - Moderate for political and governance, technical design and stakeholders; Substantial for macroeconomic, institutional capacity, fiduciary, and environmental and social; Low for sector strategies (p. 2 of each).",
+          "Results indicators: all PDO indicators stay at 0. Between seq. 7 and seq. 8 the targets were revised after the restructuring approved on 11 March 2026 (recorded in seq. 8, p. 10): NRW reduction from 10,000,000 to 7,000,000 m3/year, electricity use reduced from 81 to 60 GWh/year, km of networks rehabilitated from 1,800 to 1,500, DMAs from 180 to a lower target (seq. 6-7 pp. 4-5; seq. 8 pp. 4-5). First non-zero value: 20 women certified as plumbers (target 550) in seq. 8 (p. 5). The dam risk-indexing PBC moves from 'Not Due' (seq. 7) to achieved (seq. 8, p. 8).",
+          "Components: costs change in seq. 8 - Component 1 from US$209 million to US$221 million and Component 2 from US$54 million to US$42 million (p. 1), reflecting the US$12 million reallocation.",
+          "Disbursement: essentially flat - IBRD loan 3.85% (seq. 6) to 3.86% (seq. 7 and 8), US$7.71 million each time; GCFF 3.61-3.62%; the AFD co-financing loan COFN-C2580 appears from seq. 7 at 0% (seq. 6 p. 10; seq. 7 p. 10; seq. 8 p. 9).",
+          "Implementation issues: seq. 6 reports the September 2025 MTR, moderate improvement, and contracts expected in Q4 2025; seq. 7 reports the February 2026 mission and key contracts expected in Q2 2026; seq. 8 reports the March-April 2026 mission, consultancy contracts awarded and more key contracts expected in 2026 (p. 2 of each). The expected contract awards keep slipping by a quarter.",
+          "The ISRs do not explain the rating or the delays; the restructuring paper of 27 March 2026 does."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Uses the three most recent ISRs by document date (seq. 8, 9, 10) and no older ones."
+      "Uses the three most recent ISRs by document date (seq. 6, 7, 8)."
     ],
     "grounded": [
-      "Every rating, risk, indicator value and issue is attributed to the right ISR with its date; values match the reports."
+      "Every rating, risk, indicator value and issue is attributed to the right ISR with its date."
     ],
     "complete": [
-      "Covers ratings, risks, results indicators and implementation issues, saying explicitly where nothing changed."
+      "Covers ratings, risks, results indicators and implementation issues, saying where nothing changed."
     ],
     "scoped": [
-      "States which ISRs were compared and their dates, and notes stale or unexplained indicator values instead of inventing reasons."
+      "Names the ISRs compared and notes that target changes come from the restructuring, not from results."
     ]
   },
   "stability": "may_change",
-  "notes": "A new ISR changes which three are 'the last three'."
+  "notes": "Seq. 8 shows the DMA target as revised; the restructuring paper gives 180 to 90. A new ISR changes which three are 'the last three'."
 }

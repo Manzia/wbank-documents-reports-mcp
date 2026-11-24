@@ -3,50 +3,49 @@
   "query_id": "Q3.7",
   "group": "Q3",
   "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
   "task": "Prepare for negotiations",
   "query_wording": "For Pxxxxxx, compare the PAD and signed financing agreement. Where do the project description, effectiveness conditions, disbursement conditions, or implementing arrangements differ?",
   "placeholders": [
-    { "placeholder": "Pxxxxxx", "resolved_to": "P164920 (Tanzania RISE)", "reason": "Its PAD (2021-04-30) and signed Financing Agreement for Credit 6867-TZ (signed 19 August 2021) are both public; they largely match, which tests that the agent does not invent differences." }
+    { "placeholder": "Pxxxxxx", "resolved_to": "P176619 (Jordan Water Sector Efficiency Project)", "reason": "Its PAD (2023-05-24) and signed Loan Agreement (2023-07-16) are public; for an IBRD borrower the 'financing agreement' is a Loan Agreement, which tests document-type resolution. The two largely match, with a few real differences." }
   ],
   "turns": [
-    { "user": "For P164920, compare the PAD and signed financing agreement. Where do the project description, effectiveness conditions, disbursement conditions, or implementing arrangements differ?" }
+    { "user": "For P176619, compare the PAD and signed financing agreement. Where do the project description, effectiveness conditions, disbursement conditions, or implementing arrangements differ?" }
   ],
   "expected_sources": [
-    { "kind": "document", "project_id": "P164920", "document_id": "33121051", "report_number": "PAD2934", "document_type": "Project Appraisal Document", "document_date": "2021-04-30", "pages": "8-9, 12-13, 23-29, 39-41", "role": "PAD: datasheet (conditions, legal covenants), components, implementation arrangements" },
-    { "kind": "document", "project_id": "P164920", "document_id": "33356405", "document_type": "Financing Agreement", "document_date": "2021-08-19", "pages": "3, 6-13", "role": "Signed Financing Agreement, Credit 6867-TZ", "note": "Scanned and OCR'd: no form-feed breaks, letters 't' dropped and some characters garbled; pages are the agreement's printed '-N-' markers." },
-    { "kind": "document", "project_id": "P164920", "document_id": "33356423", "document_type": "Project Agreement", "document_date": "2021-08-19", "role": "Project Agreement, where the PIU, technical committee and PIM covenants sit", "required": false }
+    { "kind": "document", "project_id": "P176619", "document_id": "34071081", "report_number": "PAD5170", "document_type": "Project Appraisal Document", "document_date": "2023-05-24", "pages": "6-7, 9-10, 21-22, 24, 34-35", "role": "PAD: datasheet conditions and covenants, components, PBCs, implementation arrangements" },
+    { "kind": "document", "project_id": "P176619", "document_id": "34118460", "document_type": "Loan Agreement", "document_date": "2023-07-16", "pages": "4, 6-10, 16-18", "role": "Signed Loan Agreement for Loan 9560-JO and TF0C1892" }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "Documents: PAD2934 (2021-04-30) and the Financing Agreement for Credit 6867-TZ between the United Republic of Tanzania and IDA (signed 19 August 2021; record dated 2021-08-19). The agreement's text is a scan; citations use its printed page numbers. Overall the two match closely: the PAD's datasheet already quotes the agreement's conditions and covenants.",
-          "Project description: the objective is identical (PAD p. 23; FA Schedule 1, p. 6). The FA describes the same five components and sub-components (FA Schedule 1, pp. 6-8; PAD pp. 24-29) but without amounts, and it adds scope detail such as routine maintenance of approximately 23,000 km of district roads and bottleneck improvements in all Mainland regions except Dar es Salaam (FA p. 6). Financing is expressed differently: the PAD gives US$ by component (IDA US$300 million, Government US$50 million; PAD pp. 8-9), the FA allocates SDR 208,500,000 by disbursement category - Category 1 TANROADS sub-component 1(a) SDR 76,440,000; Category 2 TARURA sub-components 1(b)-(d) SDR 114,310,000; Category 4 TARURA components 2-4 SDR 16,135,000; Category 5 CERC SDR 0; Category 3 (TANROADS 2(c), 2(d) and 4) is illegible in the scan (the balance would be SDR 1,615,000) (FA Schedule 2, Section III.A, pp. 11-12). The FA makes land acquisition and resettlement compensation ineligible, to be financed by the Recipient (p. 12), consistent with the PAD's note that the Government covers resettlement costs (PAD p. 24, footnote 27).",
-          "Effectiveness conditions: no difference. Both list (a) subsidiary agreements between the Recipient and the implementing entities, (b) the Steering Committee established, (c) TARURA's PIU established and staffed, (d) the Project Implementation Manual adopted (FA Article IV, Section 4.01, p. 3; PAD p. 13). The FA adds the 90-day effectiveness deadline (Section 4.02, p. 3).",
-          "Disbursement conditions: no difference. Both bar withdrawals under Category 1 until TANROADS, and under Category 2 until TARURA, adopt Operational Health and Safety Measures pursuant to the ESCP, and under Category 5 (CERC) until an eligible emergency is determined and accepted and the CERC Manual and Emergency Action Plan are adopted (FA Schedule 2, Section III.B.1(b)-(d), pp. 12-13; PAD p. 13). Closing date 30 June 2027 in both (FA p. 13; PAD p. 8).",
-          "Implementing arrangements: consistent, with differences of detail. Both have a Steering Committee co-chaired by the Permanent Secretaries of PO-RALG and MoWT meeting at least twice a year (FA Schedule 2, Section I.A, p. 9; PAD p. 41, para. 75); the FA names its members (TARURA, TANROADS, PO-RALG, MoWT, MoFP) and adds the Roads Fund Board and LATRA as special invitees. The FA adds subsidiary-agreement rules (Section I.B), CERC Manual requirements (Section I.C, pp. 9-10) and semi-annual project reports within 45 days (Section II, p. 11). The PIU, technical committee, procurement capacity plans, external auditor and PIM covenants the PAD lists (PAD p. 12) are in the Project Agreement with TARURA and TANROADS, not in the Financing Agreement.",
-          "Later changes are not part of this comparison: the agreement was amended in 2025 (First Amendment, 2025-09-30) alongside the additional financing."
+          "Documents: PAD5170 (2023-05-24) and the Loan Agreement for Loan 9560-JO and Trust Fund TF0C1892 (2023-07-16). Jordan borrows from IBRD, so the signed financing document is a Loan Agreement. They match closely; the differences are:",
+          "Project description: same objective, 'to improve the efficiency of water services in Jordan' (PAD p. 21; LA Schedule 1, p. 6). The LA describes the same five parts but names Part 4 'Institutional strengthening for water sector efficiency' with 4.1 project management and 4.2 PBC verification and audit support, where the PAD datasheet calls Component 4 'Project management and implementation support' (PAD p. 7; LA p. 8). The PAD gives costs by component (US$209m, 54m, 27m, 10m, 0) and the PBC amounts (e.g. PBC 2 US$21.4 million) (PAD pp. 7, 24); the LA instead allocates the loan by category and implementer: WAJ (Parts 1, 2, 4), MoWI (Part 3.1), JVA (Part 3.2), Eligible PBC Expenditures, CERC, front-end fee, split into non-concessional and concessional (GCFF) portions totalling US$200 million and US$50 million (LA pp. 16-17).",
+          "Effectiveness conditions: (a) the WAJ Subsidiary Agreement executed with its conditions met - same in both. (b) differs in wording: the PAD datasheet lists a 'JVA Cooperation Agreement' (PAD p. 10), the LA a 'JVA Subsidiary Agreement' (LA Section 5.01(b), p. 4; Schedule 2 Section I.B, p. 10). The LA adds a 120-day effectiveness deadline (5.02) and a four-month deadline for the co-financing agreement's effectiveness (4.01) (LA p. 4); the PAD lists the latter as a covenant (PAD p. 9).",
+          "Disbursement conditions: the PAD datasheet lists none. The LA sets them (Schedule 2, Section III.B, p. 18): withdrawals pari passu between the non-concessional and concessional portions (79.96/20.04 until the co-financing agreement is signed, then 66.61/16.69); retroactive financing up to US$799,599 plus US$200,401 for payments from 1 January 2023; PBC withdrawals only with evidence verified by the Audit Bureau (payments made per the POM) and by the Verification Agent (PBC achieved); CERC withdrawals only after an eligible emergency is accepted.",
+          "Implementing arrangements: consistent. Both have MOPIC and MWI with overall responsibility, the WAJ-PMU for day-to-day implementation with additional staff within six months, an Oversight and Coordination Committee chaired by MOPIC and a Steering Committee chaired by MWI, both within three months of effectiveness, and a Project Operations Manual (PAD pp. 9-10, 34-35; LA pp. 9-10). The PAD covenant asks for the POM within four months and an independent verification agency within six months (PAD p. 10); the LA adds the WAJ and JVA subsidiary agreements and WC cooperation agreements for the water companies (LA p. 10) and semester project reports within one month (LA p. 16).",
+          "Later change, outside this comparison: the March 2026 restructuring amends the agreement (PBCs, eligible expenditures, MWI's category moved to WAJ, Audit Bureau as PBC verifier)."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Uses the PAD (33121051) and the signed Financing Agreement for Credit 6867-TZ (33356405), not the 2025 AF agreements."
+      "Uses the PAD (34071081) and the signed Loan Agreement (34118460), recognising the Loan Agreement as the 'financing agreement'."
     ],
     "grounded": [
-      "Each point cites a PAD page and an FA clause; no difference is claimed that the documents do not show; unreadable parts of the scan are flagged, not guessed."
+      "Each point cites a PAD page and a Loan Agreement clause or page; no difference is claimed that the documents do not show."
     ],
     "complete": [
-      "Addresses all four areas, stating 'no difference' where the texts match."
+      "Addresses all four areas, saying 'no difference' where the texts match."
     ],
     "scoped": [
-      "Notes where obligations sit in the Project Agreement rather than the Financing Agreement, and that later amendments are outside the comparison."
+      "Notes that later amendments (the 2026 restructuring) are outside the comparison."
     ]
   },
-  "stability": "stable",
-  "notes": "The SDR 114,310,000 for Category 2 is read from OCR text '1143 10,000'; the reviewer should confirm against the PDF."
+  "stability": "stable"
 }

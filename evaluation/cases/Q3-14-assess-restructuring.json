@@ -3,49 +3,49 @@
   "query_id": "Q3.14",
   "group": "Q3",
   "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
   "task": "Assess restructuring",
   "query_wording": "What does the proposed restructuring change about the objectives, components, results framework, financing, and closing date?",
   "placeholders": [
-    { "placeholder": "the proposed restructuring (project implied)", "resolved_to": "the restructuring proposed with the second additional financing for P164920 (Project Paper PPIAF000398, 2026-09-30)", "reason": "The latest project paper for RISE combines a US$25 million AF with a restructuring (closing extension, results framework revision); the query needs a project, so it is named in the turn." }
+    { "placeholder": "the proposed restructuring (project implied)", "resolved_to": "the restructuring of P176619 in the Disclosable Restructuring Paper RES01493 (2026-03-27)", "reason": "The project's only restructuring paper; it changes PBCs, results targets and allocations but not the PDO or closing date." }
   ],
   "turns": [
-    { "user": "For P164920, what does the proposed restructuring change about the objectives, components, results framework, financing, and closing date?" }
+    { "user": "For P176619, what does the proposed restructuring change about the objectives, components, results framework, financing, and closing date?" }
   ],
   "expected_sources": [
-    { "kind": "document", "project_id": "P164920", "document_id": "40131419", "report_number": "PPIAF000398", "document_type": "Project Paper", "document_date": "2026-09-30", "pages": "1-2, 4-5, 7-9", "role": "The proposed AF2 and restructuring", "note": "No form-feed breaks; pages are the paper's printed page markers ('Page N'). The text drops the letter 't'." },
-    { "kind": "document", "project_id": "P164920", "document_id": "33121051", "report_number": "PAD2934", "document_type": "Project Appraisal Document", "document_date": "2021-04-30", "pages": "8, 23, 61-62", "role": "Original PDO, closing date and targets for comparison" },
-    { "kind": "document", "project_id": "P164920", "document_id": "34461907", "report_number": "PPIAF000101", "document_type": "Project Paper", "document_date": "2025-02-27", "role": "AF1 paper, where the PDO and components last changed", "required": false }
+    { "kind": "document", "project_id": "P176619", "document_id": "40093957", "report_number": "RES01493", "document_type": "Project Paper", "document_date": "2026-03-27", "pages": "6-11", "role": "The restructuring paper" },
+    { "kind": "document", "project_id": "P176619", "document_id": "34071081", "report_number": "PAD5170", "document_type": "Project Appraisal Document", "document_date": "2023-05-24", "pages": "6-7, 21, 24", "role": "Original PDO, components, PBCs and closing date for comparison" }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "The latest proposal is the Project Paper for a proposed second additional credit and restructuring of RISE (PPIAF000398, dated 2026-09-30). Compared with the project as it stands (and the original PAD):",
-          "Objectives: no change. The PDO stays as revised by the first AF in February 2025, \"to improve rural road connectivity, generate jobs, strengthen road management capacity and support emergency response in selected areas, incorporating community engagement approaches\" (AF2 paper pp. 1-2, 10 para. 20). That 2025 revision had replaced the PAD's PDO on rural road access, employment and capacity (PAD p. 23).",
-          "Components: no change to scope; the six components remain. The AF replenishes Component 1 by US$25 million, restoring the US$25 million moved to the CERC (Component 5) when it was triggered on 3 September 2024. Component 6, Restoration of Critical Connectivity (US$100 million), was added by AF1 (AF2 paper pp. 1-2, Table 1 p. 5).",
-          "Results framework (Table 3, pp. 7-9): direct-users targets set (7,031,928 people, of which 3,684,533 female and 2,384,856 youth); a new corporate indicator on people benefiting from climate-resilient infrastructure (same targets); 'civil works jobs created' replaced by the corporate 'more and better-paid job equivalents' (target 140,335); CERC interventions target cut from 7 to 6; km of rural roads improved cut from 535 to 276.01 (regional 135 to 104.61, district 400 to 171.4); CBRM routine maintenance from 23,000 km to 15,000 km; bottleneck improvements from 4,500 km to 2,373 km; the National Rural Roads Plan becomes a National District Roads Plan; the road safety data system indicator and the code-of-conduct indicator are dropped; people employed under CBRM raised from 19,000 to 23,500 person-years; Component 6 targets set (11 regional and 84 district cut-off areas restored). The paper says the reductions align outputs with the financing gap the midterm review found (p. 7, paras. 11-12).",
-          "Financing: an additional IDA credit of US$25 million, taking total financing from US$450 million (original US$350 million including US$50 million Government counterpart, plus AF1 US$100 million) to US$475 million (Table 1, p. 5). The midterm review had found a US$90 million gap (US$65 million for existing activities and US$25 million for the CERC) (p. 2), so the AF covers only part of it.",
-          "Closing date: extended by 18 months, from 30 June 2027 (the PAD's original closing date, PAD p. 8) to 31 December 2028 (p. 4, para. 8).",
-          "Implementation and fiduciary arrangements, safeguards standards and the Substantial risk rating are unchanged (pp. 1, 10)."
+          "Source: Disclosable Restructuring Paper RES01493 for P176619 (27 March 2026; a Level 2 restructuring, approved 11 March 2026 per the June 2026 ISR). Compared with the PAD:",
+          "Objectives: no change; the PDO stays 'to improve the efficiency of water services in Jordan' (summary table p. 11; PAD p. 21).",
+          "Components: scope unchanged, but US$12 million moves from Component 2 (energy efficiency, US$54 million) to Component 1 (NRW reduction, US$209 million) because energy-efficiency procurement was slow; Component 2 keeps the energy-efficiency (US$21 million) and solar PV (US$17 million) sub-projects already contracted or tendered and defers further studies (pp. 7, 9). MWI's fiduciary role for sub-component 3.1 passes to WAJ (pp. 7, 9).",
+          "Performance-based conditions: PBC 1 reworded around the NRW digitization roadmap and SCADA coverage (unchanged at US$5,001,670); PBC 2.1 scaled up to US$24,510,185 by absorbing PBC 3 and most of PBC 2.2; PBC 2.2 and PBC 3 dropped; PBC 4 adds digital dashboards and cuts verifiable annual allocation plans from four to three; PBC 5 adds dam safety maturity matrices and rises to US$6,500,169; eligible PBC expenditures widened to fixed costs of WAJ, MWI, JVA and the water companies; the Jordan Audit Bureau verifies PBCs (pp. 7-9).",
+          "Results framework (p. 10): NRW reduction target 10,000,000 to 7,000,000 m3/year; electricity use reduced 81 to 60 GWh/year (PV capacity revised from 41 to 26 GWh/year in the final feasibility study, and some sub-projects financed by others); km of networks rehabilitated 1,800 to 1,500; DMAs 180 to 90 (of which high-refugee areas 75 to 35); renewable capacity 41 to 25 MW; GHG reduction 41,796 to 35,000 t/year; the customer-feedback indicator dropped with PBC 3. Reason: the sub-projects selected are mostly primary-line replacement, which costs more per km and does not create DMAs (pp. 9-10).",
+          "Financing: no cancellation and no new financing; total remains US$300 million (IBRD US$200 million, GCFF US$50 million, AFD US$50 million); disbursement estimates are revised (US$17 million in FY26, US$135 million in FY27, US$100 million in FY28, US$46 million in FY29) (pp. 6, 11).",
+          "Closing date: no extension; it stays 31 December 2028 (summary table p. 11; the paper's background says 30 December 2028, p. 6, while the ISR and loan agreement give 31 December 2028)."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Uses the 2026-09-30 project paper (PPIAF000398) and compares with the original PAD (or the AF1 paper) for the baseline."
+      "Uses the restructuring paper (40093957) and compares with the PAD."
     ],
     "grounded": [
-      "Each change cites the paper; old and new targets, amounts and dates match the document."
+      "Each change cites the paper; old and new targets and amounts match the document."
     ],
     "complete": [
-      "Addresses all five areas: objectives, components, results framework, financing and closing date, saying 'no change' where that is the case."
+      "Addresses all five areas, saying 'no change' for the objective and closing date."
     ],
     "scoped": [
-      "Notes that this is a proposed restructuring as documented in the paper and distinguishes it from the earlier 2025 AF1 changes."
+      "Notes the restructuring's date and level and flags the paper's own inconsistency on the closing date rather than guessing."
     ]
   },
   "stability": "stable"

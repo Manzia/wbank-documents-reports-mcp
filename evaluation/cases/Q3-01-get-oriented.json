@@ -3,60 +3,59 @@
   "query_id": "Q3.1",
   "group": "Q3",
   "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
   "task": "Get oriented",
   "query_wording": "Pull the publicly available documents for project Pxxxxxx. Group them into design, legal, environmental and social, implementation, and restructuring documents. Show the latest in each group.",
   "placeholders": [
-    { "placeholder": "Pxxxxxx", "resolved_to": "P164920 (Tanzania Roads to Inclusion and Socioeconomic Opportunities, RISE)", "reason": "Active rural roads project under the Environmental and Social Framework with a PAD, financing and project agreements, seven ESCP versions, ten ISRs, two additional financing papers, a midterm review aide-memoire and 65 procurement plans: every group has documents." }
+    { "placeholder": "Pxxxxxx", "resolved_to": "P176619 (Jordan Water Sector Efficiency Project)", "reason": "Active ESF project in the Middle East & North Africa with a PAD, a signed loan agreement, ESCPs, eight ISRs, a 2026 restructuring paper and about 50 procurement plans: every group has documents. It also links to the Jordan water country case (Q3-03)." }
   ],
   "turns": [
-    { "user": "Pull the publicly available documents for project P164920. Group them into design, legal, environmental and social, implementation, and restructuring documents. Show the latest in each group." }
+    { "user": "Pull the publicly available documents for project P176619. Group them into design, legal, environmental and social, implementation, and restructuring documents. Show the latest in each group." }
   ],
   "expected_sources": [
-    { "kind": "search", "api": "wds", "role": "The project's full document list", "filters": { "proid": "P164920", "rows": "all (147 records on 2026-11-22)" } },
-    { "kind": "document", "project_id": "P164920", "document_id": "33121051", "report_number": "PAD2934", "document_type": "Project Appraisal Document", "document_date": "2021-04-30", "role": "Design: the PAD" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40124719", "report_number": "PIDIAF0363", "document_type": "Project Information Document", "document_date": "2026-08-28", "role": "Design: latest design document by date (PID for the 2026 additional financing)" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40054173", "document_type": "Project Agreement", "document_date": "2025-10-10", "role": "Legal: latest (Project Agreement for AF Credit 7716-TZ)" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40054172", "document_type": "Financing Agreement", "document_date": "2025-09-30", "role": "Legal: latest financing agreement (AF Credit 7716-TZ)" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40133756", "document_type": "Resettlement Plan; Environmental and Social Management Plan", "document_date": "2026-10-16", "role": "E&S: latest record" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40124526", "document_type": "Environmental and Social Commitment Plan", "document_date": "2026-08-27", "role": "E&S: latest ESCP (AF No. 3)" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40121415", "report_number": "ISR08628", "document_type": "Implementation Status and Results Report", "document_date": "2026-08-09", "role": "Implementation: latest ISR (sequence 10)" },
-    { "kind": "document", "project_id": "P164920", "document_id": "40122472", "document_type": "Procurement Plan", "document_date": "2026-08-14", "role": "Implementation: latest procurement plan", "required": false },
-    { "kind": "document", "project_id": "P164920", "document_id": "40076267", "report_number": "210162", "document_type": "Aide Memoire", "document_date": "2025-11-21", "role": "Implementation: midterm review aide-memoire", "required": false },
-    { "kind": "document", "project_id": "P164920", "document_id": "40131419", "report_number": "PPIAF000398", "document_type": "Project Paper", "document_date": "2026-09-30", "role": "Restructuring: latest project paper (additional financing)" }
+    { "kind": "search", "api": "wds", "role": "The project's full document list", "filters": { "proid": "P176619", "rows": "all (85 records on 2026-11-23)" } },
+    { "kind": "document", "project_id": "P176619", "document_id": "34071081", "report_number": "PAD5170", "document_type": "Project Appraisal Document", "document_date": "2023-05-24", "role": "Design: PAD (latest design document)" },
+    { "kind": "document", "project_id": "P176619", "document_id": "40084105", "document_type": "Disbursement Letter", "document_date": "2025-06-27", "role": "Legal: latest (disbursement letter for the AFD co-financing loan C2580-JO)" },
+    { "kind": "document", "project_id": "P176619", "document_id": "34118460", "document_type": "Loan Agreement", "document_date": "2023-07-16", "role": "Legal: the loan agreement (Loan 9560-JO and TF0C1892)" },
+    { "kind": "document", "project_id": "P176619", "document_id": "34377266", "document_type": "Environmental and Social Management Plan", "document_date": "2024-08-14", "role": "E&S: latest record" },
+    { "kind": "document", "project_id": "P176619", "document_id": "34066371", "document_type": "Environmental and Social Commitment Plan", "document_date": "2023-05-22", "role": "E&S: latest ESCP (negotiation version)" },
+    { "kind": "document", "project_id": "P176619", "document_id": "40109225", "report_number": "ISR07766", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-15", "role": "Implementation: latest ISR (seq. 8)" },
+    { "kind": "document", "project_id": "P176619", "document_id": "40132706", "document_type": "Procurement Plan", "document_date": "2026-10-13", "role": "Implementation: latest procurement plan", "required": false },
+    { "kind": "document", "project_id": "P176619", "document_id": "40093957", "report_number": "RES01493", "document_type": "Project Paper", "document_date": "2026-03-27", "role": "Restructuring: the only restructuring paper" }
   ],
   "reference_answer": {
     "review": "pending",
-    "as_of": "2026-11-22",
+    "as_of": "2026-11-23",
     "turns": [
       {
         "turn": 1,
         "text": [
-          "P164920 - Tanzania Roads to Inclusion and Socioeconomic Opportunities (RISE) Project: 147 public records (as of 2026-11-22). By group, with the latest in each (by document date):",
-          "Design (concept and appraisal PIDs, PAD, ESRS summaries at concept): latest is the Project Information Document for the additional financing, PIDIAF0363, 2026-08-28; the original PAD is PAD2934, 2021-04-30 (disclosed 2021-05-31), http://documents.worldbank.org/curated/en/245301622426454522.",
-          "Legal (financing, project and disbursement agreements and amendments): latest is the Project Agreement for Additional Financing Credit 7716-TZ, 2025-10-10, signed alongside the Financing Agreement for AF Credit 7716-TZ and the First Amendment to the Financing Agreement for Credit 6867-TZ (both 2025-09-30). Original Financing Agreement for Credit 6867-TZ: 2021-08-19.",
-          "Environmental and social (ESCPs, SEPs, ESMF, ESIAs, ESMPs, resettlement plans, labor management procedures): latest record is a Resettlement Plan, 2026-10-16; latest ESCP is the Additional Financing ESCP (AF No. 3), 2026-08-27, which follows ESCPs of 2020-04, 2021-02, 2021-03 (two), 2024-12 and 2025-02.",
-          "Implementation (ISRs, procurement plans, aide-memoires, audits): latest ISR is sequence 10, ISR08628, 2026-08-09, http://documents.worldbank.org/curated/en/099080926110030280; latest procurement plan 2026-08-14; midterm review aide-memoire (mission 6 October - 21 November 2025), dated 2025-11-21; latest audit 2026-06-26.",
-          "Restructuring (project papers): two additional financing papers, the latest dated 2026-09-30 (PPIAF000398), after PPIAF000101 of 2025-02-27. No standalone restructuring paper is disclosed.",
-          "Completion: none yet (the project is active).",
-          "The grouping is by document type; where a record carries several types (e.g. 'Resettlement Plan; Environmental and Social Management Plan') it is placed under environmental and social."
+          "P176619 - Jordan Water Sector Efficiency Project: 85 public records (as of 2026-11-23). By group, with the latest in each by document date:",
+          "Design (program/project information documents, concept ESRS, PAD): latest is the PAD, PAD5170, 2023-05-24 (disclosed 2023-06-15), http://documents.worldbank.org/curated/en/099052623124518529. Earlier: concept PID (2022-07-28, when the operation was still called a Program-for-Results), appraisal PID (2023-05-15, Arabic version 2023-06-14).",
+          "Legal (loan agreement, disbursement letters, corrigendum): latest is the Disbursement and Financial Information Letter for the AFD co-financing loan C2580-JO, dated 2025-06-27 (disclosed 2026-02-02). The Loan Agreement for Loan 9560-JO and Trust Fund TF0C1892 is dated 2023-07-16, http://documents.worldbank.org/curated/en/099071723083513920; a corrigendum letter followed on 2023-12-11.",
+          "Environmental and social (ESCP, SEP, ESMF, resettlement framework, labor management procedures, ESIA, ESMP): latest record is an Environmental and Social Management Plan, 2024-08-14; the latest ESCP is the negotiation version of 2023-05-22 (an earlier ESCP is dated 2023-05-16).",
+          "Implementation (ISRs, procurement plans, audit): latest ISR is sequence 8, ISR07766, 2026-06-15, http://documents.worldbank.org/curated/en/099061526090548083; latest procurement plan 2026-10-13 (about 50 plans in all); latest audit 2026-07-30.",
+          "Restructuring: one Disclosable Restructuring Paper, RES01493, 2026-03-27, http://documents.worldbank.org/curated/en/099032726042556066.",
+          "Completion: none (active, closing 31 December 2028).",
+          "Grouping is by WDS document type; ISRs disclosed in several copies (e.g. three of 2025-04-03) are counted once."
         ]
       }
     ]
   },
   "rubric": {
     "right_sources": [
-      "Retrieves the project's whole document list (not a first page of 10 or 20) and identifies the latest record in each group as listed."
+      "Retrieves the project's whole document list and identifies the latest record in each group by document date."
     ],
     "grounded": [
-      "Every document named exists with the stated type and date; 'latest' is by document date."
+      "Every document named exists with the stated type and date; no invented documents."
     ],
     "complete": [
-      "Covers all five requested groups (plus completion or 'none'), with the latest document's title, date and link in each."
+      "Covers all five groups (plus completion or 'none'), with the latest document's title, date and link in each."
     ],
     "scoped": [
-      "Says the list is the publicly disclosed documents, notes that the restructuring group holds additional financing papers rather than a restructuring paper, and notes no completion documents exist."
+      "Says the list is the publicly disclosed documents and notes there are no completion documents yet."
     ]
   },
   "stability": "may_change",
-  "notes": "Active project: new ISRs, plans and E&S documents are disclosed regularly. A later run should accept newer latest documents."
+  "notes": "Active project: new ISRs and procurement plans are disclosed regularly; a later run should accept newer latest documents."
 }
