@@ -157,6 +157,66 @@ jobs:
             --no-fail-on-empty-changeset \
             --force-upload
 
+      # The gateway caches the tool list it synced from the MCP server
+      # (design §6.1, plan G4), and a new function version doesn't refresh
+      # it. Re-sync target `wb` on every deploy and fail the job unless the
+      # sync finishes READY with a sync time after this step started. Safe to
+      # run repeatedly. Prints no secret: the origin secret lives only in
+      # Secrets Manager and the WAF, which this step doesn't read.
+      - name: Re-sync gateway target
+        run: |
+          set -euo pipefail
+          GATEWAY_ID=$(aws cloudformation describe-stacks \
+            --stack-name ${{ env.STACK_NAME }} \
+            --query "Stacks[0].Outputs[?OutputKey=='GatewayId'].OutputValue | [0]" \
+            --output text)
+          TARGET_ID=$(aws bedrock-agentcore-control list-gateway-targets \
+            --gateway-identifier "${GATEWAY_ID}" \
+            --query "items[?name=='wb'].targetId | [0]" \
+            --output text)
+          if [[ -z "${GATEWAY_ID}" || "${GATEWAY_ID}" == "None" || -z "${TARGET_ID}" || "${TARGET_ID}" == "None" ]]; then
+            echo "::error::Gateway or target 'wb' not found (gateway '${GATEWAY_ID}', target '${TARGET_ID}')"
+            exit 1
+          fi
+          echo "Gateway ${GATEWAY_ID}, target wb (${TARGET_ID})"
+
+          START=$(date -u +%s)
+          aws bedrock-agentcore-control synchronize-gateway-targets \
+            --gateway-identifier "${GATEWAY_ID}" \
+            --target-id-list "${TARGET_ID}" \
+            --query 'targets[].{target:name,status:status}' \
+            --output table
+
+          for _ in $(seq 1 60); do
+            sleep 10
+            read -r STATUS SYNCED < <(aws bedrock-agentcore-control get-gateway-target \
+              --gateway-identifier "${GATEWAY_ID}" \
+              --target-id "${TARGET_ID}" \
+              --query '[status, lastSynchronizedAt]' \
+              --output text)
+            echo "status ${STATUS}, last synchronized ${SYNCED}"
+            case "${STATUS}" in
+              READY)
+                # Clock slack: the service stamps the sync, the runner stamps START.
+                if [[ "${SYNCED}" != "None" ]] && (( $(date -u -d "${SYNCED}" +%s) >= START - 30 )); then
+                  echo "Target wb re-synced."
+                  exit 0
+                fi
+                ;;
+              SYNCHRONIZING|UPDATING|CREATING) ;;
+              *)
+                aws bedrock-agentcore-control get-gateway-target \
+                  --gateway-identifier "${GATEWAY_ID}" \
+                  --target-id "${TARGET_ID}" \
+                  --query 'statusReasons' --output text || true
+                echo "::error::Re-sync of target wb failed with status ${STATUS}"
+                exit 1
+                ;;
+            esac
+          done
+          echo "::error::Re-sync of target wb did not finish within 10 minutes"
+          exit 1
+
       - name: Stack outputs
         run: |
           aws cloudformation describe-stacks \
