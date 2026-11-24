@@ -1458,6 +1458,27 @@ Resources:
       ComparisonOperator: GreaterThanOrEqualToThreshold
       TreatMissingData: notBreaching
 
+  # Design §11: a snapshot older than 35 days. The MCP server writes the age
+  # of each vocabulary.json it loads (once per instance), in days since its
+  # fetchedAt, as the Embedded Metric Format metric WorldBankMcp /
+  # VocabularySnapshotAgeDays, with no dimensions (src/vocabulary/load.ts).
+  # No data while no instance starts, which is fine: an unused snapshot does
+  # no harm.
+  SnapshotAgeAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: The vocabulary snapshot in use is older than 35 days; the refresh has not succeeded since
+      AlarmActions:
+        - !Ref AlertTopic
+      Namespace: WorldBankMcp
+      MetricName: VocabularySnapshotAgeDays
+      Statistic: Maximum
+      Period: 3600
+      EvaluationPeriods: 1
+      Threshold: 35
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+
   # Design §11: one dashboard for the alarmed metrics, plus the CloudFront web
   # ACL's per-rule counts for the COUNT-mode week (MCP-170).
   Dashboard:
@@ -1475,7 +1496,8 @@ Resources:
                   "alarms": [
                     "${ToolErrorsAlarm.Arn}", "${ToolDurationAlarm.Arn}", "${GatewayThrottlesAlarm.Arn}",
                     "${WafBlocksAlarm.Arn}", "${WafFailClosesAlarm.Arn}", "${CloudFront5xxAlarm.Arn}",
-                    "${BedrockThrottlesAlarm.Arn}", "${RefreshVocabularyErrorsAlarm.Arn}", "${RefreshScheduleFailedAlarm.Arn}"
+                    "${BedrockThrottlesAlarm.Arn}", "${RefreshVocabularyErrorsAlarm.Arn}", "${RefreshScheduleFailedAlarm.Arn}",
+                    "${SnapshotAgeAlarm.Arn}"
                   ]
                 }
               },
@@ -1568,6 +1590,16 @@ Resources:
                     ["AWS/Lambda", "Errors", "FunctionName", "${RefreshFunction}"],
                     ["AWS/Scheduler", "InvocationDroppedCount", "ScheduleGroup", "default"],
                     ["AWS/Scheduler", "TargetErrorCount", "ScheduleGroup", "default"]
+                  ]
+                }
+              },
+              {
+                "type": "metric", "x": 0, "y": 27, "width": 12, "height": 6,
+                "properties": {
+                  "title": "Vocabulary snapshot age (days)", "region": "${AWS::Region}", "stat": "Maximum", "period": 3600, "view": "timeSeries",
+                  "annotations": {"horizontal": [{"label": "Alarm 35 days", "value": 35}]},
+                  "metrics": [
+                    ["WorldBankMcp", "VocabularySnapshotAgeDays"]
                   ]
                 }
               }

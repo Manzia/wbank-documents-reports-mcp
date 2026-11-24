@@ -3,7 +3,14 @@ import { GetObjectCommand, S3Client } from '@aws-sdk/client-s3';
 import { mockClient } from 'aws-sdk-client-mock';
 import type { FetchVocabularyOptions } from '../../../src/vocabulary/fetch';
 import type { Vocabulary } from '../../../src/vocabulary/format';
-import { BUCKET_ENV, LIVE_FETCH_OPTIONS, forgetVocabulary, loadVocabulary } from '../../../src/vocabulary/load';
+import {
+    AGE_METRIC,
+    AGE_NAMESPACE,
+    BUCKET_ENV,
+    LIVE_FETCH_OPTIONS,
+    forgetVocabulary,
+    loadVocabulary,
+} from '../../../src/vocabulary/load';
 import { silenceWarnings, warnings } from '../haiku/fake-bedrock';
 import { sampleVocabulary } from './sample-vocabulary';
 
@@ -13,15 +20,21 @@ const snapshot = sampleVocabulary('2026-11-01T00:00:00.000Z');
 const live = sampleVocabulary('2026-11-24T08:00:00.000Z');
 
 let warn: ReturnType<typeof silenceWarnings>;
+let stdout: jest.SpiedFunction<typeof process.stdout.write>;
 let fetch: jest.Mock<(options: FetchVocabularyOptions) => Promise<Vocabulary>>;
 beforeEach(() => {
     s3.reset();
     forgetVocabulary();
     delete process.env[BUCKET_ENV];
     warn = silenceWarnings();
+    stdout = jest.spyOn(process.stdout, 'write').mockImplementation(() => true);
     fetch = jest.fn(async () => live);
 });
-afterEach(() => warn.mockRestore());
+afterEach(() => {
+    jest.restoreAllMocks();
+});
+
+const written = () => stdout.mock.calls.map(([chunk]) => String(chunk));
 
 describe('loadVocabulary', () => {
     it('reads the snapshot from the vocabulary bucket once and keeps it in memory', async () => {
@@ -36,6 +49,37 @@ describe('loadVocabulary', () => {
         ]);
         expect(fetch).not.toHaveBeenCalled();
         expect(warn).not.toHaveBeenCalled();
+    });
+
+    it('records the snapshot age in days as an EMF metric once per load, and nothing of its content', async () => {
+        const now = Date.parse('2026-11-24T12:00:00.000Z');
+        jest.spyOn(Date, 'now').mockReturnValue(now);
+        s3.on(GetObjectCommand).resolves(body(JSON.stringify(snapshot)));
+        await loadVocabulary({ bucket: 'vocabulary-bucket', fetch });
+        await loadVocabulary({ bucket: 'vocabulary-bucket', fetch });
+        const lines = written();
+        expect(lines).toHaveLength(1);
+        expect(lines[0].endsWith('}\n')).toBe(true);
+        expect(JSON.parse(lines[0])).toEqual({
+            _aws: {
+                Timestamp: now,
+                CloudWatchMetrics: [
+                    { Namespace: AGE_NAMESPACE, Dimensions: [[]], Metrics: [{ Name: AGE_METRIC, Unit: 'None' }] },
+                ],
+            },
+            message: 'vocabulary snapshot loaded',
+            [AGE_METRIC]: 23.5,
+        });
+        expect(AGE_METRIC).toBe('VocabularySnapshotAgeDays');
+        expect(AGE_NAMESPACE).toBe('WorldBankMcp');
+    });
+
+    it('records no age for lists fetched live', async () => {
+        s3.on(GetObjectCommand).resolves(body('{not json'));
+        await loadVocabulary({ bucket: 'vocabulary-bucket', fetch });
+        forgetVocabulary();
+        await loadVocabulary({ fetch });
+        expect(written()).toEqual([]);
     });
 
     it('takes the bucket and client from the options', async () => {
