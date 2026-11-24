@@ -86,9 +86,7 @@ describe('MCP handler (stateless, legacy 2025 fallback)', () => {
     });
 
     it('answers a stub tool call with a "not available yet" error', async () => {
-        const res = await app.fetch(
-            mcpPost(jsonRpc(3, 'tools/call', { name: 'get_project', arguments: { project_id: 'P117635' } })),
-        );
+        const res = await app.fetch(mcpPost(jsonRpc(3, 'tools/call', { name: 'retrieve_skill', arguments: {} })));
         const [message] = messagesIn(await res.text());
         expect(message.result.isError).toBe(true);
         expect(message.result.content[0].text).toMatch(/not available yet/);
