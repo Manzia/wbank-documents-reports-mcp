@@ -476,6 +476,15 @@ by a person").
    answer** drafted from those sources with page citations, and the four-part rubric of design §10.2.
 5. Each reference answer is marked `review: pending`; you change it to `review: done` as you check
    it. The PR is merged only when all 41 say `done`.
+6. **Regional spread.** The set covers six regions: Africa, East Asia & Pacific, Europe & Central
+   Asia, Latin America & Caribbean, Middle East & North Africa, and South Asia. Each region has at
+   least 3 cases and none has more than 13 (a third). A case counts for the region of the country or
+   project it is mainly about. Cases about no single country (`learning poverty`, the author search, …)
+   count for none. The query design names the places in 11 queries. Every other choice follows the
+   same rule: the placeholder projects, the comparator sets and the documents without a project.
+   Q3's `Pxxxxxx` and Q4's `P123456` are in two different regions, neither of them Africa. Where a
+   query says "similar" or "comparable" without naming a place, the comparator set draws on more than
+   one region. `evaluation/README.md` gives the count per region.
 
 #### MCP-121 — Evaluation harness (💻)
 
