@@ -12,16 +12,13 @@ on:
   workflow_run:
     workflows: [CI Pipeline]
     types: [completed]
+    # Only CI runs on `main` start this workflow. Without the filter every
+    # feature-branch and PR CI run started a no-op deploy run (see below).
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-
-# Never run two deploys at once: a second `sam deploy` against a stack in
-# UPDATE_IN_PROGRESS fails. Queue instead of cancelling a half-done update.
-concurrency:
-  group: deploy-prod
-  cancel-in-progress: false
 
 env:
   NODE_VERSION: '24.x'
@@ -91,6 +88,16 @@ jobs:
     # sub `...:environment:production` AND ref `refs/heads/main`.
     environment:
       name: production
+    # Never run two deploys at once: a second `sam deploy` against a stack in
+    # UPDATE_IN_PROGRESS fails. Queue instead of cancelling a half-done update.
+    # The group is on this job, not the workflow, so runs that skip the
+    # deploy never join it. A group holds one running and one pending entry,
+    # and a newer entry cancels the pending one, so a skipped run could
+    # otherwise cancel a real deploy queued behind another. A newer real
+    # deploy replacing a queued one loses nothing: both deploy `main`.
+    concurrency:
+      group: deploy-prod
+      cancel-in-progress: false
     permissions:
       contents: read
       id-token: write   # mint the GitHub OIDC token for AssumeRoleWithWebIdentity
