@@ -1,0 +1,135 @@
+{
+ "rows": 10,
+ "os": 0,
+ "page": 1,
+ "total": 3,
+ "documents": {
+  "D40076559": {
+   "id": "40076559",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "Morocco",
+   "docna": {
+    "0": {
+     "docna": "Quels Enseignements Pouvons-Nous Tirer de l'Expansion de l'Enseignement Préscolaire au Maroc ?\n"
+    }
+   },
+   "docty": "Working Paper",
+   "lang": "French",
+   "repnb": "207313",
+   "docdt": "2025-12-17T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": ""
+   },
+   "colti": "Early Learning Partnership (ELP) Series",
+   "disclosure_date": "2025-12-17T10:53:33Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099054412172524939/pdf/IDU-382e3c8b-f864-4331-9ff8-74291f3b0617.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099054412172524939/text/IDU-382e3c8b-f864-4331-9ff8-74291f3b0617.txt",
+   "guid": "099054412172524939",
+   "url": "http://documents.worldbank.org/curated/en/099054412172524939"
+  },
+  "D40095361": {
+   "id": "40095361",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "Morocco",
+   "docna": {
+    "0": {
+     "docna": "Composante Learning and Evaluation du Pré-Test Teaching at the Right Level (TaRL) : Résultats de l’Évaluation de Processus"
+    }
+   },
+   "docty": "Report",
+   "lang": "French",
+   "repnb": "209429",
+   "docdt": "2023-12-31T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": ""
+   },
+   "disclosure_date": "2026-04-06T09:48:52Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099040326141039051/pdf/P177342-bce6059c-1e3e-4cb5-af13-dfbd71e288a8.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099040326141039051/text/P177342-bce6059c-1e3e-4cb5-af13-dfbd71e288a8.txt",
+   "projectid": "P177342",
+   "guid": "099040326141039051",
+   "url": "http://documents.worldbank.org/curated/en/099040326141039051"
+  },
+  "D7036023": {
+   "id": "7036023",
+   "authors": {
+    "0": {
+     "author": "Lockheed, Marlaine E."
+    },
+    "1": {
+     "author": "Avins, Jon"
+    },
+    "2": {
+     "author": "Chang, Mae Chu"
+    },
+    "3": {
+     "author": "Darnell, Bill"
+    },
+    "4": {
+     "author": "Demetriou, Vasilios C."
+    },
+    "5": {
+     "author": "Ezzine, Mourad"
+    },
+    "6": {
+     "author": "Maughan-Colon, Patricia"
+    },
+    "7": {
+     "author": "Millot, Benoit"
+    },
+    "8": {
+     "author": "Mulatu, Meskerem"
+    },
+    "9": {
+     "author": "Parker, Mari"
+    },
+    "10": {
+     "author": "Pham, Dung-Kim"
+    },
+    "11": {
+     "author": "Steier, Francis A."
+    },
+    "12": {
+     "author": "Yuki, Takako"
+    },
+    "13": {
+     "author": "SCHUBERT, JANE"
+    },
+    "14": {
+     "author": "Van Eeghen, M. Willem"
+    }
+   },
+   "count": "Algeria,Jordan,Iraq,West Bank and Gaza,Iran, Islamic Republic of,Syrian Arab Republic,Tunisia,Morocco,Egypt, Arab Republic of,Lebanon,Yemen, Republic of",
+   "docna": {
+    "0": {
+     "docna": "L'education au moyen-orient et en Afrique du nord: une strategie pour mettre l'enseignement au service du developpement"
+    }
+   },
+   "docty": "Working Paper",
+   "lang": "French",
+   "repnb": "21589",
+   "docdt": "1999-04-01T05:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": " Le succès remporté dans la région au cours des dernières décennies constitue paradoxalement un défi pour les pays du Moyen-Orient et de l’Afrique du Nord. Dans bon nombre de pays, les gouvernements centraux ont déployé d’importants efforts visant à étendre l’accès à l’enseignement fondamental à tous les enfants, tout en développant parallèlement l’enseignement secondaire gratuit. Comme le nombre ..."
+   },
+   "display_title": "L’éducation au Moyen-Orient et en Afrique du nord : une stratégie pour mettre l’enseignement au service du développement",
+   "disclosure_date": "2010-07-01T04:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/373201468038683601/pdf/21589.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/373201468038683601/text/21589.txt",
+   "guid": "373201468038683601",
+   "url": "http://documents.worldbank.org/curated/en/373201468038683601"
+  },
+  "facets": {}
+ }
+}

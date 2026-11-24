@@ -1,0 +1,33 @@
+{
+ "rows": 20,
+ "os": 0,
+ "page": 1,
+ "total": 1,
+ "documents": {
+  "D33768254": {
+   "id": "33768254",
+   "count": "World",
+   "docna": {
+    "0": {
+     "docna": "Caribbean - Regional Communications Infrastructure Program"
+    }
+   },
+   "docty": "Implementation Completion and Results Report",
+   "lang": "English",
+   "repnb": "ICR5769",
+   "docdt": "2022-03-09T05:00:00Z",
+   "majdocty": "Project Documents",
+   "abstracts": {
+    "cdata!": "Rating of Regional Communications Infrastructure Program for Caribbean were as follows: outcome was moderately satisfactory, Bank performance was moderately satisfactory, and monitoring and evaluation quality was modest. Some of the lessons learned include: (I) Realistic assessments of technical, financial, legal, institutional, and operational challenges may be required before projects design ..."
+   },
+   "display_title": "Caribbean - Regional Communications Infrastructure Program",
+   "disclosure_date": "2022-03-25T13:40:07Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/201511648215694456/pdf/Caribbean-Regional-Communications-Infrastructure-Program.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/201511648215694456/text/Caribbean-Regional-Communications-Infrastructure-Program.txt",
+   "projectid": "P114963",
+   "guid": "201511648215694456",
+   "url": "http://documents.worldbank.org/curated/en/201511648215694456"
+  },
+  "facets": {}
+ }
+}

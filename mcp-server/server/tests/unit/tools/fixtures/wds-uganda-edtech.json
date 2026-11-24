@@ -1,0 +1,38 @@
+{
+ "rows": 10,
+ "os": 0,
+ "page": 1,
+ "total": 1,
+ "documents": {
+  "D40081012": {
+   "id": "40081012",
+   "authors": {
+    "0": {
+     "author": "World Bank"
+    }
+   },
+   "count": "Uganda",
+   "docna": {
+    "0": {
+     "docna": "The EdTech Readiness Index : Uganda Policy Brief - Examining Readiness to Use Technology in Primary and Secondary Schools"
+    }
+   },
+   "docty": "Brief",
+   "lang": "English",
+   "repnb": "207823",
+   "docdt": "2025-06-30T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "This brief assesses Uganda’s readiness to leverage educational technology in primary and secondary education, situating the analysis within national goals for human capital and socio-economic transformation. Using the World Bank’s EdTech Readiness Index (ETRI), the study draws on school, policy, and student surveys conducted across four regions between October and December 2024. The findings ..."
+   },
+   "colti": "Mastercard Foundation",
+   "display_title": "The EdTech Readiness Index : Uganda Policy Brief - Examining Readiness to Use Technology in Primary and Secondary Schools",
+   "disclosure_date": "2026-01-14T06:50:37Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099824001142614497/pdf/IDU-f882d18d-c06e-41c0-90fc-d0de2c31aea6.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099824001142614497/text/IDU-f882d18d-c06e-41c0-90fc-d0de2c31aea6.txt",
+   "guid": "099824001142614497",
+   "url": "http://documents.worldbank.org/curated/en/099824001142614497"
+  },
+  "facets": {}
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "rows": 10,
+ "os": "0",
+ "page": "1",
+ "total": "19",
+ "projects": {
+  "P044601": {
+   "curr_project_cost": "151000000",
+   "curr_total_commitment": "100",
+   "id": "P044601",
+   "regionname": "Latin America and Caribbean",
+   "lendinginstr": "Sector Investment and Maintenance Loan",
+   "project_name": "SECOND RURAL ROADS PROJECT",
+   "countryshortname": "Peru",
+   "totalcommamt": "100,000,000",
+   "boardapprovaldate": "2001-06-19T00:00:00Z",
+   "closingdate": "11/30/2006 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P044601",
+   "status": "Closed"
+  },
+  "P007077": {
+   "curr_project_cost": "58800000",
+   "curr_total_commitment": "40",
+   "id": "P007077",
+   "regionname": "Latin America and Caribbean",
+   "lendinginstr": "Specific Investment Loan",
+   "project_name": "Rural Roads Project",
+   "countryshortname": "Ecuador",
+   "totalcommamt": "40,000,000",
+   "boardapprovaldate": "2006-07-25T00:00:00Z",
+   "closingdate": "6/30/2011 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P007077",
+   "status": "Closed"
+  },
+  "P006773": {
+   "curr_total_commitment": "33",
+   "id": "P006773",
+   "regionname": "Latin America and Caribbean",
+   "lendinginstr": "Sector Investment and Maintenance Loan",
+   "project_name": "Rural Roads Project",
+   "countryshortname": "Colombia",
+   "totalcommamt": "33,000,000",
+   "boardapprovaldate": "1981-03-31T00:00:00Z",
+   "closingdate": "6/30/1986 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P006773",
+   "status": "Closed"
+  },
+  "P007115": {
+   "curr_project_cost": "112700000",
+   "curr_total_commitment": "84",
+   "id": "P007115",
+   "regionname": "Latin America and Caribbean",
+   "lendinginstr": "Specific Investment Loan",
+   "project_name": "Rural Development (PRONADER)",
+   "countryshortname": "Ecuador",
+   "totalcommamt": "84,000,000",
+   "boardapprovaldate": "1991-07-16T00:00:00Z",
+   "closingdate": "12/31/2000 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P007115",
+   "status": "Closed"
+  },
+  "P037047": {
+   "curr_project_cost": "267000000",
+   "curr_total_commitment": "180",
+   "id": "P037047",
+   "regionname": "Latin America and Caribbean",
+   "lendinginstr": "Sector Investment and Maintenance Loan",
+   "project_name": "Rural Road Rehabilitation and Maintenance Project",
+   "countryshortname": "Peru",
+   "totalcommamt": "90,000,000",
+   "boardapprovaldate": "1995-12-05T00:00:00Z",
+   "closingdate": "12/31/2000 12:00:00 AM",
+   "url": "https://projects.worldbank.org/en/projects-operations/project-detail/P037047",
+   "status": "Closed"
+  }
+ },
+ "facets": {}
+}

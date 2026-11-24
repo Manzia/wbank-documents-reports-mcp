@@ -1,0 +1,47 @@
+{
+ "rows": 10,
+ "os": 0,
+ "page": 1,
+ "total": 1,
+ "documents": {
+  "D40100461": {
+   "id": "40100461",
+   "authors": {
+    "0": {
+     "author": "Mirembe, Drake Patrick"
+    },
+    "1": {
+     "author": "Chinen, Marjorie H"
+    },
+    "2": {
+     "author": "Powers, Shawn Michael"
+    },
+    "3": {
+     "author": "Osiru, Moses Omongin"
+    }
+   },
+   "count": "Uganda",
+   "docna": {
+    "0": {
+     "docna": "Enhancing Uganda’s E-Learning System for Students and Teachers : An Assessment of Key Learning Management Systems Utilized in Uganda’s Education Sector"
+    }
+   },
+   "docty": "Working Paper",
+   "lang": "English",
+   "repnb": "209980",
+   "docdt": "2025-09-03T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "This report presents an analytical assessment of key Learning Management Systems (LMS) used within Uganda’s education sector, with a particular focus on the Ministry of Education and Sports (MoES) LMS developed in response to the COVID‑19 school closures. Conducted under the Global Education and Technology Thematic Group, the study aims to inform the design and implementation of the Uganda ..."
+   },
+   "colti": "Mastercard Foundation",
+   "display_title": "Enhancing Uganda’s E-Learning System for Students and Teachers : An Assessment of Key Learning Management Systems Utilized in Uganda’s Education Sector",
+   "disclosure_date": "2026-04-30T13:48:47Z",
+   "pdfurl": "https://documents.worldbank.org/curated/en/099353404302632945/pdf/IDU-7ba4af77-edc8-4c2d-9e3c-9bc83d482529.pdf",
+   "txturl": "https://documents.worldbank.org/curated/en/099353404302632945/text/IDU-7ba4af77-edc8-4c2d-9e3c-9bc83d482529.txt",
+   "guid": "099353404302632945",
+   "url": "http://documents.worldbank.org/curated/en/099353404302632945"
+  },
+  "facets": {}
+ }
+}

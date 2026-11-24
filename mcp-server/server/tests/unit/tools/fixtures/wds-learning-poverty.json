@@ -1,0 +1,119 @@
+{
+ "rows": 10,
+ "os": 0,
+ "page": 1,
+ "total": 761,
+ "documents": {
+  "D33225817": {
+   "id": "33225817",
+   "authors": {
+    "0": {
+     "author": "World Bank, UNESCO"
+    }
+   },
+   "count": "World",
+   "docna": {
+    "0": {
+     "docna": "Niger - Learning Poverty Brief - 2021"
+    }
+   },
+   "docty": "Brief",
+   "lang": "English",
+   "repnb": "160855",
+   "docdt": "2021-07-01T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "All children should be able to read by age 10. Reading is a gateway for learning as the child progresses through school, and conversely, an inability to read constrains opportunities for further learning. Reading proficiency is also critical for foundational learning in other subjects. In low- and middle-income countries, more than half the children cannot read and understand a simple story by ..."
+   },
+   "colti": "Learning Poverty Brief",
+   "display_title": "Niger - Learning Poverty Brief - 2021",
+   "disclosure_date": "2021-06-30T10:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/602851624898083124/pdf/Niger-Learning-Poverty-Brief-2021.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/602851624898083124/text/Niger-Learning-Poverty-Brief-2021.txt",
+   "projectid": "P171415",
+   "guid": "602851624898083124",
+   "url": "http://documents.worldbank.org/curated/en/602851624898083124"
+  },
+  "D33209450": {
+   "id": "33209450",
+   "authors": {
+    "0": {
+     "author": "World Bank, UNESCO"
+    }
+   },
+   "count": "World",
+   "docna": {
+    "0": {
+     "docna": "China - Learning Poverty Brief - 2021"
+    }
+   },
+   "docty": "Brief",
+   "lang": "English",
+   "repnb": "160713",
+   "docdt": "2021-07-01T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "All children should be able to read by age 10. Reading is a gateway for learning as the child progresses through school, and conversely, an inability to read constrains opportunities for further learning. Reading proficiency is also critical for foundational learning in other subjects. In low- and middle-income countries, more than half the children cannot read and understand a simple story by ..."
+   },
+   "colti": "Learning Poverty Brief",
+   "display_title": "China - Learning Poverty Brief - 2021",
+   "disclosure_date": "2021-06-30T10:00:00Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/573531624544023522/pdf/China-Learning-Poverty-Brief-2021.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/573531624544023522/text/China-Learning-Poverty-Brief-2021.txt",
+   "projectid": "P171415",
+   "guid": "573531624544023522",
+   "url": "http://documents.worldbank.org/curated/en/573531624544023522"
+  },
+  "D33640014": {
+   "id": "33640014",
+   "count": "World",
+   "docna": {
+    "0": {
+     "docna": "Cameroon - Learning Poverty Brief - 2019"
+    }
+   },
+   "docty": "Brief",
+   "lang": "English",
+   "repnb": "166344",
+   "docdt": "2019-10-01T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "The Human Capital Project seeks to raise awareness and increase demand for interventions to build human capital. It aims to accelerate better and more investments in people. In low- and middle-income countries, the learning crisis means that deficits in education outcomes are a major contributor to human capital deficits. Shortcomings in both the quantity of schooling and especially its quality ..."
+   },
+   "colti": "Learning Poverty Brief",
+   "display_title": "Cameroon - Learning Poverty Brief - 2019",
+   "disclosure_date": "2021-11-24T12:47:34Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/629891637758198986/pdf/Cameroon-Learning-Poverty-Brief-2019.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/629891637758198986/text/Cameroon-Learning-Poverty-Brief-2019.txt",
+   "projectid": "P171415",
+   "guid": "629891637758198986",
+   "url": "http://documents.worldbank.org/curated/en/629891637758198986"
+  },
+  "D33633823": {
+   "id": "33633823",
+   "count": "World",
+   "docna": {
+    "0": {
+     "docna": "Poland - Learning Poverty Brief - 2019"
+    }
+   },
+   "docty": "Brief",
+   "lang": "English",
+   "repnb": "166215",
+   "docdt": "2019-10-01T04:00:00Z",
+   "majdocty": "Publications & Research",
+   "abstracts": {
+    "cdata!": "The Human Capital Project seeks to raise awareness and increase demand for interventions to build human capital. It aims to accelerate better and more investments in people. In low- and middle-income countries, the learning crisis means that deficits in education outcomes are a major contributor to human capital deficits. Shortcomings in both the quantity of schooling and especially its quality ..."
+   },
+   "colti": "Learning Poverty Brief",
+   "display_title": "Poland - Learning Poverty Brief - 2019",
+   "disclosure_date": "2021-11-22T06:55:11Z",
+   "pdfurl": "http://documents.worldbank.org/curated/en/811191637564217316/pdf/Poland-Learning-Poverty-Brief-2019.pdf",
+   "txturl": "http://documents.worldbank.org/curated/en/811191637564217316/text/Poland-Learning-Poverty-Brief-2019.txt",
+   "projectid": "P171415",
+   "guid": "811191637564217316",
+   "url": "http://documents.worldbank.org/curated/en/811191637564217316"
+  },
+  "facets": {}
+ }
+}
