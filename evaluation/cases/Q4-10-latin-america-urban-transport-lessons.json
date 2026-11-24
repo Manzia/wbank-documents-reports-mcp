@@ -1,0 +1,52 @@
+{
+  "id": "Q4-10",
+  "query_id": "Q4.10",
+  "group": "Q4",
+  "tier": "cross_project_synthesis",
+  "region": "Latin America & Caribbean",
+  "task": "Extract completion lessons",
+  "query_wording": "Across recently closed urban transport projects in Latin America, what recurring implementation lessons appear in completion reports?",
+  "turns": [
+    { "user": "Across recently closed urban transport projects in Latin America, what recurring implementation lessons appear in completion reports?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "ICRs of closed urban transport projects in Latin America and the Caribbean", "filters": { "docty_exact": "Implementation Completion and Results Report", "admreg_exact": "Latin America and Caribbean", "qterm": "urban transport / metro / mass transit", "srt": "docdt", "order": "desc" }, "note": "Other recent ICRs (Buenos Aires P095485, 2020; Mexico P107159, 2019) are acceptable additions or substitutes." },
+    { "kind": "document", "project_id": "P144489", "document_id": "34361569", "report_number": "ICR6601", "document_type": "Implementation Completion and Results Report", "document_date": "2024-06-29", "pages": "7, 29-30", "role": "Ecuador Quito Metro Line One (closed 2023)" },
+    { "kind": "document", "project_id": "P117947", "document_id": "32990086", "report_number": "ICR5348", "document_type": "Implementation Completion and Results Report", "document_date": "2021-04-05", "pages": "8, 40-41", "role": "Colombia Support to the National Urban Transit Program (closed 2020)" },
+    { "kind": "document", "project_id": "P145610", "document_id": "32929823", "report_number": "ICR5306", "document_type": "Implementation Completion and Results Report", "document_date": "2021-02-01", "pages": "8, 34-35", "role": "Peru Lima Metro Line 2 (closed 2020)" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Completion reports read: Quito Metro Line One, Ecuador (P144489, ICR 2024; outcome Moderately Satisfactory, p. 7); Support to the National Urban Transit Program, Colombia (P117947, ICR 2021; outcome Moderately Unsatisfactory, p. 8); Lima Metro Line 2, Peru (P145610, ICR 2021; outcome Unsatisfactory, p. 8). Page numbers are PDF pages.",
+          "1. Results depend on integration and demand outside the project's control. Quito's PDO target and economic return assumed integration with buses that the city had not delivered, and ridership was lower than expected; the ICR advises matching targets to project scope and using a programmatic approach to integration (Quito pp. 29-30). Colombia's demand models overestimated demand and underestimated the effect of transfers and waiting times (Colombia p. 40). Lima's outcomes depend on physical and fare integration and reorganized bus services (Lima p. 34).",
+          "2. Implementing-agency capacity and leadership. Colombia's national unit was unstable and small cities had low technical capacity; a technical-assistance component sped implementation, and the ICR recommends direct TA for subnational entities (Colombia p. 41). Lima's borrower lacked the capacity to manage a PPP concession, and leadership was inconsistent (Lima p. 35). Quito credits detailed designs at appraisal and strong supervision support (Quito p. 30).",
+          "3. Decide operations and design questions early. Quito's delayed decision on who would operate the metro was a major roadblock; it suggests dated covenants or disbursement conditions tied to operating decisions (Quito p. 30). In Lima the concession left design approval slow and cumbersome, and the Bank joined after the design and award were fixed, limiting its influence (Lima pp. 34-35). Colombia's national requirements were over-specified for small cities (Colombia p. 40).",
+          "4. Realistic timelines. Quito's closing date was extended by a cumulative five years; the ICR says the original timeline was overly ambitious for a megaproject (Quito p. 30). Lima's opening is expected beyond 2024 (Lima p. 34).",
+          "5. Results frameworks. All three recommend outcome-focused, well-defined indicators: match ambition to scope (Quito p. 29), focus national program requirements on outcomes not outputs (Colombia p. 40), and define indicators and calculation methods at appraisal, including safeguards sub-indicators (Lima p. 35).",
+          "Note: the Colombia ICR refers to the 'Mexico Urban Transport Transformation Project (P144489)' (p. 41); P144489 is Quito Metro, and the Mexico project is P107159."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses completion reports (ICRs) of closed urban transport projects in Latin America and the Caribbean; at least three projects."
+    ],
+    "grounded": [
+      "Each lesson is cited to the ICR and page it comes from; ratings match the ICRs."
+    ],
+    "complete": [
+      "Identifies lessons that recur across projects (not just a list per project), including integration/demand and agency capacity."
+    ],
+    "scoped": [
+      "States which ICRs were read and that the set is a sample; does not repeat the Colombia ICR's wrong project ID as fact."
+    ]
+  },
+  "stability": "stable",
+  "notes": "The Quito ICR has a footnote link to an internal Bank site; answers should not present it as a public source."
+}
