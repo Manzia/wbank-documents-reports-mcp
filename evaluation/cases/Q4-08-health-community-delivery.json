@@ -1,0 +1,51 @@
+{
+  "id": "Q4-08",
+  "query_id": "Q4.8",
+  "group": "Q4",
+  "tier": "cross_project_synthesis",
+  "region": "none",
+  "task": "Research design precedents",
+  "query_wording": "How have comparable health projects structured community delivery, and what problems emerged during implementation?",
+  "turns": [
+    { "user": "How have comparable health projects structured community delivery, and what problems emerged during implementation?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Health projects with community delivery (community health units, community clinics, CHWs)", "filters": { "qterm": "community health workers / community health units / community clinics", "docty_exact": "Implementation Completion and Results Report or Project Appraisal Document" } },
+    { "kind": "document", "project_id": "P152394", "document_id": "26414452", "report_number": "PAD1694", "document_type": "Project Appraisal Document", "document_date": "2016-05-24", "pages": "47-48", "role": "Kenya THS-UC: definition and target of functional community units" },
+    { "kind": "document", "project_id": "P152394", "document_id": "34327185", "report_number": "ICR6313", "document_type": "Implementation Completion and Results Report", "document_date": "2024-05-29", "pages": "16, 19-20, 24, 31", "role": "Kenya THS-UC: community units results, e-CHIS, PHC Act, implementation problems" },
+    { "kind": "document", "project_id": "P171648", "document_id": "40085622", "report_number": "ICR00400", "document_type": "Implementation Completion and Results Report", "document_date": "2025-12-24", "pages": "13, 17, 19-21, 56", "role": "Bangladesh Health and Gender Support Project for Cox's Bazar: community clinics, support groups and CHWs delivered through UN agencies" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Coverage: two health operations with community-level delivery, in two regions: Kenya Transforming Health Systems for Universal Care (THS-UC, P152394; PAD 2016, ICR 2024) and Bangladesh Health and Gender Support Project for Cox's Bazar District (HGSP, P171648; approved March 2020, closed December 2024; ICR 2025), which served host communities and displaced Rohingya people. Others (e.g. Tanzania's PHC for Results) focus on facilities rather than community delivery.",
+          "Kenya THS-UC - structure: community health was organized through community units, counted as 'functional' when they hold community dialogue days (barazas with CHWs, CHEWs, village elders), monthly action days and use four approved community health information tools linked to the master facility list (PAD pp. 47-48, fn. 57); target 1,549 to 2,400 units. Delivery ran through county governments under Kenya's devolved health system. The project also financed national scale-up of the electronic community health information system (e-CHIS) (ICR p. 19) and supported the Primary Health Care Act, which entrenches community health providers and sets up primary care networks and community health units (ICR p. 24). Result: the indicator was redefined as community units reporting through DHIS, the target raised to 5,331, and 9,400 were achieved (ICR pp. 16, 20).",
+          "Kenya THS-UC - problems: delayed transfers of county allocations from national to county level shortened each year's implementation window; high county staff turnover, especially after the 2017 and 2022 elections, required repeated training; a portfolio-wide disbursement freeze delayed the start; the PMT and Bank team lacked enough fiduciary support for the county component; COVID-19 restrictions disrupted activities; KHIS routine data had shortcomings (ICR p. 31).",
+          "Bangladesh HGSP - structure: services at community clinics and union-level centres, with referral up to upazila health complexes and the district hospital; community engagement through Community Support Groups, volunteers and participatory planning, plus culturally adapted behaviour-change activities (ICR p. 13). The Ministry of Health planned and coordinated, while five UN agencies implemented under contract and the Bank paid them directly; over 3,000 staff were recruited and placed through UN partners, and 100 community clinics were rebuilt (ICR pp. 20, 56). Community health workers (182) reached about 980,000 people with reproductive health, GBV and nutrition information in host communities and camps (ICR p. 56). Community clinic service use rose from 789,825 to 1,454,275 a year, above the original target of 1,051,257 but below the target raised in 2023 to 2,225,000 (ICR p. 17).",
+          "Bangladesh HGSP - problems: COVID-19 delayed signing and effectiveness; procurement delays in the line director's office and WHO's internal procurement constraints, handled by reallocating funds from two under-performing agencies to others; a management information system was not introduced in time because of one agency's procurement problems; political turmoil in July-August 2024 left the line director's office with vacancies and new staff unfamiliar with the project; output targets for novel services were hard to set and were adjusted in 2023 (ICR pp. 20-21).",
+          "Common problems: changing staff at the level that manages delivery, procurement and fund-flow delays, and information systems that lag behind community activities."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Reads documents of at least two health projects with community delivery from more than one region (the reference uses P152394 and P171648; other comparable projects are acceptable)."
+    ],
+    "grounded": [
+      "Delivery structures and implementation problems are cited to project documents and pages."
+    ],
+    "complete": [
+      "Covers both how community delivery was structured and the problems that emerged, for each project."
+    ],
+    "scoped": [
+      "States which projects were read and their context (e.g. that HGSP was implemented through UN agencies in a displacement setting)."
+    ]
+  },
+  "stability": "stable",
+  "notes": "Cross-project case: other comparable community health projects are acceptable if grounded. The HGSP ICR's annex figures come from UN agencies' progress reports."
+}

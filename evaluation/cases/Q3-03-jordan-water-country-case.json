@@ -1,0 +1,49 @@
+{
+  "id": "Q3-03",
+  "query_id": "Q3.3",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
+  "task": "Establish the country case",
+  "query_wording": "What do the latest country strategy and diagnostics say about water service constraints in Jordan? Which findings support a new operation?",
+  "turns": [
+    { "user": "What do the latest country strategy and diagnostics say about water service constraints in Jordan? Which findings support a new operation?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Latest country strategy and diagnostics for Jordan", "filters": { "count_exact": "Jordan", "docty_exact": "Country Partnership Framework^Systematic Country Diagnostic^Country Climate and Development Report", "srt": "docdt", "order": "desc" } },
+    { "kind": "document", "document_id": "34288013", "report_number": "CPF0000007", "document_type": "Country Partnership Framework", "document_date": "2024-02-28", "pages": "5, 12, 22-23", "role": "Latest country strategy: CPF FY24-FY29", "note": "Also disclosed as record 34274740 (same report); either is acceptable." },
+    { "kind": "document", "document_id": "34310303", "report_number": "189721", "document_type": "Systematic Country Diagnostic", "document_date": "2023-06-01", "pages": "23", "role": "Systematic Country Diagnostic Update (slide format)" },
+    { "kind": "document", "document_id": "33933698", "report_number": "177630", "document_type": "Country Climate and Development Report", "document_date": "2022-11-01", "pages": "9, 11", "role": "Country Climate and Development Report: water scarcity and the water sector's finances" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Latest country strategy: Jordan Country Partnership Framework FY24-FY29 (CPF0000007, 2024-02-28). Diagnostics: the Systematic Country Diagnostic Update (Report 189721, June 2023) and the Country Climate and Development Report (CCDR, Report 177630, November 2022).",
+          "Constraints - scarcity: Jordan has about 97 m3 of water per person per year, far below the 500 m3 absolute scarcity threshold; climate change could cut water per capita by 30% by 2040 while raising demand, and multi-year droughts will become the norm, with municipal supply nearing humanitarian thresholds (CCDR p. 9). The population doubled in two decades, adding pressure (CCDR p. 9; CPF p. 22).",
+          "Constraints - losses and finances: leakage and commercial losses are about 48% of water in the system (CPF p. 23), 'more than 50 percent' in the CCDR, which cites the Financial Sustainability Roadmap target of cutting non-revenue water from 53% to 25% by 2040 (CCDR p. 11). The sector's deficit reached JD 196 million at end-2021 and its debt JD 3.56 billion, about 11% of GDP, driven by losses, energy costs and large capital needs (CPF p. 23). The SCD Update flags water sector debt of about 6% of GDP, the sector as the largest single energy consumer (pumping), and limited, costly options to add supply (SCD Update p. 23). Supply augmentation is expensive: desalination and long-distance conveyance (Aqaba-Amman) or buying water from neighbours (CCDR p. 11).",
+          "Findings that support a new operation: the CPF's Objective 7 ('Enhanced water security and sustainability through nexus solutions') commits the Bank to multiphase programs to reduce water losses, especially in urban areas, raise water productivity in agriculture (which uses half the water) and improve sector efficiency and financial sustainability (CPF pp. 22-23). It cites the first operation in a series of projects on water sector efficiency (FY23) supporting the government's Financial Sustainability Roadmap (NRW reduction, energy efficiency, drought management), an IFC-supported performance-based NRW contract with Miyahuna, and the planned Aqaba-Amman desalination and conveyance project, which would nearly double municipal supply, as the investment that efficiency gains must precede (CPF p. 23). The CCDR argues that efficiency and supply measures must be combined, and that the roadmap's NRW, energy-efficiency and tariff measures would return the sector to operational cost recovery before the conveyance comes online (CCDR p. 11).",
+          "Caveat: the loss figures differ by source and year (48% in the CPF, 53% in the roadmap as cited by the CCDR)."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the latest CPF (FY24-FY29) and at least one diagnostic (SCD Update 2023 or CCDR 2022)."
+    ],
+    "grounded": [
+      "Figures (97 m3 per capita, ~48-53% losses, JD 196 million deficit, JD 3.56 billion debt, etc.) are cited to the right document and page."
+    ],
+    "complete": [
+      "Covers both the constraints and the findings that support a new operation."
+    ],
+    "scoped": [
+      "Names the documents and dates and notes where sources give different figures."
+    ]
+  },
+  "stability": "stable"
+}

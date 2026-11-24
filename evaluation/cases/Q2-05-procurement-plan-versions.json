@@ -1,0 +1,60 @@
+{
+  "id": "Q2-05",
+  "query_id": "Q2.5",
+  "group": "Q2",
+  "tier": "project_centred_reading",
+  "region": "Latin America & Caribbean",
+  "task": "Compare two versions of a procurement plan",
+  "query_wording": "What changed between these two versions of the procurement plan?",
+  "placeholders": [
+    { "placeholder": "these two versions", "resolved_to": "the two most recent procurement plans of P174677 (2022-01-24, STEP59663, and 2022-10-18, STEP71173)", "reason": "The query refers back to two plans, so turn 1 retrieves them. The project is closed, so 'most recent' is stable." }
+  ],
+  "turns": [
+    { "user": "Show me the two most recent procurement plans for P174677." },
+    { "user": "What changed between these two versions of the procurement plan?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "turn": 1, "role": "The project's procurement plans, newest first", "filters": { "proid": "P174677", "docty_exact": "Procurement Plan", "srt": "docdt", "order": "desc", "rows": "2" } },
+    { "kind": "document", "project_id": "P174677", "document_id": "33711832", "report_number": "STEP59663", "document_type": "Procurement Plan", "document_date": "2022-01-24", "pages": "3-4", "role": "Earlier version" },
+    { "kind": "document", "project_id": "P174677", "document_id": "33920124", "report_number": "STEP71173", "document_type": "Procurement Plan", "document_date": "2022-10-18", "pages": "3-4", "role": "Later version" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "P174677, Nicaragua COVID-19 Education Sector Response Project (Ministry of Education; grant TF-B4486, US$6.77 million). Two most recent procurement plans: 2022-10-18 (STEP71173, http://documents.worldbank.org/curated/en/099300010182227675) and 2022-01-24 (STEP59663, http://documents.worldbank.org/curated/en/099800001242217813). The project has three plans in all; the first is from 2021-02-01."
+        ]
+      },
+      {
+        "turn": 2,
+        "text": [
+          "Comparing the STEP activity tables (pp. 3-4 in both), matched by activity reference number. The textual part (pp. 1-2) is identical. Estimated amounts, methods (Request for Bids, CQS, individual selection), market approaches and post review are unchanged for every activity in both versions; what changed is contract (actual) amounts and statuses. Descriptions are in Spanish.",
+          "Added: NI-MINED-322132-GO-RFB, office supplies and cleaning materials for administrative units nationwide for 2022 (Project Management, Monitoring and Evaluation), Request for Bids, Open - National, estimated US$205,028.26, status 'Ejecución pendiente' (p. 3).",
+          "Goods: mobile digital classrooms, educational platforms and related services for primary schools (212563, estimated 2,790,798.00): actual 0.00 'En ejecución' -> 2,909,248.20 'Firmado'; videoconference and digital storage equipment (212568, 911,277.00): 0.00 pending -> 798,116.16 'Firmado'; play kits (kit lúdico, 212560, 1,198,202.00): 'Firmado' -> 'Finalizado', with the actual amount rising from 1,197,835.81 to 1,608,628.92 (about 34% above the estimate).",
+          "Non-consulting services: printing and distribution of learning booklets (212576, 1,275,532.00): actual 576,667.65 -> 844,088.28, still 'Firmado'; layout and printing of the socio-emotional support strategy (212584): 'Firmado' -> 'Finalizado'. Consulting firm: the CQS technical assistance on socio-emotional support (212585): 'Firmado' -> 'Finalizado'.",
+          "Individual consultants: contracts recorded for the central infrastructure supervisor (212586, 4,740.00), four resident supervisors (212588, 13,500.00, now 'Finalizado'), three network administrators (212589, 25,200.00), two electrical specialists (212597, 13,560.00), two architects (212598, 29,100.00) and one environmental safeguards technician (274336, 3,000.00), all previously at 0.00; the social and environmental safeguards technicians' contracts (212594, 212596) rise by US$10,000 and US$2,000 to 21,799.82 and 20,999.90; the 2022 social safeguards technician (274332) moves from pending to 'En ejecución' with no amount.",
+          "Net effect: one goods package added; no cancellations; most contracts now signed or finished, consistent with the project's closing on 2022-10-31. The plans do not explain the play-kit overrun."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Turn 1 returns the 2022-10-18 and 2022-01-24 plans; turn 2 reads both."
+    ],
+    "grounded": [
+      "Every change cited is visible in the two plans (reference number, amount, status), with page references; no invented reasons for changes."
+    ],
+    "complete": [
+      "Reports the added office-supplies package, the status and actual-amount changes for the main goods packages, and says that estimates and methods did not change."
+    ],
+    "scoped": [
+      "Says the comparison matches packages by reference number and covers only these two versions; translating or glossing the Spanish statuses is a plus."
+    ]
+  },
+  "stability": "stable",
+  "notes": "The STEP text has columns split across lines and truncated words (e.g. 'Ejecución pe / ndiente'); the reference reads the amounts in row order."
+}

@@ -1,0 +1,50 @@
+{
+  "id": "Q3-10",
+  "query_id": "Q3.10",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "region": "Africa",
+  "task": "Review a results program",
+  "query_wording": "For this Program-for-Results operation, what are the disbursement-linked indicators and how is each one verified?",
+  "placeholders": [
+    { "placeholder": "this Program-for-Results operation", "resolved_to": "P163732, Tanzania Sustainable Rural Water Supply and Sanitation Program (SRWSSP)", "reason": "A PforR with eight DLIs and a verification protocol table; its 2018 program appraisal document is catalogued as 'Project Appraisal Document', which tests document-type handling." }
+  ],
+  "turns": [
+    { "user": "For this Program-for-Results operation, P163732 (Tanzania Sustainable Rural Water Supply and Sanitation Program), what are the disbursement-linked indicators and how is each one verified?" }
+  ],
+  "expected_sources": [
+    { "kind": "document", "project_id": "P163732", "document_id": "29977354", "report_number": "124518", "document_type": "Project Appraisal Document", "document_date": "2018-05-05", "pages": "22-23, 27, 53-56", "role": "Program appraisal document: DLI table (Table 3), IVA, verification protocol table (Annex 3, Table 3.2)", "note": "WDS types this PforR appraisal document as 'Project Appraisal Document'." },
+    { "kind": "document", "project_id": "P163732", "document_id": "33943976", "report_number": "PAD4856", "document_type": "Program Document", "document_date": "2022-11-18", "role": "Additional financing program document, which may revise DLIs and targets", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Source: the SRWSSP program appraisal document (Report 124518, 2018-05-05; US$350 million equivalent), Table 3 (p. 22) and Annex 3, Table 3.2 verification protocols (pp. 53-56; printed pp. 44-47). Verification for all DLIs is by an Independent Verification Agent (IVA): the Internal Auditor General (IAG), which already verified results for the Tanzania Strengthening Primary Health Care for Results Program and may subcontract technical work (p. 27). Results are reported by districts through the Ministry of Water and Irrigation (MoWI) or the health ministry (MoHCDGEC).",
+          "Results Area 1 - water: DLI 1 people with access to an improved water supply (new, extended or rehabilitated water points meeting criteria: registered COWSO, cost-reflective tariff, approved design and quality, a woman in at least one of three key COWSO posts, chlorination). Verified by desk review of records, phone calls to all COWSO chairpersons and treasurers, random physical village visits (90% confidence), and GIS analysis of census data for population served; if under 80% of reported people actually have access, the district gets nothing for DLI 1 that period but may resubmit (p. 53). DLI 2 sustainably functioning water points: desk review, calls to COWSO officers, random visits (about 20 villages and 140 water points per district), GIS check that points serve a population (p. 54).",
+          "Results Area 2 - sanitation: DLI 3 people with access to an improved household sanitation facility: physical inspection of at least 2% of households per sampled village, district-representative; same 80% rule (p. 54). DLI 4 public primary schools with improved sanitation and hygiene (latrine ratios, separate blocks, accessibility, menstrual counselor, handwashing): desk review of district data and EMIS plus inspection of all facilities in 100% of schools in sampled villages; no payment for partial achievement (pp. 54-55). DLI 5 villages achieving and sustaining community-wide sanitation: desk review and physical verification of at least 5% of villages, all schools in sampled villages and at least 5% of households (p. 55).",
+          "Results Area 3 - institutions: DLI 6 villages whose COWSO has improved O&M capacity (Level I/II criteria: registration, female leadership, participation in community of practice meetings, cash book with operating cost ratio of 1 or less, etc.): review of COWSO registration records and district data, calls to COWSO officers, meeting minutes, cash books, tariffs and bank statements (p. 55). DLI 7 districts submitting accurate and complete sector M&E data: assessment against timeliness, accuracy and completeness criteria in the Operations Manual (p. 56). DLI 8 Agency (the rural water agency) established and operationalized in sequential milestones (established; audit and QA/QC operational; technical support agreements with 10%, 30%, 50% of COWSOs): review of establishment documents, resource plan, budget and agreements, inspection of sample local offices and staff focus groups; not scalable (p. 56).",
+          "DLIs 1-7 pay in proportion to achievement (scalable); DLI 8 does not (pp. 53-56). The 2022 additional financing and later restructurings may have revised DLI targets and allocations; this answer reflects the original appraisal document."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Finds the program's appraisal document (29977354) despite its 'Project Appraisal Document' type, and reads the DLI and verification tables."
+    ],
+    "grounded": [
+      "Each DLI's definition and verification method matches Annex 3 with page references; the verifier (IAG as IVA) is correctly named."
+    ],
+    "complete": [
+      "Covers all eight DLIs and how each is verified."
+    ],
+    "scoped": [
+      "Notes that the answer reflects the 2018 appraisal document and that later AF or restructuring papers may have changed DLIs."
+    ]
+  },
+  "stability": "stable"
+}

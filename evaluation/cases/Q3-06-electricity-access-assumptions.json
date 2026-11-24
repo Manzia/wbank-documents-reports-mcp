@@ -1,0 +1,55 @@
+{
+  "id": "Q3-06",
+  "query_id": "Q3.6",
+  "group": "Q3",
+  "tier": "cross_project_synthesis",
+  "region": "South Asia",
+  "task": "Test assumptions",
+  "query_wording": "How did recent electricity access projects justify their connection targets and costs? Which assumptions proved difficult during implementation?",
+  "placeholders": [
+    { "placeholder": "recent electricity access projects", "resolved_to": "off-grid electricity access projects in South Asia: Bangladesh RERED II (P131263) and Nepal Private Sector-Led Mini-Grid Energy Access (P149239)", "reason": "The query names no place and asks as worded; the reference reads two South Asian projects, each with an appraisal document containing an economic analysis and a later document that tests its assumptions. The rubric accepts other recent access projects." }
+  ],
+  "turns": [
+    { "user": "How did recent electricity access projects justify their connection targets and costs? Which assumptions proved difficult during implementation?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "projects", "role": "Recent electricity access projects (the reference set is from South Asia)", "filters": { "qterm": "rural electrification / solar home / mini-grid / electricity access" } },
+    { "kind": "document", "project_id": "P131263", "document_id": "16698635", "report_number": "71700", "document_type": "Project Appraisal Document", "document_date": "2012-08-16", "pages": "5, 7, 19-20", "role": "RERED II PAD: SHS targets, grant per system, economic and financial returns", "note": "No form-feed breaks; pages are the printed page numbers." },
+    { "kind": "document", "project_id": "P131263", "document_id": "34342587", "report_number": "ICR3251", "document_type": "Implementation Completion and Results Report", "document_date": "2024-06-17", "pages": "12-14, 25-26, 29-30", "role": "RERED II ICR: assumptions, targets versus results, ex-post efficiency" },
+    { "kind": "document", "project_id": "P149239", "document_id": "30761344", "report_number": "PAD2441", "document_type": "Project Appraisal Document", "document_date": "2018-12-27", "pages": "13-14, 21-22, 30", "role": "Nepal mini-grid PAD: targets, financing structure, economic and financial analysis" },
+    { "kind": "document", "project_id": "P149239", "document_id": "40003679", "report_number": "RES00775", "document_type": "Project Paper", "document_date": "2025-03-28", "pages": "6-7, 10, 14-15", "role": "Nepal mini-grid restructuring (2025): delays, financing problems, revised targets" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Projects read: Bangladesh Rural Electrification and Renewable Energy Development II (RERED II, P131263; approved 2012, closed December 2023; PAD and ICR) and Nepal Private Sector-Led Mini-Grid Energy Access Project (P149239; approved January 2019, closing September 2026; PAD and the 2025 restructuring paper; no ICR yet).",
+          "RERED II - justification: it scaled up IDCOL's solar home system (SHS) program, which was expected to reach about 2 million systems by end-2012, with a target of another 4 million by 2016 (PAD p. 5). Systems are sold on microfinance through partner organizations; a US$20 grant per system is kept only for systems of 30 Wp and below for the poorest households, down from US$90 in 2003 (the life-cycle cost gap with kerosene lanterns) (PAD p. 7). The economic analysis valued avoided kerosene and battery charging: SHS EIRR 43%, FIRR 26% for 550,000 units; solar mini-grids (42 planned) were justified by cost-effectiveness against diesel, with a mini-grid FIRR of 13.7% at a 32 BDT/kWh tariff, on the assumption that sites would be chosen where the grid would not arrive for more than 8 years (PAD pp. 19-20).",
+          "RERED II - what proved difficult: the ICR's key assumptions were slow grid expansion, willingness to pay and trusted partner organizations (ICR p. 12). The slow-grid assumption failed: the government's free distribution of SHS and accelerated grid expansion led to early cessation of SHS deployment and solar mini-grid development, and the delivery models for mini-grids, biogas captive plants and solar irrigation pumps were harder than expected (ICR pp. 25-26). Results at closing: 1.20 million SHS (appraisal target 0.55 million, raised to 1.20 million); 1,303 solar irrigation pumps against a target of 1,987; 5.28 million households, farmers and businesses with clean energy against 6.09 million (ICR p. 26). Ex post, mini-grids and bio-electricity had much higher capital costs than assumed, while other activities beat appraisal returns; efficiency was rated Substantial and the outcome Satisfactory (ICR pp. 29-30).",
+          "Nepal - justification: the PDO is to increase generation capacity from renewable mini-grids by mobilizing private ESCOs; targets were 3.8 MW, 126,000 people with new or improved service and US$3.36 million of private capital (PAD pp. 13, 30). Financing assumed about 50% capital subsidy for new mini-grids, 20% equity and 30% debt through partner banks (PAD pp. 14, 21). Economic returns were about 25% for hydro and 21% for solar mini-grids (20% and 15% without GHG benefits), valued against diesel generation; financial IRRs were about 15% (hydro), 11% (solar) and 14% (interconnection at 70% utilization), and sensitivity tests said the schemes stay viable with large cost overruns or lower utilization (PAD pp. 21-22).",
+          "Nepal - what proved difficult: COVID-19 lockdowns in China delayed equipment; distress in Nepal's banks in 2020-2023 and higher interest rates made the subprojects, especially the two hydropower plants, financially unviable until UK FCDO money was added, so financial close came only in July 2024; and the design relying on private developers raising local commercial debt needed long legal and financial preparation (restructuring pp. 6-7). The 2025 restructuring extended closing by 18 months, cancelled US$1.5 million after dropping the 1 MW Monjo Khola plant, and cut the targets to 1.11 MW and 30,000 people (households 1,500 to 918); none of the capacity or access targets had been reached by March 2025 (restructuring pp. 6, 10, 14-15).",
+          "Common thread: both projects assumed off-grid demand would hold (slow grid arrival, willingness to pay) and that private intermediaries could finance and deliver; grid expansion in Bangladesh and the cost of local finance in Nepal undermined those assumptions."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Reads appraisal and implementation documents (PAD plus ICR, restructuring paper or ISR) of at least two recent electricity access projects; the reference uses P131263 and P149239, but other recent access projects are acceptable."
+    ],
+    "grounded": [
+      "Targets, unit costs or subsidies, EIRR/FIRR and implementation problems are cited to documents and pages; no invented figures."
+    ],
+    "complete": [
+      "Covers both how targets and costs were justified and which assumptions proved difficult, for each project."
+    ],
+    "scoped": [
+      "States which projects were read and notes where evidence is interim (no ICR yet for the Nepal project)."
+    ]
+  },
+  "stability": "stable",
+  "notes": "The RERED II PAD text has no form feeds; cite its printed page numbers. The ICR's ex-post IRR table is not in the text layer."
+}

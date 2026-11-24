@@ -1,0 +1,51 @@
+{
+  "id": "Q3-07",
+  "query_id": "Q3.7",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
+  "task": "Prepare for negotiations",
+  "query_wording": "For Pxxxxxx, compare the PAD and signed financing agreement. Where do the project description, effectiveness conditions, disbursement conditions, or implementing arrangements differ?",
+  "placeholders": [
+    { "placeholder": "Pxxxxxx", "resolved_to": "P176619 (Jordan Water Sector Efficiency Project)", "reason": "Its PAD (2023-05-24) and signed Loan Agreement (2023-07-16) are public; for an IBRD borrower the 'financing agreement' is a Loan Agreement, which tests document-type resolution. The two largely match, with a few real differences." }
+  ],
+  "turns": [
+    { "user": "For P176619, compare the PAD and signed financing agreement. Where do the project description, effectiveness conditions, disbursement conditions, or implementing arrangements differ?" }
+  ],
+  "expected_sources": [
+    { "kind": "document", "project_id": "P176619", "document_id": "34071081", "report_number": "PAD5170", "document_type": "Project Appraisal Document", "document_date": "2023-05-24", "pages": "6-7, 9-10, 21-22, 24, 34-35", "role": "PAD: datasheet conditions and covenants, components, PBCs, implementation arrangements" },
+    { "kind": "document", "project_id": "P176619", "document_id": "34118460", "document_type": "Loan Agreement", "document_date": "2023-07-16", "pages": "4, 6-10, 16-18", "role": "Signed Loan Agreement for Loan 9560-JO and TF0C1892" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Documents: PAD5170 (2023-05-24) and the Loan Agreement for Loan 9560-JO and Trust Fund TF0C1892 (2023-07-16). Jordan borrows from IBRD, so the signed financing document is a Loan Agreement. They match closely; the differences are:",
+          "Project description: same objective, 'to improve the efficiency of water services in Jordan' (PAD p. 21; LA Schedule 1, p. 6). The LA describes the same five parts but names Part 4 'Institutional strengthening for water sector efficiency' with 4.1 project management and 4.2 PBC verification and audit support, where the PAD datasheet calls Component 4 'Project management and implementation support' (PAD p. 7; LA p. 8). The PAD gives costs by component (US$209m, 54m, 27m, 10m, 0) and the PBC amounts (e.g. PBC 2 US$21.4 million) (PAD pp. 7, 24); the LA instead allocates the loan by category and implementer: WAJ (Parts 1, 2, 4), MoWI (Part 3.1), JVA (Part 3.2), Eligible PBC Expenditures, CERC, front-end fee, split into non-concessional and concessional (GCFF) portions totalling US$200 million and US$50 million (LA pp. 16-17).",
+          "Effectiveness conditions: (a) the WAJ Subsidiary Agreement executed with its conditions met - same in both. (b) differs in wording: the PAD datasheet lists a 'JVA Cooperation Agreement' (PAD p. 10), the LA a 'JVA Subsidiary Agreement' (LA Section 5.01(b), p. 4; Schedule 2 Section I.B, p. 10). The LA adds a 120-day effectiveness deadline (5.02) and a four-month deadline for the co-financing agreement's effectiveness (4.01) (LA p. 4); the PAD lists the latter as a covenant (PAD p. 9).",
+          "Disbursement conditions: the PAD datasheet lists none. The LA sets them (Schedule 2, Section III.B, p. 18): withdrawals pari passu between the non-concessional and concessional portions (79.96/20.04 until the co-financing agreement is signed, then 66.61/16.69); retroactive financing up to US$799,599 plus US$200,401 for payments from 1 January 2023; PBC withdrawals only with evidence verified by the Audit Bureau (payments made per the POM) and by the Verification Agent (PBC achieved); CERC withdrawals only after an eligible emergency is accepted.",
+          "Implementing arrangements: consistent. Both have MOPIC and MWI with overall responsibility, the WAJ-PMU for day-to-day implementation with additional staff within six months, an Oversight and Coordination Committee chaired by MOPIC and a Steering Committee chaired by MWI, both within three months of effectiveness, and a Project Operations Manual (PAD pp. 9-10, 34-35; LA pp. 9-10). The PAD covenant asks for the POM within four months and an independent verification agency within six months (PAD p. 10); the LA adds the WAJ and JVA subsidiary agreements and WC cooperation agreements for the water companies (LA p. 10) and semester project reports within one month (LA p. 16).",
+          "Later change, outside this comparison: the March 2026 restructuring amends the agreement (PBCs, eligible expenditures, MWI's category moved to WAJ, Audit Bureau as PBC verifier)."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the PAD (34071081) and the signed Loan Agreement (34118460), recognising the Loan Agreement as the 'financing agreement'."
+    ],
+    "grounded": [
+      "Each point cites a PAD page and a Loan Agreement clause or page; no difference is claimed that the documents do not show."
+    ],
+    "complete": [
+      "Addresses all four areas, saying 'no difference' where the texts match."
+    ],
+    "scoped": [
+      "Notes that later amendments (the 2026 restructuring) are outside the comparison."
+    ]
+  },
+  "stability": "stable"
+}

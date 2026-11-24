@@ -1,0 +1,51 @@
+{
+  "id": "Q3-09",
+  "query_id": "Q3.9",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "region": "East Asia & Pacific",
+  "task": "Review a policy operation",
+  "query_wording": "In this development policy operation, what prior actions and intended results are set out in the program document?",
+  "placeholders": [
+    { "placeholder": "this development policy operation", "resolved_to": "P508323, Indonesia Productive and Sustainable Investment Development Policy Loan (Program Document PD000168, 2025-05-07)", "reason": "A recent stand-alone DPL in East Asia with eight prior actions in two pillars and a policy and results matrix in Annex 1." }
+  ],
+  "turns": [
+    { "user": "In this development policy operation, P508323 (Indonesia Productive and Sustainable Investment DPL), what prior actions and intended results are set out in the program document?" }
+  ],
+  "expected_sources": [
+    { "kind": "document", "project_id": "P508323", "document_id": "40013157", "report_number": "PD000168", "document_type": "Program Document", "document_date": "2025-05-07", "pages": "5-6, 9, 18-25, 32-33", "role": "Program document: summary, prior actions and policy and results matrix" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "P508323 - Indonesia Productive and Sustainable Investment DPL; Program Document PD000168 (2025-05-07), http://documents.worldbank.org/curated/en/099051325121035302. A stand-alone (not programmatic) IBRD loan of US$1.5 billion; implementing agency the Coordinating Ministry of Economic Affairs; overall risk Moderate (pp. 5-6, 9). Development objective: to mobilize finance and enable markets for productive, sustainable and resilient investment (p. 5).",
+          "Prior actions (discussed pp. 18-25; matrix in Annex 1, pp. 32-33):",
+          "Pillar A - mobilizing finance: 1. OJK raised the maximum loan ceiling for peer-to-peer lenders (OJK Regulation 40/2024) to increase MSME finance through digital financial services. 2. OJK enabled innovative credit scoring services (OJK Regulation 29/2024). 3. The Government transferred regulation and supervision of securities-based financial derivatives to OJK (Government Regulation 49/2024), and OJK put that authority into effect (OJK Regulation 1/2025). 4. OJK set a framework for climate-risk analysis and management in banks (CRMS Guidelines). 5. The Ministry of Finance set up a mechanism to collect, invest and disburse resources of the Disaster Pooling Fund (the matrix cites it as '[MOF regulation #28]').",
+          "Pillar B - enabling markets: 6. Eased local-content requirements for renewable energy power projects (MOI Regulations 33/2024 and 34/2024, MEMR Regulation 11/2024 and a MEMR decree). 7. A regulatory framework for environmentally sustainable practices in industrial estates (Government Regulation 20/2024). 8. A land value capture mechanism to recover and reinvest land-value gains from public infrastructure (Presidential Regulation 79/2024).",
+          "Intended results, baseline (June 2024) to target (December 2026) (pp. 32-33): MSME credit as a share of peer-to-peer lending 32% to 55%, with 50% to female borrowers; MSME credit as a share of total credit 20.5% to 25%; listed security futures on the stock exchange 11 to 16; systemic commercial banks adopting climate-risk management policies 0% to 100%; share of 2024 Disaster Pooling Fund resources used for active risk-transfer solutions 0% to 5%; reduction in the cost of renewable energy procurement 0% to 15%; industrial estates with environmental management systems 25% to 45% and with disaster early-warning systems 20% to 40%; private capital identified through land value capture US$0 to US$250 million.",
+          "The document estimates that PA 1 and PA 2 together could create about 0.7 million more and better jobs by 2026 (p. 18). These are targets at approval, not achieved results."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the program document of P508323 (40013157)."
+    ],
+    "grounded": [
+      "Prior actions, legal instruments and indicator baselines/targets match the document, with page references."
+    ],
+    "complete": [
+      "Lists all eight prior actions and the results indicators with baselines and targets (or the main ones, saying the list is partial)."
+    ],
+    "scoped": [
+      "Says these are the program document's intended results at approval, not achieved results; does not reproduce the datasheet's contact details."
+    ]
+  },
+  "stability": "stable",
+  "notes": "The datasheet (p. 5) lists officials' names, phone numbers and e-mail addresses; answers should not reproduce them."
+}

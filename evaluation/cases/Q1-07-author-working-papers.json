@@ -1,0 +1,62 @@
+{
+  "id": "Q1-07",
+  "query_id": "Q1.7",
+  "group": "Q1",
+  "tier": "search_and_retrieve",
+  "region": "none",
+  "task": "Author, document type and topic search",
+  "query_wording": "Find working papers by this author on education finance.",
+  "placeholders": [
+    { "placeholder": "this author", "resolved_to": "Samer Al-Samarrai", "reason": "A World Bank education economist with several working papers on education spending and school grants, plus non-working-paper outputs (Education Finance Watch) the answer should keep apart." }
+  ],
+  "turns": [
+    { "user": "Find working papers by Samer Al-Samarrai on education finance." }
+  ],
+  "expected_sources": [
+    {
+      "kind": "search",
+      "api": "wds",
+      "role": "Author filter plus working-paper document types, then a topic check",
+      "filters": { "authr": "Samarrai", "docty_exact": "Working Paper^Policy Research Working Paper", "qterm": "education finance (optional)" },
+      "note": "On 2026-11-22 authr=Al-Samarrai matched 1,136 unrelated records (the hyphenated name is split into tokens); authr=Samarrai returns his records. Nine are working papers."
+    },
+    { "kind": "document", "document_id": "30893486", "report_number": "WPS8773", "document_type": "Policy Research Working Paper", "document_date": "2019-03-11", "title": "Mobilizing Resources for Education and Improving Spending Effectiveness : Establishing Realistic Benchmarks Based on Past Trends", "role": "Core education finance working paper" },
+    { "kind": "document", "document_id": "23167187", "report_number": "AUS4133", "document_type": "Working Paper", "document_date": "2014-12-23", "title": "Assessing the role of the school operational grant program (BOS) in improving education outcomes in Indonesia", "role": "School grant financing" },
+    { "kind": "document", "document_id": "26475909", "report_number": "AUS6799", "document_type": "Working Paper", "document_date": "2016-06-10", "title": "Assessing basic education service delivery in the Philippines : public education expenditure tracking and quantitative service delivery study", "role": "Public expenditure tracking" },
+    { "kind": "document", "document_id": "28098524", "report_number": "WPS8223", "document_type": "Policy Research Working Paper", "document_date": "2017-10-23", "title": "Introducing a performance-based school grant in Jakarta : what do we know about its impact after two years ?", "role": "Performance-based school grant", "required": false },
+    { "kind": "document", "document_id": "30931290", "report_number": "135590", "document_type": "Working Paper", "document_date": "2019-01-01", "title": "Gender Equity and Fee-Free Basic Education in Tanzania", "role": "Fee-free basic education policy", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Working papers in Documents & Reports with Samer Al-Samarrai as an author that deal with education finance:",
+          "1. Mobilizing Resources for Education and Improving Spending Effectiveness: Establishing Realistic Benchmarks Based on Past Trends (Policy Research Working Paper WPS8773, 2019-03-11; with Pedro Cerdan-Infantes and Jonathan David Lehe). Global spending trends (about 4.5% of GDP), drivers of spending increases and their link to learning-adjusted years of schooling. http://documents.worldbank.org/curated/en/244151552329948414",
+          "2. Introducing a Performance-Based School Grant in Jakarta: What Do We Know About Its Impact After Two Years? (WPS8223, 2017-10-23). Impact evaluation of a performance component in Jakarta's school grants. http://documents.worldbank.org/curated/en/826471508762577145",
+          "3. Assessing Basic Education Service Delivery in the Philippines: Public Education Expenditure Tracking and Quantitative Service Delivery Study (Working Paper AUS6799, 2016-06-10). Basic education spending rose 60% in real terms 2010-2015. http://documents.worldbank.org/curated/en/507531468325807323",
+          "4. Assessing the Role of the School Operational Grant Program (BOS) in Improving Education Outcomes in Indonesia (Working Paper AUS4133, 2014-12-23). Review of Indonesia's national school grants. http://documents.worldbank.org/curated/en/779451468253241136",
+          "5. Related: Gender Equity and Fee-Free Basic Education in Tanzania (Working Paper 135590, 2019), on the Fee-Free Basic Education Program.",
+          "His other working papers in the catalog (Indonesia Economic Quarterly 2015, 'Indonesia - Avoiding the trap' 2014) are not on education finance. His main education finance outputs that are not working papers include Education Finance Watch 2021 (Report 156905), The Role of Intergovernmental Fiscal Transfers in Improving Education Outcomes (2021/2022) and Investing in Human Capital for a Resilient Recovery: The Role of Public Finance (2021)."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Filters on the author and on working-paper types; returns WPS8773 and at least two of AUS4133, AUS6799, WPS8223."
+    ],
+    "grounded": [
+      "Every listed paper has Al-Samarrai among its authors and the stated number, date and link."
+    ],
+    "complete": [
+      "Lists the education-finance working papers with title, number, date and link."
+    ],
+    "scoped": [
+      "Separates working papers from his other document types, or says the list is limited to working papers."
+    ]
+  },
+  "stability": "stable"
+}

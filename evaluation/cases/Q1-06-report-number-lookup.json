@@ -1,0 +1,49 @@
+{
+  "id": "Q1-06",
+  "query_id": "Q1.6",
+  "group": "Q1",
+  "tier": "search_and_retrieve",
+  "region": "none",
+  "task": "Look up a document by report number",
+  "query_wording": "Find this report number and give me its abstract and PDF.",
+  "placeholders": [
+    { "placeholder": "this report number", "resolved_to": "WPS9284", "reason": "A single-record Policy Research Working Paper (COVID-19 school closure simulations) with an abstract and a PDF link." }
+  ],
+  "turns": [
+    { "user": "Find report number WPS9284 and give me its abstract and PDF." }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Exact report-number lookup", "filters": { "repnb_exact": "WPS9284" } },
+    { "kind": "document", "document_id": "32145839", "report_number": "WPS9284", "document_type": "Policy Research Working Paper", "document_date": "2020-06-18", "title": "Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes : A Set of Global Estimates", "role": "The record for the report number" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "WPS9284 is the Policy Research Working Paper \"Simulating the Potential Impacts of COVID-19 School Closures on Schooling and Learning Outcomes: A Set of Global Estimates\" (World; document date and disclosure date 2020-06-18; document ID 32145839).",
+          "Abstract (from the record): School closures due to COVID-19 left more than a billion students out of school. The paper simulates three, five and seven months of closure with different mitigation effectiveness (optimistic, intermediate, pessimistic scenarios), using data on 157 countries. COVID-19 could cost 0.3 to 0.9 years of learning-adjusted schooling, bringing effective basic schooling down from 7.9 years to 7.0-7.6 years; close to 7 million primary and secondary students could drop out because of the income shock alone; the current cohort could lose $355, $872 or $1,408 in yearly earnings ($6,472 to $25,680 over a lifetime in present value). A five-month shutdown could generate learning losses with a present value of $10 trillion, up to 16 percent of government investment in this cohort's basic education, and the goal of halving learning poverty by 2030 could be missed without drastic remedial action.",
+          "PDF: http://documents.worldbank.org/curated/en/329961592483383689/pdf/Simulating-the-Potential-Impacts-of-COVID-19-School-Closures-on-Schooling-and-Learning-Outcomes-A-Set-of-Global-Estimates.pdf",
+          "Record: http://documents.worldbank.org/curated/en/329961592483383689"
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Looks up the exact report number and returns record 32145839."
+    ],
+    "grounded": [
+      "The abstract is the record's abstract (quoted or faithfully summarised, no added findings); the PDF and record links are the record's own."
+    ],
+    "complete": [
+      "Gives title, the abstract and the PDF link."
+    ],
+    "scoped": [
+      "Identifies the document type and date so the user can confirm it is the right report."
+    ]
+  },
+  "stability": "stable"
+}

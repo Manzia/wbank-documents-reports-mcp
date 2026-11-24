@@ -1,0 +1,52 @@
+{
+  "id": "Q4-03",
+  "query_id": "Q4.3",
+  "group": "Q4",
+  "tier": "project_centred_reading",
+  "region": "Europe & Central Asia",
+  "task": "Prepare for a client discussion",
+  "query_wording": "For P123456, what commitments and milestones appear in the published agreement and latest restructuring paper? What questions should I raise with the ministry?",
+  "placeholders": [
+    { "placeholder": "P123456", "resolved_to": "P170132 (Tajikistan Rural Electrification Project)", "reason": "See Q4-01. Its latest project paper (2025) combines a second additional financing with a restructuring (18-month closing extension, new implementing agency, results changes); its latest agreement is the 2025 AF financing agreement." }
+  ],
+  "turns": [
+    { "user": "For P170132, what commitments and milestones appear in the published agreement and latest restructuring paper? What questions should I raise with the ministry?" }
+  ],
+  "expected_sources": [
+    { "kind": "document", "project_id": "P170132", "document_id": "40037570", "document_type": "Financing Agreement", "document_date": "2025-08-09", "pages": "3, 6-8, 10-11", "role": "Latest published agreement: Financing Agreement for Additional Financing Grant E497-TJ" },
+    { "kind": "document", "project_id": "P170132", "document_id": "40027707", "report_number": "PPIAF000212", "document_type": "Project Paper", "document_date": "2025-06-25", "pages": "13, 19-22, 26", "role": "Latest project paper: second AF with restructuring" },
+    { "kind": "document", "project_id": "P170132", "document_id": "40111321", "report_number": "ISR07985", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-23", "pages": "2", "role": "Status of the milestones", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Documents: the Financing Agreement for Additional Financing Grant E497-TJ (dated 2025-08-09) and the Project Paper for the second additional financing (PPIAF000212, 25 June 2025), which also restructures the project. The project has no separate 'restructuring paper'; this AF paper carries the restructuring.",
+          "Agreement - commitments: PEC carries out Part 1 (GBAO) and STB, assisted by ESPMU, Part 2 (Khatlon) under project agreements (p. 3); additional condition of effectiveness: PEC has adopted and disclosed the ESIA for the Khorog substation (Part 1.2); effectiveness deadline 120 days after signature (Article IV, p. 3); the implementing entities keep qualified staff and follow their Project Operational Manuals; the Ministry of Finance passes the funds to PEC and STB through subsidiary agreements (Schedule 2, Section I.A-B, pp. 7-8); ESCP compliance and reporting (p. 8). Financing SDR 5,200,000: SDR 4,300,000 for Part 1 and SDR 900,000 for Part 2, plus zero-allocated CERC and Cat DDO categories (p. 10). Withdrawal conditions: no Part 1 withdrawals until PEC adopts its POM, no Part 2 withdrawals until STB adopts its POM (p. 11). Closing date 30 June 2027 (p. 11).",
+          "Project paper - milestones and changes: US$7 million IDA grant for (i) a 110 kV substation in Khorog, (ii) advanced electricity meters for irrigation pumping stations in Khatlon, (iii) a study on private investment in rooftop solar (p. 19); total cost US$48.7 million (p. 19); closing extended by 18 months to 30 June 2027 for both the AF and the parent grant (pp. 19, 21-22); implementing agency for Khatlon changed from Barqi Tojik to STB after unbundling (p. 20); mini-grid sub-components to finish under the parent project by November 2025 (p. 20); new indicators on livelihoods enhanced or jobs created (75), farmers benefiting from the irrigation metering (1,780) and the rooftop solar study (p. 54). The paper also records that 77.57% (US$31.25 million) had been disbursed and the mini-grids in remote GBAO were delayed by winter conditions (p. 13).",
+          "Status by the latest ISR (June 2026): the AF became effective on 21 November 2025; substation construction began in June 2026; the remaining six hydropower mini-grids are now due by 30 November 2026 (ISR p. 2).",
+          "Questions to raise with the ministry: Will the hydropower mini-grids and the Sharifobod substation finish before the June 2027 closing, given winter access? Have PEC's and STB's POMs been adopted (the withdrawal conditions) and have the subsidiary agreements been signed? How will the irrigation metering reduce costs for ALRI and STB, and who pays for the meters' operation? What is the plan for the rooftop-solar study's findings? These are suggestions, not issues the documents raise."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the latest published agreement (the 2025 AF financing agreement) and the 2025 AF/restructuring paper."
+    ],
+    "grounded": [
+      "Conditions, allocations, dates and changes are cited to the right document and page; suggested questions are marked as suggestions."
+    ],
+    "complete": [
+      "Covers commitments and milestones from both documents and offers questions for the ministry."
+    ],
+    "scoped": [
+      "Says the restructuring is carried by an additional financing paper and that the ISR shows later status."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "If a later restructuring paper is disclosed it becomes the 'latest'."
+}

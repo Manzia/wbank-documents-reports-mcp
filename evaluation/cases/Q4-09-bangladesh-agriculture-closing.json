@@ -1,0 +1,51 @@
+{
+  "id": "Q4-09",
+  "query_id": "Q4.9",
+  "group": "Q4",
+  "tier": "search_and_retrieve",
+  "region": "South Asia",
+  "task": "Scan a portfolio",
+  "query_wording": "Which active agriculture projects in Bangladesh are approaching their closing dates? Who implements them?",
+  "turns": [
+    { "user": "Which active agriculture projects in Bangladesh are approaching their closing dates? Who implements them?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "projects", "role": "Active Bangladesh projects in agriculture, sorted by closing date", "filters": { "countrycode_exact": "BD", "status_exact": "Active", "sector": "Agriculture, Fishing and Forestry", "sort": "closingdate asc" }, "note": "49 active Bangladesh projects on 2026-11-23; agriculture is the main sector of three. Sector filtering may need to be done on the returned major_sectors." },
+    { "kind": "project", "project_id": "P161534", "role": "Climate-Smart Agriculture and Water Management Project: closes soonest (2027-06-30)" },
+    { "kind": "project", "project_id": "P181563", "role": "TA for Repurposing of Agricultural Public Support: closes 2027-09-30" },
+    { "kind": "project", "project_id": "P176374", "role": "PARTNER program: closes 2028-12-31" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Active World Bank projects in Bangladesh whose main sector is agriculture, by closing date (Projects API, 2026-11-23):",
+          "1. P161534 - Climate-Smart Agriculture and Water Management Project: closing 30 June 2027 (about seven months away); approved 9 March 2021; commitment US$75.67 million; implemented by the Bangladesh Water Development Board, the Department of Agricultural Extension and the Department of Fisheries.",
+          "2. P181563 - Technical Assistance for Repurposing of Agricultural Public Support Towards a Sustainable Food System Transformation in Bangladesh: closing 30 September 2027; approved 28 June 2024; implemented by the Department of Agricultural Extension and the Ministry of Agriculture.",
+          "3. P176374 - Program on Agricultural and Rural Transformation for Nutrition, Entrepreneurship, and Resilience (PARTNER): closing 31 December 2028; approved 27 April 2023; commitment US$500 million; implemented by the Ministry of Agriculture with the Department of Agricultural Extension, Department of Agricultural Marketing, Bangladesh Agricultural Development Corporation, Bangladesh Agricultural Research Council and Research Institute, Bangladesh Rice Research Institute and the Barind Multipurpose Development Authority.",
+          "The first two close within a year. Projects with only a small agriculture share (e.g. the Sustainable Recovery, Emergency Preparedness and Response project, 7%) are not counted as agriculture projects.",
+          "Dates and agencies are from the Projects API records; closing dates can change through restructuring."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Queries the Projects API for active Bangladesh projects in agriculture and orders them by closing date."
+    ],
+    "grounded": [
+      "Project IDs, names, closing dates and implementing agencies match the records."
+    ],
+    "complete": [
+      "Identifies the projects closing soonest (P161534, P181563) and names the implementing agencies."
+    ],
+    "scoped": [
+      "Says how 'agriculture' and 'approaching' were interpreted."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "The active portfolio changes as projects close or are approved."
+}

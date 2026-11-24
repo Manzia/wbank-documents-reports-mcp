@@ -1,0 +1,53 @@
+{
+  "id": "Q4-05",
+  "query_id": "Q4.5",
+  "group": "Q4",
+  "tier": "project_centred_reading",
+  "region": "Europe & Central Asia",
+  "task": "Review results",
+  "query_wording": "What are the project’s development objective indicators and targets, and what does the latest public report say about progress?",
+  "placeholders": [
+    { "placeholder": "the project (implied)", "resolved_to": "P170132 (Tajikistan Rural Electrification Project)", "reason": "The query needs a project; Q4 uses P170132." }
+  ],
+  "turns": [
+    { "user": "For P170132, what are the project’s development objective indicators and targets, and what does the latest public report say about progress?" }
+  ],
+  "expected_sources": [
+    { "kind": "document", "project_id": "P170132", "document_id": "40111321", "report_number": "ISR07985", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-23", "pages": "1-2, 4-5", "role": "Latest disclosed ISR: PDO indicators, targets, values" },
+    { "kind": "document", "project_id": "P170132", "document_id": "40078322", "report_number": "ISR06374", "document_type": "Implementation Status and Results Report", "document_date": "2025-12-22", "pages": "4-5", "role": "Previous ISR, same indicators in a readable row layout", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "PDO (as revised with the additional financing): provide electricity access to target settlements in GBAO and Khatlon regions and improve the reliability of electricity supply for grid-connected customers in GBAO.",
+          "PDO indicators in the latest disclosed ISR (seq. 13, 23 June 2026), latest value against target (pp. 4-5):",
+          "1. People provided with new or improved electricity service: 59,700 against 245,000 (June 2027). The comment breaks it down: about 4,316 people electrified in 27 villages, about 17,961 with better supply through the new 110 kV and 35 kV lines in Shugnan, Ishkashim and Vanj, about 5,392 through 30 mini-grids, and 32,000 connected in Khatlon.",
+          "2. People provided with access through household connections (corporate indicator): 55,061 (GBAO 23,061; Khatlon 32,000) against 43,126 - above target.",
+          "3. Average daily hours of supply in GBAO settlements on micro-grids: 14-24 hours against a 14-hour target (up to 14 hours on solar with storage, 24 on small hydropower) - achieved.",
+          "4. Annual emergency outages for customers supplied from the Khorog substation: 3 against a target of 3 (baseline 20) - achieved.",
+          "Progress assessment: PDO progress Satisfactory, implementation Moderately Satisfactory (p. 1); the ISR calls the project on track to achieve its objectives by the 30 June 2027 closing date (p. 2). The largest gap is indicator 1 (24% of target), which depends on the remaining hydropower mini-grids and the Sharifobod substation.",
+          "Several target dates still read December 2025 (the original closing date), although closing was extended to June 2027."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the latest disclosed ISR (2026-06-23)."
+    ],
+    "grounded": [
+      "Indicator names, targets and values match the ISR."
+    ],
+    "complete": [
+      "Lists all four PDO indicators with targets and latest values and summarizes progress."
+    ],
+    "scoped": [
+      "Labels values as from the latest disclosed ISR with its date."
+    ]
+  },
+  "stability": "may_change"
+}

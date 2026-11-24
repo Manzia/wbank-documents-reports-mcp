@@ -1,0 +1,52 @@
+{
+  "id": "Q4-04",
+  "query_id": "Q4.4",
+  "group": "Q4",
+  "tier": "project_centred_reading",
+  "region": "Europe & Central Asia",
+  "task": "Track implementation",
+  "query_wording": "What changed between the last two publicly available implementation reports for P123456?",
+  "placeholders": [
+    { "placeholder": "P123456", "resolved_to": "P170132 (Tajikistan Rural Electrification Project)", "reason": "See Q4-01." }
+  ],
+  "turns": [
+    { "user": "What changed between the last two publicly available implementation reports for P170132?" }
+  ],
+  "expected_sources": [
+    { "kind": "document", "project_id": "P170132", "document_id": "40078322", "report_number": "ISR06374", "document_type": "Implementation Status and Results Report", "document_date": "2025-12-22", "pages": "1-5, 8-10", "role": "ISR seq. 12" },
+    { "kind": "document", "project_id": "P170132", "document_id": "40111321", "report_number": "ISR07985", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-23", "pages": "1-5, 8-10", "role": "ISR seq. 13 (latest)" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Last two disclosed ISRs for P170132: seq. 12, ISR06374, 22 December 2025, and seq. 13, ISR07985, 23 June 2026.",
+          "Ratings and risks: unchanged - PDO progress Satisfactory, implementation Moderately Satisfactory, overall risk Moderate; risk categories Moderate (political, macroeconomic, institutional capacity), Low (sector strategies, technical design, stakeholders), Substantial (fiduciary, environmental and social) (pp. 1-3 of each).",
+          "Results (seq. 12 value -> seq. 13 value, target): people with new or improved electricity service 56,077 -> 59,700 (245,000 by June 2027); people given access through household connections 18,631 -> 55,061 (GBAO 23,061 and Khatlon 32,000), now above the 43,126 target; emergency outages for Khorog substation customers 5 -> 3 (target 3); jobs created 11 -> 16 (target 75); generation capacity built 4.79 -> 13.65 MW (target 7.36), mostly solar PV 4.38 -> 13.20 MW (target 6.60), hydropower unchanged at 0.45 MW (target 0.76) (seq. 12 pp. 4-5; seq. 13 pp. 4-5).",
+          "Implementation narrative: seq. 12 reports 10 mini-grids commissioned in GBAO, all 64 Khatlon settlements connected (about 32,000 people), 24 of 30 solar mini-grids expected by end-2025 and nine hydropower mini-grids by August 2026, and the second AF (US$7 million) effective on 21 November 2025 (seq. 12 p. 2). Seq. 13 reports 23 solar PV mini-grids and one wind mini-grid commissioned, construction of the remaining six hydropower mini-grids resumed in April 2026 for completion by 30 November 2026 (later than seq. 12's August 2026), construction of the Sharifobod substation started in June 2026, and meters being installed at irrigation pumping stations (seq. 13 p. 2).",
+          "Disbursement: original grant D5040 89.61% -> 94.18%; first AF grant D7920 fully disbursed and now Closed; second AF grant E4970 still 0% (seq. 12 p. 10; seq. 13 p. 10).",
+          "So between the two reports progress mainly came from the solar mini-grids and household connections; the hydropower mini-grid timeline slipped by about three months."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the two most recent ISRs by document date (seq. 12 and 13)."
+    ],
+    "grounded": [
+      "Each change is attributed to the right ISR with values that match; seq. 13 values are matched to the right indicators despite its column-split layout."
+    ],
+    "complete": [
+      "Covers ratings, risks, results indicators, implementation issues and disbursement, saying where nothing changed."
+    ],
+    "scoped": [
+      "Names both ISRs and their dates."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "A new ISR changes which two are the last two."
+}

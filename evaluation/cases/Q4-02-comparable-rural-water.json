@@ -1,0 +1,53 @@
+{
+  "id": "Q4-02",
+  "query_id": "Q4.2",
+  "group": "Q4",
+  "tier": "cross_project_synthesis",
+  "region": "South Asia",
+  "task": "Find comparable operations",
+  "query_wording": "Find active rural water projects in South Asia similar to this proposed operation. Show their design choices and implementing arrangements.",
+  "placeholders": [
+    { "placeholder": "this proposed operation", "resolved_to": "a proposed rural water supply operation that expands household connections and makes local governments responsible for operation and maintenance", "reason": "The query needs a description of the proposed operation; a short one is given in the turn so 'similar' can be judged." }
+  ],
+  "turns": [
+    { "user": "Find active rural water projects in South Asia similar to this proposed operation: a rural water supply program that expands household connections and makes local governments responsible for operation and maintenance. Show their design choices and implementing arrangements." }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "projects", "role": "Active rural water projects in South Asia", "filters": { "qterm": "rural water supply", "status_exact": "Active", "regionname_exact": "South Asia" }, "note": "Count each project by its Projects API regionname; the record for Pakistan's Punjab rural water project (P169071) fetched on 2026-11-23 shows 'Middle East, North Africa, Afghanistan, and Pakistan', so the reference uses India and Bangladesh." },
+    { "kind": "document", "project_id": "P179039", "document_id": "34018880", "report_number": "PAD5226", "document_type": "Program Appraisal Document", "document_date": "2023-03-04", "pages": "6-7, 11-13, 20, 24, 27", "role": "India Karnataka Sustainable Rural Water Supply Program (PforR)" },
+    { "kind": "document", "project_id": "P169342", "document_id": "32391369", "report_number": "PAD3753", "document_type": "Project Appraisal Document", "document_date": "2020-09-02", "pages": "6-7, 10, 17, 22-23, 27", "role": "Bangladesh Rural Water, Sanitation and Hygiene for Human Capital Development Project" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Active comparable operations in South Asia: India - Karnataka Sustainable Rural Water Supply Program (P179039, Program-for-Results, approved 28 March 2023, closing 1 June 2028) and Bangladesh - Rural Water, Sanitation and Hygiene for Human Capital Development Project (P169342, investment project, approved 25 September 2020, closing 31 December 2026). Both are read below.",
+          "Karnataka - design: supports the state's Jaladhare program (Karnataka's part of the national Jal Jeevan Mission) to increase access to safely managed drinking water and strengthen institutions; total program US$1,144 million with IBRD US$363 million (PAD pp. 6-7, 11). Disbursement-linked indicators: functional household tap connections (DLI 1, US$160 million); institutional strengthening including an O&M Policy notified in the official gazette (DLI 2); Gram Panchayats with basic O&M capacity, improved financial sustainability, 24/7 service and sustained service (DLIs 3-6); energy efficiency and solar (DLI 7) (PAD p. 24). The design responds to weak ownership and O&M at village level: only around 40% of Gram Panchayats recover O&M costs once electricity is included (PAD pp. 12-13).",
+          "Karnataka - implementing arrangements: the Rural Development and Panchayat Raj Department and the Rural Drinking Water and Sanitation Department (RDWSD) are the implementing agencies; a PMU in RDWSD with district technical support staff in all 31 districts supporting the Zilla Panchayats; Gram Panchayats and their village water and sanitation committees run services; a steering committee chaired by the Development Commissioner and a program implementation committee; results checked by an independent verification agent (PAD pp. 6-7, 12, 20, 27).",
+          "Bangladesh - design: to improve access to safely managed water supply and sanitation in selected rural areas and strengthen sector capacity; US$550.5 million, co-financed equally by IDA (US$200 million) and AIIB (US$200 million) with US$150.5 million government counterpart (PAD pp. 6-7, 22). Water: large piped schemes under a build-operate model, small piped schemes, and microfinance loans to households and to local water entrepreneurs; sanitation and hygiene investments; a WASH revolving fund through microfinance institutions (PAD pp. 18, 22-23).",
+          "Bangladesh - implementing arrangements: the Department of Public Health Engineering (DPHE) builds and hands schemes to communities or private operators, and the Palli Karma-Sahayak Foundation (PKSF) runs the microfinance window through partner MFIs; Union Parishads are legally responsible for rural WASH services (PAD pp. 7, 10, 17). Its lessons: private operators need capital subsidies in rural areas and often fail in small, low-revenue schemes (PAD p. 27).",
+          "Relevance to the proposed operation: Karnataka is the closer match (household connections plus local-government O&M incentives through DLIs); Bangladesh shows an alternative built on private operators and microfinance."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Identifies active South Asian rural water projects (by Projects API region) and reads the appraisal documents of at least two (the reference uses P179039 and P169342; other qualifying projects are acceptable)."
+    ],
+    "grounded": [
+      "Design choices and arrangements are cited to the appraisal documents with pages; financing figures match."
+    ],
+    "complete": [
+      "Covers both design choices and implementing arrangements for each project."
+    ],
+    "scoped": [
+      "States which projects were read and why they are comparable."
+    ]
+  },
+  "stability": "stable",
+  "notes": "Cross-project case within one named region. The Karnataka PAD datasheet lists officials' contact details; answers should not reproduce them."
+}

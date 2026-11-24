@@ -1,0 +1,61 @@
+{
+  "id": "Q2-04",
+  "query_id": "Q2.4",
+  "group": "Q2",
+  "tier": "project_centred_reading",
+  "region": "none",
+  "task": "Classify studies by what they measured",
+  "query_wording": "Which of these studies measured student learning outcomes, and which only reported device distribution or teacher training?",
+  "placeholders": [
+    { "placeholder": "these studies", "resolved_to": "WPS9288 (The Gambia), WPS8665 (Lagos eReaders), WPS4836 (Colombia Computers for Education) and Report 207830 (Uganda ETRI results)", "reason": "The query refers back to a set, so turn 1 establishes a fixed set: three impact evaluations that test students and one readiness survey that does not." }
+  ],
+  "turns": [
+    { "user": "Find these World Bank studies on technology in schools: WPS9288, WPS8665, WPS4836, and report 207830 on Uganda's EdTech readiness." },
+    { "user": "Which of these studies measured student learning outcomes, and which only reported device distribution or teacher training?" }
+  ],
+  "expected_sources": [
+    { "kind": "document", "document_id": "32159232", "report_number": "WPS9288", "document_type": "Policy Research Working Paper", "document_date": "2020-06-22", "title": "Technology in the Classroom and Learning in Secondary Schools", "pages": "5", "role": "Measures learning (math and English exam scores)" },
+    { "kind": "document", "document_id": "30670718", "report_number": "WPS8665", "document_type": "Policy Research Working Paper", "document_date": "2018-12-06", "title": "Re-Kindling Learning : eReaders in Lagos", "pages": "8, 12", "role": "Measures learning (reading, math, non-verbal tests in an RCT)" },
+    { "kind": "document", "document_id": "10244854", "report_number": "WPS4836", "document_type": "Policy Research Working Paper", "document_date": "2009-02-01", "title": "The use and misuse of computers in education : evidence from a randomized experiment in Colombia", "pages": "7-8, 11", "role": "Measures learning (math and Spanish test scores) and also documents computers and teacher training" },
+    { "kind": "document", "document_id": "40081019", "report_number": "207830", "document_type": "Report", "document_date": "2025-06-30", "title": "Uganda - Examining Readiness to Use Technology in Schools : ETRI Results", "pages": "11-15, 27", "role": "No learning outcomes: survey of devices, connectivity, teacher training and use" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "The four records: (1) WPS9288, Technology in the Classroom and Learning in Secondary Schools (The Gambia, 2020-06-22); (2) WPS8665, Re-Kindling Learning: eReaders in Lagos (Nigeria, 2018-12-06); (3) WPS4836, The Use and Misuse of Computers in Education: Evidence from a Randomized Experiment in Colombia (2009-02); (4) Report 207830, Uganda - Examining Readiness to Use Technology in Schools: ETRI Results (2025-06-30), each with its abstract and link."
+        ]
+      },
+      {
+        "turn": 2,
+        "text": [
+          "Measured student learning outcomes:",
+          "- WPS9288 (The Gambia): compares students in a computer-assisted math and science program with matched control students on a researcher-designed exam and the WASSCE school-leaving exam; math scores rose 0.54 SD on the researcher exam and 0.59 SD on the WASSCE, English by 3.87 percentage points (p. 5).",
+          "- WPS8665 (Lagos): randomized trial in junior secondary schools with baseline and endline tests of reading comprehension, math (TIMSS items) and non-verbal ability (p. 8); eReaders with curriculum textbooks gave imprecise gains of about 0.2 SD in reading, while non-curriculum content lowered scores (p. 12).",
+          "- WPS4836 (Colombia): randomized evaluation in 97 schools with 5,201 students using math and Spanish tests (p. 11); the program had little effect on test scores (p. 7). It also documents the inputs, refurbished computers plus about 20 months of in-school teacher training (p. 8), and finds teachers did not incorporate the computers into teaching.",
+          "Did not measure learning outcomes:",
+          "- Report 207830 (Uganda ETRI): a readiness survey of 300 schools' principals and teachers plus student interviews (p. 27). It reports device availability (27% of working devices available to students, p. 14), connectivity (38% of schools online, p. 15) and teacher training and use (30% had initial training on ICT in teaching, 12% ICT professional development, p. 12; principal training, p. 11), but no test scores.",
+          "So three of the four measured learning; only the Uganda report is limited to devices, connectivity and teacher training. Strictly, none of the three evaluations reports only device distribution or teacher training."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Finds all four records in turn 1 and reads (not just the abstracts of) the studies for the classification in turn 2."
+    ],
+    "grounded": [
+      "Each classification cites the methods or results passage (page) that supports it; effect sizes, if given, match the papers."
+    ],
+    "complete": [
+      "Classifies all four studies."
+    ],
+    "scoped": [
+      "Notes that the Colombia study also reports computers and teacher training while measuring learning, i.e. the categories are not exclusive."
+    ]
+  },
+  "stability": "stable"
+}

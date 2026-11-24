@@ -1,0 +1,55 @@
+{
+  "id": "Q3-02",
+  "query_id": "Q3.2",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
+  "task": "Prepare a mission",
+  "query_wording": "Brief me on Pxxxxxx before my meeting with the ministry. What are its objectives, components, implementing agencies, latest reported progress, and main risks?",
+  "placeholders": [
+    { "placeholder": "Pxxxxxx", "resolved_to": "P176619 (Jordan Water Sector Efficiency Project)", "reason": "See Q3-01." }
+  ],
+  "turns": [
+    { "user": "Brief me on P176619 before my meeting with the ministry. What are its objectives, components, implementing agencies, latest reported progress, and main risks?" }
+  ],
+  "expected_sources": [
+    { "kind": "project", "project_id": "P176619", "role": "Project record" },
+    { "kind": "document", "project_id": "P176619", "document_id": "34071081", "report_number": "PAD5170", "document_type": "Project Appraisal Document", "document_date": "2023-05-24", "pages": "6-8, 21-22, 34-35", "role": "PDO, components, financing, implementing agencies, risk ratings at appraisal" },
+    { "kind": "document", "project_id": "P176619", "document_id": "40109225", "report_number": "ISR07766", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-15", "pages": "1-5, 8-10", "role": "Latest disclosed ISR (seq. 8)" },
+    { "kind": "document", "project_id": "P176619", "document_id": "40093957", "report_number": "RES01493", "document_type": "Project Paper", "document_date": "2026-03-27", "pages": "6-7", "role": "Restructuring paper: implementation status and reasons for delays", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "P176619 - Jordan Water Sector Efficiency Project. IBRD Loan 9560-JO US$200 million, with US$50 million GCFF concessional financing (TF0C1892) and US$50 million AFD co-financing; total cost US$300 million (PAD p. 7; restructuring paper p. 6). Approved 15 June 2023, effective 7 November 2023, closing 31 December 2028 (ISR p. 10). Investment project with performance-based conditions (PBCs) and a CERC; first of a series of projects (PAD p. 6).",
+          "Objective: \"to improve the efficiency of water services in Jordan\" - better services through rehabilitated distribution networks, energy efficiency and drought management (PAD p. 21).",
+          "Components (PAD p. 7; current costs ISR p. 1): 1 Sustainable non-revenue water reduction (US$209 million at appraisal, US$221 million after the 2026 restructuring); 2 Increased energy efficiency and reduced energy supply costs (US$54 million, now US$42 million); 3 Water security measures - drought management, water allocation, dam safety (US$27 million); 4 Project management and implementation support (US$10 million); 5 Contingent Emergency Response (US$0).",
+          "Implementing agencies: the Ministry of Planning and International Cooperation (MOPIC) and Ministry of Water and Irrigation (MWI) are the named implementing agencies (PAD p. 7). Day-to-day implementation sits with the Water Authority of Jordan's PMU (designated account, procurement, FM, E&S); the Jordan Valley Authority (dam safety), MWI (drought management), and the three regional water companies (MWC for the central areas including greater Amman, YWC in the north, AWC in the south) implement works; an Oversight and Coordination Committee chaired by MOPIC and a Steering Committee chaired by MWI oversee (PAD pp. 34-35). The restructuring moved MWI's fiduciary role for sub-component 3.1 to WAJ (restructuring paper p. 7).",
+          "Latest reported progress - ISR seq. 8, 15 June 2026: progress towards the PDO Moderately Satisfactory; implementation progress Moderately Unsatisfactory (downgraded in July 2025); overall risk Moderate (ISR p. 1; restructuring paper p. 7). Disbursement is very low: 3.86% of the IBRD loan (US$7.71 million) and 3.62% of the GCFF financing (ISR p. 9). All PDO indicators are still at zero (e.g. 0 of 1.6 million beneficiaries with improved water services, 0 of 7 million m3/year of NRW reduction, 0 of 60 GWh/year electricity saved); 20 of 550 women certified as plumbers after the first training in May 2026; the dam risk-indexing PBC is the only PBC achieved (ISR pp. 3-5, 8). The mission of March-April 2026 noted moderate improvement, with consultancy contracts awarded and key contracts expected in 2026 (ISR p. 2).",
+          "Main risks (ISR p. 2): overall Moderate; Substantial for macroeconomic, institutional capacity for implementation and sustainability, fiduciary, and environmental and social; Moderate for political and governance, technical design and stakeholders; Low for sector strategies. The restructuring paper explains the delays: no detailed designs at appraisal, so design-and-supervision consultancies had to be hired first, slow Component 2 procurement due to capacity constraints, and PBC achievements not yet verified (pp. 6-7).",
+          "Points for the ministry: award of the remaining design-and-supervision contracts, the technical assistance firm's start, verification of PBC achievements by the Audit Bureau, and the disbursement path (the restructuring projects US$135 million in FY27)."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses the PAD and the latest disclosed ISR (ISR07766, 2026-06-15); the 2026 restructuring paper is a plus."
+    ],
+    "grounded": [
+      "PDO, components and costs, agencies, ratings, risks and indicator values match the cited documents."
+    ],
+    "complete": [
+      "Covers objectives, components, implementing agencies, latest progress and main risks."
+    ],
+    "scoped": [
+      "Labels progress as from the latest disclosed ISR with its date, not current status."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "A new ISR (seq. 9) is expected around December 2026."
+}

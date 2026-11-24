@@ -1,0 +1,51 @@
+{
+  "id": "Q4-07",
+  "query_id": "Q4.7",
+  "group": "Q4",
+  "tier": "project_centred_reading",
+  "region": "Europe & Central Asia",
+  "task": "Review fiduciary arrangements",
+  "query_wording": "Find the latest published procurement plan and summarize the main packages and planned timing.",
+  "placeholders": [
+    { "placeholder": "the project (implied)", "resolved_to": "P170132 (Tajikistan Rural Electrification Project)", "reason": "The query needs a project; Q4 uses P170132. Its latest plan combines the original 2020 textual plan (with reviewer comments left in) and a STEP table revised on 2026-11-05." }
+  ],
+  "turns": [
+    { "user": "For P170132, find the latest published procurement plan and summarize the main packages and planned timing." }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Newest procurement plan by document date", "filters": { "proid": "P170132", "docty_exact": "Procurement Plan", "srt": "docdt", "order": "desc", "rows": "1" } },
+    { "kind": "document", "project_id": "P170132", "document_id": "40137640", "document_type": "Procurement Plan", "document_date": "2026-11-05", "role": "Latest plan (Pamir Energy Company; STEP revision 2026-11-05)", "note": "No form-feed breaks; the text is one long page. The STEP export lists only actual amounts (mostly 0.00) and dates in a single run per row." }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Latest published procurement plan for P170132: dated 2026-11-05 (http://documents.worldbank.org/curated/en/099110526031019911), executing agency OJSC 'Pamir Energy Company' (GBAO); original plan approved 2020-01-03, latest revision 2026-11-05; financing IDA D5040 and E4970.",
+          "It has two parts. (1) The original textual plan, which still includes reviewer comments ('Commented [DK1]...') and the 2019-2020 package list with estimates: design, supply and installation of mini-grids in GBAO (international RFB, prior review, estimate shown as about US$17.8 million), connection of target settlements in GBAO (about US$5 million) and in Barqi Tojik's area (about US$6 million), energy-efficiency piloting (US$200,000), project management consultants for PEC (US$900,000) and BT (US$500,000), and geological and seismic studies. (2) The STEP activity table, which shows the current status.",
+          "Main current packages (STEP table): construction and installation of the Sharifobod 110/35/10 kV substation in Khorog (TJ-PE-31/2025-WO-RFB, Request for Bids, Open - National, post review, under the second AF E4970) - Signed, milestones January to June 2026, completion planned around May 2027; supply of equipment and materials for the Sharifobod substation with installation supervision (TJ-PE-30/2025-GO-RFB, Request for Bids, Open - International, prior review, two-envelope) - Signed, milestones February to September 2026. Earlier packages are completed or signed: solar PV with storage mini-grids (TJ-PE-20/2022), hydropower plant equipment (TJ-PE-22/2022) and direct contracts for 8 and 5 small HPPs (TJ-PE-21/2022-WO-A and -B); several 2020 studies were cancelled and the first project management consultant contract terminated.",
+          "Timing in context: the June 2026 ISR reports substation construction started in June 2026 and the remaining hydropower mini-grids due by 30 November 2026, within the 30 June 2027 closing.",
+          "Caveat: the STEP table in this export has no estimated-amount column (actual amounts are mostly 0.00), and the textual table's figures are truncated in the text, so amounts should be checked in the PDF."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Identifies the newest plan by document date (40137640, 2026-11-05)."
+    ],
+    "grounded": [
+      "Package names, methods, review types and statuses come from the plan; no amounts or dates are invented where the text does not give them."
+    ],
+    "complete": [
+      "Summarizes the main current packages and their timing or status."
+    ],
+    "scoped": [
+      "Says which agency's plan it is and flags that the plan mixes the 2020 textual plan with the 2026 STEP status and lacks estimated amounts."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "Newer plans may be disclosed; the reviewer should confirm the approximate textual-plan estimates against the PDF."
+}

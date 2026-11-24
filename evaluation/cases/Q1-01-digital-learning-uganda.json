@@ -1,0 +1,63 @@
+{
+  "id": "Q1-01",
+  "query_id": "Q1.1",
+  "group": "Q1",
+  "tier": "search_and_retrieve",
+  "region": "Africa",
+  "task": "Keyword, country and date search",
+  "query_wording": "Find World Bank reports on digital learning in Uganda since 2020.",
+  "turns": [
+    { "user": "Find World Bank reports on digital learning in Uganda since 2020." }
+  ],
+  "expected_sources": [
+    {
+      "kind": "search",
+      "api": "wds",
+      "role": "Keyword search restricted to Uganda and to documents dated 2020-01-01 onward",
+      "filters": { "qterm": "digital learning (variants: e-learning, education technology, EdTech)", "count_exact": "Uganda", "strdate": "2020-01-01", "enddate": "today" },
+      "note": "strdate without enddate returns only documents from 2020 (observed 2026-11-22), so an open-ended 'since 2020' needs an end date."
+    },
+    { "kind": "document", "document_id": "40081019", "report_number": "207830", "document_type": "Report", "document_date": "2025-06-30", "title": "Uganda - Examining Readiness to Use Technology in Schools : ETRI Results", "role": "Core match: EdTech Readiness Index report" },
+    { "kind": "document", "document_id": "40081012", "report_number": "207823", "document_type": "Brief", "document_date": "2025-06-30", "title": "The EdTech Readiness Index : Uganda Policy Brief - Examining Readiness to Use Technology in Primary and Secondary Schools", "role": "Core match: ETRI policy brief" },
+    { "kind": "document", "document_id": "40100461", "report_number": "209980", "document_type": "Working Paper", "document_date": "2025-09-03", "title": "Enhancing Uganda's E-Learning System for Students and Teachers : An Assessment of Key Learning Management Systems Utilized in Uganda's Education Sector", "role": "Core match: learning management system assessment", "note": "Also published as Report 209979 (40100457, 2025-09-24); either record is acceptable." },
+    { "kind": "document", "document_id": "40100464", "report_number": "209982", "document_type": "Report", "document_date": "2025-06-30", "title": "Enhancing Uganda's E-Learning System for Students and Teachers : Completion Note", "role": "Related match", "required": false },
+    { "kind": "document", "document_id": "40100477", "report_number": "209984", "document_type": "Report", "document_date": "2025-06-30", "title": "Assessing the Readiness of Uganda's School System to Use Technology : Top-Up Proposal - Completion Note", "role": "Related match", "required": false },
+    { "kind": "document", "document_id": "40030320", "report_number": "203261", "document_type": "Report", "document_date": "2023-11-08", "title": "Uganda Learning Management System Evaluation : Stakeholder Mapping", "role": "Related match (2023 LMS evaluation series, with 203257 and 203258)", "required": false },
+    { "kind": "document", "document_id": "32221030", "report_number": "150745", "document_type": "Report", "document_date": "2020-07-01", "title": "Digital Solutions in a Time of Crisis : Uganda Economic Update : Fifteenth Edition", "role": "Broader digital report from 2020", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Matching World Bank document records for Uganda dated 2020 or later on digital learning / education technology include:",
+          "1. Uganda - Examining Readiness to Use Technology in Schools: ETRI Results (Report 207830, document date 2025-06-30, disclosed 2026-01-14). Applies the EdTech Readiness Index to primary and secondary schools; finds only 38% of schools have internet access, fewer than 15% of teachers use ICT for direct instruction and 8% of principals report sufficient digital resources. Record: http://documents.worldbank.org/curated/en/099903501142641092",
+          "2. The EdTech Readiness Index: Uganda Policy Brief (Brief 207823, 2025-06-30). Summary of the same survey (Oct-Dec 2024, four regions): 13% of teachers and 22% of students use ICT for in-class information searches; 5% of student-accessible devices are internet-enabled. Record: http://documents.worldbank.org/curated/en/099824001142614497",
+          "3. Enhancing Uganda's E-Learning System for Students and Teachers: An Assessment of Key Learning Management Systems Utilized in Uganda's Education Sector (Working Paper 209980, 2025-09-03; also Report 209979, 2025-09-24). Rates the Ministry of Education and Sports LMS built during COVID-19 school closures at a basic level of maturity and informs the ULEARN program. Record: http://documents.worldbank.org/curated/en/099353404302632945",
+          "4. Related completion notes from the same Mastercard Foundation-funded work (2025-06-30): Enhancing Uganda's E-Learning System - Completion Note (209982) and Assessing the Readiness of Uganda's School System to Use Technology - Top-Up Proposal Completion Note (209984); and the 2023 Uganda Learning Management System Evaluation reports (203261 stakeholder mapping, 203257 rubric, 203258 key informant interviews).",
+          "5. Broader: Digital Solutions in a Time of Crisis: Uganda Economic Update, Fifteenth Edition (Report 150745, 2020-07-01), on digital technologies during COVID-19, not specific to education.",
+          "Each item should carry its document date and a record or PDF link. Keyword searches also return project documents (ISRs, ESCPs, procurement plans) for education and digital projects; a good answer leaves those out or lists them separately as project documents rather than reports."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Searches WDS with Uganda as the country and a start date of 2020 (documents before 2020 are excluded).",
+      "Returns at least the ETRI results report (207830) or its policy brief (207823), and the LMS assessment (209980 or 209979)."
+    ],
+    "grounded": [
+      "Titles, report numbers, dates and links match the records; no invented reports or figures."
+    ],
+    "complete": [
+      "Gives titles, dates, a short description (abstract) and a link for each report listed."
+    ],
+    "scoped": [
+      "Says these are matching document records from a keyword search (not necessarily every relevant report), or how the search was run."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "New Uganda education-technology reports may be disclosed after as_of; extra relevant reports are fine."
+}

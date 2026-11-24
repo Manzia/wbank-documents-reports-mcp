@@ -1,0 +1,53 @@
+{
+  "id": "Q3-15",
+  "query_id": "Q3.15",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "region": "Africa",
+  "task": "Review fiduciary documents",
+  "query_wording": "What changed between the two publicly available procurement plans for this transport project?",
+  "placeholders": [
+    { "placeholder": "this transport project", "resolved_to": "P117731 (Ethiopia - Transport Sector Project in Support of RSDP4)", "reason": "A closed transport project with exactly two public procurement plans (STEP3409 of 2017-08-23 and STEP3433 of 2017-08-24), so 'the two' is literal and the answer cannot drift." }
+  ],
+  "turns": [
+    { "user": "What changed between the two publicly available procurement plans for this transport project: P117731 (Ethiopia Transport Sector Project in Support of RSDP4)?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "The project's procurement plans", "filters": { "proid": "P117731", "docty_exact": "Procurement Plan" } },
+    { "kind": "document", "project_id": "P117731", "document_id": "27926484", "report_number": "STEP3409", "document_type": "Procurement Plan", "document_date": "2017-08-23", "pages": "1-3", "role": "First plan" },
+    { "kind": "document", "project_id": "P117731", "document_id": "27931422", "report_number": "STEP3433", "document_type": "Procurement Plan", "document_date": "2017-08-24", "pages": "1-3", "role": "Second plan" }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "P117731 has exactly two public procurement plans, both generated from STEP a day apart: 2017-08-23 (STEP3409, http://documents.worldbank.org/curated/en/969761503494935878) and 2017-08-24 (STEP3433, http://documents.worldbank.org/curated/en/684111503591446317). The executing agency is the Ethiopian Roads Authority; credit IDA 51550.",
+          "The textual part (the original 2012 plan: prior-review thresholds, prequalification for Ambo-Woliso, Debre Birhan-Ankober and Konso-Yabelo, package summary) is identical in both (pp. 1-2). The STEP activity table (p. 3) has three changes:",
+          "1. Revised plan date: 2017-08-23 in the first, 2017-08-24 in the second.",
+          "2. Works package W/36/ICB/OC/L/IDA/2004 EFY: the first plan describes it as construction of 42 km of road to asphalt concrete (50 mm carriageway, 10 m cross-section with a 7 m AC carriageway and 1.5 m single-seal shoulders); the second renames it 'Debrebrihan-Ankober Road Upgrading Civil Works Contract (Re-bid)'. Everything else is unchanged: prior review, Request for Bids, single-stage one-envelope, Open - International, estimated US$33,490,000, actual 0.00, status Pending Implementation, same dates (2015-01-29 to 2018-09-06).",
+          "3. Consulting package S/11/ICB/RP/IDA/2008EFY, consultancy for output- and performance-based road management and maintenance contracts for Woldia-Wereta, Woldia-Mille and Alamata (Support to Modernize ERA; QCBS, Open - International, estimated US$1,800,000): its last three planned dates move from 2014-05-10, 2014-06-04 and 2016-08-01 to 2017-09-14, 2017-10-09 and 2019-12-07, i.e. the later steps through contract signing and completion are pushed back by over three years. The earlier milestones (2013-08-17 to 2014-03-20) are unchanged.",
+          "Unchanged: the Mizan-Dimma road upgrading supervision consultancy ET-ERA-10368-CS-QCBS (US$1,922,654, Pending Implementation). No amounts, methods or review types change; no packages are added or removed. The plans give no reason for the re-bid or the rescheduling."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Finds and reads both of P117731's procurement plans."
+    ],
+    "grounded": [
+      "Each reported change is visible in the plans (package reference, description, dates); no invented changes or reasons."
+    ],
+    "complete": [
+      "Reports the re-bid relabelling of the Debrebrihan-Ankober works package and the rescheduled consultancy dates, and says amounts and methods did not change."
+    ],
+    "scoped": [
+      "Matches packages by reference number and states that only these two plans exist publicly."
+    ]
+  },
+  "stability": "stable",
+  "notes": "Mapping the consultancy's three changed dates to specific STEP columns is uncertain in the text layout; describing them as the later planned milestones through signing and completion is enough."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "Q4-11",
+  "query_id": "Q4.11",
+  "group": "Q4",
+  "tier": "search_and_retrieve",
+  "region": "Europe & Central Asia",
+  "task": "Find background evidence",
+  "query_wording": "Find recent World Bank reports on electricity tariff reform in Central Asia relevant to preparing a new operation.",
+  "turns": [
+    { "user": "Find recent World Bank reports on electricity tariff reform in Central Asia relevant to preparing a new operation." }
+  ],
+  "expected_sources": [
+    {
+      "kind": "search",
+      "api": "wds",
+      "role": "Keyword variants restricted to the Central Asian countries and recent years",
+      "filters": { "qterm": "electricity tariff / energy tariff / tariff reform / energy subsidies", "count_exact": "Uzbekistan^Kyrgyz Republic^Tajikistan^Kazakhstan^Turkmenistan", "strdate": "2019-01-01", "enddate": "today" },
+      "note": "'Central Asia' is not a WDS country value; it resolves to the five countries (the region filter would return all of Europe & Central Asia). Analytical reports are few; recent DPO program documents carry tariff prior actions and indicators."
+    },
+    { "kind": "document", "document_id": "31590324", "report_number": "143892", "document_type": "Report", "document_date": "2019-10-01", "title": "Kyrgyz Republic : Distributional Impact of Energy Tariff Reform : PSIA report", "role": "Core analytical report on tariff reform" },
+    { "kind": "document", "document_id": "34335277", "report_number": "190933", "document_type": "Brief", "document_date": "2024-05-02", "title": "Mobilizing Carbon Finance to Meet the Socioeconomic Costs of Reforming Energy Tariffs and Subsidies in Uzbekistan", "role": "Recent, tariff and subsidy reform" },
+    { "kind": "document", "document_id": "32655287", "report_number": "154899", "document_type": "Brief", "document_date": "2020-11-01", "title": "Tajikistan - Energy Subsidy Reform Facility Country Brief", "role": "Energy subsidy reform", "required": false },
+    { "kind": "document", "document_id": "40107408", "report_number": "PD000252", "document_type": "Program Document", "document_date": "2026-06-04", "title": "Kyrgyz Republic - Second Sustainable and Inclusive Growth Development Policy Operation", "role": "Recent operation with a medium-term tariff policy and electricity cost-recovery indicator", "required": false },
+    { "kind": "document", "document_id": "40107706", "report_number": "PD000176", "document_type": "Program Document", "document_date": "2026-06-03", "title": "Tajikistan - Second Competitive and Inclusive Tajikistan Development Policy Operation", "role": "Recent operation on electricity tariff cost recovery (TALCO)", "required": false },
+    { "kind": "document", "document_id": "40087944", "report_number": "PD000210", "document_type": "Program Document", "document_date": "2026-02-14", "title": "Kazakhstan - Second Inclusive and Sustainable Economic Growth Development Policy Operation", "role": "Recent operation with electricity and heating tariff cost-recovery indicators", "required": false },
+    { "kind": "document", "document_id": "40132065", "report_number": "WPS11482", "document_type": "Policy Research Working Paper", "document_date": "2026-10-08", "title": "Distributional Effects of Market-Oriented Reforms in Uzbekistan : A Macro-Micro Simulation Approach", "role": "Related distributional analysis (broader reforms)", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Recent World Bank documents on electricity tariff reform in Central Asia (Kazakhstan, Kyrgyz Republic, Tajikistan, Turkmenistan, Uzbekistan), from 2019:",
+          "Analytical reports and briefs:",
+          "1. Kyrgyz Republic: Distributional Impact of Energy Tariff Reform - PSIA report (Report 143892, 2019-10). Tariffs were raised in 2014-2015 but remain below cost recovery and later scheduled increases were not implemented; the report models the poverty and social impact of planned residential tariff increases using the 2016 household survey. http://documents.worldbank.org/curated/en/193431574934396964",
+          "2. Mobilizing Carbon Finance to Meet the Socioeconomic Costs of Reforming Energy Tariffs and Subsidies in Uzbekistan (Live Wire brief 190933, 2024-05): a pilot that rewards sustainable energy policy reforms through carbon credits. http://documents.worldbank.org/curated/en/099750506062431619",
+          "3. Tajikistan - Energy Subsidy Reform Facility Country Brief (154899, 2020-11): winter shortages affected about 70% of the population in 2009-2016, costing about US$200 million a year (3% of 2012 GDP); context for subsidy and tariff reform. http://documents.worldbank.org/curated/en/332501607580092221",
+          "Recent operations whose program documents set tariff actions and targets (useful precedents for a new operation):",
+          "4. Kyrgyz Republic - Second Sustainable and Inclusive Growth DPO (PD000252, 2026-06): a medium-term tariff policy and a results indicator on average cost recovery of electricity tariffs. http://documents.worldbank.org/curated/en/099060526145515827",
+          "5. Tajikistan - Second Competitive and Inclusive Tajikistan DPO (PD000176, 2026-06): cost recovery and equity of electricity tariffs, including the tariff for the TALCO aluminium smelter. http://documents.worldbank.org/curated/en/099060826122551455",
+          "6. Kazakhstan - Second Inclusive and Sustainable Economic Growth DPO (PD000210, 2026-02): cost-recovery indicators for electricity and heating tariffs and a strengthened tariff framework. http://documents.worldbank.org/curated/en/099022026183524631",
+          "Related: Distributional Effects of Market-Oriented Reforms in Uzbekistan (WPS11482, 2026-10), a macro-micro simulation of a broader reform package.",
+          "Scope: these come from metadata searches over the five countries; dedicated recent analytical reports on tariff reform are few, so policy operations are the main recent sources. 'Central Asia' was searched as the five countries."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Searches tariff/subsidy keywords for the Central Asian countries (not the whole Europe & Central Asia region) and returns at least the Kyrgyz PSIA (143892) and one recent (2024 or later) document."
+    ],
+    "grounded": [
+      "Listed documents exist with the stated titles, dates and links; summaries follow the records or documents."
+    ],
+    "complete": [
+      "Gives several documents with title, date, relevance note and link."
+    ],
+    "scoped": [
+      "Says how 'Central Asia' and 'recent' were interpreted and that the list comes from metadata searches."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "New reports or operations may appear; other relevant Central Asian tariff documents are acceptable if real and cited."
+}

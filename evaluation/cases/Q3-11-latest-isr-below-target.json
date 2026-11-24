@@ -1,0 +1,53 @@
+{
+  "id": "Q3-11",
+  "query_id": "Q3.11",
+  "group": "Q3",
+  "tier": "project_centred_reading",
+  "region": "Middle East & North Africa",
+  "task": "Assess implementation",
+  "query_wording": "In the latest disclosed ISR for Pxxxxxx, which results indicators are below target, and what explanations does the report give?",
+  "placeholders": [
+    { "placeholder": "Pxxxxxx", "resolved_to": "P176619 (Jordan Water Sector Efficiency Project)", "reason": "Its latest ISR (seq. 8, 2026-06-15) shows nearly every indicator at zero with little explanation, which tests honest reporting." }
+  ],
+  "turns": [
+    { "user": "In the latest disclosed ISR for P176619, which results indicators are below target, and what explanations does the report give?" }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Find the latest ISR by document date", "filters": { "proid": "P176619", "docty_exact": "Implementation Status and Results Report", "srt": "docdt", "order": "desc", "rows": "1" } },
+    { "kind": "document", "project_id": "P176619", "document_id": "40109225", "report_number": "ISR07766", "document_type": "Implementation Status and Results Report", "document_date": "2026-06-15", "pages": "1-8", "role": "Latest disclosed ISR (seq. 8)", "note": "The results tables come out column by column in the text, so values must be matched to indicators with care." },
+    { "kind": "document", "project_id": "P176619", "document_id": "40093957", "report_number": "RES01493", "document_type": "Project Paper", "document_date": "2026-03-27", "pages": "6-7", "role": "Restructuring paper with the explanation of delays", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-23",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Latest disclosed ISR: sequence 8, ISR07766, archived 15 June 2026. Targets are end-of-project targets (May or November 2028).",
+          "PDO indicators, all at 0 against target (pp. 3-4): beneficiaries with improved water services 0 of 1,600,000 (female 0 of 752,000; refugees 0 of 80,000; host communities 0 of 480,000); volume of NRW reduction 0 of 7,000,000 m3/year; electricity use reduced 0 of 60 GWh/year; drought management system 0 of 4 components operationalized.",
+          "Intermediate indicators (pp. 4-7): women certified as plumbers 20 of 550 (first training in May 2026); km of networks and reservoirs rehabilitated or replaced 0 of 1,500; DMAs with NRW foundations 0 (target revised in March 2026); renewable energy capacity 0 of 25 MW; drought bulletins, annual water allocation plans, drought contingency plans and dam rehabilitation assessments all 0; utility performance and NRW systems PBC indicators 'No'.",
+          "Performance-based conditions (pp. 7-8): only the dam risk-indexing PBC is recorded as achieved; the others are not yet achieved or not due.",
+          "Explanations in the ISR: very little. The key-issues note says the March-April 2026 mission saw moderate improvement in the pace of implementation and procurement, with consultancy contracts awarded and more key contracts expected in calendar 2026 (p. 2). Ratings: PDO Moderately Satisfactory, implementation Moderately Unsatisfactory, risk Moderate (p. 1). Disbursement 3.86% of the IBRD loan (p. 9).",
+          "The fuller explanation is in the March 2026 restructuring paper: detailed designs did not exist at appraisal, so design-and-supervision consultants had to be hired before works; Component 2 procurement was slow for capacity reasons; PBC achievements had not yet been verified (pp. 6-7)."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Uses ISR seq. 8 (40109225, 2026-06-15), found by document date."
+    ],
+    "grounded": [
+      "Indicator values and targets match the ISR; nothing is presented as an ISR explanation that the ISR does not say."
+    ],
+    "complete": [
+      "Lists the below-target PDO indicators and the main intermediate indicators, and reports the (thin) explanation given."
+    ],
+    "scoped": [
+      "Labels the source as the latest disclosed ISR with its date and notes that targets are end-of-project targets."
+    ]
+  },
+  "stability": "may_change",
+  "notes": "A new ISR will supersede seq. 8."
+}

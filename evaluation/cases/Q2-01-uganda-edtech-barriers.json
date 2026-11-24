@@ -1,0 +1,57 @@
+{
+  "id": "Q2-01",
+  "query_id": "Q2.1",
+  "group": "Q2",
+  "tier": "project_centred_reading",
+  "region": "Africa",
+  "task": "Extract findings from one diagnostic, with pages",
+  "query_wording": "What barriers to classroom technology adoption does the Uganda diagnostic identify? Cite the pages.",
+  "placeholders": [
+    { "placeholder": "the Uganda diagnostic", "resolved_to": "Uganda - Examining Readiness to Use Technology in Schools: ETRI Results (Report 207830)", "reason": "The EdTech Readiness Index assessment is the public Uganda diagnostic on classroom technology; the agent has to find it from the description." }
+  ],
+  "turns": [
+    { "user": "What barriers to classroom technology adoption does the Uganda diagnostic identify? Cite the pages." }
+  ],
+  "expected_sources": [
+    { "kind": "search", "api": "wds", "role": "Locate the diagnostic", "filters": { "qterm": "technology schools readiness (EdTech, ETRI)", "count_exact": "Uganda" } },
+    { "kind": "document", "document_id": "40081019", "report_number": "207830", "document_type": "Report", "document_date": "2025-06-30", "title": "Uganda - Examining Readiness to Use Technology in Schools : ETRI Results", "pages": "9-16, 18, 20-21, 23-26", "role": "The diagnostic read for the answer" },
+    { "kind": "document", "document_id": "40081012", "report_number": "207823", "document_type": "Brief", "document_date": "2025-06-30", "title": "The EdTech Readiness Index : Uganda Policy Brief", "role": "Shorter companion brief; acceptable as an additional source", "required": false }
+  ],
+  "reference_answer": {
+    "review": "pending",
+    "as_of": "2026-11-22",
+    "turns": [
+      {
+        "turn": 1,
+        "text": [
+          "Source: Uganda - Examining Readiness to Use Technology in Schools: ETRI Results (Report 207830, June 2025; school survey of 300 primary and secondary schools in 4 regions, Oct-Dec 2024, p. 27). Barriers it identifies, with PDF pages:",
+          "1. Gap between policy and practice: across all six pillars, what policies state (de jure) is well ahead of what schools implement (de facto) (p. 18, p. 23).",
+          "2. Little guidance and training for school leaders: only 36% of principals know of guidelines for integrating ICT in teaching, 32% find them useful, and 38% attended ICT training in the last 12 months; most principals have had no ICT-related professional development (p. 11).",
+          "3. Teachers' low digital skills and use: only 30% say their initial training covered using ICT in teaching, 12% took ICT professional development, 18% were evaluated on ICT use; fewer than 15% use ICT for instruction (13% for searching information, 5% for presenting content, 2% for assessing learning); most are unaware of digital competency standards (p. 12).",
+          "4. Students' low ICT skills and use: 24% of teachers say half their students can open a browser tab; 22% report students using devices for information searches in most lessons; 6% say student digital competencies were formally assessed (p. 13).",
+          "5. Too few working devices for students: 56% of devices work but 27% are available to students, only 5% of principals say there are enough devices for instruction, 11% have devices adapted for students with disabilities, 21% say technical support is sufficient (p. 14).",
+          "6. Connectivity: 38% of schools have internet access, but only 5% of student-accessible devices are connected, 4% of principals report enough connected devices, 14% find bandwidth and 16% stability sufficient; only 15% believe there is a government plan to connect all schools (p. 15).",
+          "7. Scarce, low-quality digital content: 8% of principals report sufficient digital educational resources, 15% say they are of adequate quality, 23% aligned to the curriculum and 14% adapted to local context (p. 16).",
+          "8. Hybrid learning outside school is barely supported: underdeveloped policies, low teacher readiness for remote tutoring, limited parental support and low device and connectivity access at home (pp. 20-21).",
+          "The report's recommendations (pp. 23-26) mirror these barriers: capacity building and district technical support, digital skills in pre- and in-service teacher training (possibly through ULEARN), affordable connectivity through public-private partnerships, and a national curated digital resource portal."
+        ]
+      }
+    ]
+  },
+  "rubric": {
+    "right_sources": [
+      "Finds and reads the ETRI results report 207830 (the policy brief 207823 may supplement it, but page-cited barriers come from a document actually read)."
+    ],
+    "grounded": [
+      "Each barrier has a page reference that matches the report text; the percentages, if given, are the report's own."
+    ],
+    "complete": [
+      "Covers at least the teacher skills/use, device, connectivity and digital-content barriers, and gives pages for each."
+    ],
+    "scoped": [
+      "Names the document and its date and says the findings come from a survey of principals, teachers and students in 2024."
+    ]
+  },
+  "stability": "stable",
+  "notes": "Page numbers are the PDF pages (the text file's form-feed pages); the report is a slide deck, so printed and PDF pages coincide."
+}
