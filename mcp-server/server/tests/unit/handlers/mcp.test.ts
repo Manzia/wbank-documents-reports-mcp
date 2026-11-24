@@ -85,11 +85,13 @@ describe('MCP handler (stateless, legacy 2025 fallback)', () => {
         ]);
     });
 
-    it('answers a stub tool call with a "not available yet" error', async () => {
-        const res = await app.fetch(mcpPost(jsonRpc(3, 'tools/call', { name: 'retrieve_skill', arguments: {} })));
+    it('answers a retrieve_skill call with the skill', async () => {
+        const res = await app.fetch(
+            mcpPost(jsonRpc(3, 'tools/call', { name: 'retrieve_skill', arguments: { task: 'project-briefing' } })),
+        );
         const [message] = messagesIn(await res.text());
-        expect(message.result.isError).toBe(true);
-        expect(message.result.content[0].text).toMatch(/not available yet/);
+        expect(message.result.isError).toBeUndefined();
+        expect(message.result.content[0].text).toMatch(/^Skill: project-briefing\./);
     });
 
     it('refuses GET (no sessions) and unknown paths', async () => {
