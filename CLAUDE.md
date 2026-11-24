@@ -126,8 +126,10 @@ The build follows `context/tasks/wbank-mcp-implementation-plan.md` (tasks `MCP-1
 
 ### CD — `deploy.yml`
 - Triggered by a **successful CI Pipeline run from a `push` to `main`** (i.e. a
-  merged PR). The `event == 'push'` check stops a fork PR from a branch named
-  `main` from triggering a deploy, which matters because the repo is public.
+  merged PR). The `workflow_run` trigger is filtered to `branches: [main]`, so
+  feature-branch and PR CI runs don't start deploy runs. The `event == 'push'`
+  check stops a fork PR from a branch named `main` from triggering a deploy,
+  which matters because the repo is public.
 - Deploys only if the merge commit touched `mcp-server/` or `deploy.yml` itself
   (deploy flags live there). `workflow_dispatch` always deploys, but it falls
   under the HARD RULE above.
@@ -142,8 +144,11 @@ The build follows `context/tasks/wbank-mcp-implementation-plan.md` (tasks `MCP-1
   it by hand (disassociate its web ACL first). The origin secret never
   appears in logs or outputs; deploy steps must not read the WAF web ACL or
   the secret.
-- `concurrency: deploy-prod` queues overlapping deploys rather than colliding on
-  an in-progress stack update.
+- `concurrency: deploy-prod` on the **deploy job** (not the workflow) queues
+  overlapping deploys rather than colliding on an in-progress stack update.
+  The group holds one running and one pending entry, and a newer entry cancels
+  the pending one. At workflow level, skipped runs joined it and could cancel
+  a queued real deploy.
 - The deploy job **pauses for approval** (environment `production`), then
   assumes the deploy role through OIDC. See "AWS deploy identity" below.
 - Third-party `aws-actions/*` are pinned to commit SHAs. Bump them deliberately.
