@@ -203,7 +203,10 @@ models, DynamoDB cache):
   `wbank-docs-reports-mcp-prod-*`. `CreateRole` / `Put|Attach|Detach|DeleteRolePolicy`
   / `PutRolePermissionsBoundary` are allowed **only with permissions boundary
   `arn:aws:iam::aws:policy/PowerUserAccess`**. `PassRole` is allowed only to
-  `lambda.amazonaws.com` and `bedrock-agentcore.amazonaws.com`.
+  `lambda.amazonaws.com`, `bedrock-agentcore.amazonaws.com` and
+  `scheduler.amazonaws.com` (added 2026-11-24 for MCP-135's refresh schedule,
+  whose first deploy failed on `iam:PassRole`). A resource that passes a stack
+  role to another service needs that service added here first, out of band.
   `DeleteRolePermissionsBoundary` is explicitly denied.
 
 The boundary means a role the pipeline creates can never exceed PowerUser, so
